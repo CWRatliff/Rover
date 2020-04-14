@@ -17,10 +17,10 @@ from roboclaw import Roboclaw
 class motor_driver_ada:
 
     def __init__(self, log):
-        self.lfbias = 65        # experimentally determined for 'Spot 2'
+        self.lfbias = 68        # experimentally determined for 'Spot 2'
         self.lrbias = 60
         self.rrbias = 57
-        self.rfbias = 61
+        self.rfbias = 60
         self.left_limit = -36
         self.right_limit = 36
         self.d1 = 7.254         #C/L to corner wheels
@@ -75,10 +75,15 @@ class motor_driver_ada:
         self.turn_motor(0X82, 0, 0, 0)
 
     def motor_speed(self):
-        speed = self.rc.ReadSpeedM1(0x82)
-        print ("motor speed =" + str(speed))
-        speed = self.rc.ReadSpeedM2(0x81)
-        print ("motor speed =" + str(speed))
+        speed1 = self.rc.ReadSpeedM1(0x80)
+        speed2 = self.rc.ReadSpeedM2(0x80)
+        self.log("motor speed = %d, %d\n", (speed1, speed2))
+        speed1 = self.rc.ReadSpeedM1(0x81)
+        speed2 = self.rc.ReadSpeedM2(0x81)
+        self.log("motor speed = %d, %d\n", (speed1, speed2))
+        speed1 = self.rc.ReadSpeedM1(0x82)
+        speed2 = self.rc.ReadSpeedM2(0x82)
+        self.log("motor speed = %d, %d\n", (speed1, speed2))
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):
