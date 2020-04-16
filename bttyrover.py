@@ -59,7 +59,7 @@ hdg = 0
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
-compass_adjustment = 295                # test 200330
+compass_adjustment = 290                # test 200415
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
 startlat = 0.0
@@ -425,7 +425,9 @@ try:
                     print("heading = " + str(hdg))
 
                     print("Motor speed, steer "+str(speed)+", "+str(steer))
-
+#===========================================================================
+                elif xchr == 'T':                   #'D' key + number button Diagnostic
+                    diag_commands(xchr)
 #=========================================================================                    
                 elif xchr == 'X':                   #X exit Select button
                     robot.stop_all()
@@ -457,7 +459,7 @@ try:
                     flonsec = xEst[0, 0] / lonfeet
                     flatsec = xEst[1, 0] / latfeet
                     fhdg= (450 - math.degrees(xEst[2,0]))%360
-                    logit("filtered L/L:" + str(flatsec) + "/" + str(flonsec))
+                    logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
                     logit("Filtered hdg: " + str(fhdg))
                     logit("Filtered speed: " + str(xEst[3,0]))
                     dtg = distto(flatsec, flonsec, destlat, destlon)
@@ -496,7 +498,7 @@ try:
                             startlon = ilonsec
                             destlat = waypts[wpt][0]
                             destlon = waypts[wpt][1]
-                            logit("wpt: %d %7.4f/%7.4f", (wpt, destlat, destlon))
+                            logit("wpt: %d %7.4f/%7.4f" % (wpt, destlat, destlon))
                             azimuth = fromto(startlat, startlon,\
                                 destlat, destlon)
                             wptdist = distto(startlat, startlon, \
