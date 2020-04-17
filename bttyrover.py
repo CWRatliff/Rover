@@ -59,7 +59,7 @@ hdg = 0
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
-compass_adjustment = 290                # test 200415
+compass_adjustment = 277                # test 200416
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
 startlat = 0.0
@@ -70,7 +70,7 @@ latitude = math.radians(34.24)          # Camarillo
 latfeet = 6076.0/60
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0                              # grps accuracy in ft
-spdfactor = .008                        # convert speed percentage to ft/sec ref BOR:3/17
+spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
 #d1 = 7.254
 #d3 = 10.5
 
@@ -109,7 +109,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.599, 7.159, "EF east entry"],   #24
 [11,12]]
 
-version = "Rover 1.0 200412\n"
+version = "Rover 1.0 200417\n"
 print(version)
 log = open("logfile.txt", 'a')
 log.write(version)
@@ -207,7 +207,7 @@ def simple_commands(xchr):
 #               time.sleep(0.05)
         steer = 0
         robot.motor(speed, steer)
-        auto = False
+#        auto = False
 
     elif xchr == '6':                   # 6 - Left 5 deg
         if (auto):
@@ -289,6 +289,7 @@ def star_commands(xchr):
 #================================================================
 def diag_commands(xchr):
     if (xchr == '0'):
+        logit("diagnostic #1 =======================")
         robot.motor_speed()
     return
 
@@ -385,7 +386,7 @@ try:
                             startlon = ilonsec
                             destlat = waypts[wpt][0]
                             destlon = waypts[wpt][1]
-                            logit("wpt: %d %7.4f, %7.4f", (wpt, destlat, destlon))
+                            logit("wpt: %d %7.4f, %7.4f" % (wpt, destlat, destlon))
                             azimuth = fromto(startlat, startlon, destlat, destlon)
                             wptdist = distto(startlat, startlon, destlat, destlon)
                             auto = True
@@ -460,17 +461,18 @@ try:
                     flatsec = xEst[1, 0] / latfeet
                     fhdg= (450 - math.degrees(xEst[2,0]))%360
                     logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
-                    logit("Filtered hdg: " + str(fhdg))
-                    logit("Filtered speed: " + str(xEst[3,0]))
+                    logit("Filtered hdg: %6.1f" % fhdg)
+                    logit("Filtered speed: %6.3f" %xEst[3,0])
                     dtg = distto(flatsec, flonsec, destlat, destlon)
                     cstr = "{d%5.1f}" % dtg
                     sendit(cstr)
                     logit(cstr)
-                    az = fromto(flatsec, flonsec, destlat, destlon)
-                    logit("Gps azimuth %5.1f}" % az)
                     
                     if (dtg > (2 * accgps)):
+                        azimuth = fromto(flatsec, flonsec, destlat, destlon)
+                    else:
                         azimuth = fromto(ilatsec, ilonsec, destlat, destlon)
+
                     cstr = "{c%5.1f}" % azimuth
                     sendit(cstr)
                     logit(cstr)
@@ -484,7 +486,7 @@ try:
                     sendit(cstr)
                     logit(cstr)
                 
-                    if (dtg < accgps):             # a foot from waypoint
+                    if (dtg < accgps):             # closing on waypoint
                         if rteflag:
                             rtseg += 1
                             wpt = routes[route][rtseg]
@@ -494,6 +496,7 @@ try:
                                 wptflg = False
                                 rteflag = False
                                 speed = 0
+                                auto = False
                             startlat = ilatsec         #dup'ed code
                             startlon = ilonsec
                             destlat = waypts[wpt][0]
@@ -510,6 +513,7 @@ try:
                             logit("Standby")
                             wptflag =  False
                             speed = 0
+                            auto = False
                         #endif dtg ===================
                     #endif wptflag ===================
                 #endif epoch timer ===================
