@@ -98,8 +98,8 @@ void loop() {
       }
     }
       
-  if ((millis() - imuepoch) > 250) {
-    imuepoch = millis();
+//  if ((millis() - imuepoch) > 250) {
+//    imuepoch = millis();
     
     if (myIMU.dataAvailable() == true) {
       qx = myIMU.getQuatI();
@@ -137,9 +137,16 @@ void loop() {
       cosy_cosp  = +1.0 - 2.0 * (qy * qy + qz * qz);  
       yaw = atan2(siny_cosp, cosy_cosp) * 180/M_PI;
 
+      hdg = -yaw;
+      if (hdg < 0)
+        hdg += 360;
+      Serial.print("Yaw = ");
+      Serial.print(yaw);
+      Serial.print(" heading = ");
+      Serial.println(hdg);
       // compose 'O'rientation msg for Pi
-      hdg = 450 - yaw;                  // cvt math CCW x-axis to azimuth
-      hdg = hdg % 360;
+//      hdg = 450 - yaw;                  // cvt math CCW x-axis to azimuth
+//      hdg = hdg % 360;
       }
 
     if (hdg != oldhdg) {
@@ -148,6 +155,7 @@ void loop() {
       Serial.println(str);
       oldhdg = hdg;
       }
+//    }
 /*
       Serial.print("yaw:");
       Serial.print(yaw);
@@ -197,4 +205,3 @@ void loop() {
       Serial.println(str);
       }
     }
-  } 
