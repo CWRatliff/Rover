@@ -77,13 +77,13 @@ class motor_driver_ada:
     def motor_speed(self):
         speed1 = self.rc.ReadSpeedM1(0x80)
         speed2 = self.rc.ReadSpeedM2(0x80)
-        self.log.write("motor speed = %d, %d\n" % (speed1, speed2))
+        self.log.write("motor speed = %d, %d\n" , speed1, speed2)
         speed1 = self.rc.ReadSpeedM1(0x81)
         speed2 = self.rc.ReadSpeedM2(0x81)
-        self.log.write("motor speed = %d, %d\n" % (speed1, speed2))
+        self.log.write("motor speed = %d, %d\n" , speed1, speed2)
         speed1 = self.rc.ReadSpeedM1(0x82)
         speed2 = self.rc.ReadSpeedM2(0x82)
-        self.log.write("motor speed = %d, %d\n" % (speed1, speed2))
+        self.log.write("motor speed = %d, %d\n" , speed1, speed2)
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):

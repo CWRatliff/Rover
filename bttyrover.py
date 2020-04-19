@@ -59,7 +59,7 @@ hdg = 0
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
-compass_adjustment = 277                # test 200416
+compass_adjustment = 12                 # Camarillo declination
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
 startlat = 0.0
@@ -109,7 +109,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.599, 7.159, "EF east entry"],   #24
 [11,12]]
 
-version = "Rover 1.0 200417\n"
+version = "Rover 1.0 200419\n"
 print(version)
 log = open("logfile.txt", 'a')
 log.write(version)
@@ -428,6 +428,7 @@ try:
                     print("Motor speed, steer "+str(speed)+", "+str(steer))
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
+                    xchr = cbuff[2]
                     diag_commands(xchr)
 #=========================================================================                    
                 elif xchr == 'X':                   #X exit Select button
