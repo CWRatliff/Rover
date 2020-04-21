@@ -10,7 +10,7 @@ kit = ServoKit(channels = 16)
 
 import serial
 import math
-#from roboclaw import Roboclaw
+from roboclaw import Roboclaw
 
 
 
@@ -42,10 +42,8 @@ class motor_driver_ada:
         self.lr_motor.set_pulse_width_range(700, 2300)
         self.log = log
         
-#        self.rc = Roboclaw("/dev/ttyS0",115200)
-#        i = self.rc.Open()
-        self.checksum = 0
-        self.port = serial.Serial(ttyStr, baudrate=115200, timeout=0.1)
+        self.rc = Roboclaw("/dev/ttyS0",115200)
+        i = self.rc.Open()
 
         self.lf_motor.angle = self.rfbias
         self.rf_motor.angle = self.lfbias
@@ -64,15 +62,11 @@ class motor_driver_ada:
         v1 = int(v * av1)
         v2 = int(v * av2)
         if v >= 0:
-#             self.rc.ForwardM1(address, v1)
-#             self.rc.ForwardM2(address, v2)
-            self.M1Forward(address, v1)
-            self.M2Forward(address, v2)
+            self.rc.ForwardM1(address, v1)
+            self.rc.ForwardM2(address, v2)
         else:
-#             self.rc.BackwardM1(address, abs(v1))
-#             self.rc.BackwardM2(address, abs(v2))
-            self.M1Backward(address, v1)
-            self.M2Backward(address, v2)
+            self.rc.BackwardM1(address, abs(v1))
+            self.rc.BackwardM2(address, abs(v2))
 #       print("m1, m2 = "+str(v1)+", "+str(v2))
 
     def stop_all(self):
@@ -81,16 +75,15 @@ class motor_driver_ada:
         self.turn_motor(0X82, 0, 0, 0)
 
     def motor_speed(self):
-        return
-#         speed1 = self.rc.ReadSpeedM1(0x80)
-#         speed2 = self.rc.ReadSpeedM2(0x80)
-#         self.log.write("motor speed = %d, %d\n" , speed1, speed2)
-#         speed1 = self.rc.ReadSpeedM1(0x81)
-#         speed2 = self.rc.ReadSpeedM2(0x81)
-#         self.log.write("motor speed = %d, %d\n" , speed1, speed2)
-#         speed1 = self.rc.ReadSpeedM1(0x82)
-#         speed2 = self.rc.ReadSpeedM2(0x82)
-#         self.log.write("motor speed = %d, %d\n" , speed1, speed2)
+        speed1 = self.rc.ReadSpeedM1(0x80)
+        speed2 = self.rc.ReadSpeedM2(0x80)
+        self.log.write("motor speed = %d, %d\n" , speed1, speed2)
+        speed1 = self.rc.ReadSpeedM1(0x81)
+        speed2 = self.rc.ReadSpeedM2(0x81)
+        self.log.write("motor speed = %d, %d\n" , speed1, speed2)
+        speed1 = self.rc.ReadSpeedM1(0x82)
+        speed2 = self.rc.ReadSpeedM2(0x82)
+        self.log.write("motor speed = %d, %d\n" , speed1, speed2)
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):
@@ -159,64 +152,3 @@ class motor_driver_ada:
             self.turn_motor(0x82, vel, 1, 1)
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
-
-    def sendcommand(self,address,command):
-            self.checksum = address
-            self.port.write(bytes([address]));
-            self.checksum += command
-            self.port.write(bytes([command]));
-            return;
-        
-    def writebyte(self, address, val):
-            self.checksum += val
-            return self.port.write(struct.pack('>B',val));
-        
-    def readslong(self):
-            val = struct.unpack('>l',self.port.read(4));
-            self.checksum += val[0]
-            self.checksum += (val[0]>>8)&0xFF
-            self.checksum += (val[0]>>16)&0xFF
-            self.checksum += (val[0]>>24)&0xFF
-            return val[0];  
-
-    def M1Forward(self, address, val):
-            self.sendcommand(address,0)
-            self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
-            return;
-    
-    def M1Backward(self, address, val):
-            self.sendcommand(address,1)
-            self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
-            return;
-    
-    def M2Forward(self, address, val):
-            self.sendcommand(address,4)
-            self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
-            return;
-    
-    def M2Backward(self, val):
-            self.sendcommand(address,5)
-            self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
-            return;
-
-    def readM1speed(self):
-            self.sendcommand(128,18);
-            enc = self.readslong();
-            status = self.readbyte();
-            crc = self.checksum&0x7F
-            if crc==self.readbyte()&0x7F:
-                    return (enc,status);
-            return (-1,-1);
-    
-    def readM2speed(self):
-            self.sendcommand(128,19);
-            enc = self.readslong();
-            status = self.readbyte();
-            crc = self.checksum&0x7F
-            if crc==self.readbyte()&0x7F:
-                    return (enc,status);
-            return (-1,-1);

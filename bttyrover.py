@@ -109,8 +109,9 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.599, 7.159, "EF east entry"],   #24
 [11,12]]
 
-version = "Rover 1.0 200419\n"
+version = "Rover 1.0 200421\n"
 print(version)
+print(time.localtime(time.time()))
 log = open("logfile.txt", 'a')
 log.write(version)
 robot = motor_driver_ada.motor_driver_ada(log)
@@ -170,6 +171,7 @@ def simple_commands(xchr):
     elif xchr == '1':                   # 1 - Left
         if (auto):
             azimuth -= 1
+            logit("az set to %d\n" % azimuth)
         else:
             steer -= 1
             robot.motor(speed, steer)
@@ -182,6 +184,7 @@ def simple_commands(xchr):
     elif xchr == '3':                   # 3 - Right
         if (auto):
             azimuth += 1
+            logit("az set to %d\n" % azimuth)
         else:
             steer += 1
             robot.motor(speed, steer)
@@ -189,6 +192,7 @@ def simple_commands(xchr):
     elif xchr == '4':                   # 4 - Left 5 deg
         if (auto):
             azimuth -= 5
+            logit("az set to %d\n" % azimuth)
         else:
             steer -= 5
             robot.motor(speed, steer)
@@ -212,13 +216,15 @@ def simple_commands(xchr):
     elif xchr == '6':                   # 6 - Left 5 deg
         if (auto):
             azimuth += 5
+            logit("az set to %d\n" % azimuth)
         else:
             steer += 5
             robot.motor(speed, steer)
             
     elif xchr == '7':                   # 7 - HAW steer left limit
         if (auto):
-            azimuth = left_limit
+            azimuth += left_limit
+            logit("az set to %d\n" % azimuth)
         else:
             dt = 1
             if steer > (left_limit + 1):
@@ -236,7 +242,8 @@ def simple_commands(xchr):
 
     elif xchr == '9':                   # 9 - GEE steer right limit
         if (auto):
-            azimuth = right_limit
+            azimuth += right_limit
+            logit("az set to %d\n" % azimuth)
         else:
             dt = 1
             if steer < (right_limit - 1):
@@ -263,6 +270,7 @@ def star_commands(xchr):
     elif (auto and xchr == '1'):      #left 90 deg
         azimuth -= 90
         azimuth %= 360
+        logit("az set to %d\n" % azimuth)
     elif (xchr == '2'):               #autopilot on
         auto = True
         azimuth = hdg
@@ -271,6 +279,7 @@ def star_commands(xchr):
     elif (auto and xchr == '3'):      #right 90 deg
         azimuth += 90
         azimuth %= 360
+        logit("az set to %d\n" % azimuth)
     elif (xchr == '4'):               #adj compass
         compass_adjustment -= 1
         logit("Compass bias "+str(compass_adjustment))
@@ -281,10 +290,12 @@ def star_commands(xchr):
         left = True
         azimuth -= 180
         azimuth %= 360
+        logit("az set to %d\n" % azimuth)
     elif (auto and xchr == '9'):      #right 180 deg
         left = False
         azimuth += 180
         azimuth %= 360
+        logit("az set to %d\n" % azimuth)
     return
 #================================================================
 def diag_commands(xchr):
@@ -388,6 +399,7 @@ try:
                             destlon = waypts[wpt][1]
                             logit("wpt: %d %7.4f, %7.4f" % (wpt, destlat, destlon))
                             azimuth = fromto(startlat, startlon, destlat, destlon)
+                            logit("az set to %d\n" % azimuth)
                             wptdist = distto(startlat, startlon, destlat, destlon)
                             auto = True
                             wptflag = True
@@ -473,6 +485,7 @@ try:
                         azimuth = fromto(flatsec, flonsec, destlat, destlon)
                     else:
                         azimuth = fromto(ilatsec, ilonsec, destlat, destlon)
+                    logit("az set to %d\n" % azimuth)
 
                     cstr = "{c%5.1f}" % azimuth
                     sendit(cstr)
@@ -492,7 +505,7 @@ try:
                             rtseg += 1
                             wpt = routes[route][rtseg]
                             if (wpt == 0):
-                                sendit("{Stby}")
+                                sendit("{aStby}")
                                 logit("Standby")
                                 wptflg = False
                                 rteflag = False
@@ -505,6 +518,7 @@ try:
                             logit("wpt: %d %7.4f/%7.4f" % (wpt, destlat, destlon))
                             azimuth = fromto(startlat, startlon,\
                                 destlat, destlon)
+                            logit("az set to %d\n" % azimuth)
                             wptdist = distto(startlat, startlon, \
                                 destlat, destlon)
                             sendit("{aWp" + str(wpt) + "}")
