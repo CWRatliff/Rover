@@ -4,7 +4,7 @@
 #200404 used 'D' hubs and individual biases
 #200405 corrected actual motor to port mapping
 #N.B. RC 0x81 & 0x82 may be exchanged on 'Spot 2'
-#200421 incorporated roboclaw methiods directly
+#200421 incorporated roboclaw methods directly
 
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels = 16)
@@ -46,7 +46,7 @@ class motor_driver_ada:
 #        self.rc = Roboclaw("/dev/ttyS0",115200)
 #        i = self.rc.Open()
         self.checksum = 0
-        self.port = serial.Serial(ttyStr, baudrate=115200, timeout=0.1)
+        self.port = serial.Serial("/dev/ttyS0", baudrate=115200, timeout=0.1)
 
         self.lf_motor.angle = self.rfbias
         self.rf_motor.angle = self.lfbias
