@@ -1,9 +1,10 @@
 #rover motor driver class - 4 servo motors for steering, 6 DC motors for locomotion
 #190721 steering limits into this module
-#200305 changed to new adarfuit servo class
+#200305 changed to new adafruit servo class
 #200404 used 'D' hubs and individual biases
 #200405 corrected actual motor to port mapping
-#N.B. RC 0x81 & 0x82 may be exchenged for 'Spot 2'
+#N.B. RC 0x81 & 0x82 may be exchanged on 'Spot 2'
+#200421 incorporated roboclaw methiods directly
 
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels = 16)
@@ -71,8 +72,8 @@ class motor_driver_ada:
         else:
 #             self.rc.BackwardM1(address, abs(v1))
 #             self.rc.BackwardM2(address, abs(v2))
-            self.M1Backward(address, v1)
-            self.M2Backward(address, v2)
+            self.M1Backward(address, abs(v1))
+            self.M2Backward(address, abs(v2))
 #       print("m1, m2 = "+str(v1)+", "+str(v2))
 
     def stop_all(self):
@@ -81,16 +82,15 @@ class motor_driver_ada:
         self.turn_motor(0X82, 0, 0, 0)
 
     def motor_speed(self):
-        return
-#         speed1 = self.rc.ReadSpeedM1(0x80)
-#         speed2 = self.rc.ReadSpeedM2(0x80)
-#         self.log.write("motor speed = %d, %d\n" , speed1, speed2)
-#         speed1 = self.rc.ReadSpeedM1(0x81)
-#         speed2 = self.rc.ReadSpeedM2(0x81)
-#         self.log.write("motor speed = %d, %d\n" , speed1, speed2)
-#         speed1 = self.rc.ReadSpeedM1(0x82)
-#         speed2 = self.rc.ReadSpeedM2(0x82)
-#         self.log.write("motor speed = %d, %d\n" , speed1, speed2)
+        speed1 = self.rc.readM1speed(0x80)
+        speed2 = self.rc.readM2speed(0x80)
+        self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
+        speed1 = self.rc.readM1speed(0x81)
+        speed2 = self.rc.readM2speed(0x81)
+        self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
+        speed1 = self.rc.readM1speed(0x82)
+        speed2 = self.rc.readM2speed(0x82)
+        self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):
@@ -105,7 +105,7 @@ class motor_driver_ada:
         vic = 0
         #roboclaw speed limit 0 to 127
         # see BOT-2/18 (181201)
-        # rechecked 200329
+        # math rechecked 200329
         if steer != 0:                                  #if steering angle not zero, compute angles, wheel speed
             angle = math.radians(abs(steer))
             ric = self.d3 / math.sin(angle)             #turn radius - inner corner
@@ -167,6 +167,11 @@ class motor_driver_ada:
             self.port.write(bytes([command]));
             return;
         
+    def readbyte(self):
+            val = struct.unpack('>B',self.port.read(1));
+            self.checksum += val[0]
+            return val[0];
+        
     def writebyte(self, address, val):
             self.checksum += val
             return self.port.write(struct.pack('>B',val));
@@ -197,14 +202,14 @@ class motor_driver_ada:
             self.writebyte(self.checksum&0x7F);
             return;
     
-    def M2Backward(self, val):
+    def M2Backward(self, address, val):
             self.sendcommand(address,5)
             self.writebyte(val)
             self.writebyte(self.checksum&0x7F);
             return;
 
-    def readM1speed(self):
-            self.sendcommand(128,18);
+    def readM1speed(self, address):
+            self.sendcommand(address,18);
             enc = self.readslong();
             status = self.readbyte();
             crc = self.checksum&0x7F
@@ -212,8 +217,8 @@ class motor_driver_ada:
                     return (enc,status);
             return (-1,-1);
     
-    def readM2speed(self):
-            self.sendcommand(128,19);
+    def readM2speed(self, address):
+            self.sendcommand(address,19);
             enc = self.readslong();
             status = self.readbyte();
             crc = self.checksum&0x7F
