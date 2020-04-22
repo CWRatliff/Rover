@@ -11,6 +11,7 @@ kit = ServoKit(channels = 16)
 
 import serial
 import math
+import struct
 #from roboclaw import Roboclaw
 
 
@@ -172,7 +173,7 @@ class motor_driver_ada:
             self.checksum += val[0]
             return val[0];
         
-    def writebyte(self, address, val):
+    def writebyte(self, val):
             self.checksum += val
             return self.port.write(struct.pack('>B',val));
         
