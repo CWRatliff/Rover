@@ -46,8 +46,9 @@ class motor_driver_ada:
         
 #        self.rc = Roboclaw("/dev/ttyS0",115200)
 #        i = self.rc.Open()
-        self.checksum = 0
+        self.crc = 0
         self.port = serial.Serial("/dev/ttyS0", baudrate=115200, timeout=0.1)
+        self.port.Open()
 
         self.lf_motor.angle = self.rfbias
         self.rf_motor.angle = self.lfbias
@@ -161,59 +162,73 @@ class motor_driver_ada:
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
 
+    def crc_clear(self):
+        self.crc = 0
+        return
+        
+    def crc_update(self, data):
+        self.crc = self.crc ^ (data << 8)
+        for bit in range(0, 8):
+            if (self.crc&0x8000)  == 0x8000:
+                self.crc = ((self.crc << 1) ^ 0x1021)
+            else:
+                self.crc = self.crc << 1
+        return
+
     def sendcommand(self,address,command):
-            self.checksum = address
-            self.port.write(bytes([address]));
-            self.checksum += command
-            self.port.write(bytes([command]));
+            self.crc_clear()
+            self.crc_update(address)
+            self.port.write(struct.pack('>B', address));
+            self.crc_update(command)
+            self.port.write(struct.pack('>B', command));
             return;
         
     def readbyte(self):
             val = struct.unpack('>B',self.port.read(1));
-            self.checksum += val[0]
+            self.crc += val[0]
             return val[0];
         
     def writebyte(self, val):
-            self.checksum += val
+            self.crc_update(val & 0xFF)
             return self.port.write(struct.pack('>B',val));
         
     def readslong(self):
             val = struct.unpack('>l',self.port.read(4));
-            self.checksum += val[0]
-            self.checksum += (val[0]>>8)&0xFF
-            self.checksum += (val[0]>>16)&0xFF
-            self.checksum += (val[0]>>24)&0xFF
+            self.crc += val[0]
+            self.crc += (val[0]>>8)&0xFF
+            self.crc += (val[0]>>16)&0xFF
+            self.crc += (val[0]>>24)&0xFF
             return val[0];  
 
     def M1Forward(self, address, val):
             self.sendcommand(address,0)
             self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
+            self.writebyte(self.crc&0x7F);
             return;
     
     def M1Backward(self, address, val):
             self.sendcommand(address,1)
             self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
+            self.writebyte(self.crc&0x7F);
             return;
     
     def M2Forward(self, address, val):
             self.sendcommand(address,4)
             self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
+            self.writebyte(self.crc&0x7F);
             return;
     
     def M2Backward(self, address, val):
             self.sendcommand(address,5)
             self.writebyte(val)
-            self.writebyte(self.checksum&0x7F);
+            self.writebyte(self.crc&0x7F);
             return;
 
     def readM1speed(self, address):
             self.sendcommand(address,18);
             enc = self.readslong();
             status = self.readbyte();
-            crc = self.checksum&0x7F
+            crc = self.crc&0x7F
             if crc==self.readbyte()&0x7F:
                     return (enc,status);
             return (-1,-1);
@@ -222,7 +237,7 @@ class motor_driver_ada:
             self.sendcommand(address,19);
             enc = self.readslong();
             status = self.readbyte();
-            crc = self.checksum&0x7F
+            crc = self.crc&0x7F
             if crc==self.readbyte()&0x7F:
                     return (enc,status);
             return (-1,-1);
