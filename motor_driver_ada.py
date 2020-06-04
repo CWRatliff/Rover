@@ -48,7 +48,6 @@ class motor_driver_ada:
 #        i = self.rc.Open()
         self.crc = 0
         self.port = serial.Serial("/dev/ttyS0", baudrate=115200, timeout=0.1)
-        self.port.Open()
 
         self.lf_motor.angle = self.rfbias
         self.rf_motor.angle = self.lfbias
@@ -130,8 +129,8 @@ class motor_driver_ada:
             self.lr_motor.angle = self.lrbias + steer
             self.rr_motor.angle = self.rrbias + phi
             self.turn_motor(0x80, vel, voc, 1)          #RC 1 - rf, rm
-            self.turn_motor(0x81, vel, vim, vic)        #RC 2 - lm, lf
-            self.turn_motor(0x82, vel, voc, vic)        #RC 3 - rr, lr
+            self.turn_motor(0x81, vel, voc, vic)        #RC 2 - lm, lf
+            self.turn_motor(0x82, vel, vim, vic)        #RC 3 - rr, lr
 #            cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
 #            self.log.write(cstr)
 
@@ -142,9 +141,9 @@ class motor_driver_ada:
             self.lr_motor.angle = self.lrbias + phi
             self.rr_motor.angle = self.rrbias + steer
             self.turn_motor(0x80, vel, vic, vim)
-            self.turn_motor(0x81, vel, 1, voc)
-            self.turn_motor(0x82, vel, vic, voc)
-#            print("80 vic, vim ",vic,vim)
+            self.turn_motor(0x81, vel, vic, voc)
+            self.turn_motor(0x82, vel, 1, voc)
+            #            print("80 vic, vim ",vic,vim)
 #            print("81 vic, voc ",vic,voc)
 #            print("82 vom, voc ", 1, voc)
 #            cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
