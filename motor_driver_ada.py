@@ -5,6 +5,8 @@
 #200405 corrected actual motor to port mapping
 #N.B. RC 0x81 & 0x82 may be exchanged on 'Spot 2'
 #200421 incorporated roboclaw methods directly
+#200605 swapped 0x81 & 0x82, back to original roboclaw
+
 
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels = 16)
@@ -12,7 +14,7 @@ kit = ServoKit(channels = 16)
 import serial
 import math
 import struct
-#from roboclaw import Roboclaw
+from roboclaw import Roboclaw
 
 
 
@@ -44,8 +46,8 @@ class motor_driver_ada:
         self.lr_motor.set_pulse_width_range(700, 2300)
         self.log = log
         
-#        self.rc = Roboclaw("/dev/ttyS0",115200)
-#        i = self.rc.Open()
+        self.rc = Roboclaw("/dev/ttyS0",115200)
+        i = self.rc.Open()
         self.crc = 0
         self.port = serial.Serial("/dev/ttyS0", baudrate=115200, timeout=0.1)
 
@@ -66,15 +68,15 @@ class motor_driver_ada:
         v1 = int(v * av1)
         v2 = int(v * av2)
         if v >= 0:
-#             self.rc.ForwardM1(address, v1)
-#             self.rc.ForwardM2(address, v2)
-            self.M1Forward(address, v1)
-            self.M2Forward(address, v2)
+            self.rc.ForwardM1(address, v1)
+            self.rc.ForwardM2(address, v2)
+#             self.M1Forward(address, v1)
+#             self.M2Forward(address, v2)
         else:
-#             self.rc.BackwardM1(address, abs(v1))
-#             self.rc.BackwardM2(address, abs(v2))
-            self.M1Backward(address, abs(v1))
-            self.M2Backward(address, abs(v2))
+            self.rc.BackwardM1(address, abs(v1))
+            self.rc.BackwardM2(address, abs(v2))
+#             self.M1Backward(address, abs(v1))
+#             self.M2Backward(address, abs(v2))
 #       print("m1, m2 = "+str(v1)+", "+str(v2))
 
     def stop_all(self):
@@ -83,14 +85,14 @@ class motor_driver_ada:
         self.turn_motor(0X82, 0, 0, 0)
 
     def motor_speed(self):
-        speed1 = self.rc.readM1speed(0x80)
-        speed2 = self.rc.readM2speed(0x80)
+        speed1 = self.rc.ReadSpeedM1(0x80)
+        speed2 = self.rc.ReadSpeedM2(0x80)
         self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
-        speed1 = self.rc.readM1speed(0x81)
-        speed2 = self.rc.readM2speed(0x81)
+        speed1 = self.rc.ReadSpeedM1(0x81)
+        speed2 = self.rc.ReadSpeedM2(0x81)
         self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
-        speed1 = self.rc.readM1speed(0x82)
-        speed2 = self.rc.readM2speed(0x82)
+        speed1 = self.rc.ReadSpeedM1(0x82)
+        speed2 = self.rc.ReadSpeedM2(0x82)
         self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
 
 # based on speed & steer, command all motors
@@ -161,82 +163,3 @@ class motor_driver_ada:
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
 
-    def crc_clear(self):
-        self.crc = 0
-        return
-        
-    def crc_update(self, data):
-        self.crc = self.crc ^ (data << 8)
-        for bit in range(0, 8):
-            if (self.crc&0x8000)  == 0x8000:
-                self.crc = ((self.crc << 1) ^ 0x1021)
-            else:
-                self.crc = self.crc << 1
-        return
-
-    def sendcommand(self,address,command):
-            self.crc_clear()
-            self.crc_update(address)
-            self.port.write(struct.pack('>B', address));
-            self.crc_update(command)
-            self.port.write(struct.pack('>B', command));
-            return;
-        
-    def readbyte(self):
-            val = struct.unpack('>B',self.port.read(1));
-            self.crc += val[0]
-            return val[0];
-        
-    def writebyte(self, val):
-            self.crc_update(val & 0xFF)
-            return self.port.write(struct.pack('>B',val));
-        
-    def readslong(self):
-            val = struct.unpack('>l',self.port.read(4));
-            self.crc += val[0]
-            self.crc += (val[0]>>8)&0xFF
-            self.crc += (val[0]>>16)&0xFF
-            self.crc += (val[0]>>24)&0xFF
-            return val[0];  
-
-    def M1Forward(self, address, val):
-            self.sendcommand(address,0)
-            self.writebyte(val)
-            self.writebyte(self.crc&0x7F);
-            return;
-    
-    def M1Backward(self, address, val):
-            self.sendcommand(address,1)
-            self.writebyte(val)
-            self.writebyte(self.crc&0x7F);
-            return;
-    
-    def M2Forward(self, address, val):
-            self.sendcommand(address,4)
-            self.writebyte(val)
-            self.writebyte(self.crc&0x7F);
-            return;
-    
-    def M2Backward(self, address, val):
-            self.sendcommand(address,5)
-            self.writebyte(val)
-            self.writebyte(self.crc&0x7F);
-            return;
-
-    def readM1speed(self, address):
-            self.sendcommand(address,18);
-            enc = self.readslong();
-            status = self.readbyte();
-            crc = self.crc&0x7F
-            if crc==self.readbyte()&0x7F:
-                    return (enc,status);
-            return (-1,-1);
-    
-    def readM2speed(self, address):
-            self.sendcommand(address,19);
-            enc = self.readslong();
-            status = self.readbyte();
-            crc = self.crc&0x7F
-            if crc==self.readbyte()&0x7F:
-                    return (enc,status);
-            return (-1,-1);
