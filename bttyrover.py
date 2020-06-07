@@ -111,9 +111,11 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 
 version = "Rover 1.0 200421\n"
 print(version)
-print(time.localtime(time.time()))
+tme = time.localtime(time.time())
+print (tme)
 log = open("logfile.txt", 'a')
 log.write(version)
+#log.write(tme)
 robot = motor_driver_ada.motor_driver_ada(log)
 Kfilter = cEKF.Kalman_filter()
 port = "/dev/ttyUSB0"
@@ -302,6 +304,7 @@ def diag_commands(xchr):
     if (xchr == '0'):
         logit("diagnostic #1 =======================")
         robot.motor_speed()
+        log.flush()
     return
 
 #=================================================================

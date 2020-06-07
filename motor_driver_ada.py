@@ -16,8 +16,6 @@ import math
 import struct
 from roboclaw import Roboclaw
 
-
-
 class motor_driver_ada:
 
     def __init__(self, log):
@@ -56,6 +54,12 @@ class motor_driver_ada:
         self.lr_motor.angle = self.lrbias
         self.rr_motor.angle = self.rrbias
         self.stop_all()
+        ver = self.rc.ReadVersion(0x80)
+        print(ver[0],ver[1])
+        ver = self.rc.ReadVersion(0x81)
+        print(ver[0],ver[1])
+        ver = self.rc.ReadVersion(0x82)
+        print(ver[0],ver[1])
 
     def diag(self):
         print("servo rr ="+str(self.rr_motor.angle))
@@ -87,13 +91,28 @@ class motor_driver_ada:
     def motor_speed(self):
         speed1 = self.rc.ReadSpeedM1(0x80)
         speed2 = self.rc.ReadSpeedM2(0x80)
-        self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
+        self.log.write("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
+        print("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
         speed1 = self.rc.ReadSpeedM1(0x81)
         speed2 = self.rc.ReadSpeedM2(0x81)
-        self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
+        self.log.write("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
+        print("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
         speed1 = self.rc.ReadSpeedM1(0x82)
         speed2 = self.rc.ReadSpeedM2(0x82)
-        self.log.write("motor speed = %d, %d\n" % (speed1[0], speed2[0]))
+        self.log.write("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
+        print("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
+        volts = self.rc.ReadMainBatteryVoltage(0x80)[1]/10.0
+        print("Voltage = ",volts)
+        err=self.rc.ReadError(0x80)
+        if err:
+            print("status of 0x80", err)
+        err=self.rc.ReadError(0x81)
+        if err:
+            print("status of 0x81", err)
+        err=self.rc.ReadError(0x82)
+        if err:
+            print("status of 0x82", err)
+        
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):
