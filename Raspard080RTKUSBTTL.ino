@@ -1,6 +1,7 @@
 //190823 - added '.'s to msgs - seems to be SPI timing need
 //191019 - revised lat/long arithmetic to avoid rounding loss of accuracy
 //200216 - defined lat/long biases for ease of location change
+//200608 - continue instead of break in xbee input
 
 #define FALSE 0
 #define TRUE 1
@@ -20,10 +21,7 @@ BNO080 myIMU;
 unsigned long imuepoch;
 unsigned long gpsepoch;
 char    str[25];
-byte    rtcm[100];
-int     rtcmflag = FALSE;
-int     rtcmi = 0;
-
+byte    gps;
 int     oldhdg = 0;
 
 //==========================================================================================
@@ -65,27 +63,24 @@ void loop() {
   // read Xbee input and upload to RPi
   while (Serial1.available()) {
     xchr = Serial1.read();
+    if (xchr & 0x80) {
+      if ((xchr & 0xb0) == 0xb0) {
+        gps = (xchr & 0x0f) << 4;
+        continue;
+        }
+      if ((xchr & 0xd0) == 0xd0) {
+        gps |= (xchr & 0x0f);
+        Serial3.write(gps);
+        continue;
+        }
+      }
     Serial2.write(xchr);
     Serial.print(xchr);
     if (xchr == '}') {
       Serial.println();
       break;
       }
-    if (xchr == '<') {
-      rtcmi = 0;
-      rtcmflag = TRUE;
-      break;
-      }
-    if (rtcmflag) {
-      if (xchr == '>') {
-        Serial3.write(rtcm, rtcmi);
-        rtcmflag = FALSE;
-        break;
-        }
-      else 
-        rtcm[rtcmi++] = xchr;
-      }
-    }
+    } // endwhile
 
   // read any msg from RPi and send via XBee
   while (Serial2.available()) {
