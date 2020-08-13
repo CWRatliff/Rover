@@ -10,6 +10,7 @@
 #191023 - major code review
 #200314 - I/F with Arduino via USB-tty serial port
 #200412 - restructure flag and auto blocks for faster EKF
+#200813 - wpts upgrade, code improvements esp. route & U'ies
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -85,8 +86,8 @@ wptflag = False
 
 rtseg = 0
 routes = [[0,0],                    #0
-[12, 10, 0],                        #1
-[11, 10, 11, 0],                    #2
+[28, 27, 0],                        #1
+[28, 27, 26, 0],                    #2
 [14, 15, 16, 17, 0],                #3
 [0]]
           
@@ -113,7 +114,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.039, 7.401, "boat corner"],     #28
 [11,12]]
 
-version = "Rover 1.0 200421\n"
+version = "Rover 1.0 200813\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -165,6 +166,12 @@ def readusb():
         return (0)
 #==================================================================
 def max_turn(angle):
+    global steer
+    global speed
+    global left_limit
+    global right_limit
+    
+    dt = 1
     if (angle < 0):
         if steer > (left_limit + 1):
             while (steer > left_limit):
@@ -182,6 +189,18 @@ def max_turn(angle):
     return
 #===================================================================
 def new_waypoint(wpt):
+    global startlat
+    global startlom
+    global ilatsec
+    global ilonsec
+    global destlat
+    global destlon
+    global azimuth
+    global wptdist
+    global auto
+    global wptflag
+    global epoch
+    
     startlat = ilatsec
     startlon = ilonsec
     destlat = waypts[wpt][0]
@@ -196,6 +215,7 @@ def new_waypoint(wpt):
     Kfilter.Kalman_start(time.time(), ilonsec * lonfeet, \
         ilatsec * latfeet, (math.radians(450-hdg) % 360), \
         speed * spdfactor)
+    epoch = time.time()
     return
 
 #===================================================================
@@ -233,7 +253,7 @@ def simple_commands(xchr):
     elif xchr == '4':                   # 4 - Left 5 deg
         if (auto):
             azimuth -= 5
-            logit("az set to %d\n" % azimuth)            dt = 1
+            logit("az set to %d\n" % azimuth)
         else:
             steer -= 5
             robot.motor(speed, steer)
@@ -517,7 +537,7 @@ try:
                     sendit(cstr)
                     logit(cstr)
                 
-                    if (dtg < accgps):             # closing on waypoint
+                    if (dtg < max(2.0, accgps)):             # closing on waypoint
                         if rteflag:
                             rtseg += 1
                             wpt = routes[route][rtseg]
@@ -528,7 +548,8 @@ try:
                                 rteflag = False
                                 speed = 0
                                 auto = False
-                            new_waypoint(wpt)
+                            else:
+                                new_waypoint(wpt)
 
                         else:
                             sendit("{aStby}")
