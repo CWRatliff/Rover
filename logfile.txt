@@ -1,1801 +1,1860 @@
-Rover 1.0 200421
+Rover 1.0 200813
 Standby
 {h  0}
 {v   0}
 {s   0}
-msg: 09:35:46 {LT22.0381}
-msg: 09:35:46 {LN7.2151}
-msg: 09:35:47 {LA3538}
-msg: 09:35:48 {LT22.0381}
-msg: 09:35:48 {LN7.2151}
-msg: 09:35:48 {LT22.0406}
-msg: 09:35:48 {LN7.2137}
-msg: 09:35:49 {D2}
+msg: 10:59:07 {LT21.9334}
+msg: 10:59:07 {LN7.2198}
+msg: 10:59:08 {LA907}
+msg: 10:59:09 {LT21.9308}
+msg: 10:59:09 {LN7.2216}
+msg: 10:59:09 {LA907}
+msg: 10:59:11 {LT21.9305}
+msg: 10:59:11 {LN7.2202}
+msg: 10:59:11 {LA1055}
+msg: 10:59:13 {LT21.9305}
+msg: 10:59:13 {LN7.2205}
+msg: 10:59:14 {LA1016}
+msg: 10:59:15 {LT21.9308}
+msg: 10:59:15 {LN7.2212}
+msg: 10:59:15 {LA951}
+msg: 10:59:17 {LT21.9319}
+msg: 10:59:17 {LN7.2220}
+msg: 10:59:17 {LA827}
+msg: 10:59:19 {LT21.9319}
+msg: 10:59:19 {LN7.2227}
+msg: 10:59:20 {LA832}
+msg: 10:59:21 {D2}
 {v  10}
-msg: 09:35:49 {D2}
+msg: 10:59:21 {LT21.9308}
+msg: 10:59:21 {LN7.2227}
+msg: 10:59:21 {LA837}
+msg: 10:59:23 {D2}
 {v  20}
-msg: 09:35:50 {LT22.0428}
-msg: 09:35:50 {LN7.2126}
-msg: 09:35:50 {D2}
+msg: 10:59:23 {LT21.9312}
+msg: 10:59:23 {LN7.2223}
+msg: 10:59:23 {LA719}
+msg: 10:59:23 {D2}
 {v  30}
-msg: 09:35:51 {LT22.0442}
-msg: 09:35:51 {LN7.2119}
-msg: 09:35:52 {LA3556}
-msg: 09:35:52 {D2}
+msg: 10:59:25 {LT21.9312}
+msg: 10:59:25 {LN7.2227}
+msg: 10:59:26 {LA743}
+msg: 10:59:27 {LT21.9348}
+msg: 10:59:27 {LN7.2216}
+msg: 10:59:27 {LA802}
+msg: 10:59:29 {LT21.9406}
+msg: 10:59:29 {LN7.2180}
+msg: 10:59:29 {LA789}
+msg: 10:59:31 {LT21.9406}
+msg: 10:59:31 {LN7.2162}
+msg: 10:59:32 {LA952}
+msg: 10:59:33 {LT21.9481}
+msg: 10:59:33 {LN7.2151}
+msg: 10:59:33 {LA141}
+msg: 10:59:35 {LT21.9593}
+msg: 10:59:35 {LN7.2205}
+msg: 10:59:35 {LA141}
+msg: 10:59:37 {LT21.9593}
+msg: 10:59:37 {LN7.2169}
+msg: 10:59:38 {D1}
+{s  -1}
+msg: 10:59:38 {D1}
+{s  -2}
+msg: 10:59:38 {LA143}
+msg: 10:59:38 {D1}
+{s  -3}
+msg: 10:59:39 {LT21.9661}
+msg: 10:59:39 {LN7.2158}
+msg: 10:59:39 {LA161}
+msg: 10:59:41 {D4}
+{s  -8}
+msg: 10:59:41 {LT21.9722}
+msg: 10:59:41 {LN7.2137}
+msg: 10:59:41 {LA141}
+msg: 10:59:42 {D4}
+{s -13}
+msg: 10:59:43 {LT21.9722}
+msg: 10:59:43 {LN7.2119}
+msg: 10:59:44 {D2}
 {v  40}
-msg: 09:35:53 {LT22.0442}
-msg: 09:35:53 {LN7.2108}
-msg: 09:35:54 {LT22.0460}
-msg: 09:35:54 {LN7.2104}
-msg: 09:35:56 {LT22.0468}
-msg: 09:35:56 {LN7.2104}
-msg: 09:35:56 {D0}
-Rover 1.0 200421
-Standby
-{h  0}
-{v   0}
-{s   0}
-msg: 09:45:54 {LT21.9427}
-msg: 09:45:54 {LN7.2133}
-msg: 09:45:55 {LA3462}
-msg: 09:45:56 {LT21.9427}
-msg: 09:45:56 {LN7.2133}
-msg: 09:45:56 {LT21.9438}
-msg: 09:45:56 {LN7.2137}
-msg: 09:45:58 {LT21.9456}
-msg: 09:45:58 {LN7.2144}
-msg: 09:45:59 {LT21.9470}
-msg: 09:45:59 {LN7.2137}
-msg: 09:46:00 {LA3470}
-msg: 09:46:00 {D2}
-{v  10}
-msg: 09:46:01 {LT21.9470}
-msg: 09:46:01 {LN7.2140}
-msg: 09:46:02 {LT21.9485}
-msg: 09:46:02 {LN7.2140}
-msg: 09:46:03 {LA3468}
-msg: 09:46:04 {LT21.9485}
-msg: 09:46:04 {LN7.2140}
-msg: 09:46:04 {T0}
-diagnostic #1 =======================
-motor speed = 480, 335
-motor speed = 481, 482
-motor speed = 507, 517
-Rover 1.0 200421
-Standby
-{h  0}
-{v   0}
-{s   0}
-msg: 09:47:21 {LT21.9737}
-msg: 09:47:21 {LN7.1986}
-msg: 09:47:22 {LT21.9748}
-msg: 09:47:22 {LN7.1996}
-msg: 09:47:23 {LA3459}
-msg: 09:47:24 {LT21.9748}
-msg: 09:47:24 {LN7.2022}
-msg: 09:47:24 {D2}
-{v  10}
-msg: 09:47:25 {LT21.9773}
-msg: 09:47:25 {LN7.2029}
-msg: 09:47:26 {LA3420}
-msg: 09:47:27 {LT21.9791}
-msg: 09:47:27 {LN7.2029}
-msg: 09:47:27 {T0}
-diagnostic #1 =======================
-motor speed = 485, 514
-motor speed = 483, 472
-motor speed = 508, 515
-Rover 1.0 200421
-Standby
-{h  0}
-{v   0}
-{s   0}
-msg: 09:48:29 {LT22.0057}
-msg: 09:48:29 {LN7.2133}
-msg: 09:48:30 {LA3538}
-msg: 09:48:31 {LT22.0057}
-msg: 09:48:31 {LN7.2133}
-msg: 09:48:31 {D2}
-{v  10}
-msg: 09:48:32 {LT22.0068}
-msg: 09:48:32 {LN7.2137}
-msg: 09:48:33 {LA3480}
-msg: 09:48:34 {LT22.0072}
-msg: 09:48:34 {LN7.2137}
-msg: 09:48:34 {T0}
-diagnostic #1 =======================
-motor speed = 492, 516
-motor speed = 479, 293
-motor speed = 513, 513
-msg: 09:48:34 {LT22.0079}
-msg: 09:48:34 {LN7.2151}
-msg: 09:48:36 {LT22.0097}
-msg: 09:48:36 {LN7.2148}
-msg: 09:48:37 {LT22.0104}
-msg: 09:48:37 {LN7.2144}
-msg: 09:48:38 {LA3401}
-msg: 09:48:39 {LT22.0104}
-msg: 09:48:39 {LN7.2155}
-msg: 09:48:40 {LT22.0133}
-msg: 09:48:40 {LN7.2158}
-msg: 09:48:41 {LA3371}
-msg: 09:48:42 {LT22.0147}
-msg: 09:48:42 {LN7.2158}
-msg: 09:48:42 {LT22.0176}
-msg: 09:48:42 {LN7.2140}
-msg: 09:48:44 {LT22.0205}
-msg: 09:48:44 {LN7.2133}
-msg: 09:48:45 {LT22.0219}
-msg: 09:48:45 {LN7.2133}
-msg: 09:48:46 {LA3357}
-msg: 09:48:46 {D0}
-{v   0}
-msg: 09:48:47 {LT22.0219}
-msg: 09:48:47 {LN7.2137}
-Rover 1.0 200421
-Standby
-{h  0}
-{v   0}
-{s   0}
-msg: 10:07:00 {LA3602}
-msg: 10:07:01 {LT21.9852}
-msg: 10:07:01 {LN7.1518}
-msg: 10:07:01 {LT21.9841}
-msg: 10:07:01 {LN7.1525}
-msg: 10:07:02 {D2}
-{v  10}
-msg: 10:07:03 {LT21.9830}
-msg: 10:07:03 {LN7.1532}
-msg: 10:07:03 {D2}
-{v  20}
-msg: 10:07:04 {LT21.9823}
-msg: 10:07:04 {LN7.1528}
-msg: 10:07:05 {LA3594}
-msg: 10:07:05 {D2}
-{v  30}
-msg: 10:07:06 {LT21.9823}
-msg: 10:07:06 {LN7.1536}
-msg: 10:07:07 {LT21.9809}
-msg: 10:07:07 {LN7.1539}
-msg: 10:07:09 {LT21.9809}
-msg: 10:07:09 {LN7.1528}
-msg: 10:07:10 {LT21.9805}
-msg: 10:07:10 {LN7.1528}
-msg: 10:07:11 {T0}
-diagnostic #1 =======================
-motor speed = 1641, 342
-motor speed = 1625, 1627
-motor speed = 1665, 1654
-msg: 10:07:12 {LT21.9802}
-msg: 10:07:12 {LN7.1528}
-msg: 10:07:12 {LT21.9809}
-msg: 10:07:12 {LN7.1528}
-msg: 10:07:13 {LA3547}
-msg: 10:07:14 {LT21.9816}
-msg: 10:07:14 {LN7.1536}
-msg: 10:07:15 {LT21.9816}
-msg: 10:07:15 {LN7.1536}
-msg: 10:07:16 {LA3516}
-msg: 10:07:17 {LT21.9816}
-msg: 10:07:17 {LN7.1521}
-msg: 10:07:18 {LT21.9830}
-msg: 10:07:18 {LN7.1521}
-msg: 10:07:19 {LA3495}
-msg: 10:07:20 {LT21.9834}
-msg: 10:07:20 {LN7.1521}
-msg: 10:07:20 {D0}
-{v   0}
-msg: 10:07:20 {LT21.9841}
-msg: 10:07:20 {LN7.1518}
-msg: 10:07:22 {LT21.9852}
-msg: 10:07:22 {LN7.1521}
-Rover 1.0 200421
-Standby
-{h  0}
-{v   0}
-{s   0}
-msg: 10:22:40 {LT21.9524}
-msg: 10:22:40 {LN7.2749}
-msg: 10:22:42 {LT21.9506}
-msg: 10:22:42 {LN7.2756}
-msg: 10:22:43 {LT21.9506}
-msg: 10:22:43 {LN7.2760}
-msg: 10:22:44 {D2}
-{v  10}
-msg: 10:22:45 {LT21.9470}
-msg: 10:22:45 {LN7.2767}
-msg: 10:22:45 {LA3819}
-msg: 10:22:46 {LT21.9452}
-msg: 10:22:46 {LN7.2767}
-msg: 10:22:47 {LT21.9424}
-msg: 10:22:47 {LN7.2774}
-msg: 10:22:47 {D2}
-{v  20}
-msg: 10:22:48 {LT21.9391}
-msg: 10:22:48 {LN7.2781}
-msg: 10:22:50 {LT21.9384}
-msg: 10:22:50 {LN7.2778}
-msg: 10:22:50 {D2}
-{v  30}
-msg: 10:22:51 {LT21.9362}
-msg: 10:22:51 {LN7.2781}
-msg: 10:22:53 {LT21.9352}
-msg: 10:22:53 {LN7.2781}
-msg: 10:22:53 {D2}
-{v  40}
-msg: 10:22:54 {LT21.9352}
-msg: 10:22:54 {LN7.2788}
-msg: 10:22:55 {D2}
+msg: 10:59:44 {LA142}
+msg: 10:59:45 {LT21.9773}
+msg: 10:59:45 {LN7.2097}
+msg: 10:59:45 {LA141}
+msg: 10:59:45 {D2}
 {v  50}
-msg: 10:22:56 {LT21.9330}
-msg: 10:22:56 {LN7.2792}
-msg: 10:22:56 {D2}
+msg: 10:59:47 {LT21.9773}
+msg: 10:59:47 {LN7.2068}
+msg: 10:59:47 {LA141}
+msg: 10:59:48 {LT21.9866}
+msg: 10:59:48 {LN7.2058}
+msg: 10:59:49 {LA158}
+msg: 10:59:50 {LT21.9935}
+msg: 10:59:50 {LN7.2058}
+msg: 10:59:51 {LA141}
+msg: 10:59:53 {LT21.9935}
+msg: 10:59:53 {LN7.2076}
+msg: 10:59:53 {LA141}
+msg: 10:59:54 {LT22.0036}
+msg: 10:59:54 {LN7.2079}
+msg: 10:59:55 {LA141}
+msg: 10:59:56 {LT22.0090}
+msg: 10:59:56 {LN7.2090}
+msg: 10:59:57 {D5}
+{s   0}
+msg: 10:59:57 {LA141}
+msg: 10:59:59 {LT22.0090}
+msg: 10:59:59 {LN7.2176}
+msg: 10:59:59 {LA156}
+msg: 11:00:00 {LT22.0180}
+msg: 11:00:00 {LN7.2202}
+msg: 11:00:01 {LA141}
+msg: 11:00:02 {LT22.0216}
+msg: 11:00:02 {LN7.2234}
+msg: 11:00:03 {LA141}
+msg: 11:00:05 {LT22.0216}
+msg: 11:00:05 {LN7.2335}
+msg: 11:00:05 {LA141}
+msg: 11:00:06 {LT22.0291}
+msg: 11:00:06 {LN7.2382}
+msg: 11:00:07 {LA141}
+msg: 11:00:08 {LT22.0327}
+msg: 11:00:08 {LN7.2414}
+msg: 11:00:09 {LA141}
+msg: 11:00:11 {LT22.0327}
+msg: 11:00:11 {LN7.2583}
+msg: 11:00:11 {LA141}
+msg: 11:00:12 {LT22.0435}
+msg: 11:00:12 {LN7.2623}
+msg: 11:00:13 {F28}
+wpt: 28 22.0390,  7.4010
+az set to 267
+
+{s -93}
+msg: 11:00:13 {LA141}
+time: 1597341614.5855057
+raw L/L:22.0435/7.2623
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0478/ 7.2623
+Filtered hdg:    0.0
+Filtered speed:  0.440
+{d 11.6}
+az set to 265
+
+{c265.6}
+{ln47.221}
+{lt0.463}
+{s -95}
+msg: 11:00:14 {LT22.0496}
+msg: 11:00:14 {LN7.2673}
+time: 1597341615.5891955
+raw L/L:22.0496/7.2673
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0509/ 7.2624
+Filtered hdg:  360.0
+Filtered speed:  0.310
+{d 11.7}
+az set to 264
+
+{c264.1}
+{ln63.672}
+{lt0.463}
+{s -96}
+msg: 11:00:15 {LA141}
+time: 1597341616.594585
+raw L/L:22.0496/7.2673
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0510/ 7.2625
+Filtered hdg:  360.0
+Filtered speed:  0.155
+{d 11.7}
+az set to 264
+
+{c264.0}
+{ln64.340}
+{lt0.463}
+time: 1597341617.594718
+raw L/L:22.0496/7.2673
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0509/ 7.2627
+Filtered hdg:  360.0
+Filtered speed:  0.167
+{d 11.6}
+az set to 264
+
+{c264.0}
+{ln64.060}
+{lt0.463}
+msg: 11:00:17 {LT22.0496}
+msg: 11:00:17 {LN7.2763}
+msg: 11:00:17 {LA141}
+time: 1597341618.5991364
+raw L/L:22.0496/7.2763
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0509/ 7.2634
+Filtered hdg:  359.9
+Filtered speed:  0.166
+{d 11.6}
+az set to 264
+
+{c264.0}
+{ln63.977}
+{lt0.463}
+msg: 11:00:18 {LT22.0583}
+msg: 11:00:18 {LN7.2799}
+msg: 11:00:19 {LA141}
+time: 1597341619.6005604
+raw L/L:22.0583/7.2799
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0576/ 7.2643
+Filtered hdg:  359.7
+Filtered speed:  0.588
+{d 11.6}
+az set to 260
+
+{c260.6}
+{ln100.071}
+{lt0.463}
+{s-100}
+msg: 11:00:20 {LT22.0601}
+msg: 11:00:20 {LN7.2839}
+time: 1597341620.6058557
+raw L/L:22.0601/7.2839
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0606/ 7.2655
+Filtered hdg:  359.5
+Filtered speed:  0.353
+{d 11.6}
+az set to 259
+
+{c259.1}
+{ln116.031}
+{lt0.463}
+{s-101}
+msg: 11:00:21 {LA154}
+time: 1597341621.6097143
+raw L/L:22.0601/7.2839
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0613/ 7.2668
+Filtered hdg:  359.2
+Filtered speed:  0.213
+{d 11.5}
+az set to 258
+
+{c258.6}
+{ln119.876}
+{lt0.505}
+{s-102}
+time: 1597341622.6125507
+raw L/L:22.0601/7.2839
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0615/ 7.2681
+Filtered hdg:  358.9
+Filtered speed:  0.182
+{d 11.4}
+az set to 258
+
+{c258.4}
+{ln120.972}
+{lt0.505}
+time: 1597341623.614288
+raw L/L:22.0601/7.2839
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0616/ 7.2695
+Filtered hdg:  358.6
+Filtered speed:  0.175
+{d 11.2}
+az set to 258
+
+{c258.3}
+{ln121.435}
+{lt0.505}
+msg: 11:00:23 {LT22.0601}
+msg: 11:00:23 {LN7.2965}
+msg: 11:00:23 {LA149}
+time: 1597341624.617034
+raw L/L:22.0601/7.2965
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0618/ 7.2719
+Filtered hdg:  357.9
+Filtered speed:  0.188
+{d 11.1}
+az set to 257
+
+{c257.9}
+{ln122.609}
+{lt0.489}
+{s-103}
+msg: 11:00:24 {LT22.0583}
+msg: 11:00:24 {LN7.2997}
+msg: 11:00:25 {LA141}
+time: 1597341625.6222687
+raw L/L:22.0583/7.2997
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0606/ 7.2745
+Filtered hdg:  357.0
+Filtered speed:  0.106
+{d 10.8}
+az set to 258
+
+{c258.3}
+{ln116.288}
+{lt0.463}
+{s-102}
+msg: 11:00:26 {LT22.0543}
+msg: 11:00:26 {LN7.3015}
+time: 1597341626.6234257
+raw L/L:22.0543/7.3015
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0575/ 7.2771
+Filtered hdg:  356.1
+Filtered speed: -0.014
+{d 10.5}
+az set to 259
+
+{c259.8}
+{ln99.239}
+{lt0.463}
+{s-101}
+msg: 11:00:27 {LA141}
+time: 1597341627.6313796
+raw L/L:22.0543/7.3015
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0569/ 7.2797
+Filtered hdg:  355.2
+Filtered speed:  0.150
+{d 10.3}
+az set to 259
+
+{c259.9}
+{ln96.034}
+{lt0.463}
+time: 1597341628.6347396
+raw L/L:22.0543/7.3015
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0568/ 7.2821
+Filtered hdg:  354.3
+Filtered speed:  0.186
+{d 10.1}
+az set to 259
+
+{c259.7}
+{ln95.850}
+{lt0.463}
+msg: 11:00:29 {LT22.0543}
+msg: 11:00:29 {LN7.3048}
+time: 1597341629.639651
+raw L/L:22.0543/7.3048
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0570/ 7.2848
+Filtered hdg:  353.3
+Filtered speed:  0.205
+{d  9.9}
+az set to 259
+
+{c259.4}
+{ln97.038}
+{lt0.463}
+msg: 11:00:29 {LA141}
+time: 1597341630.6399205
+raw L/L:22.0543/7.3048
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0571/ 7.2872
+Filtered hdg:  352.3
+Filtered speed:  0.198
+{d  9.7}
+az set to 259
+
+{c259.1}
+{ln97.557}
+{lt0.463}
+msg: 11:00:30 {LT22.0450}
+msg: 11:00:30 {LN7.3040}
+msg: 11:00:31 {LA141}
+time: 1597341631.6440191
+raw L/L:22.045/7.304
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0500/ 7.2884
+Filtered hdg:  351.4
+Filtered speed: -0.259
+{d  9.5}
+az set to 263
+
+{c263.2}
+{ln59.265}
+{lt0.463}
+{s -97}
+msg: 11:00:31 {F00}
+Standby
+{v   0}
+{s   0}
+msg: 11:00:32 {LT22.0396}
+msg: 11:00:32 {LN7.3026}
+msg: 11:00:33 {LA141}
+msg: 11:00:35 {LT22.0396}
+msg: 11:00:35 {LN7.3012}
+msg: 11:00:35 {LA141}
+msg: 11:00:36 {LT22.0385}
+msg: 11:00:36 {LN7.3012}
+msg: 11:00:37 {LA141}
+msg: 11:00:37 {D2}
+{v  10}
+msg: 11:00:38 {D2}
+{v  20}
+msg: 11:00:38 {LT22.0385}
+msg: 11:00:38 {LN7.3012}
+msg: 11:00:39 {D8}
+{v  10}
+msg: 11:00:39 {LA141}
+msg: 11:00:39 {D8}
+{v   0}
+msg: 11:00:40 {D8}
+{v -10}
+msg: 11:00:40 {D8}
+{v -20}
+msg: 11:00:41 {D8}
+{v -30}
+msg: 11:00:41 {D8}
+{v -40}
+msg: 11:00:41 {LT22.0385}
+msg: 11:00:41 {LN7.3008}
+msg: 11:00:41 {LA141}
+msg: 11:00:42 {LT22.0385}
+msg: 11:00:42 {LN7.3037}
+msg: 11:00:43 {LA141}
+msg: 11:00:44 {LT22.0414}
+msg: 11:00:44 {LN7.3076}
+msg: 11:00:44 {LA141}
+msg: 11:00:46 {LT22.0457}
+msg: 11:00:46 {LN7.3184}
+msg: 11:00:46 {LA141}
+msg: 11:00:48 {LT22.0457}
+msg: 11:00:48 {LN7.3249}
+msg: 11:00:49 {LA141}
+msg: 11:00:50 {LT22.0504}
+msg: 11:00:50 {LN7.3289}
+msg: 11:00:50 {LA141}
+msg: 11:00:52 {LT22.0543}
+msg: 11:00:52 {LN7.3390}
+msg: 11:00:52 {LA141}
+msg: 11:00:54 {LT22.0543}
+msg: 11:00:54 {LN7.3458}
+msg: 11:00:55 {LA142}
+msg: 11:00:56 {LT22.0586}
+msg: 11:00:56 {LN7.3501}
+msg: 11:00:56 {LA149}
+msg: 11:00:58 {LT22.0626}
+msg: 11:00:58 {LN7.3584}
+msg: 11:00:58 {LA141}
+msg: 11:01:00 {LT22.0626}
+msg: 11:01:00 {LN7.3649}
+msg: 11:01:01 {LA141}
+msg: 11:01:02 {LT22.0676}
+msg: 11:01:02 {LN7.3681}
+msg: 11:01:02 {LA141}
+msg: 11:01:04 {LT22.0716}
+msg: 11:01:04 {LN7.3793}
+msg: 11:01:04 {LA141}
+msg: 11:01:06 {LT22.0716}
+msg: 11:01:06 {LN7.3858}
+msg: 11:01:07 {LA141}
+msg: 11:01:08 {LT22.0738}
+msg: 11:01:08 {LN7.3890}
+msg: 11:01:08 {LA141}
+msg: 11:01:10 {LT22.0777}
+msg: 11:01:10 {LN7.3987}
+msg: 11:01:10 {LA141}
+msg: 11:01:11 {D7}
+{s -36}
+msg: 11:01:12 {LT22.0777}
+msg: 11:01:12 {LN7.4041}
+msg: 11:01:13 {LA141}
+msg: 11:01:14 {LT22.0802}
+msg: 11:01:14 {LN7.4048}
+msg: 11:01:14 {LA141}
+msg: 11:01:14 {D8}
+{v -50}
+msg: 11:01:15 {D8}
+{v -60}
+msg: 11:01:16 {LT22.0831}
+msg: 11:01:16 {LN7.4066}
+msg: 11:01:16 {LA141}
+msg: 11:01:18 {LT22.0831}
+msg: 11:01:18 {LN7.4070}
+msg: 11:01:19 {LA141}
+msg: 11:01:20 {LT22.0878}
+msg: 11:01:20 {LN7.4074}
+msg: 11:01:20 {LA141}
+msg: 11:01:20 {D5}
+{s   0}
+msg: 11:01:22 {D0}
+{v   0}
+msg: 11:01:22 {LT22.0957}
+msg: 11:01:22 {LN7.4081}
+msg: 11:01:22 {LA141}
+msg: 11:01:24 {D2}
+{v  10}
+msg: 11:01:24 {LT22.0957}
+msg: 11:01:24 {LN7.4081}
+msg: 11:01:25 {D2}
+{v  20}
+msg: 11:01:25 {LA141}
+msg: 11:01:25 {D2}
+{v  30}
+msg: 11:01:26 {LT22.0957}
+msg: 11:01:26 {LN7.4081}
+msg: 11:01:26 {LA141}
+msg: 11:01:28 {LT22.0882}
+msg: 11:01:28 {LN7.4070}
+msg: 11:01:28 {LA141}
+msg: 11:01:30 {LT22.0882}
+msg: 11:01:30 {LN7.4059}
+msg: 11:01:31 {LA141}
+msg: 11:01:31 {F27}
+wpt: 27 21.4910,  7.6460
+az set to 198
+
+{s-162}
+msg: 11:01:32 {LT22.0806}
+msg: 11:01:32 {LN7.4056}
+msg: 11:01:32 {LA141}
+time: 1597341692.8533387
+raw L/L:22.0806/7.4056
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0907/ 7.4059
+Filtered hdg:    0.0
+Filtered speed:  0.264
+{d 64.0}
+az set to 198
+
+{c198.3}
+{ln590.901}
+{lt0.463}
+time: 1597341693.8597748
+raw L/L:22.0806/7.4056
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0869/ 7.4059
+Filtered hdg:    0.0
+Filtered speed: -0.374
+{d 63.6}
+az set to 198
+
+{c198.4}
+{ln586.988}
+{lt0.463}
+msg: 11:01:34 {LT22.0748}
+msg: 11:01:34 {LN7.4063}
+msg: 11:01:34 {LA141}
+time: 1597341694.8634958
+raw L/L:22.0748/7.4063
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0784/ 7.4059
+Filtered hdg:  360.0
+Filtered speed: -0.476
+{d 62.8}
+az set to 198
+
+{c198.7}
+{ln578.428}
+{lt0.463}
+time: 1597341695.8661964
+raw L/L:22.0748/7.4063
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0763/ 7.4059
+Filtered hdg:  360.0
+Filtered speed: -0.034
+{d 62.6}
+az set to 198
+
+{c198.7}
+{ln576.209}
+{lt0.463}
+msg: 11:01:36 {LT22.0748}
+msg: 11:01:36 {LN7.4063}
+time: 1597341696.8720183
+raw L/L:22.0748/7.4063
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0758/ 7.4059
+Filtered hdg:  360.0
+Filtered speed:  0.068
+{d 62.5}
+az set to 198
+
+{c198.7}
+{ln575.687}
+{lt0.463}
+msg: 11:01:37 {LA141}
+time: 1597341697.876814
+raw L/L:22.0748/7.4063
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0756/ 7.4060
+Filtered hdg:  360.0
+Filtered speed:  0.091
+{d 62.5}
+az set to 198
+
+{c198.7}
+{ln575.558}
+{lt0.463}
+msg: 11:01:38 {LT22.0705}
+msg: 11:01:38 {LN7.4063}
+msg: 11:01:38 {LA141}
+time: 1597341698.8771229
+raw L/L:22.0705/7.4063
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0723/ 7.4060
+Filtered hdg:  360.0
+Filtered speed: -0.111
+{d 62.2}
+az set to 198
+
+{c198.8}
+{ln572.162}
+{lt0.463}
+time: 1597341699.8794413
+raw L/L:22.0705/7.4063
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0715/ 7.4060
+Filtered hdg:  360.0
+Filtered speed:  0.050
+{d 62.1}
+az set to 198
+
+{c198.9}
+{ln571.377}
+{lt0.463}
+msg: 11:01:40 {LT22.0673}
+msg: 11:01:40 {LN7.4056}
+msg: 11:01:40 {LA141}
+time: 1597341700.8818014
+raw L/L:22.0673/7.4056
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0689/ 7.4060
+Filtered hdg:  360.0
+Filtered speed: -0.067
+{d 61.9}
+az set to 198
+
+{c199.0}
+{ln568.693}
+{lt0.463}
+time: 1597341701.8884094
+raw L/L:22.0673/7.4056
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0683/ 7.4059
+Filtered hdg:  360.0
+Filtered speed:  0.060
+{d 61.8}
+az set to 198
+
+{c199.0}
+{ln568.069}
+{lt0.463}
+msg: 11:01:42 {LT22.0673}
+msg: 11:01:42 {LN7.4041}
+time: 1597341702.8952835
+raw L/L:22.0673/7.4041
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0681/ 7.4058
+Filtered hdg:    0.0
+Filtered speed:  0.090
+{d 61.8}
+az set to 198
+
+{c199.0}
+{ln567.915}
+{lt0.463}
+msg: 11:01:43 {LA141}
+time: 1597341703.9001546
+raw L/L:22.0673/7.4041
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0681/ 7.4056
+Filtered hdg:    0.1
+Filtered speed:  0.097
+{d 61.8}
+az set to 198
+
+{c199.0}
+{ln567.872}
+{lt0.463}
+msg: 11:01:44 {LT22.0637}
+msg: 11:01:44 {LN7.4034}
+msg: 11:01:44 {LA141}
+time: 1597341704.9063108
+raw L/L:22.0637/7.4034
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0653/ 7.4054
+Filtered hdg:    0.1
+Filtered speed: -0.076
+{d 61.5}
+az set to 199
+
+{c199.1}
+{ln565.027}
+{lt0.463}
+{s-161}
+time: 1597341705.9078693
+raw L/L:22.0637/7.4034
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0647/ 7.4053
+Filtered hdg:    0.2
+Filtered speed:  0.060
+{d 61.5}
+az set to 199
+
+{c199.1}
+{ln564.366}
+{lt0.463}
+msg: 11:01:46 {LT22.0615}
+msg: 11:01:46 {LN7.4016}
+msg: 11:01:46 {LA141}
+time: 1597341706.9142473
+raw L/L:22.0615/7.4016
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0628/ 7.4049
+Filtered hdg:    0.3
+Filtered speed: -0.017
+{d 61.3}
+az set to 199
+
+{c199.2}
+{ln562.466}
+{lt0.463}
+time: 1597341707.9200485
+raw L/L:22.0615/7.4016
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0624/ 7.4046
+Filtered hdg:    0.3
+Filtered speed:  0.073
+{d 61.3}
+az set to 199
+
+{c199.3}
+{ln562.014}
+{lt0.463}
+msg: 11:01:48 {LT22.0615}
+msg: 11:01:48 {LN7.3994}
+time: 1597341708.922443
+raw L/L:22.0615/7.3994
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0623/ 7.4041
+Filtered hdg:    0.5
+Filtered speed:  0.094
+{d 61.3}
+az set to 199
+
+{c199.3}
+{ln561.885}
+{lt0.463}
+msg: 11:01:49 {LA141}
+time: 1597341709.9234478
+raw L/L:22.0615/7.3994
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0623/ 7.4036
+Filtered hdg:    0.7
+Filtered speed:  0.099
+{d 61.3}
+az set to 199
+
+{c199.3}
+{ln561.831}
+{lt0.463}
+msg: 11:01:50 {LT22.0594}
+msg: 11:01:50 {LN7.3984}
+msg: 11:01:50 {LA141}
+time: 1597341710.9284034
+raw L/L:22.0594/7.3984
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0607/ 7.4031
+Filtered hdg:    0.9
+Filtered speed: -0.002
+{d 61.2}
+az set to 199
+
+{c199.4}
+{ln560.149}
+{lt0.463}
+time: 1597341711.932228
+raw L/L:22.0594/7.3984
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0603/ 7.4026
+Filtered hdg:    1.0
+Filtered speed:  0.077
+{d 61.2}
+az set to 199
+
+{c199.5}
+{ln559.739}
+{lt0.463}
+msg: 11:01:52 {LT22.0594}
+msg: 11:01:52 {LN7.3940}
+msg: 11:01:52 {LA141}
+time: 1597341712.936454
+raw L/L:22.0594/7.394
+raw hdg: 0
+raw speed: 0.264
+filtered L/L: 22.0603/ 7.4016
+Filtered hdg:    1.4
+Filtered speed:  0.098
+{d 61.2}
+az set to 199
+
+{c199.5}
+{ln559.625}
+{lt0.463}
+msg: 11:01:53 {D2}
+{v  40}
+msg: 11:01:53 {LT22.0576}
+msg: 11:01:53 {LN7.3933}
+time: 1597341713.9374027
+raw L/L:22.0576/7.3933
+raw hdg: 0
+raw speed: 0.35200000000000004
+filtered L/L: 22.0591/ 7.4007
+Filtered hdg:    1.8
+Filtered speed:  0.061
+{d 61.1}
+az set to 199
+
+{c199.6}
+{ln558.361}
+{lt0.463}
+msg: 11:01:54 {D2}
+{v  50}
+msg: 11:01:54 {LA141}
+time: 1597341714.943618
+raw L/L:22.0576/7.3933
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0591/ 7.3999
+Filtered hdg:    2.1
+Filtered speed:  0.164
+{d 61.1}
+az set to 199
+
+{c199.7}
+{ln558.232}
+{lt0.463}
+msg: 11:01:55 {LT22.0572}
+msg: 11:01:55 {LN7.3919}
+time: 1597341715.9491024
+raw L/L:22.0572/7.3919
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0588/ 7.3989
+Filtered hdg:    2.6
+Filtered speed:  0.151
+{d 61.1}
+az set to 199
+
+{c199.8}
+{ln557.866}
+{lt0.463}
+msg: 11:01:56 {LA141}
+time: 1597341716.9496827
+raw L/L:22.0572/7.3919
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0587/ 7.3980
+Filtered hdg:    3.0
+Filtered speed:  0.166
+{d 61.1}
+az set to 199
+
+{c199.9}
+{ln557.740}
+{lt0.463}
+time: 1597341717.9561665
+raw L/L:22.0572/7.3919
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0587/ 7.3972
+Filtered hdg:    3.5
+Filtered speed:  0.168
+{d 61.1}
+az set to 199
+
+{c199.9}
+{ln557.666}
+{lt0.463}
+msg: 11:01:58 {LT22.0572}
+msg: 11:01:58 {LN7.3804}
+msg: 11:01:58 {LA141}
+time: 1597341718.958771
+raw L/L:22.0572/7.3804
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0591/ 7.3949
+Filtered hdg:    4.6
+Filtered speed:  0.199
+{d 61.2}
+az set to 200
+
+{c200.1}
+{ln557.840}
+{lt0.463}
+{s-160}
+msg: 11:01:59 {LT22.0594}
+msg: 11:01:59 {LN7.3775}
+time: 1597341719.9651804
+raw L/L:22.0594/7.3775
+raw hdg: 0
+raw speed: 0.44
+filtered L/L: 22.0610/ 7.3924
+Filtered hdg:    5.9
+Filtered speed:  0.304
+{d 61.5}
+az set to 200
+
+{c200.2}
+{ln559.600}
+{lt0.463}
+msg: 11:02:00 {LA141}
+msg: 11:02:00 {D2}
 {v  60}
-msg: 10:22:57 {LT21.9323}
-msg: 10:22:57 {LN7.2785}
-msg: 10:22:59 {LT21.9316}
-msg: 10:22:59 {LN7.2778}
-msg: 10:23:00 {LT21.9308}
-msg: 10:23:00 {LN7.2778}
-msg: 10:23:01 {LT21.9290}
-msg: 10:23:01 {LN7.2774}
-msg: 10:23:01 {D5}
-msg: 10:23:02 {LT21.9283}
-msg: 10:23:02 {LN7.2770}
-msg: 10:23:04 {LT21.9276}
-msg: 10:23:04 {LN7.2774}
-msg: 10:23:04 {D4}
+time: 1597341720.9691112
+raw L/L:22.0594/7.3775
+raw hdg: 0
+raw speed: 0.528
+filtered L/L: 22.0617/ 7.3902
+Filtered hdg:    7.0
+Filtered speed:  0.263
+{d 61.6}
+az set to 200
+
+{c200.3}
+{ln560.138}
+{lt0.463}
+msg: 11:02:01 {D2}
+{v  70}
+msg: 11:02:01 {LT22.0626}
+msg: 11:02:01 {LN7.3753}
+time: 1597341721.9730744
+raw L/L:22.0626/7.3753
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0646/ 7.3875
+Filtered hdg:    8.2
+Filtered speed:  0.442
+{d 62.0}
+az set to 200
+
+{c200.4}
+{ln562.931}
+{lt0.463}
+msg: 11:02:02 {LA141}
+time: 1597341722.9744556
+raw L/L:22.0626/7.3753
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0653/ 7.3854
+Filtered hdg:    9.3
+Filtered speed:  0.297
+{d 62.1}
+az set to 200
+
+{c200.6}
+{ln563.446}
+{lt0.463}
+time: 1597341723.9752512
+raw L/L:22.0626/7.3753
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0654/ 7.3837
+Filtered hdg:   10.3
+Filtered speed:  0.260
+{d 62.2}
+az set to 200
+
+{c200.7}
+{ln563.422}
+{lt0.463}
+msg: 11:02:04 {LT22.0626}
+msg: 11:02:04 {LN7.3710}
+msg: 11:02:04 {LA141}
+time: 1597341724.9816716
+raw L/L:22.0626/7.371
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0658/ 7.3814
+Filtered hdg:   11.4
+Filtered speed:  0.278
+{d 62.3}
+az set to 200
+
+{c200.8}
+{ln563.574}
+{lt0.463}
+msg: 11:02:05 {LT22.0730}
+msg: 11:02:05 {LN7.3717}
+time: 1597341725.987008
+raw L/L:22.073/7.3717
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0735/ 7.3782
+Filtered hdg:   12.2
+Filtered speed:  0.744
+{d 63.1}
+az set to 200
+
+{c200.8}
+{ln571.154}
+{lt0.463}
+msg: 11:02:06 {LA141}
+time: 1597341726.9928472
+raw L/L:22.073/7.3717
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0751/ 7.3766
+Filtered hdg:   12.8
+Filtered speed:  0.354
+{d 63.3}
+az set to 200
+
+{c200.9}
+{ln572.739}
+{lt0.463}
+msg: 11:02:07 {LT22.0770}
+msg: 11:02:07 {LN7.3739}
+time: 1597341727.99312
+raw L/L:22.077/7.3739
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0782/ 7.3754
+Filtered hdg:   13.0
+Filtered speed:  0.434
+{d 63.6}
+az set to 200
+
+{c200.9}
+{ln575.727}
+{lt0.463}
+msg: 11:02:08 {LA141}
+time: 1597341728.9935248
+raw L/L:22.077/7.3739
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0788/ 7.3749
+Filtered hdg:   13.1
+Filtered speed:  0.279
+{d 63.7}
+az set to 200
+
+{c200.9}
+{ln576.359}
+{lt0.463}
+time: 1597341729.9971368
+raw L/L:22.077/7.3739
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0790/ 7.3746
+Filtered hdg:   13.3
+Filtered speed:  0.243
+{d 63.7}
+az set to 200
+
+{c200.9}
+{ln576.457}
+{lt0.463}
+msg: 11:02:10 {LT22.0770}
+msg: 11:02:10 {LN7.3872}
+msg: 11:02:10 {LA141}
+time: 1597341731.00351
+raw L/L:22.077/7.3872
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0775/ 7.3771
+Filtered hdg:   12.2
+Filtered speed:  0.111
+{d 63.5}
+az set to 200
+
+{c200.8}
+{ln575.157}
+{lt0.463}
+msg: 11:02:11 {D5}
+az set to 0
+
+time: 1597341732.3886695
+raw L/L:22.077/7.3872
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0773/ 7.3790
+Filtered hdg:   11.3
+Filtered speed:  0.145
+{d 63.4}
+az set to 200
+
+{c200.6}
+{ln575.086}
+{lt0.463}
+msg: 11:02:12 {LT22.0813}
+msg: 11:02:12 {LN7.3919}
+msg: 11:02:12 {LA141}
+time: 1597341733.3893404
+raw L/L:22.0813/7.3919
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0804/ 7.3807
+Filtered hdg:   10.1
+Filtered speed:  0.426
+{d 63.7}
+az set to 200
+
+{c200.4}
+{ln578.444}
+{lt0.463}
+msg: 11:02:13 {LT22.0806}
+msg: 11:02:13 {LN7.3969}
+time: 1597341734.3960366
+raw L/L:22.0806/7.3969
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0805/ 7.3835
+Filtered hdg:    8.8
+Filtered speed:  0.216
+{d 63.6}
+az set to 200
+
+{c200.2}
+{ln578.775}
+{lt0.463}
+msg: 11:02:14 {LA141}
+time: 1597341735.3984284
+raw L/L:22.0806/7.3969
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0809/ 7.3858
+Filtered hdg:    7.6
+Filtered speed:  0.245
+{d 63.6}
+az set to 200
+
+{c200.0}
+{ln579.355}
+{lt0.463}
+time: 1597341736.4017892
+raw L/L:22.0806/7.3969
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0813/ 7.3877
+Filtered hdg:    6.7
+Filtered speed:  0.248
+{d 63.6}
+az set to 199
+
+{c199.9}
+{ln579.891}
+{lt0.463}
+{s-161}
+msg: 11:02:16 {LT22.0806}
+msg: 11:02:16 {LN7.4066}
+msg: 11:02:16 {LA141}
+time: 1597341737.4042757
+raw L/L:22.0806/7.4066
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0810/ 7.3910
+Filtered hdg:    5.2
+Filtered speed:  0.202
+{d 63.4}
+az set to 199
+
+{c199.7}
+{ln579.856}
+{lt0.463}
+msg: 11:02:17 {LT22.0666}
+msg: 11:02:17 {LN7.4056}
+time: 1597341738.4055154
+raw L/L:22.0666/7.4056
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0707/ 7.3945
+Filtered hdg:    4.2
+Filtered speed: -0.427
+{d 62.4}
+az set to 199
+
+{c199.7}
+{ln569.618}
+{lt0.463}
+msg: 11:02:18 {LA141}
+time: 1597341739.412097
+raw L/L:22.0666/7.4056
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0685/ 7.3965
+Filtered hdg:    3.3
+Filtered speed:  0.092
+{d 62.1}
+az set to 199
+
+{c199.7}
+{ln567.571}
+{lt0.463}
+msg: 11:02:19 {LT22.0594}
+msg: 11:02:19 {LN7.4045}
+time: 1597341740.417962
+raw L/L:22.0594/7.4045
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0627/ 7.3982
+Filtered hdg:    2.8
+Filtered speed: -0.138
+{d 61.5}
+az set to 199
+
+{c199.7}
+{ln561.757}
+{lt0.463}
+msg: 11:02:20 {LA141}
+time: 1597341741.4219606
+raw L/L:22.0594/7.4045
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0614/ 7.3993
+Filtered hdg:    2.3
+Filtered speed:  0.151
+{d 61.3}
+az set to 199
+
+{c199.7}
+{ln560.559}
+{lt0.463}
+time: 1597341742.4260473
+raw L/L:22.0594/7.4045
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0612/ 7.4002
+Filtered hdg:    1.9
+Filtered speed:  0.216
+{d 61.3}
+az set to 199
+
+{c199.6}
+{ln560.382}
+{lt0.463}
+msg: 11:02:22 {F05}
+msg: 11:02:22 {LT22.0594}
+msg: 11:02:22 {LN7.3930}
+msg: 11:02:22 {LA141}
+time: 1597341743.4326723
+raw L/L:22.0594/7.393
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0613/ 7.3990
+Filtered hdg:    2.4
+Filtered speed:  0.243
+{d 61.3}
+az set to 199
+
+{c199.7}
+{ln560.469}
+{lt0.463}
+msg: 11:02:23 {LT22.0514}
+msg: 11:02:23 {LN7.3879}
+time: 1597341744.434391
+raw L/L:22.0514/7.3879
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0553/ 7.3974
+Filtered hdg:    3.3
+Filtered speed: -0.143
+{d 60.8}
+az set to 200
+
+{c200.0}
+{ln554.211}
+{lt0.463}
+{s-160}
+msg: 11:02:24 {LA141}
+time: 1597341745.4368446
+raw L/L:22.0514/7.3879
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0539/ 7.3958
+Filtered hdg:    4.1
+Filtered speed:  0.154
+{d 60.7}
+az set to 200
+
+{c200.2}
+{ln552.708}
+{lt0.463}
+msg: 11:02:25 {LT22.0518}
+msg: 11:02:25 {LN7.3836}
+time: 1597341746.4395072
+raw L/L:22.0518/7.3836
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0541/ 7.3937
+Filtered hdg:    5.0
+Filtered speed:  0.253
+{d 60.8}
+az set to 200
+
+{c200.3}
+{ln552.695}
+{lt0.463}
+msg: 11:02:26 {LA141}
+time: 1597341747.4423265
+raw L/L:22.0518/7.3836
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0541/ 7.3920
+Filtered hdg:    5.8
+Filtered speed:  0.246
+{d 60.9}
+az set to 200
+
+{c200.4}
+{ln552.603}
+{lt0.463}
+time: 1597341748.4469848
+raw L/L:22.0518/7.3836
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0541/ 7.3906
+Filtered hdg:    6.5
+Filtered speed:  0.243
+{d 60.9}
+az set to 200
+
+{c200.6}
+{ln552.490}
+{lt0.463}
+msg: 11:02:28 {LT22.0518}
+msg: 11:02:28 {LN7.3721}
+msg: 11:02:28 {LA141}
+time: 1597341749.4485273
+raw L/L:22.0518/7.3721
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0547/ 7.3874
+Filtered hdg:    7.9
+Filtered speed:  0.295
+{d 61.1}
+az set to 200
+
+{c200.8}
+{ln552.848}
+{lt0.463}
+msg: 11:02:29 {LT22.0622}
+msg: 11:02:29 {LN7.3710}
+time: 1597341750.4501543
+raw L/L:22.0622/7.371
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0628/ 7.3836
+Filtered hdg:    9.0
+Filtered speed:  0.773
+{d 61.9}
+az set to 200
+
+{c200.8}
+{ln560.783}
+{lt0.463}
+msg: 11:02:30 {LA141}
+time: 1597341751.4540677
+raw L/L:22.0622/7.371
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0647/ 7.3811
+Filtered hdg:   10.0
+Filtered speed:  0.372
+{d 62.2}
+az set to 200
+
+{c200.9}
+{ln562.444}
+{lt0.463}
+msg: 11:02:31 {LT22.0684}
+msg: 11:02:31 {LN7.3714}
+time: 1597341752.456689
+raw L/L:22.0684/7.3714
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0697/ 7.3786
+Filtered hdg:   10.7
+Filtered speed:  0.569
+{d 62.7}
+az set to 200
+
+{c200.9}
+{ln567.321}
+{lt0.463}
+msg: 11:02:32 {LA141}
+time: 1597341753.4588745
+raw L/L:22.0684/7.3714
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0707/ 7.3771
+Filtered hdg:   11.2
+Filtered speed:  0.315
+{d 62.9}
+az set to 200
+
+{c201.0}
+{ln568.293}
+{lt0.463}
+time: 1597341754.4644935
+raw L/L:22.0684/7.3714
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0709/ 7.3760
+Filtered hdg:   11.7
+Filtered speed:  0.254
+{d 62.9}
+az set to 201
+
+{c201.0}
+{ln568.376}
+{lt0.463}
+{s-159}
+msg: 11:02:34 {LT22.0684}
+msg: 11:02:34 {LN7.3818}
+msg: 11:02:34 {LA141}
+time: 1597341755.4661045
+raw L/L:22.0684/7.3818
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0698/ 7.3771
+Filtered hdg:   11.3
+Filtered speed:  0.154
+{d 62.8}
+az set to 201
+
+{c201.0}
+{ln567.384}
+{lt0.463}
+msg: 11:02:35 {LT22.0766}
+msg: 11:02:35 {LN7.3868}
+time: 1597341756.4685178
+raw L/L:22.0766/7.3868
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0753/ 7.3776
+Filtered hdg:   10.5
+Filtered speed:  0.564
+{d 63.3}
+az set to 200
+
+{c200.8}
+{ln572.997}
+{lt0.463}
+{s-160}
+msg: 11:02:36 {LA141}
+time: 1597341757.4724152
+raw L/L:22.0766/7.3868
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0768/ 7.3789
+Filtered hdg:    9.8
+Filtered speed:  0.315
+{d 63.4}
+az set to 200
+
+{c200.7}
+{ln574.618}
+{lt0.463}
+msg: 11:02:37 {LT22.0766}
+msg: 11:02:37 {LN7.3919}
+time: 1597341758.4730582
+raw L/L:22.0766/7.3919
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0769/ 7.3810
+Filtered hdg:    8.8
+Filtered speed:  0.224
+{d 63.3}
+az set to 200
+
+{c200.5}
+{ln574.889}
+{lt0.463}
+msg: 11:02:38 {LA141}
+time: 1597341759.4763076
+raw L/L:22.0766/7.3919
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0772/ 7.3827
+Filtered hdg:    8.0
+Filtered speed:  0.239
+{d 63.3}
+az set to 200
+
+{c200.4}
+{ln575.325}
+{lt0.463}
+time: 1597341760.4784138
+raw L/L:22.0766/7.3919
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0775/ 7.3842
+Filtered hdg:    7.3
+Filtered speed:  0.243
+{d 63.3}
+az set to 200
+
+{c200.3}
+{ln575.724}
+{lt0.463}
+msg: 11:02:40 {LT22.0766}
+msg: 11:02:40 {LN7.4056}
+msg: 11:02:40 {LA141}
+time: 1597341761.4854295
+raw L/L:22.0766/7.4056
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0768/ 7.3878
+Filtered hdg:    5.7
+Filtered speed:  0.173
+{d 63.1}
+az set to 200
+
+{c200.0}
+{ln575.322}
+{lt0.463}
+msg: 11:02:41 {LT22.0658}
+msg: 11:02:41 {LN7.4056}
+time: 1597341762.4875398
+raw L/L:22.0658/7.4056
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0688/ 7.3916
+Filtered hdg:    4.4
+Filtered speed: -0.278
+{d 62.3}
+az set to 200
+
+{c200.0}
+{ln567.525}
+{lt0.463}
+msg: 11:02:42 {LA141}
+time: 1597341763.4906294
+raw L/L:22.0658/7.4056
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0673/ 7.3940
+Filtered hdg:    3.4
+Filtered speed:  0.134
+{d 62.1}
+az set to 199
+
+{c199.9}
+{ln566.161}
+{lt0.463}
+{s-161}
+msg: 11:02:43 {LT22.0590}
+msg: 11:02:43 {LN7.4056}
+time: 1597341764.4991567
+raw L/L:22.059/7.4056
+raw hdg: 0
+raw speed: 0.616
+filtered L/L: 22.0619/ 7.3963
+Filtered hdg:    2.5
+Filtered speed: -0.108
+{d 61.5}
+az set to 199
+
+{c199.9}
+{ln560.873}
+{lt0.463}
+msg: 11:02:44 {E0}
+Standby
+msg: 11:02:44 {LA141}
+msg: 11:02:46 {LT22.0590}
+msg: 11:02:46 {LN7.3955}
+msg: 11:02:46 {LA141}
+msg: 11:02:47 {LT22.0500}
+msg: 11:02:47 {LN7.3922}
+msg: 11:02:48 {LA141}
+msg: 11:02:49 {LT22.0486}
+msg: 11:02:49 {LN7.3872}
+msg: 11:02:50 {LA141}
+msg: 11:02:52 {LT22.0486}
+msg: 11:02:52 {LN7.3728}
+msg: 11:02:52 {LA141}
+msg: 11:02:53 {LT22.0568}
+msg: 11:02:53 {LN7.3717}
+msg: 11:02:54 {D5}
+{s   0}
+msg: 11:02:55 {LA141}
+msg: 11:02:55 {D5}
+msg: 11:02:55 {LT22.0651}
+msg: 11:02:55 {LN7.3714}
+msg: 11:02:56 {LA141}
+msg: 11:02:57 {D7}
+{s -36}
+msg: 11:02:58 {LT22.0651}
+msg: 11:02:58 {LN7.3836}
+msg: 11:02:58 {LA141}
+msg: 11:02:59 {LT22.0745}
+msg: 11:02:59 {LN7.3865}
+msg: 11:03:00 {LA141}
+msg: 11:03:01 {D5}
+{s   0}
+msg: 11:03:01 {LT22.0774}
+msg: 11:03:01 {LN7.3908}
+msg: 11:03:02 {LA141}
+msg: 11:03:03 {D4}
 {s  -5}
-msg: 10:23:05 {LT21.9276}
-msg: 10:23:05 {LN7.2778}
-msg: 10:23:06 {D4}
+msg: 11:03:04 {D4}
 {s -10}
-msg: 10:23:07 {LT21.9269}
-msg: 10:23:07 {LN7.2774}
-msg: 10:23:07 {LA3711}
-msg: 10:23:07 {D4}
-{s -15}
-msg: 10:23:08 {LT21.9258}
-msg: 10:23:08 {LN7.2774}
-msg: 10:23:09 {LT21.9240}
-msg: 10:23:09 {LN7.2763}
-msg: 10:23:10 {LT21.9236}
-msg: 10:23:10 {LN7.2756}
-msg: 10:23:11 {D2}
-{v  70}
-msg: 10:23:12 {LT21.9236}
-msg: 10:23:12 {LN7.2752}
-msg: 10:23:12 {LA3655}
-msg: 10:23:12 {D2}
+msg: 11:03:04 {LT22.0774}
+msg: 11:03:04 {LN7.4142}
+msg: 11:03:04 {LA141}
+msg: 11:03:05 {D2}
 {v  80}
-msg: 10:23:13 {LT21.9236}
-msg: 10:23:13 {LN7.2760}
-msg: 10:23:14 {D2}
+msg: 11:03:05 {LT22.0694}
+msg: 11:03:05 {LN7.4196}
+msg: 11:03:06 {D2}
 {v  90}
-msg: 10:23:15 {LT21.9244}
-msg: 10:23:15 {LN7.2767}
-msg: 10:23:16 {LT21.9240}
-msg: 10:23:16 {LN7.2767}
-msg: 10:23:17 {LT21.9236}
-msg: 10:23:17 {LN7.2763}
-msg: 10:23:17 {D0}
-{v   0}
-msg: 10:23:18 {LT21.9229}
-msg: 10:23:18 {LN7.2763}
-msg: 10:23:20 {LT21.9226}
-msg: 10:23:20 {LN7.2767}
-msg: 10:23:20 {LA3594}
-msg: 10:23:20 {D5}
+msg: 11:03:06 {D2}
+{v 100}
+msg: 11:03:06 {LA141}
+msg: 11:03:06 {D2}
+msg: 11:03:07 {LT22.0648}
+msg: 11:03:07 {LN7.4250}
+msg: 11:03:08 {LA141}
+msg: 11:03:09 {D5}
 {s   0}
-msg: 10:23:21 {LT21.9226}
-msg: 10:23:21 {LN7.2781}
-msg: 10:23:23 {LT21.9215}
-msg: 10:23:23 {LN7.2781}
-msg: 10:23:23 {D2}
-{v  10}
-msg: 10:23:24 {LT21.9222}
-msg: 10:23:24 {LN7.2781}
-msg: 10:23:25 {D2}
-{v  20}
-msg: 10:23:25 {LT21.9247}
-msg: 10:23:25 {LN7.2778}
-msg: 10:23:25 {D2}
-{v  30}
-msg: 10:23:26 {LT21.9265}
-msg: 10:23:26 {LN7.2774}
-msg: 10:23:27 {D2}
-{v  40}
-msg: 10:23:28 {LT21.9276}
-msg: 10:23:28 {LN7.2770}
-msg: 10:23:28 {D2}
-{v  50}
-msg: 10:23:29 {LT21.9305}
-msg: 10:23:29 {LN7.2767}
-msg: 10:23:31 {LT21.9323}
-msg: 10:23:31 {LN7.2767}
-msg: 10:23:31 {D2}
-{v  60}
-msg: 10:23:32 {LT21.9323}
-msg: 10:23:32 {LN7.2763}
-msg: 10:23:33 {D2}
-{v  70}
-msg: 10:23:34 {LT21.9355}
-msg: 10:23:34 {LN7.2763}
-msg: 10:23:34 {LA3545}
-msg: 10:23:34 {D2}
-{v  80}
-msg: 10:23:35 {LT21.9362}
-msg: 10:23:35 {LN7.2763}
-msg: 10:23:36 {LT21.9370}
-msg: 10:23:36 {LN7.2767}
-msg: 10:23:37 {LT21.9380}
-msg: 10:23:37 {LN7.2770}
-msg: 10:23:39 {LT21.9380}
-msg: 10:23:39 {LN7.2770}
-msg: 10:23:40 {LT21.9380}
-msg: 10:23:40 {LN7.2760}
-msg: 10:23:42 {LT21.9391}
-msg: 10:23:42 {LN7.2756}
-msg: 10:23:42 {LA3602}
-msg: 10:23:42 {D0}
+msg: 11:03:10 {LT22.0648}
+msg: 11:03:10 {LN7.4441}
+msg: 11:03:10 {LA141}
+msg: 11:03:11 {LT22.0439}
+msg: 11:03:11 {LN7.4466}
+msg: 11:03:12 {LA141}
+msg: 11:03:13 {LT22.0298}
+msg: 11:03:13 {LN7.4495}
+msg: 11:03:14 {LA141}
+msg: 11:03:16 {LT22.0298}
+msg: 11:03:16 {LN7.4585}
+msg: 11:03:16 {LA141}
+msg: 11:03:17 {LT22.0032}
+msg: 11:03:17 {LN7.4624}
+msg: 11:03:18 {LA141}
+msg: 11:03:19 {LT21.9845}
+msg: 11:03:19 {LN7.4675}
+msg: 11:03:20 {LA141}
+msg: 11:03:22 {LT21.9845}
+msg: 11:03:22 {LN7.4797}
+msg: 11:03:22 {LA141}
+msg: 11:03:23 {LT21.9452}
+msg: 11:03:23 {LN7.4826}
+msg: 11:03:24 {LA141}
+msg: 11:03:25 {LT21.9262}
+msg: 11:03:25 {LN7.4866}
+msg: 11:03:26 {LA141}
+msg: 11:03:28 {LT21.9262}
+msg: 11:03:28 {LN7.5002}
+msg: 11:03:28 {LA141}
+msg: 11:03:29 {E2}
+Auto-pilot
+time: 1597341809.2718248
+raw L/L:21.9262/7.5002
+raw hdg: 0
+raw speed: 0.88
+filtered L/L: 21.9260/ 7.4908
+Filtered hdg:  352.9
+Filtered speed: -0.307
+{d 45.9}
+az set to 196
+
+{c196.4}
+{ln430.131}
+{lt0.463}
+{s-164}
+msg: 11:03:29 {LT21.8930}
+msg: 11:03:29 {LN7.5042}
+time: 1597341810.273118
+raw L/L:21.893/7.5042
+raw hdg: 0
+raw speed: 0.88
+filtered L/L: 21.9069/ 7.4970
+Filtered hdg:  352.2
+Filtered speed: -0.480
+{d 43.9}
+az set to 196
+
+{c196.5}
+{ln411.210}
+{lt0.463}
+msg: 11:03:30 {LA141}
+time: 1597341811.2750907
+raw L/L:21.893/7.5042
+raw hdg: 0
+raw speed: 0.88
+filtered L/L: 21.8990/ 7.4990
+Filtered hdg:  351.8
+Filtered speed: -0.211
+{d 43.1}
+az set to 196
+
+{c196.6}
+{ln403.336}
+{lt0.463}
+msg: 11:03:31 {LT21.8804}
+msg: 11:03:31 {LN7.5071}
+time: 1597341812.2772
+raw L/L:21.8804/7.5071
+raw hdg: 0
+raw speed: 0.88
+filtered L/L: 21.8872/ 7.5000
+Filtered hdg:  351.5
+Filtered speed: -0.418
+{d 41.9}
+az set to 196
+
+{c196.9}
+{ln391.386}
+{lt0.463}
+msg: 11:03:32 {LA141}
+time: 1597341813.2810729
+raw L/L:21.8804/7.5071
+raw hdg: 0
+raw speed: 0.88
+filtered L/L: 21.8845/ 7.5014
+Filtered hdg:  351.2
+Filtered speed:  0.172
+{d 41.6}
+az set to 196
+
+{c196.9}
+{ln388.705}
+{lt0.463}
+time: 1597341814.282872
+raw L/L:21.8804/7.5071
+raw hdg: 0
+raw speed: 0.88
+filtered L/L: 21.8838/ 7.5026
+Filtered hdg:  351.0
+Filtered speed:  0.299
+{d 41.5}
+az set to 196
+
+{c196.8}
+{ln388.093}
+{lt0.463}
+msg: 11:03:34 {LT21.8804}
+msg: 11:03:34 {LN7.5035}
+msg: 11:03:34 {LA141}
+time: 1597341815.2888408
+raw L/L:21.8804/7.5035
+raw hdg: 0
+raw speed: 0.88
+filtered L/L: 21.8833/ 7.5028
+Filtered hdg:  351.0
+Filtered speed:  0.301
+{d 41.5}
+az set to 196
+
+{c196.8}
+{ln387.600}
+{lt0.463}
+msg: 11:03:35 {E0}
+Standby
+msg: 11:03:35 {LT21.8614}
+msg: 11:03:35 {LN7.4974}
+msg: 11:03:36 {LA141}
+msg: 11:03:37 {LT21.8588}
+msg: 11:03:37 {LN7.4891}
+msg: 11:03:37 {LA141}
+msg: 11:03:37 {D5}
+{s   0}
+msg: 11:03:39 {LT21.8704}
+msg: 11:03:39 {LN7.4765}
+msg: 11:03:39 {LA141}
+msg: 11:03:41 {LT21.8704}
+msg: 11:03:41 {LN7.4750}
+msg: 11:03:42 {LA141}
+msg: 11:03:43 {LT21.8934}
+msg: 11:03:43 {LN7.4740}
+msg: 11:03:43 {LA141}
+msg: 11:03:45 {LT21.9146}
+msg: 11:03:45 {LN7.4732}
+msg: 11:03:45 {LA141}
+msg: 11:03:47 {LT21.9146}
+msg: 11:03:47 {LN7.4718}
+msg: 11:03:48 {LA141}
+msg: 11:03:49 {D2}
+msg: 11:03:49 {LT21.9344}
+msg: 11:03:49 {LN7.4707}
+msg: 11:03:49 {LA141}
+msg: 11:03:49 {D2}
+msg: 11:03:51 {LT21.9517}
+msg: 11:03:51 {LN7.4693}
+msg: 11:03:51 {LA141}
+msg: 11:03:53 {LT21.9517}
+msg: 11:03:53 {LN7.4686}
+msg: 11:03:54 {LA141}
+msg: 11:03:55 {LT21.9640}
+msg: 11:03:55 {LN7.4704}
+msg: 11:03:55 {LA141}
+msg: 11:03:57 {LT21.9816}
+msg: 11:03:57 {LN7.4747}
+msg: 11:03:57 {LA141}
+msg: 11:03:57 {D0}
 {v   0}
-msg: 10:23:43 {LT21.9398}
-msg: 10:23:43 {LN7.2756}
-msg: 10:23:44 {D2}
-{v  10}
-msg: 10:23:44 {LT21.9402}
-msg: 10:23:44 {LN7.2752}
-msg: 10:23:44 {D2}
-{v  20}
-msg: 10:23:44 {D2}
-{v  30}
-msg: 10:23:44 {D2}
-{v  40}
-msg: 10:23:45 {LT21.9413}
-msg: 10:23:45 {LN7.2745}
-msg: 10:23:46 {D2}
-{v  50}
-msg: 10:23:47 {LT21.9420}
-msg: 10:23:47 {LN7.2742}
-msg: 10:23:48 {LT21.9420}
-msg: 10:23:48 {LN7.2738}
-msg: 10:23:50 {LT21.9434}
-msg: 10:23:50 {LN7.2738}
-msg: 10:23:50 {LA3581}
-msg: 10:23:51 {LT21.9438}
-msg: 10:23:51 {LN7.2738}
-msg: 10:23:52 {T0}
-diagnostic #1 =======================
-motor speed = 2850, 340
-motor speed = 2882, 2878
-motor speed = 2883, 2882
-msg: 10:23:52 {LT21.9456}
-msg: 10:23:52 {LN7.2731}
-msg: 10:23:53 {LT21.9492}
-msg: 10:23:53 {LN7.2724}
-msg: 10:23:55 {LT21.9503}
-msg: 10:23:55 {LN7.2724}
-msg: 10:23:55 {LA3519}
-msg: 10:23:56 {LT21.9503}
-msg: 10:23:56 {LN7.2734}
-msg: 10:23:58 {LT21.9517}
-msg: 10:23:58 {LN7.2742}
-msg: 10:23:59 {LT21.9524}
-msg: 10:23:59 {LN7.2742}
-msg: 10:24:00 {D0}
-{v   0}
-msg: 10:24:00 {LT21.9528}
-msg: 10:24:00 {LN7.2745}
-msg: 10:24:01 {LT21.9532}
-msg: 10:24:01 {LN7.2745}
-msg: 10:24:03 {LT21.9539}
-msg: 10:24:03 {LN7.2745}
-msg: 10:24:03 {LA3403}
-msg: 10:24:04 {LT21.9539}
-msg: 10:24:04 {LN7.2734}
-msg: 10:24:06 {LT21.9560}
-msg: 10:24:06 {LN7.2724}
-msg: 10:24:07 {LT21.9568}
-msg: 10:24:07 {LN7.2724}
-msg: 10:24:08 {LT21.9546}
-msg: 10:24:08 {LN7.2713}
-msg: 10:24:09 {LT21.9521}
-msg: 10:24:09 {LN7.2709}
-msg: 10:24:11 {LT21.9521}
-msg: 10:24:11 {LN7.2698}
-msg: 10:24:11 {LA3560}
-msg: 10:24:12 {LT21.9521}
-msg: 10:24:12 {LN7.2666}
-msg: 10:24:14 {LT21.9517}
-msg: 10:24:14 {LN7.2652}
-msg: 10:24:15 {LT21.9514}
-msg: 10:24:15 {LN7.2652}
-msg: 10:24:16 {LT21.9503}
-msg: 10:24:16 {LN7.2652}
-msg: 10:24:17 {LT21.9510}
-msg: 10:24:17 {LN7.2644}
-msg: 10:24:19 {LT21.9506}
-msg: 10:24:19 {LN7.2634}
-msg: 10:24:20 {LT21.9496}
-msg: 10:24:20 {LN7.2608}
-msg: 10:24:22 {LT21.9492}
-msg: 10:24:22 {LN7.2608}
-msg: 10:24:23 {LT21.9492}
-msg: 10:24:23 {LN7.2587}
-msg: 10:24:25 {LT21.9492}
-msg: 10:24:25 {LN7.2576}
-msg: 10:24:25 {LA3558}
-msg: 10:24:26 {LT21.9488}
-msg: 10:24:26 {LN7.2576}
-msg: 10:24:27 {LT21.9481}
-msg: 10:24:27 {LN7.2558}
-msg: 10:24:28 {LT21.9485}
-msg: 10:24:28 {LN7.2551}
-msg: 10:24:30 {LT21.9488}
-msg: 10:24:30 {LN7.2544}
-msg: 10:24:31 {LT21.9488}
-msg: 10:24:31 {LN7.2511}
-msg: 10:24:33 {LT21.9524}
-msg: 10:24:33 {LN7.2500}
-msg: 10:24:33 {LA3483}
-msg: 10:24:34 {LT21.9539}
-msg: 10:24:34 {LN7.2500}
-msg: 10:24:35 {LT21.9568}
-msg: 10:24:35 {LN7.2486}
-msg: 10:24:36 {LT21.9578}
-msg: 10:24:36 {LN7.2486}
-msg: 10:24:38 {LT21.9596}
-msg: 10:24:38 {LN7.2479}
-msg: 10:24:39 {LT21.9600}
-msg: 10:24:39 {LN7.2479}
-msg: 10:24:41 {LT21.9596}
-msg: 10:24:41 {LN7.2464}
-msg: 10:24:42 {LT21.9596}
-msg: 10:24:42 {LN7.2475}
-msg: 10:24:44 {LT21.9593}
-msg: 10:24:44 {LN7.2479}
-msg: 10:24:44 {LA3411}
-msg: 10:24:45 {LT21.9593}
-msg: 10:24:45 {LN7.2479}
-msg: 10:24:46 {LT21.9586}
-msg: 10:24:46 {LN7.2457}
-msg: 10:24:47 {LT21.9600}
-msg: 10:24:47 {LN7.2461}
-msg: 10:24:49 {LT21.9607}
-msg: 10:24:49 {LN7.2468}
-msg: 10:24:50 {LT21.9607}
-msg: 10:24:50 {LN7.2479}
-msg: 10:24:52 {LT21.9632}
-msg: 10:24:52 {LN7.2493}
-msg: 10:24:52 {LA3688}
-msg: 10:24:53 {LT21.9647}
-msg: 10:24:53 {LN7.2493}
-msg: 10:24:54 {LT21.9661}
-msg: 10:24:54 {LN7.2522}
-msg: 10:24:55 {LT21.9672}
-msg: 10:24:55 {LN7.2544}
-msg: 10:24:57 {LT21.9683}
-msg: 10:24:57 {LN7.2547}
-msg: 10:24:57 {LA3837}
-msg: 10:24:58 {LT21.9683}
-msg: 10:24:58 {LN7.2562}
-msg: 10:25:00 {LT21.9708}
-msg: 10:25:00 {LN7.2569}
-msg: 10:25:01 {LT21.9722}
-msg: 10:25:01 {LN7.2569}
-msg: 10:25:02 {LT21.9751}
-msg: 10:25:02 {LN7.2554}
-msg: 10:25:03 {LT21.9773}
-msg: 10:25:03 {LN7.2554}
-msg: 10:25:05 {LT21.9787}
-msg: 10:25:05 {LN7.2558}
-msg: 10:25:05 {LA3990}
-msg: 10:25:06 {LT21.9787}
-msg: 10:25:06 {LN7.2544}
-msg: 10:25:08 {LT21.9816}
-msg: 10:25:08 {LN7.2529}
-msg: 10:25:09 {LT21.9834}
-msg: 10:25:09 {LN7.2529}
-msg: 10:25:10 {LT21.9856}
-msg: 10:25:10 {LN7.2526}
-msg: 10:25:11 {LT21.9877}
-msg: 10:25:11 {LN7.2518}
-msg: 10:25:13 {LT21.9881}
-msg: 10:25:13 {LN7.2508}
-msg: 10:25:14 {LT21.9899}
-msg: 10:25:14 {LN7.2493}
-msg: 10:25:16 {LT21.9910}
-msg: 10:25:16 {LN7.2490}
-msg: 10:25:17 {LT21.9910}
-msg: 10:25:17 {LN7.2482}
-msg: 10:25:19 {LT21.9938}
-msg: 10:25:19 {LN7.2490}
-msg: 10:25:19 {LA4290}
-msg: 10:25:20 {LT21.9960}
-msg: 10:25:20 {LN7.2490}
-msg: 10:25:21 {LT22.0000}
-msg: 10:25:21 {LN7.2482}
-msg: 10:25:22 {LT22.0032}
-msg: 10:25:22 {LN7.2468}
-msg: 10:25:24 {LT22.0046}
-msg: 10:25:24 {LN7.2464}
-msg: 10:25:25 {LT22.0046}
-msg: 10:25:25 {LN7.2457}
-msg: 10:25:27 {LT22.0082}
-msg: 10:25:27 {LN7.2454}
-msg: 10:25:27 {LA4388}
-msg: 10:25:28 {LT22.0100}
-msg: 10:25:28 {LN7.2454}
-msg: 10:25:29 {LT22.0129}
-msg: 10:25:29 {LN7.2425}
-msg: 10:25:30 {LT22.0147}
-msg: 10:25:30 {LN7.2382}
-msg: 10:25:32 {LT22.0176}
-msg: 10:25:32 {LN7.2349}
-msg: 10:25:33 {LT22.0226}
-msg: 10:25:33 {LN7.2299}
-msg: 10:25:34 {D2}
-{v  10}
-msg: 10:25:35 {LT22.0244}
-msg: 10:25:35 {LN7.2270}
-msg: 10:25:36 {LT22.0244}
-msg: 10:25:36 {LN7.2245}
-msg: 10:25:37 {D2}
-{v  20}
-msg: 10:25:38 {LT22.0295}
-msg: 10:25:38 {LN7.2256}
-msg: 10:25:38 {LA4322}
-msg: 10:25:38 {D2}
-{v  30}
-msg: 10:25:39 {LT22.0309}
-msg: 10:25:39 {LN7.2256}
-msg: 10:25:40 {D2}
-{v  40}
-msg: 10:25:40 {LT22.0331}
-msg: 10:25:40 {LN7.2299}
-msg: 10:25:41 {LT22.0363}
-msg: 10:25:41 {LN7.2346}
-msg: 10:25:42 {D2}
-{v  50}
-msg: 10:25:43 {LT22.0381}
-msg: 10:25:43 {LN7.2364}
-msg: 10:25:44 {LT22.0381}
-msg: 10:25:44 {LN7.2410}
-msg: 10:25:46 {LT22.0392}
-msg: 10:25:46 {LN7.2432}
-msg: 10:25:46 {LA4300}
-msg: 10:25:46 {T0}
-diagnostic #1 =======================
-motor speed = 2838, 2772
-motor speed = 2882, 2849
-motor speed = 2895, 2883
-msg: 10:25:47 {LT22.0378}
-msg: 10:25:47 {LN7.2432}
-msg: 10:25:48 {LT22.0345}
-msg: 10:25:48 {LN7.2479}
-msg: 10:25:49 {LT22.0284}
-msg: 10:25:49 {LN7.2551}
-msg: 10:25:51 {LT22.0237}
-msg: 10:25:51 {LN7.2590}
-msg: 10:25:51 {D0}
-{v   0}
-msg: 10:25:52 {LT22.0237}
-msg: 10:25:52 {LN7.2655}
-msg: 10:25:54 {LT22.0216}
-msg: 10:25:54 {LN7.2662}
-msg: 10:25:54 {LA4090}
-msg: 10:25:54 {D2}
-{v  10}
-msg: 10:25:55 {LT22.0194}
-msg: 10:25:55 {LN7.2662}
-msg: 10:25:56 {D2}
-{v  20}
-msg: 10:25:56 {LT22.0158}
-msg: 10:25:56 {LN7.2706}
-msg: 10:25:56 {D2}
-{v  30}
-msg: 10:25:57 {D2}
-{v  40}
-msg: 10:25:57 {LT22.0126}
-msg: 10:25:57 {LN7.2709}
-msg: 10:25:59 {LT22.0115}
-msg: 10:25:59 {LN7.2720}
-msg: 10:25:59 {LA4092}
-msg: 10:25:59 {D2}
-{v  50}
-msg: 10:26:00 {LT22.0115}
-msg: 10:26:00 {LN7.2731}
-msg: 10:26:02 {LT22.0100}
-msg: 10:26:02 {LN7.2752}
-msg: 10:26:02 {T0}
-diagnostic #1 =======================
-motor speed = 2839, 2766
-motor speed = 2878, 2857
-motor speed = 2900, 2879
-msg: 10:26:03 {LT22.0090}
-msg: 10:26:03 {LN7.2752}
-msg: 10:26:04 {LT22.0068}
-msg: 10:26:04 {LN7.2767}
-msg: 10:26:04 {LA4117}
-msg: 10:26:05 {LT22.0032}
-msg: 10:26:05 {LN7.2803}
-msg: 10:26:06 {D0}
-{v   0}
-msg: 10:26:07 {LT22.0014}
-msg: 10:26:07 {LN7.2821}
-msg: 10:26:07 {LA4106}
-msg: 10:26:08 {LT22.0014}
-msg: 10:26:08 {LN7.2868}
-msg: 10:26:09 {D2}
-{v  10}
-msg: 10:26:10 {LT21.9971}
-msg: 10:26:10 {LN7.2878}
-msg: 10:26:10 {D2}
-{v  20}
-msg: 10:26:11 {LT21.9960}
-msg: 10:26:11 {LN7.2878}
-msg: 10:26:12 {D2}
-{v  30}
-msg: 10:26:12 {LT21.9924}
-msg: 10:26:12 {LN7.2907}
-msg: 10:26:12 {LA4117}
-msg: 10:26:12 {D2}
-{v  40}
-msg: 10:26:12 {D2}
-{v  50}
-msg: 10:26:12 {D2}
-{v  60}
-msg: 10:26:13 {LT21.9877}
-msg: 10:26:13 {LN7.2943}
-msg: 10:26:15 {LT21.9852}
-msg: 10:26:15 {LN7.2961}
-msg: 10:26:16 {LT21.9787}
-msg: 10:26:16 {LN7.3008}
-msg: 10:26:17 {T0}
-diagnostic #1 =======================
-motor speed = 3400, 3309
-motor speed = 3427, 3397
-motor speed = 3448, 3427
-msg: 10:26:18 {LT21.9766}
-msg: 10:26:18 {LN7.3012}
-msg: 10:26:19 {LT21.9766}
-msg: 10:26:19 {LN7.3030}
-msg: 10:26:20 {D0}
-{v   0}
-msg: 10:26:21 {LT21.9733}
-msg: 10:26:21 {LN7.3044}
-msg: 10:26:21 {LA4142}
-msg: 10:26:22 {LT21.9722}
-msg: 10:26:22 {LN7.3044}
-msg: 10:26:23 {D2}
-{v  10}
-msg: 10:26:23 {LT21.9694}
-msg: 10:26:23 {LN7.3066}
-msg: 10:26:23 {D2}
-{v  20}
-msg: 10:26:23 {D2}
-{v  30}
-msg: 10:26:23 {D2}
-{v  40}
-msg: 10:26:23 {D2}
-{v  50}
-msg: 10:26:24 {LT21.9658}
-msg: 10:26:24 {LN7.3080}
-msg: 10:26:26 {LT21.9640}
-msg: 10:26:26 {LN7.3084}
-msg: 10:26:27 {LT21.9640}
-msg: 10:26:27 {LN7.3105}
-msg: 10:26:29 {LT21.9600}
-msg: 10:26:29 {LN7.3116}
-msg: 10:26:29 {LA4231}
-msg: 10:26:29 {T0}
-diagnostic #1 =======================
-motor speed = 2842, 2771
-motor speed = 2869, 2856
-motor speed = 2895, 2896
-msg: 10:26:30 {LT21.9575}
-msg: 10:26:30 {LN7.3116}
-msg: 10:26:31 {LT21.9542}
-msg: 10:26:31 {LN7.3116}
-msg: 10:26:32 {LT21.9514}
-msg: 10:26:32 {LN7.3123}
-msg: 10:26:34 {LT21.9492}
-msg: 10:26:34 {LN7.3138}
-msg: 10:26:34 {LA4257}
-msg: 10:26:34 {D0}
-{v   0}
-msg: 10:26:35 {LT21.9492}
-msg: 10:26:35 {LN7.3177}
-msg: 10:26:37 {LT21.9445}
-msg: 10:26:37 {LN7.3184}
-msg: 10:26:38 {LT21.9434}
-msg: 10:26:38 {LN7.3184}
-msg: 10:26:39 {D2}
-{v  10}
-msg: 10:26:39 {LT21.9406}
-msg: 10:26:39 {LN7.3199}
-msg: 10:26:39 {D2}
-{v  20}
-msg: 10:26:39 {D2}
-{v  30}
-msg: 10:26:39 {D2}
-{v  40}
-msg: 10:26:39 {D2}
-{v  50}
-msg: 10:26:40 {LT21.9370}
-msg: 10:26:40 {LN7.3210}
-msg: 10:26:42 {LT21.9352}
-msg: 10:26:42 {LN7.3228}
-msg: 10:26:42 {LA4197}
-msg: 10:26:43 {LT21.9352}
-msg: 10:26:43 {LN7.3264}
-msg: 10:26:44 {T0}
-diagnostic #1 =======================
-motor speed = 2841, 2778
-motor speed = 2875, 2846
-motor speed = 2883, 2878
-msg: 10:26:45 {LT21.9305}
-msg: 10:26:45 {LN7.3274}
-msg: 10:26:46 {LT21.9287}
-msg: 10:26:46 {LN7.3274}
-msg: 10:26:47 {LT21.9254}
-msg: 10:26:47 {LN7.3282}
-msg: 10:26:47 {LA4197}
-msg: 10:26:47 {D0}
-{v   0}
-msg: 10:26:48 {LT21.9222}
-msg: 10:26:48 {LN7.3321}
-msg: 10:26:50 {LT21.9204}
-msg: 10:26:50 {LN7.3343}
-msg: 10:26:50 {LA4164}
-msg: 10:26:51 {LT21.9204}
-msg: 10:26:51 {LN7.3379}
-msg: 10:26:52 {D2}
-{v  10}
-msg: 10:26:53 {LT21.9172}
-msg: 10:26:53 {LN7.3386}
-msg: 10:26:53 {D2}
-{v  20}
-msg: 10:26:54 {LT21.9161}
-msg: 10:26:54 {LN7.3386}
-msg: 10:26:55 {D2}
-{v  30}
-msg: 10:26:55 {LT21.9125}
-msg: 10:26:55 {LN7.3426}
-msg: 10:26:55 {D2}
-{v  40}
-msg: 10:26:55 {D2}
-{v  50}
-msg: 10:26:56 {LT21.9100}
-msg: 10:26:56 {LN7.3440}
-msg: 10:26:58 {LT21.9089}
-msg: 10:26:58 {LN7.3454}
-msg: 10:26:58 {LA4179}
-msg: 10:26:59 {LT21.9089}
-msg: 10:26:59 {LN7.3472}
-msg: 10:27:01 {LT21.9071}
-msg: 10:27:01 {LN7.3494}
-msg: 10:27:01 {T0}
-diagnostic #1 =======================
-motor speed = 2847, 2770
-motor speed = 2883, 2851
-motor speed = 2877, 2882
-msg: 10:27:02 {LT21.9060}
-msg: 10:27:02 {LN7.3494}
-msg: 10:27:03 {LT21.9046}
-msg: 10:27:03 {LN7.3505}
-msg: 10:27:04 {LT21.9038}
-msg: 10:27:04 {LN7.3526}
-msg: 10:27:06 {LT21.9042}
-msg: 10:27:06 {LN7.3530}
-msg: 10:27:06 {LA4249}
-msg: 10:27:07 {LT21.9042}
-msg: 10:27:07 {LN7.3519}
-msg: 10:27:08 {D0}
-{v   0}
-msg: 10:27:09 {LT21.9042}
-msg: 10:27:09 {LN7.3516}
-msg: 10:27:10 {LT21.9074}
-msg: 10:27:10 {LN7.3516}
-msg: 10:27:11 {LT21.9067}
-msg: 10:27:11 {LN7.3555}
-msg: 10:27:12 {LT21.9085}
-msg: 10:27:12 {LN7.3552}
-msg: 10:27:14 {LT21.9089}
-msg: 10:27:14 {LN7.3566}
-msg: 10:27:15 {LT21.9132}
-msg: 10:27:15 {LN7.3548}
-msg: 10:27:17 {LT21.9139}
-msg: 10:27:17 {LN7.3537}
-msg: 10:27:18 {LT21.9139}
-msg: 10:27:18 {LN7.3523}
-msg: 10:27:20 {LT21.9161}
-msg: 10:27:20 {LN7.3530}
-msg: 10:27:20 {LA4225}
-msg: 10:27:21 {LT21.9168}
-msg: 10:27:21 {LN7.3530}
-msg: 10:27:22 {LT21.9190}
-msg: 10:27:22 {LN7.3534}
-msg: 10:27:23 {LT21.9211}
-msg: 10:27:23 {LN7.3519}
-msg: 10:27:25 {LT21.9222}
-msg: 10:27:25 {LN7.3519}
-msg: 10:27:26 {LT21.9222}
-msg: 10:27:26 {LN7.3512}
-msg: 10:27:28 {LT21.9254}
-msg: 10:27:28 {LN7.3519}
-msg: 10:27:28 {LA4273}
-msg: 10:27:29 {LT21.9269}
-msg: 10:27:29 {LN7.3519}
-msg: 10:27:30 {LT21.9290}
-msg: 10:27:30 {LN7.3526}
-msg: 10:27:31 {LT21.9312}
-msg: 10:27:31 {LN7.3537}
-msg: 10:27:33 {LT21.9323}
-msg: 10:27:33 {LN7.3544}
-msg: 10:27:33 {LA4281}
-msg: 10:27:34 {LT21.9323}
-msg: 10:27:34 {LN7.3609}
-msg: 10:27:36 {LT21.9326}
-msg: 10:27:36 {LN7.3616}
-msg: 10:27:37 {LT21.9330}
-msg: 10:27:37 {LN7.3616}
-msg: 10:27:38 {LT21.9359}
-msg: 10:27:38 {LN7.3634}
-msg: 10:27:39 {LT21.9398}
-msg: 10:27:39 {LN7.3638}
-msg: 10:27:41 {LT21.9420}
-msg: 10:27:41 {LN7.3638}
-msg: 10:27:42 {LT21.9452}
-msg: 10:27:42 {LN7.3631}
-msg: 10:27:44 {LT21.9467}
-msg: 10:27:44 {LN7.3638}
-msg: 10:27:45 {LT21.9467}
-msg: 10:27:45 {LN7.3624}
-msg: 10:27:47 {LT21.9481}
-msg: 10:27:47 {LN7.3613}
-msg: 10:27:47 {LA4163}
-msg: 10:27:48 {LT21.9488}
-msg: 10:27:48 {LN7.3613}
-msg: 10:27:49 {LT21.9510}
-msg: 10:27:49 {LN7.3616}
-msg: 10:27:50 {LT21.9542}
-msg: 10:27:50 {LN7.3624}
-msg: 10:27:52 {LT21.9564}
-msg: 10:27:52 {LN7.3624}
-msg: 10:27:53 {LT21.9564}
-msg: 10:27:53 {LN7.3631}
-msg: 10:27:55 {LT21.9596}
-msg: 10:27:55 {LN7.3627}
-msg: 10:27:55 {LA4087}
-msg: 10:27:56 {LT21.9607}
-msg: 10:27:56 {LN7.3627}
-msg: 10:27:57 {LT21.9622}
-msg: 10:27:57 {LN7.3627}
-msg: 10:27:58 {LT21.9622}
-msg: 10:27:58 {LN7.3620}
-msg: 10:28:00 {LT21.9629}
-msg: 10:28:00 {LN7.3613}
-msg: 10:28:00 {LA4070}
-msg: 10:28:01 {LT21.9629}
-msg: 10:28:01 {LN7.3584}
-msg: 10:28:03 {LT21.9622}
-msg: 10:28:03 {LN7.3577}
-msg: 10:28:04 {LT21.9614}
-msg: 10:28:04 {LN7.3577}
-msg: 10:28:05 {LT21.9604}
-msg: 10:28:05 {LN7.3573}
-msg: 10:28:06 {LT21.9593}
-msg: 10:28:06 {LN7.3559}
-msg: 10:28:08 {LT21.9593}
-msg: 10:28:08 {LN7.3552}
-msg: 10:28:08 {LA3996}
-msg: 10:28:09 {LT21.9593}
-msg: 10:28:09 {LN7.3523}
-msg: 10:28:11 {LT21.9589}
-msg: 10:28:11 {LN7.3505}
-msg: 10:28:12 {LT21.9586}
-msg: 10:28:12 {LN7.3505}
-msg: 10:28:13 {LT21.9593}
-msg: 10:28:13 {LN7.3487}
-msg: 10:28:14 {LT21.9600}
-msg: 10:28:14 {LN7.3465}
-msg: 10:28:16 {LT21.9607}
-msg: 10:28:16 {LN7.3447}
-msg: 10:28:16 {LA4049}
-msg: 10:28:17 {LT21.9607}
-msg: 10:28:17 {LN7.3422}
-msg: 10:28:19 {LT21.9611}
-msg: 10:28:19 {LN7.3404}
-msg: 10:28:20 {LT21.9582}
-msg: 10:28:20 {LN7.3404}
-msg: 10:28:21 {LT21.9568}
-msg: 10:28:21 {LN7.3379}
-msg: 10:28:22 {LT21.9564}
-msg: 10:28:22 {LN7.3343}
-msg: 10:28:24 {LT21.9564}
-msg: 10:28:24 {LN7.3321}
-msg: 10:28:24 {LA4070}
-msg: 10:28:25 {LT21.9564}
-msg: 10:28:25 {LN7.3285}
-msg: 10:28:27 {LT21.9568}
-msg: 10:28:27 {LN7.3264}
-msg: 10:28:28 {LT21.9571}
-msg: 10:28:28 {LN7.3264}
-msg: 10:28:29 {LT21.9575}
-msg: 10:28:29 {LN7.3220}
-msg: 10:28:29 {LA4103}
-msg: 10:28:30 {LT21.9589}
-msg: 10:28:30 {LN7.3177}
-msg: 10:28:32 {LT21.9600}
-msg: 10:28:32 {LN7.3159}
-msg: 10:28:32 {LA4094}
-msg: 10:28:33 {LT21.9600}
-msg: 10:28:33 {LN7.3120}
-msg: 10:28:35 {LT21.9614}
-msg: 10:28:35 {LN7.3109}
-msg: 10:28:36 {LT21.9618}
-msg: 10:28:36 {LN7.3109}
-msg: 10:28:37 {LT21.9632}
-msg: 10:28:37 {LN7.3080}
-msg: 10:28:38 {LT21.9622}
-msg: 10:28:38 {LN7.3055}
-msg: 10:28:40 {LT21.9611}
-msg: 10:28:40 {LN7.3051}
-msg: 10:28:41 {LT21.9586}
-msg: 10:28:41 {LN7.3030}
-msg: 10:28:43 {LT21.9578}
-msg: 10:28:43 {LN7.3019}
-msg: 10:28:44 {LT21.9578}
-msg: 10:28:44 {LN7.2990}
-msg: 10:28:46 {LT21.9578}
-msg: 10:28:46 {LN7.2986}
-msg: 10:28:46 {LA3921}
-msg: 10:28:47 {LT21.9571}
-msg: 10:28:47 {LN7.2986}
-msg: 10:28:48 {LT21.9571}
-msg: 10:28:48 {LN7.2965}
-msg: 10:28:49 {LT21.9560}
-msg: 10:28:49 {LN7.2958}
-msg: 10:28:51 {LT21.9557}
-msg: 10:28:51 {LN7.2958}
-msg: 10:28:52 {LT21.9557}
-msg: 10:28:52 {LN7.2947}
-msg: 10:28:54 {LT21.9550}
-msg: 10:28:54 {LN7.2943}
-msg: 10:28:54 {LA3836}
-msg: 10:28:55 {LT21.9550}
-msg: 10:28:55 {LN7.2943}
-msg: 10:28:56 {LT21.9542}
-msg: 10:28:56 {LN7.2943}
-msg: 10:28:57 {LT21.9542}
-msg: 10:28:57 {LN7.2922}
-msg: 10:28:59 {LT21.9546}
-msg: 10:28:59 {LN7.2907}
-msg: 10:29:00 {LT21.9557}
-msg: 10:29:00 {LN7.2893}
-msg: 10:29:02 {LT21.9564}
-msg: 10:29:02 {LN7.2886}
-msg: 10:29:03 {LT21.9564}
-msg: 10:29:03 {LN7.2864}
-msg: 10:29:05 {LT21.9582}
-msg: 10:29:05 {LN7.2864}
-msg: 10:29:05 {LA3845}
-msg: 10:29:06 {LT21.9589}
-msg: 10:29:06 {LN7.2864}
-msg: 10:29:07 {LT21.9600}
-msg: 10:29:07 {LN7.2864}
-msg: 10:29:08 {LT21.9604}
-msg: 10:29:08 {LN7.2868}
-msg: 10:29:10 {LT21.9604}
-msg: 10:29:10 {LN7.2868}
-msg: 10:29:11 {LT21.9604}
-msg: 10:29:11 {LN7.2886}
-msg: 10:29:13 {LT21.9600}
-msg: 10:29:13 {LN7.2904}
-msg: 10:29:13 {LA3784}
-msg: 10:29:14 {LT21.9596}
-msg: 10:29:14 {LN7.2904}
-msg: 10:29:15 {LT21.9589}
-msg: 10:29:15 {LN7.2914}
-msg: 10:29:16 {LT21.9542}
-msg: 10:29:16 {LN7.2932}
-msg: 10:29:18 {LT21.9521}
-msg: 10:29:18 {LN7.2925}
-msg: 10:29:18 {LA3773}
-msg: 10:29:19 {LT21.9521}
-msg: 10:29:19 {LN7.2907}
-msg: 10:29:21 {LT21.9460}
-msg: 10:29:21 {LN7.2889}
-msg: 10:29:22 {LT21.9452}
-msg: 10:29:22 {LN7.2889}
-msg: 10:29:23 {LT21.9431}
-msg: 10:29:23 {LN7.2904}
-msg: 10:29:24 {LT21.9384}
-msg: 10:29:24 {LN7.2961}
-msg: 10:29:26 {LT21.9352}
-msg: 10:29:26 {LN7.3001}
-msg: 10:29:27 {LT21.9280}
-msg: 10:29:27 {LN7.3073}
-msg: 10:29:29 {LT21.9262}
-msg: 10:29:29 {LN7.3098}
-msg: 10:29:30 {LT21.9262}
-msg: 10:29:30 {LN7.3138}
-msg: 10:29:32 {LT21.9233}
-msg: 10:29:32 {LN7.3148}
-msg: 10:29:32 {LA3835}
-msg: 10:29:33 {LT21.9222}
-msg: 10:29:33 {LN7.3148}
-msg: 10:29:34 {D2}
-{v  10}
-msg: 10:29:34 {LT21.9190}
-msg: 10:29:34 {LN7.3170}
-msg: 10:29:34 {D2}
-{v  20}
-msg: 10:29:34 {D2}
-{v  30}
-msg: 10:29:34 {D2}
-{v  40}
-msg: 10:29:35 {LT21.9182}
-msg: 10:29:35 {LN7.3181}
-msg: 10:29:37 {LT21.9179}
-msg: 10:29:37 {LN7.3184}
-msg: 10:29:38 {LT21.9172}
-msg: 10:29:38 {LN7.3202}
-msg: 10:29:40 {LT21.9175}
-msg: 10:29:40 {LN7.3210}
-msg: 10:29:41 {LT21.9175}
-msg: 10:29:41 {LN7.3235}
-msg: 10:29:43 {LT21.9168}
-msg: 10:29:43 {LN7.3256}
-msg: 10:29:43 {LA4008}
-msg: 10:29:43 {T0}
-diagnostic #1 =======================
-motor speed = 2239, 2197
-motor speed = 2269, 2243
-motor speed = 2270, 2264
-msg: 10:29:44 {LT21.9164}
-msg: 10:29:44 {LN7.3256}
-msg: 10:29:45 {LT21.9150}
-msg: 10:29:45 {LN7.3300}
-msg: 10:29:46 {LT21.9143}
-msg: 10:29:46 {LN7.3336}
-msg: 10:29:48 {LT21.9139}
-msg: 10:29:48 {LN7.3343}
-msg: 10:29:49 {LT21.9139}
-msg: 10:29:49 {LN7.3354}
-msg: 10:29:50 {D0}
-{v   0}
-msg: 10:29:51 {LT21.9128}
-msg: 10:29:51 {LN7.3375}
-msg: 10:29:51 {LA4198}
-msg: 10:29:52 {LT21.9125}
-msg: 10:29:52 {LN7.3375}
-msg: 10:29:53 {D2}
-{v  10}
-msg: 10:29:53 {LT21.9125}
-msg: 10:29:53 {LN7.3368}
-msg: 10:29:53 {D2}
-{v  20}
-msg: 10:29:53 {D2}
-{v  30}
-msg: 10:29:53 {D2}
-{v  40}
-msg: 10:29:53 {D2}
-{v  50}
-msg: 10:29:54 {LT21.9118}
-msg: 10:29:54 {LN7.3386}
-msg: 10:29:56 {LT21.9118}
-msg: 10:29:56 {LN7.3382}
-msg: 10:29:57 {LT21.9114}
-msg: 10:29:57 {LN7.3382}
-msg: 10:29:58 {T0}
-diagnostic #1 =======================
-motor speed = 2838, 2777
-motor speed = 2862, 2843
-motor speed = 2889, 2857
-msg: 10:29:59 {LT21.9125}
-msg: 10:29:59 {LN7.3375}
-msg: 10:30:00 {LT21.9125}
-msg: 10:30:00 {LN7.3364}
-msg: 10:30:02 {LT21.9125}
-msg: 10:30:02 {LN7.3354}
-msg: 10:30:02 {LA4421}
-msg: 10:30:03 {LT21.9136}
-msg: 10:30:03 {LN7.3354}
-msg: 10:30:04 {LT21.9150}
-msg: 10:30:04 {LN7.3350}
-msg: 10:30:05 {LT21.9157}
-msg: 10:30:05 {LN7.3350}
-msg: 10:30:07 {LT21.9161}
-msg: 10:30:07 {LN7.3354}
-msg: 10:30:08 {LT21.9161}
-msg: 10:30:08 {LN7.3332}
-msg: 10:30:10 {LT21.9172}
-msg: 10:30:10 {LN7.3321}
-msg: 10:30:10 {LA4457}
-msg: 10:30:11 {LT21.9175}
-msg: 10:30:11 {LN7.3321}
-msg: 10:30:12 {LT21.9190}
-msg: 10:30:12 {LN7.3292}
-msg: 10:30:13 {LT21.9204}
-msg: 10:30:13 {LN7.3242}
-msg: 10:30:15 {LT21.9211}
-msg: 10:30:15 {LN7.3224}
-msg: 10:30:15 {LA4406}
-msg: 10:30:16 {LT21.9211}
-msg: 10:30:16 {LN7.3195}
-msg: 10:30:17 {D0}
-{v   0}
-msg: 10:30:18 {LT21.9226}
-msg: 10:30:18 {LN7.3184}
-msg: 10:30:19 {LT21.9236}
-msg: 10:30:19 {LN7.3184}
-msg: 10:30:20 {LT21.9262}
-msg: 10:30:20 {LN7.3188}
-msg: 10:30:21 {LT21.9283}
-msg: 10:30:21 {LN7.3195}
-msg: 10:30:23 {LT21.9298}
-msg: 10:30:23 {LN7.3188}
-msg: 10:30:23 {LA4315}
-msg: 10:30:24 {LT21.9298}
-msg: 10:30:24 {LN7.3188}
-msg: 10:30:26 {LT21.9316}
-msg: 10:30:26 {LN7.3188}
-msg: 10:30:27 {LT21.9326}
-msg: 10:30:27 {LN7.3188}
-msg: 10:30:28 {LT21.9337}
-msg: 10:30:28 {LN7.3210}
-msg: 10:30:29 {LT21.9341}
-msg: 10:30:29 {LN7.3246}
-msg: 10:30:31 {LT21.9348}
-msg: 10:30:31 {LN7.3253}
-msg: 10:30:31 {LA4260}
-msg: 10:30:32 {LT21.9348}
-msg: 10:30:32 {LN7.3271}
-msg: 10:30:34 {LT21.9352}
-msg: 10:30:34 {LN7.3256}
-msg: 10:30:35 {LT21.9370}
-msg: 10:30:35 {LN7.3256}
-msg: 10:30:36 {LT21.9377}
-msg: 10:30:36 {LN7.3231}
-msg: 10:30:37 {LT21.9276}
-msg: 10:30:37 {LN7.3346}
-msg: 10:30:39 {LT21.9233}
-msg: 10:30:39 {LN7.3368}
-msg: 10:30:40 {LT21.9186}
-msg: 10:30:40 {LN7.3379}
-msg: 10:30:42 {LT21.9175}
-msg: 10:30:42 {LN7.3400}
-msg: 10:30:43 {LT21.9175}
-msg: 10:30:43 {LN7.3411}
-msg: 10:30:45 {LT21.9182}
-msg: 10:30:45 {LN7.3404}
-msg: 10:30:45 {LA4002}
-msg: 10:30:46 {LT21.9204}
-msg: 10:30:46 {LN7.3404}
-msg: 10:30:47 {LT21.9222}
-msg: 10:30:47 {LN7.3418}
-msg: 10:30:48 {LT21.9229}
-msg: 10:30:48 {LN7.3415}
-msg: 10:30:50 {LT21.9211}
-msg: 10:30:50 {LN7.3408}
-msg: 10:30:51 {LT21.9211}
-msg: 10:30:51 {LN7.3411}
-msg: 10:30:53 {LT21.9204}
-msg: 10:30:53 {LN7.3426}
-msg: 10:30:53 {LA3934}
-msg: 10:30:54 {LT21.9208}
-msg: 10:30:54 {LN7.3426}
-msg: 10:30:55 {LT21.9222}
-msg: 10:30:55 {LN7.3447}
-msg: 10:30:56 {LT21.9258}
-msg: 10:30:56 {LN7.3440}
-msg: 10:30:58 {LT21.9269}
-msg: 10:30:58 {LN7.3436}
-msg: 10:30:59 {LT21.9258}
-msg: 10:30:59 {LN7.3433}
-msg: 10:31:01 {LT21.9272}
-msg: 10:31:01 {LN7.3429}
-msg: 10:31:02 {LT21.9272}
-msg: 10:31:02 {LN7.3422}
-msg: 10:31:04 {LT21.9272}
-msg: 10:31:04 {LN7.3418}
-msg: 10:31:04 {LA3791}
-msg: 10:31:05 {LT21.9280}
-msg: 10:31:05 {LN7.3418}
-msg: 10:31:06 {LT21.9290}
-msg: 10:31:06 {LN7.3404}
-msg: 10:31:07 {LT21.9283}
-msg: 10:31:07 {LN7.3408}
-msg: 10:31:09 {LT21.9283}
-msg: 10:31:09 {LN7.3404}
-msg: 10:31:10 {LT21.9280}
-msg: 10:31:10 {LN7.3393}
-msg: 10:31:12 {LT21.9280}
-msg: 10:31:12 {LN7.3400}
-msg: 10:31:13 {LT21.9280}
-msg: 10:31:13 {LN7.3404}
-msg: 10:31:15 {LT21.9280}
-msg: 10:31:15 {LN7.3415}
-msg: 10:31:16 {LT21.9276}
-msg: 10:31:16 {LN7.3433}
-msg: 10:31:18 {LT21.9265}
-msg: 10:31:18 {LN7.3433}
-msg: 10:31:19 {LT21.9258}
-msg: 10:31:19 {LN7.3433}
-msg: 10:31:20 {LT21.9251}
-msg: 10:31:20 {LN7.3436}
-msg: 10:31:21 {LT21.9240}
-msg: 10:31:21 {LN7.3444}
-msg: 10:31:23 {LT21.9236}
-msg: 10:31:23 {LN7.3447}
-msg: 10:31:24 {LT21.9233}
-msg: 10:31:24 {LN7.3447}
-msg: 10:31:26 {LT21.9233}
-msg: 10:31:26 {LN7.3444}
-msg: 10:31:27 {LT21.9233}
-msg: 10:31:27 {LN7.3444}
-msg: 10:31:29 {LT21.9233}
-msg: 10:31:29 {LN7.3440}
-msg: 10:31:29 {LA3597}
-msg: 10:31:30 {LT21.9229}
-msg: 10:31:30 {LN7.3440}
-msg: 10:31:31 {LT21.9233}
-msg: 10:31:31 {LN7.3440}
-msg: 10:31:32 {LT21.9244}
-msg: 10:31:32 {LN7.3440}
-msg: 10:31:34 {LT21.9247}
-msg: 10:31:34 {LN7.3436}
-msg: 10:31:35 {LT21.9247}
-msg: 10:31:35 {LN7.3415}
-msg: 10:31:37 {LT21.9262}
-msg: 10:31:37 {LN7.3397}
-msg: 10:31:37 {LA3482}
-msg: 10:31:38 {LT21.9269}
-msg: 10:31:38 {LN7.3397}
-msg: 10:31:39 {LT21.9290}
-msg: 10:31:39 {LN7.3379}
-msg: 10:31:40 {LT21.9316}
-msg: 10:31:40 {LN7.3346}
-msg: 10:31:42 {LT21.9323}
-msg: 10:31:42 {LN7.3343}
-msg: 10:31:43 {LT21.9334}
-msg: 10:31:43 {LN7.3339}
-msg: 10:31:45 {LT21.9344}
-msg: 10:31:45 {LN7.3332}
-msg: 10:31:46 {LT21.9344}
-msg: 10:31:46 {LN7.3336}
-msg: 10:31:48 {LT21.9352}
-msg: 10:31:48 {LN7.3336}
-msg: 10:31:48 {LA3428}
-msg: 10:31:49 {LT21.9359}
-msg: 10:31:49 {LN7.3336}
-msg: 10:31:50 {LT21.9377}
-msg: 10:31:50 {LN7.3318}
-msg: 10:31:51 {LT21.9388}
-msg: 10:31:51 {LN7.3307}
-msg: 10:31:53 {LT21.9398}
-msg: 10:31:53 {LN7.3296}
-msg: 10:31:54 {LT21.9398}
-msg: 10:31:54 {LN7.3274}
-msg: 10:31:56 {LT21.9420}
-msg: 10:31:56 {LN7.3264}
-msg: 10:31:56 {LA3448}
-msg: 10:31:57 {LT21.9438}
-msg: 10:31:57 {LN7.3264}
-msg: 10:31:58 {LT21.9452}
-msg: 10:31:58 {LN7.3256}
-msg: 10:31:59 {LT21.9456}
-msg: 10:31:59 {LN7.3260}
-msg: 10:32:01 {LT21.9460}
-msg: 10:32:01 {LN7.3253}
-msg: 10:32:01 {LA3450}
-msg: 10:32:02 {LT21.9460}
-msg: 10:32:02 {LN7.3246}
-msg: 10:32:04 {LT21.9470}
-msg: 10:32:04 {LN7.3246}
-msg: 10:32:05 {LT21.9478}
-msg: 10:32:05 {LN7.3246}
-msg: 10:32:06 {LT21.9499}
-msg: 10:32:06 {LN7.3224}
-msg: 10:32:06 {LA3446}
-msg: 10:32:07 {LT21.9524}
-msg: 10:32:07 {LN7.3210}
-msg: 10:32:09 {LT21.9539}
-msg: 10:32:09 {LN7.3202}
-msg: 10:32:09 {LA3437}
-msg: 10:32:10 {LT21.9539}
-msg: 10:32:10 {LN7.3192}
-msg: 10:32:12 {LT21.9564}
-msg: 10:32:12 {LN7.3184}
-msg: 10:32:13 {LT21.9575}
-msg: 10:32:13 {LN7.3184}
-msg: 10:32:14 {LT21.9607}
-msg: 10:32:14 {LN7.3174}
-msg: 10:32:15 {LT21.9629}
-msg: 10:32:15 {LN7.3166}
-msg: 10:32:17 {LT21.9643}
-msg: 10:32:17 {LN7.3159}
-msg: 10:32:17 {LA3440}
-msg: 10:32:18 {LT21.9643}
-msg: 10:32:18 {LN7.3152}
-msg: 10:32:20 {LT21.9665}
-msg: 10:32:20 {LN7.3141}
-msg: 10:32:21 {LT21.9679}
-msg: 10:32:21 {LN7.3141}
-msg: 10:32:22 {LT21.9719}
-msg: 10:32:22 {LN7.3123}
-msg: 10:32:23 {LT21.9755}
-msg: 10:32:23 {LN7.3120}
-msg: 10:32:25 {LT21.9773}
-msg: 10:32:25 {LN7.3116}
-msg: 10:32:26 {LT21.9791}
-msg: 10:32:26 {LN7.3109}
-msg: 10:32:28 {LT21.9805}
-msg: 10:32:28 {LN7.3102}
-msg: 10:32:29 {LT21.9805}
-msg: 10:32:29 {LN7.3102}
-msg: 10:32:31 {LT21.9830}
-msg: 10:32:31 {LN7.3098}
-msg: 10:32:31 {LA3497}
-msg: 10:32:32 {LT21.9830}
-msg: 10:32:32 {LN7.3098}
-msg: 10:32:33 {LT21.9852}
-msg: 10:32:33 {LN7.3076}
-msg: 10:32:34 {LT21.9877}
-msg: 10:32:34 {LN7.3048}
-msg: 10:32:36 {LT21.9884}
-msg: 10:32:36 {LN7.3040}
-msg: 10:32:37 {LT21.9884}
-msg: 10:32:37 {LN7.3037}
-msg: 10:32:39 {LT21.9884}
-msg: 10:32:39 {LN7.3033}
-msg: 10:32:39 {LA3529}
-msg: 10:32:40 {LT21.9888}
-msg: 10:32:40 {LN7.3033}
-msg: 10:32:41 {LT21.9906}
-msg: 10:32:41 {LN7.3015}
-msg: 10:32:42 {LT21.9917}
-msg: 10:32:42 {LN7.2997}
-msg: 10:32:44 {LT21.9920}
-msg: 10:32:44 {LN7.2994}
-msg: 10:32:44 {LA3592}
-msg: 10:32:45 {LT21.9920}
-msg: 10:32:45 {LN7.2983}
-msg: 10:32:47 {LT21.9928}
-msg: 10:32:47 {LN7.2986}
-msg: 10:32:48 {LT21.9928}
-msg: 10:32:48 {LN7.2986}
-msg: 10:32:49 {LT21.9928}
-msg: 10:32:49 {LN7.3004}
-msg: 10:32:49 {LA3641}
-msg: 10:32:50 {LT21.9924}
-msg: 10:32:50 {LN7.3004}
-msg: 10:32:52 {LT21.9924}
-msg: 10:32:52 {LN7.3004}
-msg: 10:32:52 {LA3676}
-msg: 10:32:53 {LT21.9924}
-msg: 10:32:53 {LN7.2983}
-msg: 10:32:55 {LT21.9931}
-msg: 10:32:55 {LN7.2986}
-msg: 10:32:56 {LT21.9935}
-msg: 10:32:56 {LN7.2986}
-msg: 10:32:57 {LT21.9931}
-msg: 10:32:57 {LN7.2983}
-msg: 10:32:58 {LT21.9935}
-msg: 10:32:58 {LN7.2983}
-msg: 10:33:00 {LT21.9938}
-msg: 10:33:00 {LN7.2986}
-msg: 10:33:00 {LA3705}
-msg: 10:33:01 {LT21.9938}
-msg: 10:33:01 {LN7.2979}
-msg: 10:33:03 {LT21.9942}
-msg: 10:33:03 {LN7.2979}
-msg: 10:33:04 {LT21.9946}
-msg: 10:33:04 {LN7.2979}
-msg: 10:33:05 {LT21.9946}
-msg: 10:33:05 {LN7.2979}
-msg: 10:33:06 {LT21.9942}
-msg: 10:33:06 {LN7.2979}
-msg: 10:33:08 {LT21.9942}
-msg: 10:33:08 {LN7.2976}
-msg: 10:33:08 {LA3677}
-msg: 10:33:09 {LT21.9942}
-msg: 10:33:09 {LN7.2965}
-msg: 10:33:11 {LT21.9946}
-msg: 10:33:11 {LN7.2965}
-msg: 10:33:12 {LT21.9942}
-msg: 10:33:12 {LN7.2965}
-msg: 10:33:13 {LT21.9935}
-msg: 10:33:13 {LN7.2965}
-msg: 10:33:14 {LT21.9928}
-msg: 10:33:14 {LN7.2954}
-msg: 10:33:16 {LT21.9931}
-msg: 10:33:16 {LN7.2947}
-msg: 10:33:16 {LA3617}
-msg: 10:33:17 {LT21.9931}
-msg: 10:33:17 {LN7.2943}
-msg: 10:33:19 {LT21.9935}
-msg: 10:33:19 {LN7.2954}
-msg: 10:33:20 {LT21.9928}
-msg: 10:33:20 {LN7.2954}
-msg: 10:33:21 {LT21.9920}
-msg: 10:33:21 {LN7.2972}
-msg: 10:33:22 {LT21.9917}
-msg: 10:33:22 {LN7.2983}
-msg: 10:33:24 {LT21.9913}
-msg: 10:33:24 {LN7.2990}
-msg: 10:33:24 {LA3548}
-msg: 10:33:25 {LT21.9913}
-msg: 10:33:25 {LN7.2990}
-msg: 10:33:27 {LT21.9913}
-msg: 10:33:27 {LN7.2994}
-msg: 10:33:28 {LT21.9910}
-msg: 10:33:28 {LN7.2994}
-msg: 10:33:29 {LT21.9910}
-msg: 10:33:29 {LN7.2997}
-msg: 10:33:30 {LT21.9910}
-msg: 10:33:30 {LN7.2983}
-msg: 10:33:32 {LT21.9910}
-msg: 10:33:32 {LN7.2968}
-msg: 10:33:33 {LT21.9913}
-msg: 10:33:33 {LN7.2961}
-msg: 10:33:35 {LT21.9913}
-msg: 10:33:35 {LN7.2965}
-msg: 10:33:36 {LT21.9913}
-msg: 10:33:36 {LN7.2954}
-msg: 10:33:38 {LT21.9917}
-msg: 10:33:38 {LN7.2950}
-msg: 10:33:38 {LA3589}
-msg: 10:33:39 {LT21.9920}
-msg: 10:33:39 {LN7.2950}
-msg: 10:33:40 {LT21.9924}
-msg: 10:33:40 {LN7.2943}
-msg: 10:33:41 {LT21.9931}
-msg: 10:33:41 {LN7.2943}
-msg: 10:33:43 {LT21.9938}
-msg: 10:33:43 {LN7.2940}
-msg: 10:33:44 {LT21.9938}
-msg: 10:33:44 {LN7.2940}
-msg: 10:33:46 {LT21.9946}
-msg: 10:33:46 {LN7.2936}
-msg: 10:33:46 {LA3678}
-msg: 10:33:47 {LT21.9946}
-msg: 10:33:47 {LN7.2936}
-msg: 10:33:48 {LT21.9946}
-msg: 10:33:48 {LN7.2943}
-msg: 10:33:49 {LT21.9953}
-msg: 10:33:49 {LN7.2943}
-msg: 10:33:51 {LT21.9949}
-msg: 10:33:51 {LN7.2958}
-msg: 10:33:51 {LA3727}
-msg: 10:33:52 {LT21.9949}
-msg: 10:33:52 {LN7.2961}
-msg: 10:33:54 {LT21.9953}
-msg: 10:33:54 {LN7.2965}
-msg: 10:33:55 {LT21.9949}
-msg: 10:33:55 {LN7.2965}
-msg: 10:33:56 {LT21.9946}
-msg: 10:33:56 {LN7.2983}
-msg: 10:33:57 {LT21.9953}
-msg: 10:33:57 {LN7.2986}
-msg: 10:33:59 {LT21.9949}
-msg: 10:33:59 {LN7.2990}
-msg: 10:34:00 {LT21.9953}
-msg: 10:34:00 {LN7.2983}
-msg: 10:34:02 {LT21.9956}
-msg: 10:34:02 {LN7.2983}
-msg: 10:34:03 {LT21.9956}
-msg: 10:34:03 {LN7.2979}
-msg: 10:34:05 {LT21.9964}
-msg: 10:34:05 {LN7.2979}
-msg: 10:34:05 {LA3872}
-msg: 10:34:06 {LT21.9964}
-msg: 10:34:06 {LN7.2979}
-msg: 10:34:07 {LT21.9967}
-msg: 10:34:07 {LN7.2990}
-msg: 10:34:08 {LT21.9971}
-msg: 10:34:08 {LN7.2983}
-msg: 10:34:10 {LT21.9971}
-msg: 10:34:10 {LN7.2979}
-msg: 10:34:11 {LT21.9971}
-msg: 10:34:11 {LN7.2986}
-msg: 10:34:13 {LT21.9971}
-msg: 10:34:13 {LN7.2994}
-msg: 10:34:13 {LA3906}
-msg: 10:34:14 {LT21.9967}
-msg: 10:34:14 {LN7.2994}
-msg: 10:34:15 {LT21.9967}
-msg: 10:34:15 {LN7.2997}
-msg: 10:34:16 {LT21.9971}
-msg: 10:34:16 {LN7.2997}
-msg: 10:34:18 {LT21.9967}
-msg: 10:34:18 {LN7.2986}
-msg: 10:34:18 {LA3933}
-msg: 10:34:19 {LT21.9967}
-msg: 10:34:19 {LN7.2976}
-msg: 10:34:21 {LT21.9971}
-msg: 10:34:21 {LN7.2979}
-msg: 10:34:22 {LT21.9974}
-msg: 10:34:22 {LN7.2979}
-msg: 10:34:23 {LT21.9989}
-msg: 10:34:23 {LN7.2976}
-msg: 10:34:24 {LT21.9996}
-msg: 10:34:24 {LN7.2965}
-msg: 10:34:26 {LT22.0000}
-msg: 10:34:26 {LN7.2950}
-msg: 10:34:26 {LA3969}
-msg: 10:34:27 {LT22.0000}
-msg: 10:34:27 {LN7.2936}
-msg: 10:34:29 {LT22.0000}
-msg: 10:34:29 {LN7.2929}
-msg: 10:34:30 {LT22.0000}
-msg: 10:34:30 {LN7.2929}
-msg: 10:34:31 {LT21.9996}
-msg: 10:34:31 {LN7.2929}
-msg: 10:34:32 {LT22.0003}
-msg: 10:34:32 {LN7.2904}
-msg: 10:34:34 {LT22.0003}
-msg: 10:34:34 {LN7.2900}
-msg: 10:34:34 {LA4057}
-msg: 10:34:35 {LT22.0003}
-msg: 10:34:35 {LN7.2904}
-msg: 10:34:37 {LT22.0007}
-msg: 10:34:37 {LN7.2900}
-msg: 10:34:38 {LT22.0014}
-msg: 10:34:38 {LN7.2900}
-msg: 10:34:39 {LT22.0025}
-msg: 10:34:39 {LN7.2911}
-msg: 10:34:39 {LA4018}
-msg: 10:34:40 {LT22.0036}
-msg: 10:34:40 {LN7.2904}
-msg: 10:34:42 {LT22.0039}
-msg: 10:34:42 {LN7.2907}
-msg: 10:34:43 {LT22.0054}
-msg: 10:34:43 {LN7.2893}
-msg: 10:34:45 {LT22.0064}
-msg: 10:34:45 {LN7.2896}
-msg: 10:34:46 {LT22.0064}
-msg: 10:34:46 {LN7.2886}
-msg: 10:34:48 {LT22.0068}
-msg: 10:34:48 {LN7.2896}
-msg: 10:34:48 {LA3930}
-msg: 10:34:49 {LT22.0061}
-msg: 10:34:49 {LN7.2896}
-msg: 10:34:50 {LT22.0061}
-msg: 10:34:50 {LN7.2904}
-msg: 10:34:51 {LT22.0082}
-msg: 10:34:51 {LN7.2904}
-msg: 10:34:53 {LT22.0082}
-msg: 10:34:53 {LN7.2904}
-msg: 10:34:54 {LT22.0082}
-msg: 10:34:54 {LN7.2922}
-msg: 10:34:56 {LT22.0082}
-msg: 10:34:56 {LN7.2925}
-msg: 10:34:56 {LA3852}
-msg: 10:34:57 {LT22.0082}
-msg: 10:34:57 {LN7.2925}
-msg: 10:34:58 {LT22.0090}
-msg: 10:34:58 {LN7.2929}
-msg: 10:34:59 {LT22.0093}
-msg: 10:34:59 {LN7.2929}
-msg: 10:35:01 {LT22.0093}
-msg: 10:35:01 {LN7.2932}
-msg: 10:35:01 {LA3817}
-msg: 10:35:02 {LT22.0093}
-msg: 10:35:02 {LN7.2947}
-msg: 10:35:04 {LT22.0090}
-msg: 10:35:04 {LN7.2947}
-msg: 10:35:05 {LT22.0090}
-msg: 10:35:05 {LN7.2947}
-msg: 10:35:06 {LT22.0093}
-msg: 10:35:06 {LN7.2954}
-msg: 10:35:07 {LT22.0097}
-msg: 10:35:07 {LN7.2958}
-msg: 10:35:09 {LT22.0100}
-msg: 10:35:09 {LN7.2958}
-msg: 10:35:09 {LA3759}
-msg: 10:35:10 {LT22.0100}
-msg: 10:35:10 {LN7.2950}
-msg: 10:35:12 {LT22.0104}
-msg: 10:35:12 {LN7.2943}
-msg: 10:35:13 {LT22.0104}
-msg: 10:35:13 {LN7.2943}
-msg: 10:35:14 {LT22.0104}
-msg: 10:35:14 {LN7.2947}
-msg: 10:35:15 {LT22.0108}
-msg: 10:35:15 {LN7.2958}
-msg: 10:35:17 {LT22.0115}
-msg: 10:35:17 {LN7.2947}
-msg: 10:35:17 {LA3770}
-msg: 10:35:18 {LT22.0115}
-msg: 10:35:18 {LN7.2943}
-msg: 10:35:20 {LT22.0122}
-msg: 10:35:20 {LN7.2932}
-msg: 10:35:21 {LT22.0129}
-msg: 10:35:21 {LN7.2932}
-msg: 10:35:22 {LT22.0133}
-msg: 10:35:22 {LN7.2943}
-msg: 10:35:22 {LA3714}
-msg: 10:35:23 {LT22.0147}
-msg: 10:35:23 {LN7.2922}
-msg: 10:35:25 {LT22.0147}
-msg: 10:35:25 {LN7.2918}
-msg: 10:35:25 {LA3726}
-msg: 10:35:26 {LT22.0147}
-msg: 10:35:26 {LN7.2900}
-msg: 10:35:28 {LT22.0162}
-msg: 10:35:28 {LN7.2896}
-msg: 10:35:29 {LT22.0169}
-msg: 10:35:29 {LN7.2896}
-msg: 10:35:30 {LT22.0187}
-msg: 10:35:30 {LN7.2860}
-msg: 10:35:31 {LT22.0198}
-msg: 10:35:31 {LN7.2828}
-msg: 10:35:33 {LT22.0198}
-msg: 10:35:33 {LN7.2806}
-msg: 10:35:33 {LA3756}
-msg: 10:35:34 {LT22.0198}
-msg: 10:35:34 {LN7.2788}
-msg: 10:35:36 {LT22.0194}
-msg: 10:35:36 {LN7.2792}
-msg: 10:35:37 {LT22.0187}
-msg: 10:35:37 {LN7.2792}
-msg: 10:35:38 {LT22.0183}
-msg: 10:35:38 {LN7.2788}
-msg: 10:35:39 {LT22.0201}
-msg: 10:35:39 {LN7.2752}
-msg: 10:35:41 {LT22.0208}
-msg: 10:35:41 {LN7.2742}
-msg: 10:35:42 {LT22.0208}
-msg: 10:35:42 {LN7.2745}
-msg: 10:35:44 {LT22.0201}
-msg: 10:35:44 {LN7.2752}
-msg: 10:35:45 {LT22.0201}
-msg: 10:35:45 {LN7.2756}
-msg: 10:35:47 {LT22.0187}
-msg: 10:35:47 {LN7.2749}
-msg: 10:35:47 {LA3535}
-msg: 10:35:48 {LT22.0180}
-msg: 10:35:48 {LN7.2749}
-msg: 10:35:49 {LT22.0183}
-msg: 10:35:49 {LN7.2731}
-msg: 10:35:50 {LT22.0172}
-msg: 10:35:50 {LN7.2709}
-msg: 10:35:52 {LT22.0162}
-msg: 10:35:52 {LN7.2695}
-msg: 10:35:53 {LT22.0162}
-msg: 10:35:53 {LN7.2644}
-msg: 10:35:55 {LT22.0180}
-msg: 10:35:55 {LN7.2608}
-msg: 10:35:55 {LA3500}
-msg: 10:35:56 {LT22.0198}
-msg: 10:35:56 {LN7.2608}
-msg: 10:35:57 {LT22.0205}
-msg: 10:35:57 {LN7.2608}
-msg: 10:35:58 {LT22.0201}
-msg: 10:35:58 {LN7.2598}
-msg: 10:36:00 {LT22.0198}
-msg: 10:36:00 {LN7.2605}
-msg: 10:36:00 {LA3528}
-msg: 10:36:01 {LT22.0198}
-msg: 10:36:01 {LN7.2601}
-msg: 10:36:03 {LT22.0190}
-msg: 10:36:03 {LN7.2594}
-msg: 10:36:04 {LT22.0194}
-msg: 10:36:04 {LN7.2594}
-msg: 10:36:05 {LT22.0190}
-msg: 10:36:05 {LN7.2583}
-msg: 10:36:06 {LT22.0183}
-msg: 10:36:06 {LN7.2587}
-msg: 10:36:08 {LT22.0180}
-msg: 10:36:08 {LN7.2583}
-msg: 10:36:09 {LT22.0172}
-msg: 10:36:09 {LN7.2580}
-msg: 10:36:11 {LT22.0169}
-msg: 10:36:11 {LN7.2580}
-msg: 10:36:12 {LT22.0169}
-msg: 10:36:12 {LN7.2558}
-msg: 10:36:14 {LT22.0158}
-msg: 10:36:14 {LN7.2547}
-msg: 10:36:14 {LA3526}
-msg: 10:36:15 {LT22.0158}
-msg: 10:36:15 {LN7.2547}
-msg: 10:36:16 {LT22.0154}
-msg: 10:36:16 {LN7.2526}
-msg: 10:36:17 {LT22.0140}
-msg: 10:36:17 {LN7.2529}
-msg: 10:36:19 {LT22.0136}
-msg: 10:36:19 {LN7.2529}
-msg: 10:36:20 {LT22.0136}
-msg: 10:36:20 {LN7.2518}
-msg: 10:36:22 {LT22.0133}
-msg: 10:36:22 {LN7.2515}
-msg: 10:36:22 {LA3573}
-msg: 10:36:23 {LT22.0133}
-msg: 10:36:23 {LN7.2515}
-msg: 10:36:24 {LT22.0122}
-msg: 10:36:24 {LN7.2490}
-msg: 10:36:25 {LT22.0118}
-msg: 10:36:25 {LN7.2475}
-msg: 10:36:27 {LT22.0115}
-msg: 10:36:27 {LN7.2475}
-msg: 10:36:27 {LA3606}
-msg: 10:36:28 {LT22.0115}
-msg: 10:36:28 {LN7.2461}
-msg: 10:36:30 {LT22.0104}
-msg: 10:36:30 {LN7.2446}
-msg: 10:36:31 {LT22.0108}
-msg: 10:36:31 {LN7.2446}
-msg: 10:36:32 {LT22.0111}
-msg: 10:36:32 {LN7.2403}
-msg: 10:36:33 {LT22.0104}
-msg: 10:36:33 {LN7.2378}
-msg: 10:36:35 {LT22.0090}
-msg: 10:36:35 {LN7.2392}
-msg: 10:36:36 {LT22.0093}
-msg: 10:36:36 {LN7.2389}
-msg: 10:36:38 {LT22.0111}
-msg: 10:36:38 {LN7.2396}
-msg: 10:36:39 {LT22.0111}
-msg: 10:36:39 {LN7.2367}
-msg: 10:36:41 {LT22.0133}
-msg: 10:36:41 {LN7.2346}
-msg: 10:36:41 {LA3544}
-msg: 10:36:42 {LT22.0133}
-msg: 10:36:42 {LN7.2346}
-msg: 10:36:43 {LT22.0122}
-msg: 10:36:43 {LN7.2317}
-msg: 10:36:44 {LT22.0118}
-msg: 10:36:44 {LN7.2292}
-msg: 10:36:46 {LT22.0118}
-msg: 10:36:46 {LN7.2281}
-msg: 10:36:47 {LT22.0118}
-msg: 10:36:47 {LN7.2295}
-msg: 10:36:49 {LT22.0118}
-msg: 10:36:49 {LN7.2288}
-msg: 10:36:49 {LA3461}
-msg: 10:36:50 {LT22.0104}
-msg: 10:36:50 {LN7.2288}
-msg: 10:36:51 {LT22.0100}
-msg: 10:36:51 {LN7.2259}
-msg: 10:36:52 {LT22.0086}
-msg: 10:36:52 {LN7.2238}
-msg: 10:36:54 {LT22.0086}
-msg: 10:36:54 {LN7.2209}
-msg: 10:36:54 {LA3463}
-msg: 10:36:55 {LT22.0086}
-msg: 10:36:55 {LN7.2176}
-msg: 10:36:57 {LT22.0075}
-msg: 10:36:57 {LN7.2166}
-msg: 10:36:58 {LT22.0064}
-msg: 10:36:58 {LN7.2166}
-msg: 10:36:59 {LT22.0043}
-msg: 10:36:59 {LN7.2155}
-msg: 10:37:00 {LT22.0046}
-msg: 10:37:00 {LN7.2140}
-msg: 10:37:02 {LT22.0046}
-msg: 10:37:02 {LN7.2122}
-msg: 10:37:02 {LA3401}
-msg: 10:37:03 {LT22.0046}
-msg: 10:37:03 {LN7.2108}
-msg: 10:37:05 {LT22.0018}
-msg: 10:37:05 {LN7.2119}
-msg: 10:37:06 {LT21.9996}
-msg: 10:37:06 {LN7.2119}
-msg: 10:37:07 {LT21.9971}
-msg: 10:37:07 {LN7.2079}
-msg: 10:37:08 {LT21.9946}
-msg: 10:37:08 {LN7.2076}
-msg: 10:37:10 {LT21.9938}
-msg: 10:37:10 {LN7.2068}
-msg: 10:37:10 {LA3356}
-msg: 10:37:11 {LT21.9938}
-msg: 10:37:11 {LN7.2043}
-msg: 10:37:13 {LT21.9928}
-msg: 10:37:13 {LN7.2040}
-msg: 10:37:14 {LT21.9910}
-msg: 10:37:14 {LN7.2040}
-msg: 10:37:15 {LT21.9906}
-msg: 10:37:15 {LN7.2022}
+msg: 11:03:59 {LT21.9816}
+msg: 11:03:59 {LN7.4750}
+msg: 11:04:00 {LA141}
+msg: 11:04:01 {LT21.9816}
+msg: 11:04:01 {LN7.4750}
+msg: 11:04:01 {LA141}
+msg: 11:04:03 {LT21.9816}
+msg: 11:04:03 {LN7.4750}
+msg: 11:04:03 {LA141}
+msg: 11:04:05 {LT21.9816}
+msg: 11:04:05 {LN7.4747}
+msg: 11:04:06 {LA141}
+msg: 11:04:07 {LT21.9809}
+msg: 11:04:07 {LN7.4747}
+msg: 11:04:07 {LA141}
+msg: 11:04:09 {LT21.9798}
+msg: 11:04:09 {LN7.4747}
+msg: 11:04:09 {LA158}
+msg: 11:04:11 {LT21.9798}
+msg: 11:04:11 {LN7.4750}
+msg: 11:04:12 {LA176}
+msg: 11:04:13 {LT21.9805}
+msg: 11:04:13 {LN7.4747}
+msg: 11:04:13 {LA246}
