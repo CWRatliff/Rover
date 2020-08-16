@@ -63,9 +63,9 @@ oldhdg = 500
 compass_adjustment = 12                 # Camarillo declination
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
-startlat = 0.0
+startlat = 0.0                          # start of segment
 startlon = 0.0
-destlat = 0
+destlat = 0                             # waypoint end
 destlon = 0
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
@@ -208,7 +208,7 @@ def new_waypoint(nwpt):
     startlon = ilonsec
     destlat = waypts[nwpt][0]
     destlon = waypts[nwpt][1]
-    logit("wpt: %d %7.4f, %7.4f" % (wpt, destlat, destlon))
+    logit("wpt: %d %7.4f, %7.4f" % (nwpt, destlat, destlon))
     azimuth = fromto(startlat, startlon, destlat, destlon)
     logit("az set to %d\n" % azimuth)
     wptdist = distto(startlat, startlon, destlat, destlon)
@@ -429,7 +429,7 @@ try:
 #Keypad commands preceeded by a #
                 elif xchr == 'F':                   #goto waypoint
                     try:
-                        wpt = int(cbuff[2:4])
+                        wpt = int(cbuff[2:msglen-1])
                         if wpt == 0:
                             wptflag = False
                             rteflag = False
@@ -445,7 +445,7 @@ try:
                             rteflag= True
                             rtseg = 0
                             wptflag = True
-                            firstwpt = routes[wpt][0]
+                            firstwpt = route
                             wpt = firstwpt
                             new_waypoint(wpt)
                         elif (wpt >= 10 and wpt <= 28):
@@ -498,7 +498,8 @@ try:
                 #
             flag = False
             cbuff = ""
-            # endif flag
+            # endif flag        module = self._original_import(*args, **kw)
+
 #======================================================================
         if (auto):
                      
