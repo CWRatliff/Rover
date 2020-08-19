@@ -31,7 +31,7 @@ Sent codes:
 a - status
 c - course to wpt
 d - distance to wpt
-h - heading
+h - headingline
 lt, ln lat/long
 p - pitch
 r - roll
@@ -445,8 +445,7 @@ try:
                             rteflag= True
                             rtseg = 0
                             wptflag = True
-                            firstwpt = route
-                            wpt = firstwpt
+                            wpt = routes[route][rtseg]
                             new_waypoint(wpt)
                         elif (wpt >= 10 and wpt <= 28):
                             new_waypoint(wpt)
@@ -458,6 +457,7 @@ try:
 #======================================================================
                 elif xchr == 'L':                   #lat/long input from GPS h/w
                     xchr = cbuff[2]
+
                     try:
                         x = float(cbuff[3:msglen-1])
                         if (xchr == 'T'):
@@ -466,6 +466,9 @@ try:
                             ilonsec = x
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
+                            cstr = "{lt%5.3f}" % accgps    #send to controller
+                            sendit(cstr)
+                            logit(cstr)
                         else:
                             pass
 
