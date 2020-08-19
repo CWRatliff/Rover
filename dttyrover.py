@@ -66,23 +66,17 @@ compass_adjustment = 12                 # Camarillo declination
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
 posV = [0, 0]                           # current gps position
-#startlat = 0.0                          # start of segment
-#startlon = 0.0
 startV = [0, 0]
-#destlat = 0                             # waypoint end
-#destlon = 0
-destV = [0, 0]
+destV = [0, 0]                          # waypoint destination
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
-filterV = [0, 0]
-trackV = [0, 0]
+filterV = [0, 0]                        # Kalman filtered loc
+trackV = [0, 0]                         # waypoint path from initial position to destination
 latitude = math.radians(34.24)          # Camarillo
 latfeet = 6076.0/60
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0                              # grps accuracy in ft
 spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
-#d1 = 7.254
-#d3 = 10.5
 
 left = False
 left_limit = -36
@@ -124,7 +118,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.039, 7.401, "boat corner"],     #28
 [11,12]]
 
-version = "Rover 1.0 200813\n"
+version = "Rover 1.0 200819\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -153,35 +147,6 @@ def vlatlon(latsec, lonsec):
     return [lonsec*lonfeet, latsec*latfeet]
 
 #===================================================================
-#compute distance from a point to a line
-# dist is + if L1->P rotates left into L1->L2, else negative
-# def pointline(la1, lo1, la2, lo2, lap0, lop0, llen):
-#     aa1 = la1 * latfeet 
-#     ao1 = lo1 * lonfeet
-#     aa2 = la2 * latfeet
-#     ao2 = lo2 * lonfeet
-#     aap0 = lap0 * latfeet
-#     aop0 = lop0 * lonfeet
-#     dely = aa2 - aa1
-#     delx = ao2 - ao1
-#     dist = abs(dely*aop0 - delx*aap0 + ao2*aa1 - aa2*ao1) / llen
-#     return (dist)
-#===================================================================
-#compute distance from lat/lon point to point on flat earth in feet
-# def distto(la0, lo0, la1, lo1):
-#     dely = (la1 - la0) * latfeet
-#     delx = (lo0 - lo1) * lonfeet
-#     dist = math.sqrt(delx**2 + dely**2)
-#     return(dist)
-#===================================================================
-#compute compass angle from lat/lon point to point on flat earth
-# return 0-359
-# def fromto(la0, lo0, la1, lo1):
-#     delx = lo0 - lo1            #long is -x direction
-#     dely = la1 - la0            #lat is +y
-#     ang = math.atan2(dely, delx * math.cos(latitude))
-#     return((450 - math.degrees(ang))%360)
-# 
 #================tty = serial.Serial(port, 9600)===================================================
 def readusb():
     try:
@@ -215,14 +180,8 @@ def max_turn(angle):
     return
 #===================================================================
 def new_waypoint(nwpt):
-#    global startlat
-#    global startlon
     global startV
     global posV
-#    global ilatsec
-#    global ilonsec
-#    global destlat
-#    global destlon
     global destV
     global trackV
     global azimuth
@@ -231,25 +190,18 @@ def new_waypoint(nwpt):
     global wptflag
     global epoch
     
-#    startlat = ilatsec
-#    startlon = ilonsec
     startV = posV
-#    startV = vlatlon(ilatsec, ilonsec)
-#    destlat = waypts[nwpt][0]
-#    destlon = waypts[nwpt][1]
     destV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
     logit("wpt: %d %7.4f, %7.4f" % (nwpt, destV[0], destV[1]))
     trackV = vsub(destV, startV)
     azimuth = vcourse(trackV);
-#    azimuth = fromto(startlat, startlon, destlat, destlon)
     logit("az set to %d\n" % azimuth)
     wptdist = vmag(trackV)
-#    wptdist = distto(startlat, startlon, destlat, destlon)
     auto = True
     wptflag = True
     sendit("{aWp" + str(nwpt) + "}")
-    Kfilter.Kalman_start(time.time(), ilonsec * lonfeet, \
-        ilatsec * latfeet, (math.radians(450-hdg) % 360), \
+    Kfilter.Kalman_start(time.time(), posV[0], \
+        posV[1], (math.radians(450-hdg) % 360), \
         speed * spdfactor)
     epoch = time.time()
     return
@@ -555,8 +507,8 @@ try:
                     logit("raw L/L:" + str(ilatsec) + "/" + str(ilonsec))
                     logit("raw hdg: " + str(hdg))
                     logit("raw speed: " + str(v))
-                    xEst = Kfilter.Kalman_step(time.time(), ilonsec * lonfeet, \
-                            ilatsec * latfeet, phi, v)
+                    xEst = Kfilter.Kalman_step(time.time(), posV[0], \
+                            posV[1], phi, v)
                     flonsec = xEst[0, 0] / lonfeet
                     flatsec = xEst[1, 0] / latfeet
                     fhdg= (450 - math.degrees(xEst[2,0]))%360
@@ -566,33 +518,33 @@ try:
                     filterV = vlatlon(flatsec, flonsec)
                     aimV = vsub(destV, filterV)
                     dtg = vmag(aimV)
-#                    dtg = distto(flatsec, flonsec, destlat, destlon)
-                    cstr = "{d%5.1f}" % dtg
-                    sendit(cstr)
-                    logit(cstr)
-                    if (dtg > (2 * accgps)):
-                        azimuth = vcourse(aimV)
-#                        azimuth = fromto(flatsec, flonsec, destlat, destlon)
-                    else:
-                        aimV = vsub(destV, posV)
-                        azimuth = vcourse(aimV)
-#                        azimuth = fromto(ilatsec, ilonsec, destlat, destlon)
-                    logit("az set to %d\n" % azimuth)
-
-                    cstr = "{c%5.1f}" % azimuth
-                    sendit(cstr)
-                    logit(cstr)
-
                     udotv = vdot(trackV, filterV)
                     trk = udotv / wptdist
                     progV = vmult(trackV, trk / wptdist)
                     xtrackV = vsub(progV, filterV)
                     xtrk = vmag(xtrackV)
-#                    xtrk = pointline(startlat, startlon, \
-#                        destlat, destlon, flatsec, flonsec, wptdist) 
+                    
+                    prog = vmag(filterV)/wptdist      # progress along track
+                    aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
+                    aimV = vmult(trackV, aim)
+                    targV = vsub(aimV, filterV)       # vector from filteredV to aimV                     
+                    azimuth = vcourse(targV)
+
+                    azimuth = vcourse(aimV)
+                    logit("az set to %d\n" % azimuth)
+
+                    cstr = "{d%5.1f}" % dtg
+                    sendit(cstr)
+                    logit(cstr)
+                    
+                    cstr = "{c%5.1f}" % azimuth
+                    sendit(cstr)
+                    logit(cstr)
+
                     cstr = "{ln%5.3f}" % xtrk   #send to controller
                     sendit(cstr)
                     logit(cstr)
+                    
                     cstr = "{lt%5.3f}" % accgps    #send to controller
                     sendit(cstr)
                     logit(cstr)
