@@ -19,8 +19,8 @@ from roboclaw import Roboclaw
 class motor_driver_ada:
 
     def __init__(self, log):
-        self.lfbias = 68        # experimentally determined for 'Spot 2'
-        self.lrbias = 60
+        self.lfbias = 67        # experimentally determined for 'Spot 2'
+        self.lrbias = 59
         self.rrbias = 57
         self.rfbias = 60
         self.left_limit = -36

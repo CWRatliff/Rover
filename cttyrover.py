@@ -31,7 +31,7 @@ Sent codes:
 a - status
 c - course to wpt
 d - distance to wpt
-h - headingline
+h - heading
 lt, ln lat/long
 p - pitch
 r - roll
@@ -430,6 +430,8 @@ try:
                 elif xchr == 'F':                   #goto waypoint
                     try:
                         wpt = int(cbuff[2:msglen-1])
+                        print("wpt= ")
+                        print(wpt)
                         if wpt == 0:
                             wptflag = False
                             rteflag = False
@@ -457,7 +459,6 @@ try:
 #======================================================================
                 elif xchr == 'L':                   #lat/long input from GPS h/w
                     xchr = cbuff[2]
-
                     try:
                         x = float(cbuff[3:msglen-1])
                         if (xchr == 'T'):
@@ -469,6 +470,7 @@ try:
                             cstr = "{lt%5.3f}" % accgps    #send to controller
                             sendit(cstr)
                             logit(cstr)
+
                         else:
                             pass
 
