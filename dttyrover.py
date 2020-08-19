@@ -11,6 +11,7 @@
 #200314 - I/F with Arduino via USB-tty serial port
 #200412 - restructure flag and auto blocks for faster EKF
 #200813 - wpts upgrade, code improvements esp. route & U'ies
+#200819 - switch vector ops
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -68,12 +69,13 @@ posV = [0, 0]                           # current gps position
 #startlat = 0.0                          # start of segment
 #startlon = 0.0
 startV = [0, 0]
-destlat = 0                             # waypoint end
-destlon = 0
+#destlat = 0                             # waypoint end
+#destlon = 0
 destV = [0, 0]
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
 filterV = [0, 0]
+trackV = [0, 0]
 latitude = math.radians(34.24)          # Camarillo
 latfeet = 6076.0/60
 lonfeet = -latfeet * math.cos(latitude)
@@ -153,33 +155,33 @@ def vlatlon(latsec, lonsec):
 #===================================================================
 #compute distance from a point to a line
 # dist is + if L1->P rotates left into L1->L2, else negative
-def pointline(la1, lo1, la2, lo2, lap0, lop0, llen):
-    aa1 = la1 * latfeet 
-    ao1 = lo1 * lonfeet
-    aa2 = la2 * latfeet
-    ao2 = lo2 * lonfeet
-    aap0 = lap0 * latfeet
-    aop0 = lop0 * lonfeet
-    dely = aa2 - aa1
-    delx = ao2 - ao1
-    dist = abs(dely*aop0 - delx*aap0 + ao2*aa1 - aa2*ao1) / llen
-    return (dist)
+# def pointline(la1, lo1, la2, lo2, lap0, lop0, llen):
+#     aa1 = la1 * latfeet 
+#     ao1 = lo1 * lonfeet
+#     aa2 = la2 * latfeet
+#     ao2 = lo2 * lonfeet
+#     aap0 = lap0 * latfeet
+#     aop0 = lop0 * lonfeet
+#     dely = aa2 - aa1
+#     delx = ao2 - ao1
+#     dist = abs(dely*aop0 - delx*aap0 + ao2*aa1 - aa2*ao1) / llen
+#     return (dist)
 #===================================================================
 #compute distance from lat/lon point to point on flat earth in feet
-def distto(la0, lo0, la1, lo1):
-    dely = (la1 - la0) * latfeet
-    delx = (lo0 - lo1) * lonfeet
-    dist = math.sqrt(delx**2 + dely**2)
-    return(dist)
+# def distto(la0, lo0, la1, lo1):
+#     dely = (la1 - la0) * latfeet
+#     delx = (lo0 - lo1) * lonfeet
+#     dist = math.sqrt(delx**2 + dely**2)
+#     return(dist)
 #===================================================================
 #compute compass angle from lat/lon point to point on flat earth
 # return 0-359
-def fromto(la0, lo0, la1, lo1):
-    delx = lo0 - lo1            #long is -x direction
-    dely = la1 - la0            #lat is +y
-    ang = math.atan2(dely, delx * math.cos(latitude))
-    return((450 - math.degrees(ang))%360)
-
+# def fromto(la0, lo0, la1, lo1):
+#     delx = lo0 - lo1            #long is -x direction
+#     dely = la1 - la0            #lat is +y
+#     ang = math.atan2(dely, delx * math.cos(latitude))
+#     return((450 - math.degrees(ang))%360)
+# 
 #================tty = serial.Serial(port, 9600)===================================================
 def readusb():
     try:
@@ -216,11 +218,13 @@ def new_waypoint(nwpt):
 #    global startlat
 #    global startlon
     global startV
-    global ilatsec
-    global ilonsec
-    global destlat
-    global destlon
+    global posV
+#    global ilatsec
+#    global ilonsec
+#    global destlat
+#    global destlon
     global destV
+    global trackV
     global azimuth
     global wptdist
     global auto
@@ -229,11 +233,12 @@ def new_waypoint(nwpt):
     
 #    startlat = ilatsec
 #    startlon = ilonsec
-    startV = vlatlon(ilatsec, ilonsec)
-    destlat = waypts[nwpt][0]
-    destlon = waypts[nwpt][1]
-    destV = vlatlon(destlat, destlon)
-    logit("wpt: %d %7.4f, %7.4f" % (nwpt, destlat, destlon))
+    startV = posV
+#    startV = vlatlon(ilatsec, ilonsec)
+#    destlat = waypts[nwpt][0]
+#    destlon = waypts[nwpt][1]
+    destV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
+    logit("wpt: %d %7.4f, %7.4f" % (nwpt, destV[0], destV[1]))
     trackV = vsub(destV, startV)
     azimuth = vcourse(trackV);
 #    azimuth = fromto(startlat, startlon, destlat, destlon)
@@ -558,13 +563,14 @@ try:
                     logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.3f" %xEst[3,0])
-                    dtg = distto(flatsec, flonsec, destlat, destlon)
+                    filterV = vlatlon(flatsec, flonsec)
+                    aimV = vsub(destV, filterV)
+                    dtg = vmag(aimV)
+#                    dtg = distto(flatsec, flonsec, destlat, destlon)
                     cstr = "{d%5.1f}" % dtg
                     sendit(cstr)
                     logit(cstr)
-                    filterV = vlatlon(flatsec, flonsec)
                     if (dtg > (2 * accgps)):
-                        aimV = vsub(destV, filterV)
                         azimuth = vcourse(aimV)
 #                        azimuth = fromto(flatsec, flonsec, destlat, destlon)
                     else:
@@ -579,7 +585,7 @@ try:
 
                     udotv = vdot(trackV, filterV)
                     trk = udotv / wptdist
-                    progV = vmult(trackv, trk / wptdist)
+                    progV = vmult(trackV, trk / wptdist)
                     xtrackV = vsub(progV, filterV)
                     xtrk = vmag(xtrackV)
 #                    xtrk = pointline(startlat, startlon, \
