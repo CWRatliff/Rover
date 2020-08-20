@@ -11,7 +11,7 @@
 #200314 - I/F with Arduino via USB-tty serial port
 #200412 - restructure flag and auto blocks for faster EKF
 #200813 - wpts upgrade, code improvements esp. route & U'ies
-#200819 - switch vector ops
+#200819 - switch to vector ops, better waypoint convergence
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -33,9 +33,7 @@ a - status
 c - course to wpt
 d - distance to wpt
 h - heading
-lt, ln lat/long
-p - pitch
-r - roll
+l - lat/long
 s - steering angle
 v - speed
 
@@ -43,10 +41,11 @@ Received codes
 D - one digit commands
 E - 'star' commnds
 F - 'pound' commands
-N - gps lat/lon/accuracy
+L - gps lat/lon/accuracy
 O - compass heading
+T - 'D' commands, diagnostics
 '''
-#import sys
+
 import serial
 import time
 import math
@@ -65,17 +64,15 @@ oldhdg = 500
 compass_adjustment = 12                 # Camarillo declination
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
-posV = [0, 0]                           # current gps position
-startV = [0, 0]
-destV = [0, 0]                          # waypoint destination
+posV = [0, 0]                           # current unfiltered gps position
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
 filterV = [0, 0]                        # Kalman filtered loc
 trackV = [0, 0]                         # waypoint path from initial position to destination
 latitude = math.radians(34.24)          # Camarillo
-latfeet = 6076.0/60
+latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
-accgps = 0                              # grps accuracy in ft
+accgps = 0.0                              # grps accuracy in ft
 spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
 
 left = False
@@ -112,10 +109,10 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.227, 6.883, "horse gravel"],    #22
 [22.846, 7.390, "trash"],           #23
 [22.599, 7.159, "EF east entry"],   #24
-[20.804, 7.949, "ref corner"],      #25
-[20.984, 7.713, "hose bib"],        #26
-[21.491, 7.646, "rose bush"],       #27
-[22.039, 7.401, "boat corner"],     #28
+[20.804, 7.949, "ref corner - F"],  #25
+[20.984, 7.713, "hose bib - F"],    #26
+[21.491, 7.646, "rose bush -F"],    #27
+[22.039, 7.401, "boat corner -F"],  #28
 [11,12]]
 
 version = "Rover 1.0 200819\n"
@@ -136,13 +133,15 @@ def vdot(U, V):
     return (U[0]*V[0] + U[1]*V[1])
 def vmag(V):
     return math.sqrt(V[0]*V[0] + V[1]*V[1])
-def vmult(V, scalar):
+def vsmult(V, scalar):
     return [V[0]*scalar, V[1]*scalar]
 def vsub(headV, tailV):
-    return [headV[0] - tailV[0], headV[1] - tailV[1]]
+    return [headV[0]-tailV[0], headV[1]-tailV[1]]
 
+# get compass course from direction vector
 def vcourse(V):
-    return (450-math.degrees(math.atan2(V[1],V[0]))% 360)
+    return (450 - math.degrees(math.atan2(V[1],V[0])) % 360)
+# cvt lat/lon seconds to U.S survey feet
 def vlatlon(latsec, lonsec):
     return [lonsec*lonfeet, latsec*latfeet]
 
@@ -180,9 +179,7 @@ def max_turn(angle):
     return
 #===================================================================
 def new_waypoint(nwpt):
-    global startV
     global posV
-    global destV
     global trackV
     global azimuth
     global wptdist
@@ -195,13 +192,13 @@ def new_waypoint(nwpt):
     logit("wpt: %d %7.4f, %7.4f" % (nwpt, destV[0], destV[1]))
     trackV = vsub(destV, startV)
     azimuth = vcourse(trackV);
-    logit("az set to %d\n" % azimuth)
+    logit("az set to %d" % azimuth)
     wptdist = vmag(trackV)
     auto = True
     wptflag = True
     sendit("{aWp" + str(nwpt) + "}")
-    Kfilter.Kalman_start(time.time(), posV[0], \
-        posV[1], (math.radians(450-hdg) % 360), \
+    Kfilter.Kalman_start(time.time(), posV[0], posV[1], \
+        (math.radians(450-hdg) % 360), \
         speed * spdfactor)
     epoch = time.time()
     return
@@ -220,7 +217,7 @@ def simple_commands(schr):
     elif schr == '1':                   # 1 - Left
         if (auto):
             azimuth -= 1
-            logit("az set to %d\n" % azimuth)
+            logit("az set to %d" % azimuth)
         else:
             steer -= 1
             robot.motor(speed, steer)
@@ -233,7 +230,7 @@ def simple_commands(schr):
     elif schr == '3':                   # 3 - Right
         if (auto):
             azimuth += 1
-            logit("az set to %d\n" % azimuth)
+            logit("az set to %d" % azimuth)
         else:
             steer += 1
             robot.motor(speed, steer)
@@ -241,7 +238,7 @@ def simple_commands(schr):
     elif schr == '4':                   # 4 - Left 5 deg
         if (auto):
             azimuth -= 5
-            logit("az set to %d\n" % azimuth)
+            logit("az set to %d" % azimuth)
         else:
             steer -= 5
             robot.motor(speed, steer)
@@ -262,12 +259,12 @@ def simple_commands(schr):
         robot.motor(speed, steer)
         if (auto):
             azimuth = hdg
-            logit("az set to %d\n" % azimuth)
+            logit("az set to %d" % azimuth)
 
     elif schr == '6':                   # 6 - Left 5 deg
         if (auto):
             azimuth += 5
-            logit("az set to %d\n" % azimuth)
+            logit("az set to %d" % azimuth)
         else:
             steer += 5
             robot.motor(speed, steer)
@@ -275,7 +272,7 @@ def simple_commands(schr):
     elif schr == '7':                   # 7 - HAW steer left limit
         if (auto):
             azimuth += left_limit
-            logit("az set to %d\n" % azimuth)
+            logit("az set to %d" % azimuth)
         else:
             max_turn(left_limit)
  
@@ -300,7 +297,6 @@ def star_commands(schr):
     global rteflag
     global wptflag
     global compass_adjustment
-    global cstr
     global left
     
     if (schr == '0'):                   #standby
@@ -313,7 +309,7 @@ def star_commands(schr):
     elif (auto and schr == '1'):      #left 90 deg
         azimuth -= 90
         azimuth %= 360
-        logit("az set to %d\n" % azimuth)
+        logit("az set to %d" % azimuth)
     elif (schr == '2'):               #autopilot on
         auto = True
         azimuth = hdg
@@ -322,7 +318,7 @@ def star_commands(schr):
     elif (auto and schr == '3'):      #right 90 deg
         azimuth += 90
         azimuth %= 360
-        logit("az set to %d\n" % azimuth)
+        logit("az set to %d" % azimuth)
     elif (schr == '4'):               #adj compass
         compass_adjustment -= 1
         logit("Compass bias "+str(compass_adjustment))
@@ -331,14 +327,16 @@ def star_commands(schr):
         logit("Compass bias "+str(compass_adjustment))
     elif (auto and schr == '7'):      #left 180 deg
         left = True
+        max_turn(left_limit)
         azimuth -= 180
         azimuth %= 360
         logit("az set to %d\n" % azimuth)
     elif (auto and schr == '9'):      #right 180 deg
         left = False
+        max_turn(right_limit)
         azimuth += 180
         azimuth %= 360
-        logit("az set to %d\n" % azimuth)
+        logit("az set to %d" % azimuth)
     return
 #================================================================
 def diag_commands(schr):
@@ -358,6 +356,7 @@ def sendit(xcstr):
     tty.write(xcstr.encode("utf-8"))
     return
 #=================================================================
+#=================================================================
 
 sendit("{aStby}")
 logit("Standby")
@@ -368,7 +367,7 @@ cbuff = ""
 try:
     while True:             #######  main loop    #######
         
-        while (tty.inWaiting() > 0):                         # read characters from slave
+        while (tty.inWaiting() > 0): # read characters from slave
             d = readusb()
             if (d == 0):
                 continue
@@ -383,14 +382,14 @@ try:
 
 #========================================================================
         if (flag):                          # flag means we got a command
-            flag= False
+            flag = False
             msglen = len(cbuff)
             if (msglen < 3 or cbuff[0] != '{'):
                 print("bad msg: ", cbuff)
                 cbuff = ""
                 continue
-            tt=time.localtime()
-            ts=time.strftime("%H:%M:%S ", tt)
+            tt = time.localtime()
+            ts = time.strftime("%H:%M:%S ", tt)
             logit("msg: " + ts + cbuff)
             xchr = cbuff[1]    
                
@@ -399,15 +398,11 @@ try:
 #======================================================================
 # single digit keypad commands
                 if (xchr == 'D'):
-#                     log.write(ts)
-#                     log.write(cbuff+'\n')
                     xchr = cbuff[2]
                     simple_commands(xchr)
 #======================================================================
 # Keypad commands preceded by a star
                 if xchr == 'E':
-#                     log.write(ts)
-#                     log.write(cbuff+'\n')
                     xchr = cbuff[2]
                     star_commands(xchr)
 #======================================================================
@@ -427,7 +422,7 @@ try:
                             sendit("{c---}")
                             speed = 0
                             robot.motor(speed, steer)
-                        elif (wpt >0 and wpt < 4):
+                        elif (wpt > 0 and wpt < 4):
                             route = wpt
                             rteflag= True
                             rtseg = 0
@@ -468,24 +463,15 @@ try:
 
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
-                    if (msglen < 4 or msglen > 6):
-                        cbuff = ""
-                        continue
                     hdg = int(cbuff[2:msglen-1])
                     hdg = (hdg + compass_adjustment)%360
                     print("heading = " + str(hdg))
-
                     print("Motor speed, steer "+str(speed)+", "+str(steer))
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
                     diag_commands(xchr)
 #=========================================================================                    
-                elif xchr == 'X':                   #X exit Select button
-                    robot.stop_all()
-                    speed = 0
-                    exit()
-                    
                 else:
                     pass
                 #
@@ -501,9 +487,9 @@ try:
 
                 if wptflag:
                     v = speed * spdfactor
-                    phi =math.radians((450-hdg)%360)
-                    tt=time.time()
-                    logit("time: " + str(tt))
+                    phi = math.radians((450-hdg) % 360)
+                    ct = time.time()
+                    logit("time: " + str(ct))
                     logit("raw L/L:" + str(ilatsec) + "/" + str(ilonsec))
                     logit("raw hdg: " + str(hdg))
                     logit("raw speed: " + str(v))
@@ -511,27 +497,27 @@ try:
                             posV[1], phi, v)
                     flonsec = xEst[0, 0] / lonfeet
                     flatsec = xEst[1, 0] / latfeet
-                    fhdg= (450 - math.degrees(xEst[2,0]))%360
+                    fhdg = (450 - math.degrees(xEst[2, 0])) % 360
                     logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
                     logit("Filtered hdg: %6.1f" % fhdg)
-                    logit("Filtered speed: %6.3f" %xEst[3,0])
+                    logit("Filtered speed: %6.3f" %xEst[3, 0])
                     filterV = vlatlon(flatsec, flonsec)
-                    aimV = vsub(destV, filterV)
+                    aimV = vsub(trackV, filterV)
                     dtg = vmag(aimV)
-                    udotv = vdot(trackV, filterV)
+                    udotv = vdot(trackV, filterV)    # what if u.v negative?
                     trk = udotv / wptdist
-                    progV = vmult(trackV, trk / wptdist)
+                    progV = vsmult(trackV, trk / wptdist)
                     xtrackV = vsub(progV, filterV)
                     xtrk = vmag(xtrackV)
                     
                     prog = vmag(filterV)/wptdist      # progress along track
                     aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
-                    aimV = vmult(trackV, aim)
+                    aimV = vsmult(trackV, aim)
                     targV = vsub(aimV, filterV)       # vector from filteredV to aimV                     
                     azimuth = vcourse(targV)
 
                     azimuth = vcourse(aimV)
-                    logit("az set to %d\n" % azimuth)
+                    logit("az set to %d" % azimuth)
 
                     cstr = "{d%5.1f}" % dtg
                     sendit(cstr)
