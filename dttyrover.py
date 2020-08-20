@@ -67,7 +67,6 @@ ilonsec = 0.0
 posV = [0, 0]                           # current unfiltered gps position
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
-startV = [0, 0]                         # basis for waypoint vectors
 filterV = [0, 0]                        # Kalman filtered loc
 trackV = [0, 0]                         # waypoint path from initial position to destination
 latitude = math.radians(34.24)          # Camarillo
@@ -180,7 +179,6 @@ def max_turn(angle):
     return
 #===================================================================
 def new_waypoint(nwpt):
-    global startV
     global posV
     global trackV
     global azimuth
@@ -504,42 +502,44 @@ try:
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.3f" %xEst[3, 0])
                     filterV = vlatlon(flatsec, flonsec)
-                    filterV = vsub(filterV, startV)
                     aimV = vsub(trackV, filterV)
                     dtg = vmag(aimV)
-                    udotv = vdot(trackV, filterV)    # what if u.v negative?
-                    trk = udotv / wptdist
-                    progV = vsmult(trackV, trk / wptdist)
-                    xtrackV = vsub(progV, filterV)
-                    xtrk = vmag(xtrackV)
-                    
-                    prog = vmag(filterV)/wptdist      # progress along track
-                    aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
-                    aimV = vsmult(trackV, aim)
-                    targV = vsub(aimV, filterV)       # vector from filteredV to aimV                     
-                    azimuth = vcourse(targV)
-                    logit("wpt convergence vector %d/%d" % (targV[0], targV[1]))
+                    udotv = vdot(trackV, filterV)
+                    if (udotv > 0):
+                        trk = udotv / wptdist
+                        progV = vsmult(trackV, trk / wptdist)
+                        xtrackV = vsub(progV, filterV)
+                        xtrk = vmag(xtrackV)
+                        
+                        prog = vmag(filterV)/wptdist      # progress along track
+                        aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
+                        aimV = vsmult(trackV, aim)
+                        targV = vsub(aimV, filterV)       # vector from filteredV to aimV                     
+                        azimuth = vcourse(targV)
 
                     azimuth = vcourse(aimV)
                     logit("az set to %d" % azimuth)
 
-                    cstr = "{d%5.1f}" % dtg
+                    cstr = "{d%5.1f} " % dtg
                     sendit(cstr)
                     logit(cstr)
                     
-                    cstr = "{c%5.1f}" % azimuth
+                    cstr = "{c%3.0f} " % azimuth
                     sendit(cstr)
                     logit(cstr)
 
-                    cstr = "{ln%5.3f}" % xtrk   #send to controller
-                    sendit(cstr)
-                    logit(cstr)
-                    
-                    cstr = "{lt%5.3f}" % accgps    #send to controller
-                    sendit(cstr)
-                    logit(cstr)
-                
-                    if (dtg < max(2.0, accgps)):             # closing on waypoint
+                    if (xtrk < 1000 and xtrk > -1000):
+                        cstr = "{ln%5.1f} " % xtrk   #send to controller
+                        sendit(cstr)
+                        logit(cstr)
+ 
+                    if (accgps < 1000 and accgps > -1000):
+                        cstr = "{lt%5.1f} " % accgps    #send to controller
+                        sendit(cstr)
+                        logit(cstr)
+
+                    #closing on waypoint
+                    if (dtg < max(2.0, accgps) or vdot(aimV, trackV) <= 0):
                         if rteflag:
                             rtseg += 1
                             wpt = routes[route][rtseg]
