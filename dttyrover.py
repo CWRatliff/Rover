@@ -67,6 +67,7 @@ ilonsec = 0.0
 posV = [0, 0]                           # current unfiltered gps position
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
+startV = [0, 0]                         # basis for waypoint vectors
 filterV = [0, 0]                        # Kalman filtered loc
 trackV = [0, 0]                         # waypoint path from initial position to destination
 latitude = math.radians(34.24)          # Camarillo
@@ -179,6 +180,7 @@ def max_turn(angle):
     return
 #===================================================================
 def new_waypoint(nwpt):
+    global startV
     global posV
     global trackV
     global azimuth
@@ -502,6 +504,7 @@ try:
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.3f" %xEst[3, 0])
                     filterV = vlatlon(flatsec, flonsec)
+                    filterV = vsub(filterV, startV)
                     aimV = vsub(trackV, filterV)
                     dtg = vmag(aimV)
                     udotv = vdot(trackV, filterV)    # what if u.v negative?
@@ -515,6 +518,7 @@ try:
                     aimV = vsmult(trackV, aim)
                     targV = vsub(aimV, filterV)       # vector from filteredV to aimV                     
                     azimuth = vcourse(targV)
+                    logit("wpt convergence vector %d/%d" % (targV[0], targV[1]))
 
                     azimuth = vcourse(aimV)
                     logit("az set to %d" % azimuth)
