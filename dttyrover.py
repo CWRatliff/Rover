@@ -67,8 +67,11 @@ ilonsec = 0.0
 posV = [0, 0]                           # current unfiltered gps position
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
-filterV = [0, 0]                        # Kalman filtered loc
-trackV = [0, 0]                         # waypoint path from initial position to destination
+# all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
+filterRV = [0, 0]                        # Kalman filtered loc
+posAV = [0, 0]
+startAV = [0, 0]
+trackAV = [0, 0]                         # waypoint path from initial position to destination
 latitude = math.radians(34.24)          # Camarillo
 latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
@@ -111,7 +114,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.599, 7.159, "EF east entry"],   #24
 [20.804, 7.949, "ref corner - F"],  #25
 [20.984, 7.713, "hose bib - F"],    #26
-[21.491, 7.646, "rose bush -F"],    #27
+[21.491, 7.646, "rose bush - F"],   #27
 [22.039, 7.401, "boat corner -F"],  #28
 [11,12]]
 
@@ -179,21 +182,21 @@ def max_turn(angle):
     return
 #===================================================================
 def new_waypoint(nwpt):
-    global posV
-    global trackV
+    global posAV
+    global trackAV
     global azimuth
     global wptdist
     global auto
     global wptflag
     global epoch
     
-    startV = posV
-    destV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
-    logit("wpt: %d %7.4f, %7.4f" % (nwpt, destV[0], destV[1]))
-    trackV = vsub(destV, startV)
-    azimuth = vcourse(trackV);
+    startAV = posAV
+    destAV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
+    logit("wpt: %d %7.4f, %7.4f" % (nwpt, destAV[0], destAV[1]))
+    trackVR = vsub(destAV, startAV)
+    azimuth = vcourse(trackRV);
     logit("az set to %d" % azimuth)
-    wptdist = vmag(trackV)
+    wptdist = vmag(trackRV)
     auto = True
     wptflag = True
     sendit("{aWp" + str(nwpt) + "}")
@@ -255,7 +258,7 @@ def simple_commands(schr):
                 steer += dt
                 robot.motor(speed, steer)
 #               time.sleep(0.05)
-        steer = 0
+        steer = 0WRatliff
         robot.motor(speed, steer)
         if (auto):
             azimuth = hdg
@@ -273,7 +276,7 @@ def simple_commands(schr):
         if (auto):
             azimuth += left_limit
             logit("az set to %d" % azimuth)
-        else:
+        else:WRatliff
             max_turn(left_limit)
  
     elif schr == '8':                   # 8 -  Reverse
@@ -319,7 +322,7 @@ def star_commands(schr):
         azimuth += 90
         azimuth %= 360
         logit("az set to %d" % azimuth)
-    elif (schr == '4'):               #adj compass
+    elif (schr == '4'):   WRatliff            #adj compass
         compass_adjustment -= 1
         logit("Compass bias "+str(compass_adjustment))
     elif (schr == '6'):               #adj compass
@@ -328,7 +331,7 @@ def star_commands(schr):
     elif (auto and schr == '7'):      #left 180 deg
         left = True
         max_turn(left_limit)
-        azimuth -= 180
+        azimuth -= 180WRatliff
         azimuth %= 360
         logit("az set to %d\n" % azimuth)
     elif (auto and schr == '9'):      #right 180 deg
@@ -355,7 +358,7 @@ def logit(xcstr):
 def sendit(xcstr):
     tty.write(xcstr.encode("utf-8"))
     return
-#=================================================================
+#=========================WRatliff========================================
 #=================================================================
 
 sendit("{aStby}")
@@ -501,23 +504,26 @@ try:
                     logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.3f" %xEst[3, 0])
-                    filterV = vlatlon(flatsec, flonsec)
-                    aimV = vsub(trackV, filterV)
-                    dtg = vmag(aimV)
-                    udotv = vdot(trackV, filterV)
+                    workAV = vlatlon(flatsec, flonsec)
+                    filterRV = vsub(workAV, startAV)
+                    aimRV = vsub(trackRV, filterRV)
+                    dtg = vmag(aimRV)
+                    udotv = vdot(trackRV, filterRV)
                     if (udotv > 0):
                         trk = udotv / wptdist
-                        progV = vsmult(trackV, trk / wptdist)
-                        xtrackV = vsub(progV, filterV)
-                        xtrk = vmag(xtrackV)
+                        progRV = vsmult(trackRV, trk / wptdist)
+                        xtrackRV = vsub(progRV, filterRV)
+                        xtrk = vmag(xtrackRV)
                         
-                        prog = vmag(filterV)/wptdist      # progress along track
+                        prog = vmag(filterRV)/wptdist     # progress along track
                         aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
-                        aimV = vsmult(trackV, aim)
-                        targV = vsub(aimV, filterV)       # vector from filteredV to aimV                     
+                        aimRV = vsmult(trackRV, aim)
+                        targRV = vsub(aimRV, filterRV)    # vector from filteredV to aimV                     
+                        logit("wpt convergence vector %d/%d" % (targRV[0], targRV[1]))
                         azimuth = vcourse(targV)
-
-                    azimuth = vcourse(aimV)
+                    else:
+                        azimuth = vcourse(aimV)
+                        
                     logit("az set to %d" % azimuth)
 
                     cstr = "{d%5.1f} " % dtg
