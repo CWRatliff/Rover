@@ -52,26 +52,28 @@ import math
 import motor_driver_ada
 import cEKF
 
-steer = 0
-speed = 0
-azimuth = 0
+steer = 0                               # current steering angle clockwise
+speed = 0                               # current speed plus->forward
+azimuth = 0                             # desired course
 epoch = time.time()
-hdg = 0
+hdg = 0                                 #true compass heading
 
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
 compass_adjustment = 12                 # Camarillo declination
+
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
-posV = [0, 0]                           # current unfiltered gps position
 flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
+
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
 filterRV = [0, 0]                        # Kalman filtered loc
 posAV = [0, 0]
 startAV = [0, 0]
 trackAV = [0, 0]                         # waypoint path from initial position to destination
+
 latitude = math.radians(34.24)          # Camarillo
 latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
@@ -183,7 +185,7 @@ def max_turn(angle):
 #===================================================================
 def new_waypoint(nwpt):
     global posAV
-    global trackAV
+    global trackRV
     global azimuth
     global wptdist
     global auto
@@ -193,7 +195,7 @@ def new_waypoint(nwpt):
     startAV = posAV
     destAV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
     logit("wpt: %d %7.4f, %7.4f" % (nwpt, destAV[0], destAV[1]))
-    trackVR = vsub(destAV, startAV)
+    trackRV = vsub(destAV, startAV)
     azimuth = vcourse(trackRV);
     logit("az set to %d" % azimuth)
     wptdist = vmag(trackRV)
@@ -258,7 +260,7 @@ def simple_commands(schr):
                 steer += dt
                 robot.motor(speed, steer)
 #               time.sleep(0.05)
-        steer = 0WRatliff
+        steer = 0
         robot.motor(speed, steer)
         if (auto):
             azimuth = hdg
@@ -276,7 +278,7 @@ def simple_commands(schr):
         if (auto):
             azimuth += left_limit
             logit("az set to %d" % azimuth)
-        else:WRatliff
+        else:
             max_turn(left_limit)
  
     elif schr == '8':                   # 8 -  Reverse
@@ -322,7 +324,7 @@ def star_commands(schr):
         azimuth += 90
         azimuth %= 360
         logit("az set to %d" % azimuth)
-    elif (schr == '4'):   WRatliff            #adj compass
+    elif (schr == '4'):               #adj compass
         compass_adjustment -= 1
         logit("Compass bias "+str(compass_adjustment))
     elif (schr == '6'):               #adj compass
