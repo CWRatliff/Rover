@@ -333,7 +333,7 @@ def star_commands(schr):
     elif (auto and schr == '7'):      #left 180 deg
         left = True
         max_turn(left_limit)
-        azimuth -= 180WRatliff
+        azimuth -= 180
         azimuth %= 360
         logit("az set to %d\n" % azimuth)
     elif (auto and schr == '9'):      #right 180 deg
@@ -522,9 +522,10 @@ try:
                         aimRV = vsmult(trackRV, aim)
                         targRV = vsub(aimRV, filterRV)    # vector from filteredV to aimV                     
                         logit("wpt convergence vector %d/%d" % (targRV[0], targRV[1]))
-                        azimuth = vcourse(targV)
+                        azimuth = vcourse(targRV)
                     else:
-                        azimuth = vcourse(aimV)
+                        azimuth = vcourse(aimRV)
+                        xtrk = 0
                         
                     logit("az set to %d" % azimuth)
 
@@ -547,7 +548,7 @@ try:
                         logit(cstr)
 
                     #closing on waypoint
-                    if (dtg < max(2.0, accgps) or vdot(aimV, trackV) <= 0):
+                    if (dtg < max(2.0, accgps) or vdot(aimRV, trackRV) <= 0):
                         if rteflag:
                             rtseg += 1
                             wpt = routes[route][rtseg]
