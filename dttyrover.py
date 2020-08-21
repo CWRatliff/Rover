@@ -69,15 +69,15 @@ flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
-filterRV = [0, 0]                        # Kalman filtered loc
-posAV = [0, 0]
-startAV = [0, 0]
-trackAV = [0, 0]                         # waypoint path from initial position to destination
+filterRV = [0, 0]                       # Kalman filtered loc
+posAV = [0, 0]                          # gps position
+startAV = [0, 0]                        # waypoint track start
+trackRV = [0, 0]                        # waypoint path from initial position to destination
 
 latitude = math.radians(34.24)          # Camarillo
 latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
-accgps = 0.0                              # grps accuracy in ft
+accgps = 0.0                            # grps accuracy in ft
 spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
 
 left = False
@@ -113,7 +113,8 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [21.174, 6.110, "E dway start"],    #21
 [22.227, 6.883, "horse gravel"],    #22
 [22.846, 7.390, "trash"],           #23
-[22.599, 7.159, "EF east entry"],   #24
+[22.599, 7.159, "EF east entry"],   #24    global trackRV
+
 [20.804, 7.949, "ref corner - F"],  #25
 [20.984, 7.713, "hose bib - F"],    #26
 [21.491, 7.646, "rose bush - F"],   #27
@@ -149,9 +150,12 @@ def vcourse(V):
 # cvt lat/lon seconds to U.S survey feet
 def vlatlon(latsec, lonsec):
     return [lonsec*lonfeet, latsec*latfeet]
-
-#===================================================================
-#================tty = serial.Serial(port, 9600)===================================================
+def vprint(txt, V):
+    str = "%s: [%6.1f, %6.1f]" % (txt, V[0], V[1])
+    print(str)
+    logit(str)
+    
+#================tty = serial.Serial(port, 9600)==============
 def readusb():
     try:
         dd = tty.read(1).decode("utf-8")
@@ -166,6 +170,7 @@ def max_turn(angle):
     global left_limit
     global right_limit
     
+    global trackRV
     dt = 1
     if (angle < 0):
         if steer > (left_limit + 1):
@@ -185,6 +190,7 @@ def max_turn(angle):
 #===================================================================
 def new_waypoint(nwpt):
     global posAV
+    global startAV
     global trackRV
     global azimuth
     global wptdist
@@ -193,9 +199,12 @@ def new_waypoint(nwpt):
     global epoch
     
     startAV = posAV
+    vprint("track start", startAV)
     destAV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
-    logit("wpt: %d %7.4f, %7.4f" % (nwpt, destAV[0], destAV[1]))
+    vprint("track end", destAV)
+    logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
+    vprint("track", trackRV)
     azimuth = vcourse(trackRV);
     logit("az set to %d" % azimuth)
     wptdist = vmag(trackRV)
@@ -289,7 +298,7 @@ def simple_commands(schr):
     elif schr == '9':                   # 9 - GEE steer right limit
         if (auto):
             azimuth += right_limit
-            logit("az set to %d\n" % azimuth)
+            logit("az set to %d" % azimuth)
         else:
             max_turn(right_limit)
 
@@ -335,7 +344,7 @@ def star_commands(schr):
         max_turn(left_limit)
         azimuth -= 180
         azimuth %= 360
-        logit("az set to %d\n" % azimuth)
+        logit("az set to %d" % azimuth)
     elif (auto and schr == '9'):      #right 180 deg
         left = False
         max_turn(right_limit)
@@ -360,7 +369,7 @@ def logit(xcstr):
 def sendit(xcstr):
     tty.write(xcstr.encode("utf-8"))
     return
-#=========================WRatliff========================================
+#=================================================================
 #=================================================================
 
 sendit("{aStby}")
@@ -417,7 +426,7 @@ try:
                         wpt = int(cbuff[2:msglen-1])
                         print("wpt= ")
                         print(wpt)
-                        if wpt == 0:
+                        if wpt == 0:                # end of waypoint / route
                             wptflag = False
                             rteflag = False
                             auto = False
@@ -427,14 +436,14 @@ try:
                             sendit("{c---}")
                             speed = 0
                             robot.motor(speed, steer)
-                        elif (wpt > 0 and wpt < 4):
+                        elif (wpt > 0 and wpt < 4):   # start of route
                             route = wpt
                             rteflag= True
                             rtseg = 0
                             wptflag = True
                             wpt = routes[route][rtseg]
                             new_waypoint(wpt)
-                        elif (wpt >= 10 and wpt <= 28):
+                        elif (wpt >= 10 and wpt <= 28): #start of waypoint
                             new_waypoint(wpt)
                         else:
                             pass
@@ -454,7 +463,7 @@ try:
                             posV = vlatlon(ilatsec, ilonsec)
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
-                            cstr = "{lt%5.3f}" % accgps    #send to controller
+                            cstr = "{lt%5.1f}" % accgps    #send to controller
                             sendit(cstr)
                             logit(cstr)
 
@@ -506,7 +515,7 @@ try:
                     logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.3f" %xEst[3, 0])
-                    workAV = vlatlon(flatsec, flonsec)
+                    workAV = vlatlon(flatsec, flonsec)   # see BOT 3:41 for diagram
                     filterRV = vsub(workAV, startAV)
                     aimRV = vsub(trackRV, filterRV)
                     dtg = vmag(aimRV)
@@ -514,14 +523,16 @@ try:
                     if (udotv > 0):
                         trk = udotv / wptdist
                         progRV = vsmult(trackRV, trk / wptdist)
+                        vprint("progress vec", progRV)
                         xtrackRV = vsub(progRV, filterRV)
+                        vprint("xtrack vec", xtrackRV)
                         xtrk = vmag(xtrackRV)
                         
                         prog = vmag(filterRV)/wptdist     # progress along track
                         aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
                         aimRV = vsmult(trackRV, aim)
                         targRV = vsub(aimRV, filterRV)    # vector from filteredV to aimV                     
-                        logit("wpt convergence vector %d/%d" % (targRV[0], targRV[1]))
+                        vprint("wpt target vector", targRV)
                         azimuth = vcourse(targRV)
                     else:
                         azimuth = vcourse(aimRV)
@@ -549,6 +560,7 @@ try:
 
                     #closing on waypoint
                     if (dtg < max(2.0, accgps) or vdot(aimRV, trackRV) <= 0):
+                        logit("close to waypoint")
                         if rteflag:
                             rtseg += 1
                             wpt = routes[route][rtseg]
