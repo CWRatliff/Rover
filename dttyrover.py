@@ -530,14 +530,14 @@ try:
                         
                         prog = vmag(filterRV)/wptdist     # progress along track
                         aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
-                        aimRV = vsmult(trackRV, aim)
-                        targRV = vsub(aimRV, filterRV)    # vector from filteredV to aimV                     
-                        vprint("wpt target vector", targRV)
-                        azimuth = vcourse(targRV)
+                        workRV = vsmult(trackRV, aim)
+                        aimRV = vsub(workV, filterRV)     # vector from filteredV to aimV                     
+                        azimuth = vcourse(aimRV)
                     else:
                         azimuth = vcourse(aimRV)
                         xtrk = 0
-                        
+
+                    vprint("wpt target vector", aimRV)
                     logit("az set to %d" % azimuth)
 
                     cstr = "{d%5.1f} " % dtg
