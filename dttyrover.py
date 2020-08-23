@@ -201,7 +201,6 @@ def new_waypoint(nwpt):
     startAV = posAV
     vprint("track start", startAV)
     destAV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
-    vprint("track end", destAV)
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
     vprint("track", trackRV)
@@ -402,10 +401,11 @@ try:
                 print("bad msg: ", cbuff)
                 cbuff = ""
                 continue
-            tt = time.localtime()
-            ts = time.strftime("%H:%M:%S ", tt)
-            logit("msg: " + ts + cbuff)
-            xchr = cbuff[1]    
+            xchr = cbuff[1]
+            if (xchr != 'O'):             #ignore compass input (too many)
+                tt = time.localtime()
+                ts = time.strftime("%H:%M:%S ", tt)
+                logit("msg: " + ts + cbuff)
                
             if (xchr >= 'A') and (xchr <= 'Z'):
 
