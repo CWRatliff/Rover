@@ -211,7 +211,7 @@ def new_waypoint(nwpt):
     auto = True
     wptflag = True
     sendit("{aWp" + str(nwpt) + "}")
-    Kfilter.Kalman_start(time.time(), posV[0], posV[1], \
+    Kfilter.Kalman_start(time.time(), posAV[0], posAV[1], \
         (math.radians(450-hdg) % 360), \
         speed * spdfactor)
     epoch = time.time()
@@ -457,10 +457,10 @@ try:
                         x = float(cbuff[3:msglen-1])
                         if (xchr == 'T'):
                             ilatsec = x
-                            posV = vlatlon(ilatsec, ilonsec)
+                            posAV = vlatlon(ilatsec, ilonsec)
                         elif xchr == 'N':
                             ilonsec = x
-                            posV = vlatlon(ilatsec, ilonsec)
+                            posAV = vlatlon(ilatsec, ilonsec)
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
                             cstr = "{lt%5.1f}" % accgps    #send to controller
@@ -507,8 +507,8 @@ try:
                     logit("raw L/L:" + str(ilatsec) + "/" + str(ilonsec))
                     logit("raw hdg: " + str(hdg))
                     logit("raw speed: " + str(v))
-                    xEst = Kfilter.Kalman_step(time.time(), posV[0], \
-                            posV[1], phi, v)
+                    xEst = Kfilter.Kalman_step(time.time(), posAV[0], \
+                            posAV[1], phi, v)
                     flonsec = xEst[0, 0] / lonfeet
                     flatsec = xEst[1, 0] / latfeet
                     fhdg = (450 - math.degrees(xEst[2, 0])) % 360
@@ -531,7 +531,7 @@ try:
                         prog = vmag(filterRV)/wptdist     # progress along track
                         aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
                         workRV = vsmult(trackRV, aim)
-                        aimRV = vsub(workV, filterRV)     # vector from filteredV to aimV                     
+                        aimRV = vsub(workRV, filterRV)    # vector from filteredV to aimV                     
                         azimuth = vcourse(aimRV)
                     else:
                         azimuth = vcourse(aimRV)
