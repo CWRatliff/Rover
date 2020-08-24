@@ -463,9 +463,10 @@ try:
                             posAV = vlatlon(ilatsec, ilonsec)
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
-                            cstr = "{lt%5.1f}" % accgps    #send to controller
-                            sendit(cstr)
-                            logit(cstr)
+                            if (accgps < 50):
+                                cstr = "{lt%6.2f}" % accgps    #send to controller
+                                sendit(cstr)
+                                logit(cstr)
 
                         else:
                             pass
@@ -479,8 +480,6 @@ try:
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     hdg = int(cbuff[2:msglen-1])
                     hdg = (hdg + compass_adjustment)%360
-                    print("heading = " + str(hdg))
-                    print("Motor speed, steer "+str(speed)+", "+str(steer))
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -504,9 +503,9 @@ try:
                     phi = math.radians((450-hdg) % 360)
                     ct = time.time()
                     logit("time: " + str(ct))
-                    logit("raw L/L:" + str(ilatsec) + "/" + str(ilonsec))
-                    logit("raw hdg: " + str(hdg))
-                    logit("raw speed: " + str(v))
+                    logit("raw L/L: " + str(ilatsec) + "/" + str(ilonsec))
+                    logit("raw hdg: %6.1f" % hdg)
+                    logit("raw speed: %5.3f" % v)
                     xEst = Kfilter.Kalman_step(time.time(), posAV[0], \
                             posAV[1], phi, v)
                     flonsec = xEst[0, 0] / lonfeet
@@ -517,6 +516,7 @@ try:
                     logit("Filtered speed: %6.3f" %xEst[3, 0])
                     workAV = vlatlon(flatsec, flonsec)   # see BOT 3:41 for diagram
                     filterRV = vsub(workAV, startAV)
+                    vprint("Kalman pos vec", filterRV)
                     aimRV = vsub(trackRV, filterRV)
                     dtg = vmag(aimRV)
                     udotv = vdot(trackRV, filterRV)
@@ -532,10 +532,9 @@ try:
                         aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
                         workRV = vsmult(trackRV, aim)
                         aimRV = vsub(workRV, filterRV)    # vector from filteredV to aimV                     
-                        azimuth = vcourse(aimRV)
                     else:
-                        azimuth = vcourse(aimRV)
                         xtrk = 0
+                    azimuth = vcourse(aimRV)
 
                     vprint("wpt target vector", aimRV)
                     logit("az set to %d" % azimuth)
