@@ -1,0 +1,2070 @@
+Rover 1.0 200819
+Standby
+{h  0}
+{v   0}
+{s   0}
+msg: 09:46:21 {LT21.9089}
+msg: 09:46:21 {LN7.2727}
+msg: 09:46:22 {LA48}
+{lt  0.16}
+msg: 09:46:24 {LT21.9092}
+msg: 09:46:24 {LN7.2673}
+msg: 09:46:25 {LA45}
+{lt  0.15}
+msg: 09:46:27 {LT21.9107}
+msg: 09:46:27 {LN7.2601}
+msg: 09:46:28 {LA45}
+{lt  0.15}
+msg: 09:46:30 {LT21.9107}
+msg: 09:46:30 {LN7.2580}
+msg: 09:46:31 {LA43}
+{lt  0.14}
+msg: 09:46:33 {LT21.9136}
+msg: 09:46:33 {LN7.2637}
+msg: 09:46:34 {LA40}
+{lt  0.13}
+msg: 09:46:36 {LT21.9154}
+msg: 09:46:36 {LN7.2677}
+msg: 09:46:37 {LA48}
+{lt  0.16}
+{h108}
+{h107}
+{h106}
+{h105}
+{h104}
+{h103}
+{h102}
+{h100}
+{h 99}
+{h 97}
+{h 95}
+{h 93}
+{h 91}
+{h 88}
+{h 86}
+{h 83}
+msg: 09:46:39 {LT21.9283}
+msg: 09:46:39 {LN7.2828}
+{h 34}
+msg: 09:46:40 {LA80}
+{lt  0.26}
+{h 33}
+{h 32}
+{h 33}
+{h 32}
+{h 33}
+msg: 09:46:42 {LT21.9467}
+msg: 09:46:42 {LN7.2799}
+msg: 09:46:43 {LA47}
+{lt  0.15}
+msg: 09:46:45 {D2}
+{v  10}
+msg: 09:46:45 {LT21.9470}
+msg: 09:46:45 {LN7.2799}
+msg: 09:46:46 {LA40}
+{lt  0.13}
+msg: 09:46:46 {D2}
+{v  20}
+{h 34}
+{h 33}
+msg: 09:46:48 {D2}
+{v  30}
+msg: 09:46:48 {LT21.9510}
+msg: 09:46:48 {LN7.2774}
+msg: 09:46:49 {LA43}
+{lt  0.14}
+{h 34}
+{h 35}
+{h 34}
+{h 35}
+msg: 09:46:51 {D2}
+{v  40}
+msg: 09:46:51 {LT21.9575}
+msg: 09:46:51 {LN7.2724}
+msg: 09:46:52 {LA40}
+{lt  0.13}
+{h 37}
+{h 38}
+{h 37}
+msg: 09:46:54 {D2}
+{v  50}
+msg: 09:46:54 {LT21.9676}
+msg: 09:46:54 {LN7.2637}
+msg: 09:46:55 {LA42}
+{lt  0.14}
+{h 38}
+{h 39}
+{h 38}
+{h 39}
+msg: 09:46:57 {LT21.9816}
+msg: 09:46:57 {LN7.2500}
+{h 40}
+msg: 09:46:58 {LA38}
+{lt  0.12}
+msg: 09:46:58 {D2}
+{v  60}
+msg: 09:46:58 {D2}
+{v  70}
+{h 41}
+msg: 09:46:58 {D2}
+{v  80}
+{h 40}
+{h 41}
+{h 40}
+{h 41}
+msg: 09:47:00 {D2}
+{v  90}
+msg: 09:47:00 {LT21.9985}
+msg: 09:47:00 {LN7.2335}
+{h 42}
+msg: 09:47:01 {LA42}
+{lt  0.14}
+msg: 09:47:01 {D2}
+{v 100}
+{h 43}
+{h 44}
+msg: 09:47:01 {D2}
+{h 45}
+{h 46}
+msg: 09:47:03 {LT22.0223}
+msg: 09:47:03 {LN7.2040}
+{h 50}
+msg: 09:47:04 {LA44}
+{lt  0.14}
+{h 56}
+{h 57}
+{h 58}
+{h 59}
+{h 60}
+{h 61}
+{h 62}
+{h 63}
+{h 64}
+{h 65}
+{h 66}
+{h 67}
+{h 69}
+{h 70}
+{h 71}
+msg: 09:47:06 {LT22.0410}
+msg: 09:47:06 {LN7.1741}
+{h 72}
+msg: 09:47:07 {LA48}
+{lt  0.16}
+{h 73}
+{h 74}
+{h 75}
+{h 76}
+msg: 09:47:09 {LT22.0522}
+msg: 09:47:09 {LN7.1312}
+{h 79}
+msg: 09:47:10 {LA43}
+{lt  0.14}
+msg: 09:47:10 {D0}
+{v   0}
+{h 80}
+{h 83}
+{h 84}
+{h 83}
+{h 84}
+{h 83}
+{h 84}
+msg: 09:47:12 {D8}
+{v -10}
+msg: 09:47:12 {D8}
+{v -20}
+msg: 09:47:12 {D8}
+{v -30}
+msg: 09:47:12 {LT22.0558}
+msg: 09:47:12 {LN7.1161}
+msg: 09:47:13 {LA41}
+{lt  0.13}
+msg: 09:47:13 {D8}
+{v -40}
+msg: 09:47:13 {D8}
+{v -50}
+msg: 09:47:13 {D8}
+{v -60}
+msg: 09:47:15 {LT22.0547}
+msg: 09:47:15 {LN7.1330}
+{h 86}
+msg: 09:47:16 {LA40}
+{lt  0.13}
+msg: 09:47:16 {D0}
+{v   0}
+{h 87}
+{h 86}
+{h 87}
+msg: 09:47:16 {D2}
+{v  10}
+{h 86}
+msg: 09:47:17 {D2}
+{v  20}
+msg: 09:47:18 {D2}
+{v  30}
+msg: 09:47:18 {D2}
+{v  40}
+msg: 09:47:18 {LT22.0547}
+msg: 09:47:18 {LN7.1417}
+msg: 09:47:19 {LA39}
+{lt  0.13}
+msg: 09:47:19 {D2}
+{v  50}
+msg: 09:47:19 {D2}
+{v  60}
+{h 87}
+{h 86}
+{h 87}
+msg: 09:47:19 {D2}
+{v  70}
+msg: 09:47:21 {D2}
+{v  80}
+msg: 09:47:21 {LT22.0565}
+msg: 09:47:21 {LN7.1183}
+msg: 09:47:22 {LA38}
+{lt  0.12}
+{h 86}
+{h 87}
+{h 88}
+msg: 09:47:24 {LT22.0594}
+msg: 09:47:24 {LN7.0772}
+msg: 09:47:25 {LA38}
+{lt  0.12}
+{h 89}
+{h 90}
+{h 89}
+{h 90}
+msg: 09:47:27 {D4}
+{s  -5}
+msg: 09:47:27 {LT22.0604}
+msg: 09:47:27 {LN7.0369}
+msg: 09:47:28 {LA38}
+{lt  0.12}
+{h 84}
+{h 83}
+msg: 09:47:28 {D4}
+{s -10}
+{h 82}
+{h 81}
+{h 80}
+{h 79}
+{h 78}
+{h 77}
+{h 76}
+{h 75}
+{h 74}
+msg: 09:47:30 {LT22.0626}
+msg: 09:47:30 {LN7.0020}
+{h 66}
+msg: 09:47:31 {LA38}
+{lt  0.12}
+{h 65}
+{h 55}
+{h 54}
+{h 53}
+{h 52}
+{h 51}
+{h 50}
+{h 49}
+{h 48}
+{h 47}
+{h 46}
+{h 45}
+{h 44}
+msg: 09:47:33 {LT22.0756}
+msg: 09:47:33 {LN6.9728}
+msg: 09:47:34 {LA40}
+{lt  0.13}
+{h 34}
+{h 33}
+{h 23}
+{h 22}
+{h 21}
+{h 20}
+{h 19}
+{h 18}
+{h 17}
+{h 16}
+{h 15}
+{h 14}
+{h 13}
+{h 12}
+msg: 09:47:36 {LT22.0990}
+msg: 09:47:36 {LN6.9559}
+{h  2}
+msg: 09:47:37 {LA38}
+{lt  0.12}
+{h352}
+{h351}
+{h350}
+{h349}
+{h348}
+{h347}
+{h346}
+{h345}
+{h344}
+{h343}
+{h342}
+msg: 09:47:39 {D5}
+{s   0}
+{h341}
+msg: 09:47:39 {LT22.1216}
+msg: 09:47:39 {LN6.9552}
+msg: 09:47:40 {LA35}
+{lt  0.11}
+{h331}
+{h330}
+msg: 09:47:42 {D2}
+{v  90}
+msg: 09:47:42 {D2}
+{v 100}
+msg: 09:47:42 {LT22.1483}
+msg: 09:47:42 {LN6.9750}
+msg: 09:47:43 {LA38}
+{lt  0.12}
+{h331}
+{h330}
+{h331}
+msg: 09:47:45 {LT22.1810}
+msg: 09:47:45 {LN7.0013}
+msg: 09:47:46 {LA37}
+{lt  0.12}
+msg: 09:47:46 {F23}
+track start: [-586.5, 2247.7]
+wpt: 23 -619.07, 2315.06
+track: [ -32.6,   67.4]
+az set to 334
+{s   3}
+{h332}
+{s   2}
+{h333}
+{s   1}
+{h334}
+{s   0}
+time: 1599151667.1785839
+raw L/L: 22.181/7.0013
+raw hdg:  334.0
+raw speed: 0.880
+filtered L/L: 22.1886/ 7.0064
+Filtered hdg:  334.0
+Filtered speed:  0.880
+Kalman pos vec: [  -0.4,    0.8]
+progress vec: [  -0.4,    0.8]
+xtrack vec: [   0.0,    0.0]
+wpt target vector: [ -16.0,   33.3]
+az set to 334
+{d 74.0} 
+{c334} 
+{ln  0.0} 
+{lt  0.1} 
+time: 1599151668.1829734
+raw L/L: 22.181/7.0013
+raw hdg:  334.0
+raw speed: 0.880
+filtered L/L: 22.1885/ 7.0063
+Filtered hdg:  334.0
+Filtered speed:  0.010
+Kalman pos vec: [  -0.4,    0.8]
+progress vec: [  -0.4,    0.8]
+xtrack vec: [   0.0,    0.0]
+wpt target vector: [ -16.0,   33.3]
+az set to 334
+{d 74.0} 
+{c334} 
+{ln  0.0} 
+{lt  0.1} 
+msg: 09:47:48 {LT22.2152}
+msg: 09:47:48 {LN7.0247}
+{h335}
+msg: 09:47:49 {LA37}
+{lt  0.12}
+time: 1599151669.1851554
+raw L/L: 22.2152/7.0247
+raw hdg:  334.0
+raw speed: 0.880
+filtered L/L: 22.2111/ 7.0197
+Filtered hdg:  334.0
+Filtered speed:  1.988
+Kalman pos vec: [  -1.5,    3.1]
+progress vec: [  -1.5,    3.1]
+xtrack vec: [   0.1,    0.0]
+wpt target vector: [ -15.5,   32.2]
+az set to 334
+{d 71.4} 
+{c334} 
+{ln  0.1} 
+{lt  0.1} 
+{h334}
+{h335}
+{h336}
+{s  -1}
+{h335}
+{s   0}
+time: 1599151670.189056
+raw L/L: 22.2152/7.0247
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.2167/ 7.0232
+Filtered hdg:  335.0
+Filtered speed:  0.722
+Kalman pos vec: [  -1.8,    3.6]
+progress vec: [  -1.8,    3.6]
+xtrack vec: [   0.1,    0.0]
+wpt target vector: [ -15.3,   31.9]
+az set to 334
+{d 70.8} 
+{c334} 
+{ln  0.1} 
+{lt  0.1} 
+{h336}
+{s  -1}
+time: 1599151671.191796
+raw L/L: 22.2152/7.0247
+raw hdg:  336.0
+raw speed: 0.880
+filtered L/L: 22.2179/ 7.0241
+Filtered hdg:  336.0
+Filtered speed:  0.422
+Kalman pos vec: [  -1.9,    3.7]
+progress vec: [  -1.8,    3.8]
+xtrack vec: [   0.1,    0.0]
+wpt target vector: [ -15.3,   31.8]
+az set to 334
+{d 70.6} 
+{c334} 
+{ln  0.1} 
+{lt  0.1} 
+msg: 09:47:51 {LT22.2494}
+msg: 09:47:51 {LN7.0452}
+msg: 09:47:52 {LA36}
+{lt  0.12}
+{h335}
+{s   0}
+time: 1599151672.19302
+raw L/L: 22.2494/7.0452
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.2448/ 7.0391
+Filtered hdg:  334.9
+Filtered speed:  2.203
+Kalman pos vec: [  -3.2,    6.5]
+progress vec: [  -3.1,    6.5]
+xtrack vec: [   0.0,    0.0]
+wpt target vector: [ -14.7,   30.5]
+az set to 334
+{d 67.6} 
+{c334} 
+{ln  0.0} 
+{lt  0.1} 
+{h334}
+{h335}
+time: 1599151673.1964898
+raw L/L: 22.2494/7.0452
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.2509/ 7.0429
+Filtered hdg:  334.8
+Filtered speed:  0.764
+Kalman pos vec: [  -3.5,    7.1]
+progress vec: [  -3.4,    7.1]
+xtrack vec: [   0.0,    0.0]
+wpt target vector: [ -14.5,   30.2]
+az set to 334
+{d 66.9} 
+{c334} 
+{ln  0.1} 
+{lt  0.1} 
+msg: 09:47:54 {LT22.2851}
+msg: 09:47:54 {LN7.0675}
+time: 1599151674.1998773
+raw L/L: 22.2851/7.0675
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.2802/ 7.0599
+Filtered hdg:  334.7
+Filtered speed:  2.381
+Kalman pos vec: [  -4.9,   10.1]
+progress vec: [  -4.9,   10.1]
+xtrack vec: [   0.0,    0.0]
+wpt target vector: [ -13.8,   28.7]
+az set to 334
+{d 63.7} 
+{c334} 
+{ln  0.0} 
+{lt  0.1} 
+msg: 09:47:55 {LA36}
+{lt  0.12}
+{h336}
+{s  -1}
+time: 1599151675.2079737
+raw L/L: 22.2851/7.0675
+raw hdg:  336.0
+raw speed: 0.880
+filtered L/L: 22.2868/ 7.0642
+Filtered hdg:  335.5
+Filtered speed:  0.796
+Kalman pos vec: [  -5.3,   10.7]
+progress vec: [  -5.2,   10.8]
+xtrack vec: [   0.1,    0.0]
+wpt target vector: [ -13.6,   28.4]
+az set to 334
+{d 62.9} 
+{c334} 
+{ln  0.1} 
+{lt  0.1} 
+{h335}
+{s   0}
+{h336}
+{s  -1}
+{h335}
+{s   0}
+time: 1599151676.2079587
+raw L/L: 22.2851/7.0675
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.2882/ 7.0654
+Filtered hdg:  334.4
+Filtered speed:  0.442
+Kalman pos vec: [  -5.4,   10.9]
+progress vec: [  -5.3,   10.9]
+xtrack vec: [   0.1,    0.0]
+wpt target vector: [ -13.6,   28.3]
+az set to 334
+{d 62.7} 
+{c334} 
+{ln  0.1} 
+{lt  0.1} 
+msg: 09:47:57 {LT22.3204}
+msg: 09:47:57 {LN7.0906}
+time: 1599151677.2097414
+raw L/L: 22.3204/7.0906
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.3162/ 7.0823
+Filtered hdg:  334.1
+Filtered speed:  2.306
+Kalman pos vec: [  -6.8,   13.7]
+progress vec: [  -6.7,   13.8]
+xtrack vec: [   0.1,    0.1]
+wpt target vector: [ -12.8,   26.9]
+az set to 334
+{d 59.6} 
+{c334} 
+{ln  0.2} 
+{lt  0.1} 
+msg: 09:47:58 {LA36}
+{lt  0.12}
+time: 1599151678.215781
+raw L/L: 22.3204/7.0906
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.3224/ 7.0868
+Filtered hdg:  333.8
+Filtered speed:  0.784
+Kalman pos vec: [  -7.2,   14.3]
+progress vec: [  -7.0,   14.4]
+xtrack vec: [   0.2,    0.1]
+wpt target vector: [ -12.6,   26.6]
+az set to 334
+{d 58.8} 
+{c335} 
+{ln  0.2} 
+{lt  0.1} 
+{h336}
+{s  -1}
+{h335}
+{s   0}
+time: 1599151679.2214794
+raw L/L: 22.3204/7.0906
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.3237/ 7.0882
+Filtered hdg:  333.6
+Filtered speed:  0.436
+Kalman pos vec: [  -7.3,   14.5]
+progress vec: [  -7.0,   14.6]
+xtrack vec: [   0.2,    0.1]
+wpt target vector: [ -12.5,   26.5]
+az set to 334
+{d 58.7} 
+{c335} 
+{ln  0.3} 
+{lt  0.1} 
+time: 1599151680.224799
+raw L/L: 22.3204/7.0906
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.3238/ 7.0890
+Filtered hdg:  333.3
+Filtered speed:  0.357
+Kalman pos vec: [  -7.3,   14.5]
+progress vec: [  -7.1,   14.6]
+xtrack vec: [   0.3,    0.1]
+wpt target vector: [ -12.5,   26.5]
+az set to 334
+{d 58.6} 
+{c335} 
+{ln  0.3} 
+{lt  0.1} 
+msg: 09:48:00 {LT22.3553}
+msg: 09:48:00 {LN7.1114}
+{h336}
+{s  -1}
+msg: 09:48:01 {LA34}
+{lt  0.11}
+{h334}
+{s   0}
+time: 1599151681.2290998
+raw L/L: 22.3553/7.1114
+raw hdg:  334.0
+raw speed: 0.880
+filtered L/L: 22.3505/ 7.1059
+Filtered hdg:  332.2
+Filtered speed:  2.228
+Kalman pos vec: [  -8.8,   17.2]
+progress vec: [  -8.4,   17.4]
+xtrack vec: [   0.4,    0.2]
+wpt target vector: [ -11.7,   25.2]
+az set to 335
+{d 55.6} 
+{c335} 
+{ln  0.4} 
+{lt  0.1} 
+{s   1}
+{h335}
+{s   0}
+time: 1599151682.236063
+raw L/L: 22.3553/7.1114
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.3565/ 7.1101
+Filtered hdg:  333.0
+Filtered speed:  0.764
+Kalman pos vec: [  -9.1,   17.8]
+progress vec: [  -8.7,   18.0]
+xtrack vec: [   0.4,    0.2]
+wpt target vector: [ -11.5,   24.9]
+az set to 335
+{d 54.9} 
+{c335} 
+{ln  0.5} 
+{lt  0.1} 
+msg: 09:48:03 {LT22.3895}
+msg: 09:48:03 {LN7.1341}
+time: 1599151683.2442331
+raw L/L: 22.3895/7.1341
+raw hdg:  335.0
+raw speed: 0.880
+filtered L/L: 22.3845/ 7.1280
+Filtered hdg:  332.8
+Filtered speed:  2.315
+Kalman pos vec: [ -10.6,   20.6]
+progress vec: [ -10.1,   20.9]
+xtrack vec: [   0.5,    0.3]
+wpt target vector: [ -10.7,   23.5]
+az set to 335
+{d 51.7} 
+{c336} 
+{ln  0.6} 
+{lt  0.1} 
+{h336}
+msg: 09:48:04 {LA32}
+{lt  0.10}
+time: 1599151684.2510211
+raw L/L: 22.3895/7.1341
+raw hdg:  336.0
+raw speed: 0.880
+filtered L/L: 22.3907/ 7.1324
+Filtered hdg:  333.6
+Filtered speed:  0.784
+Kalman pos vec: [ -11.0,   21.3]
+progress vec: [ -10.4,   21.5]
+xtrack vec: [   0.6,    0.3]
+wpt target vector: [ -10.5,   23.2]
+az set to 335
+{d 50.9} 
+{c336} 
+{ln  0.6} 
+{lt  0.1} 
+time: 1599151685.2553337
+raw L/L: 22.3895/7.1341
+raw hdg:  336.0
+raw speed: 0.880
+filtered L/L: 22.3921/ 7.1336
+Filtered hdg:  333.5
+Filtered speed:  0.434
+Kalman pos vec: [ -11.1,   21.4]
+progress vec: [ -10.5,   21.7]
+xtrack vec: [   0.6,    0.3]
+wpt target vector: [ -10.4,   23.2]
+az set to 335
+{d 50.8} 
+{c336} 
+{ln  0.7} 
+{lt  0.1} 
+msg: 09:48:06 {LT22.4258}
+msg: 09:48:06 {LN7.1564}
+{h337}
+{s  -1}
+time: 1599151686.2612448
+raw L/L: 22.4258/7.1564
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.4204/ 7.1509
+Filtered hdg:  334.3
+Filtered speed:  2.328
+Kalman pos vec: [ -12.5,   24.3]
+progress vec: [ -11.9,   24.6]
+xtrack vec: [   0.7,    0.3]
+wpt target vector: [  -9.7,   21.7]
+az set to 335
+{d 47.6} 
+{c336} 
+{ln  0.7} 
+{lt  0.1} 
+msg: 09:48:07 {LA34}
+{lt  0.11}
+{h336}
+{s   0}
+time: 1599151687.269412
+raw L/L: 22.4258/7.1564
+raw hdg:  336.0
+raw speed: 0.880
+filtered L/L: 22.4269/ 7.1550
+Filtered hdg:  333.1
+Filtered speed:  0.788
+Kalman pos vec: [ -12.9,   24.9]
+progress vec: [ -12.2,   25.2]
+xtrack vec: [   0.7,    0.3]
+wpt target vector: [  -9.5,   21.4]
+az set to 336
+{d 46.8} 
+{c336} 
+{ln  0.8} 
+{lt  0.1} 
+time: 1599151688.2750652
+raw L/L: 22.4258/7.1564
+raw hdg:  336.0
+raw speed: 0.880
+filtered L/L: 22.4282/ 7.1562
+Filtered hdg:  333.0
+Filtered speed:  0.437
+Kalman pos vec: [ -13.0,   25.1]
+progress vec: [ -12.3,   25.4]
+xtrack vec: [   0.7,    0.3]
+wpt target vector: [  -9.4,   21.3]
+az set to 336
+{d 46.6} 
+{c336} 
+{ln  0.8} 
+{lt  0.1} 
+msg: 09:48:09 {LT22.4615}
+msg: 09:48:09 {LN7.1773}
+{h337}
+time: 1599151689.2794795
+raw L/L: 22.4615/7.1773
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.4559/ 7.1731
+Filtered hdg:  333.9
+Filtered speed:  2.279
+Kalman pos vec: [ -14.4,   27.9]
+progress vec: [ -13.6,   28.2]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -8.7,   20.0]
+az set to 336
+{d 43.5} 
+{c336} 
+{ln  0.8} 
+{lt  0.1} 
+msg: 09:48:10 {LA33}
+{lt  0.11}
+time: 1599151690.2853553
+raw L/L: 22.4615/7.1773
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.4622/ 7.1770
+Filtered hdg:  333.9
+Filtered speed:  0.777
+Kalman pos vec: [ -14.7,   28.5]
+progress vec: [ -13.9,   28.9]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -8.5,   19.6]
+az set to 336
+{d 42.8} 
+{c336} 
+{ln  0.9} 
+{lt  0.1} 
+time: 1599151691.2909412
+raw L/L: 22.4615/7.1773
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.4636/ 7.1779
+Filtered hdg:  333.8
+Filtered speed:  0.432
+Kalman pos vec: [ -14.8,   28.6]
+progress vec: [ -14.0,   29.0]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -8.5,   19.6]
+az set to 336
+{d 42.6} 
+{c337} 
+{ln  0.9} 
+{lt  0.1} 
+msg: 09:48:12 {LT22.4960}
+msg: 09:48:12 {LN7.1971}
+time: 1599151692.293574
+raw L/L: 22.496/7.1971
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.4903/ 7.1938
+Filtered hdg:  333.8
+Filtered speed:  2.209
+Kalman pos vec: [ -16.1,   31.3]
+progress vec: [ -15.3,   31.7]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -7.8,   18.2]
+az set to 336
+{d 39.6} 
+{c337} 
+{ln  0.9} 
+{lt  0.1} 
+msg: 09:48:13 {LA32}
+{lt  0.10}
+{h338}
+{s  -1}
+time: 1599151693.296333
+raw L/L: 22.496/7.1971
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.4965/ 7.1975
+Filtered hdg:  334.8
+Filtered speed:  0.763
+Kalman pos vec: [ -16.4,   32.0]
+progress vec: [ -15.6,   32.4]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -7.7,   17.9]
+az set to 336
+{d 38.9} 
+{c337} 
+{ln  0.9} 
+{lt  0.1} 
+{h337}
+{s   0}
+{h338}
+{s  -1}
+time: 1599151694.2983842
+raw L/L: 22.496/7.1971
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.4979/ 7.1983
+Filtered hdg:  334.8
+Filtered speed:  0.430
+Kalman pos vec: [ -16.5,   32.1]
+progress vec: [ -15.7,   32.5]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -7.6,   17.8]
+az set to 336
+{d 38.8} 
+{c337} 
+{ln  0.9} 
+{lt  0.1} 
+msg: 09:48:15 {LT22.5331}
+msg: 09:48:15 {LN7.2180}
+{h336}
+{s   0}
+time: 1599151695.3009698
+raw L/L: 22.5331/7.218
+raw hdg:  336.0
+raw speed: 0.880
+filtered L/L: 22.5267/ 7.2151
+Filtered hdg:  332.9
+Filtered speed:  2.333
+Kalman pos vec: [ -17.9,   35.0]
+progress vec: [ -17.1,   35.4]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -6.9,   16.4]
+az set to 337
+{d 35.5} 
+{c337} 
+{ln  0.9} 
+{lt  0.1} 
+{s   1}
+msg: 09:48:16 {LA31}
+{lt  0.10}
+{h338}
+{s   0}
+time: 1599151696.3015957
+raw L/L: 22.5331/7.218
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.5332/ 7.2190
+Filtered hdg:  335.0
+Filtered speed:  0.794
+Kalman pos vec: [ -18.2,   35.7]
+progress vec: [ -17.4,   36.1]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -6.8,   16.0]
+az set to 337
+{d 34.8} 
+{c337} 
+{ln  0.9} 
+{lt  0.1} 
+time: 1599151697.3064609
+raw L/L: 22.5331/7.218
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.5348/ 7.2197
+Filtered hdg:  335.0
+Filtered speed:  0.436
+Kalman pos vec: [ -18.3,   35.8]
+progress vec: [ -17.5,   36.2]
+xtrack vec: [   0.8,    0.4]
+wpt target vector: [  -6.7,   16.0]
+az set to 337
+{d 34.6} 
+{c337} 
+{ln  0.9} 
+{lt  0.1} 
+msg: 09:48:18 {LT22.5688}
+msg: 09:48:18 {LN7.2374}
+time: 1599151698.3132172
+raw L/L: 22.5688/7.2374
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.5626/ 7.2351
+Filtered hdg:  335.1
+Filtered speed:  2.253
+Kalman pos vec: [ -19.6,   38.7]
+progress vec: [ -18.9,   39.0]
+xtrack vec: [   0.7,    0.4]
+wpt target vector: [  -6.1,   14.5]
+az set to 337
+{d 31.5} 
+{c337} 
+{ln  0.8} 
+{lt  0.1} 
+msg: 09:48:19 {LA34}
+{lt  0.11}
+{h339}
+{s  -1}
+time: 1599151699.3214939
+raw L/L: 22.5688/7.2374
+raw hdg:  339.0
+raw speed: 0.880
+filtered L/L: 22.5690/ 7.2385
+Filtered hdg:  336.2
+Filtered speed:  0.770
+Kalman pos vec: [ -19.9,   39.3]
+progress vec: [ -19.2,   39.7]
+xtrack vec: [   0.7,    0.3]
+wpt target vector: [  -6.0,   14.2]
+az set to 337
+{d 30.8} 
+{c337} 
+{ln  0.8} 
+{lt  0.1} 
+{h338}
+{s   0}
+{h339}
+{s  -1}
+{h338}
+{s   0}
+time: 1599151700.326886
+raw L/L: 22.5688/7.2374
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.5705/ 7.2390
+Filtered hdg:  335.3
+Filtered speed:  0.432
+Kalman pos vec: [ -19.9,   39.5]
+progress vec: [ -19.2,   39.8]
+xtrack vec: [   0.7,    0.3]
+wpt target vector: [  -6.0,   14.1]
+az set to 337
+{d 30.6} 
+{c337} 
+{ln  0.8} 
+{lt  0.1} 
+msg: 09:48:21 {LT22.6055}
+msg: 09:48:21 {LN7.2569}
+{h339}
+{s  -1}
+time: 1599151701.3301322
+raw L/L: 22.6055/7.2569
+raw hdg:  339.0
+raw speed: 0.880
+filtered L/L: 22.5991/ 7.2544
+Filtered hdg:  336.4
+Filtered speed:  2.301
+Kalman pos vec: [ -21.2,   42.4]
+progress vec: [ -20.6,   42.7]
+xtrack vec: [   0.6,    0.3]
+wpt target vector: [  -5.4,   12.7]
+az set to 336
+{d 27.5} 
+{c337} 
+{ln  0.7} 
+{lt  0.1} 
+{s  -2}
+msg: 09:48:22 {LA29}
+{lt  0.10}
+{h337}
+{s   0}
+time: 1599151702.3356597
+raw L/L: 22.6055/7.2569
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.6057/ 7.2577
+Filtered hdg:  334.4
+Filtered speed:  0.782
+Kalman pos vec: [ -21.5,   43.0]
+progress vec: [ -20.9,   43.3]
+xtrack vec: [   0.6,    0.3]
+wpt target vector: [  -5.3,   12.3]
+az set to 336
+{d 26.8} 
+{c337} 
+{ln  0.6} 
+{lt  0.1} 
+time: 1599151703.3357525
+raw L/L: 22.6055/7.2569
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.6072/ 7.2584
+Filtered hdg:  334.5
+Filtered speed:  0.435
+Kalman pos vec: [ -21.5,   43.2]
+progress vec: [ -21.0,   43.5]
+xtrack vec: [   0.5,    0.3]
+wpt target vector: [  -5.2,   12.2]
+az set to 336
+{d 26.6} 
+{c337} 
+{ln  0.6} 
+{lt  0.1} 
+msg: 09:48:24 {LT22.6411}
+msg: 09:48:24 {LN7.2781}
+time: 1599151704.339563
+raw L/L: 22.6411/7.2781
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.6351/ 7.2746
+Filtered hdg:  334.5
+Filtered speed:  2.282
+Kalman pos vec: [ -22.9,   46.0]
+progress vec: [ -22.4,   46.3]
+xtrack vec: [   0.5,    0.3]
+wpt target vector: [  -4.6,   10.8]
+az set to 337
+{d 23.5} 
+{c337} 
+{ln  0.6} 
+{lt  0.1} 
+msg: 09:48:25 {LA30}
+{lt  0.10}
+{h338}
+time: 1599151705.3455331
+raw L/L: 22.6411/7.2781
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.6415/ 7.2783
+Filtered hdg:  335.5
+Filtered speed:  0.777
+Kalman pos vec: [ -23.2,   46.7]
+progress vec: [ -22.7,   46.9]
+xtrack vec: [   0.5,    0.3]
+wpt target vector: [  -4.4,   10.5]
+az set to 337
+{d 22.7} 
+{c337} 
+{ln  0.6} 
+{lt  0.1} 
+{h339}
+{s  -1}
+time: 1599151706.348894
+raw L/L: 22.6411/7.2781
+raw hdg:  339.0
+raw speed: 0.880
+filtered L/L: 22.6430/ 7.2792
+Filtered hdg:  336.5
+Filtered speed:  0.434
+Kalman pos vec: [ -23.3,   46.8]
+progress vec: [ -22.7,   47.1]
+xtrack vec: [   0.5,    0.3]
+wpt target vector: [  -4.4,   10.4]
+az set to 337
+{d 22.6} 
+{c337} 
+{ln  0.6} 
+{lt  0.1} 
+{h338}
+{s   0}
+msg: 09:48:27 {LT22.6778}
+msg: 09:48:27 {LN7.2979}
+{h337}
+time: 1599151707.351263
+raw L/L: 22.6778/7.2979
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.6715/ 7.2949
+Filtered hdg:  334.5
+Filtered speed:  2.306
+Kalman pos vec: [ -24.6,   49.7]
+progress vec: [ -24.1,   49.9]
+xtrack vec: [   0.5,    0.2]
+wpt target vector: [  -3.8,    9.0]
+az set to 337
+{d 19.4} 
+{c337} 
+{ln  0.5} 
+{lt  0.1} 
+msg: 09:48:28 {LA32}
+{lt  0.10}
+{h336}
+{s   1}
+{h337}
+{s   0}
+time: 1599151708.3532143
+raw L/L: 22.6778/7.2979
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.6781/ 7.2985
+Filtered hdg:  334.5
+Filtered speed:  0.785
+Kalman pos vec: [ -24.9,   50.4]
+progress vec: [ -24.4,   50.6]
+xtrack vec: [   0.5,    0.2]
+wpt target vector: [  -3.6,    8.6]
+az set to 337
+{d 18.7} 
+{c337} 
+{ln  0.5} 
+{lt  0.1} 
+time: 1599151709.358948
+raw L/L: 22.6778/7.2979
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.6796/ 7.2993
+Filtered hdg:  334.6
+Filtered speed:  0.434
+Kalman pos vec: [ -25.0,   50.5]
+progress vec: [ -24.5,   50.7]
+xtrack vec: [   0.4,    0.2]
+wpt target vector: [  -3.6,    8.5]
+az set to 337
+{d 18.5} 
+{c337} 
+{ln  0.5} 
+{lt  0.1} 
+msg: 09:48:30 {LT22.7120}
+msg: 09:48:30 {LN7.3177}
+time: 1599151710.3611903
+raw L/L: 22.712/7.3177
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.7063/ 7.3147
+Filtered hdg:  334.6
+Filtered speed:  2.196
+Kalman pos vec: [ -26.2,   53.2]
+progress vec: [ -25.8,   53.4]
+xtrack vec: [   0.4,    0.2]
+wpt target vector: [  -2.9,    7.2]
+az set to 337
+{d 15.5} 
+{c338} 
+{ln  0.5} 
+{lt  0.1} 
+msg: 09:48:31 {LA31}
+{lt  0.10}
+{h338}
+time: 1599151711.3640435
+raw L/L: 22.712/7.3177
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.7124/ 7.3182
+Filtered hdg:  335.6
+Filtered speed:  0.760
+Kalman pos vec: [ -26.5,   53.9]
+progress vec: [ -26.1,   54.1]
+xtrack vec: [   0.4,    0.2]
+wpt target vector: [  -2.8,    6.9]
+az set to 337
+{d 14.8} 
+{c338} 
+{ln  0.5} 
+{lt  0.1} 
+{h339}
+{s  -1}
+{h338}
+{s   0}
+time: 1599151712.3688266
+raw L/L: 22.712/7.3177
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.7139/ 7.3189
+Filtered hdg:  335.6
+Filtered speed:  0.429
+Kalman pos vec: [ -26.6,   54.0]
+progress vec: [ -26.2,   54.2]
+xtrack vec: [   0.4,    0.2]
+wpt target vector: [  -2.8,    6.8]
+az set to 337
+{d 14.7} 
+{c338} 
+{ln  0.5} 
+{lt  0.1} 
+msg: 09:48:33 {LT22.7488}
+msg: 09:48:33 {LN7.3382}
+{h339}
+{s  -1}
+time: 1599151713.370354
+raw L/L: 22.7488/7.3382
+raw hdg:  339.0
+raw speed: 0.880
+filtered L/L: 22.7427/ 7.3345
+Filtered hdg:  336.6
+Filtered speed:  2.321
+Kalman pos vec: [ -27.9,   56.9]
+progress vec: [ -27.6,   57.1]
+xtrack vec: [   0.3,    0.2]
+wpt target vector: [  -2.2,    5.3]
+az set to 337
+{d 11.5} 
+{c338} 
+{ln  0.4} 
+{lt  0.1} 
+msg: 09:48:34 {LA27}
+{lt  0.09}
+{h338}
+{s   0}
+{h337}
+time: 1599151714.3731387
+raw L/L: 22.7488/7.3382
+raw hdg:  337.0
+raw speed: 0.880
+filtered L/L: 22.7493/ 7.3380
+Filtered hdg:  334.5
+Filtered speed:  0.789
+Kalman pos vec: [ -28.2,   57.6]
+progress vec: [ -27.9,   57.7]
+xtrack vec: [   0.3,    0.1]
+wpt target vector: [  -2.0,    5.0]
+az set to 337
+{d 10.7} 
+{c338} 
+{ln  0.3} 
+{lt  0.1} 
+{h338}
+{h337}
+{h338}
+time: 1599151715.3752506
+raw L/L: 22.7488/7.3382
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.7508/ 7.3390
+Filtered hdg:  335.5
+Filtered speed:  0.436
+Kalman pos vec: [ -28.3,   57.7]
+progress vec: [ -28.0,   57.9]
+xtrack vec: [   0.3,    0.2]
+wpt target vector: [  -2.0,    4.9]
+az set to 338
+{d 10.6} 
+{c338} 
+{ln  0.4} 
+{lt  0.1} 
+msg: 09:48:36 {LT22.7855}
+msg: 09:48:36 {LN7.3595}
+time: 1599151716.3756425
+raw L/L: 22.7855/7.3595
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.7796/ 7.3552
+Filtered hdg:  335.4
+Filtered speed:  2.332
+Kalman pos vec: [ -29.6,   60.7]
+progress vec: [ -29.4,   60.8]
+xtrack vec: [   0.3,    0.1]
+wpt target vector: [  -1.3,    3.4]
+az set to 338
+{d  7.3} 
+{c339} 
+{ln  0.3} 
+{lt  0.1} 
+msg: 09:48:37 {LA29}
+{lt  0.10}
+{h339}
+{h338}
+time: 1599151717.3758602
+raw L/L: 22.7855/7.3595
+raw hdg:  338.0
+raw speed: 0.880
+filtered L/L: 22.7861/ 7.3590
+Filtered hdg:  335.4
+Filtered speed:  0.792
+Kalman pos vec: [ -30.0,   61.3]
+progress vec: [ -29.7,   61.5]
+xtrack vec: [   0.3,    0.1]
+wpt target vector: [  -1.2,    3.1]
+az set to 339
+{d  6.6} 
+{c339} 
+{ln  0.3} 
+{lt  0.1} 
+{s   1}
+{h339}
+{s   0}
+time: 1599151718.380316
+raw L/L: 22.7855/7.3595
+raw hdg:  339.0
+raw speed: 0.880
+filtered L/L: 22.7876/ 7.3600
+Filtered hdg:  336.3
+Filtered speed:  0.435
+Kalman pos vec: [ -30.1,   61.5]
+progress vec: [ -29.8,   61.6]
+xtrack vec: [   0.3,    0.1]
+wpt target vector: [  -1.1,    3.0]
+az set to 339
+{d  6.4} 
+{c340} 
+{ln  0.3} 
+{lt  0.1} 
+msg: 09:48:39 {LT22.8226}
+msg: 09:48:39 {LN7.3775}
+time: 1599151719.38454
+raw L/L: 22.8226/7.3775
+raw hdg:  339.0
+raw speed: 0.880
+filtered L/L: 22.8162/ 7.3750
+Filtered hdg:  336.4
+Filtered speed:  2.294
+Kalman pos vec: [ -31.3,   64.4]
+progress vec: [ -31.1,   64.4]
+xtrack vec: [   0.2,    0.1]
+wpt target vector: [  -0.5,    1.6]
+az set to 340
+{d  3.3} 
+{c341} 
+{ln  0.2} 
+{lt  0.1} 
+{s   1}
+msg: 09:48:40 {LA28}
+{lt  0.09}
+{h341}
+{s   0}
+time: 1599151720.3865674
+raw L/L: 22.8226/7.3775
+raw hdg:  341.0
+raw speed: 0.880
+filtered L/L: 22.8228/ 7.3784
+Filtered hdg:  338.4
+Filtered speed:  0.783
+Kalman pos vec: [ -31.6,   65.0]
+progress vec: [ -31.5,   65.1]
+xtrack vec: [   0.1,    0.1]
+wpt target vector: [  -0.4,    1.2]
+az set to 340
+{d  2.5} 
+{c341} 
+{ln  0.1} 
+{lt  0.1} 
+{h342}
+{s  -1}
+{h341}
+{s   0}
+time: 1599151721.3873124
+raw L/L: 22.8226/7.3775
+raw hdg:  341.0
+raw speed: 0.880
+filtered L/L: 22.8244/ 7.3790
+Filtered hdg:  338.5
+Filtered speed:  0.436
+Kalman pos vec: [ -31.6,   65.2]
+progress vec: [ -31.5,   65.2]
+xtrack vec: [   0.1,    0.1]
+wpt target vector: [  -0.4,    1.1]
+az set to 340
+{d  2.4} 
+{c340} 
+{ln  0.1} 
+{lt  0.1} 
+msg: 09:48:42 {LT22.8611}
+msg: 09:48:42 {LN7.3951}
+{h342}
+{s  -1}
+time: 1599151722.39428
+raw L/L: 22.8611/7.3951
+raw hdg:  342.0
+raw speed: 0.880
+filtered L/L: 22.8544/ 7.3928
+Filtered hdg:  339.6
+Filtered speed:  2.352
+Kalman pos vec: [ -32.8,   68.2]
+progress vec: [ -32.9,   68.2]
+xtrack vec: [  -0.1,   -0.1]
+wpt target vector: [   0.0,   -0.5]
+az set to 174
+{d  0.9} 
+{c175} 
+{ln  0.2} 
+{lt  0.1} 
+close to waypoint
+Standby
+{v   0}
+{s-167}
+msg: 09:48:43 {LA28}
+{lt  0.09}
+msg: 09:48:45 {LT22.8690}
+msg: 09:48:45 {LN7.3955}
+msg: 09:48:46 {LA25}
+{lt  0.08}
+msg: 09:48:48 {LT22.8701}
+msg: 09:48:48 {LN7.3912}
+msg: 09:48:49 {LA24}
+{lt  0.08}
+msg: 09:48:49 {D2}
+{v  10}
+{h341}
+msg: 09:48:49 {D2}
+{v  20}
+msg: 09:48:49 {D2}
+{v  30}
+{h340}
+{h339}
+msg: 09:48:51 {D2}
+{v  40}
+msg: 09:48:51 {LT22.8733}
+msg: 09:48:51 {LN7.3886}
+{h332}
+msg: 09:48:52 {LA27}
+{lt  0.09}
+msg: 09:48:52 {D2}
+{v  50}
+{h322}
+{h321}
+{h320}
+{h319}
+{h318}
+{h317}
+{h316}
+{h315}
+{h314}
+{h313}
+{h312}
+{h311}
+{h310}
+msg: 09:48:54 {LT22.8852}
+msg: 09:48:54 {LN7.3886}
+msg: 09:48:55 {LA29}
+{lt  0.10}
+msg: 09:48:55 {D2}
+{v  60}
+{h299}
+{h287}
+{h286}
+{h285}
+{h284}
+{h283}
+{h282}
+{h281}
+{h280}
+{h279}
+{h278}
+{h277}
+{h276}
+{h275}
+{h274}
+{h273}
+{h272}
+{h271}
+msg: 09:48:57 {LT22.8928}
+msg: 09:48:57 {LN7.3958}
+{h256}
+msg: 09:48:58 {LA25}
+{lt  0.08}
+{h255}
+{h254}
+{h242}
+{h241}
+{h240}
+{h239}
+{h238}
+{h237}
+{h236}
+{h235}
+{h234}
+{h233}
+{h232}
+{h231}
+{h230}
+{h229}
+{h228}
+{h227}
+msg: 09:49:00 {D2}
+{v  70}
+msg: 09:49:00 {D2}
+{v  80}
+{h226}
+{h225}
+msg: 09:49:00 {LT22.8935}
+msg: 09:49:00 {LN7.4059}
+msg: 09:49:01 {LA27}
+{lt  0.09}
+msg: 09:49:01 {D2}
+{v  90}
+{h210}
+{h209}
+{h185}
+{h184}
+{h183}
+{h181}
+{h180}
+{h179}
+{h177}
+{h176}
+{h175}
+{h174}
+{h173}
+{h171}
+{h170}
+{h169}
+{h168}
+{h167}
+{h165}
+msg: 09:49:02 {D5}
+{s   0}
+{h164}
+{h163}
+{h162}
+{h161}
+{h160}
+msg: 09:49:03 {LT22.8802}
+msg: 09:49:03 {LN7.4124}
+{h139}
+msg: 09:49:04 {LA26}
+{lt  0.09}
+{h137}
+{h129}
+{h128}
+{h127}
+{h126}
+{h125}
+{h124}
+{h123}
+{h122}
+msg: 09:49:06 {D0}
+{v   0}
+{h121}
+msg: 09:49:06 {LT22.8665}
+msg: 09:49:06 {LN7.3912}
+msg: 09:49:07 {LA25}
+{lt  0.08}
+{h114}
+{h115}
+{h114}
+{h115}
+msg: 09:49:07 {D8}
+{v -10}
+{h114}
+{h115}
+msg: 09:49:07 {D8}
+{v -20}
+msg: 09:49:09 {D8}
+{v -30}
+msg: 09:49:09 {D8}
+{v -40}
+{h116}
+msg: 09:49:09 {LT22.8658}
+msg: 09:49:09 {LN7.3912}
+{h119}
+msg: 09:49:10 {LA21}
+{lt  0.07}
+{h120}
+{h122}
+msg: 09:49:10 {D8}
+{v -50}
+msg: 09:49:10 {D8}
+{v -60}
+{h123}
+msg: 09:49:12 {LT22.8744}
+msg: 09:49:12 {LN7.4066}
+{h125}
+msg: 09:49:13 {LA23}
+{lt  0.08}
+msg: 09:49:13 {D0}
+{v   0}
+{h127}
+{h126}
+msg: 09:49:13 {D2}
+{v  10}
+msg: 09:49:15 {D2}
+{v  20}
+msg: 09:49:15 {D2}
+{v  30}
+msg: 09:49:15 {D2}
+{v  40}
+msg: 09:49:15 {LT22.8784}
+msg: 09:49:15 {LN7.4153}
+msg: 09:49:16 {LA22}
+{lt  0.07}
+msg: 09:49:16 {D2}
+{v  50}
+msg: 09:49:16 {D2}
+{v  60}
+{h127}
+{h126}
+{h127}
+msg: 09:49:18 {D6}
+{s   5}
+msg: 09:49:18 {LT22.8679}
+msg: 09:49:18 {LN7.3937}
+msg: 09:49:19 {LA20}
+{lt  0.07}
+{h131}
+{h132}
+{h133}
+{h134}
+{h135}
+{h136}
+{h137}
+msg: 09:49:21 {LT22.8546}
+msg: 09:49:21 {LN7.3703}
+msg: 09:49:22 {LA22}
+{lt  0.07}
+{h142}
+{h147}
+{h148}
+{h149}
+{h150}
+{h151}
+{h152}
+msg: 09:49:24 {D5}
+{s   0}
+msg: 09:49:24 {LT22.8352}
+msg: 09:49:24 {LN7.3505}
+{h157}
+msg: 09:49:25 {LA21}
+{lt  0.07}
+{h158}
+{h159}
+{h158}
+{h159}
+msg: 09:49:27 {LT22.8110}
+msg: 09:49:27 {LN7.3368}
+msg: 09:49:28 {LA20}
+{lt  0.07}
+msg: 09:49:28 {D2}
+{v  70}
+msg: 09:49:28 {D2}
+{v  80}
+{h160}
+msg: 09:49:28 {D2}
+{v  90}
+{h159}
+{h160}
+msg: 09:49:28 {D2}
+{v 100}
+msg: 09:49:29 {D2}
+msg: 09:49:30 {D2}
+msg: 09:49:30 {LT22.7797}
+msg: 09:49:30 {LN7.3188}
+{h161}
+msg: 09:49:31 {LA21}
+{lt  0.07}
+{h162}
+msg: 09:49:33 {D1}
+{s  -1}
+msg: 09:49:33 {D1}
+{s  -2}
+msg: 09:49:33 {LT22.7390}
+msg: 09:49:33 {LN7.2983}
+{h163}
+msg: 09:49:34 {LA19}
+{lt  0.06}
+{h160}
+{h159}
+{h158}
+msg: 09:49:36 {D5}
+{s   0}
+{h157}
+msg: 09:49:36 {LT22.7002}
+msg: 09:49:36 {LN7.2781}
+msg: 09:49:37 {LA19}
+{lt  0.06}
+{h154}
+{h155}
+msg: 09:49:37 {E2}
+Auto-pilot
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:49:39 {LT22.6613}
+msg: 09:49:39 {LN7.2533}
+{h156}
+{s  -1}
+msg: 09:49:40 {LA21}
+{lt  0.07}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+msg: 09:49:42 {LT22.6231}
+msg: 09:49:42 {LN7.2284}
+msg: 09:49:43 {LA19}
+{lt  0.06}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:49:45 {LT22.5846}
+msg: 09:49:45 {LN7.2025}
+{h156}
+{s  -1}
+msg: 09:49:46 {LA19}
+{lt  0.06}
+{h157}
+{s  -2}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:49:48 {LT22.5464}
+msg: 09:49:48 {LN7.1773}
+{h154}
+{s   1}
+msg: 09:49:49 {LA19}
+{lt  0.06}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:49:51 {LT22.5079}
+msg: 09:49:51 {LN7.1525}
+msg: 09:49:52 {LA19}
+{lt  0.06}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+msg: 09:49:54 {LT22.4698}
+msg: 09:49:54 {LN7.1266}
+msg: 09:49:55 {LA18}
+{lt  0.06}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:49:57 {LT22.4309}
+msg: 09:49:57 {LN7.1010}
+{h156}
+{s  -1}
+msg: 09:49:58 {LA18}
+{lt  0.06}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:50:00 {LT22.3924}
+msg: 09:50:00 {LN7.0747}
+{h156}
+{s  -1}
+msg: 09:50:01 {LA18}
+{lt  0.06}
+{h155}
+{s   0}
+msg: 09:50:03 {LT22.3549}
+msg: 09:50:03 {LN7.0492}
+msg: 09:50:04 {LA18}
+{lt  0.06}
+{h156}
+{s  -1}
+{h157}
+{s  -2}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:50:06 {LT22.3164}
+msg: 09:50:06 {LN7.0247}
+msg: 09:50:07 {LA18}
+{lt  0.06}
+{h154}
+{s   1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+msg: 09:50:09 {LT22.2779}
+msg: 09:50:09 {LN6.9988}
+msg: 09:50:10 {LA17}
+{lt  0.06}
+{h157}
+{s  -2}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+{h156}
+{s  -1}
+{h155}
+{s   0}
+msg: 09:50:12 {E0}
+Standby
+msg: 09:50:12 {LT22.2383}
+msg: 09:50:12 {LN6.9746}
+msg: 09:50:13 {LA17}
+{lt  0.06}
+{h156}
+{h157}
+msg: 09:50:13 {D9}
+{s  36}
+{h158}
+{h159}
+{h160}
+{h161}
+{h162}
+{h163}
+msg: 09:50:15 {LT22.2016}
+msg: 09:50:15 {LN6.9509}
+{h187}
+msg: 09:50:16 {LA17}
+{lt  0.06}
+msg: 09:50:16 {D5}
+{s   0}
+{h188}
+{h190}
+{h226}
+{h228}
+{h230}
+{h231}
+{h232}
+{h233}
+msg: 09:50:18 {LT22.1702}
+msg: 09:50:18 {LN6.9710}
+msg: 09:50:19 {LA16}
+{lt  0.05}
+{h234}
+msg: 09:50:21 {LT22.1396}
+msg: 09:50:21 {LN7.0189}
+{h235}
+msg: 09:50:22 {LA14}
+{lt  0.05}
+msg: 09:50:24 {D1}
+{s  -1}
+{h236}
+msg: 09:50:24 {LT22.1123}
+msg: 09:50:24 {LN7.0567}
+msg: 09:50:25 {LA14}
+{lt  0.05}
+{h234}
+{h233}
+{h234}
+{h233}
+msg: 09:50:27 {D5}
+{s   0}
+{h232}
+{h233}
+msg: 09:50:27 {LT22.0849}
+msg: 09:50:27 {LN7.0949}
+{h231}
+msg: 09:50:28 {LA14}
+{lt  0.05}
+{h232}
+{h233}
+{h232}
+{h231}
+{h232}
+{h231}
+{h232}
+msg: 09:50:30 {LT22.0558}
+msg: 09:50:30 {LN7.1284}
+msg: 09:50:31 {LA18}
+{lt  0.06}
+{h231}
+{h232}
+{h231}
+{h230}
+{h231}
+{h230}
+{h231}
+msg: 09:50:33 {D8}
+{v  90}
+msg: 09:50:33 {D8}
+{v  80}
+msg: 09:50:33 {LT22.0259}
+msg: 09:50:33 {LN7.1644}
+{h230}
+msg: 09:50:34 {LA14}
+{lt  0.05}
+msg: 09:50:34 {D8}
+{v  70}
+msg: 09:50:34 {D8}
+{v  60}
+{h229}
+msg: 09:50:34 {D8}
+{v  50}
+msg: 09:50:36 {D4}
+{s  -5}
+msg: 09:50:36 {LT22.0061}
+msg: 09:50:36 {LN7.1870}
+msg: 09:50:37 {LA14}
+{lt  0.05}
+{h228}
+{h226}
+{h225}
+{h224}
+{h223}
+{h222}
+{h221}
+msg: 09:50:39 {LT21.9935}
+msg: 09:50:39 {LN7.2025}
+{h218}
+msg: 09:50:40 {LA14}
+{lt  0.05}
+{h214}
+msg: 09:50:40 {D5}
+{s   0}
+{h213}
+msg: 09:50:42 {D1}
+{s  -1}
+msg: 09:50:42 {LT21.9766}
+msg: 09:50:42 {LN7.2144}
+msg: 09:50:43 {LA16}
+{lt  0.05}
+{h212}
+{h213}
+{h212}
+msg: 09:50:43 {D1}
+{s  -2}
+{h213}
+{h212}
+msg: 09:50:45 {LT21.9614}
+msg: 09:50:45 {LN7.2263}
+{h211}
+msg: 09:50:46 {LA14}
+{lt  0.05}
+{h210}
+{h209}
+{h208}
+msg: 09:50:48 {LT21.9420}
+msg: 09:50:48 {LN7.2356}
+{h206}
+msg: 09:50:49 {LA14}
+{lt  0.05}
+{h205}
+{h204}
+msg: 09:50:51 {D0}
+{v   0}
+msg: 09:50:51 {LT21.9236}
+msg: 09:50:51 {LN7.2439}
+{h202}
+msg: 09:50:52 {LA14}
+{lt  0.05}
+msg: 09:50:54 {LT21.9222}
+msg: 09:50:54 {LN7.2446}
+msg: 09:50:55 {LA297}
+{lt  0.97}
+msg: 09:50:57 {LT21.9218}
+msg: 09:50:57 {LN7.2378}
+msg: 09:50:58 {LA895}
+{lt  2.94}
+{h203}
+{h202}
+{h171}
+{h168}
+{h166}
+{h163}
+{h160}
+{h158}
+{h155}
+{h152}
+{h149}
+{h146}
+{h143}
+{h140}
+{h137}
+{h134}
+{h131}
+{h128}
+{h125}
+{h123}
+{h121}
+{h120}
+{h119}
+{h117}
+msg: 09:51:00 {LT21.9139}
+msg: 09:51:00 {LN7.2266}
+{h116}
+msg: 09:51:01 {LA383}
+{lt  1.26}
+msg: 09:51:03 {LT21.9013}
+msg: 09:51:03 {LN7.2180}
+msg: 09:51:04 {LA244}
+{lt  0.80}
+msg: 09:51:06 {LT21.8927}
+msg: 09:51:06 {LN7.2043}
+msg: 09:51:07 {LA387}
+{lt  1.27}
+msg: 09:51:08 {LT21.8934}
+msg: 09:51:08 {LN7.1863}
+msg: 09:51:09 {LA247}
+{lt  0.81}
+msg: 09:51:11 {LT21.8974}
+msg: 09:51:11 {LN7.1723}
+msg: 09:51:12 {LA226}
+{lt  0.74}
+msg: 09:51:14 {LT21.8963}
+msg: 09:51:14 {LN7.1658}
+msg: 09:51:15 {LA155}
+{lt  0.51}
