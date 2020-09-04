@@ -13,6 +13,8 @@ kit = ServoKit(channels = 16)
 
 import serial
 import math
+import time
+
 from roboclaw import Roboclaw
 
 class motor_driver_ada:
@@ -76,9 +78,9 @@ class motor_driver_ada:
                 self.rc.ForwardM2(address, vx)
         else:
             if (m12 == 1):
-                self.rc.BackwardM1(address, vx)
+                self.rc.BackwardM1(address, abs(vx))
             else:
-                self.rc.BackwardM2(address, vx)
+                self.rc.BackwardM2(address, abs(vx))
 
     '''
     def turn_motor(self, address, v, av1, av2):
@@ -208,9 +210,10 @@ class motor_driver_ada:
             self.set_motor(0x80, vel, 1, 1)
             self.set_motor(0x81, vel, 1, 1)
             self.set_motor(0x82, vel, 1, 1)
+            time.sleep(0.2)
             self.set_motor(0x80, vel, 1, 2)
             self.set_motor(0x81, vel, 1, 2)
-            self.aet_motor(0x82, vel, 1, 2)
+            self.set_motor(0x82, vel, 1, 2)
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
 
