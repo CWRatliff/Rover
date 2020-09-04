@@ -13,6 +13,7 @@ kit = ServoKit(channels = 16)
 
 import serial
 import math
+import struct
 from roboclaw import Roboclaw
 
 class motor_driver_ada:
@@ -67,20 +68,6 @@ class motor_driver_ada:
         print("servo lr ="+str(self.lr_motor.angle))
 #       self.turn_motor(0x80, vel, voc, 1)
 
-    def set_motor(self, address, v, av, m12):
-        vx = int(v * av)
-        if (v >= 0):
-            if (m12 == 1):
-                self.rc.ForwardM1(address, vx)
-            else:
-                self.rc.ForwardM2(address, vx)
-        else:
-            if (m12 == 1):
-                self.rc.BackwardM1(address, vx)
-            else:
-                self.rc.BackwardM2(address, vx)
-
-    '''
     def turn_motor(self, address, v, av1, av2):
         v1 = int(v * av1)
         v2 = int(v * av2)
@@ -95,15 +82,11 @@ class motor_driver_ada:
 #             self.M1Backward(address, abs(v1))
 #             self.M2Backward(address, abs(v2))
 #       print("m1, m2 = "+str(v1)+", "+str(v2))
-    '''
-    
+
     def stop_all(self):
-        self.set_motor(0X80, 0, 0, 1)
-        self.set_motor(0X81, 0, 0, 1)
-        self.set_motor(0X82, 0, 0, 1)
-        self.set_motor(0X80, 0, 0, 2)
-        self.set_motor(0X81, 0, 0, 2)
-        self.set_motor(0X82, 0, 0, 2)
+        self.turn_motor(0X80, 0, 0, 0)
+        self.turn_motor(0X81, 0, 0, 0)
+        self.turn_motor(0X82, 0, 0, 0)
 
     def motor_speed(self):
         speed1 = self.rc.ReadSpeedM1(0x80)
@@ -166,15 +149,9 @@ class motor_driver_ada:
             self.rf_motor.angle = self.rfbias - phi
             self.lr_motor.angle = self.lrbias + steer
             self.rr_motor.angle = self.rrbias + phi
-#            self.turn_motor(0x80, vel, voc, 1)          #RC 1 - rf, rm
-#            self.turn_motor(0x81, vel, voc, vic)        #RC 2 - lm, lf
-#            self.turn_motor(0x82, vel, vim, vic)        #RC 3 - rr, lr
-            self.set_motor(0x80, vel, voc, 1)           #RC 1 - rf, rm
-            self.set_motor(0x81, vel, voc, 1)           #RC 2 - lm, lf
-            self.set_motor(0x82, vel, vim, 1)           #RC 3 - rr, lr
-            self.set_motor(0x80, vel,   1, 2)           #RC 1 - rf, rm
-            self.set_motor(0x81, vel, vic, 2)           #RC 2 - lm, lf
-            self.set_motor(0x82, vel, vic, 2)           #RC 3 - rr, lr
+            self.turn_motor(0x80, vel, voc, 1)          #RC 1 - rf, rm
+            self.turn_motor(0x81, vel, voc, vic)        #RC 2 - lm, lf
+            self.turn_motor(0x82, vel, vim, vic)        #RC 3 - rr, lr
 #            cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
 #            self.log.write(cstr)
 
@@ -184,15 +161,9 @@ class motor_driver_ada:
             self.rf_motor.angle = self.rfbias - steer
             self.lr_motor.angle = self.lrbias + phi
             self.rr_motor.angle = self.rrbias + steer
-#            self.turn_motor(0x80, vel, vic, vim)
-#            self.turn_motor(0x81, vel, vic, voc)
-#            self.turn_motor(0x82, vel, 1, voc)
-            self.set_motor(0x80, vel, vic, 1)
-            self.set_motor(0x81, vel, vic, 1)
-            self.set_motor(0x82, vel,   1, 1)
-            self.set_motor(0x80, vel, vim, 2)
-            self.set_motor(0x81, vel, voc, 2)
-            self.set_motor(0x82, vel, voc, 2)
+            self.turn_motor(0x80, vel, vic, vim)
+            self.turn_motor(0x81, vel, vic, voc)
+            self.turn_motor(0x82, vel, 1, voc)
             #            print("80 vic, vim ",vic,vim)
 #            print("81 vic, voc ",vic,voc)
 #            print("82 vom, voc ", 1, voc)
@@ -205,12 +176,9 @@ class motor_driver_ada:
             self.rf_motor.angle = self.rfbias
             self.lr_motor.angle = self.lrbias
             self.rr_motor.angle = self.rrbias
-            self.set_motor(0x80, vel, 1, 1)
-            self.set_motor(0x81, vel, 1, 1)
-            self.set_motor(0x82, vel, 1, 1)
-            self.set_motor(0x80, vel, 1, 2)
-            self.set_motor(0x81, vel, 1, 2)
-            self.aet_motor(0x82, vel, 1, 2)
+            self.turn_motor(0x80, vel, 1, 1)
+            self.turn_motor(0x81, vel, 1, 1)
+            self.turn_motor(0x82, vel, 1, 1)
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
 
