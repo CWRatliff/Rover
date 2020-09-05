@@ -13,8 +13,6 @@ kit = ServoKit(channels = 16)
 
 import serial
 import math
-import time
-
 from roboclaw import Roboclaw
 
 class motor_driver_ada:
@@ -30,7 +28,7 @@ class motor_driver_ada:
         self.d2 = 10.5          #mid axle to fwd axle
         self.d3 = 10.5          #mid axle to rear axle
         self.d4 = 10.073        #C/L to mid wheels
-        
+        self.speedfactor = 80   # 8000 counts at 100%
         self.rr_motor = kit.servo[0]
         self.rf_motor = kit.servo[1]
         self.lf_motor = kit.servo[2]
@@ -71,16 +69,11 @@ class motor_driver_ada:
 
     def set_motor(self, address, v, av, m12):
         vx = int(v * av)
-        if (v >= 0):
-            if (m12 == 1):
-                self.rc.ForwardM1(address, vx)
-            else:
-                self.rc.ForwardM2(address, vx)
+        if (m12 == 1):
+            self.rc.SpeedM1(address, vx)
         else:
-            if (m12 == 1):
-                self.rc.BackwardM1(address, abs(vx))
-            else:
-                self.rc.BackwardM2(address, abs(vx))
+            self.rc.SpeedM2(address, vx)
+
 
     '''
     def turn_motor(self, address, v, av1, av2):
@@ -140,8 +133,8 @@ class motor_driver_ada:
             steer = self.left_limit
         if (steer > self.right_limit):
             steer = self.right_limit
-#        vel = speed * 1.27
-        vel = speed * 1.26
+#        vel = speed * 1.26
+        vel = self.speedfactor * speed
         voc = 0
         vic = 0
         #roboclaw speed limit 0 to 127
@@ -210,10 +203,9 @@ class motor_driver_ada:
             self.set_motor(0x80, vel, 1, 1)
             self.set_motor(0x81, vel, 1, 1)
             self.set_motor(0x82, vel, 1, 1)
-            time.sleep(0.2)
             self.set_motor(0x80, vel, 1, 2)
             self.set_motor(0x81, vel, 1, 2)
-            self.set_motor(0x82, vel, 1, 2)
+            self.aet_motor(0x82, vel, 1, 2)
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
 
