@@ -103,27 +103,30 @@ class motor_driver_ada:
     def motor_speed(self):
         speed1 = self.rc.ReadSpeedM1(0x80)
         speed2 = self.rc.ReadSpeedM2(0x80)
-        self.log.write("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
-        print("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
+        self.log.write("motor speed = %d, %d" % (speed1[1], speed2[1]))
+        print("motor speed = %d, %d" % (speed1[1], speed2[1]))
         speed1 = self.rc.ReadSpeedM1(0x81)
         speed2 = self.rc.ReadSpeedM2(0x81)
-        self.log.write("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
-        print("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
+        self.log.write("motor speed = %d, %d" % (speed1[1], speed2[1]))
+        print("motor speed = %d, %d" % (speed1[1], speed2[1]))
         speed1 = self.rc.ReadSpeedM1(0x82)
         speed2 = self.rc.ReadSpeedM2(0x82)
-        self.log.write("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
-        print("motor speed = %d, %d\n" % (speed1[1], speed2[1]))
+        self.log.write("motor speed = %d, %d" % (speed1[1], speed2[1]))
+        print("motor speed = %d, %d" % (speed1[1], speed2[1]))
         volts = self.rc.ReadMainBatteryVoltage(0x80)[1]/10.0
         print("Voltage = ",volts)
-        err=self.rc.ReadError(0x80)
+        err = self.rc.ReadError(0x80)[1]
         if err:
             print("status of 0x80", err)
-        err=self.rc.ReadError(0x81)
+            self.log.write("0x80 error: %d" % err)
+        err = self.rc.ReadError(0x81)[1]
         if err:
             print("status of 0x81", err)
-        err=self.rc.ReadError(0x82)
+            self.log.write("0x81 error: %d" % err)
+        err = self.rc.ReadError(0x82)[1]
         if err:
             print("status of 0x82", err)
+            self.log.write("0x82 error: %d" % err)
         
 
 # based on speed & steer, command all motors
@@ -205,7 +208,7 @@ class motor_driver_ada:
             self.set_motor(0x82, vel, 1, 1)
             self.set_motor(0x80, vel, 1, 2)
             self.set_motor(0x81, vel, 1, 2)
-            self.aet_motor(0x82, vel, 1, 2)
+            self.set_motor(0x82, vel, 1, 2)
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
 
