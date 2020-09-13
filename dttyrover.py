@@ -62,6 +62,7 @@ oldsteer = 500
 oldspeed = 500
 oldhdg = 500
 compass_adjustment = 12                 # Camarillo declination
+compass_bias = 5                        # rover allignment
 
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
@@ -87,7 +88,7 @@ right_limit = 36
 auto = False
 flag = False
 rteflag = False
-wptflag = False
+mainwptflag = False
 
 rtseg = 0
 routes = [[0,0],                    #0
@@ -111,7 +112,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [18.393, 6.283, "longe center"],    #19
 [18.181, 7.900, "stall ctr"],       #20
 [21.174, 6.110, "E dway start"],    #21
-[22.227, 6.883, "horse gravel"],    #22
+[22.227, 6.883, "horse gravel"],    #main22
 [22.846, 7.390, "trash"],           #23
 [22.599, 7.159, "EF east entry"],   #24    global trackRV
 
@@ -479,7 +480,7 @@ try:
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     hdg = int(cbuff[2:msglen-1])
-                    hdg = (hdg + compass_adjustment)%360
+                    hdg = (hdg + compass_adjustment + compass_bias)%360
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
