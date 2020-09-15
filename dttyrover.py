@@ -80,7 +80,7 @@ latitude = math.radians(34.24)          # Camarillo
 latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
-segstart = 0                            # speed segment start (seconds)
+segstart = time.time()                  # speed segment start (seconds)
 #spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
 spdfactor = .0122                       # for 43 RPM
 #spdfactor = .017                        # for 60 RPM
@@ -98,7 +98,7 @@ rtseg = 0
 routes = [[0,0],                    #0
 [28, 27, 0],                        #1
 [28, 27, 26, 0],                    #2
-[14, 15, 16, 17, 0],                #3
+[28, 30, 29, 31, 27, 28, 0],        #3
 [0]]
           
 wptdist = 0.0
@@ -123,7 +123,10 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [20.804, 7.949, "ref corner - F"],  #25
 [20.984, 7.713, "hose bib - F"],    #26
 [21.491, 7.646, "rose bush - F"],   #27
-[22.039, 7.401, "boat corner -F"],  #28
+[22.039, 7.401, "boat corner - F"], #28
+[22.461, 8.176, "EF middle - F"],   #29
+[22.319, 7.696, "office gap"],      #30
+[22.003, 7.820, "EF rose gap"],     #31
 [11,12]]
 
 version = "Rover 1.0 200819\n"
