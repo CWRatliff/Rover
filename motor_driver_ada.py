@@ -130,7 +130,7 @@ class motor_driver_ada:
     def battery_voltage(self):
         volts = self.rc.ReadMainBatteryVoltage(0x80)[1]/10.0
         print("Voltage = ",volts)
-        self.log.write("Voltage: %d" % volts)
+        self.log.write("Voltage: %5.1f\n" % volts)
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):

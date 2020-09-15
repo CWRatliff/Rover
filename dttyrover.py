@@ -56,7 +56,8 @@ steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
 azimuth = 0                             # desired course
 epoch = time.time()
-hdg = 0                                 #true compass heading
+hdg = 0                                 # true compass heading
+travel = 0                              # odometer
 
 oldsteer = 500
 oldspeed = 500
@@ -79,6 +80,7 @@ latitude = math.radians(34.24)          # Camarillo
 latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
+segstart = 0                            # speed segment start (seconds)
 #spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
 spdfactor = .0122                       # for 43 RPM
 #spdfactor = .017                        # for 60 RPM
@@ -132,6 +134,7 @@ log = open("logfile.txt", 'a')
 log.write(version)
 #log.write(tme)
 robot = motor_driver_ada.motor_driver_ada(log)
+robot.battery_voltage()
 Kfilter = cEKF.Kalman_filter()
 port = "/dev/ttyUSB0"
 tty = serial.Serial(port, 9600)
@@ -166,6 +169,15 @@ def readusb():
     except UnicodeDecodeError:
         print("Woops")
         return (0)
+#==================================================================
+def odometer(spd):
+    global travel
+    global segstart
+    
+    now = time.time()
+    delT = now - segstart
+    travel += delT * spdfactor * abs(spd)
+    segstart = now
 #==================================================================
 def max_turn(angle):
     global steer
@@ -227,6 +239,7 @@ def simple_commands(schr):
     
     if schr == '0':                     # 0 - stop 
         speed = 0
+        odometer(0)
         robot.motor(speed, steer)
 
     elif schr == '1':                   # 1 - Left
@@ -239,6 +252,7 @@ def simple_commands(schr):
             
     elif schr == '2':                   # 2 - Forward
         if speed <= 90:
+            odometer(speed)
             speed += 10
             robot.motor(speed, steer)
 
@@ -293,6 +307,7 @@ def simple_commands(schr):
  
     elif schr == '8':                   # 8 -  Reverse
         if speed >= -90:
+            odometer(speed)
             speed -= 10
             robot.motor(speed, steer)
 
@@ -436,6 +451,7 @@ try:
                             logit("Standby")
                             sendit("{d----}")
                             sendit("{c---}")
+                            odometer(speed)
                             speed = 0
                             robot.motor(speed, steer)
                         elif (wpt > 0 and wpt < 4):   # start of route
@@ -570,6 +586,7 @@ try:
                                 logit("Standby")
                                 wptflg = False
                                 rteflag = False
+                                odometer(speed)
                                 speed = 0
                                 auto = False
                             else:
@@ -579,6 +596,7 @@ try:
                             sendit("{aStby}")
                             logit("Standby")
                             wptflag =  False
+                            odometer(speed)
                             speed = 0
                             auto = False
                         #endif dtg ===================
@@ -620,6 +638,7 @@ try:
 finally:
     robot.motor(0,0)
     robot.battery_voltage()
+    print("odometer: %7.1f" % travel)
     log.close()
     cstr = "{aStop}"
     tty.write(cstr.encode("utf-8"))
