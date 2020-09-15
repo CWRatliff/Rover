@@ -113,8 +113,7 @@ class motor_driver_ada:
         speed2 = self.rc.ReadSpeedM2(0x82)
         self.log.write("motor speed = %d, %d" % (speed1[1], speed2[1]))
         print("motor speed = %d, %d" % (speed1[1], speed2[1]))
-        volts = self.rc.ReadMainBatteryVoltage(0x80)[1]/10.0
-        print("Voltage = ",volts)
+        self.battery_voltage()
         err = self.rc.ReadError(0x80)[1]
         if err:
             print("status of 0x80", err)
@@ -127,7 +126,11 @@ class motor_driver_ada:
         if err:
             print("status of 0x82", err)
             self.log.write("0x82 error: %d" % err)
-        
+            
+    def battery_voltage(self):
+        volts = self.rc.ReadMainBatteryVoltage(0x80)[1]/10.0
+        print("Voltage = ",volts)
+        self.log.write("Voltage: %d" % volts)
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):

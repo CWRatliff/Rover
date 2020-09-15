@@ -79,7 +79,9 @@ latitude = math.radians(34.24)          # Camarillo
 latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
-spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
+#spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
+spdfactor = .0122                       # for 43 RPM
+#spdfactor = .017                        # for 60 RPM
 
 left = False
 left_limit = -36
@@ -112,9 +114,9 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [18.393, 6.283, "longe center"],    #19
 [18.181, 7.900, "stall ctr"],       #20
 [21.174, 6.110, "E dway start"],    #21
-[22.227, 6.883, "horse gravel"],    #main22
+[22.227, 6.883, "horse gravel"],    #22
 [22.846, 7.390, "trash"],           #23
-[22.599, 7.159, "EF east entry"],   #24    global trackRV
+[22.599, 7.159, "EF east entry"],   #24
 
 [20.804, 7.949, "ref corner - F"],  #25
 [20.984, 7.713, "hose bib - F"],    #26
@@ -171,7 +173,6 @@ def max_turn(angle):
     global left_limit
     global right_limit
     
-    global trackRV
     dt = 1
     if (angle < 0):
         if steer > (left_limit + 1):
@@ -179,14 +180,14 @@ def max_turn(angle):
                 steer -= dt
                 robot.motor(speed, steer)
                 time.sleep(0.05)
-        robot.motor(speed, steer)
+#        robot.motor(speed, steer)
     else:
         if steer < (right_limit + 1):
             while (steer < right_limit):
                 steer += dt
                 robot.motor(speed, steer)
                 time.sleep(0.05)
-        robot.motor(speed, steer)
+#        robot.motor(speed, steer)
     return
 #===================================================================
 def new_waypoint(nwpt):
@@ -618,6 +619,7 @@ try:
 
 finally:
     robot.motor(0,0)
+    robot.battery_voltage()
     log.close()
     cstr = "{aStop}"
     tty.write(cstr.encode("utf-8"))
