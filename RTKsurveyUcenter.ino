@@ -48,6 +48,7 @@ void setup() {
 
   pack.payload = &payload[0];
   Serial.begin(115200);
+//  Serial1.begin(38400);          // xbee
   Serial1.begin(19200);          // xbee
   //  while (!Serial); //Wait for user to open terminal
   Serial.println("NTRIP base station 200816");
