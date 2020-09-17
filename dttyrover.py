@@ -129,7 +129,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.003, 7.820, "EF rose gap"],     #31
 [11,12]]
 
-version = "Rover 1.0 200819\n"
+version = "Rover 1.0 200917\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -464,7 +464,7 @@ try:
                             wptflag = True
                             wpt = routes[route][rtseg]
                             new_waypoint(wpt)
-                        elif (wpt >= 10 and wpt <= 28): #start of waypoint
+                        elif (wpt >= 10 and wpt <= 31): #start of waypoint
                             new_waypoint(wpt)
                         else:
                             pass
@@ -642,6 +642,7 @@ finally:
     robot.motor(0,0)
     robot.battery_voltage()
     print("odometer: %7.1f" % travel)
+    logit("odometer: %7.1f" % travel)
     log.close()
     cstr = "{aStop}"
     tty.write(cstr.encode("utf-8"))
