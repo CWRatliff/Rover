@@ -378,6 +378,8 @@ def diag_commands(schr):
     if (schr == '0'):
         logit("diagnostic #1 =======================")
         robot.motor_speed()
+        print("odometer: %7.1f" % travel)
+        logit("odometer: %7.1f" % travel)
         log.flush()
     return
 
