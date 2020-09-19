@@ -12,6 +12,7 @@
 #200412 - restructure flag and auto blocks for faster EKF
 #200813 - wpts upgrade, code improvements esp. route & U'ies
 #200819 - switch to vector ops, better waypoint convergence
+#200919 - Kalman time linked to gps input
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -56,6 +57,7 @@ steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
 azimuth = 0                             # desired course
 epoch = time.time()
+gpsEpoch = epoch
 hdg = 0                                 # true compass heading
 travel = 0                              # odometer
 
@@ -129,7 +131,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.003, 7.820, "EF rose gap"],     #31
 [11,12]]
 
-version = "Rover 1.0 200917\n"
+version = "Rover 1.0 200919\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -482,6 +484,7 @@ try:
                         elif xchr == 'N':
                             ilonsec = x
                             posAV = vlatlon(ilatsec, ilonsec)
+                            gpsEpoch = time.time()
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
                             if (accgps < 50):
@@ -527,8 +530,10 @@ try:
                     logit("raw L/L: " + str(ilatsec) + "/" + str(ilonsec))
                     logit("raw hdg: %6.1f" % hdg)
                     logit("raw speed: %5.3f" % v)
-                    xEst = Kfilter.Kalman_step(time.time(), posAV[0], \
+                    xEst = Kfilter.Kalman_step(gpsEpoch, posAV[0], \
                             posAV[1], phi, v)
+#                    xEst = Kfilter.Kalman_step(time.time(), posAV[0], \
+#                            posAV[1], phi, v)
                     flonsec = xEst[0, 0] / lonfeet
                     flatsec = xEst[1, 0] / latfeet
                     fhdg = (450 - math.degrees(xEst[2, 0])) % 360
