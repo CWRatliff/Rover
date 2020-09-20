@@ -512,6 +512,8 @@ try:
                     xchr = cbuff[2]
                     if (xchr == '1'):
                         exit()
+                    if (xchr == '2'):
+                        log.seek(0)            # reset logfile
                     diag_commands(xchr)
 #=========================================================================                    
                 else:
