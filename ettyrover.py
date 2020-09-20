@@ -514,6 +514,14 @@ try:
                         exit()
                     if (xchr == '2'):
                         log.seek(0)            # reset logfile
+                    if (xchr == '3'):
+                        print("IMU non-op")
+                        logit("IMU non-op")
+                        exit()
+                    if (xchr == '4'):
+                        print("GPS non-op")
+                        logit("GPS non-op")
+                        exit()
                     diag_commands(xchr)
 #=========================================================================                    
                 else:
