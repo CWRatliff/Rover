@@ -95,7 +95,7 @@ right_limit = 36
 auto = False
 flag = False
 rteflag = False
-mainwptflag = False
+wptflag = False
 
 rtseg = 0
 routes = [[0,0],                    #0
@@ -348,6 +348,7 @@ def star_commands(schr):
         logit("az set to %d" % azimuth)
     elif (schr == '2'):               #autopilot on
         auto = True
+        wptflag = False
         azimuth = hdg
         sendit("{aAuto}")
         logit("Auto-pilot")
@@ -379,7 +380,6 @@ def diag_commands(schr):
     if (schr == '0'):
         logit("diagnostic #1 =======================")
         robot.motor_speed()
-        print("odometer: %7.1f" % travel)
         logit("odometer: %7.1f" % travel)
         log.flush()
     return
@@ -669,7 +669,6 @@ try:
 finally:
     robot.motor(0,0)
     robot.battery_voltage()
-    print("odometer: %7.1f" % travel)
     logit("odometer: %7.1f" % travel)
     log.close()
     cstr = "{aStop}"
