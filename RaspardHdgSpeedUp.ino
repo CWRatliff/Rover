@@ -66,6 +66,8 @@ void CheckIMU() {
 
 //=======================================================================
 void setup() {
+  boolean imu;
+  boolean gps;
   Serial.begin(115200);
   Serial.println("RaspardHdgSpeedup");
   Serial1.begin(9600);        // XBee
@@ -73,10 +75,27 @@ void setup() {
 
 
   Wire.begin();
-  myIMU.begin();
+  Wire.setClock(400000);
+  for (int i = 0; i < 3; i++) {
+    imu = myIMU.begin();
+    if (imu)
+      break;
+    }
+  if (imu == FALSE)
+    Serial2.write("{T3}");
+
   myIMU.enableRotationVector(50); //Send data update every 50ms
-  myGPS.begin();
+
+  for (int i = 0; i < 3; i++) {
+    imu = myGPS.begin();
+    if (gps)
+      break;
+    }
+  if (gps == FALSE)
+    Serial2.write("{T4}");
+    
   myGPS.setI2COutput(COM_TYPE_UBX); //Set the I2C port to output UBX
+  myGPS.setNavigationFrequency(10); // 10 Hz
   myGPS.saveConfiguration(); //Save the current settings to flash and BBR
   gpsepoch = millis();
 }
@@ -160,19 +179,20 @@ void loop() {
     return;
     }
   if (gpsphase == 4) {
-    long accuracy = myGPS.getVerticalAccuracy();
+/*    long accuracy = myGPS.getVerticalAccuracy();
     sprintf(str, "{LV%ld}", accuracy);
     Serial.println(str);
     gpsphase = 5;
     return;
     }
   // else if gpsphase == 5
-
-  long accuracy = myGPS.getHorizontalAccuracy(150);
-  if (accuracy > 0) {
-    sprintf(str, "{LA%ld}", accuracy);
-    Serial2.write(str);
-    Serial.println(str);
+*/
+    long accuracy = myGPS.getHorizontalAccuracy() / 10;
+    if (accuracy > 0) {
+      sprintf(str, "{LA%ld}", accuracy);
+      Serial2.write(str);
+      Serial.println(str);
+      }
     }
   gpsepoch = millis();
   gpsphase = 0;

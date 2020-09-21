@@ -194,34 +194,36 @@ void setup() {
   lcd.setCursor(0, 0);
   lcd.print("Precise fix"           );
 
-  alt = myGPS.getAltitude() / 10;  // alt in cm's
-
-  // N.B. beware deprication to VALSET
-  pack.cls = UBX_CLASS_CFG;
-  pack.id = UBX_CFG_TMODE3;
-  pack.len = 40;
-  pack.startingSpot = 0;
-  for (int i = 0; i < 40; i++)
-    payload[i] = 0;
-  payload[2] = 2;       // FIXED mode
-  payload[3] = 1;       // pos in lat/lon/alt
-  payload[4] = lat & 0xff;
-  payload[5] = lat >> 8;
-  payload[6] = lat >> 16;
-  payload[7] = lat >> 24;
-  payload[8] = lng & 0xff;
-  payload[9] = lng >> 8;
-  payload[10] = lng >> 16;
-  payload[11] = lng >> 24;
-  payload[12] = alt & 0xff;
-  payload[13] = alt >> 8;
-  payload[14] = alt >> 16;
-  payload[15] = alt >> 24;
-  pack.payload = &payload[0];
-
-//  myGPS.enableDebugging();
-  response = myGPS.sendCommand(&pack);
-  myGPS.disableDebugging();
+  if (mode != 3) {
+    alt = myGPS.getAltitude() / 10;  // alt in cm's
+  
+    // N.B. beware deprication to VALSET
+    pack.cls = UBX_CLASS_CFG;
+    pack.id = UBX_CFG_TMODE3;
+    pack.len = 40;
+    pack.startingSpot = 0;
+    for (int i = 0; i < 40; i++)
+      payload[i] = 0;
+    payload[2] = 2;       // FIXED mode
+    payload[3] = 1;       // pos in lat/lon/alt
+    payload[4] = lat & 0xff;
+    payload[5] = lat >> 8;
+    payload[6] = lat >> 16;
+    payload[7] = lat >> 24;
+    payload[8] = lng & 0xff;
+    payload[9] = lng >> 8;
+    payload[10] = lng >> 16;
+    payload[11] = lng >> 24;
+    payload[12] = alt & 0xff;
+    payload[13] = alt >> 8;
+    payload[14] = alt >> 16;
+    payload[15] = alt >> 24;
+    pack.payload = &payload[0];
+  
+  //  myGPS.enableDebugging();
+    response = myGPS.sendCommand(&pack);
+    myGPS.disableDebugging();
+  }
   if (response == true)
     Serial.println(F("Survey valid!"));
   Serial.println("TMODE3 set");
