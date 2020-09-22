@@ -59,6 +59,7 @@ speed = 0                               # current speed plus->forward
 azimuth = 0                             # desired course
 epoch = time.time()
 gpsEpoch = epoch
+oldEpoch = epoch
 hdg = 0                                 # true compass heading
 travel = 0                              # odometer
 
@@ -535,26 +536,27 @@ try:
         if (auto):
                      
             if (time.time() > (epoch + 1)):     #once per sec
-#                epoch = time.time()
+                oldEpoch = epoch
+                epoch = time.time()
 
                 if wptflag:
                     v = speed * spdfactor
                     phi = math.radians((450-hdg) % 360)
-                    if (gpsEpoch < epoch):          # no recent GPS lat/lon
+                    if (gpsEpoch < oldEpoch):          # no recent GPS lat/lon
                         delt = epoch - gpsEpoch
                         dist = delt * v
                         xd = dist * math.sin(phi)
                         yd = dist * math.cos(phi)
-                        ilatsec += xd / latfeet
-                        ilonsec += yd / lonfeet
+                        ilatsec = flatsec + yd / latfeet
+                        ilonsec = flonsec + xd / lonfeet
                         logit("DR lat/lon: " + str(ilatsec) + "/" + str(ilonsec))
                     else:    
                         logit("raw L/L: " + str(ilatsec) + "/" + str(ilonsec))
                         
-                    logit("time: " + str(time.time()))
+                    logit("time: " + str(epoch))
                     logit("raw hdg: %6.1f" % hdg)
                     logit("raw speed: %5.3f" % v)
-                    xEst = Kfilter.Kalman_step(time.time(), posAV[0], \
+                    xEst = Kfilter.Kalman_step(epoch, posAV[0], \
                             posAV[1], phi, v)
                     flonsec = xEst[0, 0] / lonfeet
                     flatsec = xEst[1, 0] / latfeet
@@ -631,7 +633,6 @@ try:
                             auto = False
                         #endif dtg ===================
                     #endif wptflag ===================
-                epoch = time.time()
                 #endif epoch timer ===================
                                 
             steer = int(azimuth - hdg)
