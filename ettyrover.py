@@ -14,6 +14,7 @@
 #200819 - switch to vector ops, better waypoint convergence
 #200919 - Kalman time linked to gps input
 #200920 - Dead Reconning when no recent GPS
+#200922 - routes track from wpt to wpt (except at start)
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -219,7 +220,7 @@ def new_waypoint(nwpt):
     global wptflag
     global epoch
     
-    startAV = posAV
+#    startAV = posAV
     vprint("track start", startAV)
     destAV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
@@ -469,8 +470,10 @@ try:
                             rtseg = 0
                             wptflag = True
                             wpt = routes[route][rtseg]
+                            startAV = posAV
                             new_waypoint(wpt)
                         elif (wpt >= 10 and wpt <= 31): #start of waypoint
+                            startAV = posAV
                             new_waypoint(wpt)
                         else:
                             pass
@@ -543,7 +546,7 @@ try:
                     v = speed * spdfactor
                     phi = math.radians((450-hdg) % 360)
                     if (gpsEpoch < oldEpoch):          # no recent GPS lat/lon
-                        delt = epoch - gpsEpoch
+                        delt = epoch - oldEpoch
                         dist = delt * v
                         xd = dist * math.sin(phi)
                         yd = dist * math.cos(phi)
@@ -622,6 +625,7 @@ try:
                                 speed = 0
                                 auto = False
                             else:
+                                startAV = destAV
                                 new_waypoint(wpt)
 
                         else:
