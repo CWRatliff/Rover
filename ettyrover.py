@@ -79,6 +79,7 @@ flonsec = 0.0
 filterRV = [0, 0]                       # Kalman filtered loc
 posAV = [0, 0]                          # gps position
 startAV = [0, 0]                        # waypoint track start
+destAV = [0, 0]                         # waypoint destination
 trackRV = [0, 0]                        # waypoint path from initial position to destination
 
 latitude = math.radians(34.24)          # Camarillo
@@ -213,6 +214,7 @@ def max_turn(angle):
 def new_waypoint(nwpt):
     global posAV
     global startAV
+    global destAV
     global trackRV
     global azimuth
     global wptdist
