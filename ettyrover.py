@@ -131,10 +131,10 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.039, 7.401, "boat corner - F"], #28
 [22.461, 8.176, "EF middle - F"],   #29
 [22.319, 7.696, "office gap"],      #30
-[22.003, 7.820, "EF rose gap"],     #31
+[22.003, 7.800, "EF rose gap"],     #31
 [11,12]]
 
-version = "Rover 1.0 200919\n"
+version = "Rover 1.0 200923\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -519,11 +519,9 @@ try:
                     if (xchr == '2'):
                         log.seek(0)            # reset logfile
                     if (xchr == '3'):
-                        print("IMU non-op")
                         logit("IMU non-op")
                         exit()
                     if (xchr == '4'):
-                        print("GPS non-op")
                         logit("GPS non-op")
                         exit()
                     diag_commands(xchr)
@@ -533,8 +531,7 @@ try:
                 #
             flag = False
             cbuff = ""
-            # endif flag        module = self._original_import(*args, **kw)
-
+            # endif flag
 #======================================================================
         if (auto):
                      
@@ -589,7 +586,7 @@ try:
                         xtrk = 0
                     azimuth = vcourse(aimRV)
 
-                    vprint("wpt target vector", aimRV)
+                    vprint("wpt aim vector", aimRV)
                     logit("az set to %d" % azimuth)
 
                     cstr = "{d%5.1f} " % dtg
@@ -600,12 +597,12 @@ try:
                     sendit(cstr)
                     logit(cstr)
 
-                    if (xtrk < 1000 and xtrk > -1000):
+                    if (xtrk < 1000):
                         cstr = "{ln%5.1f} " % xtrk   #send to controller
                         sendit(cstr)
                         logit(cstr)
  
-                    if (accgps < 1000 and accgps > -1000):
+                    if (accgps < 1000):
                         cstr = "{lt%5.1f} " % accgps    #send to controller
                         sendit(cstr)
                         logit(cstr)
@@ -625,7 +622,7 @@ try:
                                 speed = 0
                                 auto = False
                             else:
-                                startAV = destAV
+                                startAV = destAV       # new wpt start = old wpt end
                                 new_waypoint(wpt)
 
                         else:
