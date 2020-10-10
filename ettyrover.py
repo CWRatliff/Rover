@@ -15,6 +15,7 @@
 #200919 - Kalman time linked to gps input
 #200920 - Dead Reconning when no recent GPS
 #200922 - routes track from wpt to wpt (except at start)
+#201009 - dodging obstacles
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -76,6 +77,7 @@ flatsec = 0.0                           # Kalman filtered lat/lon
 flonsec = 0.0
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
+aimRV = [0, 0]                          # aim point
 filterRV = [0, 0]                       # Kalman filtered loc
 posAV = [0, 0]                          # gps position
 startAV = [0, 0]                        # waypoint track start
@@ -105,6 +107,7 @@ routes = [[0,0],                    #0
 [28, 27, 0],                        #1
 [28, 27, 26, 0],                    #2
 [28, 30, 29, 31, 27, 28, 0],        #3
+[14, 16, 22, 18, 22, 16, 14, 13, 0], #4
 [0]]
           
 wptdist = 0.0
@@ -113,16 +116,16 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.678, 9.399],                    #10 open area near main gate
 [20.808, 7.730, "speed bump"],      #11 mid speed bump
 [20.641, 7.396, "T seam"],          #12 center parking 'T' seam
-[20.945, 6.375, "gar door"],        #13
-[20.987, 6.066, "driveway center"], #14
+[22.069, 7.162, "workshop"],        #13 tent
+[22.181, 6.911, "driveway center"], #14 by canopy
 [20.830, 5.945, "gravel"],          #15
-[20.200, 5.556, "woodpile"],        #16
+[20.268, 5.632, "fig tree fork"],   #16 on to hut row
 [19.372, 6.355, "stairs pivot"],    #17
-[19.071, 6.840, "shed #4"],         #18
+[19.064, 7.078, "shed #3/#4"],      #18 turnaround area
 [18.393, 6.283, "longe center"],    #19
 [18.181, 7.900, "stall ctr"],       #20
 [21.174, 6.110, "E dway start"],    #21
-[22.227, 6.883, "horse gravel"],    #22
+[19.261, 6.547, "hut row bend"],    #22 road bend
 [22.846, 7.390, "trash"],           #23
 [22.599, 7.159, "EF east entry"],   #24
 
@@ -133,9 +136,10 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [22.461, 8.176, "EF middle - F"],   #29
 [22.319, 7.696, "office gap"],      #30
 [22.003, 7.800, "EF rose gap"],     #31
+        
 [11,12]]
 
-version = "Rover 1.0 200923\n"
+version = "Rover 1.0 201009\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -150,6 +154,10 @@ tty = serial.Serial(port, 9600)
 tty.flushInput()
 
 #====================================================
+def cartesian(compass):
+    return (450 - compass) % 360
+def vadd(U, V):
+    return [U[0]+V[0], U[1]+V[1]]
 def vdot(U, V):
     return (U[0]*V[0] + U[1]*V[1])
 def vmag(V):
@@ -158,12 +166,17 @@ def vsmult(V, scalar):
     return [V[0]*scalar, V[1]*scalar]
 def vsub(headV, tailV):
     return [headV[0]-tailV[0], headV[1]-tailV[1]]
+def vunit(V):
+    mag = vmag(V)
+    return [V[0]/mag, V[1]/mag]
 
 # get compass course from direction vector
 def vcourse(V):
     return (450 - math.degrees(math.atan2(V[1],V[0])) % 360)
 # cvt lat/lon seconds to U.S survey feet
-def vlatlon(latsec, lonsec):
+def vft2sec(feetE, feetN):
+    return [feetE/lonfeet, feetN/latfeet]
+def vsec2ft(latsec, lonsec):
     return [lonsec*lonfeet, latsec*latfeet]
 def vprint(txt, V):
     str = "%s: [%6.1f, %6.1f]" % (txt, V[0], V[1])
@@ -224,7 +237,7 @@ def new_waypoint(nwpt):
     
 #    startAV = posAV
     vprint("track start", startAV)
-    destAV = vlatlon(waypts[nwpt][0], waypts[nwpt][1])
+    destAV = vsec2ft(waypts[nwpt][0], waypts[nwpt][1])
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
     vprint("track", trackRV)
@@ -246,6 +259,7 @@ def simple_commands(schr):
     global azimuth
     global speed
     global steer
+    global startAV
     
     if schr == '0':                     # 0 - stop 
         speed = 0
@@ -310,8 +324,20 @@ def simple_commands(schr):
             
     elif schr == '7':                   # 7 - HAW steer left limit
         if (auto):
-            azimuth += left_limit
-            logit("az set to %d" % azimuth)
+            if (wptflag):
+                #make a 3 ft left detour
+                dodgeV = [-aimRV[1], aimRV[0]]
+                dodgeV = vunit(dodgeV)
+                dodgeV = vsmult(dodgeV, 3.0)
+                dodgeV = vadd(dodgeV, aimRV)
+                dodgeV = vadd(dodgeV, posAV)
+                waypts[1] = dodgeV
+                startAV = posAV
+                new_waypoint(1)
+                routes[route].insert(rtseg, 1)
+            else:
+                azimuth += left_limit
+                logit("az set to %d" % azimuth)
         else:
             max_turn(left_limit)
  
@@ -466,7 +492,7 @@ try:
                             odometer(speed)
                             speed = 0
                             robot.motor(speed, steer)
-                        elif (wpt > 0 and wpt < 4):   # start of route
+                        elif (wpt > 0 and wpt < 5):   # start of route
                             route = wpt
                             rteflag= True
                             rtseg = 0
@@ -489,10 +515,10 @@ try:
                         x = float(cbuff[3:msglen-1])
                         if (xchr == 'T'):
                             ilatsec = x
-                            posAV = vlatlon(ilatsec, ilonsec)
+                            posAV = vsec2ft(ilatsec, ilonsec)
                         elif xchr == 'N':
                             ilonsec = x
-                            posAV = vlatlon(ilatsec, ilonsec)
+                            posAV = vsec2ft(ilatsec, ilonsec)
                             gpsEpoch = time.time()
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
@@ -566,7 +592,7 @@ try:
                     logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.3f" %xEst[3, 0])
-                    workAV = vlatlon(flatsec, flonsec)   # see BOT 3:41 for diagram
+                    workAV = vsec2ft(flatsec, flonsec)   # see BOT 3:41 for diagram
                     filterRV = vsub(workAV, startAV)
                     vprint("Kalman pos vec", filterRV)
                     aimRV = vsub(trackRV, filterRV)
