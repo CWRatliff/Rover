@@ -99,10 +99,11 @@ right_limit = 36
 
 auto = False
 flag = False
-rteflag = False
+#rteflag = False
 wptflag = False
 
 rtseg = 0
+route = [0]
 routes = [[0,0],                    #0
 [28, 27, 0],                        #1
 [28, 27, 26, 0],                    #2
@@ -331,10 +332,11 @@ def simple_commands(schr):
                 dodgeV = vsmult(dodgeV, 3.0)
                 dodgeV = vadd(dodgeV, aimRV)
                 dodgeV = vadd(dodgeV, posAV)
+                dodgeV = vft2sec(dodgeV[0], dodgeV[1])
                 waypts[1] = dodgeV
                 startAV = posAV
                 new_waypoint(1)
-                routes[route].insert(rtseg, 1)
+                route.insert(rtseg, 1)
             else:
                 azimuth += left_limit
                 logit("az set to %d" % azimuth)
@@ -360,7 +362,7 @@ def star_commands(schr):
     global auto
     global azimuth
     global auto
-    global rteflag
+#    global rteflag
     global wptflag
     global compass_bias
     global left
@@ -368,7 +370,7 @@ def star_commands(schr):
     if (schr == '0'):                   #standby
         auto = False
         wptflag = False
-        rteflag = False
+#        rteflag = False
         azimuth = hdg
         sendit("{aStby}")
         logit("Standby")
@@ -483,7 +485,7 @@ try:
                         print(wpt)
                         if wpt == 0:                # end of waypoint / route
                             wptflag = False
-                            rteflag = False
+#                            rteflag = False
                             auto = False
                             sendit("{aStby}")
                             logit("Standby")
@@ -493,15 +495,17 @@ try:
                             speed = 0
                             robot.motor(speed, steer)
                         elif (wpt > 0 and wpt < 5):   # start of route
-                            route = wpt
-                            rteflag= True
+                            route = routes[wpt]
+#                            rteflag= True
                             rtseg = 0
                             wptflag = True
-                            wpt = routes[route][rtseg]
+                            wpt = route[rtseg]
                             startAV = posAV
                             new_waypoint(wpt)
                         elif (wpt >= 10 and wpt <= 31): #start of waypoint
                             startAV = posAV
+                            route = [wpt, 0]
+                            rtseg = 0
                             new_waypoint(wpt)
                         else:
                             pass
@@ -638,28 +642,28 @@ try:
                     #closing on waypoint
                     if (dtg < max(2.0, accgps) or vdot(aimRV, trackRV) <= 0):
                         logit("close to waypoint")
-                        if rteflag:
-                            rtseg += 1
-                            wpt = routes[route][rtseg]
-                            if (wpt == 0):
-                                sendit("{aStby}")
-                                logit("Standby")
-                                wptflg = False
-                                rteflag = False
-                                odometer(speed)
-                                speed = 0
-                                auto = False
-                            else:
-                                startAV = destAV       # new wpt start = old wpt end
-                                new_waypoint(wpt)
-
-                        else:
+#                        if rteflag:
+                        rtseg += 1
+                        wpt = route[rtseg]
+                        if (wpt == 0):
                             sendit("{aStby}")
                             logit("Standby")
-                            wptflag =  False
+                            wptflg = False
+#                            rteflag = False
                             odometer(speed)
                             speed = 0
                             auto = False
+                        else:
+                            startAV = destAV       # new wpt start = old wpt end
+                            new_waypoint(wpt)
+
+#                         else:
+#                             sendit("{aStby}")
+#                             logit("Standby")
+#                             wptflag =  False
+#                             odometer(speed)
+#                             speed = 0
+#                             auto = False
                         #endif dtg ===================
                     #endif wptflag ===================
                 #endif epoch timer ===================
