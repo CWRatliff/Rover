@@ -185,7 +185,7 @@ def vcourse(V):
     return (450 - math.degrees(math.atan2(V[1],V[0])) % 360)
 # cvt lat/lon seconds to U.S survey feet
 def vft2sec(feetE, feetN):
-    return [feetE/lonfeet, feetN/latfeet]
+    return [feetN/latfeet, feetE/lonfeet]
 # cvt US feet to lat/lon seconds
 def vsec2ft(latsec, lonsec):
     return [lonsec*lonfeet, latsec*latfeet]
@@ -338,12 +338,17 @@ def simple_commands(schr):
             if (wptflag):
                 #make a 3 ft left detour
                 dodgeV = [-aimRV[1], aimRV[0]]
-                dodgeV = vunit(dodgeV)
-                dodgeV = vsmult(dodgeV, 3.0)
-                dodgeV = vadd(dodgeV, aimRV)
-                dodgeV = vadd(dodgeV, posAV)
-                dodgeV = vft2sec(dodgeV[0], dodgeV[1])
                 vprint("dodgeV ", dodgeV)
+                dodgeV = vunit(dodgeV)
+                vprint("unit dodgeV ", dodgeV)
+                dodgeV = vsmult(dodgeV, 3.0)
+                vprint("3ft dodgeV ", dodgeV)
+                dodgeV = vadd(dodgeV, aimRV)
+                vprint("aim + dodgeV ", dodgeV)
+                dodgeV = vadd(dodgeV, posAV)
+                vprint("pos + dodgeV ", dodgeV)
+                dodgeV = vft2sec(dodgeV[0], dodgeV[1])
+                vprint("dodgeV seconds", dodgeV)
                 waypts[1] = dodgeV
                 startAV = posAV
                 new_waypoint(1)
