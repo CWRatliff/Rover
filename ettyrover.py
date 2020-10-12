@@ -140,6 +140,15 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
         
 [11,12]]
 
+# EPSG 6424
+# 13 - 6238688.16E, 1911244.36N
+# 14 - 6238709.35E, 1911255.46N
+# 16 - 6238814.17E, 1911060.95N
+# 18 - 6238691.99E, 1910940.54N
+# 22 - 6238736.77E, 1910959.97N
+# 29 - 6238643.60E, 1911270.11N
+# 31 - 6238634.53E, 1911238.26N
+
 version = "Rover 1.0 201009\n"
 print(version)
 tme = time.localtime(time.time())
@@ -177,6 +186,7 @@ def vcourse(V):
 # cvt lat/lon seconds to U.S survey feet
 def vft2sec(feetE, feetN):
     return [feetE/lonfeet, feetN/latfeet]
+# cvt US feet to lat/lon seconds
 def vsec2ft(latsec, lonsec):
     return [lonsec*lonfeet, latsec*latfeet]
 def vprint(txt, V):
@@ -333,6 +343,7 @@ def simple_commands(schr):
                 dodgeV = vadd(dodgeV, aimRV)
                 dodgeV = vadd(dodgeV, posAV)
                 dodgeV = vft2sec(dodgeV[0], dodgeV[1])
+                vprint("dodgeV ", dodgeV)
                 waypts[1] = dodgeV
                 startAV = posAV
                 new_waypoint(1)
