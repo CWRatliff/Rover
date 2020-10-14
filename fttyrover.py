@@ -114,28 +114,28 @@ routes = [[0,0],                    #0
 wptdist = 0.0
 
 waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
-[-787.363, 2298.034],     #10
-[-647.549, 2108.541],     #11
-[-619.570, 2091.618],     #12
-[-599.967, 2236.322],     #13
-[-578.941, 2247.671],     #14
-[-498.018, 2110.770],     #15
-[-471.798, 2053.821],     #16
-[-532.364, 1963.026],     #17
-[-592.930, 1931.815],     #18
-[-526.333, 1863.821],     #19
-[-661.790, 1842.338],     #20
-[-511.840, 2145.628],     #21
-[-548.448, 1951.778],     #22
-[-619.067, 2315.058],     #23
-[-599.716, 2290.028],     #24
-[-665.895, 2108.135],     #25
-[-646.125, 2126.375],     #26
-[-640.512, 2177.751],     #27
-[-619.988, 2233.282],     #28
-[-684.911, 2276.044],     #29
-[-644.701, 2261.655],     #30
-[-653.413, 2229.634],     #31
+[ -787.36,  2298.03],     #10
+[ -647.55,  2108.54],     #11
+[ -619.57,  2091.62],     #12
+[ -599.97,  2236.32],     #13
+[ -578.94,  2247.67],     #14
+[ -498.02,  2110.77],     #15
+[ -471.80,  2053.82],     #16
+[ -532.36,  1963.03],     #17
+[ -592.93,  1931.82],     #18
+[ -526.33,  1863.82],     #19
+[ -661.79,  1842.34],     #20
+[ -511.84,  2145.63],     #21
+[ -548.45,  1951.78],     #22
+[ -619.07,  2315.06],     #23
+[ -599.72,  2290.03],     #24
+[ -665.89,  2108.14],     #25
+[ -646.13,  2126.38],     #26
+[ -640.51,  2177.75],     #27
+[ -619.99,  2233.28],     #28
+[ -684.91,  2276.04],     #29
+[ -644.70,  2261.65],     #30
+[ -653.41,  2229.63],     #31
 [  0.000,    0.000]]
 
 # waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
@@ -173,6 +173,9 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # 22 - 6238736.77E, 1910959.97N
 # 29 - 6238643.60E, 1911270.11N
 # 31 - 6238634.53E, 1911238.26N
+
+obsarray = [[ -578.94,  2247.67], [1,3], [2,0], [2,5]]
+ndx = 0
 
 version = "Rover 1.0 201009\n"
 print(version)
@@ -221,7 +224,6 @@ def vprint(txt, V):
 # compute distance from point to vector, ret +dist if right turn
 # indicated, else -dist for left see BOT 3:51
 def distance(P, V):
-    global posAV
     if V[0] == 0:
         return (P[0])
     m = V[1] / V[0]
@@ -251,9 +253,6 @@ def odometer(spd):
 #==================================================================
 def max_turn(angle):
     global steer
-    global speed
-    global left_limit
-    global right_limit
     
     dt = 1
     if (angle < 0):
@@ -273,8 +272,6 @@ def max_turn(angle):
     return
 #===================================================================
 def new_waypoint(nwpt):
-    global posAV
-    global startAV
     global destAV
     global trackRV
     global azimuth
@@ -294,16 +291,76 @@ def new_waypoint(nwpt):
     wptdist = vmag(trackRV)
     auto = True
     wptflag = True
-    sendit("{aWp" + str(nwpt) + "}")
+    sendit("{aWp%2d}" % nwpt)
     Kfilter.Kalman_start(time.time(), posAV[0], posAV[1], \
         (math.radians(450-hdg) % 360), \
         speed * spdfactor)
     epoch = time.time()
     return
+#===================================================================
+# look for obstructions
+def obstructions():
+    global startAV
+    obsAV = boxtest(posAV[0], posAV[1], trackRV[0], trackRV[1])
+    if (obsAV[0] != 0):
+        vprint("obstruction", obsAV)
+        obsRV = vsub(obsAV, posAV)
+        obsdist = vmag(obsRV)
+        if (obsdist < wptdist):
+            obsproj = vdot(obsRV, trackRV)/(wptdist*wptdist)
+            obsprojRV = vsmult(trackRV, obsproj)
+            obsxRV = vsub(obsprojRV, obsRV)
+            obsxdist = vmag(obsprojRV)
+            if (obsxdist < 3):
+                obsxRV = vunit(obsxRV)
+                obsxRV = vsmult(obsxRV, 3.0)
+                obsAV = vadd(obsRV, obsxRV)
+                obsAV = vadd(obsRV, posAV)
+                vprint("avoidance", obsAV)
+                waypts[1] = obsAV
+                startAV = posAV
+                new_waypoint(1)
+    return
+
+def scan_start(x0):
+    global ndx
+    ndx = 0
+    while obsarray[ndx][0] < x0:
+        ndx +=1
+        if obsarray[ndx][0] == 0:
+            return [0, 0]
+    return [obsarray[ndx][0], obsarray[ndx][1]]
+
+def scan_next():
+    global ndx
+    ndx +=1
+    return [obsarray[ndx][0], obsarray[ndx][1]]
+    
+def boxtest(x0, y0, x1, y1):
+    if x0 > x1:
+        xx = x1
+        x1 = x0
+        x0 = xx
+    if y0 > y1:
+        yy = y1
+        y1 = y0
+        y0 = yy
+    x0 -= 3.0           # enlarge box
+    x1 += 3.0
+    y0 -= 3.0
+    y1 += 3.0
+    obs = scan_start(x0)
+    while obs[0] != 0:
+        if obs[0] > x1:
+            return [0, 0]
+        if obs[1] < y0 or obs[1] > y1:
+            obs = scan_next()
+            continue
+        return [obs[0], obs[1]]
+    return [0, 0]
 
 #===================================================================
 def simple_commands(schr):
-    global auto
     global azimuth
     global speed
     global steer
@@ -569,6 +626,7 @@ try:
                             route = [wpt, 0]
                             rtseg = 0
                             new_waypoint(wpt)
+                            obstructions()
                         else:
                             pass
                         
