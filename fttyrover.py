@@ -174,7 +174,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # 29 - 6238643.60E, 1911270.11N
 # 31 - 6238634.53E, 1911238.26N
 
-obsarray = [[ -578.94,  2247.67], [1,3], [2,0], [2,5]]
+obsarray = [[ -578.94,  2247.67], [1.0,3.], [2.,0.], [2.,5.]]
 ndx = 0
 
 version = "Rover 1.0 201009\n"
@@ -307,22 +307,24 @@ def obstructions():
         obsRV = vsub(obsAV, posAV)
         obsdist = vmag(obsRV)
         if (obsdist < wptdist):
-            obsproj = vdot(obsRV, trackRV)/(wptdist*wptdist)
-            obsprojRV = vsmult(trackRV, obsproj)
-            obsxRV = vsub(obsprojRV, obsRV)
-            obsxdist = vmag(obsprojRV)
-            if (obsxdist < 3):
-                obsxRV = vunit(obsxRV)
-                obsxRV = vsmult(obsxRV, 3.0)
-                obsAV = vadd(obsRV, obsxRV)
-                obsAV = vadd(obsRV, posAV)
-                vprint("avoidance", obsAV)
-                waypts[1] = obsAV
-                startAV = posAV
-                new_waypoint(1)
+            odot = vdot(obsRV, trackRV)
+            if odot > 0:
+                obsproj = odot/(wptdist*wptdist)
+                obsprojRV = vsmult(trackRV, obsproj)
+                obsxRV = vsub(obsprojRV, obsRV)
+                obsxdist = vmag(obsprojRV)
+                if (obsxdist < 3):
+                    obsxRV = vunit(obsxRV)
+                    obsxRV = vsmult(obsxRV, 3.0)
+                    obsAV = vadd(obsRV, obsxRV)
+                    obsAV = vadd(obsRV, posAV)
+                    vprint("avoidance", obsAV)
+                    waypts[1] = obsAV
+                    startAV = posAV
+                    new_waypoint(1)
     return
 
-def scan_start(x0):
+def db_search(x0):
     global ndx
     ndx = 0
     while obsarray[ndx][0] < x0:
@@ -331,7 +333,7 @@ def scan_start(x0):
             return [0, 0]
     return [obsarray[ndx][0], obsarray[ndx][1]]
 
-def scan_next():
+def db_next():
     global ndx
     ndx +=1
     return [obsarray[ndx][0], obsarray[ndx][1]]
@@ -349,12 +351,12 @@ def boxtest(x0, y0, x1, y1):
     x1 += 3.0
     y0 -= 3.0
     y1 += 3.0
-    obs = scan_start(x0)
+    obs = db_search(x0)
     while obs[0] != 0:
         if obs[0] > x1:
             return [0, 0]
         if obs[1] < y0 or obs[1] > y1:
-            obs = scan_next()
+            obs = db_next()
             continue
         return [obs[0], obs[1]]
     return [0, 0]
