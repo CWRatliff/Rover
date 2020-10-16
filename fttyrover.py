@@ -301,7 +301,7 @@ def new_waypoint(nwpt):
 # look for obstructions
 def obstructions():
     global startAV
-    obsAV = boxtest(posAV[0], posAV[1], trackRV[0], trackRV[1])
+    obsAV = boxtest(posAV[0], posAV[1], destAV[0], destAV[1])
     if (obsAV[0] != 0):
         vprint("obstruction", obsAV)
         obsRV = vsub(obsAV, posAV)
@@ -311,8 +311,10 @@ def obstructions():
             if odot > 0:
                 obsproj = odot/(wptdist*wptdist)
                 obsprojRV = vsmult(trackRV, obsproj)
+                vprint("detour", obsprojRV)
                 obsxRV = vsub(obsprojRV, obsRV)
-                obsxdist = vmag(obsprojRV)
+#                obsxdist = vmag(obsprojRV)
+                obsxdist = vmag(obsxRV)
                 if (obsxdist < 3):
                     obsxRV = vunit(obsxRV)
                     obsxRV = vsmult(obsxRV, 3.0)
