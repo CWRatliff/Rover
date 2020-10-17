@@ -1,0 +1,2514 @@
+
+{h337}
+{h336}
+{h337}
+msg: 09:42:17 {F23}
+track start: [-567.68, 2227.35]
+wpt: 23 -619.07, 2315.06
+track: [ -51.39,   87.71]
+az set to 329
+obstruction: [-578.94, 2247.67]
+detour: [ -11.74,   20.03]
+avoidance: [-581.53, 2246.15]
+track start: [-567.68, 2227.35]
+wpt: 1 -581.53, 2246.15
+track: [ -13.85,   18.80]
+az set to 323
+{s -13}
+{h336}
+{s -12}
+{h335}
+{s -11}
+{h334}
+{s -10}
+{h333}
+{s  -9}
+{h332}
+{s  -8}
+msg: 09:42:18 {LT21.9978}
+msg: 09:42:18 {LN6.7882}
+msg: 09:42:18 {LA457}
+{lt  1.50}
+{h330}
+{s  -6}
+{h329}
+{s  -5}
+{h327}
+{s  -3}
+{h326}
+{s  -2}
+raw L/L: 21.9978/6.7882
+time: 1602952938.6558762
+raw hdg:  326.0
+raw speed: 1.220
+filtered L/L: 21.9917/ 6.7824
+Filtered hdg:  326.0
+Filtered speed:  1.220
+Kalman pos vec: [  -0.48,    1.13]
+progress vec: [  -0.71,    0.96]
+xtrack vec: [  -0.23,   -0.17]
+wpt aim vector: [  -6.81,    8.76]
+az set to 322
+{d 22.2} 
+{c322} 
+{ln  0.3} 
+{lt  1.5} 
+{s  -3}
+{h325}
+{s  -2}
+{h324}
+{s  -1}
+DR lat/lon: 21.984579677649606/6.770553910018577
+time: 1602952939.6582348
+raw hdg:  324.0
+raw speed: 1.220
+filtered L/L: 21.9999/ 6.7890
+Filtered hdg:  324.0
+Filtered speed:  1.006
+Kalman pos vec: [  -1.04,    1.97]
+progress vec: [  -1.31,    1.77]
+xtrack vec: [  -0.27,   -0.20]
+wpt aim vector: [  -6.54,    8.33]
+az set to 321
+{d 21.2} 
+{c322} 
+{ln  0.3} 
+{lt  1.5} 
+{s  -2}
+msg: 09:42:19 {LT22.0122}
+msg: 09:42:19 {LN6.8026}
+msg: 09:42:20 {LA456}
+{lt  1.50}
+{h323}
+{s  -1}
+{h322}
+{s   0}
+raw L/L: 22.0122/6.8026
+time: 1602952940.660387
+raw hdg:  322.0
+raw speed: 1.220
+filtered L/L: 22.0123/ 6.8001
+Filtered hdg:  322.0
+Filtered speed:  1.449
+Kalman pos vec: [  -1.97,    3.23]
+progress vec: [  -2.23,    3.03]
+xtrack vec: [  -0.26,   -0.19]
+wpt aim vector: [  -6.07,    7.70]
+az set to 321
+{d 19.6} 
+{c322} 
+{ln  0.3} 
+{lt  1.5} 
+{h323}
+{s  -1}
+{h322}
+{s   0}
+{h323}
+{s  -1}
+msg: 09:42:21 {LT22.0270}
+msg: 09:42:21 {LN6.8198}
+msg: 09:42:21 {LA453}
+{lt  1.49}
+raw L/L: 22.027/6.8198
+time: 1602952941.6666577
+raw hdg:  323.0
+raw speed: 1.220
+filtered L/L: 22.0275/ 6.8146
+Filtered hdg:  322.9
+Filtered speed:  1.667
+Kalman pos vec: [  -3.18,    4.77]
+progress vec: [  -3.39,    4.61]
+xtrack vec: [  -0.21,   -0.16]
+wpt aim vector: [  -5.44,    6.94]
+az set to 321
+{d 17.6} 
+{c322} 
+{ln  0.3} 
+{lt  1.5} 
+{h322}
+{s   0}
+{h323}
+{s  -1}
+{h322}
+{s   0}
+{h323}
+{s  -1}
+DR lat/lon: 22.020251527316987/6.80291042404061
+time: 1602952942.6704988
+raw hdg:  323.0
+raw speed: 1.220
+filtered L/L: 22.0310/ 6.8181
+Filtered hdg:  322.9
+Filtered speed:  0.744
+Kalman pos vec: [  -3.47,    5.12]
+progress vec: [  -3.66,    4.97]
+xtrack vec: [  -0.19,   -0.14]
+wpt aim vector: [  -5.28,    6.77]
+az set to 322
+{d 17.2} 
+{c322} 
+{ln  0.2} 
+{lt  1.5} 
+{s   0}
+{h322}
+msg: 09:42:22 {LT22.0421}
+msg: 09:42:22 {LN6.8378}
+msg: 09:42:23 {LA448}
+{lt  1.47}
+{h323}
+{h322}
+{h323}
+raw L/L: 22.0421/6.8378
+time: 1602952943.671693
+raw hdg:  323.0
+raw speed: 1.220
+filtered L/L: 22.0444/ 6.8310
+Filtered hdg:  322.7
+Filtered speed:  1.543
+Kalman pos vec: [  -4.56,    6.48]
+progress vec: [  -4.70,    6.38]
+xtrack vec: [  -0.14,   -0.10]
+wpt aim vector: [  -4.71,    6.11]
+az set to 322
+{d 15.4} 
+{c322} 
+{ln  0.2} 
+{lt  1.5} 
+msg: 09:42:24 {LT22.0568}
+msg: 09:42:24 {LN6.8573}
+msg: 09:42:24 {LA442}
+{lt  1.45}
+raw L/L: 22.0568/6.8573
+time: 1602952944.6798475
+raw hdg:  323.0
+raw speed: 1.220
+filtered L/L: 22.0602/ 6.8469
+Filtered hdg:  322.3
+Filtered speed:  1.748
+Kalman pos vec: [  -5.89,    8.08]
+progress vec: [  -5.93,    8.05]
+xtrack vec: [  -0.04,   -0.03]
+wpt aim vector: [  -4.00,    5.35]
+az set to 323
+{d 13.4} 
+{c323} 
+{ln  0.0} 
+{lt  1.5} 
+{h324}
+DR lat/lon: 22.053080764379622/6.835016423438264
+time: 1602952945.6880891
+raw hdg:  324.0
+raw speed: 1.220
+filtered L/L: 22.0633/ 6.8513
+Filtered hdg:  322.9
+Filtered speed:  0.748
+Kalman pos vec: [  -6.26,    8.39]
+progress vec: [  -6.21,    8.43]
+xtrack vec: [   0.05,    0.04]
+wpt aim vector: [  -3.77,    5.22]
+az set to 324
+{d 12.9} 
+{c324} 
+{ln  0.1} 
+{lt  1.5} 
+msg: 09:42:25 {LT22.0723}
+msg: 09:42:25 {LN6.8760}
+msg: 09:42:26 {LA435}
+{lt  1.43}
+{h325}
+{h324}
+{h325}
+raw L/L: 22.0723/6.876
+time: 1602952946.6910965
+raw hdg:  325.0
+raw speed: 1.220
+filtered L/L: 22.0766/ 6.8654
+Filtered hdg:  323.3
+Filtered speed:  1.569
+Kalman pos vec: [  -7.44,    9.74]
+progress vec: [  -7.27,    9.87]
+xtrack vec: [   0.17,    0.13]
+wpt aim vector: [  -3.12,    4.59]
+az set to 325
+{d 11.1} 
+{c326} 
+{ln  0.2} 
+{lt  1.4} 
+{h324}
+{s   1}
+{h325}
+{s   0}
+msg: 09:42:27 {LT22.0878}
+msg: 09:42:27 {LN6.8954}
+msg: 09:42:27 {LA429}
+{lt  1.41}
+raw L/L: 22.0878/6.8954
+time: 1602952947.6989646
+raw hdg:  325.0
+raw speed: 1.220
+filtered L/L: 22.0925/ 6.8824
+Filtered hdg:  322.5
+Filtered speed:  1.781
+Kalman pos vec: [  -8.86,   11.35]
+progress vec: [  -8.53,   11.59]
+xtrack vec: [   0.33,    0.24]
+wpt aim vector: [  -2.33,    3.85]
+az set to 328
+{d  9.0} 
+{c329} 
+{ln  0.4} 
+{lt  1.4} 
+{s   3}
+{h326}
+{s   2}
+{h327}
+{s   1}
+{h328}
+{s   0}
+DR lat/lon: 22.08606592357976/6.869966883187533
+time: 1602952948.7036734
+raw hdg:  328.0
+raw speed: 1.220
+filtered L/L: 22.0950/ 6.8877
+Filtered hdg:  324.7
+Filtered speed:  0.742
+Kalman pos vec: [  -9.31,   11.60]
+progress vec: [  -8.81,   11.97]
+xtrack vec: [   0.49,    0.36]
+wpt aim vector: [  -2.03,    3.79]
+az set to 331
+{d  8.5} 
+{c332} 
+{ln  0.6} 
+{lt  1.4} 
+{s   3}
+msg: 09:42:28 {LT22.1036}
+msg: 09:42:28 {LN6.9134}
+msg: 09:42:29 {LA425}
+{lt  1.39}
+{h329}
+{s   2}
+{h330}
+{s   1}
+{h331}
+{s   0}
+raw L/L: 22.1036/6.9134
+time: 1602952949.7117314
+raw hdg:  331.0
+raw speed: 1.220
+filtered L/L: 22.1081/ 6.9017
+Filtered hdg:  326.8
+Filtered speed:  1.529
+Kalman pos vec: [ -10.48,   12.93]
+progress vec: [  -9.86,   13.39]
+xtrack vec: [   0.62,    0.46]
+wpt aim vector: [  -1.38,    3.17]
+az set to 336
+{d  6.8} 
+{c336} 
+{ln  0.8} 
+{lt  1.4} 
+{s   5}
+{h332}
+{s   4}
+{h333}
+{s   3}
+{h334}
+{s   2}
+msg: 09:42:30 {LT22.1206}
+msg: 09:42:30 {LN6.9311}
+{h335}
+{s   1}
+msg: 09:42:30 {LA421}
+{lt  1.38}
+{h336}
+{s   0}
+raw L/L: 22.1206/6.9311
+time: 1602952950.716007
+raw hdg:  336.0
+raw speed: 1.220
+filtered L/L: 22.1242/ 6.9173
+Filtered hdg:  330.7
+Filtered speed:  1.718
+Kalman pos vec: [ -11.79,   14.57]
+progress vec: [ -11.10,   15.07]
+xtrack vec: [   0.69,    0.51]
+wpt aim vector: [  -0.69,    2.38]
+az set to 343
+{d  4.7} 
+{c344} 
+{ln  0.9} 
+{lt  1.4} 
+{s   7}
+{h337}
+{s   6}
+{h338}
+{s   5}
+{h339}
+{s   4}
+{h340}
+{s   3}
+{h341}
+{s   2}
+DR lat/lon: 22.12030761356892/6.903492556940668
+time: 1602952951.7189462
+raw hdg:  341.0
+raw speed: 1.220
+filtered L/L: 22.1267/ 6.9225
+Filtered hdg:  334.8
+Filtered speed:  0.692
+Kalman pos vec: [ -12.22,   14.81]
+progress vec: [ -11.37,   15.44]
+xtrack vec: [   0.85,    0.63]
+wpt aim vector: [  -0.40,    2.32]
+az set to 350
+{d  4.3} 
+{c350} 
+{ln  1.1} 
+{lt  1.4} 
+{s   9}
+{h342}
+{s   8}
+msg: 09:42:31 {LT22.1386}
+msg: 09:42:31 {LN6.9458}
+msg: 09:42:32 {LA416}
+{lt  1.36}
+{h343}
+{s   7}
+{h344}
+{s   6}
+{h346}
+{s   4}
+{h347}
+{s   3}
+{h348}
+{s   2}
+{h349}
+{s   1}
+raw L/L: 22.1386/6.9458
+time: 1602952952.7266898
+raw hdg:  349.0
+raw speed: 1.220
+filtered L/L: 22.1409/ 6.9334
+Filtered hdg:  341.7
+Filtered speed:  1.452
+Kalman pos vec: [ -13.13,   16.26]
+progress vec: [ -12.38,   16.81]
+xtrack vec: [   0.75,    0.55]
+wpt aim vector: [   0.01,    1.56]
+az set to 360
+{d  2.6} 
+{c360} 
+{ln  0.9} 
+{lt  1.4} 
+{s  11}
+{h350}
+{s  10}
+{h351}
+{s   9}
+{h352}
+{s   8}
+{h353}
+{s   7}
+msg: 09:42:33 {LT22.1569}
+msg: 09:42:33 {LN6.9563}
+msg: 09:42:33 {LA413}
+{lt  1.35}
+{h355}
+{s   5}
+{h356}
+{s   4}
+{h358}
+{s   2}
+{h359}
+{s   1}
+raw L/L: 22.1569/6.9563
+time: 1602952953.7335694
+raw hdg:  359.0
+raw speed: 1.220
+filtered L/L: 22.1575/ 6.9427
+Filtered hdg:  350.6
+Filtered speed:  1.522
+Kalman pos vec: [ -13.91,   17.93]
+progress vec: [ -13.46,   18.27]
+xtrack vec: [   0.46,    0.34]
+wpt aim vector: [   0.26,    0.61]
+az set to 383
+{d  0.9} 
+{c383} 
+{ln  0.6} 
+{lt  1.4} 
+close to waypoint
+track start: [-581.53, 2246.15]
+wpt: 23 -619.07, 2315.06
+track: [ -37.54,   68.91]
+az set to 331
+{s -27}
+{h358}
+{s -26}
+{h357}
+{s -25}
+{h356}
+{s -24}
+{h355}
+{s -23}
+{h354}
+{s -22}
+{h353}
+{s -21}
+{h352}
+{s -20}
+{h351}
+{s -19}
+{h350}
+{s -18}
+{h348}
+{s -16}
+DR lat/lon: 22.15494930326943/6.928449029876324
+time: 1602952954.7732024
+raw hdg:  348.0
+raw speed: 1.220
+filtered L/L: 22.1688/ 6.9566
+Filtered hdg:  348.0
+Filtered speed:  1.220
+Kalman pos vec: [  -1.23,    0.28]
+progress vec: [  -0.40,    0.74]
+xtrack vec: [   0.83,    0.45]
+wpt aim vector: [ -17.84,   34.72]
+az set to 332
+{d 77.6} 
+{c333} 
+{ln  0.9} 
+{lt  1.4} 
+{s -15}
+{h347}
+{s -14}
+{h346}
+{s -13}
+msg: 09:42:34 {LT22.1746}
+msg: 09:42:34 {LN6.9610}
+msg: 09:42:35 {LA410}
+{lt  1.35}
+{h341}
+{s  -8}
+{h340}
+{s  -7}
+{h338}
+{s  -5}
+{h337}
+{s  -4}
+{h336}
+{s  -3}
+{h335}
+{s  -2}
+{h334}
+{s  -1}
+raw L/L: 22.1746/6.961
+time: 1602952955.7801676
+raw hdg:  334.0
+raw speed: 1.220
+filtered L/L: 22.1784/ 6.9583
+Filtered hdg:  334.0
+Filtered speed:  0.971
+Kalman pos vec: [  -1.38,    1.25]
+progress vec: [  -0.84,    1.55]
+xtrack vec: [   0.54,    0.29]
+wpt aim vector: [ -17.84,   34.02]
+az set to 332
+{d 76.7} 
+{c332} 
+{ln  0.6} 
+{lt  1.3} 
+{h333}
+{s   0}
+msg: 09:42:36 {LT22.1922}
+msg: 09:42:36 {LN6.9725}
+msg: 09:42:36 {LA409}
+{lt  1.34}
+raw L/L: 22.1922/6.9725
+time: 1602952956.7822998
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.1929/ 6.9671
+Filtered hdg:  333.0
+Filtered speed:  1.500
+Kalman pos vec: [  -2.12,    2.72]
+progress vec: [  -1.63,    2.99]
+xtrack vec: [   0.49,    0.27]
+wpt aim vector: [ -17.48,   33.25]
+az set to 332
+{d 75.1} 
+{c332} 
+{ln  0.6} 
+{lt  1.3} 
+DR lat/lon: 22.187379373366017/6.954082597814051
+time: 1602952957.7890885
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.1963/ 6.9695
+Filtered hdg:  332.9
+Filtered speed:  0.711
+Kalman pos vec: [  -2.31,    3.06]
+progress vec: [  -1.82,    3.33]
+xtrack vec: [   0.50,    0.27]
+wpt aim vector: [ -17.38,   33.07]
+az set to 332
+{d 74.7} 
+{c332} 
+{ln  0.6} 
+{lt  1.3} 
+msg: 09:42:37 {LT22.2106}
+msg: 09:42:37 {LN6.9876}
+msg: 09:42:38 {LA406}
+{lt  1.33}
+{h334}
+{s  -1}
+{h333}
+{s   0}
+{h334}
+{s  -1}
+{h333}
+{s   0}
+raw L/L: 22.2106/6.9876
+time: 1602952958.7919254
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.2120/ 6.9797
+Filtered hdg:  332.8
+Filtered speed:  1.582
+Kalman pos vec: [  -3.17,    4.65]
+progress vec: [  -2.68,    4.92]
+xtrack vec: [   0.49,    0.27]
+wpt aim vector: [ -16.95,   32.27]
+az set to 332
+{d 72.9} 
+{c332} 
+{ln  0.6} 
+{lt  1.3} 
+msg: 09:42:39 {LT22.2286}
+msg: 09:42:39 {LN7.0020}
+msg: 09:42:39 {LA404}
+{lt  1.33}
+{h334}
+{s  -1}
+{h333}
+{s   0}
+raw L/L: 22.2286/7.002
+time: 1602952959.7973065
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.2300/ 6.9918
+Filtered hdg:  332.5
+Filtered speed:  1.760
+Kalman pos vec: [  -4.18,    6.49]
+progress vec: [  -3.68,    6.76]
+xtrack vec: [   0.50,    0.27]
+wpt aim vector: [ -16.43,   31.36]
+az set to 332
+{d 70.8} 
+{c332} 
+{ln  0.6} 
+{lt  1.3} 
+{h334}
+{s  -1}
+{h333}
+{s   0}
+DR lat/lon: 22.224560081496367/6.978811128416747
+time: 1602952960.800667
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.2339/ 6.9953
+Filtered hdg:  332.2
+Filtered speed:  0.760
+Kalman pos vec: [  -4.47,    6.88]
+progress vec: [  -3.91,    7.19]
+xtrack vec: [   0.56,    0.30]
+wpt aim vector: [ -16.26,   31.17]
+az set to 332
+{d 70.3} 
+{c332} 
+{ln  0.6} 
+{lt  1.3} 
+msg: 09:42:40 {LT22.2466}
+msg: 09:42:40 {LN7.0175}
+msg: 09:42:41 {LA399}
+{lt  1.31}
+{h334}
+{s  -1}
+{h333}
+{s   0}
+{h334}
+{s  -1}
+{h333}
+{s   0}
+raw L/L: 22.2466/7.0175
+time: 1602952961.8041298
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.2494/ 7.0066
+Filtered hdg:  331.7
+Filtered speed:  1.594
+Kalman pos vec: [  -5.42,    8.44]
+progress vec: [  -4.79,    8.79]
+xtrack vec: [   0.63,    0.34]
+wpt aim vector: [ -15.75,   30.41]
+az set to 332
+{d 68.5} 
+{c333} 
+{ln  0.7} 
+{lt  1.3} 
+{h334}
+{s  -1}
+{h333}
+{s   0}
+msg: 09:42:42 {LT22.2649}
+msg: 09:42:42 {LN7.0319}
+{h334}
+{s  -1}
+msg: 09:42:42 {LA396}
+{lt  1.30}
+{h333}
+{s   0}
+raw L/L: 22.2649/7.0319
+time: 1602952962.804765
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.2672/ 7.0199
+Filtered hdg:  331.1
+Filtered speed:  1.783
+Kalman pos vec: [  -6.54,   10.25]
+progress vec: [  -5.80,   10.65]
+xtrack vec: [   0.74,    0.40]
+wpt aim vector: [ -15.14,   29.54]
+az set to 332
+{d 66.3} 
+{c333} 
+{ln  0.8} 
+{lt  1.3} 
+DR lat/lon: 22.26165362535156/7.00684693962253
+time: 1602952963.813528
+raw hdg:  333.0
+raw speed: 1.220
+filtered L/L: 22.2708/ 7.0242
+Filtered hdg:  330.5
+Filtered speed:  0.768
+Kalman pos vec: [  -6.90,   10.62]
+progress vec: [  -6.04,   11.09]
+xtrack vec: [   0.86,    0.47]
+wpt aim vector: [ -14.90,   29.39]
+az set to 333
+{d 65.9} 
+{c333} 
+{ln  1.0} 
+{lt  1.3} 
+msg: 09:42:43 {LT22.2826}
+msg: 09:42:43 {LN7.0466}
+msg: 09:42:44 {LA394}
+{lt  1.29}
+{h334}
+raw L/L: 22.2826/7.0466
+time: 1602952964.814671
+raw hdg:  334.0
+raw speed: 1.220
+filtered L/L: 22.2854/ 7.0363
+Filtered hdg:  330.8
+Filtered speed:  1.568
+Kalman pos vec: [  -7.91,   12.10]
+progress vec: [  -6.89,   12.65]
+xtrack vec: [   1.01,    0.55]
+wpt aim vector: [ -14.32,   28.70]
+az set to 333
+{d 64.1} 
+{c333} 
+{ln  1.2} 
+{lt  1.3} 
+{h333}
+{h334}
+{h333}
+msg: 09:42:45 {LT22.3013}
+msg: 09:42:45 {LN7.0621}
+msg: 09:42:45 {LA391}
+{lt  1.28}
+{h334}
+raw L/L: 22.3013/7.0621
+time: 1602952965.817205
+raw hdg:  334.0
+raw speed: 1.220
+filtered L/L: 22.3033/ 7.0508
+Filtered hdg:  330.0
+Filtered speed:  1.815
+Kalman pos vec: [  -9.12,   13.91]
+progress vec: [  -7.93,   14.56]
+xtrack vec: [   1.19,    0.65]
+wpt aim vector: [ -13.63,   27.85]
+az set to 333
+{d 61.9} 
+{c334} 
+{ln  1.4} 
+{lt  1.3} 
+DR lat/lon: 22.297977658395148/7.037598493209182
+time: 1602952966.8230596
+raw hdg:  334.0
+raw speed: 1.220
+filtered L/L: 22.3068/ 7.0555
+Filtered hdg:  329.3
+Filtered speed:  0.777
+Kalman pos vec: [  -9.52,   14.27]
+progress vec: [  -8.17,   15.00]
+xtrack vec: [   1.34,    0.73]
+wpt aim vector: [ -13.36,   27.71]
+az set to 334
+{d 61.4} 
+{c334} 
+{ln  1.5} 
+{lt  1.3} 
+msg: 09:42:46 {LT22.3193}
+msg: 09:42:46 {LN7.0772}
+msg: 09:42:47 {LA387}
+{lt  1.27}
+raw L/L: 22.3193/7.0772
+time: 1602952967.8239756
+raw hdg:  334.0
+raw speed: 1.220
+filtered L/L: 22.3215/ 7.0683
+Filtered hdg:  328.5
+Filtered speed:  1.602
+Kalman pos vec: [ -10.59,   15.76]
+progress vec: [  -9.04,   16.60]
+xtrack vec: [   1.55,    0.84]
+wpt aim vector: [ -12.72,   27.03]
+az set to 334
+{d 59.6} 
+{c335} 
+{ln  1.8} 
+{lt  1.3} 
+msg: 09:42:48 {LT22.3366}
+msg: 09:42:48 {LN7.0916}
+msg: 09:42:48 {LA385}
+{lt  1.26}
+raw L/L: 22.3366/7.0916
+time: 1602952968.831676
+raw hdg:  334.0
+raw speed: 1.220
+filtered L/L: 22.3381/ 7.0828
+Filtered hdg:  327.8
+Filtered speed:  1.744
+Kalman pos vec: [ -11.81,   17.44]
+progress vec: [ -10.03,   18.41]
+xtrack vec: [   1.78,    0.97]
+wpt aim vector: [ -12.00,   26.26]
+az set to 335
+{d 57.5} 
+{c335} 
+{ln  2.0} 
+{lt  1.3} 
+{s   1}
+{h335}
+{s   0}
+{h334}
+{s   1}
+{h335}
+{s   0}
+{h334}
+{s   1}
+{h335}
+{s   0}
+DR lat/lon: 22.333014088918237/7.069561023421268
+time: 1602952969.8365884
+raw hdg:  335.0
+raw speed: 1.220
+filtered L/L: 22.3413/ 7.0873
+Filtered hdg:  328.2
+Filtered speed:  0.753
+Kalman pos vec: [ -12.18,   17.77]
+progress vec: [ -10.25,   18.82]
+xtrack vec: [   1.93,    1.05]
+wpt aim vector: [ -11.74,   26.15]
+az set to 335
+{d 57.1} 
+{c336} 
+{ln  2.2} 
+{lt  1.3} 
+msg: 09:42:49 {LT22.3546}
+msg: 09:42:49 {LN7.1060}
+msg: 09:42:50 {LA384}
+{lt  1.26}
+raw L/L: 22.3546/7.106
+time: 1602952970.8424456
+raw hdg:  335.0
+raw speed: 1.220
+filtered L/L: 22.3558/ 7.0998
+Filtered hdg:  327.7
+Filtered speed:  1.574
+Kalman pos vec: [ -13.23,   19.23]
+progress vec: [ -11.11,   20.39]
+xtrack vec: [   2.12,    1.16]
+wpt aim vector: [ -11.12,   25.47]
+az set to 336
+{d 55.3} 
+{c336} 
+{ln  2.4} 
+{lt  1.3} 
+{s   1}
+msg: 09:42:51 {LT22.3726}
+msg: 09:42:51 {LN7.1208}
+msg: 09:42:51 {LA382}
+{lt  1.25}
+{h336}
+{s   0}
+raw L/L: 22.3726/7.1208
+time: 1602952971.8448994
+raw hdg:  336.0
+raw speed: 1.220
+filtered L/L: 22.3728/ 7.1143
+Filtered hdg:  328.2
+Filtered speed:  1.769
+Kalman pos vec: [ -14.44,   20.96]
+progress vec: [ -12.11,   22.23]
+xtrack vec: [   2.33,    1.27]
+wpt aim vector: [ -10.41,   24.67]
+az set to 337
+{d 53.2} 
+{c337} 
+{ln  2.7} 
+{lt  1.3} 
+{s   1}
+{h337}
+{s   0}
+{h336}
+{s   1}
+{h337}
+{s   0}
+DR lat/lon: 22.368105326836044/7.100881784081434
+time: 1602952972.8475742
+raw hdg:  337.0
+raw speed: 1.220
+filtered L/L: 22.3763/ 7.1184
+Filtered hdg:  328.8
+Filtered speed:  0.758
+Kalman pos vec: [ -14.79,   21.31]
+progress vec: [ -12.34,   22.65]
+xtrack vec: [   2.45,    1.33]
+wpt aim vector: [ -10.19,   24.53]
+az set to 337
+{d 52.8} 
+{c337} 
+{ln  2.8} 
+{lt  1.3} 
+msg: 09:42:52 {LT22.3906}
+msg: 09:42:52 {LN7.1356}
+msg: 09:42:53 {LA380}
+{lt  1.25}
+raw L/L: 22.3906/7.1356
+time: 1602952973.8482928
+raw hdg:  337.0
+raw speed: 1.220
+filtered L/L: 22.3911/ 7.1306
+Filtered hdg:  328.4
+Filtered speed:  1.585
+Kalman pos vec: [ -15.81,   22.81]
+progress vec: [ -13.20,   24.23]
+xtrack vec: [   2.61,    1.42]
+wpt aim vector: [  -9.60,   23.83]
+az set to 338
+{d 51.0} 
+{c338} 
+{ln  3.0} 
+{lt  1.2} 
+{s   1}
+{h338}
+{s   0}
+{h337}
+{s   1}
+{h338}
+{s   0}
+msg: 09:42:54 {LT22.4093}
+msg: 09:42:54 {LN7.1496}
+msg: 09:42:54 {LA380}
+{lt  1.25}
+raw L/L: 22.4093/7.1496
+time: 1602952974.8509336
+raw hdg:  338.0
+raw speed: 1.220
+filtered L/L: 22.4086/ 7.1446
+Filtered hdg:  329.0
+Filtered speed:  1.784
+Kalman pos vec: [ -16.98,   24.59]
+progress vec: [ -14.22,   26.09]
+xtrack vec: [   2.77,    1.51]
+wpt aim vector: [  -8.94,   22.99]
+az set to 338
+{d 48.9} 
+{c339} 
+{ln  3.2} 
+{lt  1.2} 
+msg: 09:42:55 {LT22.4276}
+msg: 09:42:55 {LN7.1633}
+raw L/L: 22.4276/7.1633
+time: 1602952975.8559968
+raw hdg:  338.0
+raw speed: 1.220
+filtered L/L: 22.4267/ 7.1587
+Filtered hdg:  328.7
+Filtered speed:  1.807
+Kalman pos vec: [ -18.16,   26.41]
+progress vec: [ -15.25,   28.00]
+xtrack vec: [   2.91,    1.58]
+wpt aim vector: [  -8.28,   22.12]
+az set to 339
+{d 46.7} 
+{c339} 
+{ln  3.3} 
+{lt  1.2} 
+{s   1}
+msg: 09:42:56 {LA379}
+{lt  1.24}
+{h339}
+{s   0}
+DR lat/lon: 22.422296828532215/7.144956669898102
+time: 1602952976.8657615
+raw hdg:  339.0
+raw speed: 1.220
+filtered L/L: 22.4305/ 7.1624
+Filtered hdg:  329.4
+Filtered speed:  0.764
+Kalman pos vec: [ -18.47,   26.80]
+progress vec: [ -15.49,   28.43]
+xtrack vec: [   2.99,    1.63]
+wpt aim vector: [  -8.08,   21.94]
+az set to 339
+{d 46.2} 
+{c340} 
+{ln  3.4} 
+{lt  1.2} 
+{h338}
+{s   1}
+msg: 09:42:57 {LT22.4460}
+msg: 09:42:57 {LN7.1762}
+msg: 09:42:57 {LA379}
+{lt  1.24}
+{h339}
+{s   0}
+raw L/L: 22.446/7.1762
+time: 1602952977.8750594
+raw hdg:  339.0
+raw speed: 1.220
+filtered L/L: 22.4454/ 7.1736
+Filtered hdg:  329.3
+Filtered speed:  1.557
+Kalman pos vec: [ -19.41,   28.31]
+progress vec: [ -16.34,   29.99]
+xtrack vec: [   3.07,    1.68]
+wpt aim vector: [  -7.57,   21.21]
+az set to 340
+{d 44.5} 
+{c340} 
+{ln  3.5} 
+{lt  1.2} 
+{s   1}
+{h340}
+{s   0}
+msg: 09:42:58 {LT22.4647}
+DR lat/lon: 22.44127213643634/7.15986024637006
+time: 1602952978.8801558
+raw hdg:  340.0
+raw speed: 1.220
+filtered L/L: 22.4604/ 7.1820
+Filtered hdg:  331.0
+Filtered speed:  1.497
+Kalman pos vec: [ -20.12,   29.83]
+progress vec: [ -17.14,   31.45]
+xtrack vec: [   2.98,    1.62]
+wpt aim vector: [  -7.26,   20.42]
+az set to 340
+{d 42.8} 
+{c340} 
+{ln  3.4} 
+{lt  1.2} 
+msg: 09:42:58 {LN7.1899}
+msg: 09:42:59 {LA379}
+{lt  1.24}
+{h341}
+{h340}
+raw L/L: 22.44127213643634/7.1899
+time: 1602952979.8842273
+raw hdg:  340.0
+raw speed: 1.220
+filtered L/L: 22.4523/ 7.1807
+Filtered hdg:  329.6
+Filtered speed: -0.028
+Kalman pos vec: [ -20.01,   29.01]
+progress vec: [ -16.77,   30.77]
+xtrack vec: [   3.24,    1.77]
+wpt aim vector: [  -7.19,   20.92]
+az set to 341
+{d 43.6} 
+{c341} 
+{ln  3.7} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:00 {LT22.4845}
+msg: 09:43:00 {LN7.2032}
+msg: 09:43:00 {LA379}
+{lt  1.24}
+{h341}
+{s   0}
+{h342}
+raw L/L: 22.4845/7.2032
+time: 1602952980.886549
+raw hdg:  342.0
+raw speed: 1.220
+filtered L/L: 22.4796/ 7.1994
+Filtered hdg:  331.6
+Filtered speed:  2.440
+Kalman pos vec: [ -21.57,   31.78]
+progress vec: [ -18.29,   33.57]
+xtrack vec: [   3.28,    1.79]
+wpt aim vector: [  -6.39,   19.54]
+az set to 341
+{d 40.4} 
+{c342} 
+{ln  3.7} 
+{lt  1.2} 
+{h341}
+{h342}
+{h341}
+msg: 09:43:01 {LT22.5040}
+msg: 09:43:01 {LN7.2155}
+raw L/L: 22.504/7.2155
+time: 1602952981.8866775
+raw hdg:  341.0
+raw speed: 1.220
+filtered L/L: 22.5008/ 7.2134
+Filtered hdg:  330.6
+Filtered speed:  1.984
+Kalman pos vec: [ -22.75,   33.92]
+progress vec: [ -19.46,   35.72]
+xtrack vec: [   3.29,    1.79]
+wpt aim vector: [  -5.79,   18.46]
+az set to 342
+{d 38.0} 
+{c343} 
+{ln  3.7} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:02 {LA377}
+{lt  1.24}
+{h342}
+{s   0}
+{h341}
+{s   1}
+{h342}
+{s   0}
+DR lat/lon: 22.497055603837403/7.199504145518603
+time: 1602952982.8932352
+raw hdg:  342.0
+raw speed: 1.220
+filtered L/L: 22.5056/ 7.2168
+Filtered hdg:  331.6
+Filtered speed:  0.808
+Kalman pos vec: [ -23.03,   34.41]
+progress vec: [ -19.73,   36.21]
+xtrack vec: [   3.30,    1.80]
+wpt aim vector: [  -5.65,   18.22]
+az set to 342
+{d 37.4} 
+{c343} 
+{ln  3.8} 
+{lt  1.2} 
+msg: 09:43:03 {LT22.5220}
+msg: 09:43:03 {LN7.2274}
+msg: 09:43:03 {LA377}
+{lt  1.24}
+raw L/L: 22.522/7.2274
+time: 1602952983.9010558
+raw hdg:  342.0
+raw speed: 1.220
+filtered L/L: 22.5207/ 7.2266
+Filtered hdg:  331.6
+Filtered speed:  1.532
+Kalman pos vec: [ -23.85,   35.94]
+progress vec: [ -20.56,   37.73]
+xtrack vec: [   3.29,    1.80]
+wpt aim vector: [  -5.24,   17.45]
+az set to 343
+{d 35.7} 
+{c343} 
+{ln  3.8} 
+{lt  1.2} 
+{s   1}
+{h343}
+{s   0}
+msg: 09:43:04 {LT22.5410}
+msg: 09:43:04 {LN7.2396}
+raw L/L: 22.541/7.2396
+time: 1602952984.907104
+raw hdg:  343.0
+raw speed: 1.220
+filtered L/L: 22.5388/ 7.2383
+Filtered hdg:  332.6
+Filtered speed:  1.747
+Kalman pos vec: [ -24.83,   37.77]
+progress vec: [ -21.55,   39.56]
+xtrack vec: [   3.28,    1.79]
+wpt aim vector: [  -4.75,   16.53]
+az set to 343
+{d 33.6} 
+{c344} 
+{ln  3.7} 
+{lt  1.2} 
+msg: 09:43:05 {LA376}
+{lt  1.23}
+{h342}
+{s   1}
+{h343}
+{s   0}
+DR lat/lon: 22.535231606415973/7.224333011597029
+time: 1602952985.9087083
+raw hdg:  343.0
+raw speed: 1.220
+filtered L/L: 22.5429/ 7.2409
+Filtered hdg:  332.6
+Filtered speed:  0.756
+Kalman pos vec: [ -25.05,   38.19]
+progress vec: [ -21.78,   39.97]
+xtrack vec: [   3.27,    1.78]
+wpt aim vector: [  -4.65,   16.31]
+az set to 344
+{d 33.2} 
+{c344} 
+{ln  3.7} 
+{lt  1.2} 
+{s   1}
+{h342}
+{s   2}
+msg: 09:43:06 {LT22.5605}
+msg: 09:43:06 {LN7.2522}
+msg: 09:43:06 {LA374}
+{lt  1.23}
+{h343}
+{s   1}
+{h344}
+{s   0}
+{h343}
+{s   1}
+{h344}
+{s   0}
+raw L/L: 22.5605/7.2522
+time: 1602952986.909919
+raw hdg:  344.0
+raw speed: 1.220
+filtered L/L: 22.5590/ 7.2509
+Filtered hdg:  333.6
+Filtered speed:  1.601
+Kalman pos vec: [ -25.89,   39.82]
+progress vec: [ -22.66,   41.58]
+xtrack vec: [   3.23,    1.76]
+wpt aim vector: [  -4.24,   15.49]
+az set to 344
+{d 31.3} 
+{c345} 
+{ln  3.7} 
+{lt  1.2} 
+msg: 09:43:07 {LT22.5792}
+msg: 09:43:07 {LN7.2644}
+raw L/L: 22.5792/7.2644
+time: 1602952987.9139092
+raw hdg:  344.0
+raw speed: 1.220
+filtered L/L: 22.5773/ 7.2622
+Filtered hdg:  333.5
+Filtered speed:  1.752
+Kalman pos vec: [ -26.83,   41.68]
+progress vec: [ -23.65,   43.41]
+xtrack vec: [   3.18,    1.73]
+wpt aim vector: [  -3.79,   14.54]
+az set to 345
+{d 29.3} 
+{c345} 
+{ln  3.6} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:08 {LA374}
+{lt  1.23}
+{h345}
+{s   0}
+{h344}
+{s   1}
+{h345}
+{s   0}
+{h344}
+{s   1}
+DR lat/lon: 22.573975634899266/7.2481817381204
+time: 1602952988.9152756
+raw hdg:  344.0
+raw speed: 1.220
+filtered L/L: 22.5814/ 7.2649
+Filtered hdg:  333.4
+Filtered speed:  0.756
+Kalman pos vec: [ -27.06,   42.10]
+progress vec: [ -23.88,   43.83]
+xtrack vec: [   3.18,    1.73]
+wpt aim vector: [  -3.68,   14.33]
+az set to 345
+{d 28.8} 
+{c346} 
+{ln  3.6} 
+{lt  1.2} 
+{h345}
+{s   0}
+msg: 09:43:09 {LT22.5983}
+msg: 09:43:09 {LN7.2756}
+msg: 09:43:09 {LA373}
+{lt  1.22}
+raw L/L: 22.5983/7.2756
+time: 1602952989.9223819
+raw hdg:  345.0
+raw speed: 1.220
+filtered L/L: 22.5970/ 7.2744
+Filtered hdg:  334.4
+Filtered speed:  1.555
+Kalman pos vec: [ -27.85,   43.68]
+progress vec: [ -24.72,   45.38]
+xtrack vec: [   3.13,    1.70]
+wpt aim vector: [  -3.31,   13.52]
+az set to 346
+{d 27.0} 
+{c346} 
+{ln  3.6} 
+{lt  1.2} 
+{s   1}
+{h346}
+{s   0}
+{h345}
+{s   1}
+{h346}
+{s   0}
+msg: 09:43:10 {LT22.6177}
+msg: 09:43:10 {LN7.2868}
+raw L/L: 22.6177/7.2868
+time: 1602952990.9300978
+raw hdg:  346.0
+raw speed: 1.220
+filtered L/L: 22.6156/ 7.2851
+Filtered hdg:  335.4
+Filtered speed:  1.750
+Kalman pos vec: [ -28.75,   45.56]
+progress vec: [ -25.72,   47.21]
+xtrack vec: [   3.03,    1.65]
+wpt aim vector: [  -2.90,   12.55]
+az set to 346
+{d 25.0} 
+{c347} 
+{ln  3.5} 
+{lt  1.2} 
+msg: 09:43:11 {LA372}
+{lt  1.22}
+{h345}
+{s   1}
+{h346}
+{s   0}
+DR lat/lon: 22.612666845508027/7.270986573671979
+time: 1602952991.9311175
+raw hdg:  346.0
+raw speed: 1.220
+filtered L/L: 22.6198/ 7.2876
+Filtered hdg:  335.3
+Filtered speed:  0.756
+Kalman pos vec: [ -28.96,   45.98]
+progress vec: [ -25.95,   47.63]
+xtrack vec: [   3.01,    1.64]
+wpt aim vector: [  -2.81,   12.33]
+az set to 347
+{d 24.5} 
+{c347} 
+{ln  3.4} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:12 {LT22.6368}
+msg: 09:43:12 {LN7.2983}
+msg: 09:43:12 {LA372}
+{lt  1.22}
+{h347}
+{s   0}
+raw L/L: 22.6368/7.2983
+time: 1602952992.936259
+raw hdg:  347.0
+raw speed: 1.220
+filtered L/L: 22.6357/ 7.2966
+Filtered hdg:  336.2
+Filtered speed:  1.560
+Kalman pos vec: [ -29.71,   47.59]
+progress vec: [ -26.79,   49.18]
+xtrack vec: [   2.92,    1.59]
+wpt aim vector: [  -2.48,   11.50]
+az set to 347
+{d 22.7} 
+{c348} 
+{ln  3.3} 
+{lt  1.2} 
+{h346}
+{s   1}
+{h347}
+{s   0}
+msg: 09:43:13 {LT22.6570}
+msg: 09:43:13 {LN7.3087}
+raw L/L: 22.657/7.3087
+time: 1602952993.9433813
+raw hdg:  347.0
+raw speed: 1.220
+filtered L/L: 22.6548/ 7.3069
+Filtered hdg:  336.2
+Filtered speed:  1.774
+Kalman pos vec: [ -30.58,   49.53]
+progress vec: [ -27.81,   51.04]
+xtrack vec: [   2.77,    1.51]
+wpt aim vector: [  -2.12,   10.48]
+az set to 348
+{d 20.6} 
+{c349} 
+{ln  3.2} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:14 {LA371}
+{lt  1.22}
+{h348}
+{s   0}
+DR lat/lon: 22.652281766440666/7.292664185736867
+time: 1602952994.9445739
+raw hdg:  348.0
+raw speed: 1.220
+filtered L/L: 22.6591/ 7.3094
+Filtered hdg:  337.1
+Filtered speed:  0.762
+Kalman pos vec: [ -30.79,   49.97]
+progress vec: [ -28.04,   51.46]
+xtrack vec: [   2.75,    1.50]
+wpt aim vector: [  -2.02,   10.26]
+az set to 348
+{d 20.1} 
+{c349} 
+{ln  3.1} 
+{lt  1.2} 
+msg: 09:43:15 {LT22.6768}
+msg: 09:43:15 {LN7.3199}
+msg: 09:43:15 {LA371}
+{lt  1.22}
+raw L/L: 22.6768/7.3199
+time: 1602952995.9504359
+raw hdg:  348.0
+raw speed: 1.220
+filtered L/L: 22.6755/ 7.3181
+Filtered hdg:  337.0
+Filtered speed:  1.587
+Kalman pos vec: [ -31.52,   51.63]
+progress vec: [ -28.90,   53.05]
+xtrack vec: [   2.61,    1.42]
+wpt aim vector: [  -1.72,    9.38]
+az set to 349
+{d 18.3} 
+{c350} 
+{ln  3.0} 
+{lt  1.2} 
+{s   1}
+{h349}
+{s   0}
+{h348}
+{s   1}
+{h349}
+{s   0}
+{h348}
+{s   1}
+{h349}
+{s   0}
+msg: 09:43:16 {LT22.6966}
+msg: 09:43:16 {LN7.3300}
+raw L/L: 22.6966/7.33
+time: 1602952996.9508488
+raw hdg:  349.0
+raw speed: 1.220
+filtered L/L: 22.6945/ 7.3280
+Filtered hdg:  338.0
+Filtered speed:  1.762
+Kalman pos vec: [ -32.34,   53.55]
+progress vec: [ -29.90,   54.88]
+xtrack vec: [   2.44,    1.33]
+wpt aim vector: [  -1.39,    8.37]
+az set to 350
+{d 16.2} 
+{c351} 
+{ln  2.8} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:17 {LA369}
+{lt  1.21}
+{h350}
+{s   0}
+{h349}
+{s   1}
+{h350}
+{s   0}
+DR lat/lon: 22.69242118559794/7.313611336778147
+time: 1602952997.9511113
+raw hdg:  350.0
+raw speed: 1.220
+filtered L/L: 22.6988/ 7.3304
+Filtered hdg:  338.9
+Filtered speed:  0.759
+Kalman pos vec: [ -32.54,   53.99]
+progress vec: [ -30.13,   55.30]
+xtrack vec: [   2.41,    1.31]
+wpt aim vector: [  -1.31,    8.14]
+az set to 350
+{d 15.7} 
+{c351} 
+{ln  2.7} 
+{lt  1.2} 
+msg: 09:43:18 {LT22.7164}
+msg: 09:43:18 {LN7.3400}
+msg: 09:43:18 {LA369}
+{lt  1.21}
+raw L/L: 22.7164/7.34
+time: 1602952998.9566338
+raw hdg:  350.0
+raw speed: 1.220
+filtered L/L: 22.7152/ 7.3383
+Filtered hdg:  338.8
+Filtered speed:  1.567
+Kalman pos vec: [ -33.21,   55.65]
+progress vec: [ -30.98,   56.86]
+xtrack vec: [   2.23,    1.21]
+wpt aim vector: [  -1.07,    7.26]
+az set to 351
+{d 13.9} 
+{c352} 
+{ln  2.5} 
+{lt  1.2} 
+{s   1}
+{h351}
+{s   0}
+msg: 09:43:19 {LT22.7362}
+msg: 09:43:19 {LN7.3487}
+raw L/L: 22.7362/7.3487
+time: 1602952999.9598517
+raw hdg:  351.0
+raw speed: 1.220
+filtered L/L: 22.7341/ 7.3472
+Filtered hdg:  339.7
+Filtered speed:  1.735
+Kalman pos vec: [ -33.95,   57.56]
+progress vec: [ -31.95,   58.65]
+xtrack vec: [   2.00,    1.09]
+wpt aim vector: [  -0.81,    6.23]
+az set to 352
+{d 11.9} 
+{c353} 
+{ln  2.3} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:20 {LA370}
+{lt  1.21}
+{h352}
+{s   0}
+{h351}
+{s   1}
+{h352}
+{s   0}
+DR lat/lon: 22.7323924505264/7.332727989349585
+time: 1602953000.9611094
+raw hdg:  352.0
+raw speed: 1.220
+filtered L/L: 22.7384/ 7.3493
+Filtered hdg:  340.7
+Filtered speed:  0.752
+Kalman pos vec: [ -34.13,   58.00]
+progress vec: [ -32.18,   59.06]
+xtrack vec: [   1.95,    1.06]
+wpt aim vector: [  -0.74,    6.00]
+az set to 352
+{d 11.4} 
+{c353} 
+{ln  2.2} 
+{lt  1.2} 
+msg: 09:43:22 {LT22.7560}
+DR lat/lon: 22.73661826517822/7.3341488473043155
+time: 1602953002.0109053
+raw hdg:  352.0
+raw speed: 1.220
+filtered L/L: 22.7512/ 7.3497
+Filtered hdg:  342.4
+Filtered speed:  1.198
+Kalman pos vec: [ -34.17,   59.30]
+progress vec: [ -32.73,   60.08]
+xtrack vec: [   1.43,    0.78]
+wpt aim vector: [  -0.97,    5.20]
+az set to 349
+{d 10.2} 
+{c349} 
+{ln  1.6} 
+{lt  1.2} 
+{s  -2}
+msg: 09:43:22 {LN7.3570}
+msg: 09:43:22 {LA370}
+{lt  1.21}
+{h351}
+{s  -1}
+msg: 09:43:22 {LT22.7765}
+msg: 09:43:22 {LN7.3645}
+raw L/L: 22.7765/7.3645
+time: 1602953003.0123734
+raw hdg:  351.0
+raw speed: 1.220
+filtered L/L: 22.7740/ 7.3598
+Filtered hdg:  341.1
+Filtered speed:  1.981
+Kalman pos vec: [ -35.01,   61.60]
+progress vec: [ -33.89,   62.21]
+xtrack vec: [   1.11,    0.61]
+wpt aim vector: [  -0.71,    3.96]
+az set to 349
+{d  7.7} 
+{c350} 
+{ln  1.3} 
+{lt  1.2} 
+msg: 09:43:23 {LA370}
+{lt  1.21}
+{h350}
+{s   0}
+{h349}
+{h350}
+{h349}
+DR lat/lon: 22.7716483801856/7.345340247615601
+time: 1602953004.0209107
+raw hdg:  349.0
+raw speed: 1.220
+filtered L/L: 22.7791/ 7.3625
+Filtered hdg:  338.8
+Filtered speed:  0.814
+Kalman pos vec: [ -35.24,   62.13]
+progress vec: [ -34.17,   62.71]
+xtrack vec: [   1.07,    0.58]
+wpt aim vector: [  -0.62,    3.68]
+az set to 350
+{d  7.2} 
+{c350} 
+{ln  1.2} 
+{lt  1.2} 
+{s   1}
+msg: 09:43:24 {LT22.7966}
+msg: 09:43:24 {LN7.3728}
+msg: 09:43:24 {LA370}
+{lt  1.21}
+{h350}
+{s   0}
+raw L/L: 22.7966/7.3728
+time: 1602953005.0271714
+raw hdg:  350.0
+raw speed: 1.220
+filtered L/L: 22.7955/ 7.3706
+Filtered hdg:  339.7
+Filtered speed:  1.569
+Kalman pos vec: [ -35.91,   63.79]
+progress vec: [ -35.02,   64.28]
+xtrack vec: [   0.89,    0.49]
+wpt aim vector: [  -0.37,    2.80]
+az set to 352
+{d  5.4} 
+{c352} 
+{ln  1.0} 
+{lt  1.2} 
+{s   2}
+{h351}
+{s   1}
+msg: 09:43:25 {LT22.8164}
+msg: 09:43:25 {LN7.3822}
+raw L/L: 22.8164/7.3822
+time: 1602953006.0325081
+raw hdg:  351.0
+raw speed: 1.220
+filtered L/L: 22.8146/ 7.3795
+Filtered hdg:  340.5
+Filtered speed:  1.743
+Kalman pos vec: [ -36.66,   65.72]
+progress vec: [ -36.00,   66.08]
+xtrack vec: [   0.66,    0.36]
+wpt aim vector: [  -0.11,    1.77]
+az set to 356
+{d  3.3} 
+{c356} 
+{ln  0.7} 
+{lt  1.2} 
+{s   5}
+msg: 09:43:26 {LA370}
+{lt  1.21}
+{h352}
+{s   4}
+{h353}
+{s   3}
+{h354}
+{s   2}
+{h355}
+{s   1}
+{h356}
+{s   0}
+DR lat/lon: 22.81372922614631/7.364831739051213
+time: 1602953007.0407414
+raw hdg:  356.0
+raw speed: 1.220
+filtered L/L: 22.8188/ 7.3821
+Filtered hdg:  345.4
+Filtered speed:  0.746
+Kalman pos vec: [ -36.88,   66.14]
+progress vec: [ -36.23,   66.50]
+xtrack vec: [   0.65,    0.35]
+wpt aim vector: [  -0.01,    1.56]
+az set to 359
+{d  2.8} 
+{c360} 
+{ln  0.7} 
+{lt  1.2} 
+{s   3}
+msg: 09:43:27 {LT22.8370}
+msg: 09:43:27 {LN7.3901}
+msg: 09:43:27 {LA370}
+{lt  1.21}
+{h357}
+{s   2}
+{h358}
+{s   1}
+{h359}
+{s   0}
+raw L/L: 22.837/7.3901
+time: 1602953008.046792
+raw hdg:  359.0
+raw speed: 1.220
+filtered L/L: 22.8358/ 7.3878
+Filtered hdg:  348.2
+Filtered speed:  1.564
+Kalman pos vec: [ -37.35,   67.87]
+progress vec: [ -37.06,   68.02]
+xtrack vec: [   0.29,    0.16]
+wpt aim vector: [   0.05,    0.60]
+az set to 364
+{d  1.1} 
+{c365} 
+{ln  0.3} 
+{lt  1.2} 
+close to waypoint
+Standby
+{v   0}
+{s   5}
+{h  0}
+{h359}
+{h  0}
+{h359}
+msg: 09:43:28 {LT22.8496}
+msg: 09:43:28 {LN7.3937}
+msg: 09:43:29 {LA370}
+{lt  1.21}
+msg: 09:43:30 {LT22.8499}
+msg: 09:43:30 {LN7.3937}
+msg: 09:43:30 {LA368}
+{lt  1.21}
+msg: 09:43:31 {LT22.8503}
+msg: 09:43:31 {LN7.3937}
+msg: 09:43:32 {LA365}
+{lt  1.20}
+msg: 09:43:32 {D2}
+{v  10}
+{h  0}
+msg: 09:43:32 {D2}
+{v  20}
+msg: 09:43:32 {D2}
+{v  30}
+{h  1}
+msg: 09:43:33 {D2}
+{v  40}
+msg: 09:43:33 {LT22.8535}
+msg: 09:43:33 {LN7.3951}
+msg: 09:43:33 {LA362}
+{lt  1.19}
+{h  2}
+{h  3}
+msg: 09:43:33 {D7}
+{s -36}
+{h  4}
+{h  3}
+msg: 09:43:36 {LT22.8614}
+msg: 09:43:36 {LN7.3973}
+msg: 09:43:36 {LA360}
+{lt  1.18}
+{h  2}
+{h  0}
+{h359}
+{h358}
+{h357}
+{h356}
+{h355}
+{h354}
+msg: 09:43:36 {D2}
+{v  50}
+{h353}
+{h352}
+{h351}
+{h350}
+msg: 09:43:36 {D2}
+{v  60}
+{h349}
+msg: 09:43:36 {LT22.8676}
+msg: 09:43:36 {LN7.3969}
+msg: 09:43:36 {LA360}
+{lt  1.18}
+{h346}
+{h345}
+{h343}
+{h341}
+{h340}
+{h339}
+{h338}
+{h336}
+{h335}
+{h334}
+{h333}
+{h332}
+{h331}
+{h330}
+{h329}
+{h328}
+{h327}
+{h326}
+{h325}
+{h324}
+{h323}
+{h322}
+{h321}
+{h319}
+msg: 09:43:37 {LT22.8751}
+msg: 09:43:37 {LN7.3984}
+msg: 09:43:38 {LA369}
+{lt  1.21}
+{h315}
+{h314}
+{h310}
+{h309}
+{h308}
+{h307}
+{h306}
+{h305}
+{h304}
+{h302}
+{h301}
+{h300}
+{h299}
+{h298}
+{h297}
+{h296}
+{h295}
+{h294}
+{h293}
+{h292}
+{h291}
+{h290}
+{h289}
+{h288}
+msg: 09:43:39 {LT22.8812}
+msg: 09:43:39 {LN7.4038}
+msg: 09:43:39 {LA380}
+{lt  1.25}
+{h283}
+{h282}
+{h278}
+{h277}
+{h276}
+{h275}
+{h274}
+{h273}
+{h272}
+{h271}
+{h270}
+{h268}
+{h267}
+{h266}
+{h265}
+{h264}
+{h263}
+{h262}
+{h261}
+{h260}
+{h258}
+{h256}
+{h255}
+msg: 09:43:40 {LT22.8838}
+msg: 09:43:40 {LN7.4128}
+{h251}
+msg: 09:43:41 {LA391}
+{lt  1.28}
+{h250}
+{h249}
+{h247}
+{h245}
+{h244}
+{h243}
+{h242}
+{h241}
+{h240}
+{h239}
+{h238}
+{h237}
+{h236}
+{h235}
+{h234}
+{h232}
+{h231}
+{h230}
+{h229}
+{h228}
+{h227}
+{h226}
+{h225}
+{h223}
+msg: 09:43:42 {LT22.8816}
+msg: 09:43:42 {LN7.4200}
+msg: 09:43:42 {LA401}
+{lt  1.32}
+{h217}
+{h216}
+{h212}
+{h211}
+{h210}
+{h209}
+{h208}
+{h207}
+{h205}
+{h204}
+{h203}
+{h202}
+{h201}
+{h200}
+{h199}
+{h198}
+{h197}
+{h196}
+{h195}
+{h194}
+{h193}
+{h192}
+msg: 09:43:43 {D5}
+{s   0}
+{h190}
+{h189}
+msg: 09:43:44 {LT22.8748}
+msg: 09:43:44 {LN7.4257}
+msg: 09:43:44 {LA410}
+{lt  1.35}
+{h185}
+{h184}
+{h181}
+{h180}
+msg: 09:43:45 {LT22.8625}
+msg: 09:43:45 {LN7.4228}
+msg: 09:43:45 {LA410}
+{lt  1.35}
+{h181}
+msg: 09:43:46 {LT22.8503}
+msg: 09:43:46 {LN7.4174}
+msg: 09:43:47 {LA404}
+{lt  1.33}
+msg: 09:43:47 {D4}
+{s  -5}
+{h180}
+{h179}
+{h178}
+{h177}
+msg: 09:43:48 {D5}
+{s   0}
+msg: 09:43:48 {LT22.8384}
+msg: 09:43:48 {LN7.4131}
+msg: 09:43:48 {LA401}
+{lt  1.32}
+{h176}
+msg: 09:43:48 {D4}
+{s  -5}
+{h175}
+{h174}
+{h173}
+msg: 09:43:49 {LT22.8269}
+msg: 09:43:49 {LN7.4077}
+msg: 09:43:50 {LA400}
+{lt  1.31}
+{h172}
+{h171}
+{h170}
+{h169}
+msg: 09:43:50 {D5}
+{s   0}
+msg: 09:43:51 {LT22.8146}
+msg: 09:43:51 {LN7.4002}
+msg: 09:43:51 {LA398}
+{lt  1.31}
+msg: 09:43:51 {D2}
+{v  70}
+{h170}
+msg: 09:43:51 {D2}
+{v  80}
+msg: 09:43:52 {D2}
+{v  90}
+msg: 09:43:52 {D2}
+{v 100}
+msg: 09:43:52 {D2}
+{h171}
+msg: 09:43:52 {LT22.7992}
+msg: 09:43:52 {LN7.3883}
+msg: 09:43:53 {LA397}
+{lt  1.30}
+msg: 09:43:53 {D2}
+{h172}
+msg: 09:43:54 {LT22.7794}
+msg: 09:43:54 {LN7.3742}
+msg: 09:43:54 {LA395}
+{lt  1.30}
+{h173}
+{h174}
+{h175}
+msg: 09:43:55 {LT22.7599}
+msg: 09:43:55 {LN7.3602}
+msg: 09:43:56 {LA395}
+{lt  1.30}
+{h176}
+msg: 09:43:57 {LT22.7401}
+msg: 09:43:57 {LN7.3462}
+msg: 09:43:57 {LA393}
+{lt  1.29}
+{h177}
+{h176}
+{h177}
+msg: 09:43:58 {LT22.7196}
+msg: 09:43:58 {LN7.3339}
+msg: 09:43:59 {LA392}
+{lt  1.29}
+{h178}
+{h179}
+{h178}
+{h179}
+msg: 09:44:00 {LT22.6998}
+msg: 09:44:00 {LN7.3206}
+msg: 09:44:00 {LA392}
+{lt  1.29}
+{h180}
+{h179}
+{h180}
+msg: 09:44:01 {LT22.6796}
+msg: 09:44:01 {LN7.3087}
+msg: 09:44:02 {LA392}
+{lt  1.29}
+{h181}
+{h182}
+msg: 09:44:03 {LT22.6588}
+msg: 09:44:03 {LN7.2965}
+msg: 09:44:03 {LA391}
+{lt  1.28}
+msg: 09:44:03 {D1}
+{s  -1}
+msg: 09:44:03 {D1}
+{s  -2}
+{h181}
+{h180}
+msg: 09:44:04 {LT22.6390}
+msg: 09:44:04 {LN7.2850}
+{h179}
+msg: 09:44:05 {LA389}
+{lt  1.28}
+{h178}
+{h177}
+{h176}
+msg: 09:44:06 {D5}
+{s   0}
+{h175}
+msg: 09:44:06 {LT22.6199}
+msg: 09:44:06 {LN7.2720}
+msg: 09:44:06 {LA388}
+{lt  1.27}
+{h174}
+{h175}
+{h174}
+{h175}
+{h176}
+msg: 09:44:07 {LT22.6008}
+msg: 09:44:07 {LN7.2558}
+msg: 09:44:08 {LA386}
+{lt  1.27}
+{h177}
+{h176}
+{h177}
+{h176}
+{h177}
+{h176}
+{h177}
+msg: 09:44:09 {LT22.5824}
+msg: 09:44:09 {LN7.2418}
+msg: 09:44:09 {LA386}
+{lt  1.27}
+{h178}
+msg: 09:44:10 {LT22.5637}
+msg: 09:44:10 {LN7.2266}
+{h179}
+msg: 09:44:11 {LA385}
+{lt  1.26}
+{h180}
+{h179}
+{h180}
+msg: 09:44:12 {LT22.5443}
+msg: 09:44:12 {LN7.2108}
+msg: 09:44:12 {LA386}
+{lt  1.27}
+{h181}
+{h180}
+{h181}
+{h180}
+{h181}
+msg: 09:44:13 {LT22.5252}
+msg: 09:44:13 {LN7.1968}
+msg: 09:44:14 {LA386}
+{lt  1.27}
+{h182}
+{h183}
+{h182}
+msg: 09:44:15 {LT22.5058}
+msg: 09:44:15 {LN7.1816}
+msg: 09:44:15 {LA386}
+{lt  1.27}
+{h183}
+{h184}
+msg: 09:44:16 {LT22.4867}
+msg: 09:44:16 {LN7.1669}
+msg: 09:44:17 {LA384}
+{lt  1.26}
+{h185}
+{h184}
+{h185}
+{h184}
+{h185}
+msg: 09:44:18 {LT22.4676}
+msg: 09:44:18 {LN7.1528}
+msg: 09:44:18 {LA383}
+{lt  1.26}
+{h186}
+msg: 09:44:19 {LT22.4482}
+msg: 09:44:19 {LN7.1392}
+msg: 09:44:20 {LA383}
+{lt  1.26}
+{h187}
+msg: 09:44:21 {LT22.4287}
+msg: 09:44:21 {LN7.1251}
+msg: 09:44:21 {LA384}
+{lt  1.26}
+{h188}
+{h187}
+{h188}
+{h187}
+{h188}
+msg: 09:44:22 {LT22.4093}
+msg: 09:44:22 {LN7.1118}
+msg: 09:44:23 {LA386}
+{lt  1.27}
+{h189}
+{h188}
+{h189}
+msg: 09:44:24 {LT22.3898}
+msg: 09:44:24 {LN7.0974}
+msg: 09:44:24 {LA386}
+{lt  1.27}
+{h190}
+{h189}
+{h190}
+msg: 09:44:25 {LT22.3700}
+msg: 09:44:25 {LN7.0841}
+msg: 09:44:26 {LA384}
+{lt  1.26}
+{h191}
+{h192}
+{h191}
+{h192}
+{h191}
+{h192}
+msg: 09:44:27 {LT22.3506}
+msg: 09:44:27 {LN7.0718}
+msg: 09:44:27 {LA384}
+{lt  1.26}
+msg: 09:44:27 {D6}
+{s   5}
+{h193}
+{h194}
+{h195}
+{h196}
+{h197}
+{h198}
+{h199}
+{h200}
+msg: 09:44:28 {LT22.3319}
+msg: 09:44:28 {LN7.0592}
+msg: 09:44:29 {LA384}
+{lt  1.26}
+{h202}
+{h203}
+{h204}
+{h205}
+{h206}
+{h207}
+{h208}
+{h209}
+{h210}
+{h211}
+{h212}
+{h213}
+msg: 09:44:30 {LT22.3121}
+msg: 09:44:30 {LN7.0510}
+msg: 09:44:30 {LA382}
+{lt  1.25}
+{h215}
+{h217}
+{h218}
+{h219}
+{h220}
+{h221}
+{h222}
+{h223}
+{h225}
+msg: 09:44:31 {LT22.2908}
+msg: 09:44:31 {LN7.0484}
+msg: 09:44:32 {LA381}
+{lt  1.25}
+{h228}
+{h231}
+{h232}
+{h233}
+{h234}
+msg: 09:44:32 {D5}
+{s   0}
+{h235}
+{h236}
+msg: 09:44:33 {LT22.2696}
+msg: 09:44:33 {LN7.0531}
+msg: 09:44:33 {LA381}
+{lt  1.25}
+{h237}
+{h236}
+{h237}
+{h236}
+{h235}
+{h236}
+msg: 09:44:34 {LT22.2498}
+msg: 09:44:34 {LN7.0567}
+msg: 09:44:35 {LA380}
+{lt  1.25}
+{h235}
+{h236}
+{h235}
+{h236}
+{h237}
+{h236}
+{h237}
+msg: 09:44:36 {LT22.2278}
+msg: 09:44:36 {LN7.0621}
+msg: 09:44:36 {LA380}
+{lt  1.25}
+{h236}
+{h237}
+{h236}
+{h237}
+{h236}
+{h237}
+{h236}
+{h237}
+msg: 09:44:37 {LT22.2070}
+msg: 09:44:37 {LN7.0668}
+msg: 09:44:38 {LA382}
+{lt  1.25}
+{h238}
+{h237}
+{h238}
+{h237}
+msg: 09:44:39 {LT22.1854}
+msg: 09:44:39 {LN7.0708}
+msg: 09:44:39 {LA384}
+{lt  1.26}
+{h238}
+msg: 09:44:39 {D6}
+{s   5}
+{h237}
+{h238}
+{h239}
+{h240}
+{h241}
+{h242}
+{h243}
+{h244}
+msg: 09:44:40 {LT22.1648}
+msg: 09:44:40 {LN7.0754}
+msg: 09:44:41 {LA387}
+{lt  1.27}
+{h247}
+{h248}
+{h249}
+{h250}
+{h251}
+{h252}
+{h253}
+{h254}
+{h255}
+{h256}
+{h257}
+msg: 09:44:42 {LT22.1447}
+msg: 09:44:42 {LN7.0819}
+msg: 09:44:42 {LA390}
+{lt  1.28}
+{h259}
+{h260}
+{h261}
+{h262}
+{h263}
+{h264}
+{h265}
+{h266}
+{h267}
+{h268}
+{h269}
+msg: 09:44:43 {LT22.1260}
+msg: 09:44:43 {LN7.0949}
+msg: 09:44:44 {LA392}
+{lt  1.29}
+{h271}
+{h272}
+{h273}
+{h274}
+{h275}
+{h276}
+msg: 09:44:44 {D5}
+{s   0}
+{h277}
+{h278}
+{h279}
+{h278}
+msg: 09:44:45 {LT22.1101}
+msg: 09:44:45 {LN7.1107}
+msg: 09:44:45 {LA394}
+{lt  1.29}
+{h279}
+{h278}
+{h279}
+{h280}
+{h279}
+msg: 09:44:46 {LT22.0950}
+msg: 09:44:46 {LN7.1287}
+msg: 09:44:47 {LA394}
+{lt  1.29}
+{h278}
+{h279}
+{h278}
+{h279}
+{h278}
+msg: 09:44:48 {LT22.0810}
+msg: 09:44:48 {LN7.1460}
+msg: 09:44:48 {LA394}
+{lt  1.29}
+msg: 09:44:48 {D8}
+{v  90}
+{h277}
+{h278}
+{h277}
+{h276}
+msg: 09:44:49 {D8}
+{v  80}
+{h277}
+msg: 09:44:49 {LT22.0684}
+msg: 09:44:49 {LN7.1622}
+msg: 09:44:50 {LA393}
+{lt  1.29}
+{h278}
+{h277}
+{h278}
+{h277}
+msg: 09:44:51 {LT22.0547}
+msg: 09:44:51 {LN7.1770}
+msg: 09:44:51 {LA394}
+{lt  1.29}
+{h276}
+{h277}
+{h276}
+{h275}
+{h276}
+msg: 09:44:52 {LT22.0421}
+msg: 09:44:52 {LN7.1914}
+msg: 09:44:53 {LA394}
+{lt  1.29}
+msg: 09:44:53 {D4}
+{s  -5}
+{h275}
+{h274}
+{h273}
+{h272}
+{h271}
+{h270}
+msg: 09:44:54 {D5}
+{s   0}
+{h269}
+msg: 09:44:54 {LT22.0306}
+msg: 09:44:54 {LN7.2040}
+msg: 09:44:54 {LA394}
+{lt  1.29}
+msg: 09:44:54 {D4}
+{s  -5}
+{h268}
+{h267}
+{h266}
+msg: 09:44:55 {D5}
+{s   0}
+{h265}
+msg: 09:44:55 {LT22.0172}
+msg: 09:44:55 {LN7.2158}
+msg: 09:44:56 {LA395}
+{lt  1.30}
+{h264}
+msg: 09:44:56 {D4}
+{s  -5}
+{h263}
+{h264}
+{h263}
+{h262}
+msg: 09:44:57 {LT22.0050}
+msg: 09:44:57 {LN7.2238}
+{h261}
+msg: 09:44:57 {LA398}
+{lt  1.31}
+msg: 09:44:57 {D5}
+{s   0}
+{h260}
+{h259}
+{h260}
+msg: 09:44:58 {LT21.9902}
+msg: 09:44:58 {LN7.2313}
+msg: 09:44:59 {LA403}
+{lt  1.32}
+msg: 09:45:00 {LT21.9744}
+msg: 09:45:00 {LN7.2400}
+msg: 09:45:00 {LA408}
+{lt  1.34}
+{h261}
+msg: 09:45:00 {D0}
+{v   0}
+{h262}
+{h261}
+{h262}
+msg: 09:45:01 {LT21.9672}
+msg: 09:45:01 {LN7.2421}
+msg: 09:45:02 {LA412}
+{lt  1.35}
+{h263}
+msg: 09:45:03 {LT21.9650}
+msg: 09:45:03 {LN7.2439}
+msg: 09:45:03 {LA413}
+{lt  1.35}
+msg: 09:45:04 {LT21.9636}
+msg: 09:45:04 {LN7.2446}
+msg: 09:45:05 {LA412}
+{lt  1.35}
+{h264}
+{h263}
+{h262}
+{h261}
+{h260}
+msg: 09:45:06 {LT21.9625}
+msg: 09:45:06 {LN7.2464}
+msg: 09:45:06 {LA420}
+{lt  1.38}
+{h256}
+{h254}
+{h249}
+{h247}
+{h245}
+{h242}
+{h240}
+{h237}
+{h234}
+{h231}
+{h227}
+{h223}
+{h219}
+{h216}
+{h214}
+{h210}
+{h207}
+{h204}
+{h201}
+{h199}
+{h196}
+{h194}
+{h192}
+{h191}
+msg: 09:45:07 {LT21.9546}
+msg: 09:45:07 {LN7.2475}
+msg: 09:45:08 {LA424}
+{lt  1.39}
+{h182}
+{h180}
+{h176}
+{h175}
+{h174}
+{h173}
+{h174}
+msg: 09:45:09 {LT21.9445}
+msg: 09:45:09 {LN7.2367}
+{h175}
+msg: 09:45:09 {LA425}
+{lt  1.39}
+{h174}
+{h175}
+msg: 09:45:10 {LT21.9438}
+msg: 09:45:10 {LN7.2385}
+msg: 09:45:11 {LA423}
+{lt  1.39}
+{h174}
+{h175}
+{h174}
+{h175}
+msg: 09:45:12 {LT21.9424}
+msg: 09:45:12 {LN7.2349}
+msg: 09:45:12 {LA425}
+{lt  1.39}
+msg: 09:45:13 {LT21.9409}
+msg: 09:45:13 {LN7.2360}
+msg: 09:45:14 {LA419}
+{lt  1.37}
+msg: 09:45:15 {LT21.9398}
+msg: 09:45:15 {LN7.2356}
+msg: 09:45:15 {LA415}
+{lt  1.36}
+msg: 09:45:16 {LT21.9380}
+msg: 09:45:16 {LN7.2356}
+msg: 09:45:17 {LA417}
+{lt  1.37}
+{h176}
+{h175}
+{h176}
+msg: 09:45:18 {LT21.9359}
+msg: 09:45:18 {LN7.2346}
+msg: 09:45:18 {LA419}
+{lt  1.37}
+{h175}
+msg: 09:45:19 {LT21.9337}
+msg: 09:45:19 {LN7.2328}
+msg: 09:45:20 {LA424}
+{lt  1.39}
+msg: 09:45:21 {LT21.9308}
+msg: 09:45:21 {LN7.2306}
+msg: 09:45:21 {LA423}
+{lt  1.39}
+{h176}
+{h175}
+{h176}
+msg: 09:45:22 {LT21.9283}
+msg: 09:45:22 {LN7.2302}
+msg: 09:45:23 {LA417}
+{lt  1.37}
+Voltage:  16.3
+odometer:   228.3
