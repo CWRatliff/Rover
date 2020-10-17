@@ -174,7 +174,14 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # 29 - 6238643.60E, 1911270.11N
 # 31 - 6238634.53E, 1911238.26N
 
-obsarray = [[-578.94,  2247.67], [-644.80, 2268.85], [2.,0.], [2.,5.]]
+obsarray = [[-578.94,  2247.67],
+[-644.80, 2268.85],
+[-660.99, 2221.52],
+[-646.81, 2240.18],
+[-646.63, 2255.84],
+[-634.29, 2266.28],
+[-622.74, 2270.73],
+[2.,0.], [2.,5.]]
 ndx = 0
 
 version = "Rover 1.0 201009\n"
@@ -344,26 +351,20 @@ def db_next():
     
 def boxtest(x0, y0, x1, y1):
     if x0 > x1:
-        xx = x1
-        x1 = x0
-        x0 = xx
+        x0, x1 = x1, x0
     if y0 > y1:
-        yy = y1
-        y1 = y0
-        y0 = yy
+        y0, y1 = y1, y0
     x0 -= 3.0           # enlarge box
     x1 += 3.0
     y0 -= 3.0
     y1 += 3.0
+    list = [[0, 0]]
     obs = db_search(x0)
-    while obs[0] != 0:
-        if obs[0] > x1:
-            return [0, 0]
-        if obs[1] < y0 or obs[1] > y1:
-            obs = db_next()
-            continue
-        return [obs[0], obs[1]]
-    return [0, 0]
+    while (obs[0] != 0 and obs[0] <= x1):
+        if obs[1] >= y0 and obs[1] <= y1:
+            list.insert(0, [obs[0], obs[1]])
+        obs = db_next()
+    return list
 
 #===================================================================
 def simple_commands(schr):
@@ -627,6 +628,7 @@ try:
                             wpt = route[rtseg]
                             startAV = posAV
                             new_waypoint(wpt)
+                            obstructions()
                         elif (wpt >= 10 and wpt <= 31): #start of waypoint
                             startAV = posAV
                             route = [wpt, 0]
@@ -784,28 +786,24 @@ try:
                             startAV = destAV       # new wpt start = old wpt end
                             new_waypoint(wpt)
 
-#                         else:
-#                             sendit("{aStby}")
-#                             logit("Standby")
-#                             wptflag =  False
-#                             odometer(speed)
-#                             speed = 0
-#                             auto = False
                         #endif dtg ===================
                     #endif wptflag ===================
                 #endif epoch timer ===================
-                                
-            steer = int(azimuth - hdg)
-            if (steer < -180):
-                steer = steer + 360
-            elif (steer > 180):
-                steer = steer - 360
-            if (abs(steer) == 180):
-                if left:
-                    steer = -180
-                else:
-                    steer = 180
-            robot.motor(speed, steer)
+            
+            if (wptflag and dtg < 8):
+                robot.motor(int(speed/2), 0)   # slow/straight at closing
+            else:
+                steer = int(azimuth - hdg)
+                if (steer < -180):
+                    steer = steer + 360
+                elif (steer > 180):
+                    steer = steer - 360
+                if (abs(steer) == 180):
+                    if left:
+                        steer = -180
+                    else:
+                        steer = 180
+                robot.motor(speed, steer)
             #endif auto ===========================
                 
         if (hdg != oldhdg):
