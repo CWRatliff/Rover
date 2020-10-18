@@ -217,7 +217,7 @@ def vunit(V):
 
 # get compass course from direction vector
 def vcourse(V):
-    return (450 - math.degrees(math.atan2(V[1],V[0])) % 360)
+    return (450 - math.degrees(math.atan2(V[1],V[0]))) % 360
 # cvt lat/lon seconds to U.S survey feet
 def vft2sec(feetE, feetN):
     return [feetN/latfeet, feetE/lonfeet]
@@ -300,7 +300,7 @@ def new_waypoint(nwpt):
     wptflag = True
     sendit("{aWp%2d}" % nwpt)
     Kfilter.Kalman_start(time.time(), posAV[0], posAV[1], \
-        (math.radians(450-hdg) % 360), \
+        math.radians((450-hdg) % 360), \
         speed * spdfactor)
     epoch = time.time()
     return
