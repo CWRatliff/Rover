@@ -43,8 +43,8 @@ v - speed
 
 Received codes
 D - one digit commands
-E - 'star' commnds
-F - 'pound' commands
+E - '*' commnds
+F - '#' commands
 L - gps lat/lon/accuracy
 O - compass heading
 T - 'D' commands, diagnostics
@@ -305,7 +305,7 @@ def new_waypoint(nwpt):
     epoch = time.time()
     return
 #===================================================================
-# look for obstructions
+# look for point obstructions
 def obstructions():
     global startAV
     obsAV = boxtest(posAV[0], posAV[1], destAV[0], destAV[1])
@@ -320,13 +320,11 @@ def obstructions():
                 obsprojRV = vsmult(trackRV, obsproj)
                 vprint("detour", obsprojRV)
                 obsxRV = vsub(obsprojRV, obsRV)
-#                obsxdist = vmag(obsprojRV)
                 obsxdist = vmag(obsxRV)
                 if (obsxdist < 3):
                     obsxRV = vunit(obsxRV)
                     obsxRV = vsmult(obsxRV, 3.0)
                     obsAV = vadd(obsRV, obsxRV)
-#                    obsAV = vadd(obsRV, posAV)
                     obsAV = vadd(obsAV, posAV)
                     vprint("avoidance", obsAV)
                     waypts[1] = obsAV
@@ -443,7 +441,6 @@ def simple_commands(schr):
                 dodgeV = vsmult(dodgeV, 3.0)
                 dodgeV = vadd(dodgeV, aimRV)
                 dodgeV = vadd(dodgeV, posAV)
-#                dodgeV = vft2sec(dodgeV[0], dodgeV[1])
                 vprint("dodging to", dodgeV)
                 waypts[1] = dodgeV
                 startAV = posAV
@@ -470,7 +467,6 @@ def simple_commands(schr):
                 dodgeV = vsmult(dodgeV, 3.0)
                 dodgeV = vadd(dodgeV, aimRV)
                 dodgeV = vadd(dodgeV, posAV)
-#                dodgeV = vft2sec(dodgeV[0], dodgeV[1])
                 vprint("dodging to", dodgeV)
                 waypts[1] = dodgeV
                 startAV = posAV
@@ -522,7 +518,14 @@ def star_commands(schr):
         logit("Compass bias "+str(compass_adjustment))
     elif (auto and schr == '7'):      #left 180 deg
         left = True
+#experimental hammer turn       
+        robot.motor(0, 0)       #stop
+        robot.motor(-50, 0)     #reverse
         max_turn(left_limit)
+        time.sleep(2)           #guess at time needed
+        robot.motor(0, 0)
+#end of exp       
+#         max_turn(left_limit)
         azimuth -= 180
         azimuth %= 360
         logit("az set to %d" % azimuth)
