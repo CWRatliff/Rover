@@ -134,7 +134,7 @@ class motor_driver_ada:
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):
-#        print("Motor speed, steer "+str(speed)+", "+str(steer))
+#        self.log.write("Motor speed, steer "+str(speed)+", "+str(steer)+'\n')
         if (steer < self.left_limit):
             steer = self.left_limit
         if (steer > self.right_limit):
@@ -176,8 +176,8 @@ class motor_driver_ada:
             self.set_motor(0x80, vel,   1, 2)           #RC 1 - rf, rm
             self.set_motor(0x81, vel, vic, 2)           #RC 2 - lm, lf
             self.set_motor(0x82, vel, vic, 2)           #RC 3 - rr, lr
-#            cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
-#            self.log.write(cstr)
+#             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
+#             self.log.write(cstr)
 
 #right turn
         elif steer > 0:
@@ -197,8 +197,8 @@ class motor_driver_ada:
             #            print("80 vic, vim ",vic,vim)
 #            print("81 vic, voc ",vic,voc)
 #            print("82 vom, voc ", 1, voc)
-#            cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
-#            self.log.write(cstr)
+#             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
+#             self.log.write(cstr)
 
 #straight ahead
         else:
@@ -214,4 +214,6 @@ class motor_driver_ada:
             self.set_motor(0x82, vel, 1, 2)
 #       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
 #       self.diag()
+#             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
+#             self.log.write(cstr)
 

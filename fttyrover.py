@@ -70,7 +70,7 @@ oldsteer = 500
 oldspeed = 500
 oldhdg = 500
 compass_adjustment = 12                 # Camarillo declination
-compass_bias = 0                        # rover allignment
+compass_bias = -157                        # rover allignment
 
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
@@ -258,7 +258,7 @@ def odometer(spd):
     travel += delT * spdfactor * abs(spd)
     segstart = now
 #==================================================================
-def max_turn(angle):
+def max_turn(angle, spd):
     global steer
     
     dt = 1
@@ -266,14 +266,14 @@ def max_turn(angle):
         if steer > (left_limit + 1):
             while (steer > left_limit):
                 steer -= dt
-                robot.motor(speed, steer)
+                robot.motor(spd, steer)
                 time.sleep(0.05)
 #        robot.motor(speed, steer)
     else:
         if steer < (right_limit + 1):
             while (steer < right_limit):
                 steer += dt
-                robot.motor(speed, steer)
+                robot.motor(spd, steer)
                 time.sleep(0.05)
 #        robot.motor(speed, steer)
     return
@@ -451,7 +451,7 @@ def simple_commands(schr):
                 azimuth += left_limit
                 logit("az set to %d" % azimuth)
         else:
-            max_turn(left_limit)
+            max_turn(left_limit, speed)
  
     elif schr == '8':                   # 8 -  Reverse
         if speed >= -90:
@@ -477,7 +477,7 @@ def simple_commands(schr):
                 azimuth += left_limit
                 logit("az set to %d" % azimuth)
         else:
-            max_turn(right_limit)
+            max_turn(right_limit, speed)
 
     return
 #===================end of D commands
@@ -521,12 +521,21 @@ def star_commands(schr):
         left = True
 #experimental hammer turn       
         robot.motor(0, 0)       #stop
-        robot.motor(-50, 0)     #reverse
-        max_turn(left_limit)
+#        robot.motor(-50, 0)     #reverse
+        logit("backing left")
+        max_turn(left_limit, -50)
         time.sleep(3)           #guess at time needed
-        robot.motor(0, 0)
-        robot.motor(speed, 0)
-        max_turn(right_limit)
+        logit("3 sec  sleep")
+#        robot.motor(0, 0)
+        str = left_limit
+        dt = 1
+        while str < right_limit:
+            str += dt
+            robot.motor(0, str)
+            time.sleep(0.05)
+#        robot.motor(speed, 0)
+        logit("turn right onto 180 course")
+#        max_turn(right_limit, speed)
         azimuth += 180
 #end of exp       
 #         max_turn(left_limit)
@@ -535,7 +544,7 @@ def star_commands(schr):
         logit("az set to %d" % azimuth)
     elif (auto and schr == '9'):      #right 180 deg
         left = False
-        max_turn(right_limit)
+        max_turn(right_limit, speed)
         azimuth += 180
         azimuth %= 360
         logit("az set to %d" % azimuth)
