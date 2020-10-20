@@ -70,7 +70,7 @@ oldsteer = 500
 oldspeed = 500
 oldhdg = 500
 compass_adjustment = 12                 # Camarillo declination
-compass_bias = -157                        # rover allignment
+compass_bias = 0                        # rover allignment
 
 ilatsec = 0.0                           # input from GPS hardware
 ilonsec = 0.0
@@ -513,33 +513,25 @@ def star_commands(schr):
         logit("az set to %d" % azimuth)
     elif (schr == '4'):               #adj compass
         compass_bias -= 1
-        logit("Compass bias "+str(compass_adjustment))
+        logit("Compass bias %d" % compass_bias)
+    elif (schr == '5'):               # adjust to true north
+        compass_bias = (-hdg - compass_adjustment) % 360
+        logit("Compass bias %d" % compass_bias)
     elif (schr == '6'):               #adj compass
         compass_bias += 1
-        logit("Compass bias "+str(compass_adjustment))
+        logit("Compass bias %d" % compass_bias)
     elif (auto and schr == '7'):      #left 180 deg
         left = True
-#experimental hammer turn       
         robot.motor(0, 0)       #stop
-#        robot.motor(-50, 0)     #reverse
-        logit("backing left")
         max_turn(left_limit, -50)
         time.sleep(3)           #guess at time needed
-        logit("3 sec  sleep")
-#        robot.motor(0, 0)
         str = left_limit
         dt = 1
         while str < right_limit:
             str += dt
             robot.motor(0, str)
             time.sleep(0.05)
-#        robot.motor(speed, 0)
-        logit("turn right onto 180 course")
-#        max_turn(right_limit, speed)
         azimuth += 180
-#end of exp       
-#         max_turn(left_limit)
-#        azimuth -= 180
         azimuth %= 360
         logit("az set to %d" % azimuth)
     elif (auto and schr == '9'):      #right 180 deg
@@ -556,6 +548,16 @@ def diag_commands(schr):
         robot.motor_speed()
         logit("odometer: %7.1f" % travel)
         log.flush()
+    if (schr == '1'):
+        exit()
+    if (schr == '2'):
+        log.seek(0)            # reset logfile
+    if (schr == '3'):
+        logit("IMU non-op")
+        exit()
+    if (schr == '4'):
+        logit("GPS non-op")
+        exit()
     return
 
 #=================================================================
@@ -690,16 +692,6 @@ try:
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
-                    if (xchr == '1'):
-                        exit()
-                    if (xchr == '2'):
-                        log.seek(0)            # reset logfile
-                    if (xchr == '3'):
-                        logit("IMU non-op")
-                        exit()
-                    if (xchr == '4'):
-                        logit("GPS non-op")
-                        exit()
                     diag_commands(xchr)
 #=========================================================================                    
                 else:
