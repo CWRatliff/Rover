@@ -58,6 +58,7 @@ import cEKF
 
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
+resume_speed = 50                       # after waypoint slowdown
 azimuth = 0                             # desired course
 epoch = time.time()
 gpsEpoch = epoch
@@ -226,7 +227,6 @@ def vsec2ft(latsec, lonsec):
     return [lonsec*lonfeet, latsec*latfeet]
 def vprint(txt, V):
     str = "%s: [%7.2f, %7.2f]" % (txt, V[0], V[1])
-    print(str)
     logit(str)
 # compute distance from point to vector, ret +dist if right turn
 # indicated, else -dist for left see BOT 3:51
@@ -308,7 +308,8 @@ def new_waypoint(nwpt):
 # look for point obstructions
 def obstructions():
     global startAV
-    obsAV = boxtest(posAV[0], posAV[1], destAV[0], destAV[1])
+    obs = boxtest(posAV[0], posAV[1], destAV[0], destAV[1])
+    obsAV = obs[0]             #just use 1st one for now
     if (obsAV[0] != 0):
         vprint("obstruction", obsAV)
         obsRV = vsub(obsAV, posAV)
@@ -522,11 +523,14 @@ def star_commands(schr):
         robot.motor(0, 0)       #stop
         robot.motor(-50, 0)     #reverse
         max_turn(left_limit)
-        time.sleep(2)           #guess at time needed
+        time.sleep(3)           #guess at time needed
         robot.motor(0, 0)
+        robot.motor(speed, 0)
+        max_turn(right_limit)
+        azimuth += 180
 #end of exp       
 #         max_turn(left_limit)
-        azimuth -= 180
+#        azimuth -= 180
         azimuth %= 360
         logit("az set to %d" % azimuth)
     elif (auto and schr == '9'):      #right 180 deg
@@ -771,6 +775,10 @@ try:
                         sendit(cstr)
                         logit(cstr)
 
+                    if (wptflag and dtg < 8):
+                        resume_speed = speed
+                        speed = int(speed/2)          # slow/straight at closing
+                        
                     #closing on waypoint
                     if (dtg < max(2.0, accgps) or vdot(aimRV, trackRV) <= 0):
                         logit("close to waypoint")
@@ -786,6 +794,7 @@ try:
                             speed = 0
                             auto = False
                         else:
+                            speed = resume_speed
                             startAV = destAV       # new wpt start = old wpt end
                             new_waypoint(wpt)
 
@@ -793,20 +802,17 @@ try:
                     #endif wptflag ===================
                 #endif epoch timer ===================
             
-            if (wptflag and dtg < 8):
-                robot.motor(int(speed/2), 0)   # slow/straight at closing
-            else:
-                steer = int(azimuth - hdg)
-                if (steer < -180):
-                    steer = steer + 360
-                elif (steer > 180):
-                    steer = steer - 360
-                if (abs(steer) == 180):
-                    if left:
-                        steer = -180
-                    else:
-                        steer = 180
-                robot.motor(speed, steer)
+            steer = int(azimuth - hdg)
+            if (steer < -180):
+                steer = steer + 360
+            elif (steer > 180):
+                steer = steer - 360
+            if (abs(steer) == 180):
+                if left:
+                    steer = -180
+                else:
+                    steer = 180
+            robot.motor(speed, steer)
             #endif auto ===========================
                 
         if (hdg != oldhdg):
