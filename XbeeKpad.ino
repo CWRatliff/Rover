@@ -107,6 +107,7 @@ void setup(){
   Serial1.begin(9600);        // Xbee on hardware port
   delay(100);
    xmit2num(FUNCTION, '9', '9');             // ping, were alive
+   Serial.println("XbeeKpad 200610");
 
     lcd.setCursor(0, 0);
     lcd.print("Spd: ");
@@ -124,11 +125,7 @@ void setup(){
 }
 //=========================================================================
 void loop() {
-  /* You must Read Gamepad to get new values and set vibration values
-     ps2x.read_gamepad(small motor on/off, larger motor strenght from 0-255)
-     if you don't enable the rumble, use ps2x.read_gamepad(); with no values
-     You should call this at least once a second
-   */  
+
   char* str;
   int   spd;
   int   ang;
