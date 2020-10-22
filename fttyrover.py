@@ -534,6 +534,16 @@ def star_commands(schr):
         azimuth += 180
         azimuth %= 360
         logit("az set to %d" % azimuth)
+    elif (auto and schr == '8'):    #T-bone U'ie
+        max_turn(left_limit, 50)
+        time.sleep(3)
+        robot.motor(-50, 0)
+        time.sleep(3)
+        max_turn(left_limit, speed)
+        azimuth += 180
+        azimuth %= 360
+        logit("az set to %d" % azimuth)
+       
     elif (auto and schr == '9'):      #right 180 deg
         left = False
         max_turn(right_limit, speed)
