@@ -79,6 +79,7 @@ flonsec = 0.0
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
 aimRV = [0, 0]                          # aim point
+comp_start_AV = [0, 0]                  # compass sampling start
 filterRV = [0, 0]                       # Kalman filtered loc
 posAV = [0, 0]                          # gps position
 startAV = [0, 0]                        # waypoint track start
@@ -554,16 +555,19 @@ def star_commands(schr):
 #compass commands================================================
 def compass_commands(schr):
     global compass_bias
+    global comp_start_AV
     
-    if (schr == '0'):                   #standby
-        compass_bias = 0
+    if (schr == '0'):                   #gps end of sample
+        workRV = vsub(posAV, comp_start_AV)
+        whdg = vcourse(workRV)
+        compass_bias = whdg - compass_adjustment
+        logit("Compass bias %d" % compass_bias)
     
     elif (schr == '1'):      #left 1 deg
         compass_bias -= 1
         logit("Compass bias %d" % compass_bias)
         
     elif (schr == '2'):               #true heading North
-        compass_bias = 0
         compass_bias = (-hdg - compass_adjustment) % 360
         logit("Compass bias %d" % compass_bias)
 
@@ -572,26 +576,24 @@ def compass_commands(schr):
         logit("Compass bias %d" % compass_bias)
 
     elif (schr == '4'):               #true heading West
-        compass_bias = 0
-        compass_bias = (-hdg - compass_adjustment) % 360
+        compass_bias = (270 - hdg - compass_adjustment) % 360
         logit("Compass bias %d" % compass_bias)
         
     elif (schr == '5'):               # use gps as true heading
-        compass_bias = 0
+        comp_start_AV = posAV
         logit("Compass bias %d" % compass_bias)
         
     elif (schr == '6'):               #true heading East
-        compass_bias = 0
-        compass_bias = (-hdg - compass_adjustment) % 360
+        compass_bias = (90 - hdg - compass_adjustment) % 360
         logit("Compass bias %d" % compass_bias)
         
     elif (schr == '7'):               #adj left 10compass
-        compass_bias = 0
         compass_bias -= 10
+        compass_bias += 1
         logit("Compass bias %d" % compass_bias)
         
     elif (schr == '8'):               #true heading is South
-        compass_bias = (-hdg - compass_adjustment) % 360
+        compass_bias = (180 - hdg - compass_adjustment) % 360
         logit("Compass bias %d" % compass_bias)
 
     elif (schr == '9'):               #adj compass right 10
