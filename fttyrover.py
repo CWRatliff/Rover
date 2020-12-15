@@ -108,12 +108,13 @@ route = [0]
 routes = [[0,0],                    #0
 [28, 27, 0],                        #1
 [28, 27, 26, 0],                    #2
-[28, 30, 29, 31, 27, 28, 0],        #3
-[14, 16, 22, 18, 22, 16, 14, 13, 0], #4
+[28, 30, 29, 31, 27, 28, 0],        #3 - E.F. meander
+[14, 16, 22, 18, 22, 16, 14, 13, 0], #4 - to hut #4 and back
 [0]]
           
 wptdist = 0.0
 
+#in U.S. Survey feet offsets from 34-14N -119-4W
 waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [ -787.36,  2298.03],     #10 
 [ -647.55,  2108.54],     #11 speed bump
@@ -175,8 +176,8 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # 29 - 6238643.60E, 1911270.11N
 # 31 - 6238634.53E, 1911238.26N
 
-obsarray = [[-578.94,  2247.67],
-[-644.80, 2268.85],
+obsarray = [[-578.94,  2247.67],     # virtual tree = wp #14
+[-644.80, 2268.85],                  # virtual tree between #30- #29
 [-660.99, 2221.52],
 [-646.81, 2240.18],
 [-646.63, 2255.84],
@@ -185,10 +186,11 @@ obsarray = [[-578.94,  2247.67],
 [2.,0.], [2.,5.]]
 ndx = 0
 
-version = "Rover 1.0 201009\n"
+version = "Rover 1.0 201214\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
+
 log = open("logfile.txt", 'a')
 log.write(version)
 #log.write(tme)
@@ -514,12 +516,18 @@ def star_commands(schr):
     elif (schr == '4'):               #adj compass
         compass_bias -= 1
         logit("Compass bias %d" % compass_bias)
+        cstr = "{h%3d" % hdg
+        sendit(hdg)
     elif (schr == '5'):               # adjust to true north
         compass_bias = (-hdg - compass_adjustment) % 360
         logit("Compass bias %d" % compass_bias)
+        cstr = "{h%3d" % hdg
+        sendit(hdg)
     elif (schr == '6'):               #adj compass
         compass_bias += 1
         logit("Compass bias %d" % compass_bias)
+        cstr = "{h%3d" % hdg
+        sendit(hdg)
     elif (auto and schr == '7'):      #left 180 deg
         left = True
         robot.motor(0, 0)       #stop
