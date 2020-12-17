@@ -487,6 +487,7 @@ def star_commands(schr):
     global auto
     global azimuth
     global auto
+    global hdg
 #    global rteflag
     global wptflag
     global compass_bias
@@ -517,17 +518,18 @@ def star_commands(schr):
         compass_bias -= 1
         logit("Compass bias %d" % compass_bias)
         cstr = "{h%3d" % hdg
-        sendit(hdg)
+        sendit(cstr)
     elif (schr == '5'):               # adjust to true north
-        compass_bias = (-hdg - compass_adjustment) % 360
+        compass_bias = (110-hdg - compass_adjustment) % 360
         logit("Compass bias %d" % compass_bias)
+        hdg = 110
         cstr = "{h%3d" % hdg
-        sendit(hdg)
+        sendit(cstr)
     elif (schr == '6'):               #adj compass
         compass_bias += 1
         logit("Compass bias %d" % compass_bias)
         cstr = "{h%3d" % hdg
-        sendit(hdg)
+        sendit(cstr)
     elif (auto and schr == '7'):      #left 180 deg
         left = True
         robot.motor(0, 0)       #stop
