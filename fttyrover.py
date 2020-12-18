@@ -501,7 +501,8 @@ def star_commands(schr):
         sendit("{aStby}")
         logit("Standby")
     elif (auto and schr == '1'):      #left 90 deg
-        azimuth -= 90
+        azimuth -= 90        cstr = "{h%3d" % hdg
+
         azimuth %= 360
         logit("az set to %d" % azimuth)
     elif (schr == '2'):               #autopilot on
@@ -517,19 +518,20 @@ def star_commands(schr):
     elif (schr == '4'):               #adj compass
         compass_bias -= 1
         logit("Compass bias %d" % compass_bias)
-        cstr = "{h%3d" % hdg
-        sendit(cstr)
+        xstr = "{h%3d" % hdg
+        sendit(xstr)
     elif (schr == '5'):               # adjust to true north
         compass_bias = (110-hdg - compass_adjustment) % 360
         logit("Compass bias %d" % compass_bias)
         hdg = 110
-        cstr = "{h%3d" % hdg
-        sendit(cstr)
+        azimuth = hdg
+        xstr = "{h%3d" % hdg
+        sendit(xstr)
     elif (schr == '6'):               #adj compass
         compass_bias += 1
         logit("Compass bias %d" % compass_bias)
-        cstr = "{h%3d" % hdg
-        sendit(cstr)
+        xstr = "{h%3d" % hdg
+        sendit(xstr)
     elif (auto and schr == '7'):      #left 180 deg
         left = True
         robot.motor(0, 0)       #stop
@@ -544,16 +546,23 @@ def star_commands(schr):
         azimuth += 180
         azimuth %= 360
         logit("az set to %d" % azimuth)
-    elif (auto and schr == '8'):    #T-bone U'ie
-        max_turn(left_limit, 50)
-        time.sleep(3)
-        robot.motor(-50, 0)
-        time.sleep(3)
-        max_turn(left_limit, speed)
-        azimuth += 180
-        azimuth %= 360
-        logit("az set to %d" % azimuth)
-       
+    elif (schr == '8'):
+        compass_bias = (329-hdg - compass_adjustment) % 360
+        logit("Compass bias %d" % compass_bias)
+        hdg = 329
+        azimuth = hdg
+        xstr = "{h%3d" % hdg
+        sendit(xstr)
+#     elif (auto and schr == '8'):    #T-bone U'ie
+#         max_turn(left_limit, 50)
+#         time.sleep(3)
+#         robot.motor(-50, 0)
+#         time.sleep(3)
+#         max_turn(left_limit, speed)
+#         azimuth += 180
+#         azimuth %= 360
+#         logit("az set to %d" % azimuth)
+#        
     elif (auto and schr == '9'):      #right 180 deg
         left = False
         max_turn(right_limit, speed)
