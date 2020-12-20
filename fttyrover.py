@@ -58,18 +58,20 @@ import cEKF
 
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
-resume_speed = 50                       # after waypoint slowdown
+approach_speed = 50                       # after waypoint slowdown
+resume_speed = speed
 azimuth = 0                             # desired course
 epoch = time.time()
 gpsEpoch = epoch
 oldEpoch = epoch
 hdg = 0                                 # true compass heading
+yaw = 0                                 # latest IMU yaw reading
 travel = 0                              # odometer
 
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
-compass_adjustment = 12                 # Camarillo declination
+declination = 12                        # Camarillo declination
 compass_bias = 0                        # rover allignment
 
 ilatsec = 0.0                           # input from GPS hardware
@@ -488,6 +490,7 @@ def star_commands(schr):
     global azimuth
     global auto
     global hdg
+    global yaw
 #    global rteflag
     global wptflag
     global compass_bias
@@ -501,8 +504,7 @@ def star_commands(schr):
         sendit("{aStby}")
         logit("Standby")
     elif (auto and schr == '1'):      #left 90 deg
-        azimuth -= 90        cstr = "{h%3d" % hdg
-
+        azimuth -= 90
         azimuth %= 360
         logit("az set to %d" % azimuth)
     elif (schr == '2'):               #autopilot on
@@ -521,7 +523,8 @@ def star_commands(schr):
         xstr = "{h%3d" % hdg
         sendit(xstr)
     elif (schr == '5'):               # adjust to true north
-        compass_bias = (110-hdg - compass_adjustment) % 360
+#        compass_bias = (110-hdg - declination) % 360
+        compass_bias = (110 - yaw - declination) % 360
         logit("Compass bias %d" % compass_bias)
         hdg = 110
         azimuth = hdg
@@ -536,7 +539,7 @@ def star_commands(schr):
         left = True
         robot.motor(0, 0)       #stop
         max_turn(left_limit, -50)
-        time.sleep(3)           #guess at time needed
+        time.sleep(3.5)           #guess at time needed
         str = left_limit
         dt = 1
         while str < right_limit:
@@ -547,7 +550,8 @@ def star_commands(schr):
         azimuth %= 360
         logit("az set to %d" % azimuth)
     elif (schr == '8'):
-        compass_bias = (329-hdg - compass_adjustment) % 360
+#        compass_bias = (329-hdg - declination) % 360
+        compass_bias = (329 - yaw - declination) % 360
         logit("Compass bias %d" % compass_bias)
         hdg = 329
         azimuth = hdg
@@ -576,6 +580,10 @@ def diag_commands(schr):
         logit("diagnostic #1 =======================")
         robot.motor_speed()
         logit("odometer: %7.1f" % travel)
+        logit("az set to %d" % azimuth)
+        logit("yaw %d" % yaw)
+        logit("hdg %d" % hdg)
+        logit("bias %d" % compass_bias)
         log.flush()
     if (schr == '1'):
         exit()
@@ -716,8 +724,8 @@ try:
 
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
-                    hdg = int(cbuff[2:msglen-1])
-                    hdg = (hdg + compass_adjustment + compass_bias)%360
+                    yaw = int(cbuff[2:msglen-1])
+                    hdg = (hdg + declination + compass_bias)%360
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -787,9 +795,12 @@ try:
                     vprint("wpt aim vector", aimRV)
                     logit("az set to %d" % azimuth)
 
-                    cstr = "{d%5.1f} " % dtg
-                    sendit(cstr)
-                    logit(cstr)
+                    if (dtg < 100):
+                        cstr = "{d%5.1f} " % dtg
+                        sendit(cstr)
+                        logit(cstr)
+                    else:
+                        sendit("{d-----}")
                     
                     cstr = "{c%3.0f} " % azimuth
                     sendit(cstr)
@@ -806,8 +817,8 @@ try:
                         logit(cstr)
 
                     if (wptflag and dtg < 8):
-                        resume_speed = speed
-                        speed = int(speed/2)          # slow/straight at closing
+                        speed = approach_speed
+#                        speed = int(speed/2)          # slow/straight at closing
                         
                     #closing on waypoint
                     if (dtg < max(2.0, accgps) or vdot(aimRV, trackRV) <= 0):
