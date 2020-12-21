@@ -188,12 +188,13 @@ obsarray = [[-578.94,  2247.67],     # virtual tree = wp #14
 [2.,0.], [2.,5.]]
 ndx = 0
 
-version = "Rover 1.0 201214\n"
+version = "Rover 1.0 201221\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
 
 log = open("logfile.txt", 'a')
+log.write("========================================================================================")
 log.write(version)
 #log.write(tme)
 robot = motor_driver_ada.motor_driver_ada(log)
@@ -577,7 +578,7 @@ def star_commands(schr):
 #================================================================
 def diag_commands(schr):
     if (schr == '0'):
-        logit("diagnostic #1 =======================")
+        logit("diagnostic #1 ==============================================================")
         robot.motor_speed()
         logit("odometer: %7.1f" % travel)
         logit("az set to %d" % azimuth)
@@ -713,6 +714,9 @@ try:
                                 cstr = "{lt%6.2f}" % accgps    #send to controller
                                 sendit(cstr)
                                 logit(cstr)
+                            else:
+                                logit("Poor GPS accuracy")
+                                sendit("{lt------}")
 
                         else:
                             pass
@@ -725,7 +729,7 @@ try:
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     yaw = int(cbuff[2:msglen-1])
-                    hdg = (hdg + declination + compass_bias)%360
+                    hdg = (yaw + declination + compass_bias)%360
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
