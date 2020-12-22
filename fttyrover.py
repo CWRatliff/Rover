@@ -67,6 +67,7 @@ oldEpoch = epoch
 hdg = 0                                 # true compass heading
 yaw = 0                                 # latest IMU yaw reading
 travel = 0                              # odometer
+beeline = 0
 
 oldsteer = 500
 oldspeed = 500
@@ -525,9 +526,9 @@ def star_commands(schr):
         sendit(xstr)
     elif (schr == '5'):               # adjust to true north
 #        compass_bias = (110-hdg - declination) % 360
-        compass_bias = (110 - yaw - declination) % 360
+        compass_bias = (149 - yaw - declination) % 360
         logit("Compass bias %d" % compass_bias)
-        hdg = 110
+        hdg = 149
         azimuth = hdg
         xstr = "{h%3d" % hdg
         sendit(xstr)
@@ -845,6 +846,24 @@ try:
 
                         #endif dtg ===================
                     #endif wptflag ===================
+                
+                if (steer >= -1 and steer <= 1 and speed > 50):
+                    if beeline > 0:
+                        endAV = posAV
+                        beeline += 1
+                    else:
+                        beeline = 1
+                        startAV = posAV
+                else:
+                    if beeline > 10:
+                        beelineRV = vsub(endAV, startAV)
+                        hdg = vcourse(beelineRV)
+                        compass_bias = hdg - yaw - declination
+                        cstr = "{h%3d}" % hdg
+                        sendit(cstr)
+                        logit("Compass bias %d" % compass_bias)
+                        azimuth = hdg
+
                 #endif epoch timer ===================
             
             steer = int(azimuth - hdg)
