@@ -16,6 +16,7 @@
 #200920 - Dead Reconning when no recent GPS
 #200922 - routes track from wpt to wpt (except at start)
 #201009 - dodging obstacles
+#201223 - use gps to adjusty IMU heading bias
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -67,7 +68,7 @@ oldEpoch = epoch
 hdg = 0                                 # true compass heading
 yaw = 0                                 # latest IMU yaw reading
 travel = 0                              # odometer
-beeline = 0
+cogBase = 0
 
 oldsteer = 500
 oldspeed = 500
@@ -82,6 +83,7 @@ flonsec = 0.0
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
 aimRV = [0, 0]                          # aim point
+cogAV = [0, 0]                          # cogBase starting point
 filterRV = [0, 0]                       # Kalman filtered loc
 posAV = [0, 0]                          # gps position
 startAV = [0, 0]                        # waypoint track start
@@ -848,21 +850,23 @@ try:
                     #endif wptflag ===================
                 
                 if (steer >= -1 and steer <= 1 and speed > 50):
-                    if beeline > 0:
-                        endAV = posAV
-                        beeline += 1
-                    else:
-                        beeline = 1
-                        startAV = posAV
-                else:
-                    if beeline > 10:
-                        beelineRV = vsub(endAV, startAV)
-                        hdg = vcourse(beelineRV)
+                    if cogBase > 10:                                  # line long enough to compute heading
+                        cogBaseRV = vsub(posAV, cogAV)
+                        hdg = vcourse(cogBaseRV)
+                        oldbias = compass_bias
                         compass_bias = hdg - yaw - declination
                         cstr = "{h%3d}" % hdg
                         sendit(cstr)
-                        logit("Compass bias %d" % compass_bias)
+                        logit("cogBase: Compass bias was %d now %d" % (oldbias, compass_bias))
                         azimuth = hdg
+                        cogBase = 0
+                    elif cogBase == 0:
+                        cogBase = 1
+                        cogAV = posAV
+                    else:
+                        cogBase += 1
+                else:
+                    cogBase = 0
 
                 #endif epoch timer ===================
             
