@@ -52,6 +52,7 @@ T - 'D' commands, diagnostics
 '''
 
 import serial
+import datetime
 import time
 import math
 import motor_driver_ada
@@ -644,9 +645,12 @@ try:
                 cbuff = ""
                 continue
             xchr = cbuff[1]
-            if (xchr != 'O'):             #ignore compass input (too many)
-                tt = time.localtime()
-                ts = time.strftime("%H:%M:%S ", tt)
+#            if (xchr != 'O'):             #ignore compass input (too many)
+            if (xchr != 'Z'):             #ignore compass input (too many)
+                tt = datetime.datetime.now()
+#                tt = time.localtime()
+#                ts = time.strftime("%H:%M:%S ", tt)
+                ts = tt.strftime("%H:%M:%S.%f")[:-3]
                 logit("msg: " + ts + cbuff)
                
             if (xchr >= 'A') and (xchr <= 'Z'):
@@ -656,11 +660,13 @@ try:
                 if (xchr == 'D'):
                     xchr = cbuff[2]
                     simple_commands(xchr)
+                    cogBase = 0              #invalidate COG baseline
 #======================================================================
 # Keypad commands preceded by a star
                 if xchr == 'E':
                     xchr = cbuff[2]
                     star_commands(xchr)
+                    cogBase = 0              #invalidate COG baseline
 #======================================================================
 #Keypad commands preceeded by a #
                 elif xchr == 'F':                   #goto waypoint
@@ -733,6 +739,7 @@ try:
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     yaw = int(cbuff[2:msglen-1])
                     hdg = (yaw + declination + compass_bias)%360
+                    cogBase = 0              #invalidate COG baseline
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -853,8 +860,9 @@ try:
                     if cogBase > 10:                                  # line long enough to compute heading
                         cogBaseRV = vsub(posAV, cogAV)
                         hdg = vcourse(cogBaseRV)
+                        vprint("COG base course", cogBaseRV)
                         oldbias = compass_bias
-                        compass_bias = hdg - yaw - declination
+                        compass_bias = (hdg - yaw - declination) % 360
                         cstr = "{h%3d}" % hdg
                         sendit(cstr)
                         logit("cogBase: Compass bias was %d now %d" % (oldbias, compass_bias))
@@ -887,6 +895,7 @@ try:
             cstr = "{h%3d}" % hdg
             sendit(cstr)
             oldhdg = hdg
+            cstr = "hdg: %3d, bias: %3d" % (hdg, compass_bias)
             logit(cstr)
         if (speed != oldspeed):
             cstr = "{v%4d}" % speed
