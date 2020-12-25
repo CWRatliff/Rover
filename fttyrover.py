@@ -265,6 +265,7 @@ def odometer(spd):
     now = time.time()
     delT = now - segstart
     travel += delT * spdfactor * abs(spd)
+    logit("Odo: %7.1f, speed: %4d" % (travel, spd))
     segstart = now
 #==================================================================
 def max_turn(angle, spd):
@@ -739,7 +740,7 @@ try:
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     yaw = int(cbuff[2:msglen-1])
                     hdg = (yaw + declination + compass_bias)%360
-                    cogBase = 0              #invalidate COG baseline
+#                    cogBase = 0              #invalidate COG baseline
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
