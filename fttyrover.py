@@ -383,8 +383,8 @@ def simple_commands(schr):
     global startAV
     
     if schr == '0':                     # 0 - stop 
+        odometer(speed)
         speed = 0
-        odometer(0)
         robot.motor(speed, steer)
 
     elif schr == '1':                   # 1 - Left
@@ -832,6 +832,8 @@ try:
                         logit(cstr)
 
                     if (wptflag and dtg < 8):
+                        resume_speed = speed
+                        odometer(speed)
                         speed = approach_speed
 #                        speed = int(speed/2)          # slow/straight at closing
                         
@@ -850,6 +852,7 @@ try:
                             speed = 0
                             auto = False
                         else:
+                            odometer(speed)
                             speed = resume_speed
                             startAV = destAV       # new wpt start = old wpt end
                             new_waypoint(wpt)
@@ -857,7 +860,7 @@ try:
                         #endif dtg ===================
                     #endif wptflag ===================
                 
-                if (steer >= -1 and steer <= 1 and speed > 50):
+                if (steer >= -1 and steer <= 1 and speed > 70):
                     if cogBase > 10:                                  # line long enough to compute heading
                         cogBaseRV = vsub(posAV, cogAV)
                         hdg = vcourse(cogBaseRV)
@@ -915,6 +918,7 @@ try:
 finally:
     robot.motor(0,0)
     robot.battery_voltage()
+    odometer(speed)
     logit("odometer: %7.1f" % travel)
     log.close()
     cstr = "{aStop}"
