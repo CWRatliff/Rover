@@ -1,0 +1,140 @@
+
+msg: 10:24:04.345{O255}
+hdg: 240, bias: 333
+msg: 10:24:04.794{F03}
+track start: [-593.74, 2233.56]
+wpt: 28 -619.99, 2233.28
+track: [ -26.25,   -0.28]
+az set to 269
+{s  28}
+msg: 10:24:04.900{O256}
+hdg: 241, bias: 333
+{s  27}
+msg: 10:24:05.148{O257}
+hdg: 242, bias: 333
+{s  26}
+msg: 10:24:05.204{O258}
+hdg: 243, bias: 333
+{s  25}
+msg: 10:24:05.779{O259}
+hdg: 244, bias: 333
+{s  24}
+msg: 10:24:05.802{LT22.0421}
+DR lat/lon: -0.009801925646599468/0.00566611739002897
+time: 1609093445.8044124
+wpt: 28 raw hdg:  244.5
+raw speed: 1.098
+filtered EN pos: -594.6914/2233.0182
+Filtered hdg:  244.5
+Filtered speed:  1.098
+Kalman pos vec: [  -0.95,   -0.54]
+progress vec: [  -0.95,   -0.01]
+xtrack vec: [  -0.01,    0.53]
+aiming vector: [ -12.65,    0.39]
+az set to 271
+{d 25.3} 
+{c272} 
+{ln  0.5} 
+{lt  1.8} 
+{s  27}
+msg: 10:24:05.907{LN7.1158}
+msg: 10:24:05.919{O265}
+hdg: 250, bias: 333
+{s  21}
+msg: 10:24:06.222{LA549}
+{lt  1.80}
+msg: 10:24:06.240{O267}
+hdg: 252, bias: 333
+{s  19}
+msg: 10:24:06.258{O268}
+hdg: 253, bias: 333
+{s  18}
+msg: 10:24:06.272{O275}
+hdg: 260, bias: 333
+{s  11}
+msg: 10:24:06.306{O276}
+hdg: 261, bias: 333
+{s  10}
+msg: 10:24:06.350{O277}
+hdg: 262, bias: 333
+{s   9}
+msg: 10:24:06.405{O278}
+hdg: 263, bias: 333
+{s   8}
+msg: 10:24:06.459{O279}
+hdg: 264, bias: 333
+{s   7}
+msg: 10:24:06.552{O280}
+hdg: 265, bias: 333
+{s   6}
+msg: 10:24:06.658{O281}
+hdg: 266, bias: 333
+{s   5}
+msg: 10:24:06.811{O282}
+raw L/L: -0.009801925646599468/7.1158
+time: 1609093446.8133535
+wpt: 28 raw hdg:  267.5
+raw speed: 1.098
+filtered EN pos: -644.3328/2185.9968
+Filtered hdg:  225.2
+Filtered speed: 50.345
+Kalman pos vec: [ -50.59,  -47.56]
+progress vec: [ -51.08,   -0.54]
+xtrack vec: [  -0.49,   47.02]
+aiming vector: [   7.79,   47.11]
+az set to 9
+{d 53.2} 
+{c  9} 
+{ln 47.0} 
+{lt  1.8} 
+close to waypoint
+Odo:   300.2, speed:   90
+track start: [-619.99, 2233.28]
+wpt: 30 -644.70, 2261.65
+track: [ -24.71,   28.37]
+az set to 318
+hdg: 267, bias: 333
+{v   0}
+{s  51}
+msg: 10:24:06.957{O283}
+hdg: 268, bias: 333
+{s  50}
+msg: 10:24:07.056{O284}
+hdg: 269, bias: 333
+{s  49}
+msg: 10:24:07.154{O283}
+hdg: 268, bias: 333
+{s  50}
+msg: 10:24:07.770{LT22.0421}
+msg: 10:24:07.781{LN7.1320}
+raw L/L: 22.0421/7.132
+time: 1609093447.8494906
+wpt: 30 raw hdg:  268.5
+raw speed: 0.000
+filtered EN pos: -596.1105/21.1314
+Filtered hdg:  268.5
+Filtered speed:  0.000
+Kalman pos vec: [  23.88, -2212.15]
+aiming vector: [   7.79,   47.11]
+az set to 318
+{c319} 
+{ln  0.0} 
+{lt  1.8} 
+msg: 10:24:08.185{LA546}
+{lt  1.79}
+DR lat/lon: 0.20853373698356495/7.115960396039604
+time: 1609093448.853472
+wpt: 30 raw hdg:  268.5
+raw speed: 0.000
+filtered EN pos: -567.7848/65.0657
+Filtered hdg:  268.5
+Filtered speed: -28.812
+Kalman pos vec: [  52.21, -2168.21]
+aiming vector: [   7.79,   47.11]
+az set to 318
+{c319} 
+{ln  0.0} 
+{lt  1.8} 
+msg: 10:24:09.730{LT22.0417}
+msg: 10:24:09.741{LN7.1323}
+raw L/L: 22.0417/7.1323
