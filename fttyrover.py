@@ -17,6 +17,7 @@
 #200922 - routes track from wpt to wpt (except at start)
 #201009 - dodging obstacles
 #201223 - use gps to adjusty IMU heading bias
+#201226 - work on waypoint homeing
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -60,8 +61,9 @@ import cEKF
 
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
-approach_speed = 50                       # after waypoint slowdown
+approach_speed = 50                     # after waypoint slowdown
 resume_speed = speed
+reducedflag = False
 azimuth = 0                             # desired course
 epoch = time.time()
 gpsEpoch = epoch
@@ -85,10 +87,11 @@ flonsec = 0.0
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
 aimRV = [0, 0]                          # aim point
 cogAV = [0, 0]                          # cogBase starting point
+destAV = [0, 0]                         # waypoint destination
 filterRV = [0, 0]                       # Kalman filtered loc
+pathRV = [0, 0]                         # from present pos to wpt end
 posAV = [0, 0]                          # gps position
 startAV = [0, 0]                        # waypoint track start
-destAV = [0, 0]                         # waypoint destination
 trackRV = [0, 0]                        # waypoint path from initial position to destination
 
 latitude = math.radians(34.24)          # Camarillo
@@ -770,44 +773,51 @@ try:
                         ilatsec = flatsec + yd / latfeet
                         ilonsec = flonsec + xd / lonfeet
                         logit("DR lat/lon: " + str(ilatsec) + "/" + str(ilonsec))
+                        # ilat-lon sec not ever used, posAV only?????????????????????????????????????????????????????????????????
                     else:    
                         logit("raw L/L: " + str(ilatsec) + "/" + str(ilonsec))
                         
                     logit("time: " + str(epoch))
-                    logit("raw hdg: %6.1f" % hdg)
+                    logit("wpt: %2d raw hdg: %6.1f" % (wpt, hdg))
                     logit("raw speed: %5.3f" % v)
                     xEst = Kfilter.Kalman_step(epoch, posAV[0], \
                             posAV[1], phi, v)
                     flonsec = xEst[0, 0] / lonfeet
                     flatsec = xEst[1, 0] / latfeet
                     fhdg = (450 - math.degrees(xEst[2, 0])) % 360
-                    logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
+#                    logit("filtered L/L: %7.4f/%7.4f" % (flatsec, flonsec))
+                    logit("filtered EN pos: %7.4f/%7.4f" % (xEst[0, 0], xEst[1, 0]))
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.3f" %xEst[3, 0])
 #                    workAV = vsec2ft(flatsec, flonsec)   # see BOT 3:41 for diagram
                     workAV = [xEst[0, 0], xEst[1, 0]]
                     filterRV = vsub(workAV, startAV)
                     vprint("Kalman pos vec", filterRV)
-                    aimRV = vsub(trackRV, filterRV)
-                    dtg = vmag(aimRV)
+                    pathRV = vsub(trackRV, filterRV)      # to wpt end
+                    dtg = vmag(pathRV)
                     udotv = vdot(trackRV, filterRV)
                     if (udotv > 0):
-                        trk = udotv / wptdist
-                        progRV = vsmult(trackRV, trk / wptdist)
+#                        trk = udotv / wptdist
+#                        progRV = vsmult(trackRV, trk / wptdist) # w = (u.v/v.v)*v
+                        progRV = vsmult(trackRV, udotv/vdot(trackRV, trackRV)) # w = (u.v/v.v)*v
                         vprint("progress vec", progRV)
                         xtrackRV = vsub(progRV, filterRV)
                         vprint("xtrack vec", xtrackRV)
                         xtrk = vmag(xtrackRV)
                         
-                        prog = vmag(filterRV)/wptdist     # progress along track
-                        aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
+                        prog = vmag(progRV)/wptdist       # progress along track (fraction)
+                        if (xtrk < 3.0):
+                            aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
+                        else:
+                            aim = (1.0 - prog) / 3 + prog     # aim at a third of the remaining dist on trackV
                         workRV = vsmult(trackRV, aim)
                         aimRV = vsub(workRV, filterRV)    # vector from filteredV to aimV                     
+                        azimuth = vcourse(aimRV)
                     else:
                         xtrk = 0
-                    azimuth = vcourse(aimRV)
+                        azimuth = vcourse(trackRV)
 
-                    vprint("wpt aim vector", aimRV)
+                    vprint("aiming vector", aimRV)
                     logit("az set to %d" % azimuth)
 
                     if (dtg < 100):
@@ -832,10 +842,11 @@ try:
                         logit(cstr)
 
                     if (wptflag and dtg < 8):
-                        resume_speed = speed
-                        odometer(speed)
-                        speed = approach_speed
-#                        speed = int(speed/2)          # slow/straight at closing
+                        if (not reducedflag):
+                            resume_speed = speed
+                            odometer(speed)
+                            speed = approach_speed
+                            reducedflag = True
                         
                     #closing on waypoint
                     if (dtg < max(2.0, accgps) or vdot(aimRV, trackRV) <= 0):
@@ -854,6 +865,7 @@ try:
                         else:
                             odometer(speed)
                             speed = resume_speed
+                            reducedflag = False
                             startAV = destAV       # new wpt start = old wpt end
                             new_waypoint(wpt)
 
