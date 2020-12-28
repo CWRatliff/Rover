@@ -18,6 +18,7 @@
 #201009 - dodging obstacles
 #201223 - use gps to adjusty IMU heading bias
 #201226 - work on waypoint homeing
+#201227 - if xtrk > 3, use filtered hdg to recompute bias
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -69,31 +70,32 @@ epoch = time.time()
 gpsEpoch = epoch
 oldEpoch = epoch
 hdg = 0                                 # true compass heading
-yaw = 0                                 # latest IMU yaw reading
+yaw = 0                                 # latest IMU yaw (True north)reading
 travel = 0                              # odometer
 cogBase = 0
 
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
-declination = 12                        # Camarillo declination
+#declination = 12                        # Camarillo declination
 compass_bias = 0                        # rover allignment
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
-aimRV = [0, 0]                          # aim point
-cogAV = [0, 0]                          # cogBase starting point
-destAV = [0, 0]                         # waypoint destination
-estAV = [0, 0]                          # est pos either posAV or posAV+DR
-filterRV = [0, 0]                       # Kalman filtered loc
-pathRV = [0, 0]                         # from present pos to wpt end
-posAV = [0, 0]                          # gps position
-startAV = [0, 0]                        # waypoint track start
-trackRV = [0, 0]                        # waypoint path from initial position to destination
+aimRV = [0.0, 0.0]                      # aim point
+cogAV = [0.0, 0.0]                      # cogBase starting point
+destAV = [0.0, 0.0]                     # waypoint destination
+estAV = [0.0, 0.0]                      # est pos either posAV or posAV+DR
+filterRV = [0.0, 0.0]                   # Kalman filtered loc
+pathRV = [0.0, 0.0]                     # from present pos to wpt end
+posAV = [0.0, 0.0]                      # gps position
+startAV = [0.0, 0.0]                    # waypoint track start
+trackRV = [0.0, 0.0]                    # waypoint path from initial position to destination
 
-ilatsec = 0
-ilonsec = 0
+ilatsec = 0.0
+ilonsec = 0.0
 latitude = math.radians(34.24)          # Camarillo
-latfeet = 6079.99/60                    # Kyle's converter
+latfeet = 6079.99/60                    # Kyle's converter                    startAV = posAV
+
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
 segstart = time.time()                  # speed segment start (seconds)
@@ -112,6 +114,7 @@ wptflag = False
 
 rtseg = 0
 route = [0]
+
 routes = [[0,0],                    #0
 [28, 27, 0],                        #1
 [28, 27, 26, 0],                    #2
@@ -127,7 +130,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [ -647.55,  2108.54],     #11 speed bump
 [ -619.57,  2091.62],     #12 T seam
 [ -599.97,  2236.32],     #13 workshop F 
-[ -578.94,  2247.67],     #14 driveway center F
+[ -578.94,  2247.67],     #14 driveway center Ffrom adafruit_servokit import ServoKit
 [ -498.02,  2110.77],     #15 gravel
 [ -471.80,  2053.82],     #16 fig tree fork F
 [ -532.36,  1963.03],     #17 stairs pivot
@@ -165,7 +168,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # [22.599, 7.159, "EF east entry"],   #24
 # 
 # [20.804, 7.949, "ref corner - F"],  #25
-# [20.984, 7.713, "hose bib - F"],    #26
+# [20.984, 7.713, "hose bifrom adafruit_servokit import ServoKitb - F"],    #26
 # [21.491, 7.646, "rose bush - F"],   #27
 # [22.039, 7.401, "boat corner - F"], #28
 # [22.461, 8.176, "EF middle - F"],   #29
@@ -299,7 +302,7 @@ def new_waypoint(nwpt):
     global epoch
     
 #    startAV = posAV
-    vprint("track start", startAV)
+    vprint("track start======================================", startAV)
     destAV = [waypts[nwpt][0], waypts[nwpt][1]]
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
@@ -531,7 +534,8 @@ def star_commands(schr):
         sendit(xstr)
     elif (schr == '5'):               # adjust to true north
 #        compass_bias = (110-hdg - declination) % 360
-        compass_bias = (149 - yaw - declination) % 360
+#        compass_bias = (149 - yaw - declination) % 360
+        compass_bias = (149 - yaw) % 360
         logit("Compass bias %d" % compass_bias)
         hdg = 149
         azimuth = hdg
@@ -558,7 +562,8 @@ def star_commands(schr):
         logit("az set to %d" % azimuth)
     elif (schr == '8'):
 #        compass_bias = (329-hdg - declination) % 360
-        compass_bias = (329 - yaw - declination) % 360
+#         compass_bias = (329 - yaw - declination) % 360
+        compass_bias = (329 - yaw) % 360
         logit("Compass bias %d" % compass_bias)
         hdg = 329
         azimuth = hdg
@@ -586,6 +591,7 @@ def diag_commands(schr):
     if (schr == '0'):
         logit("diagnostic #1 ==============================================================")
         robot.motor_speed()
+        robot.battery_voltage()
         logit("odometer: %7.1f" % travel)
         logit("az set to %d" % azimuth)
         logit("yaw %d" % yaw)
@@ -647,8 +653,8 @@ try:
                 cbuff = ""
                 continue
             xchr = cbuff[1]
-#            if (xchr != 'O'):             #ignore compass input (too many)
-            if (xchr != 'Z'):             #ignore compass input (too many)
+            if (xchr != 'O'):             #ignore compass input (too many)
+#            if (xchr != 'Z'):             #ignore compass input (too many)
                 tt = datetime.datetime.now()
 #                tt = time.localtime()
 #                ts = time.strftime("%H:%M:%S ", tt)
@@ -740,7 +746,8 @@ try:
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     yaw = int(cbuff[2:msglen-1])
-                    hdg = (yaw + declination + compass_bias)%360
+#                     hdg = (yaw + declination + compass_bias)%360
+                    hdg = (yaw + compass_bias)%360
 #                    cogBase = 0              #invalidate COG baseline
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
@@ -769,21 +776,20 @@ try:
                         dist = delt * v
                         xd = dist * math.sin(phi)
                         yd = dist * math.cos(phi)
-                        estAV[0] += xd
-                        estAV[1] += yd
+                        estAV[0] = estAV[0] + xd
+                        estAV[1] = estAV[1] + yd
                         vprint("estAV", estAV)
                     else:    
                         vprint("posAV", posAV)
                         
                     logit("time: " + str(epoch))
                     logit("wpt: %2d raw hdg: %6.1f" % (wpt, hdg))
-                    logit("raw speed: %5.3f" % v)
-                    xEst = Kfilter.Kalman_step(epoch, estAV[0], \
-                            estAV[1], phi, v)
+                    logit("raw speed: %5.2f" % v)
+                    xEst = Kfilter.Kalman_step(epoch, estAV[0], estAV[1], phi, v)
                     fhdg = (450 - math.degrees(xEst[2, 0])) % 360
-                    logit("filtered EN pos: %7.4f/%7.4f" % (xEst[0, 0], xEst[1, 0]))
+                    logit("filtered EN pos: %7.2f/%7.2f" % (xEst[0, 0], xEst[1, 0]))
                     logit("Filtered hdg: %6.1f" % fhdg)
-                    logit("Filtered speed: %6.3f" %xEst[3, 0])
+                    logit("Filtered speed: %6.2f" %xEst[3, 0])
                     workAV = [xEst[0, 0], xEst[1, 0]]   # see BOT 3:41 for diagram
                     filterRV = vsub(workAV, startAV)
                     vprint("Kalman pos vec", filterRV)
@@ -798,7 +804,7 @@ try:
                         xtrk = vmag(xtrackRV)
                         
                         prog = vmag(progRV)/wptdist       # progress along track (fraction)
-                        if (xtrk < 3.0):
+                        if (xtrk < 2.0):
                             aim = (1.0 - prog) / 2 + prog     # aim at half the remaining dist on trackV
                         else:
                             aim = (1.0 - prog) / 3 + prog     # aim at a third of the remaining dist on trackV
@@ -870,7 +876,8 @@ try:
                         hdg = vcourse(cogBaseRV)
                         vprint("COG base course", cogBaseRV)
                         oldbias = compass_bias
-                        compass_bias = (hdg - yaw - declination) % 360
+#                         compass_bias = (hdg - yaw - declination) % 360
+                        compass_bias = (hdg - yaw) % 360
                         cstr = "{h%3d}" % hdg
                         sendit(cstr)
                         logit("cogBase: Compass bias was %d now %d" % (oldbias, compass_bias))
@@ -883,6 +890,12 @@ try:
                         cogBase += 1
                 else:
                     cogBase = 0
+                    
+                if (wptflag and xtrk > 3.0):               # if xtrack grows too much, use filtered heading
+                    oldbias = compass_bias
+#                    compass_bias = (int(fhdg) - yaw - declination) % 360
+                    compass_bias = (int(fhdg) - yaw) % 360
+                    logit("XTrack: Compass bias was %d now %d" % (oldbias, compass_bias))
 
                 #endif epoch timer ===================
             
@@ -921,6 +934,7 @@ try:
 
 finally:
     robot.motor(0,0)
+    time.sleep(0.5)           #wait for roboclaws
     robot.battery_voltage()
     odometer(speed)
     logit("odometer: %7.1f" % travel)
