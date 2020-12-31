@@ -62,7 +62,7 @@ import cEKF
 
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
-approach_speed = 50                     # after waypoint slowdown
+approach_speed = 75                     # after waypoint slowdown
 resume_speed = speed
 reducedflag = False
 azimuth = 0                             # desired course
@@ -130,7 +130,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [ -647.55,  2108.54],     #11 speed bump
 [ -619.57,  2091.62],     #12 T seam
 [ -599.97,  2236.32],     #13 workshop F 
-[ -578.94,  2247.67],     #14 driveway center Ffrom adafruit_servokit import ServoKit
+[ -578.94,  2247.67],     #14 driveway center F
 [ -498.02,  2110.77],     #15 gravel
 [ -471.80,  2053.82],     #16 fig tree fork F
 [ -532.36,  1963.03],     #17 stairs pivot
@@ -144,7 +144,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [ -665.89,  2108.14],     #25 ref corner - F
 [ -646.13,  2126.38],     #26 hose bib - F
 [ -640.51,  2177.75],     #27 rose bush - F
-[ -619.99,  2233.28],     #28 boat corner - F
+[ -624.45,  2233.94],     #28 boat corner - F
 [ -684.91,  2276.04],     #29 EF middle - F
 [ -644.70,  2261.65],     #30 office gap
 [ -653.41,  2229.63],     #31 EF rose gap
@@ -170,7 +170,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # [20.804, 7.949, "ref corner - F"],  #25
 # [20.984, 7.713, "hose bifrom adafruit_servokit import ServoKitb - F"],    #26
 # [21.491, 7.646, "rose bush - F"],   #27
-# [22.039, 7.401, "boat corner - F"], #28
+# [22.060, 7.459, "boat corner - F"], #28
 # [22.461, 8.176, "EF middle - F"],   #29
 # [22.319, 7.696, "office gap"],      #30
 # [22.003, 7.800, "EF rose gap"],     #31
@@ -281,14 +281,14 @@ def max_turn(angle, spd):
             while (steer > left_limit):
                 steer -= dt
                 robot.motor(spd, steer)
-                time.sleep(0.05)
+                time.sleep(0.04)
 #        robot.motor(speed, steer)
     else:
         if steer < (right_limit + 1):
             while (steer < right_limit):
                 steer += dt
                 robot.motor(spd, steer)
-                time.sleep(0.05)
+                time.sleep(0.04)
 #        robot.motor(speed, steer)
     return
 #===================================================================
@@ -556,7 +556,7 @@ def star_commands(schr):
         while str < right_limit:
             str += dt
             robot.motor(0, str)
-            time.sleep(0.05)
+            time.sleep(0.04)
         azimuth += 180
         azimuth %= 360
         logit("az set to %d" % azimuth)
