@@ -143,7 +143,8 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 [ -599.72,  2290.03],     #24 EF east entry
 [ -665.89,  2108.14],     #25 ref corner - F
 [ -646.13,  2126.38],     #26 hose bib - F
-[ -640.51,  2177.75],     #27 rose bush - F
+#[ -640.51,  2177.75],     #27 rose bush - F
+[ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
 [ -624.45,  2233.94],     #28 boat corner - F
 [ -684.91,  2276.04],     #29 EF middle - F
 [ -644.70,  2261.65],     #30 office gap
@@ -204,6 +205,7 @@ print (tme)
 log = open("logfile.txt", 'a')
 log.write("========================================================================================")
 log.write(version)
+path = open("path.txt", 'a')
 #log.write(tme)
 robot = motor_driver_ada.motor_driver_ada(log)
 robot.battery_voltage()
@@ -929,6 +931,7 @@ try:
             oldsteer = steer
             logit(cstr)
 
+        path.write("%9.2f,%7.2f,%7.2f,%7.2f,%7.2f,%4d,%4d,%3d,%3d\n" % (epoch,posAV[0],posAV[1],xEst[0],xEst[1],speed,steer,hdg,fhdg))
         # endwhile main loop ========================
     #endtry ======================
 
@@ -939,6 +942,7 @@ finally:
     odometer(speed)
     logit("odometer: %7.1f" % travel)
     log.close()
+    path.close()
     cstr = "{aStop}"
     tty.write(cstr.encode("utf-8"))
     print("Stopped")
