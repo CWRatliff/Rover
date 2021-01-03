@@ -1,0 +1,1197 @@
+========================================================================================Rover 1.0 201221
+Voltage:  15.4
+Standby
+hdg:   0, bias:   0
+{v   0}
+{s   0}
+msg: 10:54:42.334{LT21.9125}
+msg: 10:54:42.344{LN7.2331}
+msg: 10:54:43.338{LA821}
+{lt  2.69}
+msg: 10:54:45.371{LT21.9121}
+msg: 10:54:45.381{LN7.2320}
+msg: 10:54:46.125{LA835}
+{lt  2.74}
+Yaw delta: Compass bias was 0 now 238
+hdg: 122, bias: 238
+Yaw delta: Compass bias was 238 now 237
+hdg:   1, bias: 237
+msg: 10:54:48.161{LT21.9118}
+msg: 10:54:48.171{LN7.2288}
+msg: 10:54:49.157{LA845}
+{lt  2.77}
+Yaw delta: Compass bias was 237 now 238
+hdg: 359, bias: 238
+Yaw delta: Compass bias was 238 now 248
+hdg: 350, bias: 248
+Yaw delta: Compass bias was 248 now 250
+hdg: 358, bias: 250
+Yaw delta: Compass bias was 250 now 251
+hdg: 359, bias: 251
+Yaw delta: Compass bias was 251 now 253
+hdg: 358, bias: 253
+Yaw delta: Compass bias was 253 now 254
+hdg: 359, bias: 254
+Yaw delta: Compass bias was 254 now 256
+hdg: 358, bias: 256
+Yaw delta: Compass bias was 256 now 258
+Yaw delta: Compass bias was 258 now 261
+hdg: 357, bias: 261
+Yaw delta: Compass bias was 261 now 263
+hdg: 358, bias: 263
+Yaw delta: Compass bias was 263 now 266
+hdg: 357, bias: 266
+Yaw delta: Compass bias was 266 now 269
+Yaw delta: Compass bias was 269 now 272
+Yaw delta: Compass bias was 272 now 276
+hdg: 356, bias: 276
+Yaw delta: Compass bias was 276 now 279
+hdg: 357, bias: 279
+Yaw delta: Compass bias was 279 now 283
+hdg: 356, bias: 283
+Yaw delta: Compass bias was 283 now 287
+Yaw delta: Compass bias was 287 now 291
+Yaw delta: Compass bias was 291 now 295
+Yaw delta: Compass bias was 295 now 298
+hdg: 357, bias: 298
+Yaw delta: Compass bias was 298 now 302
+hdg: 356, bias: 302
+Yaw delta: Compass bias was 302 now 305
+hdg: 357, bias: 305
+Yaw delta: Compass bias was 305 now 308
+msg: 10:54:51.193{LT21.9413}
+msg: 10:54:51.204{LN7.2392}
+Yaw delta: Compass bias was 308 now 321
+hdg: 347, bias: 321
+msg: 10:54:52.194{LA867}
+{lt  2.84}
+Yaw delta: Compass bias was 321 now 320
+hdg:   1, bias: 320
+Yaw delta: Compass bias was 320 now 319
+Yaw delta: Compass bias was 319 now 321
+hdg: 358, bias: 321
+Yaw delta: Compass bias was 321 now 322
+hdg: 359, bias: 322
+Yaw delta: Compass bias was 322 now 323
+Yaw delta: Compass bias was 323 now 324
+Yaw delta: Compass bias was 324 now 325
+Yaw delta: Compass bias was 325 now 326
+Yaw delta: Compass bias was 326 now 327
+Yaw delta: Compass bias was 327 now 328
+Yaw delta: Compass bias was 328 now 329
+Yaw delta: Compass bias was 329 now 330
+msg: 10:54:54.223{LT21.9492}
+msg: 10:54:54.234{LN7.2295}
+msg: 10:54:55.225{LA901}
+{lt  2.96}
+Yaw delta: Compass bias was 330 now 334
+hdg: 356, bias: 334
+Yaw delta: Compass bias was 334 now 337
+hdg: 357, bias: 337
+Yaw delta: Compass bias was 337 now 338
+hdg: 359, bias: 338
+Yaw delta: Compass bias was 338 now 339
+Yaw delta: Compass bias was 339 now 340
+Yaw delta: Compass bias was 340 now 341
+Yaw delta: Compass bias was 341 now 342
+Yaw delta: Compass bias was 342 now 343
+Yaw delta: Compass bias was 343 now 344
+Yaw delta: Compass bias was 344 now 345
+msg: 10:54:57.257{LT21.9478}
+msg: 10:54:57.266{LN7.2306}
+msg: 10:54:58.257{LA904}
+{lt  2.97}
+msg: 10:54:58.263{F99}
+Yaw delta: Compass bias was 345 now 346
+Yaw delta: Compass bias was 346 now 348
+hdg: 358, bias: 348
+Yaw delta: Compass bias was 348 now 349
+hdg: 359, bias: 349
+Yaw delta: Compass bias was 349 now 350
+Yaw delta: Compass bias was 350 now 351
+Yaw delta: Compass bias was 351 now 352
+msg: 10:55:00.264{D2}
+Odo:     0.0, speed:    0
+{v  10}
+msg: 10:55:00.288{LT21.9463}
+msg: 10:55:00.299{LN7.2324}
+msg: 10:55:01.291{LA903}
+{lt  2.96}
+msg: 10:55:01.295{D2}
+Odo:     0.1, speed:   10
+{v  20}
+msg: 10:55:01.308{D2}
+Odo:     0.1, speed:   20
+{v  30}
+Yaw delta: Compass bias was 352 now 353
+Yaw delta: Compass bias was 353 now 354
+Yaw delta: Compass bias was 354 now 355
+msg: 10:55:01.774{D2}
+Odo:     0.3, speed:   30
+{v  40}
+Yaw delta: Compass bias was 355 now 356
+msg: 10:55:03.298{D6}
+{s   5}
+Yaw delta: Compass bias was 356 now 357
+msg: 10:55:03.322{LT21.9542}
+msg: 10:55:03.333{LN7.2302}
+msg: 10:55:04.324{LA902}
+{lt  2.96}
+Yaw delta: Compass bias was 357 now 356
+hdg:   1, bias: 356
+Yaw delta: Compass bias was 356 now 353
+hdg:   3, bias: 353
+Yaw delta: Compass bias was 353 now 352
+hdg:   1, bias: 352
+Yaw delta: Compass bias was 352 now 351
+Yaw delta: Compass bias was 351 now 350
+msg: 10:55:06.330{D2}
+Odo:     2.5, speed:   40
+{v  50}
+msg: 10:55:06.342{D2}
+Odo:     2.5, speed:   50
+{v  60}
+msg: 10:55:06.355{LT21.9647}
+msg: 10:55:06.364{LN7.2194}
+msg: 10:55:07.106{LA895}
+{lt  2.94}
+msg: 10:55:07.110{D2}
+Odo:     3.1, speed:   60
+{v  70}
+msg: 10:55:07.122{D2}
+Odo:     3.1, speed:   70
+{v  80}
+Yaw delta: Compass bias was 350 now 348
+hdg:   2, bias: 348
+Yaw delta: Compass bias was 348 now 344
+hdg:   4, bias: 344
+Yaw delta: Compass bias was 344 now 343
+hdg:   1, bias: 343
+Yaw delta: Compass bias was 343 now 342
+Yaw delta: Compass bias was 342 now 341
+Yaw delta: Compass bias was 341 now 340
+Yaw delta: Compass bias was 340 now 339
+Yaw delta: Compass bias was 339 now 338
+Yaw delta: Compass bias was 338 now 337
+msg: 10:55:09.115{D5}
+{s   0}
+Yaw delta: Compass bias was 337 now 336
+msg: 10:55:09.178{LT21.9830}
+msg: 10:55:09.179{LN7.1950}
+msg: 10:55:10.140{LA893}
+{lt  2.93}
+msg: 10:55:10.144{D5}
+Yaw delta: Compass bias was 336 now 329
+hdg:   7, bias: 329
+Yaw delta: Compass bias was 329 now 327
+hdg:   2, bias: 327
+Yaw delta: Compass bias was 327 now 326
+hdg:   1, bias: 326
+Yaw delta: Compass bias was 326 now 325
+Yaw delta: Compass bias was 325 now 324
+Yaw delta: Compass bias was 324 now 323
+msg: 10:55:12.168{LT21.9992}
+msg: 10:55:12.177{LN7.1640}
+msg: 10:55:13.168{LA895}
+{lt  2.94}
+Yaw delta: Compass bias was 323 now 322
+Yaw delta: Compass bias was 322 now 320
+hdg:   2, bias: 320
+Yaw delta: Compass bias was 320 now 319
+hdg:   1, bias: 319
+Yaw delta: Compass bias was 319 now 318
+Yaw delta: Compass bias was 318 now 317
+msg: 10:55:15.200{LT22.0111}
+msg: 10:55:15.209{LN7.1266}
+msg: 10:55:16.202{LA886}
+{lt  2.91}
+Yaw delta: Compass bias was 317 now 316
+Yaw delta: Compass bias was 316 now 315
+Yaw delta: Compass bias was 315 now 314
+Yaw delta: Compass bias was 314 now 313
+Yaw delta: Compass bias was 313 now 312
+Yaw delta: Compass bias was 312 now 313
+hdg: 359, bias: 313
+msg: 10:55:18.233{LT22.0212}
+msg: 10:55:18.243{LN7.0913}
+Yaw delta: Compass bias was 313 now 311
+hdg:   2, bias: 311
+msg: 10:55:19.238{LA890}
+{lt  2.92}
+Yaw delta: Compass bias was 311 now 309
+Yaw delta: Compass bias was 309 now 308
+hdg:   1, bias: 308
+Yaw delta: Compass bias was 308 now 307
+msg: 10:55:21.267{LT22.0320}
+msg: 10:55:21.277{LN7.0546}
+msg: 10:55:22.269{LA905}
+{lt  2.97}
+Yaw delta: Compass bias was 307 now 306
+Yaw delta: Compass bias was 306 now 304
+hdg:   2, bias: 304
+Yaw delta: Compass bias was 304 now 303
+hdg:   1, bias: 303
+Yaw delta: Compass bias was 303 now 302
+Yaw delta: Compass bias was 302 now 303
+hdg: 359, bias: 303
+Yaw delta: Compass bias was 303 now 304
+Yaw delta: Compass bias was 304 now 303
+hdg:   1, bias: 303
+Yaw delta: Compass bias was 303 now 302
+Yaw delta: Compass bias was 302 now 303
+hdg: 359, bias: 303
+Yaw delta: Compass bias was 303 now 302
+hdg:   1, bias: 302
+msg: 10:55:24.299{LT22.0432}
+msg: 10:55:24.310{LN7.0146}
+Yaw delta: Compass bias was 302 now 301
+msg: 10:55:25.303{LA910}
+{lt  2.99}
+Yaw delta: Compass bias was 301 now 300
+Yaw delta: Compass bias was 300 now 299
+Yaw delta: Compass bias was 299 now 300
+hdg: 359, bias: 300
+Yaw delta: Compass bias was 300 now 299
+hdg:   1, bias: 299
+Yaw delta: Compass bias was 299 now 298
+msg: 10:55:27.338{LT22.0518}
+msg: 10:55:27.350{LN6.9743}
+msg: 10:55:28.336{LA907}
+{lt  2.98}
+msg: 10:55:28.341{D7}
+{s -36}
+Yaw delta: Compass bias was 298 now 297
+Yaw delta: Compass bias was 297 now 296
+Yaw delta: Compass bias was 296 now 297
+hdg: 359, bias: 297
+Yaw delta: Compass bias was 297 now 298
+Yaw delta: Compass bias was 298 now 299
+Yaw delta: Compass bias was 299 now 300
+Yaw delta: Compass bias was 300 now 301
+Yaw delta: Compass bias was 301 now 302
+Yaw delta: Compass bias was 302 now 303
+Yaw delta: Compass bias was 303 now 304
+Yaw delta: Compass bias was 304 now 305
+msg: 10:55:30.367{LT22.0579}
+msg: 10:55:30.377{LN6.9365}
+Yaw delta: Compass bias was 305 now 330
+hdg: 335, bias: 330
+msg: 10:55:31.123{LA907}
+{lt  2.98}
+Yaw delta: Compass bias was 330 now 331
+hdg: 359, bias: 331
+Yaw delta: Compass bias was 331 now 333
+hdg: 358, bias: 333
+Yaw delta: Compass bias was 333 now 353
+hdg: 340, bias: 353
+Yaw delta: Compass bias was 353 now 355
+hdg: 358, bias: 355
+Yaw delta: Compass bias was 355 now 356
+hdg: 359, bias: 356
+Yaw delta: Compass bias was 356 now 358
+hdg: 358, bias: 358
+Yaw delta: Compass bias was 358 now 359
+hdg: 359, bias: 359
+Yaw delta: Compass bias was 359 now 0
+Yaw delta: Compass bias was 0 now 2
+hdg: 358, bias:   2
+Yaw delta: Compass bias was 2 now 4
+Yaw delta: Compass bias was 4 now 5
+hdg: 359, bias:   5
+Yaw delta: Compass bias was 5 now 6
+Yaw delta: Compass bias was 6 now 8
+hdg: 358, bias:   8
+Yaw delta: Compass bias was 8 now 9
+hdg: 359, bias:   9
+Yaw delta: Compass bias was 9 now 10
+Yaw delta: Compass bias was 10 now 12
+hdg: 358, bias:  12
+Yaw delta: Compass bias was 12 now 13
+hdg: 359, bias:  13
+Yaw delta: Compass bias was 13 now 15
+hdg: 358, bias:  15
+Yaw delta: Compass bias was 15 now 16
+hdg: 359, bias:  16
+Yaw delta: Compass bias was 16 now 18
+hdg: 358, bias:  18
+Yaw delta: Compass bias was 18 now 19
+hdg: 359, bias:  19
+Yaw delta: Compass bias was 19 now 21
+hdg: 358, bias:  21
+Yaw delta: Compass bias was 21 now 22
+hdg: 359, bias:  22
+Yaw delta: Compass bias was 22 now 23
+msg: 10:55:33.169{LT22.0716}
+msg: 10:55:33.181{LN6.9206}
+msg: 10:55:34.173{LA920}
+{lt  3.02}
+Yaw delta: Compass bias was 23 now 52
+hdg: 331, bias:  52
+Yaw delta: Compass bias was 52 now 54
+hdg: 358, bias:  54
+Yaw delta: Compass bias was 54 now 83
+hdg: 331, bias:  83
+Yaw delta: Compass bias was 83 now 84
+hdg: 359, bias:  84
+Yaw delta: Compass bias was 84 now 86
+hdg: 358, bias:  86
+Yaw delta: Compass bias was 86 now 87
+hdg: 359, bias:  87
+Yaw delta: Compass bias was 87 now 89
+hdg: 358, bias:  89
+Yaw delta: Compass bias was 89 now 90
+hdg: 359, bias:  90
+Yaw delta: Compass bias was 90 now 92
+hdg: 358, bias:  92
+Yaw delta: Compass bias was 92 now 93
+hdg: 359, bias:  93
+Yaw delta: Compass bias was 93 now 95
+hdg: 358, bias:  95
+Yaw delta: Compass bias was 95 now 96
+hdg: 359, bias:  96
+Yaw delta: Compass bias was 96 now 98
+hdg: 358, bias:  98
+Yaw delta: Compass bias was 98 now 99
+hdg: 359, bias:  99
+Yaw delta: Compass bias was 99 now 101
+hdg: 358, bias: 101
+Yaw delta: Compass bias was 101 now 102
+hdg: 359, bias: 102
+Yaw delta: Compass bias was 102 now 103
+Yaw delta: Compass bias was 103 now 105
+hdg: 358, bias: 105
+Yaw delta: Compass bias was 105 now 106
+hdg: 359, bias: 106
+Yaw delta: Compass bias was 106 now 108
+hdg: 358, bias: 108
+Yaw delta: Compass bias was 108 now 109
+hdg: 359, bias: 109
+Yaw delta: Compass bias was 109 now 111
+hdg: 358, bias: 111
+Yaw delta: Compass bias was 111 now 112
+hdg: 359, bias: 112
+msg: 10:55:36.215{LT22.0856}
+msg: 10:55:36.226{LN6.9408}
+msg: 10:55:37.217{LA959}
+{lt  3.15}
+Yaw delta: Compass bias was 112 now 142
+hdg: 330, bias: 142
+Yaw delta: Compass bias was 142 now 143
+hdg: 359, bias: 143
+Yaw delta: Compass bias was 143 now 172
+hdg: 331, bias: 172
+Yaw delta: Compass bias was 172 now 173
+hdg: 359, bias: 173
+Yaw delta: Compass bias was 173 now 175
+hdg: 358, bias: 175
+Yaw delta: Compass bias was 175 now 176
+hdg: 359, bias: 176
+Yaw delta: Compass bias was 176 now 178
+hdg: 358, bias: 178
+Yaw delta: Compass bias was 178 now 179
+hdg: 359, bias: 179
+Yaw delta: Compass bias was 179 now 181
+hdg: 358, bias: 181
+Yaw delta: Compass bias was 181 now 182
+hdg: 359, bias: 182
+Yaw delta: Compass bias was 182 now 183
+Yaw delta: Compass bias was 183 now 185
+hdg: 358, bias: 185
+Yaw delta: Compass bias was 185 now 187
+Yaw delta: Compass bias was 187 now 188
+hdg: 359, bias: 188
+Yaw delta: Compass bias was 188 now 190
+hdg: 358, bias: 190
+Yaw delta: Compass bias was 190 now 192
+Yaw delta: Compass bias was 192 now 193
+hdg: 359, bias: 193
+Yaw delta: Compass bias was 193 now 194
+Yaw delta: Compass bias was 194 now 196
+hdg: 358, bias: 196
+Yaw delta: Compass bias was 196 now 197
+hdg: 359, bias: 197
+Yaw delta: Compass bias was 197 now 198
+Yaw delta: Compass bias was 198 now 200
+hdg: 358, bias: 200
+Yaw delta: Compass bias was 200 now 201
+hdg: 359, bias: 201
+Yaw delta: Compass bias was 201 now 202
+msg: 10:55:39.262{LT22.0687}
+msg: 10:55:39.273{LN6.9584}
+Yaw delta: Compass bias was 202 now 231
+hdg: 331, bias: 231
+msg: 10:55:40.266{LA981}
+{lt  3.22}
+Yaw delta: Compass bias was 231 now 230
+hdg:   1, bias: 230
+Yaw delta: Compass bias was 230 now 231
+hdg: 359, bias: 231
+Yaw delta: Compass bias was 231 now 252
+hdg: 339, bias: 252
+Yaw delta: Compass bias was 252 now 253
+hdg: 359, bias: 253
+Yaw delta: Compass bias was 253 now 254
+Yaw delta: Compass bias was 254 now 255
+Yaw delta: Compass bias was 255 now 256
+Yaw delta: Compass bias was 256 now 257
+Yaw delta: Compass bias was 257 now 258
+Yaw delta: Compass bias was 258 now 259
+Yaw delta: Compass bias was 259 now 260
+Yaw delta: Compass bias was 260 now 261
+Yaw delta: Compass bias was 261 now 263
+hdg: 358, bias: 263
+Yaw delta: Compass bias was 263 now 264
+hdg: 359, bias: 264
+msg: 10:55:41.020{D5}
+{s   0}
+Yaw delta: Compass bias was 264 now 265
+Yaw delta: Compass bias was 265 now 266
+Yaw delta: Compass bias was 266 now 268
+hdg: 358, bias: 268
+Yaw delta: Compass bias was 268 now 269
+hdg: 359, bias: 269
+Yaw delta: Compass bias was 269 now 270
+Yaw delta: Compass bias was 270 now 271
+msg: 10:55:42.303{LT22.0590}
+msg: 10:55:42.313{LN6.9358}
+msg: 10:55:43.309{LA981}
+{lt  3.22}
+msg: 10:55:43.313{D9}
+{s  36}
+Yaw delta: Compass bias was 271 now 273
+hdg: 358, bias: 273
+Yaw delta: Compass bias was 273 now 274
+hdg: 359, bias: 274
+Yaw delta: Compass bias was 274 now 275
+Yaw delta: Compass bias was 275 now 274
+hdg:   1, bias: 274
+Yaw delta: Compass bias was 274 now 273
+Yaw delta: Compass bias was 273 now 272
+Yaw delta: Compass bias was 272 now 271
+Yaw delta: Compass bias was 271 now 270
+Yaw delta: Compass bias was 270 now 269
+Yaw delta: Compass bias was 269 now 268
+Yaw delta: Compass bias was 268 now 267
+Yaw delta: Compass bias was 267 now 266
+msg: 10:55:45.351{LT22.0658}
+msg: 10:55:45.363{LN6.8994}
+Yaw delta: Compass bias was 266 now 240
+hdg:  26, bias: 240
+msg: 10:55:46.355{LA977}
+{lt  3.21}
+Yaw delta: Compass bias was 240 now 239
+hdg:   1, bias: 239
+Yaw delta: Compass bias was 239 now 238
+Yaw delta: Compass bias was 238 now 208
+hdg:  30, bias: 208
+Yaw delta: Compass bias was 208 now 206
+hdg:   2, bias: 206
+Yaw delta: Compass bias was 206 now 204
+Yaw delta: Compass bias was 204 now 202
+Yaw delta: Compass bias was 202 now 201
+hdg:   1, bias: 201
+Yaw delta: Compass bias was 201 now 199
+hdg:   2, bias: 199
+Yaw delta: Compass bias was 199 now 197
+Yaw delta: Compass bias was 197 now 195
+Yaw delta: Compass bias was 195 now 194
+hdg:   1, bias: 194
+Yaw delta: Compass bias was 194 now 192
+hdg:   2, bias: 192
+Yaw delta: Compass bias was 192 now 190
+Yaw delta: Compass bias was 190 now 188
+Yaw delta: Compass bias was 188 now 186
+Yaw delta: Compass bias was 186 now 185
+hdg:   1, bias: 185
+Yaw delta: Compass bias was 185 now 183
+hdg:   2, bias: 183
+Yaw delta: Compass bias was 183 now 182
+hdg:   1, bias: 182
+Yaw delta: Compass bias was 182 now 180
+hdg:   2, bias: 180
+Yaw delta: Compass bias was 180 now 178
+Yaw delta: Compass bias was 178 now 177
+hdg:   1, bias: 177
+Yaw delta: Compass bias was 177 now 175
+hdg:   2, bias: 175
+Yaw delta: Compass bias was 175 now 173
+Yaw delta: Compass bias was 173 now 172
+hdg:   1, bias: 172
+msg: 10:55:48.396{LT22.0493}
+msg: 10:55:48.406{LN6.8764}
+msg: 10:55:49.397{LA1008}
+{lt  3.31}
+Yaw delta: Compass bias was 172 now 143
+hdg:  29, bias: 143
+Yaw delta: Compass bias was 143 now 142
+hdg:   1, bias: 142
+Yaw delta: Compass bias was 142 now 112
+hdg:  30, bias: 112
+Yaw delta: Compass bias was 112 now 111
+hdg:   1, bias: 111
+Yaw delta: Compass bias was 111 now 109
+hdg:   2, bias: 109
+Yaw delta: Compass bias was 109 now 108
+hdg:   1, bias: 108
+Yaw delta: Compass bias was 108 now 106
+hdg:   2, bias: 106
+Yaw delta: Compass bias was 106 now 105
+hdg:   1, bias: 105
+Yaw delta: Compass bias was 105 now 103
+hdg:   2, bias: 103
+Yaw delta: Compass bias was 103 now 102
+hdg:   1, bias: 102
+Yaw delta: Compass bias was 102 now 101
+Yaw delta: Compass bias was 101 now 99
+hdg:   2, bias:  99
+Yaw delta: Compass bias was 99 now 98
+hdg:   1, bias:  98
+Yaw delta: Compass bias was 98 now 96
+hdg:   2, bias:  96
+Yaw delta: Compass bias was 96 now 95
+hdg:   1, bias:  95
+Yaw delta: Compass bias was 95 now 93
+hdg:   2, bias:  93
+Yaw delta: Compass bias was 93 now 92
+hdg:   1, bias:  92
+Yaw delta: Compass bias was 92 now 90
+hdg:   2, bias:  90
+Yaw delta: Compass bias was 90 now 89
+hdg:   1, bias:  89
+Yaw delta: Compass bias was 89 now 87
+hdg:   2, bias:  87
+Yaw delta: Compass bias was 87 now 86
+hdg:   1, bias:  86
+Yaw delta: Compass bias was 86 now 85
+Yaw delta: Compass bias was 85 now 83
+hdg:   2, bias:  83
+msg: 10:55:51.436{LT22.0316}
+msg: 10:55:51.447{LN6.8933}
+msg: 10:55:52.183{LA1019}
+{lt  3.34}
+Yaw delta: Compass bias was 83 now 55
+hdg:  28, bias:  55
+Yaw delta: Compass bias was 55 now 53
+hdg:   2, bias:  53
+Yaw delta: Compass bias was 53 now 34
+hdg:  19, bias:  34
+Yaw delta: Compass bias was 34 now 33
+hdg:   1, bias:  33
+msg: 10:55:52.286{D5}
+{s   0}
+Yaw delta: Compass bias was 33 now 31
+hdg:   2, bias:  31
+Yaw delta: Compass bias was 31 now 30
+hdg:   1, bias:  30
+Yaw delta: Compass bias was 30 now 28
+hdg:   2, bias:  28
+Yaw delta: Compass bias was 28 now 27
+hdg:   1, bias:  27
+Yaw delta: Compass bias was 27 now 26
+Yaw delta: Compass bias was 26 now 25
+Yaw delta: Compass bias was 25 now 24
+Yaw delta: Compass bias was 24 now 23
+Yaw delta: Compass bias was 23 now 22
+Yaw delta: Compass bias was 22 now 21
+msg: 10:55:54.222{LT22.0507}
+msg: 10:55:54.233{LN6.9167}
+msg: 10:55:55.221{LA1012}
+{lt  3.32}
+Yaw delta: Compass bias was 21 now 20
+msg: 10:55:55.569{E2}
+Auto-pilot
+msg: 10:55:57.256{LT22.0824}
+msg: 10:55:57.267{LN6.9372}
+msg: 10:55:58.257{LA1020}
+{lt  3.35}
+Yaw delta: Compass bias was 20 now 19
+Yaw delta: Compass bias was 19 now 18
+msg: 10:55:58.984{E8}
+Compass bias 347
+hdg: 329, bias: 347
+Yaw delta: Compass bias was 347 now 17
+hdg: 330, bias:  17
+{s  -1}
+msg: 10:56:00.302{LT22.1123}
+msg: 10:56:00.314{LN6.9552}
+Yaw delta: Compass bias was 17 now 16
+hdg:   1, bias:  16
+{s -32}
+msg: 10:56:01.299{LA1031}
+{lt  3.38}
+Yaw delta: Compass bias was 16 now 31
+hdg: 345, bias:  31
+{s -16}
+Yaw delta: Compass bias was 31 now 33
+hdg: 358, bias:  33
+{s -29}
+Yaw delta: Compass bias was 33 now 34
+hdg: 359, bias:  34
+{s -30}
+Yaw delta: Compass bias was 34 now 35
+Yaw delta: Compass bias was 35 now 36
+Yaw delta: Compass bias was 36 now 38
+hdg: 358, bias:  38
+{s -29}
+Yaw delta: Compass bias was 38 now 39
+hdg: 359, bias:  39
+{s -30}
+Yaw delta: Compass bias was 39 now 41
+hdg: 358, bias:  41
+{s -29}
+Yaw delta: Compass bias was 41 now 42
+hdg: 359, bias:  42
+{s -30}
+Yaw delta: Compass bias was 42 now 43
+Yaw delta: Compass bias was 43 now 45
+hdg: 358, bias:  45
+{s -29}
+Yaw delta: Compass bias was 45 now 46
+hdg: 359, bias:  46
+{s -30}
+Yaw delta: Compass bias was 46 now 47
+Yaw delta: Compass bias was 47 now 49
+hdg: 358, bias:  49
+{s -29}
+Yaw delta: Compass bias was 49 now 50
+hdg: 359, bias:  50
+{s -30}
+Yaw delta: Compass bias was 50 now 51
+Yaw delta: Compass bias was 51 now 52
+Yaw delta: Compass bias was 52 now 54
+hdg: 358, bias:  54
+{s -29}
+Yaw delta: Compass bias was 54 now 55
+hdg: 359, bias:  55
+{s -30}
+Yaw delta: Compass bias was 55 now 56
+Yaw delta: Compass bias was 56 now 58
+hdg: 358, bias:  58
+{s -29}
+Yaw delta: Compass bias was 58 now 59
+hdg: 359, bias:  59
+{s -30}
+msg: 10:56:03.341{LT22.1332}
+msg: 10:56:03.352{LN6.9692}
+msg: 10:56:04.337{LA1038}
+{lt  3.41}
+Yaw delta: Compass bias was 59 now 83
+hdg: 336, bias:  83
+{s  -7}
+Yaw delta: Compass bias was 83 now 85
+hdg: 358, bias:  85
+{s -29}
+Yaw delta: Compass bias was 85 now 111
+hdg: 334, bias: 111
+{s  -5}
+Yaw delta: Compass bias was 111 now 113
+hdg: 358, bias: 113
+{s -29}
+Yaw delta: Compass bias was 113 now 114
+hdg: 359, bias: 114
+{s -30}
+Yaw delta: Compass bias was 114 now 116
+hdg: 358, bias: 116
+{s -29}
+Yaw delta: Compass bias was 116 now 117
+hdg: 359, bias: 117
+{s -30}
+Yaw delta: Compass bias was 117 now 118
+Yaw delta: Compass bias was 118 now 119
+Yaw delta: Compass bias was 119 now 120
+Yaw delta: Compass bias was 120 now 121
+Yaw delta: Compass bias was 121 now 123
+hdg: 358, bias: 123
+{s -29}
+Yaw delta: Compass bias was 123 now 124
+hdg: 359, bias: 124
+{s -30}
+Yaw delta: Compass bias was 124 now 125
+Yaw delta: Compass bias was 125 now 126
+Yaw delta: Compass bias was 126 now 127
+Yaw delta: Compass bias was 127 now 128
+Yaw delta: Compass bias was 128 now 130
+hdg: 358, bias: 130
+{s -29}
+Yaw delta: Compass bias was 130 now 131
+hdg: 359, bias: 131
+{s -30}
+Yaw delta: Compass bias was 131 now 132
+Yaw delta: Compass bias was 132 now 133
+Yaw delta: Compass bias was 133 now 135
+hdg: 358, bias: 135
+{s -29}
+Yaw delta: Compass bias was 135 now 136
+hdg: 359, bias: 136
+{s -30}
+Yaw delta: Compass bias was 136 now 138
+hdg: 358, bias: 138
+{s -29}
+msg: 10:56:06.374{LT22.1285}
+msg: 10:56:06.385{LN6.9955}
+Yaw delta: Compass bias was 138 now 162
+hdg: 336, bias: 162
+{s  -7}
+msg: 10:56:07.374{LA1016}
+{lt  3.33}
+Yaw delta: Compass bias was 162 now 163
+hdg: 359, bias: 163
+{s -30}
+Yaw delta: Compass bias was 163 now 164
+Yaw delta: Compass bias was 164 now 179
+hdg: 345, bias: 179
+{s -16}
+Yaw delta: Compass bias was 179 now 180
+hdg: 359, bias: 180
+{s -30}
+Yaw delta: Compass bias was 180 now 181
+Yaw delta: Compass bias was 181 now 182
+Yaw delta: Compass bias was 182 now 183
+Yaw delta: Compass bias was 183 now 184
+Yaw delta: Compass bias was 184 now 185
+Yaw delta: Compass bias was 185 now 186
+Yaw delta: Compass bias was 186 now 188
+hdg: 358, bias: 188
+{s -29}
+Yaw delta: Compass bias was 188 now 189
+hdg: 359, bias: 189
+{s -30}
+Yaw delta: Compass bias was 189 now 190
+Yaw delta: Compass bias was 190 now 191
+Yaw delta: Compass bias was 191 now 192
+Yaw delta: Compass bias was 192 now 193
+Yaw delta: Compass bias was 193 now 194
+Yaw delta: Compass bias was 194 now 195
+msg: 10:56:09.413{LT22.1011}
+msg: 10:56:09.424{LN6.9988}
+msg: 10:56:10.411{LA970}
+{lt  3.18}
+Yaw delta: Compass bias was 195 now 219
+hdg: 336, bias: 219
+{s  -7}
+Yaw delta: Compass bias was 219 now 221
+hdg: 358, bias: 221
+{s -29}
+Yaw delta: Compass bias was 221 now 245
+hdg: 336, bias: 245
+{s  -7}
+Yaw delta: Compass bias was 245 now 246
+hdg: 359, bias: 246
+{s -30}
+Yaw delta: Compass bias was 246 now 247
+Yaw delta: Compass bias was 247 now 248
+Yaw delta: Compass bias was 248 now 249
+Yaw delta: Compass bias was 249 now 250
+Yaw delta: Compass bias was 250 now 251
+Yaw delta: Compass bias was 251 now 252
+Yaw delta: Compass bias was 252 now 253
+Yaw delta: Compass bias was 253 now 255
+hdg: 358, bias: 255
+{s -29}
+Yaw delta: Compass bias was 255 now 256
+hdg: 359, bias: 256
+{s -30}
+Yaw delta: Compass bias was 256 now 257
+Yaw delta: Compass bias was 257 now 259
+hdg: 358, bias: 259
+{s -29}
+Yaw delta: Compass bias was 259 now 260
+hdg: 359, bias: 260
+{s -30}
+Yaw delta: Compass bias was 260 now 261
+Yaw delta: Compass bias was 261 now 263
+hdg: 358, bias: 263
+{s -29}
+Yaw delta: Compass bias was 263 now 264
+hdg: 359, bias: 264
+{s -30}
+Yaw delta: Compass bias was 264 now 265
+Yaw delta: Compass bias was 265 now 267
+hdg: 358, bias: 267
+{s -29}
+Yaw delta: Compass bias was 267 now 268
+hdg: 359, bias: 268
+{s -30}
+msg: 10:56:12.417{E0}
+Standby
+Yaw delta: Compass bias was 268 now 269
+Yaw delta: Compass bias was 269 now 270
+msg: 10:56:12.443{LT22.0889}
+msg: 10:56:12.454{LN6.9757}
+Yaw delta: Compass bias was 270 now 296
+hdg: 334, bias: 296
+msg: 10:56:13.196{LA949}
+{lt  3.11}
+Yaw delta: Compass bias was 296 now 297
+hdg: 359, bias: 297
+Yaw delta: Compass bias was 297 now 298
+Yaw delta: Compass bias was 298 now 316
+hdg: 342, bias: 316
+Yaw delta: Compass bias was 316 now 318
+hdg: 358, bias: 318
+Yaw delta: Compass bias was 318 now 319
+hdg: 359, bias: 319
+Yaw delta: Compass bias was 319 now 321
+hdg: 358, bias: 321
+Yaw delta: Compass bias was 321 now 322
+hdg: 359, bias: 322
+Yaw delta: Compass bias was 322 now 324
+hdg: 358, bias: 324
+Yaw delta: Compass bias was 324 now 325
+hdg: 359, bias: 325
+Yaw delta: Compass bias was 325 now 327
+hdg: 358, bias: 327
+Yaw delta: Compass bias was 327 now 329
+Yaw delta: Compass bias was 329 now 330
+hdg: 359, bias: 330
+Yaw delta: Compass bias was 330 now 332
+hdg: 358, bias: 332
+Yaw delta: Compass bias was 332 now 333
+hdg: 359, bias: 333
+Yaw delta: Compass bias was 333 now 334
+Yaw delta: Compass bias was 334 now 335
+Yaw delta: Compass bias was 335 now 337
+hdg: 358, bias: 337
+Yaw delta: Compass bias was 337 now 338
+hdg: 359, bias: 338
+Yaw delta: Compass bias was 338 now 339
+Yaw delta: Compass bias was 339 now 341
+hdg: 358, bias: 341
+Yaw delta: Compass bias was 341 now 342
+hdg: 359, bias: 342
+Yaw delta: Compass bias was 342 now 343
+Yaw delta: Compass bias was 343 now 344
+Yaw delta: Compass bias was 344 now 346
+hdg: 358, bias: 346
+msg: 10:56:15.232{LT22.1022}
+msg: 10:56:15.242{LN6.9566}
+msg: 10:56:16.229{LA958}
+{lt  3.14}
+Yaw delta: Compass bias was 346 now 9
+hdg: 337, bias:   9
+Yaw delta: Compass bias was 9 now 10
+hdg: 359, bias:  10
+Yaw delta: Compass bias was 10 now 36
+hdg: 334, bias:  36
+Yaw delta: Compass bias was 36 now 37
+hdg: 359, bias:  37
+Yaw delta: Compass bias was 37 now 39
+hdg: 358, bias:  39
+Yaw delta: Compass bias was 39 now 40
+hdg: 359, bias:  40
+Yaw delta: Compass bias was 40 now 41
+Yaw delta: Compass bias was 41 now 42
+Yaw delta: Compass bias was 42 now 44
+hdg: 358, bias:  44
+Yaw delta: Compass bias was 44 now 45
+hdg: 359, bias:  45
+Yaw delta: Compass bias was 45 now 46
+Yaw delta: Compass bias was 46 now 48
+hdg: 358, bias:  48
+Yaw delta: Compass bias was 48 now 49
+hdg: 359, bias:  49
+Yaw delta: Compass bias was 49 now 50
+Yaw delta: Compass bias was 50 now 51
+Yaw delta: Compass bias was 51 now 53
+hdg: 358, bias:  53
+Yaw delta: Compass bias was 53 now 54
+hdg: 359, bias:  54
+Yaw delta: Compass bias was 54 now 56
+hdg: 358, bias:  56
+Yaw delta: Compass bias was 56 now 57
+hdg: 359, bias:  57
+Yaw delta: Compass bias was 57 now 58
+Yaw delta: Compass bias was 58 now 59
+Yaw delta: Compass bias was 59 now 61
+hdg: 358, bias:  61
+Yaw delta: Compass bias was 61 now 62
+hdg: 359, bias:  62
+msg: 10:56:18.268{LT22.1206}
+msg: 10:56:18.278{LN6.9700}
+msg: 10:56:19.266{LA958}
+{lt  3.14}
+msg: 10:56:19.270{D5}
+{s   0}
+Yaw delta: Compass bias was 62 now 88
+hdg: 334, bias:  88
+Yaw delta: Compass bias was 88 now 89
+hdg: 359, bias:  89
+Yaw delta: Compass bias was 89 now 113
+hdg: 336, bias: 113
+Yaw delta: Compass bias was 113 now 115
+hdg: 358, bias: 115
+Yaw delta: Compass bias was 115 now 116
+hdg: 359, bias: 116
+Yaw delta: Compass bias was 116 now 117
+Yaw delta: Compass bias was 117 now 118
+Yaw delta: Compass bias was 118 now 119
+Yaw delta: Compass bias was 119 now 120
+Yaw delta: Compass bias was 120 now 119
+hdg:   1, bias: 119
+Yaw delta: Compass bias was 119 now 120
+hdg: 359, bias: 120
+Yaw delta: Compass bias was 120 now 119
+hdg:   1, bias: 119
+msg: 10:56:21.296{LT22.1065}
+msg: 10:56:21.305{LN7.0006}
+msg: 10:56:22.298{LA942}
+{lt  3.09}
+Yaw delta: Compass bias was 119 now 118
+Yaw delta: Compass bias was 118 now 116
+hdg:   2, bias: 116
+msg: 10:56:24.332{LT22.0838}
+msg: 10:56:24.343{LN7.0337}
+msg: 10:56:25.336{LA931}
+{lt  3.05}
+Yaw delta: Compass bias was 116 now 114
+Yaw delta: Compass bias was 114 now 113
+hdg:   1, bias: 113
+Yaw delta: Compass bias was 113 now 114
+hdg: 359, bias: 114
+Yaw delta: Compass bias was 114 now 113
+hdg:   1, bias: 113
+Yaw delta: Compass bias was 113 now 112
+Yaw delta: Compass bias was 112 now 113
+hdg: 359, bias: 113
+msg: 10:56:27.366{LT22.0630}
+msg: 10:56:27.377{LN7.0657}
+Yaw delta: Compass bias was 113 now 112
+hdg:   1, bias: 112
+msg: 10:56:28.375{LA930}
+{lt  3.05}
+Yaw delta: Compass bias was 112 now 111
+Yaw delta: Compass bias was 111 now 110
+Yaw delta: Compass bias was 110 now 111
+hdg: 359, bias: 111
+Yaw delta: Compass bias was 111 now 110
+hdg:   1, bias: 110
+Yaw delta: Compass bias was 110 now 109
+msg: 10:56:30.411{LT22.0414}
+msg: 10:56:30.421{LN7.1003}
+msg: 10:56:31.410{LA916}
+{lt  3.01}
+Yaw delta: Compass bias was 109 now 108
+Yaw delta: Compass bias was 108 now 107
+Yaw delta: Compass bias was 107 now 108
+hdg: 359, bias: 108
+Yaw delta: Compass bias was 108 now 107
+hdg:   1, bias: 107
+msg: 10:56:33.441{LT22.0230}
+msg: 10:56:33.452{LN7.1392}
+Yaw delta: Compass bias was 107 now 105
+hdg:   2, bias: 105
+msg: 10:56:34.447{LA917}
+{lt  3.01}
+Yaw delta: Compass bias was 105 now 104
+hdg:   1, bias: 104
+Yaw delta: Compass bias was 104 now 105
+hdg: 359, bias: 105
+Yaw delta: Compass bias was 105 now 104
+hdg:   1, bias: 104
+msg: 10:56:36.477{LT22.0079}
+msg: 10:56:36.487{LN7.1748}
+msg: 10:56:37.231{LA907}
+{lt  2.98}
+msg: 10:56:37.235{D7}
+{s -36}
+Yaw delta: Compass bias was 104 now 103
+Yaw delta: Compass bias was 103 now 102
+Yaw delta: Compass bias was 102 now 101
+Yaw delta: Compass bias was 101 now 102
+hdg: 359, bias: 102
+Yaw delta: Compass bias was 102 now 103
+Yaw delta: Compass bias was 103 now 104
+Yaw delta: Compass bias was 104 now 105
+Yaw delta: Compass bias was 105 now 106
+Yaw delta: Compass bias was 106 now 107
+Yaw delta: Compass bias was 107 now 108
+Yaw delta: Compass bias was 108 now 109
+msg: 10:56:39.238{D5}
+{s   0}
+Yaw delta: Compass bias was 109 now 110
+Yaw delta: Compass bias was 110 now 111
+msg: 10:56:39.596{LT21.9964}
+msg: 10:56:39.597{LN7.2043}
+msg: 10:56:40.265{LA898}
+{lt  2.95}
+Yaw delta: Compass bias was 111 now 137
+hdg: 334, bias: 137
+Yaw delta: Compass bias was 137 now 138
+hdg: 359, bias: 138
+Yaw delta: Compass bias was 138 now 142
+hdg: 356, bias: 142
+Yaw delta: Compass bias was 142 now 143
+hdg: 359, bias: 143
+Yaw delta: Compass bias was 143 now 144
+msg: 10:56:40.800{D6}
+{s   5}
+Yaw delta: Compass bias was 144 now 143
+hdg:   1, bias: 143
+Yaw delta: Compass bias was 143 now 142
+Yaw delta: Compass bias was 142 now 141
+Yaw delta: Compass bias was 141 now 140
+msg: 10:56:42.272{D5}
+{s   0}
+msg: 10:56:42.331{D4}
+{s  -5}
+Yaw delta: Compass bias was 140 now 139
+msg: 10:56:42.343{LT21.9686}
+msg: 10:56:42.344{LN7.2169}
+msg: 10:56:43.301{LA907}
+{lt  2.98}
+Yaw delta: Compass bias was 139 now 132
+hdg:   7, bias: 132
+Yaw delta: Compass bias was 132 now 137
+hdg: 355, bias: 137
+Yaw delta: Compass bias was 137 now 138
+hdg: 359, bias: 138
+Yaw delta: Compass bias was 138 now 139
+Yaw delta: Compass bias was 139 now 140
+Yaw delta: Compass bias was 140 now 141
+Yaw delta: Compass bias was 141 now 142
+Yaw delta: Compass bias was 142 now 143
+msg: 10:56:45.338{LT21.9431}
+msg: 10:56:45.349{LN7.2338}
+msg: 10:56:46.335{LA953}
+{lt  3.13}
+msg: 10:56:46.341{D5}
+{s   0}
+Yaw delta: Compass bias was 143 now 149
+hdg: 354, bias: 149
+Yaw delta: Compass bias was 149 now 167
+hdg: 342, bias: 167
+Yaw delta: Compass bias was 167 now 169
+hdg: 358, bias: 169
+Yaw delta: Compass bias was 169 now 170
+hdg: 359, bias: 170
+Yaw delta: Compass bias was 170 now 172
+hdg: 358, bias: 172
+Yaw delta: Compass bias was 172 now 173
+hdg: 359, bias: 173
+Yaw delta: Compass bias was 173 now 174
+msg: 10:56:46.618{D0}
+Odo:   100.2, speed:   80
+{v   0}
+Yaw delta: Compass bias was 174 now 175
+Yaw delta: Compass bias was 175 now 176
+msg: 10:56:48.366{LT21.9355}
+msg: 10:56:48.377{LN7.2382}
+msg: 10:56:49.373{LA969}
+{lt  3.18}
+Yaw delta: Compass bias was 176 now 175
+hdg:   1, bias: 175
+msg: 10:56:51.405{LT21.9308}
+msg: 10:56:51.415{LN7.2418}
+msg: 10:56:52.409{LA992}
+{lt  3.25}
+Yaw delta: Compass bias was 175 now 174
+Yaw delta: Compass bias was 174 now 173
+Yaw delta: Compass bias was 173 now 172
+Yaw delta: Compass bias was 172 now 171
+Yaw delta: Compass bias was 171 now 170
+Yaw delta: Compass bias was 170 now 169
+Yaw delta: Compass bias was 169 now 166
+hdg:   3, bias: 166
+Yaw delta: Compass bias was 166 now 165
+hdg:   1, bias: 165
+Yaw delta: Compass bias was 165 now 163
+hdg:   2, bias: 163
+Yaw delta: Compass bias was 163 now 161
+Yaw delta: Compass bias was 161 now 160
+hdg:   1, bias: 160
+Yaw delta: Compass bias was 160 now 158
+hdg:   2, bias: 158
+Yaw delta: Compass bias was 158 now 156
+Yaw delta: Compass bias was 156 now 155
+hdg:   1, bias: 155
+Yaw delta: Compass bias was 155 now 153
+hdg:   2, bias: 153
+Yaw delta: Compass bias was 153 now 152
+hdg:   1, bias: 152
+Yaw delta: Compass bias was 152 now 151
+Yaw delta: Compass bias was 151 now 150
+Yaw delta: Compass bias was 150 now 149
+Yaw delta: Compass bias was 149 now 148
+Yaw delta: Compass bias was 148 now 147
+Yaw delta: Compass bias was 147 now 146
+msg: 10:56:54.444{LT21.9290}
+msg: 10:56:54.454{LN7.2454}
+Yaw delta: Compass bias was 146 now 143
+hdg:   3, bias: 143
+msg: 10:56:55.446{LA1033}
+{lt  3.39}
+Yaw delta: Compass bias was 143 now 144
+hdg: 359, bias: 144
+Yaw delta: Compass bias was 144 now 145
+Yaw delta: Compass bias was 145 now 180
+hdg: 325, bias: 180
+Yaw delta: Compass bias was 180 now 184
+hdg: 356, bias: 184
+Yaw delta: Compass bias was 184 now 187
+hdg: 357, bias: 187
+Yaw delta: Compass bias was 187 now 190
+Yaw delta: Compass bias was 190 now 193
+Yaw delta: Compass bias was 193 now 195
+hdg: 358, bias: 195
+Yaw delta: Compass bias was 195 now 198
+hdg: 357, bias: 198
+Yaw delta: Compass bias was 198 now 200
+hdg: 358, bias: 200
+Yaw delta: Compass bias was 200 now 202
+Yaw delta: Compass bias was 202 now 204
+Yaw delta: Compass bias was 204 now 206
+Yaw delta: Compass bias was 206 now 207
+hdg: 359, bias: 207
+Yaw delta: Compass bias was 207 now 209
+hdg: 358, bias: 209
+Yaw delta: Compass bias was 209 now 210
+hdg: 359, bias: 210
+Yaw delta: Compass bias was 210 now 212
+hdg: 358, bias: 212
+Yaw delta: Compass bias was 212 now 214
+Yaw delta: Compass bias was 214 now 216
+Yaw delta: Compass bias was 216 now 218
+Yaw delta: Compass bias was 218 now 220
+Yaw delta: Compass bias was 220 now 223
+hdg: 357, bias: 223
+Yaw delta: Compass bias was 223 now 225
+hdg: 358, bias: 225
+Yaw delta: Compass bias was 225 now 227
+msg: 10:56:57.484{LT21.8948}
+msg: 10:56:57.495{LN7.2457}
+msg: 10:56:58.233{LA1038}
+{lt  3.41}
+Yaw delta: Compass bias was 227 now 234
+hdg: 353, bias: 234
+Yaw delta: Compass bias was 234 now 233
+hdg:   1, bias: 233
+Yaw delta: Compass bias was 233 now 232
+msg: 10:57:00.262{LT21.8808}
+msg: 10:57:00.273{LN7.2450}
+msg: 10:57:01.267{LA1029}
+{lt  3.38}
+Yaw delta: Compass bias was 232 now 231
+Yaw delta: Compass bias was 231 now 230
+msg: 10:57:03.297{LT21.8664}
+msg: 10:57:03.307{LN7.2428}
+msg: 10:57:04.300{LA965}
+{lt  3.17}
+Yaw delta: Compass bias was 230 now 229
+msg: 10:57:06.333{LT21.8588}
+msg: 10:57:06.344{LN7.2439}
+msg: 10:57:07.338{LA1009}
+{lt  3.31}
+msg: 10:57:09.369{LT21.8538}
+msg: 10:57:09.379{LN7.2414}
+Yaw delta: Compass bias was 229 now 228
+msg: 10:57:10.377{LA1012}
+{lt  3.32}
+Yaw delta: Compass bias was 228 now 229
+hdg: 359, bias: 229
+msg: 10:57:12.408{LT21.8531}
+msg: 10:57:12.419{LN7.2392}
+msg: 10:57:13.411{LA967}
+{lt  3.17}
+Voltage:  15.3
+Odo:   100.2, speed:    0
+odometer:   100.2

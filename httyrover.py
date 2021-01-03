@@ -19,6 +19,7 @@
 #201223 - use gps to adjusty IMU heading bias
 #201226 - work on waypoint homeing
 #201227 - if xtrk > 3, use filtered hdg to recompute bias
+#210103 - monitor rapid yaw, rebias if detected
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -542,6 +543,7 @@ def star_commands(schr):
 #        compass_bias = (149 - yaw - declination) % 360
         compass_bias = (149 - yaw) % 360
         logit("Compass bias %d" % compass_bias)
+        oldhdg = 159
         hdg = 149
         azimuth = hdg
         xstr = "{h%3d" % hdg
@@ -571,6 +573,7 @@ def star_commands(schr):
         compass_bias = (329 - yaw) % 360
         logit("Compass bias %d" % compass_bias)
         hdg = 329
+        oldhdg = 329
         azimuth = hdg
         xstr = "{h%3d" % hdg
         sendit(xstr)
@@ -751,9 +754,21 @@ try:
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     yaw = int(cbuff[2:msglen-1])
-#                     hdg = (yaw + declination + compass_bias)%360
                     hdg = (yaw + compass_bias)%360
-#                    cogBase = 0              #invalidate COG baseline
+                    
+                    if (oldhdg < 500):
+                        if (oldhdg < 90 and hdg >= 270):
+                            delhdg = (hdg - 360) - oldhdg
+                        elif (oldhdg >= 270 and hdg < 90):
+                            delhdg = hdg - (oldhdg - 360)
+                        else:
+                            delhdg = hdg - oldhdg
+                            
+                        oldbias = compass_bias
+                        if (abs(delhdg > 2)):
+                            compass_bias -= delhdg
+                        compass_bias = (int(fhdg) - yaw) % 360
+                        logit("Yaw delta: Compass bias was %d now %d" % (oldbias, compass_bias))
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -879,6 +894,7 @@ try:
                     if cogBase > 10:                                  # line long enough to compute heading
                         cogBaseRV = vsub(posAV, cogAV)
                         hdg = vcourse(cogBaseRV)
+                        oldhdg = hdg
                         vprint("COG base course", cogBaseRV)
                         oldbias = compass_bias
 #                         compass_bias = (hdg - yaw - declination) % 360
