@@ -67,9 +67,11 @@ resume_speed = speed
 reducedflag = False
 azimuth = 0                             # desired course
 epoch = time.time()
+starttime = epoch
 gpsEpoch = epoch
 oldEpoch = epoch
 hdg = 0                                 # true compass heading
+fhdg = 0                                # Kalman filtered heading
 yaw = 0                                 # latest IMU yaw (True north)reading
 travel = 0                              # odometer
 cogBase = 0
@@ -90,6 +92,7 @@ pathRV = [0.0, 0.0]                     # from present pos to wpt end
 posAV = [0.0, 0.0]                      # gps position
 startAV = [0.0, 0.0]                    # waypoint track start
 trackRV = [0.0, 0.0]                    # waypoint path from initial position to destination
+workAV = [0.0, 0.0]                     # Kalman filtered AV
 
 ilatsec = 0.0
 ilonsec = 0.0
@@ -169,7 +172,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # [22.599, 7.159, "EF east entry"],   #24
 # 
 # [20.804, 7.949, "ref corner - F"],  #25
-# [20.984, 7.713, "hose bifrom adafruit_servokit import ServoKitb - F"],    #26
+# [20.984, 7.713, "hose bib - F"],    #26
 # [21.491, 7.646, "rose bush - F"],   #27
 # [22.060, 7.459, "boat corner - F"], #28
 # [22.461, 8.176, "EF middle - F"],   #29
@@ -490,7 +493,7 @@ def simple_commands(schr):
                 new_waypoint(1)
                 route.insert(rtseg, 1)
             else:
-                azimuth += left_limit
+                azimuth += right_limit
                 logit("az set to %d" % azimuth)
         else:
             max_turn(right_limit, speed)
@@ -788,7 +791,7 @@ try:
                     logit("wpt: %2d raw hdg: %6.1f" % (wpt, hdg))
                     logit("raw speed: %5.2f" % v)
                     xEst = Kfilter.Kalman_step(epoch, estAV[0], estAV[1], phi, v)
-                    fhdg = (450 - math.degrees(xEst[2, 0])) % 360
+                    fhdg = int((450 - math.degrees(xEst[2, 0])) % 360)
                     logit("filtered EN pos: %7.2f/%7.2f" % (xEst[0, 0], xEst[1, 0]))
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.2f" %xEst[3, 0])
@@ -898,6 +901,8 @@ try:
 #                    compass_bias = (int(fhdg) - yaw - declination) % 360
                     compass_bias = (int(fhdg) - yaw) % 360
                     logit("XTrack: Compass bias was %d now %d" % (oldbias, compass_bias))
+                    
+                path.write("%9.2f,%7.2f,%7.2f,%7.2f,%7.2f,%4d,%4d,%3d,%3d\n" % (epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,fhdg))
 
                 #endif epoch timer ===================
             
@@ -931,7 +936,6 @@ try:
             oldsteer = steer
             logit(cstr)
 
-        path.write("%9.2f,%7.2f,%7.2f,%7.2f,%7.2f,%4d,%4d,%3d,%3d\n" % (epoch,posAV[0],posAV[1],xEst[0],xEst[1],speed,steer,hdg,fhdg))
         # endwhile main loop ========================
     #endtry ======================
 
