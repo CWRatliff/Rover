@@ -766,12 +766,11 @@ try:
                         else:
                             delhdg = hdg - oldhdg
                             
-                        oldbias = compass_bias
                         if (abs(delhdg > 2)):
-                            compass_bias -= delhdg
-                        hdg = (yaw + compass_bias)%360      #recompute
-
-                        logit("Yaw delta: Compass bias was %d now %d" % (oldbias, compass_bias))
+                            oldbias = compass_bias
+                            compass_bias = (compass_bias - delhdg) % 360
+                            hdg = (yaw + compass_bias)%360      #recompute
+                            logit("Yaw delta: Compass bias was %d now %d" % (oldbias, compass_bias))
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -921,7 +920,9 @@ try:
                     compass_bias = (int(fhdg) - yaw) % 360
                     logit("XTrack: Compass bias was %d now %d" % (oldbias, compass_bias))
                     
-                path.write("%9.2f,%7.2f,%7.2f,%7.2f,%7.2f,%4d,%4d,%3d,%3d\n" % (epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,fhdg))
+                tt = datetime.datetime.now()
+                ts = tt.strftime("%H:%M:%S.%f")[:-3]
+                path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,fhdg))
 
                 #endif epoch timer ===================
             
