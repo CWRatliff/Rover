@@ -506,6 +506,7 @@ def star_commands(schr):
     global azimuth
     global auto
     global hdg
+    global oldhdg
     global yaw
 #    global rteflag
     global wptflag
@@ -525,6 +526,7 @@ def star_commands(schr):
         logit("az set to %d" % azimuth)
     elif (schr == '2'):               #autopilot on
         auto = True
+        oldhdg = 159
         wptflag = False
         azimuth = hdg
         sendit("{aAuto}")
@@ -661,8 +663,8 @@ try:
                 cbuff = ""
                 continue
             xchr = cbuff[1]
-            if (xchr != 'O'):             #ignore compass input (too many)
-#            if (xchr != 'Z'):             #ignore compass input (too many)
+#            if (xchr != 'O'):             #ignore compass input (too many)
+            if (xchr != 'Z'):             #show compass input
                 tt = datetime.datetime.now()
 #                tt = time.localtime()
 #                ts = time.strftime("%H:%M:%S ", tt)
@@ -767,7 +769,8 @@ try:
                         oldbias = compass_bias
                         if (abs(delhdg > 2)):
                             compass_bias -= delhdg
-                        compass_bias = (int(fhdg) - yaw) % 360
+                        hdg = (yaw + compass_bias)%360      #recompute
+
                         logit("Yaw delta: Compass bias was %d now %d" % (oldbias, compass_bias))
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
