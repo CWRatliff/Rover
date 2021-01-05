@@ -758,19 +758,19 @@ try:
                     yaw = int(cbuff[2:msglen-1])
                     hdg = (yaw + compass_bias)%360
                     
-                    if (oldhdg < 500):
-                        if (oldhdg < 90 and hdg >= 270):
-                            delhdg = (hdg - 360) - oldhdg
-                        elif (oldhdg >= 270 and hdg < 90):
-                            delhdg = hdg - (oldhdg - 360)
-                        else:
-                            delhdg = hdg - oldhdg
-                            
-                        if (abs(delhdg > 2)):
-                            oldbias = compass_bias
-                            compass_bias = (compass_bias - delhdg) % 360
-                            hdg = (yaw + compass_bias)%360      #recompute
-                            logit("Yaw delta: Compass bias was %d now %d" % (oldbias, compass_bias))
+#                     if (oldhdg < 500):
+#                         if (oldhdg < 90 and hdg >= 270):
+#                             delhdg = (hdg - 360) - oldhdg
+#                         elif (oldhdg >= 270 and hdg < 90):
+#                             delhdg = hdg - (oldhdg - 360)
+#                         else:
+#                             delhdg = hdg - oldhdg
+#                             
+#                         if (abs(delhdg > 2)):
+#                             oldbias = compass_bias
+#                             compass_bias = (compass_bias - delhdg) % 360
+#                             hdg = (yaw + compass_bias)%360      #recompute
+#                             logit("Yaw delta: Compass bias was %d now %d" % (oldbias, compass_bias))
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -923,7 +923,7 @@ try:
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
                 path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % \
-                    (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,fhdg))
+                    (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,yaw))
 
                 #endif epoch timer ===================
             
