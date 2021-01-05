@@ -922,7 +922,8 @@ try:
                     
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
-                path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,fhdg))
+                path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % \
+                    (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,fhdg))
 
                 #endif epoch timer ===================
             
