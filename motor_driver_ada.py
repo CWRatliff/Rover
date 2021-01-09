@@ -18,10 +18,10 @@ from roboclaw import Roboclaw
 class motor_driver_ada:
 
     def __init__(self, log):
-        self.lfbias = 70        # experimentally determined for 'Spot 2'
+        self.lfbias = 68        # experimentally determined for 'Spot 2'
         self.lrbias = 62
         self.rrbias = 57
-        self.rfbias = 60
+        self.rfbias = 58
         self.left_limit = -36
         self.right_limit = 36
         self.d1 = 7.254         #C/L to corner wheels
