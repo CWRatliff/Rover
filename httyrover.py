@@ -20,6 +20,7 @@
 #201226 - work on waypoint homeing
 #201227 - if xtrk > 3, use filtered hdg to recompute bias
 #210103 - monitor rapid yaw, rebias if detected
+#210110 - revise bias resets (using BNO080 gyro, no-mag)
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -81,7 +82,7 @@ oldsteer = 500
 oldspeed = 500
 oldhdg = 500
 #declination = 12                        # Camarillo declination
-compass_bias = 0                        # rover allignment
+compass_bias = 98                        # for canopy table (using gyro/quat, no-mag
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
 aimRV = [0.0, 0.0]                      # aim point
@@ -900,9 +901,15 @@ try:
                         vprint("COG base course", cogBaseRV)
                         oldbias = compass_bias
 #                         compass_bias = (hdg - yaw - declination) % 360
-                        compass_bias = (hdg - yaw) % 360
-                        cstr = "{h%3d}" % hdg
-                        sendit(cstr)
+#                        compass_bias = (hdg - yaw) % 360
+                        new_bias = (hdg - yaw) % 360   #beware zero crossing
+                        if (new_bias > oldbias):
+                            compass_bias += 1
+                        elif (new_bias < oldbias):
+                            compass_bias -= 1
+                            
+#                         cstr = "{h%3d}" % hdg
+#                         sendit(cstr)
                         logit("cogBase: Compass bias was %d now %d" % (oldbias, compass_bias))
                         azimuth = hdg
                         cogBase = 0
@@ -914,11 +921,11 @@ try:
                 else:
                     cogBase = 0
                     
-                if (wptflag and xtrk > 3.0):               # if xtrack grows too much, use filtered heading
-                    oldbias = compass_bias
-#                    compass_bias = (int(fhdg) - yaw - declination) % 360
-                    compass_bias = (int(fhdg) - yaw) % 360
-                    logit("XTrack: Compass bias was %d now %d" % (oldbias, compass_bias))
+#                 if (wptflag and xtrk > 3.0):               # if xtrack grows too much, use filtered heading
+#                     oldbias = compass_bias
+# #                    compass_bias = (int(fhdg) - yaw - declination) % 360
+#                     compass_bias = (int(fhdg) - yaw) % 360
+#                     logit("XTrack: Compass bias was %d now %d" % (oldbias, compass_bias))
                     
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
