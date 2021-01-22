@@ -135,16 +135,19 @@ class App:
         rmax = Button(speed, text = "-")
         rmax.config(width = 2, height = 2, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=6,column=0)
+        
 
         # mode menu ===========================================================
         radio = Frame(master)
         rb1 = Radiobutton(radio, text="Standby", variable=self.mode, value = 0,anchor=W)
         rb1.config(width = 6, height = 2, font=(NONE,15))
         rb1.grid(row=0, column=0)
-        rb2 = Radiobutton(radio, text="Auto", variable=self.mode, value = 1,anchor=W,command=lambda:mode_set())
+        rb2 = Radiobutton(radio, text="Auto", variable=self.mode, value = 1, \
+            anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb2.config(width = 6, height = 2, font=(NONE,15))
         rb2.grid(row=1, column=0)
-        rb3 = Radiobutton(radio, text="Path", variable=self.mode, value = 2,anchor=W)
+        rb3 = Radiobutton(radio, text="Path", variable=self.mode, value = 2, \
+            anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb3.config(width = 6, height = 2, font=(NONE,15))
         rb3.grid(row=2, column=0)
         
@@ -163,7 +166,13 @@ class App:
         self.lb2flag = False
         self.piflag = False
 
-
+    def mode_set(self, mstr, val):
+        if (val == 1):
+            self.auto_turns(mstr)
+        if (val == 2):
+            self.paths(mstr)
+            
+    
     def paths(self, mstr):       
         list = Frame(mstr)
         list.place(x=650, y=20)
