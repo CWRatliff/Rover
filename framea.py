@@ -130,8 +130,6 @@ class App:
         speed.place(x=950, y=310)
         data.place(x=20,y=20)
         radio.place(x=320, y=20)
-#        auto.place(x=600, y=20)
-#        keypad.place(x=320,y=20)
         estop.place(x=20, y=480)
         
         self.ibuffer = ""
@@ -187,8 +185,12 @@ class App:
         lbox.grid(row=1, column=0)
         lscroll.config(width=25, command=lbox.yview)
         lscroll.grid(row=1, column=1, sticky=N+S)
-        ex = Button(lister, text="Execute", command=lister.destroy)
+        ex = Button(lister, text="Execute", command=self.lrevert)
         ex.grid(row = 2, column = 0)
+        
+    def lrevert(self):
+        lister.destroy()
+        self.mode.set(0)
         
     def auto_turns(self, mstr):
         # auto button array =================================================
@@ -216,9 +218,13 @@ class App:
         br180=Button(auto, text="180 >")
         br180.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         br180.grid(row=3,column=1)
-        bcan=Button(auto, text="Cancel", command=auto.destroy)
+        bcan=Button(auto, text="Cancel", command=self.arevert)
         bcan.config(width=4,height=2,font=(None,15),bg="yellow",fg="black")
         bcan.grid(row=4,column=0,columnspan=2)
+
+    def arevert(self):
+        auto.destroy()
+        self.mode.set(0)
         
 # keypad button actions
     def star(self):
@@ -235,6 +241,7 @@ class App:
     def zero(self):
         self.key = '0'
         self.xmit()
+        print("STOP")
     def one(self):
         self.key = '1'
         self.xmit()
