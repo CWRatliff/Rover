@@ -61,32 +61,6 @@ class App:
         Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.acc).grid(row=7,column=1)
         
-        # auto button array =================================================
-#         auto = Frame(master)
-#         bs=Button(auto, text="Start")
-#         bs.config(width=4,height=2,font=(None,15),bg="white",fg="black")
-#         bs.grid(row=0,column=0,columnspan=2)
-#         bl90=Button(auto, text="< 90")
-#         bl90.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
-#         bl90.grid(row=1,column=0)
-#         br90=Button(auto, text="90 >")
-#         br90.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
-#         br90.grid(row=1,column=1)
-#         blt=Button(auto, text="T 90")
-#         blt.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
-#         blt.grid(row=2,column=0)
-#         brt=Button(auto, text="90 T")
-#         brt.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
-#         brt.grid(row=2,column=1)
-#         bl180=Button(auto, text="< 180")
-#         bl180.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
-#         bl180.grid(row=3,column=0)
-#         br180=Button(auto, text="180 >")
-#         br180.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
-#         br180.grid(row=3,column=1)
-#         bcan=Button(auto, text="Cancel")
-#         bcan.config(width=4,height=2,font=(None,15),bg="yellow",fg="black")
-#         bcan.grid(row=4,column=0,columnspan=2)
 
         # STOP button ==================================================
         estop=Frame(master)
@@ -139,7 +113,8 @@ class App:
 
         # mode menu ===========================================================
         radio = Frame(master)
-        rb1 = Radiobutton(radio, text="Standby", variable=self.mode, value = 0,anchor=W)
+        rb1 = Radiobutton(radio, text="Standby", variable=self.mode, value = 0, \
+            anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb1.config(width = 6, height = 2, font=(NONE,15))
         rb1.grid(row=0, column=0)
         rb2 = Radiobutton(radio, text="Auto", variable=self.mode, value = 1, \
@@ -167,21 +142,40 @@ class App:
         self.piflag = False
 
     def mode_set(self, mstr, val):
+        if (val == 0):
+            try:
+                lister.destroy()
+            except:
+                print("val = 0, couldnt destroy lister")
+                pass
+            try:
+                auto.destroy()
+            except:
+                pass
         if (val == 1):
+            try:
+                lister.destroy()
+            except:
+                pass
             self.auto_turns(mstr)
         if (val == 2):
+            try:
+                auto.destroy()
+            except:
+                pass
             self.paths(mstr)
             
     
-    def paths(self, mstr):       
-        list = Frame(mstr)
-        list.place(x=650, y=20)
-        lab = Label(list, text="Select NAV path")
+    def paths(self, mstr):
+        global lister
+        lister = Frame(mstr)
+        lister.place(x=650, y=20)
+        lab = Label(lister, text="Select NAV path")
         lab.grid(row=0, column=0)
-        lscroll = Scrollbar(list, orient=VERTICAL)
-        lbox =Listbox(list, height=4, selectmode=SINGLE,font=(NONE,15),yscrollcommand=lscroll.set)
+        lscroll = Scrollbar(lister, orient=VERTICAL)
+        lbox =Listbox(lister, height=4, selectmode=SINGLE,font=(NONE,15),yscrollcommand=lscroll.set)
         lbox.insert(END, "R3 - E.F. drive")
-        lbox.insert(END, "R4 - shed row")
+        lbox.insert(END, "R4 - hut row")
         lbox.insert(END, "W13 - canopy")
         lbox.insert(END, "W14 - driveway center")
         lbox.insert(END, "W23 - trash cans")
@@ -193,11 +187,12 @@ class App:
         lbox.grid(row=1, column=0)
         lscroll.config(width=25, command=lbox.yview)
         lscroll.grid(row=1, column=1, sticky=N+S)
-        ex = Button(list, text="Execute", command=list.destroy)
+        ex = Button(lister, text="Execute", command=lister.destroy)
         ex.grid(row = 2, column = 0)
         
     def auto_turns(self, mstr):
         # auto button array =================================================
+        global auto
         auto = Frame(mstr)
         auto.place(x=600, y=20)
         bs=Button(auto, text="Start")
