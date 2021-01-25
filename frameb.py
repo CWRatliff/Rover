@@ -16,6 +16,8 @@ class App:
     
     def __init__(self, master):
         self.mode = IntVar()
+        self.ibuffer = ""
+        self.piflag = False
 
         # telemetry array ===========================================
         data = Frame(master)
@@ -103,9 +105,11 @@ class App:
         fmax = Button(speed, text = "+", command = lambda:self.dxmit('2'))
         fmax.config(width = 2, height = 2, font=(NONE,15), bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
+
         f0 = Button(speed, text = "0", command = lambda:self.dxmit('0'))
         f0.config(width = 2, height = 2, font=(NONE,15), bg="linen",fg="black",borderwidth=4)
         f0.grid(row=3,column=0)
+        
         rmax = Button(speed, text = "-", command = lambda:self.dxmit('8'))
         rmax.config(width = 2, height = 2, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=6,column=0)
@@ -117,34 +121,29 @@ class App:
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb1.config(width = 6, height = 2, font=(NONE,15))
         rb1.grid(row=0, column=0)
+        
         rb2 = Radiobutton(radio, text="Auto", variable=self.mode, value = 1, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb2.config(width = 6, height = 2, font=(NONE,15))
         rb2.grid(row=1, column=0)
+        
         rb3 = Radiobutton(radio, text="Path", variable=self.mode, value = 2, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb3.config(width = 6, height = 2, font=(NONE,15))
         rb3.grid(row=2, column=0)
         
-        steer.place(x=400,y=520)
-        speed.place(x=950, y=310)
+        steer.place(x=400,y=440)
+        speed.place(x=950, y=230)
         data.place(x=20,y=20)
         radio.place(x=320, y=20)
-        estop.place(x=20, y=480)
+        estop.place(x=20, y=400)
         
-        self.ibuffer = ""
-#         self.msg = ""
-#         self.exeflag = False
-#         self.lbflag = False
-#         self.lb2flag = False
-        self.piflag = False
-
+    # destroy old frames when changing mode via radiobuttons ====================
     def mode_set(self, mstr, val):
         if (val == 0):
             try:
                 lister.destroy()
             except:
-                print("val = 0, couldnt destroy lister")
                 pass
             try:
                 auto.destroy()
@@ -163,7 +162,7 @@ class App:
                 pass
             self.paths(mstr)
             
-    
+    # frame for wapoint/route selection =====================================================    
     def paths(self, mstr):
         global lister
         lister = Frame(mstr)
@@ -187,43 +186,52 @@ class App:
         lscroll.grid(row=1, column=1, sticky=N+S)
         ex = Button(lister, text="Execute", command=lambda:self.lrevert(lbox.get(ANCHOR)))
         ex.grid(row = 2, column = 0)
-        
+
+    #could call fxmit directly if no radiobutton action wanted
     def lrevert(self, pth):
         print(pth)
         self.fxmit(pth[1:3])
 #        lister.destroy()
 #        self.mode.set(0)
-        
+
+    # AUTO mode button array ==================================================
     def auto_turns(self, mstr):
-        # auto button array =================================================
         global auto
         auto = Frame(mstr)
         auto.place(x=600, y=20)
         bs=Button(auto, text="Start", command = lambda:self.exmit('2'))
         bs.config(width=4,height=2,font=(None,15),bg="white",fg="black")
         bs.grid(row=0,column=0,columnspan=2)
+        
         bl90=Button(auto, text="< 90", command = lambda:self.exmit('1'))
         bl90.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
         bl90.grid(row=1,column=0)
+        
         br90=Button(auto, text="90 >", command = lambda:self.exmit('3'))
         br90.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         br90.grid(row=1,column=1)
+        
         blt=Button(auto, text="T 90", command = lambda:self.exmit('4'))
         blt.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
         blt.grid(row=2,column=0)
+        
         brt=Button(auto, text="90 T", command = lambda:self.exmit('6'))
         brt.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         brt.grid(row=2,column=1)
+        
         bl180=Button(auto, text="< 180", command = lambda:self.exmit('7'))
         bl180.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
         bl180.grid(row=3,column=0)
+        
         br180=Button(auto, text="180 >", command = lambda:self.exmit('9'))
         br180.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         br180.grid(row=3,column=1)
+        
         bcan=Button(auto, text="Cancel", command=self.arevert)
         bcan.config(width=4,height=2,font=(None,15),bg="yellow",fg="black")
         bcan.grid(row=4,column=0,columnspan=2)
 
+    # cancel AUTO mode
     def arevert(self):
         auto.destroy()
         self.mode.set(0)
@@ -244,7 +252,7 @@ class App:
         ser.write(self.msg.encode('utf-8'))
         print(self.msg)
 
-#   Listen to serial port for status info from rover pi
+#   Listen to serial port for status info from rover pi ======================================
     def listen(self):
         while ser.in_waiting:
             inpt = ser.read(1).decode("utf-8")
@@ -281,6 +289,8 @@ class App:
                     lbuffer = self.ibuffer[2:]
                     if (xchar == 'a'):          # GPS accuracy
                         self.acc.set(lbuffer)
+                    if (xchar == 'n'):          # x-track error
+                        self.xte.set(lbuffer)
                         
                 elif (xchar == 's'):            # steering angle
                     self.steer.set(lbuffer)
@@ -300,6 +310,4 @@ app = App(root)
 root.geometry("1024x600+0+0")
 root.after(25, app.listen)
 
-
 root.mainloop()
-
