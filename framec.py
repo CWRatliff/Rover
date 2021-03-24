@@ -288,7 +288,7 @@ class App:
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
                     lbuffer = self.ibuffer[2:]
-                    if (xchar == 'a'):          # GPS accuracy
+                    if (xchar == 't'):          # GPS accuracy
                         self.acc.set(lbuffer)
                     if (xchar == 'n'):          # x-track error
                         self.xte.set(lbuffer)
