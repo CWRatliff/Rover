@@ -121,40 +121,40 @@ rtseg = 0
 route = [0]
 
 routes = [[0,0],                    #0
-[28, 27, 0],                        #1
-[28, 27, 26, 0],                    #2
-[28, 30, 29, 31, 27, 28, 0],        #3 - E.F. meander
-[14, 16, 22, 18, 22, 16, 14, 13, 0], #4 - to hut #4 and back
-[0]]
+    [28, 27, 0],                        #1
+    [28, 27, 26, 0],                    #2
+    [28, 30, 29, 31, 27, 28, 0],        #3 - E.F. meander
+    [14, 16, 22, 18, 22, 16, 14, 13, 0], #4 - to hut #4 and back
+    [0]]
           
 wptdist = 0.0
 
 #in U.S. Survey feet offsets from 34-14N -119-4W
 waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
-[ -787.36,  2298.03],     #10 
-[ -647.55,  2108.54],     #11 speed bump
-[ -619.57,  2091.62],     #12 T seam
-[ -599.97,  2236.32],     #13 workshop F 
-[ -578.94,  2247.67],     #14 driveway center F
-[ -498.02,  2110.77],     #15 gravel
-[ -471.80,  2053.82],     #16 fig tree fork F
-[ -532.36,  1963.03],     #17 stairs pivot
-[ -592.93,  1931.82],     #18 shed #3/#4 F
-[ -526.33,  1863.82],     #19 longe center
-[ -661.79,  1842.34],     #20 stall ctr
-[ -511.84,  2145.63],     #21 E dway start
-[ -548.45,  1951.78],     #22 hut row bend F
-[ -619.07,  2315.06],     #23 trash
-[ -599.72,  2290.03],     #24 EF east entry
-[ -665.89,  2108.14],     #25 ref corner - F
-[ -646.13,  2126.38],     #26 hose bib - F
-#[ -640.51,  2177.75],     #27 rose bush - F
-[ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
-[ -624.45,  2233.94],     #28 boat corner - F
-[ -684.91,  2276.04],     #29 EF middle - F
-[ -644.70,  2261.65],     #30 office gap
-[ -653.41,  2229.63],     #31 EF rose gap
-[   -0.00,     0.00]]
+    [ -787.36,  2298.03],     #10 
+    [ -647.55,  2108.54],     #11 speed bump
+    [ -619.57,  2091.62],     #12 T seam
+    [ -599.97,  2236.32],     #13 workshop F 
+    [ -578.94,  2247.67],     #14 driveway center F
+    [ -498.02,  2110.77],     #15 gravel
+    [ -471.80,  2053.82],     #16 fig tree fork F
+    [ -532.36,  1963.03],     #17 stairs pivot
+    [ -592.93,  1931.82],     #18 shed #3/#4 F
+    [ -526.33,  1863.82],     #19 longe center
+    [ -661.79,  1842.34],     #20 stall ctr
+    [ -511.84,  2145.63],     #21 E dway start
+    [ -548.45,  1951.78],     #22 hut row bend F
+    [ -619.07,  2315.06],     #23 trash
+    [ -599.72,  2290.03],     #24 EF east entry
+    [ -665.89,  2108.14],     #25 ref corner - F
+    [ -646.13,  2126.38],     #26 hose bib - F
+    # [ -640.51,  2177.75],     #27 rose bush - F
+    [ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
+    [ -624.85,  2235.41],     #28 boat corner - F 201230 - refounded
+    [ -684.91,  2276.04],     #29 EF middle - F
+    [ -644.70,  2261.65],     #30 office gap
+    [ -653.41,  2229.63],     #31 EF rose gap
+    [   -0.00,     0.00]]
 
 # waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # [22.678, 9.399],                    #10 open area near main gate
@@ -193,13 +193,13 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
 # 31 - 6238634.53E, 1911238.26N
 
 obsarray = [[-578.94,  2247.67],     # virtual tree = wp #14
-[-644.80, 2268.85],                  # virtual tree between #30- #29
-[-660.99, 2221.52],
-[-646.81, 2240.18],
-[-646.63, 2255.84],
-[-634.29, 2266.28],
-[-622.74, 2270.73],
-[2.,0.], [2.,5.]]
+    [-644.80, 2268.85],                  # virtual tree between #30- #29
+    [-660.99, 2221.52],
+    [-646.81, 2240.18],
+    [-646.63, 2255.84],
+    [-634.29, 2266.28],
+    [-622.74, 2270.73],
+    [2.,0.], [2.,5.]]
 ndx = 0
 
 version = "Rover 1.0 201221\n"
@@ -208,7 +208,7 @@ tme = time.localtime(time.time())
 print (tme)
 
 log = open("logfile.txt", 'a')
-log.write("========================================================================================")
+log.write("====================================================================")
 log.write(version)
 path = open("path.txt", 'a')
 #log.write(tme)
@@ -314,7 +314,7 @@ def new_waypoint(nwpt):
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
     vprint("track", trackRV)
-    azimuth = vcourse(trackRV);
+    azimuth = vcourse(trackRV)
     logit("new wpt az set to %d" % azimuth)
     wptdist = vmag(trackRV)
     auto = True
@@ -352,7 +352,7 @@ def obstructions():
                     waypts[1] = obsAV
                     startAV = posAV
                     new_waypoint(1)
-                    route.insert(rtseg, 1);
+                    route.insert(rtseg, 1)
     return
 
 def db_search(x0):
@@ -612,7 +612,10 @@ def diag_commands(schr):
     if (schr == '1'):
         exit()
     if (schr == '2'):
-        log.seek(0)            # reset logfile
+        dtt = datetime.datetime.now()
+        dts = dtt.strftime("%H:%M:%S.%f")[:-3]
+        path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % \
+            (dts,0 ,posAV[0], posAV[1], workAV[0], workAV[1], speed, steer, hdg, yaw))
     if (schr == '3'):
         logit("IMU non-op")
         exit()
@@ -902,10 +905,10 @@ try:
                         oldbias = compass_bias
 #                         compass_bias = (hdg - yaw - declination) % 360
 #                        compass_bias = (hdg - yaw) % 360
-                        new_bias = (hdg - yaw) % 360   #beware zero crossing
-                        if (new_bias > oldbias):
+                        newbias = (hdg - yaw) % 360   #beware zero crossing
+                        if (newbias > oldbias):
                             compass_bias += 1
-                        elif (new_bias < oldbias):
+                        elif (newbias < oldbias):
                             compass_bias -= 1
                             
 #                         cstr = "{h%3d}" % hdg

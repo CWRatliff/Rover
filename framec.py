@@ -66,7 +66,8 @@ class App:
 
         # STOP button ==================================================
         estop=Frame(master)
-        sb = Button(estop, text="STOP", command= lambda:self.dxmit('0'))
+#        sb = Button(estop, text="STOP", command= lambda:self.dxmit('0'))
+        sb = Button(estop, text="MARK", command= lambda:self.txmit('2'))
         sb.config(width=3,height=2,font=(None,25),bg="red",fg="white",borderwidth=4)
         sb.grid(row=0,column=0)
 
@@ -253,6 +254,11 @@ class App:
         ser.write(self.msg.encode('utf-8'))
         print(self.msg)
 
+    def txmit(self, key):
+        self.msg = '{T' + key + '}'
+        ser.write(self.msg.encode('utf-8'))
+        print(self.msg)
+
 #   Listen to serial port for status info from rover pi ======================================
     def listen(self):
         while ser.in_waiting:
@@ -288,7 +294,7 @@ class App:
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
                     lbuffer = self.ibuffer[2:]
-                    if (xchar == 't'):          # GPS accuracy
+                    if (xchar == 'a'):          # GPS accuracy
                         self.acc.set(lbuffer)
                     if (xchar == 'n'):          # x-track error
                         self.xte.set(lbuffer)
