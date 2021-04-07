@@ -1,15 +1,12 @@
 /*
   Send UBX binary commands to enable RTCM sentences on Ublox ZED-F9P module
-  By: Nathan Seidle
-  SparkFun Electronics
-  Date: September 7th, 2018
-  License: MIT. See license file for more information but you can
-  basically do whatever you want with this code.
 
   This example does all steps to configure and enable a ZED-F9P as a base station:
     Emulate survey-in using NTRIP for corrections
     Enable six RTCM messages
     Begin outputting RTCM bytes
+
+    Multi-mode via rotary switch
 */
 #define LSMP    10    // arbitrary sample size
 #include <Wire.h>     //Needed for I2C to GPS
@@ -17,14 +14,14 @@
 SFE_UBLOX_GPS myGPS;
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(10, 11, 12, 4, 5, 6, 7);
-//Adafruit_LiquidCrystal lcd(0);
-int backLight = 13;
+
 const int mode1 = 52;
 const int mode2 = 50;
 const int mode3 = 48;
 const int mode4 = 46;
 const int mode5 = 44;
 int mode = 0;
+// mode 2 - fixed preset
 // mode 3 - xmit RTCM when FIXED
 // mode 4 - xmit RTCM if delta sum < 5,5
 // mode 5 - xmit RTCM if delta sum < 10,10
@@ -33,8 +30,11 @@ char  str[50];
 int   bcount = 0;		  // RTCM line counter
 int   RTCMcount = 0;
 int   carrier;        // fix status, 0=no, 1=float, 2=fix
-long  fixlat = 342394683;
-long  fixlon = -1190687653;
+
+// horse drain west (center)
+long  fixlat = 342383960;     // deg * 1e-7   
+long  fixlon = -1190689590;
+long  fixalt = 9130;          // alt in cm
 //==========================================================
 void setup() {
   long  lat;
@@ -49,10 +49,11 @@ void setup() {
   int   dlng;
   int   diff;
 
-  byte  payload[1000];    // TMODE3 packet size
+  byte  payload[100];    // TMODE3 packet size
   ubxPacket pack;
   boolean response = false;
 
+// get rotary switch setting
   pinMode(mode1, INPUT);
   pinMode(mode2, INPUT);
   pinMode(mode3, INPUT);
@@ -76,26 +77,24 @@ void setup() {
   else if (digitalRead(mode5) == LOW)
     mode = 5;
 
-  Serial.print("mode: ");
-  Serial.println(mode);
-
   pack.payload = &payload[0];
   Serial.begin(115200);
-//  Serial1.begin(38400);          // xbee
-  Serial1.begin(19200);          // xbee
+  Serial1.begin(38400);          // xbee
+//  Serial1.begin(19200);          // xbee
   //  while (!Serial); //Wait for user to open terminal
-  Serial.println("NTRIP base station 200816");
+  Serial.println("NTRIP multi-base station 210407a");
+  Serial.print("mode: ");
+  Serial.println(mode);
 
   Wire.begin();
 
   //lcd.begin(Wire);
-  pinMode(backLight, OUTPUT);
   //  lcd.begin(16, 4);
   lcd.begin(20, 4);
   lcd.clear();
   lcd.setCursor(0, 3);
   lcd.print("MultiBase ");
-  lcd.print("200917");
+  lcd.print("210407");
 
   delay(500);
 
@@ -137,10 +136,18 @@ void setup() {
     alat[i] = lat;
     alng[i] = lng;
   }
-  Serial.println("type x to accept fix, or f for prefixed");
+  Serial.println("type x to accept fix");
   while (1) {
-    lat = myGPS.getLatitude();
+    if (mode == 2) {          // use built in lat/lon/alt
+      lat = fixlat;
+      lng = fixlon;
+      alt = fixalt;
+      Serial.println("Using built-in location");
+      break;
+    }
+    lat = myGPS.getLatitude();    // l/l in deg e-7
     lng = myGPS.getLongitude();
+    alt = myGPS.getAltitude() / 10;  // alt in cm's
 
     dlat = 0;
     dlng = 0;
@@ -167,6 +174,7 @@ void setup() {
       if (incomming == 'f') {
         lat = fixlat;
         lng = fixlon;
+        alt = fixalt;
         Serial.println("Canned location set as fixed");
         break;
       }
@@ -188,14 +196,13 @@ void setup() {
     lcd.print(dlng);
     lcd.print("    ");
     delay(1000);
-  }
+    }       // ******************** end while lat/lon sampling *******************
   lcd.setCursor(0, 1);
   lcd.print("                      ");
   lcd.setCursor(0, 0);
   lcd.print("Precise fix"           );
 
-  if (mode != 3) {
-    alt = myGPS.getAltitude() / 10;  // alt in cm's
+  if (mode > 1) {
   
     // N.B. beware deprication to VALSET
     pack.cls = UBX_CLASS_CFG;
@@ -220,13 +227,16 @@ void setup() {
     payload[15] = alt >> 24;
     pack.payload = &payload[0];
   
-  //  myGPS.enableDebugging();
+    myGPS.enableDebugging();
     response = myGPS.sendCommand(&pack);
     myGPS.disableDebugging();
   }
-  if (response == true)
+  if (response == true) {
     Serial.println(F("Survey valid!"));
-  Serial.println("TMODE3 set");
+    Serial.println("TMODE3 set");
+    }
+  else
+    Serial.println("TMODE3 failed");
   //   while (1);
 
 
@@ -272,12 +282,13 @@ void loop() {
 void SFE_UBLOX_GPS::processRTCM(uint8_t incoming)
 {
   //Let's just pretty-print the HEX values for now
-  /*  if (bcount % 16 == 0) Serial.println();
+  /*
+    if (bcount % 16 == 0) Serial.println();
     Serial.print(" ");
     if (incoming < 0x10) Serial.print("0");
     Serial.print(incoming, HEX);
     bcount++;
-  */
+    */
   Serial1.write(incoming);      // send RTCM byte to rover
 
   if (incoming == 0xd3) {
