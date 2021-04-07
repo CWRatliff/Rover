@@ -616,6 +616,7 @@ def diag_commands(schr):
         dts = dtt.strftime("%H:%M:%S.%f")[:-3]
         path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % \
             (dts,0 ,posAV[0], posAV[1], workAV[0], workAV[1], speed, steer, hdg, yaw))
+        path.flush()
     if (schr == '3'):
         logit("IMU non-op")
         exit()
@@ -934,6 +935,7 @@ try:
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
                 path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % \
                     (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,yaw))
+                path.flush()
 
                 #endif epoch timer ===================
             
