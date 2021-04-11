@@ -133,6 +133,12 @@ class App:
         rb3.config(width = 6, height = 2, font=(NONE,20))
         rb3.grid(row=2, column=0)
         
+        rb4 = Radiobutton(radio, text="Misc", variable=self.mode, value = 3, \
+            anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
+        rb4.config(width = 6, height = 2, font=(NONE,20))
+        rb4.grid(row=3, column=0)
+        
+        
         steer.place(x=300,y=440)
         speed.place(x=930, y=100)
         data.place(x=20,y=20)
@@ -150,9 +156,17 @@ class App:
                 auto.destroy()
             except:
                 pass
+            try:
+                miscer.destroy()
+            except:
+                pass
         if (val == 1):
             try:
                 lister.destroy()
+            except:
+                pass
+            try:
+                miscer.destroy()
             except:
                 pass
             self.auto_turns(mstr)
@@ -161,8 +175,22 @@ class App:
                 auto.destroy()
             except:
                 pass
+            try:
+                miscer.destroy()
+            except:
+                pass
             self.paths(mstr)
-            
+        if (val == 3):
+            try:
+                lister.destroy()
+            except:
+                pass
+            try:
+                auto.destroy()
+            except:
+                pass
+            self.misc(mstr)
+           
     # frame for wapoint/route selection =====================================================    
     def paths(self, mstr):
         global lister
@@ -239,6 +267,31 @@ class App:
         self.mode.set(0)
         self.exmit('0')
             
+    # misc commands
+    def misc(self, mstr):
+        global miscer
+        miscer = Frame(mstr)
+        miscer.place(x=600, y=20)
+        msb1=Button(miscer, text="Diag", command=lambda:self.txmit('0'))
+        msb1.config(width=4,height=2,font=(None,15),bg="white",fg="black")
+        msb1.grid(row=0,column=0)
+        
+        msb2=Button(miscer, text="Mark", command=lambda:self.txmit('2'))
+        msb2.config(width=4,height=2,font=(None,15),bg="white",fg="black")
+        msb2.grid(row=2,column=0)
+        
+        msb3=Button(miscer, text="Pic", command=lambda:self.txmit('3'))
+        msb3.config(width=4,height=2,font=(None,15),bg="white",fg="black")
+        msb3.grid(row=3,column=0)
+
+        msbs=Button(miscer)
+        msbs.config(width=4,height=2,font=(None,15),bg="grey85",fg="grey85")
+        msbs.grid(row=4,column=0)
+
+        msb4=Button(miscer, text="Stop", command=lambda:self.txmit('1'))
+        msb4.config(width=6,height=4,font=(None,15),bg="red",fg="black")
+        msb4.grid(row=6,column=0)
+
     def dxmit(self, key):
         self.msg = '{D' + key + '}'
         ser.write(self.msg.encode('utf-8'))
@@ -294,7 +347,7 @@ class App:
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
                     lbuffer = self.ibuffer[2:]
-                    if (xchar == 'a'):          # GPS accuracy
+                    if (xchar == 't'):          # GPS accuracy
                         self.acc.set(lbuffer)
                     if (xchar == 'n'):          # x-track error
                         self.xte.set(lbuffer)
