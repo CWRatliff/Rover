@@ -105,8 +105,9 @@ lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
 segstart = time.time()                  # speed segment start (seconds)
 #spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
-spdfactor = .0122                       # for 43 RPM
+#spdfactor = .0122                       # for 43 RPM
 #spdfactor = .017                        # for 60 RPM
+spdfactor = .022                        # for 84 RPM
 
 left = False
 left_limit = -36
@@ -129,7 +130,7 @@ routes = [[0,0],                    #0
           
 wptdist = 0.0
 
-#in U.S. Survey feet offsets from 34-14N -119-4W
+# (x, y) ((East, North)) in U.S. Survey feet offsets from 34-14N -119-4W
 waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
     [ -787.36,  2298.03],     #10 
     [ -647.55,  2108.54],     #11 speed bump
@@ -202,7 +203,7 @@ obsarray = [[-578.94,  2247.67],     # virtual tree = wp #14
     [2.,0.], [2.,5.]]
 ndx = 0
 
-version = "Rover 1.0 201221\n"
+version = "Rover 1.0 210409\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -614,8 +615,8 @@ def diag_commands(schr):
     if (schr == '2'):
         dtt = datetime.datetime.now()
         dts = dtt.strftime("%H:%M:%S.%f")[:-3]
-        path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % \
-            (dts,0 ,posAV[0], posAV[1], workAV[0], workAV[1], speed, steer, hdg, yaw))
+        path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
+            (dts,0 ,posAV[0], posAV[1], workAV[0], workAV[1], speed, steer, hdg, accgps))
         path.flush()
     if (schr == '3'):
         logit("IMU non-op")
@@ -933,8 +934,8 @@ try:
                     
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
-                path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%4d\n" % \
-                    (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,yaw))
+                path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
+                    (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,accgps))
                 path.flush()
 
                 #endif epoch timer ===================
