@@ -64,7 +64,7 @@ import cEKF
 
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
-approach_speed = 75                     # after waypoint slowdown
+approach_factor = .75                     # after waypoint slowdown
 resume_speed = speed
 reducedflag = False
 azimuth = 0                             # desired course
@@ -107,7 +107,7 @@ segstart = time.time()                  # speed segment start (seconds)
 #spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
 #spdfactor = .0122                       # for 43 RPM
 #spdfactor = .017                        # for 60 RPM
-spdfactor = .022                        # for 84 RPM
+spdfactor = .025                        # for 84 RPM
 
 left = False
 left_limit = -36
@@ -871,7 +871,7 @@ try:
                         if (not reducedflag):
                             resume_speed = speed
                             odometer(speed)
-                            speed = approach_speed
+                            speed = approach_factor * speed
                             reducedflag = True
                         
                     #closing on waypoint
