@@ -857,17 +857,17 @@ try:
                     sendit(cstr)
                     logit(cstr)
 
-                    if (xtrk < 1000):
-                        cstr = "{ln%5.1f} " % xtrk   #send to controller
+                    if (xtrk < 100.0):
+                        cstr = "{ln%5.2f} " % xtrk   #send to controller
                         sendit(cstr)
                         logit(cstr)
  
-                    if (accgps < 1000):
+                    if (accgps < 100.0):
                         cstr = "{lt%5.1f} " % accgps    #send to controller
                         sendit(cstr)
                         logit(cstr)
 
-                    if (wptflag and dtg < 8):
+                    if (wptflag and dtg < 8.0):
                         if (not reducedflag):
                             resume_speed = speed
                             odometer(speed)
@@ -875,8 +875,9 @@ try:
                             reducedflag = True
                         
                     #closing on waypoint
-                    if (dtg < max(2.0, accgps) or vdot(pathRV, trackRV) <= 0):
-                        logit("close to waypoint")
+#                    if (dtg < max(2.0, accgps) or vdot(pathRV, trackRV) <= 0):
+                    if (dtg < 2.0 or vdot(pathRV, trackRV) <= 0):
+                       logit("close to waypoint")
 #                        if rteflag:
                         rtseg += 1
                         wpt = route[rtseg]

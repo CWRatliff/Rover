@@ -160,6 +160,7 @@ class App:
                 miscer.destroy()
             except:
                 pass
+            
         if (val == 1):
             try:
                 lister.destroy()
@@ -170,6 +171,7 @@ class App:
             except:
                 pass
             self.auto_turns(mstr)
+            
         if (val == 2):
             try:
                 auto.destroy()
@@ -216,7 +218,7 @@ class App:
         ex = Button(lister, text="Execute", command=lambda:self.lrevert(lbox.get(ANCHOR)))
         ex.config(width=6, height=3, font=(None,15), bg="green2")
         ex.grid(row = 2, column = 0)
-        quit = Button(lister, text="Stop", command=lambda:self.fxmit('0'))
+        quit = Button(lister, text="Cancel", command=lambda:self.fxmit('0'))
         quit.config(width=6, height=3, font=(None,15), bg="red",fg="black")
         quit.grid(row=4, column=0)
 
