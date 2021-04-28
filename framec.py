@@ -29,12 +29,12 @@ class App:
         hdg.grid(row=2,column=0)
         ste=Label(data,text="STR:", font=(None,15))
         ste.grid(row=3,column=0)
-        dtg=Label(data,text="DTG:", font=(None,15))
-        dtg.grid(row=4,column=0)
-        ctg=Label(data,text="CTG:", font=(None,15))
-        ctg.grid(row=5,column=0)
-        xte=Label(data,text="XTE:", font=(None,15))
-        xte.grid(row=6,column=0)
+        dtgl=Label(data,text="DTG:", font=(None,15))
+        dtgl.grid(row=4,column=0)
+        ctgl=Label(data,text="CTG:", font=(None,15))
+        ctgl.grid(row=5,column=0)
+        xtel=Label(data,text="XTE:", font=(None,15))
+        xtel.grid(row=6,column=0)
         lat=Label(data,text="ACC:", font=(None,15))
         lat.grid(row=7,column=0)
 
@@ -271,7 +271,7 @@ class App:
         auto.destroy()
         self.mode.set(0)
         self.exmit('0')
-            
+           
     # misc commands
     def misc(self, mstr):
         global miscer
@@ -333,7 +333,6 @@ class App:
         if self.piflag:
             if (len(self.ibuffer) >= 3):
                 
-                print(self.ibuffer)
                 xchar = self.ibuffer[0]
                 lbuffer = self.ibuffer[1:]
                 
@@ -351,7 +350,7 @@ class App:
                         
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
-                    lbuffer = self.ibuffer[2:]
+                    lbuffer = lbuffer[1:]
                     if (xchar == 't'):          # GPS accuracy
                         self.acc.set(lbuffer)
                     if (xchar == 'n'):          # x-track error

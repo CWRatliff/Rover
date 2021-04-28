@@ -642,6 +642,7 @@ sendit("{aStby}")
 logit("Standby")
 sendit("{d----}")
 sendit("{c----}")
+sendit("{ln----}")
 cbuff = ""
 
 try:
@@ -863,7 +864,7 @@ try:
                         logit(cstr)
  
                     if (accgps < 100.0):
-                        cstr = "{lt%5.1f} " % accgps    #send to controller
+                        cstr = "{lt%5.2f} " % accgps    #send to controller
                         sendit(cstr)
                         logit(cstr)
 
@@ -877,7 +878,7 @@ try:
                     #closing on waypoint
 #                    if (dtg < max(2.0, accgps) or vdot(pathRV, trackRV) <= 0):
                     if (dtg < 2.0 or vdot(pathRV, trackRV) <= 0):
-                       logit("close to waypoint")
+                        logit("close to waypoint")
 #                        if rteflag:
                         rtseg += 1
                         wpt = route[rtseg]
