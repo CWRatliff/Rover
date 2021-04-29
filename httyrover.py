@@ -847,7 +847,7 @@ try:
                     vprint("aiming vector", aimRV)
                     logit("Kalman az set to %d" % azimuth)
 
-                    if (dtg < 100):
+                    if (dtg < 1000):
                         cstr = "{d%5.1f} " % dtg
                         sendit(cstr)
                         logit(cstr)
@@ -872,7 +872,7 @@ try:
                         if (not reducedflag):
                             resume_speed = speed
                             odometer(speed)
-                            speed = approach_factor * speed
+                            speed = int(approach_factor * speed)
                             reducedflag = True
                         
                     #closing on waypoint
@@ -885,6 +885,9 @@ try:
                         if (wpt == 0):
                             sendit("{aStby}")
                             logit("Standby")
+                            sendit("{d----}")
+                            sendit("{c----}")
+                            sendit("{ln----}")
                             wptflg = False
 #                            rteflag = False
                             odometer(speed)
