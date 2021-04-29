@@ -18,17 +18,17 @@ from roboclaw import Roboclaw
 class motor_driver_ada:
 
     def __init__(self, log):
-        self.lfbias = 68        # experimentally determined for 'Spot 2'
-        self.lrbias = 62
-        self.rrbias = 57
-        self.rfbias = 58
+        self.lfbias = 48        # experimentally determined for 'Spot 2'
+        self.lrbias = 43
+        self.rrbias = 49
+        self.rfbias = 40
         self.left_limit = -36
         self.right_limit = 36
         self.d1 = 7.254         #C/L to corner wheels
         self.d2 = 10.5          #mid axle to fwd axle
         self.d3 = 10.5          #mid axle to rear axle
         self.d4 = 10.073        #C/L to mid wheels
-        self.speedfactor = 80   # 8000 counts at 100%
+        self.speedfactor = 35   # 8000 counts at 100%
         self.rr_motor = kit.servo[0]
         self.rf_motor = kit.servo[1]
         self.lf_motor = kit.servo[2]
