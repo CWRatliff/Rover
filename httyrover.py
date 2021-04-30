@@ -125,7 +125,7 @@ routes = [[0,0],                    #0
     [28, 27, 0],                        #1
     [28, 27, 26, 0],                    #2
     [28, 30, 29, 31, 27, 28, 0],        #3 - E.F. meander
-    [14, 16, 22, 18, 22, 16, 14, 13, 0], #4 - to hut #4 and back
+    [14, 15, 16, 22, 18, 22, 16, 15, 14, 13, 0], #4 - to hut #4 and back
     [0]]
           
 wptdist = 0.0
@@ -137,7 +137,7 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
     [ -619.57,  2091.62],     #12 T seam
     [ -599.97,  2236.32],     #13 workshop F 
     [ -578.94,  2247.67],     #14 driveway center F
-    [ -498.02,  2110.77],     #15 gravel
+    [ -490.20,  2097.75],     #15 gravel rev 210430
     [ -471.80,  2053.82],     #16 fig tree fork F
     [ -532.36,  1963.03],     #17 stairs pivot
     [ -592.93,  1931.82],     #18 shed #3/#4 F
@@ -903,7 +903,7 @@ try:
                         #endif dtg ===================
                     #endif wptflag ===================
                 
-                if (steer >= -1 and steer <= 1 and speed > 70):
+                if (steer >= -1 and steer <= 1 and speed > 50):
                     if cogBase > 10:                                  # line long enough to compute heading
                         cogBaseRV = vsub(posAV, cogAV)
                         hdg = vcourse(cogBaseRV)
