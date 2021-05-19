@@ -5,7 +5,7 @@ import serial
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(12, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 ser = serial.Serial(port='/dev/ttyS0',
@@ -339,7 +339,7 @@ class App:
         else:
             green = False
             
-        if (GPIO.input(12) == False):
+        if (GPIO.input(5) == False):
             if (black == False):
                 self.dxmit('5')
                 black = True
