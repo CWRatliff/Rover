@@ -4,9 +4,9 @@ from tkinter import *
 import serial
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP) # green
+GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP) # black
+GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP) # red
 
 ser = serial.Serial(port='/dev/ttyS0',
     baudrate=9600,
