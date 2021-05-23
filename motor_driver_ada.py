@@ -19,7 +19,7 @@ class motor_driver_ada:
 
     def __init__(self, log):
         self.lfbias = 48        # experimentally determined for 'Spot 2'
-        self.lrbias = 43
+        self.lrbias = 44
         self.rrbias = 49
         self.rfbias = 40
         self.left_limit = -36
