@@ -160,64 +160,34 @@ class App:
         
     # destroy old frames when changing mode via radiobuttons ====================
     def mode_set(self, mstr, val):
-        if (val == 0):
-            try:
-                lister.destroy()
-            except:
-                pass
-            try:
-                auto.destroy()
-            except:
-                pass
-            try:
-                pantilt.destroy()
-            except:
-                pass
-            try:
-                miscer.destroy()
-            except:
-                pass
+
+        try:
+            lister.destroy()
+        except:
+            pass
+        try:
+            auto.destroy()
+        except:
+            pass
+        try:
+            pntlt.destroy()
+        except:
+            pass
+        try:
+            miscer.destroy()
+        except:
+            pass
             
         if (val == 1):
-            try:
-                lister.destroy()
-            except:
-                pass
-            try:
-                miscer.destroy()
-            except:
-                pass
             self.auto_turns(mstr)
             
         if (val == 2):
-            try:
-                auto.destroy()
-            except:
-                pass
-            try:
-                miscer.destroy()
-            except:
-                pass
             self.paths(mstr)
+            
         if (val == 3):
-            try:
-                lister.destroy()
-            except:
-                pass
-            try:
-                auto.destroy()
-            except:
-                pass
             self.pantilt(mstr)
+            
         if (val == 4):
-            try:
-                lister.destroy()
-            except:
-                pass
-            try:
-                auto.destroy()
-            except:
-                pass
             self.misc(mstr)
            
     # frame for wapoint/route selection =====================================================    
@@ -245,16 +215,15 @@ class App:
         ex = Button(lister, text="Execute", command=lambda:self.lrevert(lbox.get(ANCHOR)))
         ex.config(width=6, height=3, font=(None,15), bg="green2")
         ex.grid(row = 2, column = 0)
-        quit = Button(lister, text="Cancel", command=lambda:self.fxmit('0'))
+        quit = Button(lister, text="Cancel", command=lambda:self.lrevert('000'))
         quit.config(width=6, height=3, font=(None,15), bg="red",fg="black")
         quit.grid(row=4, column=0)
 
     #could call fxmit directly if no radiobutton action wanted
     def lrevert(self, pth):
-        print(pth)
         self.fxmit(pth[1:3])
-#        lister.destroy()
-#        self.mode.set(0)
+        lister.destroy()
+        self.mode.set(0)
 
     # AUTO mode button array ==================================================
     def auto_turns(self, mstr):
@@ -301,33 +270,37 @@ class App:
            
     # AUTO mode button array ==================================================
     def pantilt(self, mstr):
-        global auto
+        global pntlt
         pntlt = Frame(mstr)
         pntlt.place(x=600, y=20)
-        bup=Button(pntlt, text="Tilt Up", command = lambda:self.exmit('U'))
+        bup=Button(pntlt, text="tilt Up", command = lambda:self.dxmit('U'))
         bup.config(width=5,height=2,font=(None,15),bg="cyan",fg="black")
         bup.grid(row=0,column=0,columnspan=3)
         
-        bleft=Button(pntlt, text="pan left", command = lambda:self.exmit('L'))
+        bleft=Button(pntlt, text="pan left", command = lambda:self.dxmit('L'))
         bleft.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
         bleft.grid(row=1,column=0)
         
-        bctr=Button(pntlt, text="center", command = lambda:self.exmit('C'))
+        bctr=Button(pntlt, text="center", command = lambda:self.dxmit('C'))
         bctr.config(width=5,height=2,font=(None,15),bg="white",fg="black")
         bctr.grid(row=1,column=1)
         
-        brght=Button(pntlt, text="pan right", command = lambda:self.exmit('R'))
+        brght=Button(pntlt, text="pan right", command = lambda:self.dxmit('R'))
         brght.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
         brght.grid(row=1,column=2)
         
-        bdwn=Button(pntlt, text="tilt down", command = lambda:self.exmit('D'))
+        bdwn=Button(pntlt, text="tilt down", command = lambda:self.dxmit('D'))
         bdwn.config(width=5,height=2,font=(None,15),bg="sandy brown",fg="black")
         bdwn.grid(row=2,column=0,columnspan=3)
         
-        bcan=Button(pntlt, text="Cancel", command=self.mode.set(0))
+        bcan=Button(pntlt, text="Cancel", command=self.ptquit)
         bcan.config(width=5,height=2,font=(None,15),bg="yellow",fg="black")
         bcan.grid(row=4,column=0,columnspan=3)
 
+    def ptquit(self):
+        pntlt.destroy()
+        self.mode.set(0)
+        
     # misc commands
     def misc(self, mstr):
         global miscer
