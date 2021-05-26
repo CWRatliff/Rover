@@ -22,7 +22,6 @@ class motor_driver_ada:
         self.lrbias = 44
         self.rrbias = 49
         self.rfbias = 40
-        self.pan_bias = 83
         self.left_limit = -36
         self.right_limit = 36
         self.d1 = 7.254         #C/L to corner wheels
@@ -34,10 +33,7 @@ class motor_driver_ada:
         self.rf_motor = kit.servo[1]
         self.lf_motor = kit.servo[2]
         self.lr_motor = kit.servo[3]
-        self.pan = kit.servo[15]
-        self.tilt = kit.servo[14]
-
-#pan_bias = 0        self.rr_motor.actuation_range = 120
+        self.rr_motor.actuation_range = 120
         self.rf_motor.actuation_range = 120
         self.lf_motor.actuation_range = 120
         self.lr_motor.actuation_range = 120
@@ -221,5 +217,3 @@ class motor_driver_ada:
 #             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
 #             self.log.write(cstr)
 
-    def camera_pan(self, angle):
-        self.pan.angle = self.pan_bias + angle

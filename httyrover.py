@@ -501,6 +501,17 @@ def simple_commands(schr):
         else:
             max_turn(right_limit, speed)
 
+    elif schr == 'L':
+        robot.camera_pan(-5)
+        print("pan left")
+    elif schr == 'C':
+        robot.camera_pan(0)
+    elif schr == 'R':
+        robot.camera_pan(5)
+    elif schr == 'U':
+        pass
+    elif schr == 'D':
+        pass
     return
 #===================end of D commands
 def star_commands(schr):
@@ -683,6 +694,8 @@ try:
 #======================================================================
 # single digit keypad commands
                 if (xchr == 'D'):
+                    print("panning")
+                    print(xchr)
                     xchr = cbuff[2]
                     simple_commands(xchr)
                     cogBase = 0              #invalidate COG baseline
