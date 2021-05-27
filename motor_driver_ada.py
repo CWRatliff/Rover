@@ -221,5 +221,5 @@ class motor_driver_ada:
 #             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
 #             self.log.write(cstr)
 
-    def camera_pan(self, angle):
+    def sensor_pan(self, angle):
         self.pan.angle = self.pan_bias + angle

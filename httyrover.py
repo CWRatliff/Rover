@@ -77,6 +77,7 @@ fhdg = 0                                # Kalman filtered heading
 yaw = 0                                 # latest IMU yaw (True north)reading
 travel = 0                              # odometer
 cogBase = 0
+pan = 0
 
 oldsteer = 500
 oldspeed = 500
@@ -390,6 +391,7 @@ def boxtest(x0, y0, x1, y1):
 #===================================================================
 def simple_commands(schr):
     global azimuth
+    global pan
     global speed
     global steer
     global startAV
@@ -502,12 +504,15 @@ def simple_commands(schr):
             max_turn(right_limit, speed)
 
     elif schr == 'L':
-        robot.camera_pan(-5)
+        pan -= 5
+        robot.sensor_pan(pan)
         print("pan left")
     elif schr == 'C':
-        robot.camera_pan(0)
+        pan = 0
+        robot.sensor_pan(0)
     elif schr == 'R':
-        robot.camera_pan(5)
+        pan += 5
+        robot.sensor_pan(pan)
     elif schr == 'U':
         pass
     elif schr == 'D':
@@ -694,8 +699,6 @@ try:
 #======================================================================
 # single digit keypad commands
                 if (xchr == 'D'):
-                    print("panning")
-                    print(xchr)
                     xchr = cbuff[2]
                     simple_commands(xchr)
                     cogBase = 0              #invalidate COG baseline
@@ -758,12 +761,12 @@ try:
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
                             if (accgps < 50):
-                                cstr = "{lt%6.2f}" % accgps    #send to controller
+                                cstr = "{la%6.2f}" % accgps    #send to controller
                                 sendit(cstr)
                                 logit(cstr)
                             else:
                                 logit("Poor GPS accuracy")
-                                sendit("{lt------}")
+                                sendit("{la------}")
 
                         else:
                             pass
@@ -835,6 +838,10 @@ try:
                     workAV = [xEst[0, 0], xEst[1, 0]]   # see BOT 3:41 for diagram
                     filterRV = vsub(workAV, startAV)
                     vprint("Kalman pos vec", filterRV)
+                    cstr = "{lt%5.1f} " % filterRV[0]
+                    sendit(cstr)
+                    cstr = "{ln%5.1f} " % filterRV[1]
+                    sendit(cstr)
                     pathRV = vsub(trackRV, filterRV)      # to wpt end
                     dtg = vmag(pathRV)
                     udotv = vdot(trackRV, filterRV)
@@ -872,12 +879,12 @@ try:
                     logit(cstr)
 
                     if (xtrk < 100.0):
-                        cstr = "{ln%5.2f} " % xtrk   #send to controller
+                        cstr = "{lx%5.2f} " % xtrk   #send to controller
                         sendit(cstr)
                         logit(cstr)
  
                     if (accgps < 100.0):
-                        cstr = "{lt%5.2f} " % accgps    #send to controller
+                        cstr = "{la%5.2f} " % accgps    #send to controller
                         sendit(cstr)
                         logit(cstr)
 

@@ -408,9 +408,9 @@ class App:
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
                     lbuffer = lbuffer[1:]
-                    if (xchar == 't'):          # GPS accuracy
+                    if (xchar == 'a'):          # GPS accuracy
                         self.acc.set(lbuffer)
-                    if (xchar == 'n'):          # x-track error
+                    if (xchar == 'x'):          # x-track error
                         self.xte.set(lbuffer)
                         
                 elif (xchar == 's'):            # steering angle
