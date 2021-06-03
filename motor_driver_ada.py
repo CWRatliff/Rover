@@ -223,3 +223,11 @@ class motor_driver_ada:
 
     def sensor_pan(self, angle):
         self.pan.angle = self.pan_bias + angle
+        
+    def depower(self):
+        self.lf_motor.angle = None
+        self.rf_motor.angle = None
+        self.lr_motor.angle = None
+        self.rr_motor.angle = None
+        self.pan.angle = None
+        

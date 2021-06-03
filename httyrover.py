@@ -999,9 +999,10 @@ try:
     #endtry ======================
 
 finally:
-    robot.motor(0,0)
+    robot.motor(0, 0)
     time.sleep(0.5)           #wait for roboclaws
     robot.battery_voltage()
+    robot.depower()
     odometer(speed)
     logit("odometer: %7.1f" % travel)
     log.close()
