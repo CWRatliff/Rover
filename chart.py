@@ -133,11 +133,15 @@ def scaler(scl):
 def mouse(event):
     global mx
     global my
+    global stlat
+    global stlon
     if (mx == 0 and my == 0):
         mx = event.x
         my = event.y
     x = event.x - mx
+    stlat -= x
     y = event.y - my
+    stlon -= y
     canvas.move(plot, x, y)
     canvas.move(rez, x, y)
     canvas.move(bdrv, x, y)
@@ -151,11 +155,14 @@ def taptap(event):
     global scale
     global rez
     global plot
-    scale = scale * 1.5
+#    scale = scale * 1.5
 #     stlat = stlat - event.x * (1 - 1 / 1.5)
 #     stlon = stlon - event.y * (1 - 1 / 1.5)
-    stlat = 2400 - event.x * (1/2)
-    stlon = -440 - event.y * (1/2)
+#    stlat = stlat - (stlat - event.x) * (1/3)
+#    stlon = stlon - (stlon - event.y) * (1/3)
+    stlat = stlat - (event.x/scale)/3
+    stlon = stlon - (event.y/scale)/3
+    scale *= 1.5
     print(str(event.x)+" "+str(event.y))
     print(str(stlat)+" "+str(stlon))
     canvas.delete(rez)
