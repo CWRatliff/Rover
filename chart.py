@@ -90,28 +90,86 @@ def usf2pix(usf, gscale, slat, slon):
 scale = 1.0
 stlat = 2400
 stlon = -440
-
+mx = 0
+my = 0
 wpts = usf2pix(waypts, scale, stlat, stlon)
 
 canvas= Canvas(root, width=950, height=430, bg='white')
 canvas.pack()
 
 points = usf2pix(proppts, scale, stlat, stlon)
-canvas.create_polygon(points, outline='black', fill='green2', width=1)
+plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
 
 house = usf2pix(housepts, scale, stlat, stlon)
-canvas.create_polygon(house, outline='black', fill='red', width=1)
+rez = canvas.create_polygon(house, outline='black', fill='red', width=1)
 
 back = usf2pix(backpts, scale, stlat, stlon)
-canvas.create_polygon(back, outline='black', fill='gray75', width=2)
+bdrv = canvas.create_polygon(back, outline='black', fill='gray75', width=2)
 
 front = usf2pix(frontpts, scale, stlat, stlon)
-canvas.create_polygon(front, outline='black', fill='gray75', width=2)
+fdrv = canvas.create_polygon(front, outline='black', fill='gray75', width=2)
 
 longe =usf2pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
-canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', fill='gold', width=1)
-
+lunge = canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', fill='gold', width=1)
 llen = len(wpts)
 for i in range(0, llen, 2):
     canvas.create_rectangle(wpts[i], wpts[i+1], wpts[i]+2, wpts[i+1]+2, fill='blue', outline='blue')
+
+# enlarge button array ===================================================
+zoom = Frame(root)
+zoom.place(x=975, y=200)
+fmax = Button(zoom, text = "+", command = lambda:scaler(1.2))
+fmax.config(width = 1, height = 1, font=(NONE,15), bg="green2",fg="black",borderwidth=2)
+fmax.grid(row=0,column=0)
+
+rmax = Button(zoom, text = "-", command = lambda:scaler(.8))
+rmax.config(width = 1, height = 1, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
+rmax.grid(row=1,column=0)
+        
+def scaler(scl):
+    global scale
+    scale = scale * scl
+    
+def mouse(event):
+    global mx
+    global my
+    if (mx == 0 and my == 0):
+        mx = event.x
+        my = event.y
+    x = event.x - mx
+    y = event.y - my
+    canvas.move(plot, x, y)
+    canvas.move(rez, x, y)
+    canvas.move(bdrv, x, y)
+    canvas.move(fdrv, x, y)
+    mx = event.x
+    my = event.y
+
+def taptap(event):
+    global stlat
+    global stlon
+    global scale
+    global rez
+    global plot
+    scale = scale * 1.5
+#     stlat = stlat - event.x * (1 - 1 / 1.5)
+#     stlon = stlon - event.y * (1 - 1 / 1.5)
+    stlat = 2400 - event.x * (1/2)
+    stlon = -440 - event.y * (1/2)
+    print(str(event.x)+" "+str(event.y))
+    print(str(stlat)+" "+str(stlon))
+    canvas.delete(rez)
+    canvas.delete(plot)
+    points = usf2pix(proppts, scale, stlat, stlon)
+    plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
+
+    house = usf2pix(housepts, scale, stlat, stlon)
+    rez = canvas.create_polygon(house, outline='black', fill='red', width=1)
+
+def done(event):
+    pass
+    
+canvas.bind('<B1-Motion>', mouse)
+canvas.bind('<Double-Button-1>', taptap)
+canvas.bind('<ButtonRelease-1>', done)
 root.mainloop()
