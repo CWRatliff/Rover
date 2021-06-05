@@ -90,6 +90,7 @@ def usf2pix(usf, gscale, slat, slon):
 scale = 1.0
 stlat = 2400
 stlon = -440
+mode = 1        #zoom in
 mx = 0
 my = 0
 wpts = usf2pix(waypts, scale, stlat, stlon)
@@ -118,17 +119,18 @@ for i in range(0, llen, 2):
 # enlarge button array ===================================================
 zoom = Frame(root)
 zoom.place(x=975, y=200)
-fmax = Button(zoom, text = "+", command = lambda:scaler(1.2))
+fmax = Button(zoom, text = "+", command = lambda:scaler(1))
 fmax.config(width = 1, height = 1, font=(NONE,15), bg="green2",fg="black",borderwidth=2)
 fmax.grid(row=0,column=0)
 
-rmax = Button(zoom, text = "-", command = lambda:scaler(.8))
+rmax = Button(zoom, text = "-", command = lambda:scaler(-1))
 rmax.config(width = 1, height = 1, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
 rmax.grid(row=1,column=0)
         
 def scaler(scl):
-    global scale
-    scale = scale * scl
+    global mode
+    mode = scl
+#     print (mode)
     
 def mouse(event):
     global mx
@@ -139,9 +141,12 @@ def mouse(event):
         mx = event.x
         my = event.y
     x = event.x - mx
-    stlat -= x
+    stlat += x/scale
     y = event.y - my
-    stlon -= y
+    stlon += y/scale
+#     print("move")
+#     print(str(event.x)+" "+str(event.y))
+#     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.move(plot, x, y)
     canvas.move(rez, x, y)
     canvas.move(bdrv, x, y)
@@ -155,16 +160,18 @@ def taptap(event):
     global scale
     global rez
     global plot
-#    scale = scale * 1.5
-#     stlat = stlat - event.x * (1 - 1 / 1.5)
-#     stlon = stlon - event.y * (1 - 1 / 1.5)
-#    stlat = stlat - (stlat - event.x) * (1/3)
-#    stlon = stlon - (stlon - event.y) * (1/3)
-    stlat = stlat - (event.x/scale)/3
-    stlon = stlon - (event.y/scale)/3
-    scale *= 1.5
-    print(str(event.x)+" "+str(event.y))
-    print(str(stlat)+" "+str(stlon))
+    if mode > 0:
+        stlat = stlat - (event.x/scale)/3
+        stlon = stlon - (event.y/scale)/3
+        scale *= 1.5
+    else:
+        stlat = stlat + (event.x/scale)/2
+        stlon = stlon + (event.y/scale)/2
+        scale *= 2/3
+        
+#     print("zoom")
+#     print(str(event.x)+" "+str(event.y))
+#     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.delete(rez)
     canvas.delete(plot)
     points = usf2pix(proppts, scale, stlat, stlon)
