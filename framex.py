@@ -1,101 +1,155 @@
 # property taken from 2018 WM Survey DWG
 proppts = [
-    [2380, -644],
-    [2064, -457],
-    [1904, -451],
-    [1654, -578],
-    [1470, -624],
-    [1579, -673],
-    [1669, -806],
-    [2009, -800],
-    [2309, -862]
+    [-644, 2380],
+    [-457, 2064],
+    [-451, 1904],
+    [-578, 1654],
+    [-624, 1470],
+    [-673, 1579],
+    [-806, 1669],
+    [-800, 2009],
+    [-862, 2309]
     ]
 
 horsepts = [
-    [1928.738733,-469.8174434],
-	[1903.725663,-488.5118064],
-	[1890.014683,-517.6297356],
-	[1876.52927,-572.023481],
-	[1861.59986,-590.6585335],
-	[1854.862017,-617.517638],
-	[1855.407392,-643.0854829],
-	[1863.537552,-679.7237804],
-	[1880.559694,-716.176607],
-	[1911.505008,-743.1865008],
-	[1947.052873,-766.2793896],
-	[1989.139156,-780.3098375],
-	[2044.977157,-786.570612],
-	[2097.943579,-793.3787518],
-	[2117.002517,-782.1861598],
-	[2123.523912,-745.575507],
-	[2123.491688,-745.5860623],
-	[2147.556279,-750.6299666],
-	[2141.544387,-790.0920463],
-	[2148.42207,-801.7601274],
-	[2169.505644,-814.6385446],
-	[2163.910839,-829.3485498],
-	[2113.800187,-818.8335047],
-	[2037.840467,-800.8689623],
-	[1966.271106,-794.3438038],
-	[1948.702373,-787.1149616],
-	[1913.139308,-766.8719918],
-	[1902.296866,-770.7955311],
-	[1888.044767,-781.4116051],
-	[1873.300796,-785.3562549],
-	[1872.483038,-777.4815316],
-	[1886.679809,-770.3265762],
-	[1899.475144,-758.6489451],
-	[1867.077321,-730.4588731],
-	[1845.26962,-707.8796734],
-	[1826.988313,-697.7813096],
-	[1822.066563,-691.5275719],
-	[1816.985517,-672.9759562],
-	[1812.56111,-644.2440478],
-	[1813.152084,-615.2382054],
-	[1823.478336,-566.8488926],
-	[1834.235658,-543.2322621],
-	[1850.027211,-519.2542397],
-	[1866.635305,-507.0659353],
-	[1880.484302,-500.5940557],
-	[1903.698303,-468.7945889],
-	[1928.017039,-459.349143]
+    [-469.81, 1928.73],
+	[-488.51, 1903.72],
+	[-517.62, 1890.01],
+	[-572.02, 1876.52],
+	[-590.65, 1861.59],
+	[-617.51, 1854.86],
+	[-643.08, 1855.40],
+	[-679.72, 1863.53],
+	[-716.17, 1880.55],
+	[-743.18, 1911.50],
+	[-766.27, 1947.05],
+	[-780.30, 1989.13],
+	[-786.57, 2044.97],
+	[-793.37, 2097.94],
+	[-782.18, 2117.00],
+	[-745.57, 2123.52],
+	[-745.58, 2123.49],
+	[-750.62, 2147.55],
+	[-790.09, 2141.54],
+	[-801.76, 2148.42],
+	[-814.63, 2169.50],
+	[-829.34, 2163.91],
+	[-818.83, 2113.80],
+	[-800.86, 2037.84],
+	[-794.34, 1966.27],
+	[-787.11, 1948.70],
+	[-766.87, 1913.13],
+	[-770.79, 1902.29],
+	[-781.41, 1888.04],
+	[-785.35, 1873.30],
+	[-777.48, 1872.48],
+	[-770.32, 1886.67],
+	[-758.64, 1899.47],
+	[-730.45, 1867.07],
+	[-707.87, 1845.26],
+	[-697.78, 1826.98],
+	[-691.52, 1822.06],
+	[-672.97, 1816.98],
+	[-644.24, 1812.56],
+	[-615.23, 1813.15],
+	[-566.84, 1823.47],
+	[-543.23, 1834.23],
+	[-519.25, 1850.02],
+	[-507.06, 1866.63],
+	[-500.59, 1880.48],
+	[-468.79, 1903.69],
+	[-459.34, 1928.01]
     ]
+waypts = [
+    [ -787.36,  2298.03],     #10 
+    [ -647.55,  2108.54],     #11 speed bump
+    [ -619.57,  2091.62],     #12 T seam
+    [ -599.97,  2236.32],     #13 workshop F 
+    [ -578.94,  2247.67],     #14 driveway center F
+    [ -490.20,  2097.75],     #15 gravel rev 210430
+    [ -471.80,  2053.82],     #16 fig tree fork F
+    [ -532.36,  1963.03],     #17 stairs pivot
+    [ -592.93,  1931.82],     #18 shed #3/#4 F
+    [ -526.33,  1863.82],     #19 longe center
+    [ -661.79,  1842.34],     #20 stall ctr
+    [ -511.84,  2145.63],     #21 E dway start
+    [ -548.45,  1951.78],     #22 hut row bend F
+    [ -619.07,  2315.06],     #23 trash
+    [ -599.72,  2290.03],     #24 EF east entry
+    [ -665.89,  2108.14],     #25 ref corner - F
+    [ -646.13,  2126.38],     #26 hose bib - F
+    # [ -640.51,  2177.75],     #27 rose bush - F
+    [ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
+    [ -624.85,  2235.41],     #28 boat corner - F 201230 - refounded
+    [ -684.91,  2276.04],     #29 EF middle - F
+    [ -644.70,  2261.65],     #30 office gap
+    [ -653.41,  2229.63],     #31 EF rose gap
+    ]
+
 # personal survey 210506
 housepts = [
-    [2074, -521],
-    [2059, -551],
-    [2056, -561],
-    [2051, -578],
-    [2044, -576],
-    [2039, -594],
-    [2051, -598],
-    [2043, -624],
-    [2070, -632],
-    [2077, -605],
-    [2093, -610],
-    [2098, -592],
-    [2093, -590],
-    [2098, -573],
-    [2108, -576],
-    [2123, -543]
+    [-521, 2074],
+    [-551, 2059],
+    [-561, 2056],
+    [-578, 2051],
+    [-576, 2044],
+    [-594, 2039],
+    [-598, 2051],
+    [-624, 2043],
+    [-632, 2070],
+    [-605, 2077],
+    [-610, 2093],
+    [-592, 2098],
+    [-590, 2093],
+    [-573, 2098],
+    [-576, 2108],
+    [-543, 2123]
     ]
 
 backpts = [
-    [2374, -648],
-    [2130, -503],
-    [2148, -527],
-    [2365, -657]
+    [-648, 2374],
+    [-503, 2130],
+    [-527, 2148],
+    [-657, 2365]
     ]
 
 frontpts = [
-    [2328, -807],
-    [2260, -753],
-    [2113, -657],
-    [2107, -666],
-    [2242, -755],
-    [2321, -820]
+    [-807, 2328],
+    [-753, 2260],
+    [-657, 2113],
+    [-666, 2107],
+    [-755, 2242],
+    [-820, 2321]
+    ]
+waypts = [
+    [ -787.36,  2298.03],     #10 
+    [ -647.55,  2108.54],     #11 speed bump
+    [ -619.57,  2091.62],     #12 T seam
+    [ -599.97,  2236.32],     #13 workshop F 
+    [ -578.94,  2247.67],     #14 driveway center F
+    [ -490.20,  2097.75],     #15 gravel rev 210430
+    [ -471.80,  2053.82],     #16 fig tree fork F
+    [ -532.36,  1963.03],     #17 stairs pivot
+    [ -592.93,  1931.82],     #18 shed #3/#4 F
+    [ -526.33,  1863.82],     #19 longe center
+    [ -661.79,  1842.34],     #20 stall ctr
+    [ -511.84,  2145.63],     #21 E dway start
+    [ -548.45,  1951.78],     #22 hut row bend F
+    [ -619.07,  2315.06],     #23 trash
+    [ -599.72,  2290.03],     #24 EF east entry
+    [ -665.89,  2108.14],     #25 ref corner - F
+    [ -646.13,  2126.38],     #26 hose bib - F
+    # [ -640.51,  2177.75],     #27 rose bush - F
+    [ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
+    [ -624.85,  2235.41],     #28 boat corner - F 201230 - refounded
+    [ -684.91,  2276.04],     #29 EF middle - F
+    [ -644.70,  2261.65],     #30 office gap
+    [ -653.41,  2229.63],     #31 EF rose gap
     ]
 
+track = []
+lat = 0.0
+lon = 0.0
 
 from tkinter import *
 import serial
@@ -122,8 +176,8 @@ black = False
 def usf2pix(usf, gscale, slat, slon):
     pix = []
     for x in usf:
-        pix.insert(0, int(gscale * (slon-x[1])))
-        pix.insert(0, int(gscale * (slat-x[0])))
+        pix.insert(0, int(gscale * (slon-x[0])))
+        pix.insert(0, int(gscale * (slat-x[1])))
     return pix
 
 scale = 1.0
@@ -158,28 +212,28 @@ class App:
         lat.grid(row=7,column=0)
 
         self.status = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.status).grid(row=0,column=1)
         self.speed = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.speed).grid(row=1,column=1)
         self.head = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.head).grid(row=2,column=1)
         self.steer = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.steer).grid(row=3,column=1)
         self.dtg = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.dtg).grid(row=4,column=1)
         self.ctg = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.ctg).grid(row=5,column=1)
         self.xte = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.xte).grid(row=6,column=1)
         self.acc = StringVar()
-        Label(data,width=7,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
               textvariable=self.acc).grid(row=7,column=1)
         
 
@@ -226,15 +280,15 @@ class App:
         speed = Frame(master)
         speed.place(x=1150, y=500)
         fmax = Button(speed, text = "+", command = lambda:self.dxmit('2'))
-        fmax.config(width = 3, height = 3, font=(NONE,15), bg="green2",fg="black",borderwidth=4)
+        fmax.config(width = 3, height = 2, font=(NONE,15), bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
         f0 = Button(speed, text = "0", command = lambda:self.dxmit('0'))
-        f0.config(width = 3, height = 3, font=(NONE,15), bg="linen",fg="black",borderwidth=4)
+        f0.config(width = 3, height = 4, font=(NONE,15), bg="linen",fg="black",borderwidth=4)
         f0.grid(row=3,column=0)
         
         rmax = Button(speed, text = "-", command = lambda:self.dxmit('8'))
-        rmax.config(width = 3, height = 3, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
+        rmax.config(width = 3, height = 2, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=6,column=0)
         
 
@@ -243,32 +297,32 @@ class App:
         radio.place(x=200, y=20)
         rb1 = Radiobutton(radio, text="Standby", variable=self.mode, value = 0, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-        rb1.config(width = 7, height = 2, font=(NONE,20))
+        rb1.config(width = 7, height = 2, font=(NONE,15))
         rb1.grid(row=0, column=0)
         
         rb2 = Radiobutton(radio, text="Auto", variable=self.mode, value = 1, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-        rb2.config(width = 6, height = 2, font=(NONE,20))
+        rb2.config(width = 6, height = 2, font=(NONE,15))
         rb2.grid(row=1, column=0)
         
         rb3 = Radiobutton(radio, text="Path", variable=self.mode, value = 2, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-        rb3.config(width = 6, height = 2, font=(NONE,20))
+        rb3.config(width = 6, height = 2, font=(NONE,15))
         rb3.grid(row=2, column=0)
         
         rb4 = Radiobutton(radio, text="PanTilt", variable=self.mode, value = 3, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-        rb4.config(width = 6, height = 2, font=(NONE,20))
+        rb4.config(width = 6, height = 2, font=(NONE,15))
         rb4.grid(row=3, column=0)
         
         rb5 = Radiobutton(radio, text="Misc", variable=self.mode, value = 4, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-        rb5.config(width = 6, height = 2, font=(NONE,20))
+        rb5.config(width = 6, height = 2, font=(NONE,15))
         rb5.grid(row=4, column=0)
         
         rb6 = Radiobutton(radio, text="Chart", variable=self.mode, value = 5, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-        rb6.config(width = 6, height = 2, font=(NONE,20))
+        rb6.config(width = 6, height = 2, font=(NONE,15))
         rb6.grid(row=5, column=0)
                 
     # destroy old frames when changing mode via radiobuttons ====================
@@ -461,15 +515,15 @@ class App:
         
         horse = usf2pix(horsepts, scale, stlat, stlon)
         canvas.create_polygon(horse, outline='black', fill='gold', width=1)
-        longe =usf2pix([[1863.82-25, -526-25],[1863.82+25, -526+25]], scale, stlat, stlon)
+        longe =usf2pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
         canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', fill='gold', width=1)
         
         house = usf2pix(housepts, scale, stlat, stlon)
         canvas.create_polygon(house, outline='black', fill='red', width=1)
         back = usf2pix(backpts, scale, stlat, stlon)
-        canvas.create_polygon(back, outline='black', fill='gray75', width=2)
+        canvas.create_polygon(back, outline='black', fill='gray75', width=1)
         front = usf2pix(frontpts, scale, stlat, stlon)
-        canvas.create_polygon(front, outline='black', fill='gray75', width=2)
+        canvas.create_polygon(front, outline='black', fill='gray75', width=1)
         
     def dxmit(self, key):
         self.msg = '{D' + key + '}'
@@ -498,6 +552,9 @@ class App:
         global green
         global red
         global black
+        global track
+        global lat
+        global lon
         
         # but first, check tactile buttons
         if (GPIO.input(21) == False):
@@ -557,6 +614,11 @@ class App:
                         self.acc.set(lbuffer)
                     if (xchar == 'x'):          # x-track error
                         self.xte.set(lbuffer)
+                    if (xchar == 'l'):
+                        lat = float(lbuffer)
+                    if (xchar == 'n'):
+                        lon = float(lbuffer)
+                        track = track + [lon, lat]
                         
                 elif (xchar == 's'):            # steering angle
                     self.steer.set(lbuffer)
