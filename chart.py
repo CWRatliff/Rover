@@ -82,9 +82,9 @@ root.geometry("1024x600+0+0")
 # slat, slon starting lat/lon usf from 34-14, -119-04
 def usf2pix(usf, gscale, slat, slon):
     pix = []
-    for x in usf:
-        pix.insert(0, int(gscale * (slon-x[0])))
-        pix.insert(0, int(gscale * (slat-x[1])))
+    for ll in usf:
+        pix.insert(0, int(gscale * (slon-ll[0])))
+        pix.insert(0, int(gscale * (slat-ll[1])))
     return pix
 
 scale = 1.0
@@ -127,6 +127,10 @@ rmax = Button(zoom, text = "-", command = lambda:scaler(-1))
 rmax.config(width = 1, height = 1, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
 rmax.grid(row=1,column=0)
         
+rmax = Button(zoom, text = "X", command = lambda:scaler(0))
+rmax.config(width = 1, height = 1, font=(NONE,15), bg="blue",fg="black",borderwidth=4)
+rmax.grid(row=2,column=0)
+        
 def scaler(scl):
     global mode
     mode = scl
@@ -137,6 +141,8 @@ def mouse(event):
     global my
     global stlat
     global stlon
+    if (mode == 0):
+        return
     if (mx == 0 and my == 0):
         mx = event.x
         my = event.y
@@ -144,6 +150,7 @@ def mouse(event):
     stlat += x/scale
     y = event.y - my
     stlon += y/scale
+    
 #     print("move")
 #     print(str(event.x)+" "+str(event.y))
 #     print(str(int(stlat))+" "+str(int(stlon)))
@@ -160,6 +167,13 @@ def taptap(event):
     global scale
     global rez
     global plot
+    if (mode == 0):
+        lat = stlat - event.x/scale
+        lon = stlon - event.y/scale
+        print (str(lat)+"/"+str(lon))
+        pnt = usf2pix([[lon, lat]], scale, stlat, stlon)
+        canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, fill='blue',outline='blue')
+        return
     if mode > 0:
         stlat = stlat - (event.x/scale)/3
         stlon = stlon - (event.y/scale)/3
@@ -180,10 +194,9 @@ def taptap(event):
     house = usf2pix(housepts, scale, stlat, stlon)
     rez = canvas.create_polygon(house, outline='black', fill='red', width=1)
 
-def done(event):
-    pass
+# def done(event):
+#     pass
     
 canvas.bind('<B1-Motion>', mouse)
 canvas.bind('<Double-Button-1>', taptap)
-canvas.bind('<ButtonRelease-1>', done)
 root.mainloop()
