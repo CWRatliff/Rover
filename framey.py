@@ -159,6 +159,7 @@ def chart(mstr):
     global charter
     global canvas
     global fdrv
+    global lunge
     global plot
     global rez
 
@@ -170,7 +171,7 @@ def chart(mstr):
     horse = usf2pix(horsepts, scale, stlat, stlon)
     arena = canvas.create_polygon(horse, outline='black', fill='gold', width=1)
     longe =usf2pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
-    canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', fill='gold', width=1)
+    lunge = canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', fill='gold', width=1)
     
     house = usf2pix(housepts, scale, stlat, stlon)
     rez = canvas.create_polygon(house, outline='black', fill='red', width=1)
@@ -211,6 +212,8 @@ def mouse(event):
     canvas.move(rez, x, y)
     canvas.move(bdrv, x, y)
     canvas.move(fdrv, x, y)
+    canvas.move(arena, x, y)
+    canvas.move(lunge, x, y)
     mx = event.x
     my = event.y
 
@@ -219,8 +222,11 @@ def taptap(event):
     global stlon
     global scale
     global rez
+    global fdrv
+    global bdrv
     global plot
     global arena
+    global lunge
     if (mode == 0):
         lat = stlat - event.x/scale
         lon = stlon - event.y/scale
@@ -243,6 +249,9 @@ def taptap(event):
     canvas.delete(arena)
     canvas.delete(rez)
     canvas.delete(plot)
+    canvas.delete(lunge)
+    canvas.delete(fdrv)
+    canvas.delete(bdrv)
 #     points = usf2pix(proppts, scale, stlat, stlon)
 #     plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
 # 
