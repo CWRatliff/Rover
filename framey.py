@@ -13,53 +13,54 @@ proppts = [
 
 horsepts = [
     [-469.81, 1928.73],
-	[-488.51, 1903.72],
-	[-517.62, 1890.01],
-	[-572.02, 1876.52],
-	[-590.65, 1861.59],
-	[-617.51, 1854.86],
-	[-643.08, 1855.40],
-	[-679.72, 1863.53],
-	[-716.17, 1880.55],
-	[-743.18, 1911.50],
-	[-766.27, 1947.05],
-	[-780.30, 1989.13],
-	[-786.57, 2044.97],
-	[-793.37, 2097.94],
-	[-782.18, 2117.00],
-	[-745.57, 2123.52],
-	[-745.58, 2123.49],
-	[-750.62, 2147.55],
-	[-790.09, 2141.54],
-	[-801.76, 2148.42],
-	[-814.63, 2169.50],
-	[-829.34, 2163.91],
-	[-818.83, 2113.80],
-	[-800.86, 2037.84],
-	[-794.34, 1966.27],
-	[-787.11, 1948.70],
-	[-766.87, 1913.13],
-	[-770.79, 1902.29],
-	[-781.41, 1888.04],
-	[-785.35, 1873.30],
-	[-777.48, 1872.48],
-	[-770.32, 1886.67],
-	[-758.64, 1899.47],
-	[-730.45, 1867.07],
-	[-707.87, 1845.26],
-	[-697.78, 1826.98],
-	[-691.52, 1822.06],
-	[-672.97, 1816.98],
-	[-644.24, 1812.56],
-	[-615.23, 1813.15],
-	[-566.84, 1823.47],
-	[-543.23, 1834.23],
-	[-519.25, 1850.02],
-	[-507.06, 1866.63],
-	[-500.59, 1880.48],
-	[-468.79, 1903.69],
-	[-459.34, 1928.01]
+    [-488.51, 1903.72],
+    [-517.62, 1890.01],
+    [-572.02, 1876.52],
+    [-590.65, 1861.59],
+    [-617.51, 1854.86],
+    [-643.08, 1855.40],
+    [-679.72, 1863.53],
+    [-716.17, 1880.55],
+    [-743.18, 1911.50],
+    [-766.27, 1947.05],
+    [-780.30, 1989.13],
+    [-786.57, 2044.97],
+    [-793.37, 2097.94],
+    [-782.18, 2117.00],
+    [-745.57, 2123.52],
+    [-745.58, 2123.49],
+    [-750.62, 2147.55],
+    [-790.09, 2141.54],
+    [-801.76, 2148.42],
+    [-814.63, 2169.50],
+    [-829.34, 2163.91],
+    [-818.83, 2113.80],
+    [-800.86, 2037.84],
+    [-794.34, 1966.27],
+    [-787.11, 1948.70],
+    [-766.87, 1913.13],
+    [-770.79, 1902.29],
+    [-781.41, 1888.04],
+    [-785.35, 1873.30],
+    [-777.48, 1872.48],
+    [-770.32, 1886.67],
+    [-758.64, 1899.47],
+    [-730.45, 1867.07],
+    [-707.87, 1845.26],
+    [-697.78, 1826.98],
+    [-691.52, 1822.06],
+    [-672.97, 1816.98],
+    [-644.24, 1812.56],
+    [-615.23, 1813.15],
+    [-566.84, 1823.47],
+    [-543.23, 1834.23],
+    [-519.25, 1850.02],
+    [-507.06, 1866.63],
+    [-500.59, 1880.48],
+    [-468.79, 1903.69],
+    [-459.34, 1928.01]
     ]
+
 waypts = [
     [ -787.36,  2298.03],     #10 
     [ -647.55,  2108.54],     #11 speed bump
@@ -163,9 +164,6 @@ def chart(mstr):
     global plot
     global rez
 
-#         canvas= Canvas(charter, width=950, height=430, bg='white')
-#         canvas.pack()
-    
     points = usf2pix(proppts, scale, stlat, stlon)
     plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
     horse = usf2pix(horsepts, scale, stlat, stlon)
@@ -190,6 +188,13 @@ def usf2pix(usf, gscale, slat, slon):
         pix.insert(0, int(gscale * (slat-x[1])))
     return pix
 
+def bpress(event):
+    global mx
+    global my
+    mx = event.x
+    my = event.y
+    print('button press')
+    
 def mouse(event):
     global mx
     global my
@@ -197,17 +202,17 @@ def mouse(event):
     global stlon
     if (mode == 0):
         return
-    if (mx == 0 and my == 0):
-        mx = event.x
-        my = event.y
+#     if (mx == 0 and my == 0):
+#         mx = event.x
+#         my = event.y
     x = event.x - mx
-    stlat += x/scale
     y = event.y - my
+    stlat += x/scale
     stlon += y/scale
     
-#     print("move")
-#     print(str(event.x)+" "+str(event.y))
-#     print(str(int(stlat))+" "+str(int(stlon)))
+    print("move")
+    print(str(event.x)+" "+str(event.y))
+    print(str(int(stlat))+" "+str(int(stlon)))
     canvas.move(plot, x, y)
     canvas.move(rez, x, y)
     canvas.move(bdrv, x, y)
@@ -243,20 +248,15 @@ def taptap(event):
         stlon = stlon + (event.y/scale)/2
         scale *= 2/3
         
-#     print("zoom")
-#     print(str(event.x)+" "+str(event.y))
-#     print(str(int(stlat))+" "+str(int(stlon)))
+    print("zoom")
+    print(str(event.x)+" "+str(event.y))
+    print(str(int(stlat))+" "+str(int(stlon)))
     canvas.delete(arena)
     canvas.delete(rez)
     canvas.delete(plot)
     canvas.delete(lunge)
     canvas.delete(fdrv)
     canvas.delete(bdrv)
-#     points = usf2pix(proppts, scale, stlat, stlon)
-#     plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
-# 
-#     house = usf2pix(housepts, scale, stlat, stlon)
-#     rez = canvas.create_polygon(house, outline='black', fill='red', width=1)
     chart(root)
 
 class App:
@@ -722,5 +722,6 @@ root.geometry("1280x800+0+0")
 root.after(25, app.listen)
 canvas.bind('<B1-Motion>', mouse)
 canvas.bind('<Double-Button-1>', taptap)
+canvas.bind('<Button-1>', bpress)
 
 root.mainloop()
