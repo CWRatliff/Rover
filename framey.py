@@ -149,7 +149,6 @@ eftrees = [
     [-685.31, 2306.48],
     [-553.51, 2165.42],
     [-587.32, 2149.28],
-    [-644.32, 2380.60],
     [-611.69, 2246.94],
     [-639.16, 2297.69],  
     [-662.07, 2222.55],
@@ -221,7 +220,8 @@ def chart(mstr):
     horse = usf2pix(horsepts, scale, stlat, stlon)
     arena = canvas.create_polygon(horse, outline='black', fill='gold', width=1)
     longe =usf2pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
-    lunge = canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', fill='gold', width=1)
+    lunge = canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', \
+        fill='gold', width=1)
     
     house = usf2pix(housepts, scale, stlat, stlon)
     rez = canvas.create_polygon(house, outline='black', fill='red', width=1)
@@ -230,7 +230,16 @@ def chart(mstr):
     front = usf2pix(frontpts, scale, stlat, stlon)
     fdrv = canvas.create_polygon(front, outline='black', fill='gray75', width=1)
     
-    
+    trees = usf2pix(eftrees, scale, stlat, stlon)
+    llen = len(trees)
+    rad = scale * 3
+    for i in range(0, llen, 2):
+        canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
+            fill='green', outline='black', width=2, tags = 'forest')
+    llen = len(track)
+    for i in range(0, llen, 2):
+        canvas.create_text(track[i], track[i+1], text='x', fill='blue', tags = 'path')
+
 # convert array of USfeet pairs into linear array of pixels (in pairs)
 # slat, slon starting lat/lon usf from 34-14, -119-04
 def usf2pix(usf, gscale, slat, slon):
@@ -245,7 +254,7 @@ def bpress(event):
     global my
     mx = event.x
     my = event.y
-    print('button press')
+#    print('button press')
     
 def mouse(event):
     global mx
@@ -254,23 +263,23 @@ def mouse(event):
     global stlon
     if (mode == 0):
         return
-#     if (mx == 0 and my == 0):
-#         mx = event.x
-#         my = event.y
+
     x = event.x - mx
     y = event.y - my
     stlat += x/scale
     stlon += y/scale
     
-    print("move")
-    print(str(event.x)+" "+str(event.y))
-    print(str(int(stlat))+" "+str(int(stlon)))
+#     print("move")
+#     print(str(event.x)+" "+str(event.y))
+#     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.move(plot, x, y)
     canvas.move(rez, x, y)
     canvas.move(bdrv, x, y)
     canvas.move(fdrv, x, y)
     canvas.move(arena, x, y)
     canvas.move(lunge, x, y)
+    canvas.move('forest', x, y)
+    canvas.move('path', x, y)
     mx = event.x
     my = event.y
 
@@ -284,12 +293,17 @@ def taptap(event):
     global plot
     global arena
     global lunge
+    
     if (mode == 0):
         lat = stlat - event.x/scale
         lon = stlon - event.y/scale
-        print (str(lat)+"/"+str(lon))
+#        print (str(lat)+"/"+str(lon))
         pnt = usf2pix([[lon, lat]], scale, stlat, stlon)
         canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, fill='blue',outline='blue')
+        msg = '{GL%f7.2}' % lon
+        ser.write(msg.encode('utf-8'))
+        msg = '{GN%f7.2}' % lat
+        ser.write(msg.encode('utf-8'))
         return
     if mode > 0:
         stlat = stlat - (event.x/scale)/3
@@ -300,15 +314,17 @@ def taptap(event):
         stlon = stlon + (event.y/scale)/2
         scale *= 2/3
         
-    print("zoom")
-    print(str(event.x)+" "+str(event.y))
-    print(str(int(stlat))+" "+str(int(stlon)))
+#     print("zoom")
+#     print(str(event.x)+" "+str(event.y))
+#     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.delete(arena)
     canvas.delete(rez)
     canvas.delete(plot)
     canvas.delete(lunge)
     canvas.delete(fdrv)
     canvas.delete(bdrv)
+    canvas.delete('forest')
+    canvas.delete('path')
     chart(root)
 
 class App:
@@ -458,7 +474,7 @@ class App:
         zoom = Frame(root)
         zoom.place(x=1200, y=200)
         fmax = Button(zoom, text = "+", command = lambda:scaler(1))
-        fmax.config(width = 1, height = 1, font=(NONE,15), bg="green2",fg="black",borderwidth=2)
+        fmax.config(width = 1, height = 1, font=(NONE,15), bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
         rmax = Button(zoom, text = "-", command = lambda:scaler(-1))
@@ -466,7 +482,7 @@ class App:
         rmax.grid(row=1,column=0)
                 
         rmax = Button(zoom, text = "X", command = lambda:scaler(0))
-        rmax.config(width = 1, height = 1, font=(NONE,15), bg="blue",fg="black",borderwidth=4)
+        rmax.config(width = 1, height = 1, font=(NONE,15), bg="deep sky blue",fg="black",borderwidth=4)
         rmax.grid(row=2,column=0)
         
 #         charter = Frame(mstr)
