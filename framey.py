@@ -170,15 +170,55 @@ eftrees = [
     [-747.20, 2327.20],
     [-656.20, 2289.77],
     [-660.87, 2305.83],
-    [-648.90, 2324.98],
-    [-776.52, 2303.85]
+    [-648.90, 2324.98]
+#    [-776.52, 2303.85]
     ]
-
+wbtrees = [
+    [-760.29,2209.29],
+    [-821.69,2310.97],
+    [-730.56,2202.30],
+    [-738.82,2212.74],
+    [-745.20,2223.79],
+    [-753.01,2235.79],
+    [-764.20,2248.13],
+    [-773.72,2260.13],
+    [-784.21,2272.11],
+    [-795.33,2283.69],
+    [-840.92,2306.10],
+    [-794.11,2180.35],
+    [-793.00,2206.61],
+    [-751.47,2198.79],
+    [-771.92,2222.58],
+    [-793.16,2225.71],
+    [-795.24,2245.71],
+    [-781.75,2234.82],
+    [-807.87,2253.03],
+    [-754.39,2169.04],
+    [-763.59,2179.40],
+    [-738.58,2182.73],
+    [-747.13,2160.29],
+    [-775.00,2193.29]
+    ]
+citrees = [
+    [-685.73,2092.00],
+    [-693.57,2107.84],
+    [-698.55,2078.46],
+    [-719.57,2119.18],
+    [-704.57,2091.59],
+    [-481.65,2019.45],
+    [-537.32,2000.22],
+    [-657.96,2010.35],
+    [-606.75,1962.21],
+    [-623.25,1975.01],
+    [-479.41,1959.84],
+    [-644.96,1996.98],
+    ]
 track = []
 lat = 0.0
 lon = 0.0
 
 from tkinter import *
+from tkinter.font import Font
 import serial
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
@@ -231,6 +271,18 @@ def chart(mstr):
     fdrv = canvas.create_polygon(front, outline='black', fill='gray75', width=1)
     
     trees = usf2pix(eftrees, scale, stlat, stlon)
+    llen = len(trees)
+    rad = scale * 3
+    for i in range(0, llen, 2):
+        canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
+            fill='green', outline='black', width=2, tags = 'forest')
+    trees = usf2pix(wbtrees, scale, stlat, stlon)
+    llen = len(trees)
+    rad = scale * 3
+    for i in range(0, llen, 2):
+        canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
+            fill='green', outline='black', width=2, tags = 'forest')
+    trees = usf2pix(citrees, scale, stlat, stlon)
     llen = len(trees)
     rad = scale * 3
     for i in range(0, llen, 2):
@@ -484,9 +536,32 @@ class App:
         rmax = Button(zoom, text = "X", command = lambda:scaler(0))
         rmax.config(width = 1, height = 1, font=(NONE,15), bg="deep sky blue",fg="black",borderwidth=4)
         rmax.grid(row=2,column=0)
+#
+# compass rose ============================================================
+        rosefrm = Frame(root)
+        rosefrm.place(x = 705, y = 470)
+        rose = Canvas(rosefrm, width=220, height=220, bg='gray85')
+        # center at 830, 580
+        rose.pack()
+#         rose.create_oval(25, 25, 195, 195, width=1, outline='black', fill="lemon chiffon")
+        rose.create_oval(25, 25, 195, 195, width=1, outline='black', fill="black")
+        ffont = Font(family="URW Chancery L", size=20, weight = "bold")
+        efont = Font(family="URW Chancery L", size=16)
+        rose.create_text(108, 8, text="N", font = ffont, angle=0)
+        rose.create_text(105, 210, text="S", font = ffont, angle=0)
+        rose.create_text(8, 110, text="W", font = ffont, angle=90)
+        rose.create_text(212, 104, text="E", font = ffont, angle=270)
+        rose.create_text(180, 40, text = "NE", font = efont, angle=315)
+        rose.create_text(185, 175, text = "SE", font = efont, angle=225)
+        rose.create_text(45, 180, text = "SW", font = efont, angle=135)
+        rose.create_text(45, 40, text = "NW", font = efont, angle=45)
+#         rose.create_line(110, 195, 110, 25, arrow=LAST, arrowshape=(20,25,5), \
+#             width=8,fill="blue", tags="compass")
+        rose.create_line(110, 110, 110, 25, arrow=LAST, arrowshape=(20, 25, 5), \
+            width=10, fill="red",tags="compass")
+        rose.create_rectangle(104, 190, 114, 110, fill="white",outline="black")
+        rose.create_line(110, 110, 150, 35, width=3, fill="green2")
         
-#         charter = Frame(mstr)
-#         charter.place(x = 300, y = 20)
                 
         def scaler(scl):
             global mode
