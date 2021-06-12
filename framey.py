@@ -106,7 +106,42 @@ housepts = [
     [-576, 2108],
     [-543, 2123]
     ]
-
+hut1 = [
+    [-639.91,1955.08],
+    [-642.17,1945.43],
+    [-630.83,1942.62],
+    [-628.49,1952.45]
+    ]
+hut2 = [
+    [-620.55,1951.13],
+    [-613.23,1950.71],
+    [-613.88,1943.62],
+    [-621.21,1944.38]
+    ]
+hut3 = [
+    [-604.58,1951.39],
+    [-597.77,1952.87],
+    [-596.32,1945.91],
+    [-603.32,1944.72]
+    ]
+hut4 = [
+    [-587.80,1954.31],
+    [-581.14,1955.12],
+    [-580.05,1948.40],
+    [-586.86,1947.46]
+    ]
+lhouse = [
+    [-583.55,2182.98],
+    [-571.94,2189.43],
+    [-576.49,2197.60],
+    [-588.09,2191.15]
+    ]
+horsecanopy = [
+    [-582.28,2219.30],
+    [-596.56,2223.87],
+    [-604.27,2197.31],
+    [-590.79,2192.48]
+    ]
 backpts = [
     [-648, 2374],
     [-503, 2130],
@@ -264,7 +299,19 @@ def chart(mstr):
         fill='gold', width=1)
     
     house = usf2pix(housepts, scale, stlat, stlon)
-    rez = canvas.create_polygon(house, outline='black', fill='red', width=1)
+    rez = canvas.create_polygon(house, outline='black', fill='red', width=1, tags="bldg")
+    h1 = usf2pix(hut1, scale, stlat, stlon)
+    canvas.create_polygon(h1, outline='black', fill='red', width=1, tags="bldg")
+    h2 = usf2pix(hut2, scale, stlat, stlon)
+    canvas.create_polygon(h2, outline='black', fill='red', width=1, tags="bldg")
+    h3 = usf2pix(hut3, scale, stlat, stlon)
+    canvas.create_polygon(h3, outline='black', fill='red', width=1, tags="bldg")
+    h4 = usf2pix(hut4, scale, stlat, stlon)
+    canvas.create_polygon(h4, outline='black', fill='red', width=1, tags="bldg")
+    casita = usf2pix(lhouse, scale, stlat, stlon)
+    canvas.create_polygon(casita, outline='black', fill='red', width=1, tags="bldg")
+    canopy = usf2pix(horsecanopy, scale, stlat, stlon)
+    canvas.create_polygon(canopy, outline='black', fill='red', width=1, tags="bldg")
     back = usf2pix(backpts, scale, stlat, stlon)
     bdrv = canvas.create_polygon(back, outline='black', fill='gray75', width=1)
     front = usf2pix(frontpts, scale, stlat, stlon)
