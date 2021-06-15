@@ -142,6 +142,12 @@ horsecanopy = [
     [-604.27,2197.31],
     [-590.79,2192.48]
     ]
+workshop = [
+    [-612.08, 2226.97],
+    [-617.51, 2207.77],
+    [-607.15, 2204.32],
+    [-599.91, 2222.88]
+    ]
 backpts = [
     [-648, 2374],
     [-503, 2130],
@@ -248,14 +254,12 @@ citrees = [
     [-479.41,1959.84],
     [-644.96,1996.98],
     ]
-track = []
-lat = 0.0
-lon = 0.0
 
 from tkinter import *
 from tkinter.font import Font
 import serial
 import RPi.GPIO as GPIO
+import math
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP) # green
 GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP) # black
@@ -268,14 +272,20 @@ ser = serial.Serial(port='/dev/ttyS0',
     bytesize=serial.EIGHTBITS,
     timeout=1
     )
+rhdg = math.radians(450 - 98)
+track = []
+lat = 0.0
+lon = 0.0
 
 butngreen = False
 butnred = False
 buthblack = False
-
+arrlen = 75
 scale = 1.0
+# stlat = 2400
+# stlon = -440
 stlat = 2400
-stlon = -440
+stlon = 950
 mode = 1        #zoom in
 mx = 0
 my = 0
@@ -291,7 +301,8 @@ def chart(mstr):
     global rez
 
     points = usf2pix(proppts, scale, stlat, stlon)
-    plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
+#    plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
+    plot = canvas.create_polygon(points, outline='black', fill='lemon chiffon', width=1)
     horse = usf2pix(horsepts, scale, stlat, stlon)
     arena = canvas.create_polygon(horse, outline='black', fill='gold', width=1)
     longe =usf2pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
@@ -312,6 +323,9 @@ def chart(mstr):
     canvas.create_polygon(casita, outline='black', fill='red', width=1, tags="bldg")
     canopy = usf2pix(horsecanopy, scale, stlat, stlon)
     canvas.create_polygon(canopy, outline='black', fill='red', width=1, tags="bldg")
+    work = usf2pix(workshop, scale, stlat, stlon)
+    canvas.create_polygon(work, outline='black', fill='red', width=1, tags='bldg')
+    
     back = usf2pix(backpts, scale, stlat, stlon)
     bdrv = canvas.create_polygon(back, outline='black', fill='gray75', width=1)
     front = usf2pix(frontpts, scale, stlat, stlon)
@@ -322,19 +336,20 @@ def chart(mstr):
     rad = scale * 3
     for i in range(0, llen, 2):
         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
-            fill='green', outline='black', width=2, tags = 'forest')
+            fill='green2', outline='black', width=2, tags = 'forest')
     trees = usf2pix(wbtrees, scale, stlat, stlon)
     llen = len(trees)
     rad = scale * 3
     for i in range(0, llen, 2):
         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
-            fill='green', outline='black', width=2, tags = 'forest')
+            fill='green2', outline='black', width=2, tags = 'forest')
     trees = usf2pix(citrees, scale, stlat, stlon)
     llen = len(trees)
     rad = scale * 3
     for i in range(0, llen, 2):
         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
-            fill='green', outline='black', width=2, tags = 'forest')
+            fill='green2', outline='black', width=2, tags = 'forest')
+
     llen = len(track)
     for i in range(0, llen, 2):
         canvas.create_text(track[i], track[i+1], text='x', fill='blue', tags = 'path')
@@ -344,8 +359,9 @@ def chart(mstr):
 def usf2pix(usf, gscale, slat, slon):
     pix = []
     for x in usf:
-        pix.insert(0, int(gscale * (slon-x[0])))
+#         pix.insert(0, int(gscale * (slon-x[0])))   # North:x coord, East:y coord
         pix.insert(0, int(gscale * (slat-x[1])))
+        pix.insert(0, int(gscale * (slon+x[0])))
     return pix
 
 def bpress(event):
@@ -365,18 +381,20 @@ def mouse(event):
 
     x = event.x - mx
     y = event.y - my
-    stlat += x/scale
-    stlon += y/scale
+#     stlat += x/scale  # North:x coord, East:y coord
+#     stlon += y/scale
+    stlat += y/scale
+    stlon += x/scale
     
 #     print("move")
 #     print(str(event.x)+" "+str(event.y))
 #     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.move(plot, x, y)
-    canvas.move(rez, x, y)
     canvas.move(bdrv, x, y)
     canvas.move(fdrv, x, y)
     canvas.move(arena, x, y)
     canvas.move(lunge, x, y)
+    canvas.move('bldg', x, y)
     canvas.move('forest', x, y)
     canvas.move('path', x, y)
     mx = event.x
@@ -394,34 +412,43 @@ def taptap(event):
     global lunge
     
     if (mode == 0):
-        lat = stlat - event.x/scale
-        lon = stlon - event.y/scale
+#         lat = stlat - event.x/scale  # North:x coord, East:y coord
+#         lon = stlon - event.y/scale
+        lat = stlat - event.y/scale # North: y coord East:x coord
+        lon = event.x/scale - stlon
 #        print (str(lat)+"/"+str(lon))
         pnt = usf2pix([[lon, lat]], scale, stlat, stlon)
-        canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, fill='blue',outline='blue')
-        msg = '{GL%f7.2}' % lon
+        canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
+            fill='blue',outline='blue')
+        msg = '{GL%7.2f}' % lon
         ser.write(msg.encode('utf-8'))
-        msg = '{GN%f7.2}' % lat
+        print(msg)
+        msg = '{GN%7.2f}' % lat
         ser.write(msg.encode('utf-8'))
+        print(msg)
         return
     if mode > 0:
-        stlat = stlat - (event.x/scale)/3
-        stlon = stlon - (event.y/scale)/3
+#         stlat = stlat - (event.x/scale)/3  # North:x coord, East:y coord
+#         stlon = stlon - (event.y/scale)/3
+        stlat = stlat - (event.y/scale)/3
+        stlon = stlon - (event.x/scale)/3
         scale *= 1.5
     else:
-        stlat = stlat + (event.x/scale)/2
-        stlon = stlon + (event.y/scale)/2
+#         stlat = stlat + (event.x/scale)/2  # North:x coord, East:y coord
+#         stlon = stlon + (event.y/scale)/2
+        stlat = stlat + (event.y/scale)/2
+        stlon = stlon + (event.x/scale)/2
         scale *= 2/3
         
 #     print("zoom")
 #     print(str(event.x)+" "+str(event.y))
 #     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.delete(arena)
-    canvas.delete(rez)
     canvas.delete(plot)
     canvas.delete(lunge)
     canvas.delete(fdrv)
     canvas.delete(bdrv)
+    canvas.delete('bldg')
     canvas.delete('forest')
     canvas.delete('path')
     chart(root)
@@ -454,28 +481,36 @@ class App:
         lat.grid(row=7,column=0)
 
         self.status = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.status).grid(row=0,column=1)
         self.speed = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.speed).grid(row=1,column=1)
         self.head = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.head).grid(row=2,column=1)
         self.steer = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.steer).grid(row=3,column=1)
         self.dtg = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.dtg).grid(row=4,column=1)
         self.ctg = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.ctg).grid(row=5,column=1)
         self.xte = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.xte).grid(row=6,column=1)
         self.acc = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue",borderwidth=1,relief="solid",\
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
               textvariable=self.acc).grid(row=7,column=1)
         
 
@@ -522,15 +557,18 @@ class App:
         speed = Frame(master)
         speed.place(x=1150, y=500)
         fmax = Button(speed, text = "+", command = lambda:self.dxmit('2'))
-        fmax.config(width = 3, height = 2, font=(NONE,15), bg="green2",fg="black",borderwidth=4)
+        fmax.config(width = 3, height = 2, font=(NONE,15), \
+            bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
         f0 = Button(speed, text = "0", command = lambda:self.dxmit('0'))
-        f0.config(width = 3, height = 4, font=(NONE,15), bg="linen",fg="black",borderwidth=4)
+        f0.config(width = 3, height = 4, font=(NONE,15), \
+            bg="linen",fg="black",borderwidth=4)
         f0.grid(row=3,column=0)
         
         rmax = Button(speed, text = "-", command = lambda:self.dxmit('8'))
-        rmax.config(width = 3, height = 2, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
+        rmax.config(width = 3, height = 2, font=(NONE,15), \
+            bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=6,column=0)
         
 
@@ -546,10 +584,6 @@ class App:
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb2.config(width = 6, height = 2, font=(NONE,15))
         rb2.grid(row=1, column=0)
-        #         rb6 = Radiobutton(radio, text="Chart", variable=self.mode, value = 5, \
-#             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-#         rb6.config(width = 6, height = 2, font=(NONE,15))
-#         rb6.grid(row=5, column=0)
         rb3 = Radiobutton(radio, text="Path", variable=self.mode, value = 2, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb3.config(width = 6, height = 2, font=(NONE,15))
@@ -573,20 +607,24 @@ class App:
         zoom = Frame(root)
         zoom.place(x=1200, y=200)
         fmax = Button(zoom, text = "+", command = lambda:scaler(1))
-        fmax.config(width = 1, height = 1, font=(NONE,15), bg="green2",fg="black",borderwidth=4)
+        fmax.config(width = 1, height = 1, font=(NONE,15), \
+            bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
         rmax = Button(zoom, text = "-", command = lambda:scaler(-1))
-        rmax.config(width = 1, height = 1, font=(NONE,15), bg="pink",fg="black",borderwidth=4)
+        rmax.config(width = 1, height = 1, font=(NONE,15), \
+            bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=1,column=0)
                 
         rmax = Button(zoom, text = "X", command = lambda:scaler(0))
-        rmax.config(width = 1, height = 1, font=(NONE,15), bg="deep sky blue",fg="black",borderwidth=4)
+        rmax.config(width = 1, height = 1, font=(NONE,15), \
+            bg="deep sky blue",fg="black",borderwidth=4)
         rmax.grid(row=2,column=0)
 #
 # compass rose ============================================================
         rosefrm = Frame(root)
-        rosefrm.place(x = 705, y = 470)
+#        rosefrm.place(x = 705, y = 470)
+        rosefrm.place(x = 950, y = 20)
         rose = Canvas(rosefrm, width=220, height=220, bg='gray85')
         # center at 830, 580
         rose.pack()
@@ -596,20 +634,36 @@ class App:
         efont = Font(family="URW Chancery L", size=16)
         rose.create_text(108, 8, text="N", font = ffont, angle=0)
         rose.create_text(105, 210, text="S", font = ffont, angle=0)
-        rose.create_text(8, 110, text="W", font = ffont, angle=90)
-        rose.create_text(212, 104, text="E", font = ffont, angle=270)
+        rose.create_text(8, 112, text="W", font = ffont, angle=90)
+
+        rose.create_text(212, 108, text="E", font = ffont, angle=270)
         rose.create_text(180, 40, text = "NE", font = efont, angle=315)
         rose.create_text(185, 175, text = "SE", font = efont, angle=225)
         rose.create_text(45, 180, text = "SW", font = efont, angle=135)
         rose.create_text(45, 40, text = "NW", font = efont, angle=45)
-#         rose.create_line(110, 195, 110, 25, arrow=LAST, arrowshape=(20,25,5), \
-#             width=8,fill="blue", tags="compass")
-        rose.create_line(110, 110, 110, 25, arrow=LAST, arrowshape=(20, 25, 5), \
-            width=10, fill="red",tags="compass")
-        rose.create_rectangle(104, 190, 114, 110, fill="white",outline="black")
-        rose.create_line(110, 110, 150, 35, width=3, fill="green2")
         
-                
+        xarrow = arrlen * math.cos(rhdg)
+        yarrow = arrlen * math.sin(rhdg)
+        rose.create_line(110-xarrow, 110+yarrow, 110 + xarrow, 110-yarrow, arrow=LAST, \
+            arrowshape=(20,25,5), \
+            width=8,fill="deep sky blue", tags="compass")
+# red half arrow, white rectangle, modern compass
+#         rose.create_line(110, 110, 110, 25, arrow=LAST, arrowshape=(20, 25, 5), \
+#             width=10, fill="red",tags="compass")
+#         rose.create_rectangle(104, 190, 114, 110, fill="white",outline="black")
+
+#         rose.create_line(110, 110, 150, 35, width=3, fill="green2")
+
+#         rose.create_line(110, 110, 110-xarrow, 110-yarrow, width=10, \
+#             fill="white",tags="compass")
+#         rose.create_line(110, 110, 110 + xarrow, 110 - yarrow, arrow=LAST, \
+#             arrowshape=(20, 25, 5), width=10, fill="red",tags="compass")
+# red/white traditional compass needle
+#         rose.create_line(110, 110, 110-xarrow, 110-yarrow, arrow=LAST, width=10, \
+#             arrowshape=(76, 77, 10), fill="white",tags="compass")
+#         rose.create_line(110, 110, 110 + xarrow, 110 - yarrow, arrow=LAST, \
+#             arrowshape=(76, 77, 10), width=10, fill="red",tags="compass")
+                        
         def scaler(scl):
             global mode
             mode = scl
@@ -634,10 +688,6 @@ class App:
             miscer.destroy()
         except:
             pass
-#         try:
-#             charter.destroy()
-#         except:
-#             pass
         
         if (val == 0):
             chart(mstr)
@@ -662,7 +712,8 @@ class App:
         lab = Label(lister, text="Select NAV path")
         lab.grid(row=0, column=0)
         lscroll = Scrollbar(lister, orient=VERTICAL)
-        lbox =Listbox(lister, height=4, selectmode=SINGLE,font=(NONE,15),yscrollcommand=lscroll.set)
+        lbox =Listbox(lister, height=4, selectmode=SINGLE,font=(NONE,15), \
+            yscrollcommand=lscroll.set)
         lbox.insert(END, "R03 - E.F. drive")
         lbox.insert(END, "R04 - hut row")
         lbox.insert(END, "W13 - canopy")
@@ -849,7 +900,6 @@ class App:
         while ser.in_waiting:
             inpt = ser.read(1).decode("utf-8")
             if (inpt == '{'):
-                self.ihead = 0
                 continue
             if (inpt == '}'):
                 self.piflag = True
@@ -902,7 +952,11 @@ class App:
         
 root = Tk()
 root.wm_title('Rover Controller')
-canvas= Canvas(root, width=950, height=430, bg='white')
+chartform = Frame(root)
+chartform.place(x=200, y=20)
+canvas= Canvas(chartform, width=600, height=600, bg='white')
+# canvas= Canvas(root, width=950, height=430, bg='white')
+
 canvas.pack()
 chart(root)
 
