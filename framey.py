@@ -271,6 +271,8 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP) # green
 GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP) # black
 GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP) # red
+GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # blue
+GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_UP) # yellow
 
 ser = serial.Serial(port='/dev/ttyS0',
     baudrate=9600,
@@ -284,10 +286,12 @@ strhdg = 0
 track = []
 lat = 0.0
 lon = 0.0
-
+pathflag = False
 butngreen = False
 butnred = False
-buthblack = False
+butnblack = False
+butnblue = False
+butnyellow = False
 arrlen = 75
 scale = 1.0
 # stlat = 2400
@@ -299,6 +303,7 @@ mx = 0
 my = 0
 try:
     pathfile = open("path.txt", 'r')
+    pathflag = True
 #     cdfline = pathfile.readline()
 #     while cdfline != '':
 #         line = cdfline.split(',')
@@ -912,9 +917,9 @@ class App:
 
 #   Listen to serial port for status info from rover pi ======================================
     def listen(self):
-        global green
-        global red
-        global black
+        global butngreen
+        global butnred
+        global butnblack
         global track
         global lat
         global lon
@@ -942,6 +947,20 @@ class App:
                 butnred = True
         else:
             butnred = False
+            
+        if (GPIO.input(7) == False):
+            if (butnblue == False):
+                self.dxmit('1')
+                butnblue = True
+        else:
+            butnblue = False
+            
+        if (GPIO.input(10) == False):
+            if (butnyellow == False):
+                self.dxmit('8')
+                butnyellow = True
+        else:
+            butnyellow = False
             
         while ser.in_waiting:
             inpt = ser.read(1).decode("utf-8")
@@ -987,7 +1006,6 @@ class App:
                         
                 elif (xchar == 's'):            # steering angle
                     self.steer.set(lbuffer)
-                    hdg = math.radians(float(lbuffer))
                         
                 elif (xchar == 'v'):            # speed
                     self.speed.set(lbuffer)
@@ -995,18 +1013,19 @@ class App:
             self.piflag = False
             self.ibuffer = ""
 
-        try:
-            cdfline = pathfile.readline()
-            if (cdfline != ''):
-                line = cdfline.split(',')
-                track = track + [[float(line[2]), float(line[3])]]
-                rhdg = math.radians(450 - float(line[8]))
-                strhdg = int(line[7])
-                chart(root)
-                guage(root)
+        if pathflag:
+            try:
+                cdfline = pathfile.readline()
+                if (cdfline != ''):
+                    line = cdfline.split(',')
+                    track = track + [[float(line[2]), float(line[3])]]
+                    rhdg = math.radians(450 - float(line[8]))
+                    strhdg = int(line[7])
+                    chart(root)
+                    guage(root)
 
-        except IOError:
-            pass
+            except IOError:
+                pass
 
         root.after(25, self.listen)
  
