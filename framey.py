@@ -86,7 +86,14 @@ waypts = [
     [ -644.70,  2261.65],     #30 office gap
     [ -653.41,  2229.63],     #31 EF rose gap
     ]
-
+# track = [
+#     [ -624.85,  2235.41],
+#     [ -644.70,  2261.65],     #30 office gap
+#     [ -684.91,  2276.04],     #29 EF middle - F
+#     [ -653.41,  2229.63],     #31 EF rose gap
+#     [ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
+#     [ -624.85,  2235.41],     #28 boat corner - F 201230 - refounded
+#     ]
 # personal survey 210506
 housepts = [
     [-521, 2074],
@@ -273,6 +280,7 @@ ser = serial.Serial(port='/dev/ttyS0',
     timeout=1
     )
 rhdg = math.radians(450 - 98)
+strhdg = 0
 track = []
 lat = 0.0
 lon = 0.0
@@ -289,6 +297,22 @@ stlon = 950
 mode = 1        #zoom in
 mx = 0
 my = 0
+try:
+    pathfile = open("path.txt", 'r')
+#     cdfline = pathfile.readline()
+#     while cdfline != '':
+#         line = cdfline.split(',')
+# #        print(line[2], line[3],line[6], line[7], line[8])
+#         track = track + [[float(line[2]), float(line[3])]]
+#         rhdg = math.radians(float(line[6]))
+#         cdfline = pathfile.readline()
+#     pathfile.close()
+# #    print(track)
+    
+except IOError:
+    pass
+# path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
+#             (dts,0 ,posAV[0], posAV[1], workAV[0], workAV[1], speed, steer, hdg, accgps))
 
 def chart(mstr):
     global arena
@@ -350,9 +374,27 @@ def chart(mstr):
         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
             fill='green2', outline='black', width=2, tags = 'forest')
 
-    llen = len(track)
+    tracks = usf2pix(track, scale, stlat, stlon)
+    llen = len(tracks)
     for i in range(0, llen, 2):
-        canvas.create_text(track[i], track[i+1], text='x', fill='blue', tags = 'path')
+        canvas.create_text(tracks[i], tracks[i+1], text='x', fill='blue', tags = 'path')
+
+def guage(mstr):
+    xarrow = arrlen * math.cos(rhdg)
+    yarrow = arrlen * math.sin(rhdg)
+    rose.delete('arrow')
+    rose.create_line(110-xarrow, 110+yarrow, 110 + xarrow, 110-yarrow, arrow=LAST, \
+        arrowshape=(20,25,5), width=8,fill="deep sky blue", tags="arrow")
+    if (strhdg < -1 or strhdg > 1):
+        strad = math.radians(strhdg)
+        xarrow = arrlen * math.cos(rhdg - strad)
+        yarrow = arrlen * math.sin(rhdg - strad)
+        if (strhdg > 0):
+            rose.create_line(110, 110, 110+xarrow, 110-yarrow, arrow = LAST, \
+                width = 3, fill = "red2", tags='arrow')
+        else:
+            rose.create_line(110, 110, 110+xarrow, 110-yarrow, arrow = LAST, \
+                width = 3, fill = "green2", tags='arrow')
 
 # convert array of USfeet pairs into linear array of pixels (in pairs)
 # slat, slon starting lat/lon usf from 34-14, -119-04
@@ -622,12 +664,12 @@ class App:
         rmax.grid(row=2,column=0)
 #
 # compass rose ============================================================
-        rosefrm = Frame(root)
-#        rosefrm.place(x = 705, y = 470)
-        rosefrm.place(x = 950, y = 20)
-        rose = Canvas(rosefrm, width=220, height=220, bg='gray85')
-        # center at 830, 580
-        rose.pack()
+#         rosefrm = Frame(root)
+# #        rosefrm.place(x = 705, y = 470)
+#         rosefrm.place(x = 950, y = 20)
+#         rose = Canvas(rosefrm, width=220, height=220, bg='gray85')
+#         # center at 830, 580
+#         rose.pack()
 #         rose.create_oval(25, 25, 195, 195, width=1, outline='black', fill="lemon chiffon")
         rose.create_oval(25, 25, 195, 195, width=1, outline='black', fill="black")
         ffont = Font(family="URW Chancery L", size=20, weight = "bold")
@@ -642,11 +684,12 @@ class App:
         rose.create_text(45, 180, text = "SW", font = efont, angle=135)
         rose.create_text(45, 40, text = "NW", font = efont, angle=45)
         
-        xarrow = arrlen * math.cos(rhdg)
-        yarrow = arrlen * math.sin(rhdg)
-        rose.create_line(110-xarrow, 110+yarrow, 110 + xarrow, 110-yarrow, arrow=LAST, \
-            arrowshape=(20,25,5), \
-            width=8,fill="deep sky blue", tags="compass")
+#         xarrow = arrlen * math.cos(rhdg)
+#         yarrow = arrlen * math.sin(rhdg)
+#         rose.create_line(110-xarrow, 110+yarrow, 110 + xarrow, 110-yarrow, arrow=LAST, \
+#             arrowshape=(20,25,5), \
+#             width=8,fill="deep sky blue", tags="compass")
+        
 # red half arrow, white rectangle, modern compass
 #         rose.create_line(110, 110, 110, 25, arrow=LAST, arrowshape=(20, 25, 5), \
 #             width=10, fill="red",tags="compass")
@@ -691,6 +734,7 @@ class App:
         
         if (val == 0):
             chart(mstr)
+            guage(mstr)
             
         if (val == 1):
             self.auto_turns(mstr)
@@ -874,6 +918,8 @@ class App:
         global track
         global lat
         global lon
+        global rhdg
+        global strhdg
         
         # but first, check tactile buttons
         if (GPIO.input(21) == False):
@@ -924,6 +970,7 @@ class App:
                         
                 elif (xchar == 'h'):
                     self.head.set(lbuffer)
+                    rhdg = math.radians(float(lbuffer))
                         
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
@@ -936,17 +983,31 @@ class App:
                         lat = float(lbuffer)
                     if (xchar == 'n'):
                         lon = float(lbuffer)
-                        track = track + [lon, lat]
+                        track = track + [[lon, lat]]
                         
                 elif (xchar == 's'):            # steering angle
                     self.steer.set(lbuffer)
+                    hdg = math.radians(float(lbuffer))
                         
                 elif (xchar == 'v'):            # speed
                     self.speed.set(lbuffer)
  
             self.piflag = False
- 
-        self.ibuffer = "" 
+            self.ibuffer = ""
+
+        try:
+            cdfline = pathfile.readline()
+            if (cdfline != ''):
+                line = cdfline.split(',')
+                track = track + [[float(line[2]), float(line[3])]]
+                rhdg = math.radians(450 - float(line[8]))
+                strhdg = int(line[7])
+                chart(root)
+                guage(root)
+
+        except IOError:
+            pass
+
         root.after(25, self.listen)
  
         
@@ -956,9 +1017,14 @@ chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
 # canvas= Canvas(root, width=950, height=430, bg='white')
-
 canvas.pack()
 chart(root)
+
+rosefrm = Frame(root)
+rosefrm.place(x = 950, y = 20)
+rose = Canvas(rosefrm, width=220, height=220, bg='gray85')
+rose.pack()
+guage(root)
 
 app = App(root)
 root.geometry("1280x800+0+0")
