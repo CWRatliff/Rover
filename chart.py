@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter.font import Font
 
 # property taken from 2018 WM Survey DWG
 proppts = [
@@ -78,6 +79,10 @@ root = Tk()
 root.wm_title('350 VdM Chart')
 root.geometry("1024x600+0+0")
 
+ffont = Font(family="URW Chancery L", size=20, weight = "bold")
+efont = Font(family="URW Chancery L", size=16)
+button1 = Button(root, text="NEWS", font=ffont)
+button1.pack()
 # convert array of USfeet pairs into linear array of pixels (in pairs)
 # slat, slon starting lat/lon usf from 34-14, -119-04
 def usf2pix(usf, gscale, slat, slon):
@@ -115,7 +120,9 @@ lunge = canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='blac
 llen = len(wpts)
 for i in range(0, llen, 2):
     canvas.create_rectangle(wpts[i], wpts[i+1], wpts[i]+2, wpts[i+1]+2, fill='blue', outline='blue')
-
+canvas.create_line(100,100,200,200,arrow=LAST,arrowshape=(20,25,5),width=4,fill="blue")
+canvas.create_text(220, 220, text="NEWS", font = ffont, angle=90)
+canvas.create_text(275, 275, text = "NW", font = efont, angle=315)
 # enlarge button array ===================================================
 zoom = Frame(root)
 zoom.place(x=975, y=200)
@@ -135,6 +142,13 @@ def scaler(scl):
     global mode
     mode = scl
 #     print (mode)
+def bpress(event):
+    global mx
+    global my
+    mx = event.x
+    my = event.y
+    print('button press')
+    
     
 def mouse(event):
     global mx
@@ -151,9 +165,9 @@ def mouse(event):
     y = event.y - my
     stlon += y/scale
     
-#     print("move")
-#     print(str(event.x)+" "+str(event.y))
-#     print(str(int(stlat))+" "+str(int(stlon)))
+    print("move")
+    print(str(event.x)+" "+str(event.y))
+    print(str(int(stlat))+" "+str(int(stlon)))
     canvas.move(plot, x, y)
     canvas.move(rez, x, y)
     canvas.move(bdrv, x, y)
@@ -183,9 +197,9 @@ def taptap(event):
         stlon = stlon + (event.y/scale)/2
         scale *= 2/3
         
-#     print("zoom")
-#     print(str(event.x)+" "+str(event.y))
-#     print(str(int(stlat))+" "+str(int(stlon)))
+    print("zoom")
+    print(str(event.x)+" "+str(event.y))
+    print(str(int(stlat))+" "+str(int(stlon)))
     canvas.delete(rez)
     canvas.delete(plot)
     points = usf2pix(proppts, scale, stlat, stlon)
@@ -199,4 +213,6 @@ def taptap(event):
     
 canvas.bind('<B1-Motion>', mouse)
 canvas.bind('<Double-Button-1>', taptap)
+canvas.bind('<Button-1>', bpress)
+
 root.mainloop()
