@@ -758,10 +758,12 @@ try:
                             ilonsec = x
                             posAV = vsec2ft(ilatsec, ilonsec)
                             if (not wptflag):
-                                cstr = "{lt%5.1f} " % posAV[0]
+                                cstr = "{ln%5.1f} " % posAV[0]
                                 sendit(cstr)
-                                cstr = "{ln%5.1f} " % posAV[1]
+                                logit(cstr)
+                                cstr = "{lt%5.1f} " % posAV[1]
                                 sendit(cstr)
+                                logit(cstr)
                             gpsEpoch = time.time()
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
@@ -843,9 +845,9 @@ try:
                     workAV = [xEst[0, 0], xEst[1, 0]]   # see BOT 3:41 for diagram
                     filterRV = vsub(workAV, startAV)
                     vprint("Kalman pos vec", filterRV)
-                    cstr = "{lt%5.1f} " % workAV[0]
+                    cstr = "{ln%5.1f} " % workAV[0]
                     sendit(cstr)
-                    cstr = "{ln%5.1f} " % workAV[1]
+                    cstr = "{lt%5.1f} " % workAV[1]
                     sendit(cstr)
                     pathRV = vsub(trackRV, filterRV)      # to wpt end
                     dtg = vmag(pathRV)
