@@ -939,6 +939,61 @@ class App:
         global rhdg
         global strhdg
         
+        while ser.in_waiting:
+            inpt = ser.read(1).decode("utf-8")
+            if (inpt == '{'):
+                self.ibuffer = ""
+                continue
+            if (inpt == '}'):
+                self.piflag = True
+                break;
+            self.ibuffer = self.ibuffer + inpt
+
+           
+        if self.piflag:
+            if (len(self.ibuffer) >= 3):
+                
+                xchar = self.ibuffer[0]
+                lbuffer = self.ibuffer[1:]
+                print (lbuffer)
+
+                
+                if (xchar == 'a'):               # status
+                    self.acc.set(lbuffer)
+                        
+                elif (xchar == 'c'):             # course to wpt
+                    self.ctg.set(lbuffer)
+                        
+                elif (xchar == 'd'):             # distance to wpt
+                    self.dtg.set(lbuffer)
+                        
+                elif (xchar == 'h'):
+                    self.head.set(lbuffer)
+                    rhdg = math.radians(float(lbuffer))
+                        
+                elif (xchar == 'l'):
+                    xchar = lbuffer[0]
+                    lbuffer = lbuffer[1:]
+                    if (xchar == 'a'):          # GPS accuracy
+                        self.acc.set(lbuffer)
+                    if (xchar == 'x'):          # x-track error
+                        self.xte.set(lbuffer)
+                    if (xchar == 't'):
+                        lat = float(lbuffer)
+                    if (xchar == 'n'):
+                        lon = float(lbuffer)
+                        track = track + [[lon, lat]]
+ #                       print (track)
+                        
+                elif (xchar == 's'):            # steering angle
+                    self.steer.set(lbuffer)
+                        
+                elif (xchar == 'v'):            # speed
+                    self.speed.set(lbuffer)
+ 
+            self.piflag = False
+            self.ibuffer = ""
+
         # but first, check tactile buttons
         if (GPIO.input(21) == False):
             if (butngreen == False):
@@ -963,7 +1018,7 @@ class App:
             
         if (GPIO.input(7) == False):
             if (butnblue == False):
-                self.dxmit('1')
+                self.dxmit('2')
                 butnblue = True
         else:
             butnblue = False
@@ -975,57 +1030,6 @@ class App:
         else:
             butnyellow = False
             
-        while ser.in_waiting:
-            inpt = ser.read(1).decode("utf-8")
-            if (inpt == '{'):
-                continue
-            if (inpt == '}'):
-                self.piflag = True
-                break;
-            self.ibuffer = self.ibuffer + inpt
-
-           
-        if self.piflag:
-            if (len(self.ibuffer) >= 3):
-                
-                xchar = self.ibuffer[0]
-                lbuffer = self.ibuffer[1:]
-                
-                if (xchar == 'a'):               # status
-                    self.status.set(lbuffer)
-                        
-                elif (xchar == 'c'):             # course to wpt
-                    self.ctg.set(lbuffer)
-                        
-                elif (xchar == 'd'):             # distance to wpt
-                    self.dtg.set(lbuffer)
-                        
-                elif (xchar == 'h'):
-                    self.head.set(lbuffer)
-                    rhdg = math.radians(float(lbuffer))
-                        
-                elif (xchar == 'l'):
-                    xchar = lbuffer[0]
-                    lbuffer = lbuffer[1:]
-                    if (xchar == 'a'):          # GPS accuracy
-                        self.acc.set(lbuffer)
-                    if (xchar == 'x'):          # x-track error
-                        self.xte.set(lbuffer)
-                    if (xchar == 'l'):
-                        lat = float(lbuffer)
-                    if (xchar == 'n'):
-                        lon = float(lbuffer)
-                        track = track + [[lon, lat]]
-                        
-                elif (xchar == 's'):            # steering angle
-                    self.steer.set(lbuffer)
-                        
-                elif (xchar == 'v'):            # speed
-                    self.speed.set(lbuffer)
- 
-            self.piflag = False
-            self.ibuffer = ""
-
         if pathflag:
             try:
                 cdfline = pathfile.readline()
