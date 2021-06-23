@@ -504,14 +504,14 @@ def simple_commands(schr):
             max_turn(right_limit, speed)
 
     elif schr == 'L':
-        pan -= 5
+        pan += 5
         robot.sensor_pan(pan)
         print("pan left")
     elif schr == 'C':
         pan = 0
         robot.sensor_pan(0)
     elif schr == 'R':
-        pan += 5
+        pan -= 5
         robot.sensor_pan(pan)
     elif schr == 'U':
         pass
