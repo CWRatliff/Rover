@@ -378,7 +378,7 @@ def guage(mstr):
         strad = math.radians(strhdg)
         xarrow = arrlen * math.cos(rhdg - strad)
         yarrow = arrlen * math.sin(rhdg - strad)
-        if (strhdg > 0):
+        if (strhdg < 0):
             rose.create_line(110, 110, 110+xarrow, 110-yarrow, arrow = LAST, \
                 width = 3, fill = "red2", tags='arrow')
         else:
@@ -893,7 +893,7 @@ class App:
                 
                 xchar = self.ibuffer[0]
                 lbuffer = self.ibuffer[1:]
-                print (lbuffer)
+                print (self.ibuffer)
                 
                 if (xchar == 'a'):               # status
                     self.acc.set(lbuffer)
@@ -906,7 +906,7 @@ class App:
                         
                 elif (xchar == 'h'):
                     self.head.set(lbuffer)
-                    rhdg = math.radians(float(lbuffer))
+                    rhdg = math.radians(450 - float(lbuffer))
                     guage(root)
                         
                 elif (xchar == 'l'):
