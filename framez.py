@@ -368,6 +368,10 @@ def chart(mstr):
     for i in range(0, llen, 2):
         canvas.create_text(tracks[i], tracks[i+1], text='x', fill='blue', tags = 'path')
 
+def xspot(mstr, xlon, xlat):
+    spot = usf2pix([[xlon, xlat]], scale, stlat, stlon)
+    canvas.create_text(spot[0], spot[1], text='x', fill='blue', tags = 'path')
+          
 def guage(mstr):
     xarrow = arrlen * math.cos(rhdg)
     yarrow = arrlen * math.sin(rhdg)
@@ -893,7 +897,7 @@ class App:
                 
                 xchar = self.ibuffer[0]
                 lbuffer = self.ibuffer[1:]
-                print (self.ibuffer)
+#                print (self.ibuffer)
                 
                 if (xchar == 'a'):               # status
                     self.acc.set(lbuffer)
@@ -921,7 +925,8 @@ class App:
                     if (xchar == 'n'):
                         lon = float(lbuffer)
                         # TBD dont append if same lat/lon
-                        track.append([lon, lat])
+                        # track.append([lon, lat])
+                        xspot(root, lon, lat)
                         
                 elif (xchar == 's'):            # steering angle
                     self.steer.set(lbuffer)
@@ -975,10 +980,11 @@ class App:
                 cdfline = pathfile.readline()
                 if (cdfline != ''):
                     line = cdfline.split(',')
-                    track.append([float(line[2]), float(line[3])])
+                    xspot(root, float(line[2]), float(line[3]))
+                    # track.append([float(line[2]), float(line[3])])
                     rhdg = math.radians(450 - float(line[8]))
                     strhdg = int(line[7])
-                    chart(root)
+#                    chart(root)
                     guage(root)
 
             except IOError:
