@@ -914,7 +914,7 @@ try:
                             logit("Standby")
                             sendit("{d----}")
                             sendit("{c----}")
-                            sendit("{ln----}")
+                            sendit("{lx----}")
                             wptflg = False
 #                            rteflag = False
                             odometer(speed)
