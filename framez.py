@@ -786,7 +786,6 @@ class App:
     # cancel AUTO mode
     def arevert(self):
         auto.destroy()
-        i = self.rc.Open()
         self.mode.set(0)
         self.exmit('0')
            
@@ -923,7 +922,10 @@ class App:
                     if (xchar == 't'):
                         lat = float(lbuffer)
                     if (xchar == 'n'):
-                        lon = float(lbuffer)
+                        try:
+                            lon = float(lbuffer)
+                        except ValueError:
+                            pass
                         # TBD dont append if same lat/lon
                         # track.append([lon, lat])
                         xspot(root, lon, lat)
