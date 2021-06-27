@@ -747,6 +747,23 @@ try:
                     except ValueError:
                         print("bad data" + cbuff)
 #======================================================================
+                elif xchr == "G":          # goto lat/lon command
+                    xchr = cbuff[2]
+                    try:
+                        x = float(cbuff[3:msglen-1])
+                        if (xchr == 'T'):
+                            latsec = x
+
+                        elif xchr == 'N':
+                            lonsec = x
+                            waypts[1] = [lonsec, latsec]
+                            startAV = posAV
+                            new_waypoint(1)
+                            
+                    except ValueError:
+                        pass
+
+#======================================================================
                 elif xchr == 'L':                   #lat/long input from GPS h/w
                     xchr = cbuff[2]
                     try:
@@ -915,7 +932,7 @@ try:
                             sendit("{d----}")
                             sendit("{c----}")
                             sendit("{lx----}")
-                            wptflg = False
+                            wptflag = False
 #                            rteflag = False
                             odometer(speed)
                             speed = 0

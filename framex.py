@@ -468,10 +468,10 @@ def taptap(event):
         pnt = usf2pix([[lon, lat]], scale, stlat, stlon)
         canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
             fill='blue',outline='blue')
-        msg = '{GL%7.2f}' % lon
+        msg = '{GN%7.2f}' % lon
         ser.write(msg.encode('utf-8'))
         print(msg)
-        msg = '{GN%7.2f}' % lat
+        msg = '{GL%7.2f}' % lat
         ser.write(msg.encode('utf-8'))
         print(msg)
         return
