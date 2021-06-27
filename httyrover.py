@@ -758,6 +758,8 @@ try:
                             lonsec = x
                             waypts[1] = [lonsec, latsec]
                             startAV = posAV
+                            route = [wpt, 0]
+                            rtseg = 0
                             new_waypoint(1)
                             
                     except ValueError:
