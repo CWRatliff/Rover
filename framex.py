@@ -471,7 +471,7 @@ def taptap(event):
         msg = '{GN%7.2f}' % lon
         ser.write(msg.encode('utf-8'))
         print(msg)
-        msg = '{GL%7.2f}' % lat
+        msg = '{GT%7.2f}' % lat
         ser.write(msg.encode('utf-8'))
         print(msg)
         return

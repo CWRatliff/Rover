@@ -11,6 +11,7 @@ proppts = [
     [-862, 2309]
     ]
 
+# monopod survey 5/27/21
 horsepts = [
     [-469.81, 1928.73],
     [-488.51, 1903.72],
@@ -86,14 +87,7 @@ waypts = [
     [ -644.70,  2261.65],     #30 office gap
     [ -653.41,  2229.63],     #31 EF rose gap
     ]
-# track = [
-#     [ -624.85,  2235.41],
-#     [ -644.70,  2261.65],     #30 office gap
-#     [ -684.91,  2276.04],     #29 EF middle - F
-#     [ -653.41,  2229.63],     #31 EF rose gap
-#     [ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
-#     [ -624.85,  2235.41],     #28 boat corner - F 201230 - refounded
-#     ]
+
 # personal survey 210506
 housepts = [
     [-521, 2074],
@@ -170,6 +164,7 @@ frontpts = [
     [-755, 2242],
     [-820, 2321]
     ]
+# monopod 5/17-20/21
 eftrees = [
     [-697.20, 2341.37],
     [-792.16, 2320.76],
@@ -219,7 +214,6 @@ eftrees = [
     [-656.20, 2289.77],
     [-660.87, 2305.83],
     [-648.90, 2324.98]
-#    [-776.52, 2303.85]
     ]
 wbtrees = [
     [-760.29,2209.29],
@@ -274,14 +268,14 @@ GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP) # red
 GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # blue
 GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_UP) # yellow
 
-ser = serial.Serial(port='/dev/ttyS0',
+ser = serial.Serial(port='/dev/ttyS0',      #xbee to rover
     baudrate=9600,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
     bytesize=serial.EIGHTBITS,
     timeout=1
     )
-rhdg = math.radians(450 - 98)
+rhdg = math.radians(450 - 98)       # x-y initial heading to compass
 strhdg = 0
 track = []
 lat = 0.0
@@ -298,26 +292,17 @@ scale = 1.0
 # stlon = -440
 stlat = 2400
 stlon = 950
-mode = 1        #zoom in
+mode = 0        # 0:move, 2:zoom in, 3:zoom out, 4:goto
 mx = 0
 my = 0
+
+# ==============================================================================
 try:
     pathfile = open("path.txt", 'r')
     pathflag = True
-#     cdfline = pathfile.readline()
-#     while cdfline != '':
-#         line = cdfline.split(',')
-# #        print(line[2], line[3],line[6], line[7], line[8])
-#         track = track + [[float(line[2]), float(line[3])]]
-#         rhdg = math.radians(float(line[6]))
-#         cdfline = pathfile.readline()
-#     pathfile.close()
-# #    print(track)
     
 except IOError:
     pass
-# path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
-#             (dts,0 ,posAV[0], posAV[1], workAV[0], workAV[1], speed, steer, hdg, accgps))
 
 def chart(mstr):
     global arena
@@ -330,7 +315,6 @@ def chart(mstr):
     global rez
 
     points = usf2pix(proppts, scale, stlat, stlon)
-#    plot = canvas.create_polygon(points, outline='black', fill='green2', width=1)
     plot = canvas.create_polygon(points, outline='black', fill='lemon chiffon', width=1)
     horse = usf2pix(horsepts, scale, stlat, stlon)
     arena = canvas.create_polygon(horse, outline='black', fill='gold', width=1)
@@ -384,6 +368,10 @@ def chart(mstr):
     for i in range(0, llen, 2):
         canvas.create_text(tracks[i], tracks[i+1], text='x', fill='blue', tags = 'path')
 
+def xspot(mstr, xlon, xlat):
+    spot = usf2pix([[xlon, xlat]], scale, stlat, stlon)
+    canvas.create_text(spot[0], spot[1], text='x', fill='blue', tags = 'path')
+          
 def guage(mstr):
     xarrow = arrlen * math.cos(rhdg)
     yarrow = arrlen * math.sin(rhdg)
@@ -394,7 +382,7 @@ def guage(mstr):
         strad = math.radians(strhdg)
         xarrow = arrlen * math.cos(rhdg - strad)
         yarrow = arrlen * math.sin(rhdg - strad)
-        if (strhdg > 0):
+        if (strhdg < 0):
             rose.create_line(110, 110, 110+xarrow, 110-yarrow, arrow = LAST, \
                 width = 3, fill = "red2", tags='arrow')
         else:
@@ -411,21 +399,49 @@ def usf2pix(usf, gscale, slat, slon):
         pix.insert(0, int(gscale * (slon+x[0])))
     return pix
 
+# having an event handler for button down as well as button release may look redundant
+# but touch and mouse event sequences are not identical, to wit: touch gives movement followed
+# by button down, mouse gived button then movement
+
 def bpress(event):
     global mx
     global my
     mx = event.x
     my = event.y
-#    print('button press')
+    
+def bupress(event):
+    global mx
+    global my
+    global mode
+    mx = 0
+    my = 0
+    if (mode == 3):
+        lat = stlat - event.y/scale # North: y coord East:x coord
+        lon = event.x/scale - stlon
+#        print (str(lat)+"/"+str(lon))
+        pnt = usf2pix([[lon, lat]], scale, stlat, stlon)
+        canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
+            fill='blue',outline='blue')
+        msg = '{GN%7.2f}' % lon
+        ser.write(msg.encode('utf-8'))
+        print(msg)
+        msg = '{GT%7.2f}' % lat
+        ser.write(msg.encode('utf-8'))
+        print(msg)
+        mode = 0
     
 def mouse(event):
     global mx
     global my
     global stlat
     global stlon
-    if (mode == 0):
+    if (mode == 3):
         return
 
+    if (mx == 0 and my == 0):
+        mx = event.x
+        my = event.y
+        return
     x = event.x - mx
     y = event.y - my
 #     stlat += x/scale  # North:x coord, East:y coord
@@ -433,7 +449,7 @@ def mouse(event):
     stlat += y/scale
     stlon += x/scale
     
-#     print("move")
+#    print("move")
 #     print(str(event.x)+" "+str(event.y))
 #     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.move(plot, x, y)
@@ -457,30 +473,16 @@ def taptap(event):
     global plot
     global arena
     global lunge
+    global mode
     
-    if (mode == 0):
-#         lat = stlat - event.x/scale  # North:x coord, East:y coord
-#         lon = stlon - event.y/scale
-        lat = stlat - event.y/scale # North: y coord East:x coord
-        lon = event.x/scale - stlon
-#        print (str(lat)+"/"+str(lon))
-        pnt = usf2pix([[lon, lat]], scale, stlat, stlon)
-        canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
-            fill='blue',outline='blue')
-        msg = '{GL%7.2f}' % lon
-        ser.write(msg.encode('utf-8'))
-        print(msg)
-        msg = '{GN%7.2f}' % lat
-        ser.write(msg.encode('utf-8'))
-        print(msg)
-        return
-    if mode > 0:
+
+    if mode == 1:
 #         stlat = stlat - (event.x/scale)/3  # North:x coord, East:y coord
 #         stlon = stlon - (event.y/scale)/3
         stlat = stlat - (event.y/scale)/3
         stlon = stlon - (event.x/scale)/3
         scale *= 1.5
-    else:
+    if mode == 2:
 #         stlat = stlat + (event.x/scale)/2  # North:x coord, East:y coord
 #         stlon = stlon + (event.y/scale)/2
         stlat = stlat + (event.y/scale)/2
@@ -499,6 +501,7 @@ def taptap(event):
     canvas.delete('forest')
     canvas.delete('path')
     chart(root)
+    mode = 0
 
 class App:
     
@@ -560,15 +563,6 @@ class App:
               borderwidth=1,relief="solid",\
               textvariable=self.acc).grid(row=7,column=1)
         
-
-#         # STOP button ==================================================
-#         estop=Frame(master)
-#         estop.place(x=20, y=650)
-# #        sb = Button(estop, text="STOP", command= lambda:self.dxmit('0'))
-#         sb = Button(estop, text="MARK", command= lambda:self.txmit('2'))
-#         sb.config(width=3,height=2,font=(None,25),bg="red",fg="white",borderwidth=4)
-#         sb.grid(row=0,column=0)
-
         # Steering button array ========================================
         steer = Frame(master)
         steer.place(x=550,y=700)
@@ -618,7 +612,6 @@ class App:
             bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=6,column=0)
         
-
         # mode menu ===========================================================
         radio = Frame(master)
         radio.place(x=20, y=20)
@@ -646,36 +639,29 @@ class App:
         rb5.config(width = 6, height = 2, font=(NONE,15))
         rb5.grid(row=4, column=0)
         
-#         rb6 = Radiobutton(radio, text="Chart", variable=self.mode, value = 5, \
-#             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
-#         rb6.config(width = 6, height = 2, font=(NONE,15))
-#         rb6.grid(row=5, column=0)
 # enlarge button array ===================================================
         zoom = Frame(root)
-        zoom.place(x=1200, y=200)
+        zoom.place(x=825, y=200)
         fmax = Button(zoom, text = "+", command = lambda:scaler(1))
         fmax.config(width = 1, height = 1, font=(NONE,15), \
             bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
-        rmax = Button(zoom, text = "-", command = lambda:scaler(-1))
+        rmax = Button(zoom, text = "-", command = lambda:scaler(2))
         rmax.config(width = 1, height = 1, font=(NONE,15), \
             bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=1,column=0)
                 
-        rmax = Button(zoom, text = "X", command = lambda:scaler(0))
+        rmax = Button(zoom, text = "X", command = lambda:scaler(3))
         rmax.config(width = 1, height = 1, font=(NONE,15), \
             bg="deep sky blue",fg="black",borderwidth=4)
         rmax.grid(row=2,column=0)
+        
+        def scaler(scl):
+            global mode
+            mode = scl
 #
 # compass rose ============================================================
-#         rosefrm = Frame(root)
-# #        rosefrm.place(x = 705, y = 470)
-#         rosefrm.place(x = 950, y = 20)
-#         rose = Canvas(rosefrm, width=220, height=220, bg='gray85')
-#         # center at 830, 580
-#         rose.pack()
-#         rose.create_oval(25, 25, 195, 195, width=1, outline='black', fill="lemon chiffon")
         rose.create_oval(25, 25, 195, 195, width=1, outline='black', fill="black")
         ffont = Font(family="URW Chancery L", size=20, weight = "bold")
         efont = Font(family="URW Chancery L", size=16)
@@ -689,34 +675,6 @@ class App:
         rose.create_text(45, 180, text = "SW", font = efont, angle=135)
         rose.create_text(45, 40, text = "NW", font = efont, angle=45)
         
-#         xarrow = arrlen * math.cos(rhdg)
-#         yarrow = arrlen * math.sin(rhdg)
-#         rose.create_line(110-xarrow, 110+yarrow, 110 + xarrow, 110-yarrow, arrow=LAST, \
-#             arrowshape=(20,25,5), \
-#             width=8,fill="deep sky blue", tags="compass")
-        
-# red half arrow, white rectangle, modern compass
-#         rose.create_line(110, 110, 110, 25, arrow=LAST, arrowshape=(20, 25, 5), \
-#             width=10, fill="red",tags="compass")
-#         rose.create_rectangle(104, 190, 114, 110, fill="white",outline="black")
-
-#         rose.create_line(110, 110, 150, 35, width=3, fill="green2")
-
-#         rose.create_line(110, 110, 110-xarrow, 110-yarrow, width=10, \
-#             fill="white",tags="compass")
-#         rose.create_line(110, 110, 110 + xarrow, 110 - yarrow, arrow=LAST, \
-#             arrowshape=(20, 25, 5), width=10, fill="red",tags="compass")
-# red/white traditional compass needle
-#         rose.create_line(110, 110, 110-xarrow, 110-yarrow, arrow=LAST, width=10, \
-#             arrowshape=(76, 77, 10), fill="white",tags="compass")
-#         rose.create_line(110, 110, 110 + xarrow, 110 - yarrow, arrow=LAST, \
-#             arrowshape=(76, 77, 10), width=10, fill="red",tags="compass")
-                        
-        def scaler(scl):
-            global mode
-            mode = scl
-        #     print (mode)
-                
     # destroy old frames when changing mode via radiobuttons ====================
     def mode_set(self, mstr, val):
 
@@ -766,13 +724,12 @@ class App:
         lbox.insert(END, "R03 - E.F. drive")
         lbox.insert(END, "R04 - hut row")
         lbox.insert(END, "W13 - canopy")
-        lbox.insert(END, "W14 - drivewautoay center")
+        lbox.insert(END, "W14 - driveway center")
         lbox.insert(END, "W23 - trash cans")
         lbox.insert(END, "W27 - rose bush")
         lbox.insert(END, "W29 - E,F, middle")
         lbox.insert(END, "W30 - office gap")
-
-        lbox.insert(END, "W23 - rose passage")
+        lbox.insert(END, "W31 - rose passage")
 
         lbox.grid(row=1, column=0)
         lscroll.config(width=25, command=lbox.yview)
@@ -830,7 +787,6 @@ class App:
     # cancel AUTO mode
     def arevert(self):
         auto.destroy()
-        i = self.rc.Open()
         self.mode.set(0)
         self.exmit('0')
            
@@ -867,7 +823,7 @@ class App:
         pntlt.destroy()
         self.mode.set(0)
         
-    # misc commands
+    # misc commands ==========================================================
     def misc(self, mstr):
         global miscer
         miscer = Frame(mstr)
@@ -892,7 +848,6 @@ class App:
         msb4.config(width=6,height=4,font=(None,15),bg="red",fg="black")
         msb4.grid(row=6,column=0)
 
-        
     def dxmit(self, key):
         self.msg = '{D' + key + '}'
         ser.write(self.msg.encode('utf-8'))
@@ -912,21 +867,82 @@ class App:
         self.msg = '{T' + key + '}'
         ser.write(self.msg.encode('utf-8'))
         print(self.msg)
-#        self.data.destroy()
 
-
-#   Listen to serial port for status info from rover pi ======================================
+#   Listen to serial port for status info from rover pi ================================
     def listen(self):
         global butngreen
         global butnred
         global butnblack
+        global butnblue
+        global butnyellow
         global track
         global lat
         global lon
         global rhdg
         global strhdg
         
-        # but first, check tactile buttons
+        while ser.in_waiting:
+            inpt = ser.read(1).decode("utf-8")
+            if (inpt == '{'):
+                self.ibuffer = ""
+                continue
+            if (inpt == '}'):
+                self.piflag = True
+                break;
+            self.ibuffer = self.ibuffer + inpt
+
+           
+        if self.piflag:
+            if (len(self.ibuffer) >= 3):
+                
+                xchar = self.ibuffer[0]
+                lbuffer = self.ibuffer[1:]
+#                print (self.ibuffer)
+                
+                if (xchar == 'a'):               # status
+                    self.status.set(lbuffer)
+                        
+                elif (xchar == 'c'):             # course to wpt
+                    self.ctg.set(lbuffer)
+                        
+                elif (xchar == 'd'):             # distance to wpt
+                    self.dtg.set(lbuffer)
+                        
+                elif (xchar == 'h'):
+                    self.head.set(lbuffer)
+                    rhdg = math.radians(450 - float(lbuffer))
+                    guage(root)
+                        
+                elif (xchar == 'l'):
+                    xchar = lbuffer[0]
+                    lbuffer = lbuffer[1:]
+                    if (xchar == 'a'):          # GPS accuracy
+                        self.acc.set(lbuffer)
+                    if (xchar == 'x'):          # x-track error
+                        self.xte.set(lbuffer)
+                    if (xchar == 't'):
+                        lat = float(lbuffer)
+                    if (xchar == 'n'):
+                        try:
+                            lon = float(lbuffer)
+                        except ValueError:
+                            pass
+                        # TBD dont append if same lat/lon
+                        # track.append([lon, lat])
+                        xspot(root, lon, lat)
+                        
+                elif (xchar == 's'):            # steering angle
+                    self.steer.set(lbuffer)
+                    strhdg = int(lbuffer)
+                    guage(root)
+                        
+                elif (xchar == 'v'):            # speed
+                    self.speed.set(lbuffer)
+ 
+            self.piflag = False
+            self.ibuffer = ""
+
+        # check tactile buttons
         if (GPIO.input(21) == False):
             if (butngreen == False):
                 self.dxmit('6')
@@ -950,7 +966,7 @@ class App:
             
         if (GPIO.input(7) == False):
             if (butnblue == False):
-                self.dxmit('1')
+                self.dxmit('2')
                 butnblue = True
         else:
             butnblue = False
@@ -962,80 +978,28 @@ class App:
         else:
             butnyellow = False
             
-        while ser.in_waiting:
-            inpt = ser.read(1).decode("utf-8")
-            if (inpt == '{'):
-                continue
-            if (inpt == '}'):
-                self.piflag = True
-                break;
-            self.ibuffer = self.ibuffer + inpt
-
-           
-        if self.piflag:
-            if (len(self.ibuffer) >= 3):
-                
-                xchar = self.ibuffer[0]
-                lbuffer = self.ibuffer[1:]
-                
-                if (xchar == 'a'):               # status
-                    self.status.set(lbuffer)
-                        
-                elif (xchar == 'c'):             # course to wpt
-                    self.ctg.set(lbuffer)
-                        
-                elif (xchar == 'd'):             # distance to wpt
-                    self.dtg.set(lbuffer)
-                        
-                elif (xchar == 'h'):
-                    self.head.set(lbuffer)
-                    rhdg = math.radians(float(lbuffer))
-                        
-                elif (xchar == 'l'):
-                    xchar = lbuffer[0]
-                    lbuffer = lbuffer[1:]
-                    if (xchar == 'a'):          # GPS accuracy
-                        self.acc.set(lbuffer)
-                    if (xchar == 'x'):          # x-track error
-                        self.xte.set(lbuffer)
-                    if (xchar == 'l'):
-                        lat = float(lbuffer)
-                    if (xchar == 'n'):
-                        lon = float(lbuffer)
-                        track = track + [[lon, lat]]
-                        
-                elif (xchar == 's'):            # steering angle
-                    self.steer.set(lbuffer)
-                        
-                elif (xchar == 'v'):            # speed
-                    self.speed.set(lbuffer)
- 
-            self.piflag = False
-            self.ibuffer = ""
-
         if pathflag:
             try:
                 cdfline = pathfile.readline()
                 if (cdfline != ''):
                     line = cdfline.split(',')
-                    track = track + [[float(line[2]), float(line[3])]]
+                    xspot(root, float(line[2]), float(line[3]))
+                    # track.append([float(line[2]), float(line[3])])
                     rhdg = math.radians(450 - float(line[8]))
                     strhdg = int(line[7])
-                    chart(root)
+#                    chart(root)
                     guage(root)
 
             except IOError:
                 pass
 
         root.after(25, self.listen)
- 
-        
+
 root = Tk()
 root.wm_title('Rover Controller')
 chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
-# canvas= Canvas(root, width=950, height=430, bg='white')
 canvas.pack()
 chart(root)
 
@@ -1052,5 +1016,6 @@ root.after(25, app.listen)
 canvas.bind('<B1-Motion>', mouse)
 canvas.bind('<Double-Button-1>', taptap)
 canvas.bind('<Button-1>', bpress)
+canvas.bind('<ButtonRelease>', bupress)
 
 root.mainloop()
