@@ -882,7 +882,10 @@ class App:
         global strhdg
         
         while ser.in_waiting:
-            inpt = ser.read(1).decode("utf-8")
+            try:
+                inpt = ser.read(1).decode("utf-8")
+            except UnicodeDecodeError:
+                continue
             if (inpt == '{'):
                 self.ibuffer = ""
                 continue
