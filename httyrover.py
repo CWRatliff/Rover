@@ -751,15 +751,16 @@ try:
                     xchr = cbuff[2]
                     try:
                         x = float(cbuff[3:msglen-1])
-                        if (xchr == 'T'):
-                            latsec = x
-
-                        elif xchr == 'N':
+                        if (xchr == 'N'):
                             lonsec = x
+
+                        elif xchr == 'T':
+                            latsec = x
                             waypts[1] = [lonsec, latsec]
                             startAV = posAV
-                            route = [wpt, 0]
+                            route = [1, 0]
                             rtseg = 0
+                            wpt = 1
                             new_waypoint(1)
                             
                     except ValueError:
