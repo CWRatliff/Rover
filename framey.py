@@ -463,7 +463,7 @@ def mouse(event):
     mx = event.x
     my = event.y
 
-def taptap(event):
+def zoomer(inout):
     global stlat
     global stlon
     global scale
@@ -476,17 +476,13 @@ def taptap(event):
     global mode
     
 
-    if mode == 1:
-#         stlat = stlat - (event.x/scale)/3  # North:x coord, East:y coord
-#         stlon = stlon - (event.y/scale)/3
-        stlat = stlat - (event.y/scale)/3
-        stlon = stlon - (event.x/scale)/3
+    if inout == 1:
+        stlat = stlat - (300/scale)/3
+        stlon = stlon - (300/scale)/3
         scale *= 1.5
-    if mode == 2:
-#         stlat = stlat + (event.x/scale)/2  # North:x coord, East:y coord
-#         stlon = stlon + (event.y/scale)/2
-        stlat = stlat + (event.y/scale)/2
-        stlon = stlon + (event.x/scale)/2
+    if inout == 2:
+        stlat = stlat + (300/scale)/2
+        stlon = stlon + (300/scale)/2
         scale *= 2/3
         
 #     print("zoom")
@@ -642,12 +638,12 @@ class App:
 # enlarge button array ===================================================
         zoom = Frame(root)
         zoom.place(x=825, y=200)
-        fmax = Button(zoom, text = "+", command = lambda:scaler(1))
+        fmax = Button(zoom, text = "+", command = lambda:zoomer(1))
         fmax.config(width = 1, height = 1, font=(NONE,15), \
             bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
-        rmax = Button(zoom, text = "-", command = lambda:scaler(2))
+        rmax = Button(zoom, text = "-", command = lambda:zoomer(2))
         rmax.config(width = 1, height = 1, font=(NONE,15), \
             bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=1,column=0)
@@ -1017,7 +1013,7 @@ root.geometry("1280x800+0+0")
 
 root.after(25, app.listen)
 canvas.bind('<B1-Motion>', mouse)
-canvas.bind('<Double-Button-1>', taptap)
+##canvas.bind('<Double-Button-1>', taptap)
 canvas.bind('<Button-1>', bpress)
 canvas.bind('<ButtonRelease>', bupress)
 
