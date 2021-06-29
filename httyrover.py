@@ -99,6 +99,8 @@ workAV = [0.0, 0.0]                     # Kalman filtered AV
 
 ilatsec = 0.0
 ilonsec = 0.0
+gotolat = 0.0
+gotolon = 0.0
 latitude = math.radians(34.24)          # Camarillo
 latfeet = 6079.99/60                    # Kyle's converter                    startAV = posAV
 
@@ -752,20 +754,25 @@ try:
                     try:
                         x = float(cbuff[3:msglen-1])
                         if (xchr == 'N'):
-                            lonsec = x
+                            gotolon = x
 
                         elif xchr == 'T':
-                            latsec = x
-                            waypts[1] = [lonsec, latsec]
-                            startAV = posAV
-                            route = [1, 0]
-                            rtseg = 0
-                            wpt = 1
-                            new_waypoint(1)
-                            
+                            if (gotolon != 0):   # GN shoule be first
+                                gotolat = x
+                                waypts[1] = [gotolon, gotolat]
+                                startAV = posAV
+                                route = [1, 0]     # wpt 1, stop
+                                rtseg = 0          # start at 1st wpt
+                                wpt = 1
+                                new_waypoint(1)
+                                gotolat = 0.0      # reset
+                                gotolon = 0.0
+      
                     except ValueError:
-                        pass
+                        gotolat = 0.0     $ resetS
+                        gotolon = 0.0
 
+                    
 #======================================================================
                 elif xchr == 'L':                   #lat/long input from GPS h/w
                     xchr = cbuff[2]

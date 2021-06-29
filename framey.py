@@ -444,8 +444,6 @@ def mouse(event):
         return
     x = event.x - mx
     y = event.y - my
-#     stlat += x/scale  # North:x coord, East:y coord
-#     stlon += y/scale
     stlat += y/scale
     stlon += x/scale
     
@@ -474,7 +472,6 @@ def zoomer(inout):
     global arena
     global lunge
     global mode
-    
 
     if inout == 1:
         stlat = stlat - (300/scale)/3
@@ -486,8 +483,6 @@ def zoomer(inout):
         scale *= 2/3
         
 #     print("zoom")
-#     print(str(event.x)+" "+str(event.y))
-#     print(str(int(stlat))+" "+str(int(stlon)))
     canvas.delete(arena)
     canvas.delete(plot)
     canvas.delete(lunge)
@@ -562,48 +557,48 @@ class App:
         # Steering button array ========================================
         steer = Frame(master)
         steer.place(x=550,y=700)
-        l35 = Button(steer, text="<<<", command = lambda:self.dxmit('7'))
+        l35 = Button(steer, text="<<<", command = lambda:self.trxmit('D7'))
         l35.config(width=3,height=1,font=(None,15),bg="pink",fg="black",borderwidth=4)
         l35.grid(row=0,column=0)
         
-        l5 = Button(steer, text="<<", command = lambda:self.dxmit('4'))
+        l5 = Button(steer, text="<<", command = lambda:self.trxmit('D4'))
         l5.config(width=3,height=1,font=(None,15),bg="pink",fg="black",borderwidth=4)
         l5.grid(row=0,column=1)
         
-        l1 = Button(steer, text="<", command = lambda:self.dxmit('1'))
+        l1 = Button(steer, text="<", command = lambda:self.trxmit('D1'))
         l1.config(width=3,height=1,font=(None,15),bg="pink",fg="black",borderwidth=4)
         l1.grid(row=0,column=2)
         
-        z0 = Button(steer, text=".", command = lambda:self.dxmit('5'))
+        z0 = Button(steer, text=".", command = lambda:self.trxmit('D5'))
         z0.config(width=3,height=1,font=(None,25),bg="linen",fg="black",borderwidth=4)
         z0.grid(row=0,column=3)
         
-        r1 = Button(steer, text=">", command = lambda:self.dxmit('3'))
+        r1 = Button(steer, text=">", command = lambda:self.trxmit('D3'))
         r1.config(width=3,height=1,font=(None,15),bg="green2",fg="black",borderwidth=4)
         r1.grid(row=0,column=4)
         
-        r5 = Button(steer, text=">>", command = lambda:self.dxmit('6'))
+        r5 = Button(steer, text=">>", command = lambda:self.trxmit('D6'))
         r5.config(width=3,height=1,font=(None,15),bg="green2",fg="black",borderwidth=4)
         r5.grid(row=0,column=5)
 
-        r35 = Button(steer, text=">>>", command = lambda:self.dxmit('9'))
+        r35 = Button(steer, text=">>>", command = lambda:self.trxmit('D9'))
         r35.config(width=3,height=1,font=(None,15),bg="green2",fg="black",borderwidth=4)
         r35.grid(row=0,column=6)
 
         # speed button array ===================================================
         speed = Frame(master)
         speed.place(x=1150, y=500)
-        fmax = Button(speed, text = "+", command = lambda:self.dxmit('2'))
+        fmax = Button(speed, text = "+", command = lambda:self.trxmit('D2'))
         fmax.config(width = 3, height = 2, font=(NONE,15), \
             bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
-        f0 = Button(speed, text = "0", command = lambda:self.dxmit('0'))
+        f0 = Button(speed, text = "0", command = lambda:self.trxmit('D0'))
         f0.config(width = 3, height = 4, font=(NONE,15), \
             bg="linen",fg="black",borderwidth=4)
         f0.grid(row=3,column=0)
         
-        rmax = Button(speed, text = "-", command = lambda:self.dxmit('8'))
+        rmax = Button(speed, text = "-", command = lambda:self.trxmit('D8'))
         rmax.config(width = 3, height = 2, font=(NONE,15), \
             bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=6,column=0)
@@ -664,7 +659,6 @@ class App:
         rose.create_text(108, 8, text="N", font = ffont, angle=0)
         rose.create_text(105, 210, text="S", font = ffont, angle=0)
         rose.create_text(8, 112, text="W", font = ffont, angle=90)
-
         rose.create_text(212, 108, text="E", font = ffont, angle=270)
         rose.create_text(180, 40, text = "NE", font = efont, angle=315)
         rose.create_text(185, 175, text = "SE", font = efont, angle=225)
@@ -748,31 +742,31 @@ class App:
         global auto
         auto = Frame(mstr)
         auto.place(x=250, y=470)
-        bs=Button(auto, text="Start", command = lambda:self.exmit('2'))
+        bs=Button(auto, text="Start", command = lambda:self.trxmit('T2'))
         bs.config(width=4,height=2,font=(None,15),bg="white",fg="black")
         bs.grid(row=0,column=0,columnspan=2)
         
-        bl90=Button(auto, text="< 90", command = lambda:self.exmit('1'))
+        bl90=Button(auto, text="< 90", command = lambda:self.trxmit('E1'))
         bl90.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
         bl90.grid(row=1,column=0)
         
-        br90=Button(auto, text="90 >", command = lambda:self.exmit('3'))
+        br90=Button(auto, text="90 >", command = lambda:self.trxmit('E3'))
         br90.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         br90.grid(row=1,column=1)
         
-        blt=Button(auto, text="T 90", command = lambda:self.exmit('4'))
+        blt=Button(auto, text="T 90", command = lambda:self.trxmit('E4'))
         blt.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
         blt.grid(row=2,column=0)
         
-        brt=Button(auto, text="90 T", command = lambda:self.exmit('6'))
+        brt=Button(auto, text="90 T", command = lambda:self.trxmit('E6'))
         brt.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         brt.grid(row=2,column=1)
         
-        bl180=Button(auto, text="< 180", command = lambda:self.exmit('7'))
+        bl180=Button(auto, text="< 180", command = lambda:self.trxmit('E7'))
         bl180.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
         bl180.grid(row=3,column=0)
         
-        br180=Button(auto, text="180 >", command = lambda:self.exmit('9'))
+        br180=Button(auto, text="180 >", command = lambda:self.trxmit('E9'))
         br180.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         br180.grid(row=3,column=1)
         
@@ -784,30 +778,30 @@ class App:
     def arevert(self):
         auto.destroy()
         self.mode.set(0)
-        self.exmit('0')
+        self.trxmit('E0')
            
     # AUTO mode button array ==================================================
     def pantilt(self, mstr):
         global pntlt
         pntlt = Frame(mstr)
         pntlt.place(x=200, y=490)
-        bup=Button(pntlt, text="tilt Up", command = lambda:self.dxmit('U'))
+        bup=Button(pntlt, text="tilt Up", command = lambda:self.trxmit('DU'))
         bup.config(width=5,height=2,font=(None,15),bg="cyan",fg="black")
         bup.grid(row=0,column=0,columnspan=3)
         
-        bleft=Button(pntlt, text="pan left", command = lambda:self.dxmit('L'))
+        bleft=Button(pntlt, text="pan left", command = lambda:self.trxmit('DL'))
         bleft.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
         bleft.grid(row=1,column=0)
         
-        bctr=Button(pntlt, text="center", command = lambda:self.dxmit('C'))
+        bctr=Button(pntlt, text="center", command = lambda:self.trxmit('DC'))
         bctr.config(width=5,height=2,font=(None,15),bg="white",fg="black")
         bctr.grid(row=1,column=1)
         
-        brght=Button(pntlt, text="pan right", command = lambda:self.dxmit('R'))
+        brght=Button(pntlt, text="pan right", command = lambda:self.trxmit('DR'))
         brght.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
         brght.grid(row=1,column=2)
         
-        bdwn=Button(pntlt, text="tilt down", command = lambda:self.dxmit('D'))
+        bdwn=Button(pntlt, text="tilt down", command = lambda:self.trxmit('DD'))
         bdwn.config(width=5,height=2,font=(None,15),bg="sandy brown",fg="black")
         bdwn.grid(row=2,column=0,columnspan=3)
         
@@ -824,15 +818,15 @@ class App:
         global miscer
         miscer = Frame(mstr)
         miscer.place(x=200, y=450)
-        msb1=Button(miscer, text="Diag", command=lambda:self.txmit('0'))
+        msb1=Button(miscer, text="Diag", command=lambda:self.trxmit('T0'))
         msb1.config(width=4,height=2,font=(None,15),bg="white",fg="black")
         msb1.grid(row=0,column=0)
         
-        msb2=Button(miscer, text="Mark", command=lambda:self.txmit('2'))
+        msb2=Button(miscer, text="Mark", command=lambda:self.trxmit('T2'))
         msb2.config(width=4,height=2,font=(None,15),bg="white",fg="black")
         msb2.grid(row=2,column=0)
         
-        msb3=Button(miscer, text="Pic", command=lambda:self.txmit('3'))
+        msb3=Button(miscer, text="Pic", command=lambda:self.trxmit('T3'))
         msb3.config(width=4,height=2,font=(None,15),bg="white",fg="black")
         msb3.grid(row=3,column=0)
 
@@ -840,27 +834,17 @@ class App:
         msbs.config(width=4,height=2,font=(None,15),bg="grey85",fg="grey85")
         msbs.grid(row=4,column=0)
 
-        msb4=Button(miscer, text="Stop", command=lambda:self.txmit('1'))
+        msb4=Button(miscer, text="Stop", command=lambda:self.trxmit('T1'))
         msb4.config(width=6,height=4,font=(None,15),bg="red",fg="black")
         msb4.grid(row=6,column=0)
-
-    def dxmit(self, key):
-        self.msg = '{D' + key + '}'
-        ser.write(self.msg.encode('utf-8'))
-        print(self.msg)
-
-    def exmit(self, key):
-        self.msg = '{E' + key + '}'
-        ser.write(self.msg.encode('utf-8'))
-        print(self.msg)
 
     def fxmit(self, key):
         self.msg = '{F' + key + '}'
         ser.write(self.msg.encode('utf-8'))
         print(self.msg)
 
-    def txmit(self, key):
-        self.msg = '{T' + key + '}'
+    def trxmit(self, key):
+        self.msg = '{' + key + '}'
         ser.write(self.msg.encode('utf-8'))
         print(self.msg)
 
@@ -944,35 +928,35 @@ class App:
         # check tactile buttons
         if (GPIO.input(21) == False):
             if (butngreen == False):
-                self.dxmit('6')
+                self.trxmit('D6')
                 butngreen = True
         else:
             butngreen = False
             
         if (GPIO.input(5) == False):
             if (butnblack == False):
-                self.dxmit('5')
+                self.trxmit('D5')
                 butnblack = True
         else:
             butnblack = False
             
         if (GPIO.input(13) == False):
             if (butnred == False):
-                self.dxmit('4')
+                self.trxmit('D4')
                 butnred = True
         else:
             butnred = False
             
         if (GPIO.input(7) == False):
             if (butnblue == False):
-                self.dxmit('2')
+                self.trxmit('D2')
                 butnblue = True
         else:
             butnblue = False
             
         if (GPIO.input(10) == False):
             if (butnyellow == False):
-                self.dxmit('8')
+                self.trxmit('D8')
                 butnyellow = True
         else:
             butnyellow = False
