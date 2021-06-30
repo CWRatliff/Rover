@@ -377,7 +377,7 @@ def guage(mstr):
     yarrow = arrlen * math.sin(rhdg)
     rose.delete('arrow')
     rose.create_line(110-xarrow, 110+yarrow, 110 + xarrow, 110-yarrow, arrow=LAST, \
-        arrowshape=(20,25,5), width=8,fill="deep sky blue", tags="arrow")
+        arrowshape=(20,25,5), width=8,fill="white", tags="arrow")
     if (strhdg < -1 or strhdg > 1):
         strad = math.radians(strhdg)
         xarrow = arrlen * math.cos(rhdg - strad)
