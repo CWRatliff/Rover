@@ -62,32 +62,6 @@ horsepts = [
     [-459.34, 1928.01]
     ]
 
-waypts = [
-    [ -787.36,  2298.03],     #10 
-    [ -647.55,  2108.54],     #11 speed bump
-    [ -619.57,  2091.62],     #12 T seam
-    [ -599.97,  2236.32],     #13 workshop F 
-    [ -578.94,  2247.67],     #14 driveway center F
-    [ -490.20,  2097.75],     #15 gravel rev 210430
-    [ -471.80,  2053.82],     #16 fig tree fork F
-    [ -532.36,  1963.03],     #17 stairs pivot
-    [ -592.93,  1931.82],     #18 shed #3/#4 F
-    [ -526.33,  1863.82],     #19 longe center
-    [ -661.79,  1842.34],     #20 stall ctr
-    [ -511.84,  2145.63],     #21 E dway start
-    [ -548.45,  1951.78],     #22 hut row bend F
-    [ -619.07,  2315.06],     #23 trash
-    [ -599.72,  2290.03],     #24 EF east entry
-    [ -665.89,  2108.14],     #25 ref corner - F
-    [ -646.13,  2126.38],     #26 hose bib - F
-    # [ -640.51,  2177.75],     #27 rose bush - F
-    [ -640.51,  2179.75],     #27 rose bush - F 210102 modified to avoid roses
-    [ -624.85,  2235.41],     #28 boat corner - F 201230 - refounded
-    [ -684.91,  2276.04],     #29 EF middle - F
-    [ -644.70,  2261.65],     #30 office gap
-    [ -653.41,  2229.63],     #31 EF rose gap
-    ]
-
 # personal survey 210506
 housepts = [
     [-521, 2074],
@@ -165,11 +139,12 @@ frontpts = [
     [-820, 2321]
     ]
 
+route = [28, 30, 29, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 27, 28]
+
 from tkinter import *
 from tkinter.font import Font
 import serial
 import RPi.GPIO as GPIO
-import math
 import math
 import ctypes
 
@@ -222,7 +197,7 @@ try:
 except IOError:
     pass
 
-def chart(mstr):
+def Chart(mstr):
     global arena
     global bdrv
     global charter
@@ -232,72 +207,67 @@ def chart(mstr):
     global plot
     global rez
 
-    points = usf2pix(proppts, scale, stlat, stlon)
+    points = Usf2Pix(proppts, scale, stlat, stlon)
     plot = canvas.create_polygon(points, outline='black', fill='lemon chiffon', width=1)
-    horse = usf2pix(horsepts, scale, stlat, stlon)
+    horse = Usf2Pix(horsepts, scale, stlat, stlon)
     arena = canvas.create_polygon(horse, outline='black', fill='gold', width=1)
-    longe =usf2pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
+    longe =Usf2Pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
     lunge = canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', \
         fill='gold', width=1)
     
-    house = usf2pix(housepts, scale, stlat, stlon)
+    house = Usf2Pix(housepts, scale, stlat, stlon)
     rez = canvas.create_polygon(house, outline='black', fill='red', width=1, tags="bldg")
-    h1 = usf2pix(hut1, scale, stlat, stlon)
+    h1 = Usf2Pix(hut1, scale, stlat, stlon)
     canvas.create_polygon(h1, outline='black', fill='red', width=1, tags="bldg")
-    h2 = usf2pix(hut2, scale, stlat, stlon)
+    h2 = Usf2Pix(hut2, scale, stlat, stlon)
     canvas.create_polygon(h2, outline='black', fill='red', width=1, tags="bldg")
-    h3 = usf2pix(hut3, scale, stlat, stlon)
+    h3 = Usf2Pix(hut3, scale, stlat, stlon)
     canvas.create_polygon(h3, outline='black', fill='red', width=1, tags="bldg")
-    h4 = usf2pix(hut4, scale, stlat, stlon)
+    h4 = Usf2Pix(hut4, scale, stlat, stlon)
     canvas.create_polygon(h4, outline='black', fill='red', width=1, tags="bldg")
-    casita = usf2pix(lhouse, scale, stlat, stlon)
+    casita = Usf2Pix(lhouse, scale, stlat, stlon)
     canvas.create_polygon(casita, outline='black', fill='red', width=1, tags="bldg")
-    canopy = usf2pix(horsecanopy, scale, stlat, stlon)
+    canopy = Usf2Pix(horsecanopy, scale, stlat, stlon)
     canvas.create_polygon(canopy, outline='black', fill='red', width=1, tags="bldg")
-    work = usf2pix(workshop, scale, stlat, stlon)
+    work = Usf2Pix(workshop, scale, stlat, stlon)
     canvas.create_polygon(work, outline='black', fill='red', width=1, tags='bldg')
     
-    back = usf2pix(backpts, scale, stlat, stlon)
+    back = Usf2Pix(backpts, scale, stlat, stlon)
     bdrv = canvas.create_polygon(back, outline='black', fill='gray75', width=1)
-    front = usf2pix(frontpts, scale, stlat, stlon)
+    front = Usf2Pix(frontpts, scale, stlat, stlon)
     fdrv = canvas.create_polygon(front, outline='black', fill='gray75', width=1)
     
-    trees = usf2pix(alltrees, scale, stlat, stlon)
+    trees = Usf2Pix(alltrees, scale, stlat, stlon)
     llen = len(trees)
     rad = scale * 3
     for i in range(0, llen, 2):
         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
             fill='green2', outline='black', width=2, tags = 'forest')
-
-#     trees = usf2pix(eftrees, scale, stlat, stlon)
-#     llen = len(trees)
-#     rad = scale * 3
-#     for i in range(0, llen, 2):
-#         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
-#             fill='green2', outline='black', width=2, tags = 'forest')
-#     trees = usf2pix(wbtrees, scale, stlat, stlon)
-#     llen = len(trees)
-#     rad = scale * 3
-#     for i in range(0, llen, 2):
-#         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
-#             fill='green2', outline='black', width=2, tags = 'forest')
-#     trees = usf2pix(citrees, scale, stlat, stlon)
-#     llen = len(trees)
-#     rad = scale * 3
-#     for i in range(0, llen, 2):
-#         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
-#             fill='green2', outline='black', width=2, tags = 'forest')
-
-    tracks = usf2pix(track, scale, stlat, stlon)
+        
+    wpts = Usf2Pix(waypts, scale, stlat, stlon)
+    llen = len(wpts)
+    for i in range(0, llen, 2):
+        canvas.create_rectangle(wpts[i], wpts[i+1], wpts[i]+2, wpts[i+1]+2, fill='blue', outline='blue', tags = "wpts")
+        canvas.create_text(wpts[i]+2, wpts[i+1], text = str(i//2+10), fill='red', tags = "wpts", font = nfont)
+        
+    rtpts = []
+    for i in route:
+#        print (i, waypts[i-10])
+        rtpts.append([waypts[i-10][0], waypts[i-10][1]])
+    rtlst = Usf2Pix(rtpts, scale, stlat, stlon)
+    llen = len(rtlst)
+    rline = canvas.create_line(rtlst, fill = 'red', tags = "wpts")
+    
+    tracks = Usf2Pix(track, scale, stlat, stlon)
     llen = len(tracks)
     for i in range(0, llen, 2):
         canvas.create_text(tracks[i], tracks[i+1], text='x', fill='blue', tags = 'path')
 
-def xspot(mstr, xlon, xlat):
-    spot = usf2pix([[xlon, xlat]], scale, stlat, stlon)
+def Xspot(mstr, xlon, xlat):
+    spot = Usf2Pix([[xlon, xlat]], scale, stlat, stlon)
     canvas.create_text(spot[0], spot[1], text='x', fill='blue', tags = 'path')
           
-def guage(mstr):
+def Guage(mstr):
     xarrow = arrlen * math.cos(rhdg)
     yarrow = arrlen * math.sin(rhdg)
     rose.delete('arrow')
@@ -316,25 +286,25 @@ def guage(mstr):
 
 # convert array of USfeet pairs into linear array of pixels (in pairs)
 # slat, slon starting lat/lon usf from 34-14, -119-04
-def usf2pix(usf, gscale, slat, slon):
+def Usf2Pix(usf, gscale, slat, slon):
     pix = []
     for x in usf:
 #         pix.insert(0, int(gscale * (slon-x[0])))   # North:x coord, East:y coord
-        pix.insert(0, int(gscale * (slat-x[1])))
-        pix.insert(0, int(gscale * (slon+x[0])))
+        pix.append(int(gscale * (slon+x[0])))
+        pix.append(int(gscale * (slat-x[1])))
     return pix
 
 # having an event handler for button down as well as button release may look redundant
 # but touch and mouse event sequences are not identical, to wit: touch gives movement followed
 # by button down, mouse gived button then movement
 
-def bpress(event):
+def Bpress(event):
     global mx
     global my
     mx = event.x
     my = event.y
     
-def bupress(event):
+def Bupress(event):
     global mx
     global my
     global mode
@@ -344,7 +314,7 @@ def bupress(event):
         lat = stlat - event.y/scale # North: y coord East:x coord
         lon = event.x/scale - stlon
 #        print (str(lat)+"/"+str(lon))
-        pnt = usf2pix([[lon, lat]], scale, stlat, stlon)
+        pnt = Usf2Pix([[lon, lat]], scale, stlat, stlon)
         canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
             fill='blue',outline='blue')
         msg = '{GN%7.2f}' % lon
@@ -355,7 +325,7 @@ def bupress(event):
         print(msg)
         mode = 0
     
-def mouse(event):
+def Mouse(event):
     global mx
     global my
     global stlat
@@ -383,10 +353,11 @@ def mouse(event):
     canvas.move('bldg', x, y)
     canvas.move('forest', x, y)
     canvas.move('path', x, y)
+    canvas.move('wpts', x, y)
     mx = event.x
     my = event.y
 
-def zoomer(inout):
+def Zoomer(inout):
     global stlat
     global stlon
     global scale
@@ -407,7 +378,7 @@ def zoomer(inout):
         stlon = stlon + (300/scale)/2
         scale *= 2/3
         
-#     print("zoom")
+#    print("zoom")
     canvas.delete(arena)
     canvas.delete(plot)
     canvas.delete(lunge)
@@ -416,7 +387,8 @@ def zoomer(inout):
     canvas.delete('bldg')
     canvas.delete('forest')
     canvas.delete('path')
-    chart(root)
+    canvas.delete('wpts')
+    Chart(root)
     mode = 0
 
 class App:
@@ -437,9 +409,9 @@ class App:
         hdg.grid(row=2,column=0)
         ste=Label(data,text="STR:", font=(None,15))
         ste.grid(row=3,column=0)
-        dtgl=Label(data,text="DTG:", font=(None,15))
+        dtgl=Label(data,text="RNG:", font=(None,15))
         dtgl.grid(row=4,column=0)
-        ctgl=Label(data,text="CTG:", font=(None,15))
+        ctgl=Label(data,text="BRG:", font=(None,15))
         ctgl.grid(row=5,column=0)
         xtel=Label(data,text="XTE:", font=(None,15))
         xtel.grid(row=6,column=0)
@@ -540,6 +512,7 @@ class App:
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb2.config(width = 6, height = 2, font=(NONE,15))
         rb2.grid(row=1, column=0)
+        
         rb3 = Radiobutton(radio, text="Path", variable=self.mode, value = 2, \
             anchor=W, command=lambda:self.mode_set(master, self.mode.get()))
         rb3.config(width = 6, height = 2, font=(NONE,15))
@@ -558,12 +531,12 @@ class App:
 # enlarge button array ===================================================
         zoom = Frame(root)
         zoom.place(x=825, y=200)
-        fmax = Button(zoom, text = "+", command = lambda:zoomer(1))
+        fmax = Button(zoom, text = "+", command = lambda:Zoomer(1))
         fmax.config(width = 1, height = 1, font=(NONE,15), \
             bg="green2",fg="black",borderwidth=4)
         fmax.grid(row=0,column=0)
 
-        rmax = Button(zoom, text = "-", command = lambda:zoomer(2))
+        rmax = Button(zoom, text = "-", command = lambda:Zoomer(2))
         rmax.config(width = 1, height = 1, font=(NONE,15), \
             bg="pink",fg="black",borderwidth=4)
         rmax.grid(row=1,column=0)
@@ -579,8 +552,6 @@ class App:
 #
 # compass rose ============================================================
         rose.create_oval(25, 25, 195, 195, width=1, outline='black', fill="black")
-        ffont = Font(family="URW Chancery L", size=20, weight = "bold")
-        efont = Font(family="URW Chancery L", size=16)
         rose.create_text(108, 8, text="N", font = ffont, angle=0)
         rose.create_text(105, 210, text="S", font = ffont, angle=0)
         rose.create_text(8, 112, text="W", font = ffont, angle=90)
@@ -612,49 +583,45 @@ class App:
             pass
         
         if (val == 0):
-            chart(mstr)
-            guage(mstr)
+#            Chart(mstr)
+            Zoomer(0)
+            Guage(mstr)
             
         if (val == 1):
-            self.auto_turns(mstr)
+            self.AutoTurns(mstr)
             
         if (val == 2):
-            self.paths(mstr)
+            self.Paths(mstr)
             
         if (val == 3):
-            self.pantilt(mstr)
+            self.PanTilt(mstr)
             
         if (val == 4):
-            self.misc(mstr)
+            self.Misc(mstr)
            
     # frame for wapoint/route selection =====================================================    
-    def paths(self, mstr):
+    def Paths(self, mstr):
         global lister
         lister = Frame(mstr)
-        lister.place(x=200, y=470)
+        lister.place(x=200, y=450)
         lab = Label(lister, text="Select NAV path")
         lab.grid(row=0, column=0)
         lscroll = Scrollbar(lister, orient=VERTICAL)
-        lbox =Listbox(lister, height=4, selectmode=SINGLE,font=(NONE,15), \
+        lbox =Listbox(lister, height=6, selectmode=SINGLE,font=(NONE,15), \
             yscrollcommand=lscroll.set)
-        lbox.insert(END, "R03 - E.F. drive")
-        lbox.insert(END, "R04 - hut row")
-        lbox.insert(END, "W13 - canopy")
-        lbox.insert(END, "W14 - driveway center")
-        lbox.insert(END, "W23 - trash cans")
-        lbox.insert(END, "W27 - rose bush")
-        lbox.insert(END, "W29 - E,F, middle")
-        lbox.insert(END, "W30 - office gap")
-        lbox.insert(END, "W31 - rose passage")
+        for rt in routes:
+            lbox.insert(END, rt[0])
+        for wp in wayptnames:
+            lbox.insert(END, wp)
 
         lbox.grid(row=1, column=0)
         lscroll.config(width=25, command=lbox.yview)
         lscroll.grid(row=1, column=1, sticky=N+S)
         ex = Button(lister, text="Execute", command=lambda:self.lrevert(lbox.get(ANCHOR)))
-        ex.config(width=6, height=3, font=(None,15), bg="green2")
+        ex.config(width=5, height=3, font=(None,15), bg="green2")
         ex.grid(row = 2, column = 0)
         quit = Button(lister, text="Cancel", command=lambda:self.lrevert('000'))
-        quit.config(width=6, height=3, font=(None,15), bg="red",fg="black")
+        quit.config(width=5, height=3, font=(None,15), bg="red",fg="black")
         quit.grid(row=4, column=0)
 
     #could call fxmit directly if no radiobutton action wanted
@@ -664,7 +631,7 @@ class App:
         self.mode.set(0)
 
     # AUTO mode button array ==================================================
-    def auto_turns(self, mstr):
+    def AutoTurns(self, mstr):
         global auto
         auto = Frame(mstr)
         auto.place(x=250, y=470)
@@ -707,7 +674,7 @@ class App:
         self.exmit('0')
            
     # AUTO mode button array ==================================================
-    def pantilt(self, mstr):
+    def PanTilt(self, mstr):
         global pntlt
         pntlt = Frame(mstr)
         pntlt.place(x=200, y=490)
@@ -740,7 +707,7 @@ class App:
         self.mode.set(0)
         
     # misc commands ==========================================================
-    def misc(self, mstr):
+    def Misc(self, mstr):
         global miscer
         miscer = Frame(mstr)
         miscer.place(x=200, y=450)
@@ -785,7 +752,7 @@ class App:
         print(self.msg)
 
 #   Listen to serial port for status info from rover pi ================================
-    def listen(self):
+    def Listen(self):
         global butngreen
         global butnred
         global butnblack
@@ -827,7 +794,7 @@ class App:
                 elif (xchar == 'h'):
                     self.head.set(lbuffer)
                     rhdg = math.radians(450 - float(lbuffer))
-                    guage(root)
+                    Guage(root)
                         
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
@@ -845,12 +812,12 @@ class App:
                             pass
                         # TBD dont append if same lat/lon
                         # track.append([lon, lat])
-                        xspot(root, lon, lat)
+                        Xspot(root, lon, lat)
                         
                 elif (xchar == 's'):            # steering angle
                     self.steer.set(lbuffer)
                     strhdg = int(lbuffer)
-                    guage(root)
+                    Guage(root)
                         
                 elif (xchar == 'v'):            # speed
                     self.speed.set(lbuffer)
@@ -899,56 +866,79 @@ class App:
                 cdfline = pathfile.readline()
                 if (cdfline != ''):
                     line = cdfline.split(',')
-                    xspot(root, float(line[2]), float(line[3]))
+                    Xspot(root, float(line[2]), float(line[3]))
                     # track.append([float(line[2]), float(line[3])])
                     rhdg = math.radians(450 - float(line[8]))
                     strhdg = int(line[7])
-#                    chart(root)
-                    guage(root)
+#                    Chart(root)
+                    Guage(root)
 
             except IOError:
                 pass
 
-        root.after(25, self.listen)
+        root.after(25, self.Listen)
 
+#======================================================================
+# Initialize from database
 
 rc = cdlib.Cdblogin()
 treetable = cdlib.COpenTable("TreeTable".encode())
 locndx = cdlib.COpenIndex(treetable, "TreeNdx".encode())
-rc = cdlib.CFirst(treetable, locndx)
-# # print(rc)
-lon = cdlib.CGetDouble(treetable, "Lonft".encode())
-lat = cdlib.CGetDouble(treetable, "Latft".encode())
-alltrees = [[lon, lat]]
 
-while (cdlib.CNext(treetable, locndx) >= 0):
+rc = cdlib.CFirst(treetable, locndx)
+alltrees = []
+while (rc >= 0):
     lon = cdlib.CGetDouble(treetable, "Lonft".encode())
     lat = cdlib.CGetDouble(treetable, "Latft".encode())
-#    print("lon, lat",lon, lat)
     alltrees.append([lon, lat])
+    rc = cdlib.CNext(treetable, locndx)
     
+rtetable = cdlib.COpenTable("Routes".encode())
+rc = cdlib.CFirst(rtetable, 0)           # using primary index
+routes = []
+while (cdlib.CNext(rtetable, 0) >= 0):
+    pstr = cdlib.CGetCharPtr(rtetable, "Name".encode())
+    routes.append([pstr.decode()])
+    
+waytable = cdlib.COpenTable("WayPoint".encode())
+wayptnames = []
+waypts = []
+rc = cdlib.CFirst(waytable, 0)           # using primary index
+while (rc >= 0):
+    lon = cdlib.CGetDouble(waytable, "Efeet".encode())
+    lat = cdlib.CGetDouble(waytable, "Nfeet".encode())
+    pstr = cdlib.CGetCharPtr(waytable, "Name".encode())
+#    print("lon, lat, name",lon, lat, pstr.decode())
+    wayptnames.append(pstr.decode())
+    waypts.append([lon, lat])
+    rc = cdlib.CNext(waytable, 0)
+    
+#print(waypts)   
 #print("trees = ", alltrees)
 root = Tk()
+ffont = Font(family="URW Chancery L", size=20, weight = "bold")
+efont = Font(family="URW Chancery L", size=16)
+nfont = Font(family="Century Schoolbook L", size=14)
 root.wm_title('Rover Controller')
 chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
 canvas.pack()
-chart(root)
+Chart(root)
 
 rosefrm = Frame(root)
 rosefrm.place(x = 950, y = 20)
 rose = Canvas(rosefrm, width=220, height=220, bg='gray85')
 rose.pack()
-guage(root)
+Guage(root)
 
 app = App(root)
 root.geometry("1280x800+0+0")
 
-root.after(25, app.listen)
-canvas.bind('<B1-Motion>', mouse)
+root.after(25, app.Listen)
+canvas.bind('<B1-Motion>', Mouse)
 #canvas.bind('<Double-Button-1>', taptap)
-canvas.bind('<Button-1>', bpress)
-canvas.bind('<ButtonRelease>', bupress)
+canvas.bind('<Button-1>', Bpress)
+canvas.bind('<ButtonRelease>', Bupress)
 
 root.mainloop()
