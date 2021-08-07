@@ -253,7 +253,8 @@ def vclosestwp(V):
     wlen = len(waypts)
     lowdist = vmag(vsub(waypts[10], V))
     lowwp = 10
-    for i in range(10, wlen+1):
+    for i in range(10, wlen):
+        print(i)
         w =  waypts[i]
         if w[0] < 0:
             testdist = vmag(vsub(w, V))
@@ -736,11 +737,11 @@ try:
                             new_waypoint(wpt)
                             obstructions()
                         elif (wpt >= 10 and wpt <= 31): #start of waypoint
-                            startwp, startdist = astar.vclosestwp(posAV)
+                            startwp, startdist = vclosestwp(posAV)
                             route = astar.astar(startwp, wpt)
                             for rt in route:
-                                str = "route: %d", rt
-                                logit(str)
+                                cstr = "route: %d" % rt
+                                logit(cstr)
                             wpt = startwp
                             rtseg = 0
                             new_waypoint(wpt)
@@ -773,8 +774,8 @@ try:
                                         route.append(9)
                                 route.append(0)
                                 for rt in route:
-                                    str = "route: %d", rt
-                                    logit(str)
+                                    cstr = "route: %d" % rt
+                                    logit(cstr)
                                 rtseg = 0
                                 wpt = route[rtseg]
                                 startAV = posAV
