@@ -738,6 +738,9 @@ try:
                         elif (wpt >= 10 and wpt <= 31): #start of waypoint
                             startwp, startdist = astar.vclosestwp(posAV)
                             route = astar.astar(startwp, wpt)
+                            for rt in route:
+                                str = "route: %d", rt
+                                logit(str)
                             wpt = startwp
                             rtseg = 0
                             new_waypoint(wpt)
@@ -769,6 +772,9 @@ try:
                                         waypts[9] = gotoAV
                                         route.append(9)
                                 route.append(0)
+                                for rt in route:
+                                    str = "route: %d", rt
+                                    logit(str)
                                 rtseg = 0
                                 wpt = route[rtseg]
                                 startAV = posAV
