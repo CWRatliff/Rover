@@ -735,17 +735,18 @@ try:
                             wpt = route[rtseg]
                             startAV = posAV
                             new_waypoint(wpt)
-                            obstructions()
+#                            obstructions()
                         elif (wpt >= 10 and wpt <= 31): #start of waypoint
                             startwp, startdist = vclosestwp(posAV)
                             route = astar.astar(startwp, wpt)
+                            route.append(0)
                             for rt in route:
                                 cstr = "route: %d" % rt
                                 logit(cstr)
                             wpt = startwp
                             rtseg = 0
                             new_waypoint(wpt)
-                            obstructions()
+#                            obstructions()
                         else:
                             pass
                         
@@ -780,7 +781,7 @@ try:
                                 wpt = route[rtseg]
                                 startAV = posAV
                                 new_waypoint(wpt)
-                                obstructions()
+#                                obstructions()
 
                             gotolat = 0.0      # reset
                             gotolon = 0.0
