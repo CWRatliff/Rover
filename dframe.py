@@ -252,7 +252,6 @@ def Chart(mstr):
         
     rtpts = []
     for i in route:
-#        print (i, waypts[i-10])
         rtpts.append([waypts[i-10][0], waypts[i-10][1]])
     rtlst = Usf2Pix(rtpts, scale, stlat, stlon)
     llen = len(rtlst)
@@ -606,7 +605,7 @@ class App:
         lister.place(x=200, y=450)
         lab = Label(lister, text="Select NAV path")
         lab.grid(row=0, column=0)
-        lscroll = Scrollbar(lister, orient=VERTICAL)
+        lscroll = Scrollbar(lister, orient=VERTICAL, width=25, bg = "black")
         lbox =Listbox(lister, height=6, selectmode=SINGLE,font=(NONE,15), \
             yscrollcommand=lscroll.set)
         for rt in routes:

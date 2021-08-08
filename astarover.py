@@ -311,7 +311,6 @@ def new_waypoint(nwpt):
     global wptflag
     global epoch
     
-#    startAV = posAV
     vprint("track start======================================", startAV)
     destAV = [waypts[nwpt][0], waypts[nwpt][1]]
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
@@ -727,26 +726,48 @@ try:
                             odometer(speed)
                             speed = 0
                             robot.motor(speed, steer)
-                        elif (wpt > 0 and wpt < 5):   # start of route
-                            route = routes[wpt]
-#                            rteflag= True
+                            
+                        elif wpt == 1:                    # <<<<<<< RTB >>>>>>>>>
+                            startwp, startdist = vclosestwp(posAV)
+                            route = astar.astar(startwp, 28)   # except for car interference, 13
+                            route.append(0)
+                            if startdist < 3.0           # if too close to starting waypoint
+                                route.pop(0)
                             rtseg = 0
                             wptflag = True
                             wpt = route[rtseg]
                             startAV = posAV
                             new_waypoint(wpt)
 #                            obstructions()
-                        elif (wpt >= 10 and wpt <= 31): #start of waypoint
-                            startwp, startdist = vclosestwp(posAV)
-                            route = astar.astar(startwp, wpt)
+                           
+                        elif (wpt > 1 and wpt < 5):   # start of route
+                            route = routes[wpt]
                             route.append(0)
-                            for rt in route:
-                                cstr = "route: %d" % rt
-                                logit(cstr)
-                            wpt = startwp
+                            startwp, startdist = vclosestwp(posAV)
+                            if startdist < 3.0           # if too close to starting waypoint
+                                route.pop(0)
                             rtseg = 0
+                            wptflag = True
+                            wpt = route[rtseg]
+                            startAV = posAV
                             new_waypoint(wpt)
 #                            obstructions()
+
+                        elif (wpt >= 10 and wpt <= 50): #start of waypoint
+                            startwp, startdist = vclosestwp(posAV)
+                            route = astar.astar(startwp, wpt)
+                            if startdist < 3.0           # if too close to starting waypoint
+                                route.pop(0)
+                            if len(route) > 0:           # make sure there is a route
+                                route.append(0)
+                                for rt in route:
+                                    cstr = "route: %d" % rt
+                                    logit(cstr)
+                                wpt = startwp
+                                rtseg = 0
+                                startAV = posAV
+                                new_waypoint(wpt)
+#                               obstructions()
                         else:
                             pass
                         
@@ -767,7 +788,10 @@ try:
                                 startwp, startdist = vclosestwp(posAV)
                                 endwp, enddist = vclosestwp(gotoAV)
                                 route = astar.astar(startwp, endwp)
-                                if endwp != startwp:
+                                if startdist < 3.0           # if too close to starting point
+                                    route.pop(0)
+                                    startwp = route[0]
+                                if endwp != startwp:         # are we here yet?
                                     u = vsub(waypts[endwp], waypts[startwp])
                                     v = vsub(gotoAV, waypts[endwp])
                                     if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
@@ -961,7 +985,6 @@ try:
                             sendit("{c----}")
                             sendit("{lx----}")
                             wptflag = False
-#                            rteflag = False
                             odometer(speed)
                             speed = 0
                             auto = False
