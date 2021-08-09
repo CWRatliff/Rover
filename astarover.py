@@ -731,11 +731,11 @@ try:
                             startwp, startdist = vclosestwp(posAV)
                             route = astar.astar(startwp, 28)   # except for car interference, 13
                             route.append(0)
-                            if startdist < 3.0           # if too close to starting waypoint
+                            if startdist < 3.0:           # if too close to starting waypoint
                                 route.pop(0)
                             rtseg = 0
                             wptflag = True
-                            wpt = route[rtseg]
+                            wpt = route[0]
                             startAV = posAV
                             new_waypoint(wpt)
 #                            obstructions()
@@ -744,11 +744,11 @@ try:
                             route = routes[wpt]
                             route.append(0)
                             startwp, startdist = vclosestwp(posAV)
-                            if startdist < 3.0           # if too close to starting waypoint
+                            if startdist < 3.0:           # if too close to starting waypoint
                                 route.pop(0)
                             rtseg = 0
                             wptflag = True
-                            wpt = route[rtseg]
+                            wpt = route[0]
                             startAV = posAV
                             new_waypoint(wpt)
 #                            obstructions()
@@ -756,14 +756,14 @@ try:
                         elif (wpt >= 10 and wpt <= 50): #start of waypoint
                             startwp, startdist = vclosestwp(posAV)
                             route = astar.astar(startwp, wpt)
-                            if startdist < 3.0           # if too close to starting waypoint
+                            if startdist < 3.0:           # if too close to starting waypoint
                                 route.pop(0)
                             if len(route) > 0:           # make sure there is a route
                                 route.append(0)
                                 for rt in route:
                                     cstr = "route: %d" % rt
                                     logit(cstr)
-                                wpt = startwp
+                                wpt = route[0]
                                 rtseg = 0
                                 startAV = posAV
                                 new_waypoint(wpt)
@@ -788,7 +788,7 @@ try:
                                 startwp, startdist = vclosestwp(posAV)
                                 endwp, enddist = vclosestwp(gotoAV)
                                 route = astar.astar(startwp, endwp)
-                                if startdist < 3.0           # if too close to starting point
+                                if startdist < 3.0:           # if too close to starting point
                                     route.pop(0)
                                     startwp = route[0]
                                 if endwp != startwp:         # are we here yet?
