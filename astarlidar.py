@@ -204,7 +204,8 @@ path = open("path.txt", 'a')
 robot = motor_driver_ada.motor_driver_ada(log)
 volts = robot.battery_voltage()
 print("Voltage = ",volts)
-log.write("Voltage: %5.1f\n" % volts)Kfilter = cEKF.Kalman_filter()
+log.write("Voltage: %5.1f\n" % volts)
+Kfilter = cEKF.Kalman_filter()
 port = "/dev/ttyUSB0"
 tty = serial.Serial(port, 9600)
 tty.flushInput()
@@ -625,7 +626,8 @@ def diag_commands(schr):
         xchr = "{b%f5.1}" % volts
         sendit(xchr)
         print("Voltage = ",volts)
-        log.write("Voltage: %5.1f\n" % volts)        logit("odometer: %7.1f" % travel)
+        log.write("Voltage: %5.1f\n" % volts)
+        logit("odometer: %7.1f" % travel)
         logit("az set to %d" % azimuth)
         logit("yaw %d" % yaw)
         logit("hdg %d" % hdg)
@@ -880,32 +882,33 @@ try:
 #               sensor #1 - TFmini giving obstacle main side and avoidence angle
 #               'P'/'S' - port/starboard - side of obstruction
                 elif xchr == 'S':             # sensor data
-                    xchr = cbuff[3]           # Port / Starboard
-                    args = cbuff[4:msglen-1]
-                    sdist, sang = args.split(',')
-                    dist = float(sdist)
-                    ang = int(sang)
-                    rang = (ang * 71.0) / 4068.0   #angle to radians (approx)
-                    aimUV = vunit(aimRV)
-                    aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
-                    
-                    if (xchr == 'S'):               # if obs is mainly right of aimRV
-                        xaimV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
-                        dodgeV = vsmult(xaimV, 3.0)
-                        if rang < 0:
-                            dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(-rang)))# + intrusion
-                    else: # xchr == 'P'
-                        xaimV = [aimUV[1], -aimUV[0]]   # CW 90 deg
-                        dodgeV = vsmult(xaimV, 3.0)
-                        if rang > 0:
-                            dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(rang)))# + intrusion
+                    if (auto and wptflag):
+                        xchr = cbuff[3]           # Port / Starboard
+                        args = cbuff[4:msglen-1]
+                        sdist, sang = args.split(',')
+                        dist = float(sdist)
+                        ang = int(sang)
+                        rang = (ang * 71.0) / 4068.0   #angle to radians (approx)
+                        aimUV = vunit(aimRV)
+                        aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
                         
-                    dodgeV = vadd(dodgeV, aimdistV)
-                    dodgeV = vadd(posAV, dodgeV)
-                    vprint("dodgeAV", dodgeV)
+                        if (xchr == 'S'):               # if obs is mainly right of aimRV
+                            xaimV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
+                            dodgeV = vsmult(xaimV, 3.0)
+                            if rang < 0:
+                                dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(-rang)))# + intrusion
+                        else: # xchr == 'P'
+                            xaimV = [aimUV[1], -aimUV[0]]   # CW 90 deg
+                            dodgeV = vsmult(xaimV, 3.0)
+                            if rang > 0:
+                                dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(rang)))# + intrusion
+                            
+                        dodgeV = vadd(dodgeV, aimdistV)
+                        dodgeV = vadd(posAV, dodgeV)
+                        vprint("dodgeAV", dodgeV)
 
-                    new_waypoint(1)
-                    route.insert(rtseg, 1)
+                        new_waypoint(1)
+                        route.insert(rtseg, 1)
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
