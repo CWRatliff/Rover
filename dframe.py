@@ -416,6 +416,8 @@ class App:
         xtel.grid(row=6,column=0)
         lat=Label(data,text="ACC:", font=(None,15))
         lat.grid(row=7,column=0)
+        bat=Label(data,text="BAT:", font=(None,15))
+        bat.grid(row=8,column=0)
 
         self.status = StringVar()
         Label(data,width=5,font=(None,20),bg="white",fg="blue", \
@@ -449,6 +451,10 @@ class App:
         Label(data,width=5,font=(None,20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.acc).grid(row=7,column=1)
+        self.bat = StringVar()
+        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+              borderwidth=1,relief="solid",\
+              textvariable=self.bat).grid(row=8,column=1)
         
         # Steering button array ========================================
         steer = Frame(master)
@@ -783,6 +789,9 @@ class App:
                 
                 if (xchar == 'a'):               # status
                     self.status.set(lbuffer)
+                        
+                elif (xchar == 'b'):             # battery
+                    self.bat.set(lbuffer)
                         
                 elif (xchar == 'c'):             # course to wpt
                     self.ctg.set(lbuffer)

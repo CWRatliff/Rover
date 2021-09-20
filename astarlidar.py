@@ -202,8 +202,9 @@ log.write(version)
 path = open("path.txt", 'a')
 #log.write(tme)
 robot = motor_driver_ada.motor_driver_ada(log)
-robot.battery_voltage()
-Kfilter = cEKF.Kalman_filter()
+volts = robot.battery_voltage()
+print("Voltage = ",volts)
+log.write("Voltage: %5.1f\n" % volts)Kfilter = cEKF.Kalman_filter()
 port = "/dev/ttyUSB0"
 tty = serial.Serial(port, 9600)
 tty.flushInput()
@@ -557,7 +558,7 @@ def star_commands(schr):
     elif (schr == '4'):               #adj compass
         compass_bias -= 1
         logit("Compass bias %d" % compass_bias)
-        xstr = "{h%3d" % hdg
+        xstr = "{h%3d}" % hdg
         sendit(xstr)
     elif (schr == '5'):               # adjust to true north
 #        compass_bias = (110-hdg - declination) % 360
@@ -567,12 +568,12 @@ def star_commands(schr):
         oldhdg = 159
         hdg = 149
         azimuth = hdg
-        xstr = "{h%3d" % hdg
+        xstr = "{h%3d}" % hdg
         sendit(xstr)
     elif (schr == '6'):               #adj compass
         compass_bias += 1
         logit("Compass bias %d" % compass_bias)
-        xstr = "{h%3d" % hdg
+        xstr = "{h%3d}" % hdg
         sendit(xstr)
     elif (auto and schr == '7'):      #left 180 deg
         left = True
@@ -596,7 +597,7 @@ def star_commands(schr):
         hdg = 329
         oldhdg = 329
         azimuth = hdg
-        xstr = "{h%3d" % hdg
+        xstr = "{h%3d}" % hdg
         sendit(xstr)
 #     elif (auto and schr == '8'):    #T-bone U'ie
 #         max_turn(left_limit, 50)
@@ -620,8 +621,11 @@ def diag_commands(schr):
     if (schr == '0'):
         logit("diagnostic #1 ==============================================================")
         robot.motor_speed()
-        robot.battery_voltage()
-        logit("odometer: %7.1f" % travel)
+        volts = robot.battery_voltage()
+        xchr = "{b%f5.1}" % volts
+        sendit(xchr)
+        print("Voltage = ",volts)
+        log.write("Voltage: %5.1f\n" % volts)        logit("odometer: %7.1f" % travel)
         logit("az set to %d" % azimuth)
         logit("yaw %d" % yaw)
         logit("hdg %d" % hdg)
@@ -887,21 +891,19 @@ try:
                     
                     if (xchr == 'S'):               # if obs is mainly right of aimRV
                         xaimV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
+                        dodgeV = vsmult(xaimV, 3.0)
                         if rang < 0:
-                            xaimV = vsmult(xaimV, 3.0 + dist * math.sin(-rang)) # + intrusion
-                        else:
-                            xaimV = vsmult(xaimV, 3.0 - dist * math.sin)
+                            dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(-rang)))# + intrusion
                     else: # xchr == 'P'
                         xaimV = [aimUV[1], -aimUV[0]]   # CW 90 deg
+                        dodgeV = vsmult(xaimV, 3.0)
                         if rang > 0:
-                            xaimV = vsmult(xaimV, 3.0 + dist * math.sin(rang)) # + intrusion
-                        else:
-                            xaimV = vsmult(xaimV, 3.0)
+                            dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(rang)))# + intrusion
                         
-                    dodgeV = vadd(posAV, aimdistV)
-                    dodgeV = vadd(posAV, xaimV)
-                    waypts[1] = dodgeV
-                    startAV = posAV
+                    dodgeV = vadd(dodgeV, aimdistV)
+                    dodgeV = vadd(posAV, dodgeV)
+                    vprint("dodgeAV", dodgeV)
+
                     new_waypoint(1)
                     route.insert(rtseg, 1)
 #===========================================================================
