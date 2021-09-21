@@ -1115,7 +1115,8 @@ try:
 finally:
     robot.motor(0, 0)
     time.sleep(0.5)           #wait for roboclaws
-    robot.battery_voltage()
+    volts = robot.battery_voltage()
+    print("Voltage = ",volts)
     robot.depower()
     odometer(speed)
     logit("odometer: %7.1f" % travel)
