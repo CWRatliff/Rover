@@ -20,7 +20,7 @@ class motor_driver_ada:
     def __init__(self, log):
         self.lfbias = 48        # experimentally determined for 'Spot 2'
         self.lrbias = 44
-        self.rrbias = 49
+        self.rrbias = 69
         self.rfbias = 40
         self.pan_bias = 83
         self.left_limit = -36
@@ -133,8 +133,9 @@ class motor_driver_ada:
             
     def battery_voltage(self):
         volts = self.rc.ReadMainBatteryVoltage(0x80)[1]/10.0
-        print("Voltage = ",volts)
-        self.log.write("Voltage: %5.1f\n" % volts)
+#         print("Voltage = ",volts)
+#         self.log.write("Voltage: %5.1f\n" % volt`s)
+        return (volts)
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):
