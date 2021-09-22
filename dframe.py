@@ -399,7 +399,7 @@ class App:
 
         # telemetry array ===========================================
         data = Frame(master)
-        data.place(x=20,y=400)
+        data.place(x=20,y=360)
         sta=Label(data,text="STS:", font=(None,15))
         sta.grid(row=0,column=0)
         spd=Label(data,text="SPD:", font=(None,15))
