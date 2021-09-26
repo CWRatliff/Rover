@@ -619,6 +619,7 @@ def star_commands(schr):
     return
 #================================================================
 def diag_commands(schr):
+    global volts
     if (schr == '0'):
         logit("diagnostic #1 ==============================================================")
         robot.motor_speed()
@@ -1115,8 +1116,7 @@ try:
 finally:
     robot.motor(0, 0)
     time.sleep(0.5)           #wait for roboclaws
-    volts = robot.battery_voltage()
-    print("Voltage = ",volts)
+    robot.battery_voltage()
     robot.depower()
     odometer(speed)
     logit("odometer: %7.1f" % travel)
