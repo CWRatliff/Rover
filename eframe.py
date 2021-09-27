@@ -147,6 +147,7 @@ import serial
 import RPi.GPIO as GPIO
 import math
 import ctypes
+import time
 
 cdlib = ctypes.CDLL("/home/pi/projects/ctypes/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
@@ -175,7 +176,9 @@ lat = 0.0
 lon = 0.0
 pathflag = False
 butngreen = False
+greenepoch = time.time()
 butnred = False
+# redepoch = time.time()
 butnblack = False
 blackepoch = time.time()
 butnblue = False
@@ -837,22 +840,21 @@ class App:
         # check tactile buttons
         if (GPIO.input(21) == False):
             if (butngreen == False):
-#                 if time.time() > (greenepoch + .4) # if longer than .4 sec
-#                     self.dxmit('6')                # 5 deg steering
-#                 else
-#                     self.dxmit('9')                # 35 deg steering
-                self.dxmit('6')
+                if ((time.time() - greenepoch) < .6): # if longer than .6 sec
+                    self.dxmit('6')                # 5 deg steering
+                else:
+                    self.dxmit('9')                # 35 deg steering
                 butngreen = True
-                # greenepoch = time.time()
+                greenepoch = time.time()
         else:
             butngreen = False
             
         if (GPIO.input(5) == False):
             if (butnblack == False):
-                if time.time() > (blackepoch + .4) # if longer than .4 sec
+                if ((time.time() - blackepoch) < .6): # if less than .6 sec
                     self.dxmit('5')                # zero steering
-                else
-                    self.dxmit('0')                # zero speed
+                else:
+                    self.dxmit('0')                # all stop!
                 butnblack = True
                 blackepoch = time.time()           # reset
         else:
@@ -860,10 +862,14 @@ class App:
             
         if (GPIO.input(13) == False):
             if (butnred == False):
-                self.dxmit('4')
+                if ((time.time() - redepoch) < .6): # if longer than .6 sec
+                    self.dxmit('4')                # 5 deg steering
+                else:
+                    self.dxmit('7')                # 35 deg steering
                 butnred = True
         else:
             butnred = False
+            redepoch = time.time()
             
         if (GPIO.input(7) == False):
             if (butnblue == False):
