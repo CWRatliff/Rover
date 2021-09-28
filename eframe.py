@@ -839,7 +839,7 @@ class App:
 
         # check tactile buttons
         if (GPIO.input(21) == False):              # button pressed grounds GPIO
-            if (butngreen == False):               # still pressed
+            if not butngreen:                      # still pressed
                 if ((time.time() - greenepoch) < .6): # if less than .6 sec
                     self.dxmit('9')                # 35 deg steering
                 else:
@@ -850,7 +850,7 @@ class App:
             butngreen = False                       # button released
             
         if (GPIO.input(5) == False):
-            if (butnblack == False):
+            if not butnblack:
                 if ((time.time() - blackepoch) < .6): # if less than .6 sec
                     self.dxmit('0')                # all stop!
                 else:
@@ -861,25 +861,46 @@ class App:
             butnblack = False
             
         if (GPIO.input(13) == False):
-            if (butnred == False):
+            if not butnred:
                 if ((time.time() - redepoch) < .6): # if less than .6 sec
                     self.dxmit('7')                # 35 deg steering
                 else:
                     self.dxmit('4')                # 5 deg steering
                 butnred = True
+                redepoch = time.time()
         else:
             butnred = False
-            redepoch = time.time()
+        '''    
+        if (GPIO.input(21) == False):
+            if (butngreen == False):
+                self.dxmit('6')
+                butngreen = True
+        else:
+            butngreen = False
             
+        if (GPIO.input(5) == False):
+            if (butnblack == False):
+                self.dxmit('5')
+                butnblack = True
+        else:
+            butnblack = False
+            
+        if (GPIO.input(13) == False):
+            if (butnred == False):
+                self.dxmit('4')
+                butnred = True
+        else:
+            butnred = False
+ '''           
         if (GPIO.input(7) == False):
-            if (butnblue == False):
+            if not butnblue:
                 self.dxmit('2')
                 butnblue = True
         else:
             butnblue = False
             
         if (GPIO.input(10) == False):
-            if (butnyellow == False):
+            if not butnyellow:
                 self.dxmit('8')
                 butnyellow = True
         else:
