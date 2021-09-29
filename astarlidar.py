@@ -622,12 +622,12 @@ def diag_commands(schr):
     global volts
     if (schr == '0'):
         logit("diagnostic #1 ==============================================================")
-        robot.motor_speed()
         volts = robot.battery_voltage()
-        xchr = "{b%f5.1}" % volts
+        xchr = "{b%5.1f}" % volts
         sendit(xchr)
         print("Voltage = ",volts)
         log.write("Voltage: %5.1f\n" % volts)
+        robot.motor_speed()
         logit("odometer: %7.1f" % travel)
         logit("az set to %d" % azimuth)
         logit("yaw %d" % yaw)
@@ -894,20 +894,21 @@ try:
                         aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
                         
                         if (xchr == 'S'):               # if obs is mainly right of aimRV
-                            xaimV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
-                            dodgeV = vsmult(xaimV, 3.0)
+                            xaimUV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
+                            dodgeV = vsmult(xaimUV, 3.0)
                             if rang < 0:
-                                dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(-rang)))# + intrusion
+                                dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(-rang)))# + intrusion
                         else: # xchr == 'P'
-                            xaimV = [aimUV[1], -aimUV[0]]   # CW 90 deg
-                            dodgeV = vsmult(xaimV, 3.0)
+                            xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
+                            dodgeV = vsmult(xaimUV, 3.0)
                             if rang > 0:
-                                dodgeV = vadd(dodgeV, vsmult(xaimV, dist * math.sin(rang)))# + intrusion
+                                dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(rang)))# + intrusion
                             
                         dodgeV = vadd(dodgeV, aimdistV)
                         dodgeV = vadd(posAV, dodgeV)
                         vprint("dodgeAV", dodgeV)
-
+                        waypts[1] = dodgeV
+                        startAV = posAV
                         new_waypoint(1)
                         route.insert(rtseg, 1)
 #===========================================================================

@@ -838,16 +838,16 @@ class App:
             self.ibuffer = ""
 
         # check tactile buttons
-        if (GPIO.input(21) == False):              # button pressed grounds GPIO
-            if not butngreen:                      # still pressed
+        if (GPIO.input(21) == False):              # button grounds out GPIO
+            if not butngreen:                      # if not stale tap
                 if ((time.time() - greenepoch) < .6): # if less than .6 sec
                     self.dxmit('9')                # 35 deg steering
-                else:
+                else:                              # else 1st tap
                     self.dxmit('6')                # 5 deg steering
-                butngreen = True
-                greenepoch = time.time()
+                butngreen = True                   # register the pressed state
+                greenepoch = time.time()           # start timer
         else:
-            butngreen = False                       # button released
+            butngreen = False                      # button released
             
         if (GPIO.input(5) == False):
             if not butnblack:
