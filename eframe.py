@@ -176,8 +176,10 @@ lat = 0.0
 lon = 0.0
 pathflag = False
 butngreen = False
+butngreen2 = False
 greenepoch = time.time()
 butnred = False
+butnred2 = False
 redepoch = time.time()
 butnblack = False
 blackepoch = time.time()
@@ -763,10 +765,15 @@ class App:
 #   Listen to serial port for status info from rover pi ================================
     def Listen(self):
         global butngreen
+        global butngreen2
         global butnred
+        global butnred2
         global butnblack
         global butnblue
         global butnyellow
+        global blackepoch
+        global greenepoch
+        global redepoch
         global track
         global lat
         global lon
@@ -841,9 +848,14 @@ class App:
         if (GPIO.input(21) == False):              # button grounds out GPIO
             if not butngreen:                      # if not stale tap
                 if ((time.time() - greenepoch) < .6): # if less than .6 sec
-                    self.dxmit('9')                # 35 deg steering
+                    if butngreen2:                 # if double tap in progress
+                        self.dxmit('9')            # 35 deg turn
+                    else:
+                        self.dxmit('6')            # 5 deg steering
+                        butngreen2 = True          # double tap started
                 else:                              # else 1st tap
-                    self.dxmit('6')                # 5 deg steering
+                    self.dxmit('3')                # 1 deg steering
+                    butngreen2 = False             # first tap
                 butngreen = True                   # register the pressed state
                 greenepoch = time.time()           # start timer
         else:
@@ -863,35 +875,18 @@ class App:
         if (GPIO.input(13) == False):
             if not butnred:
                 if ((time.time() - redepoch) < .6): # if less than .6 sec
-                    self.dxmit('7')                # 35 deg steering
+                    if butnred2:
+                        self.dxmit('7')             # 35 deg steering
+                    else:
+                        self.dxmit('4')             # 5 deg steering
+                        butnred2 = True
                 else:
-                    self.dxmit('4')                # 5 deg steering
+                    self.dxmit('1')                 # 1 deg steering
+                    butnred2 = False
                 butnred = True
                 redepoch = time.time()
         else:
             butnred = False
-        '''    
-        if (GPIO.input(21) == False):
-            if (butngreen == False):
-                self.dxmit('6')
-                butngreen = True
-        else:
-            butngreen = False
-            
-        if (GPIO.input(5) == False):
-            if (butnblack == False):
-                self.dxmit('5')
-                butnblack = True
-        else:
-            butnblack = False
-            
-        if (GPIO.input(13) == False):
-            if (butnred == False):
-                self.dxmit('4')
-                butnred = True
-        else:
-            butnred = False
- '''           
         if (GPIO.input(7) == False):
             if not butnblue:
                 self.dxmit('2')
@@ -964,7 +959,7 @@ root = Tk()
 ffont = Font(family="URW Chancery L", size=20, weight = "bold")
 efont = Font(family="URW Chancery L", size=16)
 nfont = Font(family="Century Schoolbook L", size=14)
-root.wm_title('Rover Controller')
+root.wm_title('Rover Controller 210929')
 chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
