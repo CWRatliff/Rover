@@ -318,6 +318,7 @@ def new_waypoint(nwpt):
     destAV = [waypts[nwpt][0], waypts[nwpt][1]]
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
+    aimRV = trackRV
     vprint("track", trackRV)
     azimuth = vcourse(trackRV)
     logit("new wpt az set to %d" % azimuth)
