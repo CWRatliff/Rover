@@ -319,7 +319,7 @@ def new_waypoint(nwpt):
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
     aimRV = trackRV
-    # pathRV = trackRV
+    pathRV = trackRV
     vprint("track", trackRV)
     azimuth = vcourse(trackRV)
     logit("new wpt az set to %d" % azimuth)
@@ -894,28 +894,30 @@ try:
                         rang = (ang * 71.0) / 4068.0   #angle to radians (approx)
                         # get dist to wpt i.e. pathRV
                         # if dist to wpt < obs dist, quit
-                        aimUV = vunit(aimRV)
-                        aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
-                        
-                        if (xchr == 'S'):               # if obs is mainly right of aimRV
-                            xaimUV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
-                            dodgeV = vsmult(xaimUV, 3.0)
-                            if rang < 0:
-                                dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(-rang)))# + intrusion
-                        else: # xchr == 'P'
-                            xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
-                            dodgeV = vsmult(xaimUV, 3.0)
-                            if rang > 0:
-                                dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(rang)))# + intrusion
+                        wdist = vmag(pathRV)
+                        if dist < wdist:  # if obs closer than wpt
+                            aimUV = vunit(aimRV)
+                            aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
                             
-                        dodgeV = vadd(dodgeV, aimdistV)
-                        dodgeV = vadd(posAV, dodgeV)
-                        vprint("dodgeAV", dodgeV)
-                        waypts[1] = dodgeV
-                        startAV = posAV
-                        wpt = 1
-                        new_waypoint(1)
-                        route.insert(rtseg, 1)
+                            if (xchr == 'S'):               # if obs is mainly right of aimRV
+                                xaimUV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
+                                dodgeV = vsmult(xaimUV, 3.0)
+                                if rang < 0:
+                                    dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(-rang)))# + intrusion
+                            else: # xchr == 'P'
+                                xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
+                                dodgeV = vsmult(xaimUV, 3.0)
+                                if rang > 0:
+                                    dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(rang)))# + intrusion
+                                
+                            dodgeV = vadd(dodgeV, aimdistV)
+                            dodgeV = vadd(posAV, dodgeV)
+                            vprint("dodgeAV", dodgeV)
+                            waypts[1] = dodgeV
+                            startAV = posAV
+                            wpt = 1
+                            new_waypoint(1)
+                            route.insert(rtseg, 1)
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
