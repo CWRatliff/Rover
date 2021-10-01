@@ -123,7 +123,7 @@ auto = False
 flag = False
 #rteflag = False
 wptflag = False
-
+wpt = 0
 rtseg = 0
 route = [0]
 
@@ -319,6 +319,7 @@ def new_waypoint(nwpt):
     logit("wpt: %d %7.2f, %7.2f" % (nwpt, destAV[0], destAV[1]))
     trackRV = vsub(destAV, startAV)
     aimRV = trackRV
+    # pathRV = trackRV
     vprint("track", trackRV)
     azimuth = vcourse(trackRV)
     logit("new wpt az set to %d" % azimuth)
@@ -891,6 +892,8 @@ try:
                         dist = float(sdist)
                         ang = int(sang)
                         rang = (ang * 71.0) / 4068.0   #angle to radians (approx)
+                        # get dist to wpt i.e. pathRV
+                        # if dist to wpt < obs dist, quit
                         aimUV = vunit(aimRV)
                         aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
                         
@@ -910,6 +913,7 @@ try:
                         vprint("dodgeAV", dodgeV)
                         waypts[1] = dodgeV
                         startAV = posAV
+                        wpt = 1
                         new_waypoint(1)
                         route.insert(rtseg, 1)
 #===========================================================================
