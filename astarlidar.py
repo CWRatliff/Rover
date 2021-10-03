@@ -1,26 +1,3 @@
-#interface via Xbee radios
-# using SPI instead of I2C
-#190621 - added compass following
-#190715 - strengthened xbee input validation
-#190720 - improved compass following
-#190802 - U turns
-#190816 - GPS, waypoints
-#190826 - routes, compass corrections
-#190925 - EKF added
-#191023 - major code review
-#200314 - I/F with Arduino via USB-tty serial port
-#200412 - restructure flag and auto blocks for faster EKF
-#200813 - wpts upgrade, code improvements esp. route & U'ies
-#200819 - switch to vector ops, better waypoint convergence
-#200919 - Kalman time linked to gps input
-#200920 - Dead Reconning when no recent GPS
-#200922 - routes track from wpt to wpt (except at start)
-#201009 - dodging obstacles
-#201223 - use gps to adjusty IMU heading bias
-#201226 - work on waypoint homeing
-#201227 - if xtrk > 3, use filtered hdg to recompute bias
-#210103 - monitor rapid yaw, rebias if detected
-#210110 - revise bias resets (using BNO080 gyro, no-mag)
 #210730 - A* trip planning
 #210918 - Lidar sensor / object dodging
 
@@ -52,8 +29,10 @@ Received codes
 D - one digit commands
 E - '*' commnds
 F - '#' commands
+G - goto lat/lon
 L - gps lat/lon/accuracy
 O - compass heading
+S - sensor input
 T - 'D' commands, diagnostics
 '''
 
@@ -85,7 +64,6 @@ pan = 0
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
-#declination = 12                        # Camarillo declination
 compass_bias = 98                        # for canopy table (using gyro/quat, no-mag
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
@@ -110,9 +88,6 @@ latfeet = 6079.99/60                    # Kyle's converter                    st
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
 segstart = time.time()                  # speed segment start (seconds)
-#spdfactor = .0088                       # convert speed percentage to ft/sec ref BOT:3/17
-#spdfactor = .0122                       # for 43 RPM
-#spdfactor = .017                        # for 60 RPM
 spdfactor = .025                        # for 84 RPM
 
 left = False
@@ -121,7 +96,6 @@ right_limit = 36
 
 auto = False
 flag = False
-#rteflag = False
 wptflag = False
 wpt = 0
 rtseg = 0
@@ -181,14 +155,6 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
     [ -647.22,  2276.52],     #50 into EF
     [  -0.00,  0.00]]
 
-obsarray = [[-578.94,  2247.67],     # virtual tree = wp #14
-    [-644.80, 2268.85],                  # virtual tree between #30- #29
-    [-660.99, 2221.52],
-    [-646.81, 2240.18],
-    [-646.63, 2255.84],
-    [-634.29, 2266.28],
-    [-622.74, 2270.73],
-    [2.,0.], [2.,5.]]
 ndx = 0
 
 version = "Rover 1.1 210730\n"
@@ -215,6 +181,11 @@ def cartesian(compass):
     return (450 - compass) % 360
 def vadd(U, V):
     return [U[0]+V[0], U[1]+V[1]]
+def vcross2(U, V):
+    x = U[1] * V[0] - U[0] * V[1]
+    if x > 0:
+        return True      # U x V right hand rotation
+    return False
 def vdot(U, V):
     return (U[0]*V[0] + U[1]*V[1])
 def vmag(V):
@@ -230,6 +201,11 @@ def vunit(V):
 # get compass course from direction vector
 def vcourse(V):
     return (450 - math.degrees(math.atan2(V[1],V[0]))) % 360
+# get unit vector from compass heading
+def vcompass(angle):
+    cart = cartesian(angle)
+    rcart = math.radians(cart)
+    return [math.cos(rcart), math.sin(rcart)]
 # cvt lat/lon seconds to U.S survey feet
 def vft2sec(feetE, feetN):
     return [feetN/latfeet, feetE/lonfeet]
@@ -332,66 +308,6 @@ def new_waypoint(nwpt):
         speed * spdfactor)
     epoch = time.time()
     return
-#===================================================================
-# look for point obstructions
-def obstructions():
-    global startAV
-    obs = boxtest(posAV[0], posAV[1], destAV[0], destAV[1])
-    obsAV = obs[0]             #just use 1st one for now
-    if (obsAV[0] != 0):
-        vprint("obstruction", obsAV)
-        obsRV = vsub(obsAV, posAV)
-        obsdist = vmag(obsRV)
-        if (obsdist < wptdist):
-            odot = vdot(obsRV, trackRV)
-            if odot > 0:
-                obsproj = odot/(wptdist*wptdist)
-                obsprojRV = vsmult(trackRV, obsproj)
-                vprint("detour", obsprojRV)
-                obsxRV = vsub(obsprojRV, obsRV)
-                obsxdist = vmag(obsxRV)
-                if (obsxdist < 3):
-                    obsxRV = vunit(obsxRV)
-                    obsxRV = vsmult(obsxRV, 3.0)
-                    obsAV = vadd(obsRV, obsxRV)
-                    obsAV = vadd(obsAV, posAV)
-                    vprint("avoidance", obsAV)
-                    waypts[1] = obsAV
-                    startAV = posAV
-                    new_waypoint(1)
-                    route.insert(rtseg, 1)
-    return
-
-def db_search(x0):
-    global ndx
-    ndx = 0
-    while obsarray[ndx][0] < x0:
-        ndx +=1
-        if obsarray[ndx][0] == 0:
-            return [0, 0]
-    return [obsarray[ndx][0], obsarray[ndx][1]]
-
-def db_next():
-    global ndx
-    ndx +=1
-    return [obsarray[ndx][0], obsarray[ndx][1]]
-    
-def boxtest(x0, y0, x1, y1):
-    if x0 > x1:
-        x0, x1 = x1, x0
-    if y0 > y1:
-        y0, y1 = y1, y0
-    x0 -= 3.0           # enlarge box
-    x1 += 3.0
-    y0 -= 3.0
-    y1 += 3.0
-    list = [[0, 0]]
-    obs = db_search(x0)
-    while (obs[0] != 0 and obs[0] <= x1):
-        if obs[1] >= y0 and obs[1] <= y1:
-            list.insert(0, [obs[0], obs[1]])
-        obs = db_next()
-    return list
 
 #===================================================================
 def simple_commands(schr):
@@ -507,7 +423,7 @@ def simple_commands(schr):
                 logit("az set to %d" % azimuth)
         else:
             max_turn(right_limit, speed)
-
+#============================ pan/tilt camera
     elif schr == 'L':
         pan += 5
         robot.sensor_pan(pan)
@@ -531,7 +447,6 @@ def star_commands(schr):
     global hdg
     global oldhdg
     global yaw
-#    global rteflag
     global wptflag
     global compass_bias
     global left
@@ -564,15 +479,7 @@ def star_commands(schr):
         xstr = "{h%3d}" % hdg
         sendit(xstr)
     elif (schr == '5'):               # adjust to true north
-#        compass_bias = (110-hdg - declination) % 360
-#        compass_bias = (149 - yaw - declination) % 360
-        compass_bias = (149 - yaw) % 360
-        logit("Compass bias %d" % compass_bias)
-        oldhdg = 159
-        hdg = 149
-        azimuth = hdg
-        xstr = "{h%3d}" % hdg
-        sendit(xstr)
+        pass
     elif (schr == '6'):               #adj compass
         compass_bias += 1
         logit("Compass bias %d" % compass_bias)
@@ -593,25 +500,7 @@ def star_commands(schr):
         azimuth %= 360
         logit("az set to %d" % azimuth)
     elif (schr == '8'):
-#        compass_bias = (329-hdg - declination) % 360
-#         compass_bias = (329 - yaw - declination) % 360
-        compass_bias = (329 - yaw) % 360
-        logit("Compass bias %d" % compass_bias)
-        hdg = 329
-        oldhdg = 329
-        azimuth = hdg
-        xstr = "{h%3d}" % hdg
-        sendit(xstr)
-#     elif (auto and schr == '8'):    #T-bone U'ie
-#         max_turn(left_limit, 50)
-#         time.sleep(3)
-#         robot.motor(-50, 0)
-#         time.sleep(3)
-#         max_turn(left_limit, speed)
-#         azimuth += 180
-#         azimuth %= 360
-#         logit("az set to %d" % azimuth)
-#        
+        pass
     elif (auto and schr == '9'):      #right 180 deg
         left = False
         max_turn(right_limit, speed)
@@ -621,9 +510,8 @@ def star_commands(schr):
     return
 #================================================================
 def diag_commands(schr):
-    global volts
     if (schr == '0'):
-        logit("diagnostic #1 ==============================================================")
+        logit("diagnostic #1 ===============================")
         volts = robot.battery_voltage()
         xchr = "{b%5.1f}" % volts
         sendit(xchr)
@@ -696,11 +584,8 @@ try:
                 cbuff = ""
                 continue
             xchr = cbuff[1]
-#            if (xchr != 'O'):             #ignore compass input (too many)
-            if (xchr != 'Z'):             #show compass input
+            if (xchr != '$'):             #show compass input
                 tt = datetime.datetime.now()
-#                tt = time.localtime()
-#                ts = time.strftime("%H:%M:%S ", tt)
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
                 logit("msg: " + ts + cbuff)
                
@@ -867,19 +752,6 @@ try:
                     yaw = int(cbuff[2:msglen-1])
                     hdg = (yaw + compass_bias)%360
                     
-#                     if (oldhdg < 500):
-#                         if (oldhdg < 90 and hdg >= 270):
-#                             delhdg = (hdg - 360) - oldhdg
-#                         elif (oldhdg >= 270 and hdg < 90):
-#                             delhdg = hdg - (oldhdg - 360)
-#                         else:
-#                             delhdg = hdg - oldhdg
-#                             
-#                         if (abs(delhdg > 2)):
-#                             oldbias = compass_bias
-#                             compass_bias = (compass_bias - delhdg) % 360
-#                             hdg = (yaw + compass_bias)%360      #recompute
-#                             logit("Yaw delta: Compass bias was %d now %d" % (oldbias, compass_bias))
 #===========================================================================
 #               {S1 P/S <dist> , <CW angle>} BOT 4:16
 #               sensor #1 - TFmini giving obstacle main side and avoidence angle
@@ -891,33 +763,69 @@ try:
                         sdist, sang = args.split(',')
                         dist = float(sdist)
                         ang = int(sang)
-                        rang = (ang * 71.0) / 4068.0   #angle to radians (approx)
-                        # get dist to wpt i.e. pathRV
-                        # if dist to wpt < obs dist, quit
-                        wdist = vmag(pathRV)
-                        if dist < wdist:  # if obs closer than wpt
+                        dtg = vmag(pathRV)
+                        obsUV = vcompass(hdg + ang)
+                        obsRV = vsmult(obsUV, dist)
+                        print("obstacleV", obsRV)
+                        if dist < dtg:  # if obs closer than wpt
                             aimUV = vunit(aimRV)
-                            aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
-                            
-                            if (xchr == 'S'):               # if obs is mainly right of aimRV
-                                xaimUV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
-                                dodgeV = vsmult(xaimUV, 3.0)
-                                if rang < 0:
-                                    dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(-rang)))# + intrusion
-                            else: # xchr == 'P'
-                                xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
-                                dodgeV = vsmult(xaimUV, 3.0)
-                                if rang > 0:
-                                    dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(rang)))# + intrusion
-                                
-                            dodgeV = vadd(dodgeV, aimdistV)
-                            dodgeV = vadd(posAV, dodgeV)
-                            vprint("dodgeAV", dodgeV)
-                            waypts[1] = dodgeV
-                            startAV = posAV
-                            wpt = 1
-                            new_waypoint(1)
-                            route.insert(rtseg, 1)
+                            proj = vdot(obsRV, aimUV)
+                            print("proj", proj)
+                            if proj >= 0:       #obs on same side as aimRV
+                                projRV = vsmult(aimUV, proj) #u.v/v.v * v
+                                print("projRV", projRV)
+                                dodgeRV = vsub(projRV, obsRV)   # from obs to aim
+                                print("dodgeRV", dodgeRV)
+                                wdist = vmag(dodgeRV)
+                                print("wdist", wdist)
+                                dodgeUV = vunit(dodgeRV)
+                                dodgeRV = vsmult(dodgeUV, 3.0)
+                                if abs(wdist) < 3.0:      # obs within minimum
+                                    rot = vcross2(obsRV, aimRV)    # obsV to aimV rotation
+                                    print("rot", rot)
+                                    if xchr == 'S':      # if obs is mainly right of aimRV
+                                        if not rot:
+                                            dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
+                                    if (xchr == 'P'): # xchr == 'P'
+                                        if rot:
+                                            dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
+                                        
+                                    print("dodgeV", dodgeRV)
+                                    waypts[1] = dodgeRV
+                                    startAV = posAV
+                                    new_waypoint(1)
+                                    if wpt != 1:
+                                        route.insert(rtseg, 1)
+                                    wpt = 1
+#                         wdist = vmag(pathRV)
+#                         obsUV = vcompass(hdg + ang)
+#                         obsRV = vsmult(obsUV, dist)
+#                         if dist < wdist:  # if obs closer than wpt
+#                             aimUV = vunit(aimRV)
+#                             xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
+#                             
+#                             aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
+#                             
+#                             if (xchr == 'S'):               # if obs is mainly right of aimRV
+#                                 xaimUV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
+#                                 dodgeV = vsmult(xaimUV, 3.0)
+#                                 if rang < 0:
+#                                     dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(-rang)))# + intrusion
+#                             else: # xchr == 'P'
+#                                 xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
+#                                 dodgeV = vsmult(xaimUV, 3.0)
+#                                 if rang > 0:
+#                                     dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(rang)))# + intrusion
+#                                 
+#                             dodgeV = vadd(dodgeV, aimdistV)
+#                             dodgeV = vadd(posAV, dodgeV)
+#                             vprint("dodgeAV", dodgeV)
+#                             waypts[1] = dodgeV
+#                             startAV = posAV
+#                             wpt = 1
+#                             new_waypoint(1)
+#                             if wpt != 1:
+#                                 route.insert(rtseg, 1)
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -925,7 +833,6 @@ try:
 #=========================================================================                    
                 else:
                     pass
-                #
             flag = False
             cbuff = ""
             # endif flag
@@ -1020,10 +927,8 @@ try:
                             reducedflag = True
                         
                     #closing on waypoint
-#                    if (dtg < max(2.0, accgps) or vdot(pathRV, trackRV) <= 0):
                     if (dtg < 2.0 or vdot(pathRV, trackRV) <= 0):
                         logit("close to waypoint")
-#                        if rteflag:
                         rtseg += 1
                         wpt = route[rtseg]
                         if (wpt == 0):
@@ -1053,16 +958,12 @@ try:
                         oldhdg = hdg
                         vprint("COG base course", cogBaseRV)
                         oldbias = compass_bias
-#                         compass_bias = (hdg - yaw - declination) % 360
-#                        compass_bias = (hdg - yaw) % 360
                         newbias = (hdg - yaw) % 360   #beware zero crossing
                         if (newbias > oldbias):
                             compass_bias += 1
                         elif (newbias < oldbias):
                             compass_bias -= 1
                             
-#                         cstr = "{h%3d}" % hdg
-#                         sendit(cstr)
                         logit("cogBase: Compass bias was %d now %d" % (oldbias, compass_bias))
                         azimuth = hdg
                         cogBase = 0
@@ -1073,12 +974,6 @@ try:
                         cogBase += 1
                 else:
                     cogBase = 0
-                    
-#                 if (wptflag and xtrk > 3.0):               # if xtrack grows too much, use filtered heading
-#                     oldbias = compass_bias
-# #                    compass_bias = (int(fhdg) - yaw - declination) % 360
-#                     compass_bias = (int(fhdg) - yaw) % 360
-#                     logit("XTrack: Compass bias was %d now %d" % (oldbias, compass_bias))
                     
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
@@ -1133,4 +1028,3 @@ finally:
     cstr = "{aStop}"
     tty.write(cstr.encode("utf-8"))
     print("Stopped")
-#    robot.deinit()
