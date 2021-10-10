@@ -781,7 +781,11 @@ class App:
         global strhdg
         
         while ser.in_waiting:
-            inpt = ser.read(1).decode("utf-8")
+            try:
+                inpt = ser.read(1).decode("utf-8")
+            except UnicodeDecodeError:
+                continue
+#            inpt = ser.read(1).decode("utf-8")
             if (inpt == '{'):
                 self.ibuffer = ""
                 continue
@@ -926,13 +930,14 @@ treetable = cdlib.COpenTable("TreeTable".encode())
 locndx = cdlib.COpenIndex(treetable, "TreeNdx".encode())
 
 rc = cdlib.CFirst(treetable, locndx)
+
 alltrees = []
 while (rc >= 0):
     lon = cdlib.CGetDouble(treetable, "Lonft".encode())
     lat = cdlib.CGetDouble(treetable, "Latft".encode())
     alltrees.append([lon, lat])
     rc = cdlib.CNext(treetable, locndx)
-    
+ 
 rtetable = cdlib.COpenTable("Routes".encode())
 rc = cdlib.CFirst(rtetable, 0)           # using primary index
 routes = []
