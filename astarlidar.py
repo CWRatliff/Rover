@@ -182,7 +182,7 @@ def cartesian(compass):
 def vadd(U, V):
     return [U[0]+V[0], U[1]+V[1]]
 def vcross2(U, V):
-    x = U[1] * V[0] - U[0] * V[1]
+    x = U[0] * V[1] - U[1] * V[0]
     if x > 0:
         return True      # U x V right hand rotation
     return False
@@ -614,6 +614,8 @@ try:
                             wptflag = False
 #                            rteflag = False
                             auto = False
+                            route = [0]
+                            rtseg = 0
                             sendit("{aStby}")
                             logit("Standby")
                             sendit("{d----}")
@@ -766,16 +768,16 @@ try:
                         dtg = vmag(pathRV)
                         obsUV = vcompass(hdg + ang)
                         obsRV = vsmult(obsUV, dist)
-                        print("obstacleV", obsRV)
+                        vprint("obstacleV", obsRV)
                         if dist < dtg:  # if obs closer than wpt
                             aimUV = vunit(aimRV)
                             proj = vdot(obsRV, aimUV)
                             print("proj", proj)
                             if proj >= 0:       #obs on same side as aimRV
                                 projRV = vsmult(aimUV, proj) #u.v/v.v * v
-                                print("projRV", projRV)
+                                vprint("projRV", projRV)
                                 dodgeRV = vsub(projRV, obsRV)   # from obs to aim
-                                print("dodgeRV", dodgeRV)
+                                vprint("dodgeRV", dodgeRV)
                                 wdist = vmag(dodgeRV)
                                 print("wdist", wdist)
                                 dodgeUV = vunit(dodgeRV)
@@ -786,46 +788,23 @@ try:
                                     if xchr == 'S':      # if obs is mainly right of aimRV
                                         if not rot:
                                             dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
+                                            vprint("aimRV", aimRV)                                        
                                     if (xchr == 'P'): # xchr == 'P'
                                         if rot:
                                             dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
-                                        
-                                    print("dodgeV", dodgeRV)
-                                    waypts[1] = dodgeRV
+                                            vprint("aimRV", aimRV)                                        
+                                    vprint("dodgeV", dodgeRV)
+                                    dodgeRV = vadd(dodgeRV, projRV)
+                                    dodgeAV = vadd(dodgeRV, posAV)
+                                    waypts[1] = dodgeAV
                                     startAV = posAV
                                     new_waypoint(1)
                                     if wpt != 1:
                                         route.insert(rtseg, 1)
                                     wpt = 1
-#                         wdist = vmag(pathRV)
-#                         obsUV = vcompass(hdg + ang)
-#                         obsRV = vsmult(obsUV, dist)
-#                         if dist < wdist:  # if obs closer than wpt
-#                             aimUV = vunit(aimRV)
-#                             xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
-#                             
-#                             aimdistV = vsmult(aimUV, dist)  #where obstructuction intersects
-#                             
-#                             if (xchr == 'S'):               # if obs is mainly right of aimRV
-#                                 xaimUV = [-aimUV[1], aimUV[0]]   # CCW 90 deg
-#                                 dodgeV = vsmult(xaimUV, 3.0)
-#                                 if rang < 0:
-#                                     dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(-rang)))# + intrusion
-#                             else: # xchr == 'P'
-#                                 xaimUV = [aimUV[1], -aimUV[0]]   # CW 90 deg
-#                                 dodgeV = vsmult(xaimUV, 3.0)
-#                                 if rang > 0:
-#                                     dodgeV = vadd(dodgeV, vsmult(xaimUV, dist * math.sin(rang)))# + intrusion
-#                                 
-#                             dodgeV = vadd(dodgeV, aimdistV)
-#                             dodgeV = vadd(posAV, dodgeV)
-#                             vprint("dodgeAV", dodgeV)
-#                             waypts[1] = dodgeV
-#                             startAV = posAV
-#                             wpt = 1
-#                             new_waypoint(1)
-#                             if wpt != 1:
-#                                 route.insert(rtseg, 1)
+                                    odometer(speed)
+                                    speed = 0
+                                    robot.motor(speed, steer)
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
