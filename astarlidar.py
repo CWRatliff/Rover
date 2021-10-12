@@ -769,7 +769,7 @@ try:
                         obsUV = vcompass(hdg + ang)
                         obsRV = vsmult(obsUV, dist)
                         vprint("obstacleV", obsRV)
-                        if dist < dtg:  # if obs closer than wpt
+                        if dist < (dtg + 3.0):  # if obs closer than wpt & 3ft margin
                             aimUV = vunit(aimRV)
                             proj = vdot(obsRV, aimUV)
                             print("proj", proj)
@@ -785,14 +785,16 @@ try:
                                 if abs(wdist) < 3.0:      # obs within minimum
                                     rot = vcross2(obsRV, aimRV)    # obsV to aimV rotation
                                     print("rot", rot)
+                                    
                                     if xchr == 'S':      # if obs is mainly right of aimRV
+#                                        if ang < 0:
                                         if not rot:
                                             dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
-                                            vprint("aimRV", aimRV)                                        
-                                    if (xchr == 'P'): # xchr == 'P'
+                                    if (xchr == 'P'):
+                                        if ang > 0:
                                         if rot:
                                             dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
-                                            vprint("aimRV", aimRV)                                        
+                                     
                                     vprint("dodgeV", dodgeRV)
                                     dodgeRV = vadd(dodgeRV, projRV)
                                     dodgeAV = vadd(dodgeRV, posAV)
