@@ -808,6 +808,7 @@ try:
                         # or get next wpt aiming vector and see if it dodges
                         #if dist < (dtg + 3.0):  # if obs closer than wpt & 3ft margin
                         if (dtg < 3.0 and dist > dtg):
+                            logit("advancing wpt")
                             advance_waypoint()
                             
                         aimUV = vunit(aimRV)
@@ -946,7 +947,7 @@ try:
                             odometer(speed)
                             speed = int(approach_factor * speed)
                             reducedflag = True
-                         # resume_speed = max(resume_speed, speed)           
+                        resume_speed = max(resume_speed, speed)           
                         
                     #closing on waypoint
                     if (dtg < 2.0 or vdot(pathRV, trackRV) <= 0):
