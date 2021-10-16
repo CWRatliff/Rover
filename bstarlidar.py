@@ -616,7 +616,7 @@ try:
                 cbuff = ""
                 continue
             xchr = cbuff[1]
-            if (xchr != '$'):             #show compass input
+            if (xchr != 'O'):             # don'tshow compass input
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
                 logit("msg: " + ts + cbuff)
@@ -768,7 +768,7 @@ try:
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
                             if (accgps < 50):
-                                cstr = "{la%6.2f}" % accgps    #send to controller
+                                cstr = "{la%5.2f}" % accgps    #send to controller
                                 sendit(cstr)
                                 logit(cstr)
                             else:
@@ -796,7 +796,7 @@ try:
                     if (auto and wptflag):
                         xchr = cbuff[3]           # Port / Starboard
                         args = cbuff[4:msglen-1]
-                        sdist, sang = args.split(',')
+                        sdist, sang, swath = args.split(',')
                         dist = float(sdist)
                         ang = int(sang)
                         dtg = vmag(pathRV)
@@ -828,11 +828,10 @@ try:
                                 print("rot", rot)
                                 
                                 if xchr == 'S':      # if obs is mainly right of aimRV
-#                                        if ang < 0:
                                     if not rot:
                                         dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
                                 if (xchr == 'P'):
-#                                        if ang > 0:
+                                    swath = -swath
                                     if rot:
                                         dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
                                  
@@ -848,6 +847,8 @@ try:
                                 odometer(speed)
                                 speed = 0
                                 robot.motor(speed, steer)
+                                cstr = "{r%d,%d,%d} " % (dist, hdg+ang, swath)
+                                sendit(cstr)
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -952,32 +953,7 @@ try:
                     #closing on waypoint
                     if (dtg < 2.0 or vdot(pathRV, trackRV) <= 0):
                         logit("close to waypoint")
-                        # advance_waypoint()
-                        rtseg += 1
-                        wpt = route[rtseg]
-                        if (wpt == 0):
-                            sendit("{aStby}")
-                            logit("Standby")
-                            sendit("{d----}")
-                            sendit("{c----}")
-                            sendit("{lx----}")
-                            wptflag = False
-                            route =[0]
-                            rtseg = 0
-                            odometer(speed)
-                            speed = 0
-                            auto = False
-                        else:
-                            odometer(speed)
-                            if reducedflag:
-                                speed = resume_speed
-                            logit("933")
-                            odometer(speed)
-                            reducedflag = False
-                            startAV = destAV       # new wpt start = old wpt end
-                            new_waypoint(wpt)
-                            logit("938")
-                            odometer(speed)
+                        advance_waypoint()
 
                         #endif dtg ===================
                     #endif wptflag ===================
