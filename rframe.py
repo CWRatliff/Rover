@@ -150,7 +150,7 @@ import math
 import ctypes
 import time
 
-cdlib = ctypes.CDLL("/home/pi/projects/ctypes/libsapphire.so")
+cdlib = ctypes.CDLL("/home/pi/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
 cdlib.COpenIndex.restype = ctypes.c_void_p
 cdlib.CGetDouble.restype = ctypes.c_double
@@ -280,9 +280,10 @@ def Xspot(mstr, xlon, xlat):
     canvas.create_text(spot[0], spot[1], text='x', fill='blue', tags = 'path')
           
 def Guage(mstr):
+    rose.delete('arrow')
+    rose.delete('blip')
     xarrow = arrlen * math.cos(rhdg)
     yarrow = arrlen * math.sin(rhdg)
-    rose.delete('arrow')
     rose.create_line(240-xarrow, 240+yarrow, 240 + xarrow, 240-yarrow, arrow=LAST, \
         arrowshape=(20,25,5), width=8,fill="deep sky blue", tags="arrow")
     if (strhdg < -1 or strhdg > 1):
@@ -762,6 +763,9 @@ class App:
         global lon
         global rhdg
         global strhdg
+        global bdist
+        global bhdg
+        global bwidth
         
         while ser.in_waiting:
             try:
@@ -821,7 +825,10 @@ class App:
 
                 elif xchar == 'r':
                     bdist, bhdg, bwidth = lbuffer.split(',')
-                    canvas.delete('blip')
+                    print(bdist, bhdg, bwidth)
+                    bdist = int(bdist)
+                    bhdg = int(bhdg)
+                    bwidth = int(bwidth)
                     Guage(root)
                     
                 elif (xchar == 's'):            # steering angle
