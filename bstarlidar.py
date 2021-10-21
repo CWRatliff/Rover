@@ -44,7 +44,10 @@ import math
 import motor_driver_ada
 import cEKF
 import astar
+from waypts import *
+from vectors import *
 
+DODGE = 2.0                             # obstruction dodge distance
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
 approach_factor = .75                     # after waypoint slowdown
@@ -112,6 +115,7 @@ routes = [[0,0],                    #0
 wptdist = 0.0
 
 # (x, y) ((East, North)) in U.S. Survey feet offsets from 34-14N -119-4W
+'''
 waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
     [ -787.36,  2298.03],     #10 
     [ -787.00,  1977.00],     #11 Arena pepper
@@ -155,10 +159,10 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
     [ -608.32,  2295.08],     #49 Back gate t\into EF
     [ -647.22,  2276.52],     #50 into EF
     [  -0.00,  0.00]]
-
+'''
 ndx = 0
 
-version = "Rover 1.1 210730\n"
+version = "Rover 1.1 211020\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -178,6 +182,7 @@ tty = serial.Serial(port, 9600)
 tty.flushInput()
 
 #====================================================
+'''
 def cartesian(compass):
     return (450 - compass) % 360
 def vadd(U, V):
@@ -207,6 +212,7 @@ def vcompass(angle):
     cart = cartesian(angle)
     rcart = math.radians(cart)
     return [math.cos(rcart), math.sin(rcart)]
+'''
 # cvt lat/lon seconds to U.S survey feet
 def vft2sec(feetE, feetN):
     return [feetN/latfeet, feetE/lonfeet]
@@ -660,7 +666,7 @@ try:
                             # shortest dist might be directly to endwpt, astar should return
                             # route distance, if more than dist to endwpt, goto endwpt
                             startwp, startdist = vclosestwp(posAV)
-                            route = astar.astar(startwp, 28)   # except for car interference, 13
+                            route = astar.astar(startwp, 76)
                             route.append(0)
                             if startdist < 3.0:           # if too close to starting waypoint
                                 route.pop(0)
@@ -822,18 +828,18 @@ try:
                             wdist = vmag(dodgeRV)
                             print("wdist", wdist)
                             dodgeUV = vunit(dodgeRV)
-                            dodgeRV = vsmult(dodgeUV, 3.0)
+                            dodgeRV = vsmult(dodgeUV, DODGE)
                             if abs(wdist) < 3.0:      # obs within minimum
                                 rot = vcross2(obsRV, aimRV)    # obsV to aimV rotation
                                 print("rot", rot)
                                 
                                 if xchr == 'S':      # if obs is mainly right of aimRV
                                     if not rot:
-                                        dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
+                                        dodgeRV = vsmult(dodgeUV, wdist + DODGE)# + intrusion
                                 if (xchr == 'P'):
                                     swath = -swath
                                     if rot:
-                                        dodgeRV = vsmult(dodgeUV, wdist + 3.0)# + intrusion
+                                        dodgeRV = vsmult(dodgeUV, wdist + DODGE)# + intrusion
                                  
                                 vprint("dodgeV", dodgeRV)
                                 dodgeRV = vadd(dodgeRV, projRV)

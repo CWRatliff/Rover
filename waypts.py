@@ -40,4 +40,30 @@ waypts=[[0,1],[1,2],[2,3],[3,4],[4,5],[5,6],[6,7],[7,8],[8,9],[9,10],
     [ -634.85,  2340.83],     #48 Back drive driveway
     [ -608.32,  2295.08],     #49 Back gate t\into EF
     [ -647.22,  2276.52],     #50 into EF
+	[ -674.20,  2078.64],	  #51 Citrus pass
+	[ -704.96,  2053.12],	  #52 Citrus hill
+	[ -761.70,  1904.58],	  #53 Turnoff
+	[ -781.41,  1871.83],	  #54 South trail
+	[ -772.84,  1815.21],	  #54 South trail
+	[ -767.39,  1756.35],	  #54 South trail
+	[ -750.91,  1683.55],	  #54 South trail
+	[ -730.47,  1652.86],	  #54 South trail
+	[ -687.40,  1623.52],	  #54 South trail
+	[ -670.28,  1620.86],	  #54 South trail
+	[ -658.41,  1629.30],	  #54 South trail
+	[ -645.52,  1654.63],	  #54 South trail
+	[ -618.24,  1674.57],	  #54 South trail
+	[ -583.53,  1703.19],	  #54 South trail
+	[ -541.41,  1766.83],	  #54 South trail
+	[ -493.42,  1840.76],	  #54 South trail
+	[ -465.63,  1897.25],	  #67 Horse zone
+	[ -755.01,  2071.85],	  #68 Ranger drive start
+	[ -694.38,  1975.24],	  #69 Ranger drive middle
+	[ -659.01,  1941.24],	  #70 Hut no. 1 approach
+	[ -628.15,  1929.73],	  #71 Hut gap 1 - 2
+	[ -635.19,  2176.80],	  #72 Rose bush
+	[ -697.89,  2321.72],	  #73 E.F.Back path
+	[ -732.84,  2032.28],	  #74 Ranger rd junction
+	[ -604.84,  2226.44],	  #75 Tent approach
+	[ -605.05,  2232.74],	  #76 Tent door
     [  -0.00,  0.00]]

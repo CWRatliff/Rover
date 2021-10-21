@@ -150,7 +150,7 @@ import math
 import ctypes
 import time
 
-cdlib = ctypes.CDLL("/home/pi/libsapphire.so")
+cdlib = ctypes.CDLL("/home/pi/projects/ctypes/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
 cdlib.COpenIndex.restype = ctypes.c_void_p
 cdlib.CGetDouble.restype = ctypes.c_double
@@ -277,7 +277,7 @@ def Chart(mstr):
 
 def Xspot(mstr, xlon, xlat):
     spot = Usf2Pix([[xlon, xlat]], scale, stlat, stlon)
-    canvas.create_text(spot[0], spot[1], text='x', fill='blue', tags = 'path')
+    canvas.create_text(spot[0], spot[1], text='.', fill='blue', tags = 'path')
           
 def Guage(mstr):
     rose.delete('arrow')
