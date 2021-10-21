@@ -5,12 +5,17 @@ def cartesian(compass):
 def vadd(U, V):
     return [U[0]+V[0], U[1]+V[1]]
 def vcross2(U, V):
-    x = U[1] * V[0] - U[0] * V[1]
+    x = U[0] * V[1] - U[1] * V[0]
     if x > 0:
         return True      # U x V right hand rotation
     return False
 def vdot(U, V):
     return (U[0]*V[0] + U[1]*V[1])
+def vproj(U, V):
+    d = vdot(U, V)
+    return vsmult(V, d/vmag(V))
+def vprojunitv(U, UV):
+    return vsmult(UV, vdot(U, UV))
 def vmag(V):
     return math.sqrt(V[0]*V[0] + V[1]*V[1])
 def vsmult(V, scalar):
@@ -30,9 +35,4 @@ def vcompass(angle):
     print("cart angle", cart)
     rcart = math.radians(cart)
     return [math.cos(rcart), math.sin(rcart)]
-# cvt lat/lon seconds to U.S survey feet
-def vft2sec(feetE, feetN):
-    return [feetN/latfeet, feetE/lonfeet]
-# cvt US feet to lat/lon seconds
-def vsec2ft(latsec, lonsec):
-    return [lonsec*lonfeet, latsec*latfeet]
+
