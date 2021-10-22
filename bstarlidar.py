@@ -805,6 +805,7 @@ try:
                         sdist, sang, swath = args.split(',')
                         dist = float(sdist)
                         ang = int(sang)
+                        swath = int(swath)
                         dtg = vmag(pathRV)
                         obsUV = vcompass(hdg + ang)
                         obsRV = vsmult(obsUV, dist)
