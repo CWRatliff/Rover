@@ -43,7 +43,7 @@ import time
 import math
 import motor_driver_ada
 import cEKF
-import astar
+import astar2
 from waypts import *
 from vectors import *
 
@@ -146,7 +146,7 @@ def vprint(txt, V):
     logit(str)
 # compute absolute distance from point to line
 # see BOT 3:51
-def distance(P, U, V):
+def pldistance(P, U, V):
     m = (U[1] - V[1]) / (U[0] - V[0])
     c = V[1] - m * V[0]
     dst = (m * P[0] - P[1] + c)/math.sqrt(m*m + 1)
@@ -208,7 +208,9 @@ def max_turn(angle, spd):
     return
 #===================================================================
 def new_waypoint(nwpt):
+    global aimRV
     global destAV
+    global pathRV
     global trackRV
     global azimuth
     global wptdist
@@ -584,32 +586,24 @@ try:
                             startwp, startdist = vclosestwp(posAV)
                             
                             if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>                            
-                                route = astar.astar(startwp, 75)
+                                dist, route = astar2.astar(startwp, 75)
                                 
                             elif (wpt > 1 and wpt < 5):   # start of route
                                 route = routes[wpt]
                                 
-                            elif (wpt >= 10 and wpt <= 50): #start of waypoint
-                                route = astar.astar(startwp, wpt)
+                            elif (wpt >= 10 and wpt <= 76): #start of waypoint
+                                dist, route = astar2.astar(startwp, wpt)
                                 
-                            route.append(0)
-                            if startdist < 3.0:           # if too close to starting waypoint
-                                route.pop(0)
-                            elif len(route) > 1:            # if start between wpts & within 3 ft.
-                                dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
-                                if dot > 0:
-                                    dist = distance(posAV, waypts[0], waypts[1])
-                                    if dist < 3.0:
-                                        route.pop(0)
                             if len(route) > 0:
-                                rtseg = 0
-                                wpt = route[0]
-                                startAV = posAV
-                                new_waypoint(wpt)
-#                            obstructions()
-                           
+                                if startdist < 3.0:  # if too close to starting waypoint
+                                    route.pop(0)
+                                elif len(route) > 1:            # if start between wpts & within 3 ft.
+                                    dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
+                                    if dot > 0:
+                                        dist = pldistance(posAV, waypts[0], waypts[1])
+                                        if dist < 3.0:
+                                            route.pop(0)
 
-                            if len(route) > 0:           # make sure there is a route
                                 route.append(0)
                                 for rt in route:
                                     cstr = "route: %d" % rt
@@ -636,7 +630,7 @@ try:
                                 gotoAV = [gotolon, gotolat]
                                 startwp, startdist = vclosestwp(posAV)
                                 endwp, enddist = vclosestwp(gotoAV)
-                                route = astar.astar(startwp, endwp)
+                                dist, route = astar2.astar(startwp, endwp)
                                 if startdist < 3.0:           # if too close to starting point
                                     route.pop(0)
                                 elif len(route) > 1:            # if start between wpts & within 3 ft.
