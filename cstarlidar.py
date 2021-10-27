@@ -120,10 +120,10 @@ print(version)
 tme = time.localtime(time.time())
 print (tme)
 
-log = open("logfile.txt", 'a')
+log = open("logfile.txt", 'w')
 log.write("====================================================================")
 log.write(version)
-path = open("path.txt", 'a')
+path = open("path.txt", 'w')
 #log.write(tme)
 robot = motor_driver_ada.motor_driver_ada(log)
 volts = robot.battery_voltage()
@@ -584,6 +584,8 @@ try:
                             robot.motor(speed, steer)
                         else:
                             startwp, startdist = vclosestwp(posAV)
+                            cstr = "startwp, dist %d, %d " % (startwp, startdist)
+                            logit(cstr)
                             
                             if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>                            
                                 dist, route = astar2.astar(startwp, 75)
@@ -597,12 +599,14 @@ try:
                             if len(route) > 0:
                                 if startdist < 3.0:  # if too close to starting waypoint
                                     route.pop(0)
+                                    logit("start is close, advancing route")
                                 elif len(route) > 1:            # if start between wpts & within 3 ft.
                                     dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
                                     if dot > 0:
                                         dist = pldistance(posAV, waypts[0], waypts[1])
                                         if dist < 3.0:
                                             route.pop(0)
+                                            logit("track is near, advancing route")
 
                                 route.append(0)
                                 for rt in route:
