@@ -161,7 +161,7 @@ def vclosestwp(V):
     for i in range(10, wlen):
         print(i)
         w =  waypts[i]
-        if w[0] < 0:
+        if w[0] < 0:         # real waypoint?, long. should be neg.
             testdist = vmag(vsub(w, V))
             if testdist < lowdist:
                 lowdist = testdist
@@ -591,7 +591,11 @@ try:
                                 dist, route = astar2.astar(startwp, 75)
                                 
                             elif (wpt > 1 and wpt < 5):   # start of route
-                                route = routes[wpt]
+                                rtewp = routes[wpt][0]    # 0th wpt in route
+                                dist, route = astar2.astar(startwp, rtewp) # goto start of route
+                                route2 = routes[wpt]
+                                route2.pop()              # delete common wpt
+                                route += route2
                                 
                             elif (wpt >= 10 and wpt <= 76): #start of waypoint
                                 dist, route = astar2.astar(startwp, wpt)
@@ -600,7 +604,7 @@ try:
                                 if startdist < 3.0:  # if too close to starting waypoint
                                     route.pop(0)
                                     logit("start is close, advancing route")
-                                elif len(route) > 1:            # if start between wpts & within 3 ft.
+                                if len(route) > 1:            # if start between wpts & within 3 ft.
                                     dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
                                     if dot > 0:
                                         dist = pldistance(posAV, waypts[0], waypts[1])
@@ -640,13 +644,14 @@ try:
                                 elif len(route) > 1:            # if start between wpts & within 3 ft.
                                     dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
                                     if dot > 0:
-                                        dist = distance(posAV, waypts[0], waypts[1])
+                                        dist = pldistance(posAV, waypts[0], waypts[1])
                                         if dist < 3.0:
                                             route.pop(0)
                                 startwp = route[0]
                                 if endwp != startwp:         # are we here yet?
-                                    u = vsub(waypts[endwp], waypts[startwp])
-                                    v = vsub(gotoAV, waypts[endwp])
+                                    u = vsub(waypts[endwp], waypts[startwp]) #start to finish
+                                    v = vsub(gotoAV, waypts[endwp]) # diff between last waypt & actual endpoint
+                                    # enddist = dist between last waypt & actual end
                                     if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
                                         waypts[9] = gotoAV
                                         route.append(9)
@@ -718,10 +723,10 @@ try:
                     if (auto and wptflag):
                         xchr = cbuff[3]           # Port / Starboard
                         args = cbuff[4:msglen-1]
-                        sdist, sang, swath = args.split(',')
+                        sdist, sang, cswath = args.split(',')
                         dist = float(sdist)
                         ang = int(sang)
-                        swath = int(swath)
+                        swath = int(cswath)
                         dtg = vmag(pathRV)
                         obsUV = vcompass(hdg + ang)
                         obsRV = vsmult(obsUV, dist)
