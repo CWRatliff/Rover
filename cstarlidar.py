@@ -594,7 +594,7 @@ try:
                                 rtewp = routes[wpt][0]    # 0th wpt in route
                                 dist, route = astar2.astar(startwp, rtewp) # goto start of route
                                 route2 = routes[wpt]
-                                route2.pop()              # delete common wpt
+                                route2.pop(0)              # delete common wpt
                                 route += route2
                                 
                             elif (wpt >= 10 and wpt <= 76): #start of waypoint
@@ -605,9 +605,15 @@ try:
                                     route.pop(0)
                                     logit("start is close, advancing route")
                                 if len(route) > 1:            # if start between wpts & within 3 ft.
-                                    dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
+                                    rwp0 = route[0]
+                                    rwp1 = route[1]
+                                    rwpts0 = waypts[rwp0]
+                                    rwpts1 = waypts[rwp1]
+#                                    dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
+                                    dot = vdot(vsub(posAV, rwpts0), vsub(rwpts1, rwpts0))
                                     if dot > 0:
-                                        dist = pldistance(posAV, waypts[0], waypts[1])
+#                                        dist = pldistance(posAV, waypts[0], waypts[1])
+                                        dist = pldistance(posAV, rwpts0, rwpts1)
                                         if dist < 3.0:
                                             route.pop(0)
                                             logit("track is near, advancing route")
