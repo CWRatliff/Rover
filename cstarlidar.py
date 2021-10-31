@@ -584,7 +584,7 @@ try:
                             robot.motor(speed, steer)
                         else:
                             startwp, startdist = vclosestwp(posAV)
-                            cstr = "startwp, dist %d, %d " % (startwp, startdist)
+                            cstr = "startwp, dist %d, %5.2f " % (startwp, startdist)
                             logit(cstr)
                             
                             if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>                            
