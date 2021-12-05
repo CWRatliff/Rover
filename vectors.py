@@ -25,6 +25,14 @@ def vsub(headV, tailV):
 def vunit(V):
     mag = vmag(V)
     return [V[0]/mag, V[1]/mag]
+# compute absolute distance from point to line
+# see BOT 3:51
+def pldistance(P, U, V):
+    m = (U[1] - V[1]) / (U[0] - V[0])
+    c = V[1] - m * V[0]
+    dst = (m * P[0] - P[1] + c)/math.sqrt(m*m + 1)
+    dst = abs(dst)
+    return dst
 
 # get compass course from direction vector
 def vcourse(V):

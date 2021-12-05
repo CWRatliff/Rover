@@ -1,4 +1,5 @@
 # property taken from 2018 WM Survey DWG
+# 2 dEC 21 HORSE TRAILER GAR
 proppts = [
     [-644, 2380],
     [-457, 2064],
@@ -26,12 +27,13 @@ horsepts = [
     [-766.27, 1947.05],
     [-780.30, 1989.13],
     [-786.57, 2044.97],
-    [-793.37, 2097.94],
-    [-782.18, 2117.00],
-    [-745.57, 2123.52],
-    [-745.58, 2123.49],
-    [-750.62, 2147.55],
-    [-790.09, 2141.54],
+    [-767.28, 2079.82],
+    [-758.68, 2087.74],
+    [-747.62, 2103.76],
+    [-742.69, 2117.81],
+    [-751.92, 2147.04],
+    [-786.90, 2139.61],
+    [-795.40, 2140.37],
     [-801.76, 2148.42],
     [-814.63, 2169.50],
     [-829.34, 2163.91],
@@ -139,6 +141,20 @@ frontpts = [
     [-820, 2321]
     ]
 
+trailergar = [
+    [-754.93, 2143.08],
+    [-778.77, 2135.18],
+    [-770.63, 2111.26],
+    [-747.24, 2119.04]
+    ]
+
+shedrow = [
+    [-684.24, 1858.56],
+    [-648.19, 1848.22],
+    [-655.13, 1823.44],
+    [-691.00, 1833.00]
+    ]
+
 # route = [28, 30, 29, 32, 33, 34, 35, 36, 37, 38, 39, 42, 43, 27, 28]
 route = [28, 30, 29, 31, 27, 28]        #3 - E.F. meander
 
@@ -223,7 +239,8 @@ def Chart(mstr):
     points = Usf2Pix(proppts, scale, stlat, stlon)
     plot = canvas.create_polygon(points, outline='black', fill='lemon chiffon', width=1)
     horse = Usf2Pix(horsepts, scale, stlat, stlon)
-    arena = canvas.create_polygon(horse, outline='black', fill='gold', width=1)
+#    arena = canvas.create_polygon(horse, outline='black', fill='gold', width=1)
+    arena = canvas.create_polygon(horse, outline='black', fill='gray75', width=1)
     longe =Usf2Pix([[-526-25, 1863.82-25],[-526+25, 1863.82+25]], scale, stlat, stlon)
     lunge = canvas.create_oval(longe[0], longe[1], longe[2], longe[3], outline='black', \
         fill='gold', width=1)
@@ -244,6 +261,10 @@ def Chart(mstr):
     canvas.create_polygon(canopy, outline='black', fill='red', width=1, tags="bldg")
     work = Usf2Pix(workshop, scale, stlat, stlon)
     canvas.create_polygon(work, outline='black', fill='red', width=1, tags='bldg')
+    tgar = Usf2Pix(trailergar, scale, stlat, stlon)
+    canvas.create_polygon(tgar, outline='black', fill='gray50', width=1, tags='bldg')
+    shed = Usf2Pix(shedrow, scale, stlat, stlon)
+    canvas.create_polygon(shed, outline='black', fill='gray50', width=1, tags='bldg')
     
     back = Usf2Pix(backpts, scale, stlat, stlon)
     bdrv = canvas.create_polygon(back, outline='black', fill='gray75', width=1)

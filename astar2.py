@@ -2,6 +2,7 @@
 
 import math
 import waypts
+from vectors import *
 graph = [
     [10,33],[10,34],[10,39],[11,12],[11,36],[11,52],[11,74],[12,17],[12,53],[13,14],[13,28],[13,76],
     [14,21],[14,49],[15,16],[15,21],[16,22],[16,26],[17,20],[18,22],[18,71],[19,20],[19,24],
@@ -115,4 +116,25 @@ def astar(startno, endno):
                 open_list.append(Child_node)
 #               print("Child appended")
     return 0, []
+#================================================================================
+# return two wayptn #s when pos is within 3 feet of path between them
+# N.B. might be more than one qualifying path
 
+def nearpath(pos):
+    for g in graph:
+        u = waypts.waypts[g[0]]
+        v = waypts.waypts[g[1]]
+        d = pldistance(pos, u, v)
+#        print("distance:", d)
+        if (d < 3.0):
+            print ("wpts:", u, v)
+            utov = vsub(u, v)
+            utop = vsub(u, pos)
+            dot1 = vdot(utov, utop)
+            vtou = vsub(v, u)
+            vtop = vsub(v, pos)
+            dot2 = vdot(vtou, vtop)
+            print("dot1&2", dot1, dot2)
+            if (dot1 > 0 and dot2 > 0): # within bounds?
+                return g[0], g[1]
+    return 0, 0

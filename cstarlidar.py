@@ -146,12 +146,12 @@ def vprint(txt, V):
     logit(str)
 # compute absolute distance from point to line
 # see BOT 3:51
-def pldistance(P, U, V):
-    m = (U[1] - V[1]) / (U[0] - V[0])
-    c = V[1] - m * V[0]
-    dst = (m * P[0] - P[1] + c)/math.sqrt(m*m + 1)
-    dst = abs(dst)
-    return dst
+# def pldistance(P, U, V):
+#     m = (U[1] - V[1]) / (U[0] - V[0])
+#     c = V[1] - m * V[0]
+#     dst = (m * P[0] - P[1] + c)/math.sqrt(m*m + 1)
+#     dst = abs(dst)
+#     return dst
 
 def vclosestwp(V):
     global waypts
@@ -644,15 +644,29 @@ try:
                                 gotoAV = [gotolon, gotolat]
                                 startwp, startdist = vclosestwp(posAV)
                                 endwp, enddist = vclosestwp(gotoAV)
-                                dist, route = astar2.astar(startwp, endwp)
+                                wp1, wp2 = astar2.nearpath(posAV)
+                                if (wp1 != 0):     # if near to a known path, use closest wpt
+                                    dist1, route1 = astar2.astar(wp1, endwp)
+                                    dist2, route2 = astar2.astar(wp2, endwp)
+                                    if (dist1 < dist2):
+                                        startwp = wp1
+                                        route = route1
+                                        startdist = vmag(vsub(posAV, waypts[wp1]))
+                                    else:
+                                        startwp = wp2
+                                        route = route2
+                                        startdist = vmag(vsub(posAV, waypts[wp2]))
+                                else:
+                                    dist, route = astart2.astar(startwp, endwp)
+                                    
                                 if startdist < 3.0:           # if too close to starting point
                                     route.pop(0)
-                                elif len(route) > 1:            # if start between wpts & within 3 ft.
-                                    dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
-                                    if dot > 0:
-                                        dist = pldistance(posAV, waypts[0], waypts[1])
-                                        if dist < 3.0:
-                                            route.pop(0)
+#                                 elif len(route) > 1:            # if start between wpts & within 3 ft.
+#                                     dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
+#                                     if dot > 0:
+#                                         dist = pldistance(posAV, waypts[0], waypts[1])
+#                                         if dist < 3.0:
+#                                             route.pop(0)
                                 startwp = route[0]
                                 if endwp != startwp:         # are we here yet?
                                     u = vsub(waypts[endwp], waypts[startwp]) #start to finish
