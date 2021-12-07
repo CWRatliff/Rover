@@ -167,6 +167,31 @@ def vclosestwp(V):
                 lowdist = testdist
                 lowwp = i
     return lowwp, lowdist
+# =================================================================
+# from present pos (AV) to destination (AV), return safest,shortest route
+def bestroute(pos, dest):
+    rte = []
+    startwp, startdist = vclosestwp(pos)
+    endwp, enddist = vclosestwp(dest)
+    # if near to a known path, use one of it's path's wpts although
+    # closest actual waypt might be shorter. paths are safer
+    wp1, wp2 = astar2.nearpath(pos)
+    if (wp1 != 0):  # path(s) close by, two waypt candidates each
+        dist1, route1 = astar2.astar(wp1, endwp)
+        dist2, route2 = astar2.astar(wp2, endwp)
+        if (dist1 < dist2): # which of the two wpts is closer
+            startwp = wp1
+            rte = route1
+        else:   # not near any path
+            startwp = wp2
+            rte = route2
+        startdist = vmag(vsub(pos, waypts[startwp]))
+    else: # overland path
+        dist, rte = astar2.astar(startwp, endwp)
+        
+    if startdist < 3.0:           # if very close to starting point
+        rte.pop(0)
+    return rte
     
 #================tty = serial.Serial(port, 9600)==============
 def readusb():
@@ -587,8 +612,9 @@ try:
                             cstr = "startwp, dist %d, %5.2f " % (startwp, startdist)
                             logit(cstr)
                             
-                            if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>                            
-                                dist, route = astar2.astar(startwp, 75)
+                            if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>
+                                route = bestroute(posAV, waypts[75])
+                                # dist, route = astar2.astar(startwp, 75)
                                 
                             elif (wpt > 1 and wpt < 5):   # start of route
                                 rtewp = routes[wpt][0]    # 0th wpt in route
@@ -598,7 +624,8 @@ try:
                                 route += route2
                                 
                             elif (wpt >= 10 and wpt <= 76): #start of waypoint
-                                dist, route = astar2.astar(startwp, wpt)
+                                route = bestroute(posAV, waypts[wpt])
+                                # dist, route = astar2.astar(startwp, wpt)
                                 
                             if len(route) > 0:
                                 if startdist < 3.0:  # if too close to starting waypoint
@@ -642,25 +669,29 @@ try:
                             if (gotolon != 0):   # GN should be first
                                 gotolat = x
                                 gotoAV = [gotolon, gotolat]
-                                startwp, startdist = vclosestwp(posAV)
-                                endwp, enddist = vclosestwp(gotoAV)
-                                wp1, wp2 = astar2.nearpath(posAV)
-                                if (wp1 != 0):     # if near to a known path, use closest wpt
-                                    dist1, route1 = astar2.astar(wp1, endwp)
-                                    dist2, route2 = astar2.astar(wp2, endwp)
-                                    if (dist1 < dist2):
-                                        startwp = wp1
-                                        route = route1
-                                        startdist = vmag(vsub(posAV, waypts[wp1]))
-                                    else:
-                                        startwp = wp2
-                                        route = route2
-                                        startdist = vmag(vsub(posAV, waypts[wp2]))
-                                else:
-                                    dist, route = astart2.astar(startwp, endwp)
+                                
+                                route = bestroute(posAV, gotoAV)
+#                                 startwp, startdist = vclosestwp(posAV)
+#                                 endwp, enddist = vclosestwp(gotoAV)
+#                                 # if near to a known path, use closest wpt
+#                                 # closest waypt might be shorter, but paths are safer
+#                                 wp1, wp2 = astar2.nearpath(posAV)
+#                                 if (wp1 != 0):
+#                                     dist1, route1 = astar2.astar(wp1, endwp)
+#                                     dist2, route2 = astar2.astar(wp2, endwp)
+#                                     if (dist1 < dist2):
+#                                         startwp = wp1
+#                                         route = route1
+#                                     else:
+#                                         startwp = wp2
+#                                         route = route2
+#                                     startdist = vmag(vsub(posAV, waypts[startwp]))
+#                                 else:
+#                                     dist, route = astar2.astar(startwp, endwp)
+#                                     
+#                                 if startdist < 3.0:           # if too close to starting point
+#                                     route.pop(0)
                                     
-                                if startdist < 3.0:           # if too close to starting point
-                                    route.pop(0)
 #                                 elif len(route) > 1:            # if start between wpts & within 3 ft.
 #                                     dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
 #                                     if dot > 0:
