@@ -1,6 +1,7 @@
 #210730 - A* trip planning
 #210918 - Lidar sensor / object dodging
 #211012 - over dodge due to vcross2 fixed
+#211207 - use nearby path's waypoints if within 3 ft
 
 '''
 +---------+----------+----------+  +---------+----------+----------+
@@ -596,7 +597,6 @@ try:
                         print(wpt)
                         if wpt == 0:                # end of waypoint / route
                             wptflag = False
-#                            rteflag = False
                             auto = False
                             route = [0]
                             rtseg = 0
@@ -614,7 +614,6 @@ try:
                             
                             if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>
                                 route = bestroute(posAV, waypts[75])
-                                # dist, route = astar2.astar(startwp, 75)
                                 
                             elif (wpt > 1 and wpt < 5):   # start of route
                                 rtewp = routes[wpt][0]    # 0th wpt in route
@@ -625,7 +624,6 @@ try:
                                 
                             elif (wpt >= 10 and wpt <= 76): #start of waypoint
                                 route = bestroute(posAV, waypts[wpt])
-                                # dist, route = astar2.astar(startwp, wpt)
                                 
                             if len(route) > 0:
                                 if startdist < 3.0:  # if too close to starting waypoint
@@ -669,52 +667,28 @@ try:
                             if (gotolon != 0):   # GN should be first
                                 gotolat = x
                                 gotoAV = [gotolon, gotolat]
+                                ##endwp, enddist = vclosestwp(dest)
                                 
                                 route = bestroute(posAV, gotoAV)
-#                                 startwp, startdist = vclosestwp(posAV)
-#                                 endwp, enddist = vclosestwp(gotoAV)
-#                                 # if near to a known path, use closest wpt
-#                                 # closest waypt might be shorter, but paths are safer
-#                                 wp1, wp2 = astar2.nearpath(posAV)
-#                                 if (wp1 != 0):
-#                                     dist1, route1 = astar2.astar(wp1, endwp)
-#                                     dist2, route2 = astar2.astar(wp2, endwp)
-#                                     if (dist1 < dist2):
-#                                         startwp = wp1
-#                                         route = route1
-#                                     else:
-#                                         startwp = wp2
-#                                         route = route2
-#                                     startdist = vmag(vsub(posAV, waypts[startwp]))
-#                                 else:
-#                                     dist, route = astar2.astar(startwp, endwp)
-#                                     
-#                                 if startdist < 3.0:           # if too close to starting point
-#                                     route.pop(0)
-                                    
-#                                 elif len(route) > 1:            # if start between wpts & within 3 ft.
-#                                     dot = vdot(vsub(posAV, waypts[0]), vsub(waypts[1], waypts[0]))
-#                                     if dot > 0:
-#                                         dist = pldistance(posAV, waypts[0], waypts[1])
-#                                         if dist < 3.0:
-#                                             route.pop(0)
-                                startwp = route[0]
-                                if endwp != startwp:         # are we here yet?
-                                    u = vsub(waypts[endwp], waypts[startwp]) #start to finish
-                                    v = vsub(gotoAV, waypts[endwp]) # diff between last waypt & actual endpoint
-                                    # enddist = dist between last waypt & actual end
-                                    if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
-                                        waypts[9] = gotoAV
-                                        route.append(9)
-                                route.append(0)
-                                for rt in route:
-                                    cstr = "route: %d" % rt
-                                    logit(cstr)
-                                rtseg = 0
-                                wpt = route[rtseg]
-                                startAV = posAV
-                                new_waypoint(wpt)
-#                                obstructions()
+                                if (len(route) > 0):
+                                    startwp = route[0]
+                                    endwp = route[-1]
+                                    if endwp != startwp:         # are we here yet?
+                                        u = vsub(waypts[endwp], waypts[startwp]) #start to finish
+                                        v = vsub(gotoAV, waypts[endwp]) # diff between last waypt & actual endpoint
+                                        enddist = vmag(v)  # enddist = dist between last waypt & actual end
+                                        if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
+                                            waypts[9] = gotoAV
+                                            route.append(9)
+                                    route.append(0)
+                                    for rt in route:
+                                        cstr = "route: %d" % rt
+                                        logit(cstr)
+                                    rtseg = 0
+                                    wpt = route[rtseg]
+                                    startAV = posAV
+                                    new_waypoint(wpt)
+    #                                obstructions()
 
                             gotolat = 0.0      # reset
                             gotolon = 0.0
