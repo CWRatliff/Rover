@@ -1,5 +1,7 @@
 # property taken from 2018 WM Survey DWG
-# 2 dEC 21 HORSE TRAILER GAR
+# 2 Dec 21 revised horse bldgs
+# 211208 - goto spot work
+
 proppts = [
     [-644, 2380],
     [-457, 2064],
@@ -17,7 +19,11 @@ horsepts = [
     [-469.81, 1928.73],
     [-488.51, 1903.72],
     [-517.62, 1890.01],
-    [-572.02, 1876.52],
+#    [-572.02, 1876.52],
+    [-529.04, 1902.04],
+    [-551.43, 1901.93],
+    [-560.83, 1895.85],
+    
     [-590.65, 1861.59],
     [-617.51, 1854.86],
     [-643.08, 1855.40],
@@ -210,8 +216,7 @@ butnblue = False
 butnyellow = False
 arrlen = 75
 scale = 1.0
-# stlat = 2400
-# stlon = -440
+gotolatlon = []
 stlat = 2400
 stlon = 950
 mode = 0        # 0:move, 2:zoom in, 3:zoom out, 4:goto
@@ -359,15 +364,18 @@ def Bupress(event):
     global mx
     global my
     global mode
+    global goto
+    global gotolatlon
     mx = 0
     my = 0
     if (mode == 3):
         lat = stlat - event.y/scale # North: y coord East:x coord
         lon = event.x/scale - stlon
+        gotolatlon = [lon, lat]
 #        print (str(lat)+"/"+str(lon))
-        pnt = Usf2Pix([[lon, lat]], scale, stlat, stlon)
-        canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
-            fill='blue',outline='blue')
+        pnt = Usf2Pix([gotolatlon], scale, stlat, stlon)
+        goto = canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
+            fill='blue',outline='blue', tags = "wpts")
         msg = '{GN%7.2f}' % lon
         ser.write(msg.encode('utf-8'))
         print(msg)
@@ -379,6 +387,7 @@ def Bupress(event):
 def Mouse(event):
     global mx
     global my
+#    global goto
     global stlat
     global stlon
     if (mode == 3):
@@ -401,6 +410,7 @@ def Mouse(event):
     canvas.move(fdrv, x, y)
     canvas.move(arena, x, y)
     canvas.move(lunge, x, y)
+#    canvas.move(goto, x, y)
     canvas.move('bldg', x, y)
     canvas.move('forest', x, y)
     canvas.move('path', x, y)
@@ -416,6 +426,7 @@ def Zoomer(inout):
     global fdrv
     global bdrv
     global plot
+    global goto
     global arena
     global lunge
     global mode
@@ -435,11 +446,15 @@ def Zoomer(inout):
     canvas.delete(lunge)
     canvas.delete(fdrv)
     canvas.delete(bdrv)
+    canvas.delete(goto)
     canvas.delete('bldg')
     canvas.delete('forest')
     canvas.delete('path')
     canvas.delete('wpts')
     Chart(root)
+    pnt = Usf2Pix([gotolatlon], scale, stlat, stlon)
+    goto = canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
+        fill='blue',outline='blue', tags = "wpts")
     mode = 0
 
 class App:
@@ -466,8 +481,8 @@ class App:
         ctgl.grid(row=5,column=0)
         xtel=Label(data,text="XTE:", font=(None,15))
         xtel.grid(row=6,column=0)
-        lat=Label(data,text="ACC:", font=(None,15))
-        lat.grid(row=7,column=0)
+        accr=Label(data,text="ACC:", font=(None,15))
+        accr.grid(row=7,column=0)
         bat=Label(data,text="BAT:", font=(None,15))
         bat.grid(row=8,column=0)
 
@@ -831,6 +846,12 @@ class App:
                     lbuffer = lbuffer[1:]
                     if (xchar == 'a'):          # GPS accuracy
                         self.acc.set(lbuffer)
+                        accry = float(lbuffer)
+                        if (accry < 1.0):
+                            self.accr.config(fg = "blue")
+                        else:
+                            self.accr.config(fg = "red")
+                            
                     if (xchar == 'x'):          # x-track error
                         self.xte.set(lbuffer)
                     if (xchar == 't'):
@@ -979,7 +1000,7 @@ root = Tk()
 ffont = Font(family="URW Chancery L", size=20, weight = "bold")
 efont = Font(family="URW Chancery L", size=16)
 nfont = Font(family="Century Schoolbook L", size=14)
-root.wm_title('Rover Controller 210929')
+root.wm_title('Rover Controller 211210')
 chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
