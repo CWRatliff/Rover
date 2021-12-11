@@ -719,9 +719,6 @@ try:
                     yaw = int(cbuff[2:msglen-1])
                     hdg = (yaw + compass_bias)%360
 #===========================================================================
-                elif xchr == 'Q':                   # heartbeat heard from controller
-                    heartbeat = time.time()
-#===========================================================================
 #               {S1 P/S <dist> , <CW angle>} BOT 4:16
 #               sensor #1 - TFmini giving obstacle main side and avoidence angle
 #               'P'/'S' - port/starboard - side of obstruction
@@ -786,7 +783,12 @@ try:
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
-                    diag_commands(xchr)
+                    print("expect Q", xchr)
+                    if xchr == 'Q':
+                        print("heartbeat")
+                        heartbeat = time.time()
+                    else:
+                        diag_commands(xchr)
 #=========================================================================                    
                 else:
                     pass
@@ -794,12 +796,18 @@ try:
             cbuff = ""
             # endif flag
 #======================================================================
-        if (auto):
-                     
-            if (time.time() > (epoch + 1)):     #once per sec
-                oldEpoch = epoch
-                epoch = time.time()
+        if (time.time() > (epoch + 1)):     #once per sec
+            oldEpoch = epoch
+            epoch = time.time()
+            
+            # heartbeat
+            sendit("{qqq}")
+            if (time.time() > (heartbeat + 2.0)):   # if more than 2 seconds since last controller msg
+                logit(" heartbeat tardy")
+                # if in R/C mode, stop
 
+            if (auto):
+                     
                 if wptflag:
                     v = speed * spdfactor
                     phi = math.radians((450-hdg) % 360)
@@ -922,12 +930,6 @@ try:
                     (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,accgps))
                 path.flush()
                 
-                # heartbeat
-                sendit("{q1}")
-                if (heartbeat > time.time() + 2.0):   # if more than 2 seconds since last controller msg
-                    logit(" heartbeat tardy")
-                    # if in R/C mode, stop
-
                 if (accgps):
                     logit(" inaccurate GPS")
 
@@ -962,7 +964,7 @@ try:
             sendit(cstr)
             oldsteer = steer
             logit(cstr)
-
+ 
         # endwhile main loop ========================
     #endtry ======================
 
