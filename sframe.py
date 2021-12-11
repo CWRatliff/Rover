@@ -172,7 +172,7 @@ import math
 import ctypes
 import time
 
-cdlib = ctypes.CDLL("/home/pi/projects/ctypes/libsapphire.so")
+cdlib = ctypes.CDLL("/home/pi/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
 cdlib.COpenIndex.restype = ctypes.c_void_p
 cdlib.CGetDouble.restype = ctypes.c_double
@@ -452,9 +452,10 @@ def Zoomer(inout):
     canvas.delete('path')
     canvas.delete('wpts')
     Chart(root)
-    pnt = Usf2Pix([gotolatlon], scale, stlat, stlon)
-    goto = canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
-        fill='blue',outline='blue', tags = "wpts")
+    if len(gotolatlon) > 0:
+        pnt = Usf2Pix([gotolatlon], scale, stlat, stlon)
+        goto = canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
+            fill='blue',outline='blue', tags = "wpts")
     mode = 0
 
 class App:
@@ -517,10 +518,10 @@ class App:
               textvariable=self.xte).grid(row=6,column=1)
         
         alert = Frame(master)
-        alert.place(x=20,y=620)
-        self.accr=Label(alert,text="GPS:", font=(None,15))
+        alert.place(x=25,y=620)
+        self.accr=Label(alert,text="GPS:", font=("bold",18))
         self.accr.grid(row=0,column=0)
-        self.bat=Label(alert,text="BAT:", font=(None,15))
+        self.bat=Label(alert,text="BAT:", font=("bold",18))
         self.bat.grid(row=1,column=0)
 
         '''
@@ -834,7 +835,7 @@ class App:
                 
                 xchar = self.ibuffer[0]
                 lbuffer = self.ibuffer[1:]
-#                print (self.ibuffer)
+                print (self.ibuffer)
                 
                 if (xchar == 'a'):               # status
                     self.status.set(lbuffer)
@@ -845,7 +846,7 @@ class App:
                         self.bat.config(text = "BAT:" + lbuffer, fg = "blue", bg = "white")
                     else:
                         self.bat.config(text = "BAT:" + lbuffer, fg = "red", bg = "white")
-                    self.bat.set(lbuffer)
+                    # self.bat.set(lbuffer)
                         
                 elif (xchar == 'c'):             # course to wpt
                     self.ctg.set(lbuffer)
@@ -862,7 +863,7 @@ class App:
                     xchar = lbuffer[0]
                     lbuffer = lbuffer[1:]
                     if (xchar == 'a'):          # GPS accuracy
-                        self.acc.set(lbuffer)
+                        # self.accr.set(lbuffer)
                         accry = float(lbuffer)
                         if (accry < 1.0):
                             self.accr.config(text = "GPS:" + lbuffer, fg = "blue", bg = "white")
@@ -881,6 +882,10 @@ class App:
                         # TBD dont append if same lat/lon
                         # track.append([lon, lat])
                         Xspot(root, lon, lat)
+                
+                elif xchar == 'q':
+                    print("heartbeat rcvd")
+                    self.txmit('Q')
 
                 elif xchar == 'r':
                     bdist, bhdg, bwidth = lbuffer.split(',')
