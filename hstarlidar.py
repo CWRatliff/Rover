@@ -811,6 +811,10 @@ try:
                     speed = 0
                     robot.motor(speed, steer)
 
+            volts = robot.battery_voltage()
+            xchr = "{b%5.1f}" % volts
+            sendit(xchr)
+            
             if (auto):
                      
                 if wptflag:
@@ -935,9 +939,6 @@ try:
                     (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,accgps))
                 path.flush()
 
-                volts = robot.battery_voltage()
-                xchr = "{b%5.1f}" % volts
-                sendit(xchr)
                 #endif epoch timer ===================
             
             steer = int(azimuth - hdg)
