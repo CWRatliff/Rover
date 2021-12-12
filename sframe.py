@@ -172,7 +172,7 @@ import math
 import ctypes
 import time
 
-cdlib = ctypes.CDLL("/home/pi/libsapphire.so")
+cdlib = ctypes.CDLL("/home/pi/projects/ctypes/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
 cdlib.COpenIndex.restype = ctypes.c_void_p
 cdlib.CGetDouble.restype = ctypes.c_double
@@ -458,6 +458,8 @@ def Zoomer(inout):
             fill='blue',outline='blue', tags = "wpts")
     mode = 0
 
+# ========================================================================
+
 class App:
     
     def __init__(self, master):
@@ -467,7 +469,7 @@ class App:
 
         # telemetry array ===========================================
         data = Frame(master)
-        data.place(x=20,y=360)
+        data.place(x=20,y=340)
         sta=Label(data,text="STS:", font=(None,15))
         sta.grid(row=0,column=0)
         spd=Label(data,text="SPD:", font=(None,15))
@@ -753,7 +755,6 @@ class App:
     def Misc(self, mstr):
         global miscer
         miscer = Frame(mstr)
-        self.bat.config(text = "BAT: 13.9", fg = "red", bg = "white")
         miscer.place(x=200, y=450)
         msb1=Button(miscer, text="Diag", command=lambda:self.txmit('0'))
         msb1.config(width=4,height=2,font=(None,15),bg="white",fg="black")
@@ -885,7 +886,8 @@ class App:
                 
                 elif xchar == 'q':
                     print("heartbeat rcvd")
-                    self.txmit('Q')
+                    msg = '{Q}'
+                    ser.write(msg.encode('utf-8'))
 
                 elif xchar == 'r':
                     bdist, bhdg, bwidth = lbuffer.split(',')

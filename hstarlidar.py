@@ -479,8 +479,8 @@ def diag_commands(schr):
     if (schr == '0'):
         logit("diagnostic #1 ===============================")
         volts = robot.battery_voltage()
-        xchr = "{b%5.1f}" % volts
-        sendit(xchr)
+#         xchr = "{b%5.1f}" % volts
+#         sendit(xchr)
         print("Voltage = ",volts)
         log.write("Voltage: %5.1f\n" % volts)
         robot.motor_speed()
@@ -718,6 +718,12 @@ try:
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     yaw = int(cbuff[2:msglen-1])
                     hdg = (yaw + compass_bias)%360
+
+#===========================================================================
+                elif xchr == 'Q':                   # Q - heartbeat
+                    print("heartbeat")
+                    heartbeat = time.time()
+
 #===========================================================================
 #               {S1 P/S <dist> , <CW angle>} BOT 4:16
 #               sensor #1 - TFmini giving obstacle main side and avoidence angle
@@ -783,12 +789,7 @@ try:
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
-                    print("expect Q", xchr)
-                    if xchr == 'Q':
-                        print("heartbeat")
-                        heartbeat = time.time()
-                    else:
-                        diag_commands(xchr)
+                    diag_commands(xchr)
 #=========================================================================                    
                 else:
                     pass
@@ -805,6 +806,10 @@ try:
             if (time.time() > (heartbeat + 2.0)):   # if more than 2 seconds since last controller msg
                 logit(" heartbeat tardy")
                 # if in R/C mode, stop
+                if (not auto):
+                    odometer(speed)
+                    speed = 0
+                    robot.motor(speed, steer)
 
             if (auto):
                      
@@ -929,10 +934,10 @@ try:
                 path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
                     (ts,epoch-starttime,posAV[0],posAV[1],workAV[0],workAV[1],speed,steer,hdg,accgps))
                 path.flush()
-                
-                if (accgps):
-                    logit(" inaccurate GPS")
 
+                volts = robot.battery_voltage()
+                xchr = "{b%5.1f}" % volts
+                sendit(xchr)
                 #endif epoch timer ===================
             
             steer = int(azimuth - hdg)
