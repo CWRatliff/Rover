@@ -48,6 +48,7 @@ starttime = epoch
 gpsEpoch = epoch
 oldEpoch = epoch
 heartbeat = epoch
+tensecepoch = epoch
 hdg = 0                                 # true compass heading
 fhdg = 0                                # Kalman filtered heading
 yaw = 0                                 # latest IMU yaw (True north)reading
@@ -796,8 +797,16 @@ try:
             flag = False
             cbuff = ""
             # endif flag
+            
+#========================================================================
+        if (time.time() > (tensecepoch + 10)): # ten second timer
+            tensecepoch = time.time()
+            volts = robot.battery_voltage()
+            xchr = "{b%5.1f}" % volts
+            sendit(xchr)
+            
 #======================================================================
-        if (time.time() > (epoch + 1)):     #once per sec
+        if (time.time() > (epoch + 1)):     # once per sec
             oldEpoch = epoch
             epoch = time.time()
             
@@ -811,10 +820,6 @@ try:
                     speed = 0
                     robot.motor(speed, steer)
 
-            volts = robot.battery_voltage()
-            xchr = "{b%5.1f}" % volts
-            sendit(xchr)
-            
             if (auto):
                      
                 if wptflag:
