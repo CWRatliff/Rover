@@ -24,7 +24,7 @@ class Node:
         self.h = 0    # heuristic cost
         
     def pnode(self, what):
-        print(what, self.parent, self.position, self.f, self.g, self.h)
+         print(what, self.parent, self.position, self.f, self.g, self.h)
 
 def wpeuclidian(a, b):
     eft = waypts.waypts[a][0] - waypts.waypts[b][0]
