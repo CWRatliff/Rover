@@ -26,6 +26,7 @@ S - sensor input
 T - 'D' commands, diagnostics
 '''
 
+import whichrover
 import serial
 import datetime
 import time
@@ -59,7 +60,7 @@ pan = 0
 oldsteer = 500
 oldspeed = 500
 oldhdg = 500
-compass_bias = 98                       # for canopy table (using gyro/quat, no-mag
+# compass_bias = 98                       # for canopy table (using gyro/quat, no-mag
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
 aimRV = [0.0, 0.0]                      # aim point
