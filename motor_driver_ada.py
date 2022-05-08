@@ -32,10 +32,10 @@ class motor_driver_ada:
         self.pan_bias = 83
         self.left_limit = -36
         self.right_limit = 36
-        self.d1 = 7.254         #C/L to corner wheels
-        self.d2 = 10.5          #mid axle to fwd axle
-        self.d3 = 10.5          #mid axle to rear axle
-        self.d4 = 10.073        #C/L to mid wheels
+        self.d1 = Rd1         #C/L to corner wheels
+        self.d2 = Rd2          #mid axle to fwd axle
+        self.d3 = Rd3          #mid axle to rear axle
+        self.d4 = Rd4        #C/L to mid wheels
         self.speedfactor = 35   # 8000 counts at 100%
         self.rr_motor = kit.servo[0]
         self.rf_motor = kit.servo[1]
@@ -88,7 +88,21 @@ class motor_driver_ada:
 
     def set_angle(self, corner, angle):
         if corner == 0:
+            self.rr_motor.angle = angle
+        elif corner == 1:
+            self.rf_motor.angle = angle
+        elif corner == 2:
             self.lf_motor.angle = angle
+        else:
+            self.lr_motor.angle = angle
+    '''
+        match corner:
+            case 0:
+                self.rr_motor.angle = angle
+            case 1:
+            case 2:
+            case 3:
+    '''
 
     '''
     def turn_motor(self, address, v, av1, av2):
