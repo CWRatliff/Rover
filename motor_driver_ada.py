@@ -7,6 +7,7 @@
 #200421 incorporated roboclaw methods directly
 #200605 swapped 0x81 & 0x82, back to original roboclaw
 
+from whichrover import *
 
 from adafruit_servokit import ServoKit
 kit = ServoKit(channels = 16)
@@ -18,10 +19,16 @@ from roboclaw import Roboclaw
 class motor_driver_ada:
 
     def __init__(self, log):
+        self.lfbias = Rlfbias        # experimentally determined for 'Spot 2'
+        self.lrbias = Rlrbias
+        self.rrbias = Rrrbias
+        self.rfbias = Rrfbias
+'''        
         self.lfbias = 48        # experimentally determined for 'Spot 2'
         self.lrbias = 44
         self.rrbias = 69
         self.rfbias = 40
+'''
         self.pan_bias = 83
         self.left_limit = -36
         self.right_limit = 36
@@ -78,6 +85,9 @@ class motor_driver_ada:
         else:
             self.rc.SpeedM2(address, vx)
 
+    def set_angle(self, corner, angle):
+        if corner == 0:
+            self,lf_motor.angle = angle
 
     '''
     def turn_motor(self, address, v, av1, av2):

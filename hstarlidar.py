@@ -26,7 +26,7 @@ S - sensor input
 T - 'D' commands, diagnostics
 '''
 
-import whichrover
+from whichrover import *
 import serial
 import datetime
 import time
@@ -37,6 +37,7 @@ import astar2
 from waypts import *
 from vectors import *
 
+compass_bias = Rcompass_bias
 DODGE = 2.0                             # obstruction dodge distance
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
@@ -107,7 +108,7 @@ routes = [[0,0],                    #0
 wptdist = 0.0
 ndx = 0
 
-version = "Rover 1.1 211208\n"
+version = "Rover 1.1 220508\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)

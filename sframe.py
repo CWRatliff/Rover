@@ -865,7 +865,10 @@ class App:
                     lbuffer = lbuffer[1:]
                     if (xchar == 'a'):          # GPS accuracy
                         # self.accr.set(lbuffer)
-                        accry = float(lbuffer)
+                        try:
+                            accry = float(lbuffer)
+                        except ValueError:
+                            accry = 9999.
                         if (accry < 1.0):
                             self.accr.config(text = "GPS:" + lbuffer, fg = "blue", bg = "white")
                         else:
