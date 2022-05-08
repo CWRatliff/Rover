@@ -7,10 +7,11 @@ log = open("logfile.txt", 'w')
 robot = motor_driver_ada.motor_driver_ada(log)
 #corner = input("corner ")
 corner = 0
-angle = Rlrbias
+angle = Rlfbias
 while True:
     print("angle = ", angle)
     robot.set_angle(corner, angle)
+    robot.diag()
     tweak = input("plus-minus")
     if (tweak == 'x'):
         break

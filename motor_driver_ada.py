@@ -6,6 +6,12 @@
 #N.B. RC 0x81 & 0x82 may be exchanged on 'Spot 2'
 #200421 incorporated roboclaw methods directly
 #200605 swapped 0x81 & 0x82, back to original roboclaw
+'''        
+        self.lfbias = 48        # experimentally determined for 'Spot 2'
+        self.lrbias = 44
+        self.rrbias = 69
+        self.rfbias = 40
+'''
 
 from whichrover import *
 
@@ -23,12 +29,6 @@ class motor_driver_ada:
         self.lrbias = Rlrbias
         self.rrbias = Rrrbias
         self.rfbias = Rrfbias
-'''        
-        self.lfbias = 48        # experimentally determined for 'Spot 2'
-        self.lrbias = 44
-        self.rrbias = 69
-        self.rfbias = 40
-'''
         self.pan_bias = 83
         self.left_limit = -36
         self.right_limit = 36
@@ -44,7 +44,8 @@ class motor_driver_ada:
         self.pan = kit.servo[15]
         self.tilt = kit.servo[14]
 
-#pan_bias = 0        self.rr_motor.actuation_range = 120
+#pan_bias = 0
+        self.rr_motor.actuation_range = 120
         self.rf_motor.actuation_range = 120
         self.lf_motor.actuation_range = 120
         self.lr_motor.actuation_range = 120
@@ -59,8 +60,8 @@ class motor_driver_ada:
         self.crc = 0
         self.port = serial.Serial("/dev/ttyS0", baudrate=115200, timeout=0.1)
 
-        self.lf_motor.angle = self.rfbias
-        self.rf_motor.angle = self.lfbias
+        self.lf_motor.angle = self.lfbias
+        self.rf_motor.angle = self.rfbias
         self.lr_motor.angle = self.lrbias
         self.rr_motor.angle = self.rrbias
         self.stop_all()
@@ -87,7 +88,7 @@ class motor_driver_ada:
 
     def set_angle(self, corner, angle):
         if corner == 0:
-            self,lf_motor.angle = angle
+            self.lf_motor.angle = angle
 
     '''
     def turn_motor(self, address, v, av1, av2):
