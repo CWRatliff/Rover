@@ -44,7 +44,7 @@ class motor_driver_ada:
         self.pan = kit.servo[15]
         self.tilt = kit.servo[14]
 
-#pan_bias = 0
+        #pan_bias = 0
         self.rr_motor.actuation_range = 120
         self.rf_motor.actuation_range = 120
         self.lf_motor.actuation_range = 120
@@ -60,10 +60,12 @@ class motor_driver_ada:
         self.crc = 0
         self.port = serial.Serial("/dev/ttyS0", baudrate=115200, timeout=0.1)
 
-        self.lf_motor.angle = self.lfbias
+        self.lf_motor.angle = Rlfbias
         self.rf_motor.angle = self.rfbias
         self.lr_motor.angle = self.lrbias
         self.rr_motor.angle = self.rrbias
+        print("rr angle", Rlfbias, self.rr_motor.angle)
+        self.diag()
         self.stop_all()
         ver = self.rc.ReadVersion(0x80)
         print(ver[0],ver[1])
@@ -103,6 +105,15 @@ class motor_driver_ada:
             case 2:
             case 3:
     '''
+    def get_angle(self, corner):
+        if corner == 0:
+            return self.rr_motor.angle
+        elif corner == 1:
+            return self.rf_motor.angle
+        elif corner == 2:
+            return self.lf_motor.angle
+        else:
+            return self.lr_motor.angle
 
     '''
     def turn_motor(self, address, v, av1, av2):

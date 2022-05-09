@@ -5,8 +5,8 @@ import motor_driver_ada
 
 log = open("logfile.txt", 'w')
 robot = motor_driver_ada.motor_driver_ada(log)
-corner = input("corner ")
-angle = Rlfbias
+corner = int(input("corner "))
+angle = robot.get_angle(corner)
 while True:
     print("angle = ", angle)
     robot.set_angle(corner, angle)
