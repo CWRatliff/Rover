@@ -25,10 +25,10 @@ from roboclaw import Roboclaw
 class motor_driver_ada:
 
     def __init__(self, log):
-        self.lfbias = Rlfbias        # experimentally determined for 'Spot 2'
-        self.lrbias = Rlrbias
         self.rrbias = Rrrbias
         self.rfbias = Rrfbias
+        self.lfbias = Rlfbias        # experimentally determined for 'Spot 2'
+        self.lrbias = Rlrbias
         self.pan_bias = 83
         self.left_limit = -36
         self.right_limit = 36
@@ -60,10 +60,10 @@ class motor_driver_ada:
         self.crc = 0
         self.port = serial.Serial("/dev/ttyS0", baudrate=115200, timeout=0.1)
 
-        self.lf_motor.angle = Rlfbias
+        self.rr_motor.angle = Rrrbias
         self.rf_motor.angle = self.rfbias
+        self.lf_motor.angle = Rlfbias
         self.lr_motor.angle = self.lrbias
-        self.rr_motor.angle = self.rrbias
         print("rr angle", Rlfbias, self.rr_motor.angle)
         self.diag()
         self.stop_all()
