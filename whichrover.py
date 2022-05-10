@@ -1,9 +1,9 @@
 # definitions for blue rover
 Rcompass_bias = 278                       # for canopy table (using gyro/quat, no-mag
-Rrrbias = 64
-Rrfbias = 69
+Rrrbias = 44
+Rrfbias = 64
 Rlfbias = 44
-Rlrbias = 61
+Rlrbias = 59
 
 Rpanbias = 83
 
