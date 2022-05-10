@@ -5,6 +5,8 @@ Rrfbias = 69
 Rlfbias = 44
 Rlrbias = 61
 
+Rpanbias = 83
+
 Rd1 = 7.254         #C/L to corner wheels
 Rd2 = 10.5          #mid axle to fwd axle
 Rd3 = 10.5          #mid axle to rear axle

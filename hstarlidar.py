@@ -486,7 +486,7 @@ def diag_commands(schr):
 #         sendit(xchr)
         print("Voltage = ",volts)
         log.write("Voltage: %5.1f\n" % volts)
-        robot.motor_speed()
+        robot.motor_diag()
         logit("odometer: %7.1f" % travel)
         logit("az set to %d" % azimuth)
         logit("yaw %d" % yaw)
