@@ -38,30 +38,33 @@ from waypts import *
 from vectors import *
 
 compass_bias = Rcompass_bias
+azimuth = Rcompass_bias                 # desired course
+hdg = Rcompass_bias                     # true compass heading
+
 DODGE = 2.0                             # obstruction dodge distance
 steer = 0                               # current steering angle clockwise
 speed = 0                               # current speed plus->forward
+fhdg = 0                                # Kalman filtered heading
+yaw = 0                                 # latest IMU yaw (True north)reading
+travel = 0                              # odometer
+cogBase = 0                             # course over ground distance
 approach_factor = .75                   # after waypoint slowdown
 resume_speed = speed
 reducedflag = False
-azimuth = Rcompass_bias                 # desired course
+
 epoch = time.time()
 starttime = epoch
 gpsEpoch = epoch
 oldEpoch = epoch
 heartbeat = epoch
 tensecepoch = epoch
-hdg = 0                                 # true compass heading
-fhdg = 0                                # Kalman filtered heading
-yaw = 0                                 # latest IMU yaw (True north)reading
-travel = 0                              # odometer
-cogBase = 0
+
 pan = 0
 
-oldsteer = 500
+oldsteer = 500                          # big values to trigger update
 oldspeed = 500
 oldhdg = 500
-# compass_bias = 98                       # for canopy table (using gyro/quat, no-mag
+# compass_bias = 98                     # for canopy table (using gyro/quat, no-mag
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
 aimRV = [0.0, 0.0]                      # aim point
@@ -80,7 +83,7 @@ ilonsec = 0.0
 gotolat = 0.0
 gotolon = 0.0
 latitude = math.radians(34.24)          # Camarillo
-latfeet = 6079.99/60                    # Kyle's converter                    startAV = posAV
+latfeet = 6079.99/60                    # Kyle's converter
 
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
@@ -108,7 +111,7 @@ routes = [[0,0],                    #0
 wptdist = 0.0
 ndx = 0
 
-version = "Rover 1.1 220508\n"
+version = "Rover 1.1 220510\n"
 print(version)
 tme = time.localtime(time.time())
 print (tme)
@@ -122,10 +125,12 @@ robot = motor_driver_ada.motor_driver_ada(log)
 volts = robot.battery_voltage()
 print("Voltage = ",volts)
 log.write("Voltage: %5.1f\n" % volts)
-Kfilter = cEKF.Kalman_filter()
+
 port = "/dev/ttyUSB0"
 tty = serial.Serial(port, 9600)
 tty.flushInput()
+
+Kfilter = cEKF.Kalman_filter()
 
 #====================================================
 # cvt lat/lon seconds to U.S survey feet
