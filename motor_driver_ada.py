@@ -19,7 +19,7 @@ class motor_driver_ada:
         self.pan_bias = Rpanbias
         self.left_limit = -36
         self.right_limit = 36
-        self.speedfactor = 35   # 8000 counts at 100%
+#         self.speedfactor = 35   # 8000 counts at 100%
         self.rr_motor = kit.servo[0]
         self.rf_motor = kit.servo[1]
         self.lf_motor = kit.servo[2]
@@ -155,7 +155,7 @@ class motor_driver_ada:
         if (steer > self.right_limit):
             steer = self.right_limit
 #        vel = speed * 1.26
-        vel = self.speedfactor * speed
+        vel = Rspeedfactor * speed
         voc = 0.0
         vic = 0.0
         #roboclaw speed limit 0 to 127

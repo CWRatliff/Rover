@@ -1,9 +1,9 @@
 # definitions for blue rover
-Rcompass_bias = 278                       # for canopy table (using gyro/quat, no-mag
-Rrrbias = 44
-Rrfbias = 64
+Rcompass_bias = 98          # for canopy table (using gyro/quat, no-mag)
+Rrrbias = 64
+Rrfbias = 69
 Rlfbias = 44
-Rlrbias = 59
+Rlrbias = 61
 
 Rpanbias = 83
 
@@ -11,4 +11,4 @@ Rd1 = 7.254         #C/L to corner wheels
 Rd2 = 10.5          #mid axle to fwd axle
 Rd3 = 10.5          #mid axle to rear axle
 Rd4 = 10.073        #C/L to mid wheels
-Rspeedfactor = 35   # 8000 counts at 100%
+Rspeedfactor = 44   # 4000 counts at 100%
