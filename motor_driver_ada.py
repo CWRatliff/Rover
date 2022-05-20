@@ -19,7 +19,7 @@ class motor_driver_ada:
         self.pan_bias = Rpanbias
         self.left_limit = -36
         self.right_limit = 36
-#         self.speedfactor = 35   # 8000 counts at 100%
+
         self.rr_motor = kit.servo[0]
         self.rf_motor = kit.servo[1]
         self.lf_motor = kit.servo[2]
@@ -60,7 +60,6 @@ class motor_driver_ada:
         print("servo rf ="+str(self.rf_motor.angle))
         print("servo lf ="+str(self.lf_motor.angle))
         print("servo lr ="+str(self.lr_motor.angle))
-#       self.turn_motor(0x80, vel, voc, 1)
 
     def set_motor(self, address, v, av, m12):
         vx = int(v * av)
@@ -88,23 +87,6 @@ class motor_driver_ada:
             return self.lf_motor.angle
         else:
             return self.lr_motor.angle
-
-    '''
-    def turn_motor(self, address, v, av1, av2):
-        v1 = int(v * av1)
-        v2 = int(v * av2)
-        if v >= 0:
-            self.rc.ForwardM1(address, v1)
-            self.rc.ForwardM2(address, v2)
-#             self.M1Forward(address, v1)
-#             self.M2Forward(address, v2)
-        else:
-            self.rc.BackwardM1(address, abs(v1))
-            self.rc.BackwardM2(address, abs(v2))
-#             self.M1Backward(address, abs(v1))
-#             self.M2Backward(address, abs(v2))
-#       print("m1, m2 = "+str(v1)+", "+str(v2))
-    '''
 
     def stop_all(self):
         self.set_motor(0X80, 0, 0, 1)
@@ -143,8 +125,6 @@ class motor_driver_ada:
             
     def battery_voltage(self):
         volts = self.rc.ReadMainBatteryVoltage(0x80)[1]/10.0
-        print("Ada Voltage = ",volts)
-        self.log.write("Voltage: %5.1f\n" % volts)
         return (volts)
 
 # based on speed & steer, command all motors
@@ -154,7 +134,7 @@ class motor_driver_ada:
             steer = self.left_limit
         if (steer > self.right_limit):
             steer = self.right_limit
-#        vel = speed * 1.26
+#        vel = speed(in pcts) * motor speed 
         vel = Rspeedfactor * speed
         voc = 0.0
         vic = 0.0
@@ -182,9 +162,6 @@ class motor_driver_ada:
             self.rf_motor.angle = Rrfbias - phi
             self.lf_motor.angle = Rlfbias - steer
             self.lr_motor.angle = Rlrbias + steer
-#            self.turn_motor(0x80, vel, voc, 1)          #RC 1 - rf, rm
-#            self.turn_motor(0x81, vel, voc, vic)        #RC 2 - lm, lf
-#            self.turn_motor(0x82, vel, vim, vic)        #RC 3 - rr, lr
             self.set_motor(0x80, vel, voc, 1)           #RC 1 - rf, rm
             self.set_motor(0x81, vel, voc, 1)           #RC 2 - lm, lf
             self.set_motor(0x82, vel, vim, 1)           #RC 3 - rr, lr
@@ -200,9 +177,6 @@ class motor_driver_ada:
             self.rf_motor.angle = Rrfbias - steer
             self.lf_motor.angle = Rlfbias - phi
             self.lr_motor.angle = Rlrbias + phi
-#            self.turn_motor(0x80, vel, vic, vim)
-#            self.turn_motor(0x81, vel, vic, voc)
-#            self.turn_motor(0x82, vel, 1, voc)
             self.set_motor(0x80, vel, vic, 1)
             self.set_motor(0x81, vel, vic, 1)
             self.set_motor(0x82, vel,   1, 1)
