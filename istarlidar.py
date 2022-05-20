@@ -559,7 +559,8 @@ try:
                 cbuff = ""
                 continue
             xchr = cbuff[1]
-            if (xchr != 'O'):             # don'tshow compass input
+            # if (xchr != 'O'):             # don'tshow compass input
+            if (xchr != 'Q'):             # don'tshow heartbeat input
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
                 logit("msg: " + ts + cbuff)
