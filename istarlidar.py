@@ -272,6 +272,7 @@ def advance_waypoint():
         sendit("{c----}")
         sendit("{lx----}")
         wptflag = False
+        reducedflag = False
         route = [0]
         rtseg = 0
         odometer(speed)
@@ -280,6 +281,7 @@ def advance_waypoint():
     else:
         odometer(speed)
         if reducedflag:
+            logit("resuming to %4d" % resume_speed)
             speed = resume_speed
         reducedflag = False
         startAV = destAV       # new wpt start = old wpt end
@@ -597,6 +599,7 @@ try:
                             sendit("{c---}")
                             odometer(speed)
                             speed = 0
+                            reducedflag = False
                             robot.motor(speed, steer)
                         else:
                             startwp, startdist = vclosestwp(posAV)
