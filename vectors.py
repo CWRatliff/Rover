@@ -9,6 +9,9 @@ def vcross2(U, V):
     if x > 0:
         return True      # U x V right hand rotation
     return False
+def vdist(U, V):
+    W = vsub(U, V)
+    return vmag(W)
 def vdot(U, V):
     return (U[0]*V[0] + U[1]*V[1])
 def vproj(U, V):

@@ -303,7 +303,7 @@ def Chart(mstr):
 
 def Xspot(mstr, xlon, xlat):
     spot = Usf2Pix([[xlon, xlat]], scale, stlat, stlon)
-    canvas.create_text(spot[0], spot[1], text='.', fill='blue', tags = 'path')
+    canvas.create_text(spot[0], spot[1], text='*', fill='blue', tags = 'path')
           
 def Guage(mstr):
     rose.delete('arrow')

@@ -49,6 +49,7 @@ fhdg = 0                                # Kalman filtered heading
 yaw = 0                                 # latest IMU yaw (True north)reading
 travel = 0                              # odometer
 cogBase = 0                             # course over ground distance
+delgps = 0                              # change in gps location
 approach_factor = .75                   # after waypoint slowdown
 resume_speed = speed
 reducedflag = False
@@ -75,6 +76,7 @@ estAV = [0.0, 0.0]                      # est pos either posAV or posAV+DR
 filterRV = [0.0, 0.0]                   # Kalman filtered loc
 pathRV = [0.0, 0.0]                     # from present pos to wpt end
 posAV = [0.0, 0.0]                      # gps position
+prevAV = [0.0, 0.0]                     # gps position previous sampling
 startAV = [0.0, 0.0]                    # waypoint track start
 trackRV = [0.0, 0.0]                    # waypoint path from initial position to destination
 workAV = [0.0, 0.0]                     # Kalman filtered AV
@@ -89,7 +91,7 @@ latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # grps accuracy in ft
 segstart = time.time()                  # speed segment start (seconds)
-spdfactor = .025                        # for 84 RPM
+spdfactor = Rspeed                      # fps @ 1%
 
 left = False
 left_limit = -36
@@ -709,6 +711,8 @@ try:
                                 sendit(cstr)
                                 logit(cstr)
                             gpsEpoch = time.time()
+                            delgps = vdist(prevAV, posAV)
+                            prevAV = posAV
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
                             if (accgps < 50):
@@ -734,7 +738,7 @@ try:
 
 #===========================================================================
                 elif xchr == 'Q':                   # Q - heartbeat
-                    print("heartbeat")
+#                     print("heartbeat")
                     heartbeat = time.time()
 
 #===========================================================================
@@ -838,14 +842,15 @@ try:
                     v = speed * spdfactor
                     phi = math.radians((450-hdg) % 360)
                     estAV = posAV
-                    if (gpsEpoch < oldEpoch):          # no recent GPS lat/lon
+                    # if no recent GPS or (no GPS movement when speed > 0)
+                    # then do dead reconning
+                    if (gpsEpoch < oldEpoch) or (delgps == 0 and speed > 0):   # no recent GPS lat/lon
                         delt = epoch - oldEpoch
                         dist = delt * v
-                        xd = dist * math.sin(phi)
-                        yd = dist * math.cos(phi)
-                        estAV[0] = estAV[0] + xd
-                        estAV[1] = estAV[1] + yd
+                        estAV[0] = estAV[0] + dist * math.sin(phi)
+                        estAV[1] = estAV[1] + dist * math.cos(phi)
                         vprint("estAV", estAV)
+                        cogbase = 0
                     else:    
                         vprint("posAV", posAV)
                         
@@ -926,8 +931,8 @@ try:
                         #endif dtg ===================
                     #endif wptflag ===================
                 
-                if (steer >= -1 and steer <= 1 and speed > 50):
-                    if cogBase > 10:                                  # line long enough to compute heading
+                if (steer >= -1 and steer <= 1 and speed > 50 and delgps > 0):
+                    if cogBase > 10:                 # line long enough to compute heading
                         cogBaseRV = vsub(posAV, cogAV)
                         hdg = vcourse(cogBaseRV)
                         oldhdg = hdg
