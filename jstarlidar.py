@@ -118,18 +118,16 @@ routes = [[0,0],                    #0
 wptdist = 0.0
 ndx = 0
 
-robot = motor_driver_ada.motor_driver_ada(log)
-
 log = open("logfile.txt", 'w')
+robot = motor_driver_ada.motor_driver_ada(log)
 log.write("====================================================================")
 version = "Rover 1.1 220524\n"
-logit(version)
+log.write(version)
 tme = time.localtime(time.time())
-logit(tme)
+print(tme)
 volts = robot.battery_voltage()
-logit("Voltage: %5.1f\n" % volts)
+log.write("Voltage: %5.1f\n" % volts)
 path = open("path.txt", 'w')
-
 
 port = "/dev/ttyUSB0"
 tty = serial.Serial(port, 9600)
