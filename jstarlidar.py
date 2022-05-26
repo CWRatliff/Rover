@@ -58,6 +58,7 @@ countheartbeat = 0                      # count of tardy heartbeats events
 countgpstardy = 0                       # count of gps readings late events
 countgpsrepeat = 0                      # count of gps stuck events
 countgpsacc = 0                         # count of gps innacurate events
+countgpsfix = 0                         # count of good gps hits
 epoch = time.time()
 starttime = epoch
 gpsEpoch = epoch
@@ -700,6 +701,7 @@ try:
                         if (xchr == 'T'):
                             ilatsec = x
                             posAV = vsec2ft(ilatsec, ilonsec)
+                            
                         elif xchr == 'N':
                             ilonsec = x
                             posAV = vsec2ft(ilatsec, ilonsec)
@@ -713,10 +715,9 @@ try:
                             gpsEpoch = time.time()
                             nogpsflag = False
                             if prevAV == posAV:
-                                if speed == 0:
-                                    nogpsflag = True
-                                else:
-                                    prevAV = posAV
+                                nogpsflag = True
+                            prevAV = posAV
+                            
                         elif xchr == 'A':
                             accgps = x * .00328084   #cvt mm to feet
                             if (accgps < 50):
@@ -873,6 +874,7 @@ try:
                         logit("Dead Reconning =========================")
                     else:    
                         vprint("posAV", posAV)
+                        countgpsfix += 1
                         
 #                    logit("time: " + str(epoch))
                     logit("wpt: %2d raw hdg: %6.1f" % (wpt, hdg))
@@ -1033,6 +1035,7 @@ finally:
     logit("late gps readings: %5d" % countgpstardy)
     logit("repeat gps readings: %5d" % countgpsrepeat)
     logit("innacurate gps: %5d" % countgpsrepeat)
+    logit("good gps: %5d" % countgpsfix)
 
     log.close()
     path.close()
