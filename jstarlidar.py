@@ -50,7 +50,7 @@ fhdg = 0                                # Kalman filtered heading
 yaw = 0                                 # latest IMU yaw (True north)reading
 travel = 0                              # odometer
 cogBase = 0                             # course over ground distance
-nogpsflag = False                       # gps looks current
+gpsokflag = False                       # gps looks current
 approach_factor = .75                   # after waypoint slowdown
 resume_speed = speed
 reducedflag = False
@@ -122,7 +122,7 @@ ndx = 0
 log = open("logfile.txt", 'w')
 robot = motor_driver_ada.motor_driver_ada(log)
 log.write("====================================================================")
-version = "Rover 1.1 220524\n"
+version = "Rover 1.1 220531\n"
 log.write(version)
 tme = time.localtime(time.time())
 print(tme)
@@ -165,25 +165,24 @@ def vclosestwp(V):
 # from present pos (AV) to destination (AV), return safest,shortest route
 def bestroute(pos, dest):
     rte = []
-    startwp, startdist = vclosestwp(pos)
-    endwp, enddist = vclosestwp(dest)
+    endwpt, _ = vclosestwp(dest)
     # if near to a known path, use one of it's path's wpts although
     # closest actual waypt might be shorter. paths are safer
     wp1, wp2 = astar2.nearpath(pos)
     if (wp1 != 0):  # path(s) close by, two waypt candidates each
-        dist1, route1 = astar2.astar(wp1, endwp)
-        dist2, route2 = astar2.astar(wp2, endwp)
+        dist1, route1 = astar2.astar(wp1, endwpt)
+        dist2, route2 = astar2.astar(wp2, endwpt)
         if (dist1 < dist2): # which of the two wpts is closer
-            startwp = wp1
+            bstartwpt = wp1
             rte = route1
         else:   # not near any path
-            startwp = wp2
+            startwpt = wp2
             rte = route2
-        startdist = vmag(vsub(pos, waypts[startwp]))
+        startdistb = vmag(vsub(pos, waypts[bstartwpt]))
     else: # overland path
-        dist, rte = astar2.astar(startwp, endwp)
+        _, rte = astar2.astar(startwpt, endwpt)
         
-    if startdist < 3.0:           # if very close to starting point
+    if startdistb < 3.0:           # if very close to starting point
         rte.pop(0)
     return rte
     
@@ -492,11 +491,11 @@ def star_commands(schr):
 def diag_commands(schr):
     if (schr == '0'):
         logit("diagnostic #1 ===============================")
-        volts = robot.battery_voltage()
+        dvolts = robot.battery_voltage()
 #         xchr = "{b%5.1f}" % volts
 #         sendit(xchr)
-        print("Voltage = ",volts)
-        log.write("Voltage: %5.1f\n" % volts)
+        print("Voltage = ",dvolts)
+        log.write("Voltage: %5.1f\n" % dvolts)
         robot.motor_diag()
         logit("odometer: %7.1f" % travel)
         logit("az set to %d" % azimuth)
@@ -615,9 +614,9 @@ try:
                             elif (wpt > 1 and wpt < 5):   # start of route
                                 rtewp = routes[wpt][0]    # 0th wpt in route
                                 dist, route = astar2.astar(startwp, rtewp) # goto start of route
-                                route2 = routes[wpt]
-                                route2.pop(0)              # delete common wpt
-                                route += route2
+                                routewpt = routes[wpt]
+                                routewpt.pop(0)              # delete common wpt
+                                route += routewpt
                                 
                             elif (wpt >= 10 and wpt <= 76): #start of waypoint
                                 route = bestroute(posAV, waypts[wpt])
@@ -713,9 +712,12 @@ try:
                                 sendit(cstr)
                                 logit(cstr)
                             gpsEpoch = time.time()
-                            nogpsflag = False
+                            gpsokflag = True
                             if prevAV == posAV:
-                                nogpsflag = True
+                                gpsokflag = False
+                                vprint("prevAV", prevAV)
+                                vprint("posAV ", posAV)
+                                logit("GPS not updating ===============")
                             prevAV = posAV
                             
                         elif xchr == 'A':
@@ -725,7 +727,7 @@ try:
                                 sendit(cstr)
                                 logit(cstr)
                                 if accgps < 3:
-                                    nogpsflag = True
+                                    gpsokflag = False
                             else:
                                 logit("Poor GPS accuracy")
                                 sendit("{la------}")
@@ -853,7 +855,7 @@ try:
                     # if no recent GPS or (no GPS movement when speed > 0)
                     # then do dead reconning
                     if (gpsEpoch < oldEpoch) \
-                        or (nogpsflag and speed > 0) \
+                        or (gpsokflag is True and speed > 0) \
                         or accgps > 4.0:   # no recent GPS lat/lon
                         
                         delt = epoch - oldEpoch
@@ -879,9 +881,7 @@ try:
 #                    logit("time: " + str(epoch))
                     logit("wpt: %2d raw hdg: %6.1f" % (wpt, hdg))
                     logit("raw speed: %5.2f" % v)
-                    '''
-                    workAV = estAV
-                    '''
+
                     xEst = Kfilter.Kalman_step(epoch, estAV[0], estAV[1], phi, v)
                     fhdg = int((450 - math.degrees(xEst[2, 0])) % 360)
                     workAV = [xEst[0, 0], xEst[1, 0]]   # see BOT 3:41 for diagram
@@ -890,7 +890,7 @@ try:
                     vprint("filtered E-N pos: ", workAV)
                     logit("Filtered hdg: %6.1f" % fhdg)
                     logit("Filtered speed: %6.2f" % xEst[3, 0])
-#
+
                     cstr = "{ln%5.1f} " % workAV[0]
                     sendit(cstr)
                     cstr = "{lt%5.1f} " % workAV[1]
@@ -957,7 +957,7 @@ try:
                         #endif dtg ===================
                     #endif wptflag ===================
                 
-                if (steer >= -1 and steer <= 1 and speed > 50 and nogpsflag):
+                if (steer >= -1 and steer <= 1 and speed > 50 and gpsokflag is True):
                     if cogBase > 10:                 # line long enough to compute heading
                         cogBaseRV = vsub(posAV, cogAV) ############# estAV?????
                         hdg = vcourse(cogBaseRV)
@@ -1034,7 +1034,7 @@ finally:
     logit("missing heartbeats: %5d" % countheartbeat)
     logit("late gps readings: %5d" % countgpstardy)
     logit("repeat gps readings: %5d" % countgpsrepeat)
-    logit("innacurate gps: %5d" % countgpsrepeat)
+    logit("inaccurate gps: %5d" % countgpsrepeat)
     logit("good gps: %5d" % countgpsfix)
 
     log.close()
