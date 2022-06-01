@@ -29,6 +29,7 @@ T - 'D' commands, diagnostics
 '''
 
 from whichrover import *
+Rsensor = False
 import serial
 import datetime
 import time
@@ -755,7 +756,7 @@ try:
 #               sensor #1 - TFmini giving obstacle main side and avoidence angle
 #               'P'/'S' - port/starboard - side of obstruction
                 elif xchr == 'S':             # sensor data
-                    if (auto and wptflag):
+                    if (auto and wptflag and Rsensor):
                         xchr = cbuff[3]           # Port / Starboard
                         args = cbuff[4:msglen-1]
                         sdist, sang, cswath = args.split(',')
@@ -1002,7 +1003,14 @@ try:
             path.flush()
 
             #endif epoch timer ===================
-               
+
+        # things to do as often as possible outside of timer               
+        if auto is True and hdg == azimuth:  # exactly on course, don't oversteer
+            steer = 0
+            robot.motor(speed, steer)
+            cstr = "{s%4d}" % steer
+            sendit(cstr)
+            logit(cstr)
         if (hdg != oldhdg):
             cstr = "{h%3d}" % hdg
             sendit(cstr)
