@@ -1,0 +1,4713 @@
+====================================================================Rover 1.1 220531
+Voltage:  17.0
+Standby
+hdg:  98
+msg: 14:56:41.432{F03}
+startwp, dist 76,  1.15 
+start is close, advancing route
+route: 28
+route: 30
+route: 29
+route: 31
+route: 27
+route: 28
+route: 0
+route: 0
+track start======================================: [-605.96, 2232.03]
+wpt: 28 -624.85, 2235.41
+track: [ -18.89,    3.38]
+new wpt az set to 280
+msg: 14:56:41.593{LT22.0316}
+msg: 14:56:41.604{LN7.2461}
+msg: 14:56:41.610{LA14}
+{la 0.05}
+hdg: 295, bias:  98
+hdg: 294, bias:  98
+posAV: [-607.01, 2232.53]
+wpt: 28 raw hdg:  294.0
+raw speed:  0.31
+Kalman pos vec: [  -0.29,    0.13]
+filtered E-N pos: : [-606.25, 2232.16]
+Filtered hdg:  294.0
+Filtered speed:   0.31
+progress vec: [  -0.31,    0.06]
+xtrack vec: [  -0.01,   -0.08]
+aiming vector: [  -9.31,    1.59]
+Kalman az set to 279
+{d 18.9} 
+{c280} 
+{lx 0.08} 
+{la 0.05} 
+new hdg steering
+{s -14}
+msg: 14:56:42.613{LT22.0367}
+msg: 14:56:42.622{LN7.2583}
+msg: 14:56:42.629{LA14}
+{la 0.05}
+hdg: 293, bias:  98
+hdg: 292, bias:  98
+hdg: 291, bias:  98
+hdg: 289, bias:  98
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+hdg: 286, bias:  98
+hdg: 285, bias:  98
+hdg: 284, bias:  98
+posAV: [-608.03, 2233.05]
+wpt: 28 raw hdg:  284.0
+raw speed:  0.31
+Kalman pos vec: [  -1.38,    0.47]
+filtered E-N pos: : [-607.34, 2232.49]
+Filtered hdg:  284.0
+Filtered speed:   1.12
+progress vec: [  -1.42,    0.25]
+xtrack vec: [  -0.04,   -0.21]
+aiming vector: [  -8.77,    1.35]
+Kalman az set to 278 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+{d 17.8} 
+{c279} 
+{lx 0.22} 
+{la 0.05} 
+new hdg steering
+{s  -5}
+hdg: 283, bias:  98
+hdg: 282, bias:  98
+msg: 14:56:43.622{Z3 |                                          |}
+msg: 14:56:43.635{Z2 0.0,6,0}
+msg: 14:56:43.646{LT22.0414}
+msg: 14:56:43.657{LN7.2698}
+msg: 14:56:43.663{LA14}
+{la 0.05}
+hdg: 281, bias:  98
+hdg: 280, bias:  98
+hdg: 279, bias:  98
+hdg: 278, bias:  98<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+hdg: 277, bias:  98
+hdg: 276, bias:  98
+posAV: [-609.00, 2233.52]
+wpt: 28 raw hdg:  276.0
+raw speed:  0.31
+Kalman pos vec: [  -2.78,    0.73]
+filtered E-N pos: : [-608.74, 2232.76]
+Filtered hdg:  276.0
+Filtered speed:   1.04
+progress vec: [  -2.82,    0.51]
+xtrack vec: [  -0.04,   -0.23]
+aiming vector: [  -8.08,    1.21]
+Kalman az set to 278
+{d 16.3} 
+{c279} 
+{lx 0.23} 
+{la 0.05} 
+new hdg steering
+{s   2}
+hdg: 275, bias:  98
+msg: 14:56:44.656{LT22.0446}
+msg: 14:56:44.667{LN7.2803}
+msg: 14:56:44.673{LA14}
+{la 0.05}
+hdg: 276, bias:  98
+msg: 14:56:45.241{D2}
+Odo:     4.3, speed:   20
+{v  30}
+posAV: [-609.88, 2233.85]
+wpt: 28 raw hdg:  276.0
+raw speed:  0.47
+Kalman pos vec: [  -3.84,    0.89]
+filtered E-N pos: : [-609.80, 2232.92]
+Filtered hdg:  276.0
+Filtered speed:   0.82
+progress vec: [  -3.88,    0.69]
+xtrack vec: [  -0.04,   -0.20]
+aiming vector: [  -7.54,    1.15]
+Kalman az set to 278
+{d 15.3} 
+{c279} 
+{lx 0.20} 
+{la 0.05} 
+new hdg steering
+hdg: 277, bias:  98
+msg: 14:56:45.495{D2}
+Odo:     4.5, speed:   30
+{v  40}
+msg: 14:56:45.681{LT22.0464}
+msg: 14:56:45.692{LN7.2918}
+msg: 14:56:45.698{LA14}
+{la 0.05}
+msg: 14:56:45.772{Z3 |                                          |}
+msg: 14:56:45.784{Z2 1.0,0,0}
+hdg: 278, bias:  98
+hdg: 277, bias:  98
+hdg: 278, bias:  98
+hdg: 279, bias:  98
+hdg: 280, bias:  98
+posAV: [-610.84, 2234.03]
+wpt: 28 raw hdg:  280.0
+raw speed:  0.63
+Kalman pos vec: [  -4.89,    1.07]
+filtered E-N pos: : [-610.85, 2233.09]
+Filtered hdg:  280.0
+Filtered speed:   0.91
+progress vec: [  -4.92,    0.88]
+xtrack vec: [  -0.03,   -0.19]
+aiming vector: [  -7.02,    1.06]
+Kalman az set to 278
+{d 14.2} 
+{c279} 
+{lx 0.19} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+hdg: 281, bias:  98
+msg: 14:56:46.700{LT22.0489}
+msg: 14:56:46.710{LN7.3102}
+msg: 14:56:46.716{LA14}
+{la 0.05}
+hdg: 280, bias:  98
+hdg: 281, bias:  98
+hdg: 280, bias:  98
+hdg: 279, bias:  98
+posAV: [-612.38, 2234.28]
+wpt: 28 raw hdg:  279.0
+raw speed:  0.63
+Kalman pos vec: [  -6.32,    1.36]
+filtered E-N pos: : [-612.27, 2233.39]
+Filtered hdg:  279.0
+Filtered speed:   1.15
+progress vec: [  -6.36,    1.14]
+xtrack vec: [  -0.04,   -0.22]
+aiming vector: [  -6.31,    0.90]
+Kalman az set to 278
+{d 12.7} 
+{c278} 
+{lx 0.23} 
+{la 0.05} 
+new hdg steering
+{s   0}
+msg: 14:56:47.725{LT22.0540}
+msg: 14:56:47.736{LN7.3339}
+msg: 14:56:47.742{LA14}
+{la 0.05}
+msg: 14:56:47.919{Z3 |                                          |}
+msg: 14:56:47.932{Z2 3.0,2,0}
+hdg: 280, bias:  98
+hdg: 279, bias:  98
+posAV: [-614.37, 2234.80]
+wpt: 28 raw hdg:  279.0
+raw speed:  0.63
+Kalman pos vec: [  -8.19,    1.74]
+filtered E-N pos: : [-614.15, 2233.77]
+Filtered hdg:  279.0
+Filtered speed:   1.43
+progress vec: [  -8.24,    1.48]
+xtrack vec: [  -0.05,   -0.27]
+aiming vector: [  -5.38,    0.69]
+Kalman az set to 277
+{d 10.8} 
+{c277} 
+{lx 0.27} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+hdg: 280, bias:  98
+hdg: 279, bias:  98
+msg: 14:56:48.743{LT22.0583}
+msg: 14:56:48.754{LN7.3584}
+msg: 14:56:48.760{LA14}
+{la 0.05}
+hdg: 278, bias:  98
+hdg: 277, bias:  98
+posAV: [-616.42, 2235.24]
+wpt: 28 raw hdg:  277.0
+raw speed:  0.63
+Kalman pos vec: [ -10.19,    2.13]
+filtered E-N pos: : [-616.15, 2234.15]
+Filtered hdg:  277.0
+Filtered speed:   1.50
+progress vec: [ -10.25,    1.84]
+xtrack vec: [  -0.05,   -0.29]
+aiming vector: [  -4.38,    0.48]
+Kalman az set to 276
+{d  8.8} 
+{c276} 
+{lx 0.30} 
+{la 0.05} 
+new hdg steering
+{s   0}
+msg: 14:56:49.764{LT22.0615}
+msg: 14:56:49.774{LN7.3829}
+msg: 14:56:49.779{LA14}
+{la 0.05}
+hdg: 276, bias:  98
+msg: 14:56:50.065{Z3 |                                          |}
+msg: 14:56:50.078{Z2 5.0,4,0}
+hdg: 277, bias:  98
+hdg: 276, bias:  98
+posAV: [-618.47, 2235.56]
+wpt: 28 raw hdg:  276.0
+raw speed:  0.63
+Kalman pos vec: [ -12.22,    2.48]
+filtered E-N pos: : [-618.17, 2234.51]
+Filtered hdg:  277.0
+Filtered speed:   1.51
+progress vec: [ -12.27,    2.20]
+xtrack vec: [  -0.05,   -0.28]
+aiming vector: [  -3.36,    0.31]
+Kalman az set to 275
+{d  6.7} 
+{c275} 
+{lx 0.29} 
+{la 0.05} 
+Odo:     7.6, speed:   40
+new hdg steering
+{v  30}
+hdg: 277, bias:  98
+hdg: 276, bias:  98
+msg: 14:56:50.789{LT22.0640}
+msg: 14:56:50.799{LN7.4074}
+msg: 14:56:50.806{LA14}
+{la 0.05}
+hdg: 275, bias:  98
+hdg: 276, bias:  98
+posAV: [-620.52, 2235.81]
+wpt: 28 raw hdg:  276.0
+raw speed:  0.47
+Kalman pos vec: [ -14.22,    2.82]
+filtered E-N pos: : [-620.17, 2234.84]
+Filtered hdg:  277.0
+Filtered speed:   1.44
+progress vec: [ -14.26,    2.56]
+xtrack vec: [  -0.05,   -0.26]
+aiming vector: [  -2.36,    0.15]
+Kalman az set to 273
+{d  4.7} 
+{c274} 
+{lx 0.27} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+hdg: 275, bias:  98
+msg: 14:56:51.808{LT22.0662}
+msg: 14:56:51.819{LN7.4308}
+msg: 14:56:51.825{LA14}
+{la 0.05}
+hdg: 274, bias:  98
+hdg: 273, bias:  98
+msg: 14:56:52.216{Z3 |                                          |}
+msg: 14:56:52.229{Z2 3.0,0,0}
+hdg: 272, bias:  98
+hdg: 271, bias:  98
+hdg: 272, bias:  98
+posAV: [-622.48, 2236.04]
+wpt: 28 raw hdg:  272.0
+raw speed:  0.47
+Kalman pos vec: [ -16.16,    3.09]
+filtered E-N pos: : [-622.11, 2235.12]
+Filtered hdg:  273.0
+Filtered speed:   1.38
+progress vec: [ -16.19,    2.90]
+xtrack vec: [  -0.03,   -0.19]
+aiming vector: [  -1.39,    0.05]
+Kalman az set to 272
+{d  2.8} 
+{c272} 
+{lx 0.19} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 271, bias:  98
+msg: 14:56:52.834{LT22.0676}
+msg: 14:56:52.844{LN7.4495}
+msg: 14:56:52.849{LA14}
+{la 0.05}
+hdg: 270, bias:  98
+hdg: 271, bias:  98
+posAV: [-624.05, 2236.18]
+wpt: 28 raw hdg:  271.0
+raw speed:  0.47
+Kalman pos vec: [ -17.79,    3.28]
+filtered E-N pos: : [-623.75, 2235.31]
+Filtered hdg:  273.0
+Filtered speed:   1.19
+progress vec: [ -17.81,    3.19]
+xtrack vec: [  -0.02,   -0.09]
+aiming vector: [  -0.56,    0.00]
+Kalman az set to 270
+{d  1.1} 
+{c270} 
+{lx 0.09} 
+{la 0.05} 
+close to waypoint
+Odo:     9.0, speed:   30
+resuming to   40
+track start======================================: [-624.85, 2235.41]
+wpt: 30 -644.70, 2261.65
+track: [ -19.85,   26.24]
+new wpt az set to 322
+new hdg steering
+{v  40}
+{s  51}
+hdg: 272, bias:  98
+hdg: 273, bias:  98
+hdg: 275, bias:  98
+hdg: 277, bias:  98
+hdg: 278, bias:  98
+hdg: 280, bias:  98
+msg: 14:56:53.854{LT22.0694}
+msg: 14:56:53.865{LN7.4671}
+msg: 14:56:53.870{LA14}
+{la 0.05}
+hdg: 282, bias:  98
+hdg: 283, bias:  98
+hdg: 285, bias:  98
+hdg: 287, bias:  98
+hdg: 289, bias:  98
+hdg: 291, bias:  98
+hdg: 293, bias:  98
+hdg: 295, bias:  98
+hdg: 297, bias:  98
+hdg: 299, bias:  98
+msg: 14:56:54.368{Z3 |                                          |}
+msg: 14:56:54.381{Z211.0,2,0}
+hdg: 301, bias:  98
+hdg: 303, bias:  98
+hdg: 305, bias:  98
+posAV: [-625.53, 2236.36]
+wpt: 30 raw hdg:  305.0
+raw speed:  0.63
+Kalman pos vec: [   0.16,    0.78]
+filtered E-N pos: : [-624.69, 2236.19]
+Filtered hdg:  305.0
+Filtered speed:   0.63
+progress vec: [  -0.32,    0.42]
+xtrack vec: [  -0.48,   -0.36]
+aiming vector: [ -10.25,   12.55]
+Kalman az set to 320
+{d 32.4} 
+{c321} 
+{lx 0.60} 
+{la 0.05} 
+new hdg steering
+{s  15}
+hdg: 307, bias:  98
+hdg: 309, bias:  98
+hdg: 311, bias:  98
+hdg: 313, bias:  98
+hdg: 315, bias:  98
+hdg: 316, bias:  98
+hdg: 318, bias:  98
+hdg: 320, bias:  98
+msg: 14:56:54.882{LT22.0698}
+msg: 14:56:54.893{LN7.4833}
+msg: 14:56:54.899{LA14}
+{la 0.05}
+hdg: 321, bias:  98
+hdg: 323, bias:  98
+hdg: 324, bias:  98
+hdg: 325, bias:  98
+hdg: 327, bias:  98
+hdg: 328, bias:  98
+hdg: 330, bias:  98
+hdg: 331, bias:  98
+hdg: 333, bias:  98
+hdg: 334, bias:  98
+hdg: 336, bias:  98
+hdg: 337, bias:  98
+posAV: [-626.88, 2236.40]
+wpt: 30 raw hdg:  337.0
+raw speed:  0.63
+Kalman pos vec: [  -0.48,    1.37]
+filtered E-N pos: : [-625.33, 2236.78]
+Filtered hdg:  336.0
+Filtered speed:   0.88
+progress vec: [  -0.84,    1.11]
+xtrack vec: [  -0.35,   -0.27]
+aiming vector: [  -9.86,   12.30]
+Kalman az set to 321
+{d 31.5} 
+{c321} 
+{lx 0.44} 
+{la 0.05} 
+new hdg steering
+{s -15}
+hdg: 338, bias:  98
+hdg: 340, bias:  98
+hdg: 341, bias:  98
+msg: 14:56:55.901{LT22.0759}
+msg: 14:56:55.911{LN7.4988}
+msg: 14:56:55.917{LA14}
+{la 0.05}
+hdg: 340, bias:  98
+hdg: 339, bias:  98
+hdg: 338, bias:  98
+hdg: 337, bias:  98
+hdg: 336, bias:  98
+hdg: 335, bias:  98
+hdg: 333, bias:  98
+hdg: 332, bias:  98
+posAV: [-628.18, 2237.02]
+wpt: 30 raw hdg:  332.0
+raw speed:  0.63
+Kalman pos vec: [  -1.08,    2.49]
+filtered E-N pos: : [-625.93, 2237.90]
+Filtered hdg:  331.0
+Filtered speed:   1.09
+progress vec: [  -1.59,    2.10]
+xtrack vec: [  -0.51,   -0.39]
+aiming vector: [  -9.64,   11.68]
+Kalman az set to 320
+{d 30.3} 
+{c320} 
+{lx 0.64} 
+{la 0.05} 
+new hdg steering
+{s -11}
+msg: 14:56:56.517{Z3 |                                          |}
+msg: 14:56:56.530{Z2 6.0,4,0}
+hdg: 330, bias:  98
+hdg: 328, bias:  98
+hdg: 327, bias:  98
+hdg: 326, bias:  98
+hdg: 325, bias:  98
+hdg: 324, bias:  98
+hdg: 323, bias:  98
+hdg: 322, bias:  98
+hdg: 320, bias:  98
+msg: 14:56:56.930{LT22.0903}
+msg: 14:56:56.940{LN7.5085}
+msg: 14:56:56.947{LA14}
+{la 0.05}
+hdg: 319, bias:  98
+hdg: 318, bias:  98
+hdg: 317, bias:  98
+hdg: 316, bias:  98
+hdg: 315, bias:  98
+hdg: 314, bias:  98
+hdg: 313, bias:  98
+hdg: 311, bias:  98
+hdg: 310, bias:  98
+hdg: 309, bias:  98
+hdg: 308, bias:  98
+posAV: [-628.99, 2238.48]
+wpt: 30 raw hdg:  308.0
+raw speed:  0.63
+Kalman pos vec: [  -2.48,    3.98]
+filtered E-N pos: : [-627.33, 2239.39]
+Filtered hdg:  307.0
+Filtered speed:   1.75
+progress vec: [  -2.82,    3.72]
+xtrack vec: [  -0.33,   -0.25]
+aiming vector: [  -8.85,   11.00]
+Kalman az set to 321
+{d 28.2} 
+{c321} 
+{lx 0.42} 
+{la 0.05} 
+new hdg steering
+{s  13}
+hdg: 307, bias:  98
+hdg: 306, bias:  98
+hdg: 307, bias:  98
+hdg: 306, bias:  98
+msg: 14:56:57.946{LT22.1062}
+msg: 14:56:57.957{LN7.5164}
+msg: 14:56:57.963{LA14}
+{la 0.05}
+hdg: 307, bias:  98
+hdg: 308, bias:  98
+hdg: 309, bias:  98
+hdg: 310, bias:  98
+hdg: 312, bias:  98
+hdg: 313, bias:  98
+hdg: 314, bias:  98
+hdg: 315, bias:  98
+hdg: 316, bias:  98
+hdg: 317, bias:  98
+posAV: [-629.66, 2240.09]
+wpt: 30 raw hdg:  317.0
+raw speed:  0.63
+Kalman pos vec: [  -3.87,    5.12]
+filtered E-N pos: : [-628.72, 2240.53]
+Filtered hdg:  316.0
+Filtered speed:   1.39
+progress vec: [  -3.87,    5.12]
+xtrack vec: [  -0.00,   -0.00]
+aiming vector: [  -7.99,   10.56]
+Kalman az set to 322
+{d 26.5} 
+{c323} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s   5}
+hdg: 318, bias:  98
+hdg: 320, bias:  98
+hdg: 321, bias:  98
+msg: 14:56:58.668{Z3 |                                          |}
+msg: 14:56:58.680{Z2 1.0,0,0}
+hdg: 323, bias:  98
+hdg: 324, bias:  98
+hdg: 325, bias:  98
+hdg: 326, bias:  98
+msg: 14:56:58.971{LT22.1198}
+msg: 14:56:58.981{LN7.5316}
+msg: 14:56:58.987{LA14}
+{la 0.05}
+hdg: 327, bias:  98
+hdg: 328, bias:  98
+hdg: 329, bias:  98
+hdg: 330, bias:  98
+hdg: 331, bias:  98
+hdg: 332, bias:  98
+posAV: [-630.93, 2241.47]
+wpt: 30 raw hdg:  332.0
+raw speed:  0.63
+Kalman pos vec: [  -5.02,    6.39]
+filtered E-N pos: : [-629.87, 2241.80]
+Filtered hdg:  331.0
+Filtered speed:   1.24
+progress vec: [  -4.90,    6.48]
+xtrack vec: [   0.12,    0.09]
+aiming vector: [  -7.36,    9.97]
+Kalman az set to 323
+{d 24.8} 
+{c324} 
+{lx 0.15} 
+{la 0.05} 
+new hdg steering
+{s  -8}
+hdg: 333, bias:  98
+hdg: 332, bias:  98
+hdg: 331, bias:  98
+hdg: 330, bias:  98
+msg: 14:56:59.989{LT22.1324}
+msg: 14:57:00.000{LN7.5474}
+msg: 14:57:00.005{LA14}
+{la 0.05}
+hdg: 329, bias:  98
+hdg: 328, bias:  98
+hdg: 327, bias:  98
+hdg: 326, bias:  98
+hdg: 325, bias:  98
+hdg: 324, bias:  98
+hdg: 323, bias:  98
+hdg: 322, bias:  98
+hdg: 321, bias:  98
+posAV: [-632.25, 2242.75]
+wpt: 30 raw hdg:  321.0
+raw speed:  0.63
+Kalman pos vec: [  -6.16,    7.82]
+filtered E-N pos: : [-631.01, 2243.23]
+Filtered hdg:  320.0
+Filtered speed:   1.38
+progress vec: [  -6.00,    7.93]
+xtrack vec: [   0.15,    0.12]
+aiming vector: [  -6.77,    9.27]
+Kalman az set to 323
+{d 23.0} 
+{c324} 
+{lx 0.19} 
+{la 0.05} 
+new hdg steering
+{s   2}
+hdg: 320, bias:  98
+hdg: 319, bias:  98
+hdg: 320, bias:  98
+msg: 14:57:00.815{Z3 |                                          |}
+msg: 14:57:00.827{Z2 3.0,2,0}
+hdg: 319, bias:  98
+hdg: 320, bias:  98
+hdg: 321, bias:  98
+hdg: 320, bias:  98
+msg: 14:57:01.019{LT22.1490}
+msg: 14:57:01.028{LN7.5586}
+msg: 14:57:01.034{LA14}
+{la 0.05}
+hdg: 321, bias:  98
+hdg: 322, bias:  98
+hdg: 321, bias:  98
+hdg: 322, bias:  98
+hdg: 323, bias:  98
+posAV: [-633.19, 2244.43]
+wpt: 30 raw hdg:  323.0
+raw speed:  0.63
+Kalman pos vec: [  -7.41,    9.25]
+filtered E-N pos: : [-632.26, 2244.66]
+Filtered hdg:  322.0
+Filtered speed:   1.42
+progress vec: [  -7.15,    9.45]
+xtrack vec: [   0.26,    0.20]
+aiming vector: [  -6.09,    8.60]
+Kalman az set to 324
+{d 21.1} 
+{c325} 
+{lx 0.33} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg: 322, bias:  98
+hdg: 323, bias:  98
+msg: 14:57:02.048{LT22.1821}
+msg: 14:57:02.058{LN7.5866}
+msg: 14:57:02.064{LA14}
+{la 0.05}
+hdg: 324, bias:  98
+hdg: 323, bias:  98
+hdg: 324, bias:  98
+posAV: [-635.54, 2247.78]
+wpt: 30 raw hdg:  324.0
+raw speed:  0.63
+Kalman pos vec: [  -9.65,   12.05]
+filtered E-N pos: : [-634.50, 2247.46]
+Filtered hdg:  322.0
+Filtered speed:   2.47
+progress vec: [  -9.31,   12.31]
+xtrack vec: [   0.34,    0.25]
+aiming vector: [  -4.93,    7.22]
+Kalman az set to 325
+{d 17.5} 
+{c326} 
+{lx 0.42} 
+{la 0.05} 
+new hdg steering
+hdg: 325, bias:  98
+hdg: 326, bias:  98
+hdg: 325, bias:  98
+hdg: 326, bias:  98
+msg: 14:57:02.974{Z3 |                                          |}
+msg: 14:57:02.987{Z2 2.0,4,0}
+hdg: 325, bias:  98
+msg: 14:57:03.071{LT22.1990}
+msg: 14:57:03.082{LN7.5996}
+msg: 14:57:03.088{LA14}
+{la 0.05}
+hdg: 326, bias:  98
+posAV: [-636.63, 2249.49]
+wpt: 30 raw hdg:  326.0
+raw speed:  0.63
+Kalman pos vec: [ -11.09,   13.93]
+filtered E-N pos: : [-635.94, 2249.34]
+Filtered hdg:  324.0
+Filtered speed:   1.71
+progress vec: [ -10.74,   14.20]
+xtrack vec: [   0.35,    0.27]
+aiming vector: [  -4.20,    6.29]
+Kalman az set to 326
+{d 15.1} 
+{c326} 
+{lx 0.44} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 327, bias:  98
+hdg: 326, bias:  98
+hdg: 327, bias:  98
+msg: 14:57:04.091{LT22.2160}
+msg: 14:57:04.101{LN7.6122}
+msg: 14:57:04.108{LA14}
+{la 0.05}
+hdg: 326, bias:  98
+hdg: 327, bias:  98
+posAV: [-637.68, 2251.22]
+wpt: 30 raw hdg:  327.0
+raw speed:  0.63
+Kalman pos vec: [ -12.32,   15.63]
+filtered E-N pos: : [-637.17, 2251.04]
+Filtered hdg:  325.0
+Filtered speed:   1.54
+progress vec: [ -12.00,   15.87]
+xtrack vec: [   0.32,    0.24]
+aiming vector: [  -3.60,    5.43]
+Kalman az set to 326
+{d 13.0} 
+{c326} 
+{lx 0.40} 
+{la 0.05} 
+new hdg steering
+hdg: 326, bias:  98
+hdg: 327, bias:  98
+hdg: 326, bias:  98
+msg: 14:57:05.124{Z3 |                                          |}
+msg: 14:57:05.136{Z2 5.0,0,0}
+hdg: 325, bias:  98
+msg: 14:57:05.153{LT22.2343}
+msg: 14:57:05.164{LN7.6259}
+msg: 14:57:05.170{LA14}
+{la 0.05}
+hdg: 326, bias:  98
+hdg: 325, bias:  98
+hdg: 326, bias:  98
+posAV: [-638.83, 2253.07]
+wpt: 30 raw hdg:  326.0
+raw speed:  0.63
+Kalman pos vec: [ -13.58,   17.38]
+filtered E-N pos: : [-638.43, 2252.79]
+Filtered hdg:  324.0
+Filtered speed:   1.58
+progress vec: [ -13.31,   17.59]
+xtrack vec: [   0.27,    0.20]
+aiming vector: [  -3.00,    4.53]
+Kalman az set to 326
+{d 10.9} 
+{c326} 
+{lx 0.34} 
+{la 0.05} 
+new hdg steering
+hdg: 325, bias:  98
+hdg: 326, bias:  98
+hdg: 325, bias:  98
+msg: 14:57:06.134{LT22.2520}
+msg: 14:57:06.145{LN7.6392}
+msg: 14:57:06.150{LA14}
+{la 0.05}
+posAV: [-639.94, 2254.87]
+wpt: 30 raw hdg:  325.0
+raw speed:  0.63
+Kalman pos vec: [ -14.82,   19.10]
+filtered E-N pos: : [-639.67, 2254.51]
+Filtered hdg:  323.0
+Filtered speed:   1.56
+progress vec: [ -14.58,   19.28]
+xtrack vec: [   0.24,    0.18]
+aiming vector: [  -2.40,    3.66]
+Kalman az set to 326
+{d  8.7} 
+{c327} 
+{lx 0.30} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg: 326, bias:  98
+hdg: 327, bias:  98
+msg: 14:57:07.152{LT22.2703}
+msg: 14:57:07.162{LN7.6518}
+msg: 14:57:07.169{LA14}
+{la 0.05}
+msg: 14:57:07.271{Z3 |                                          |}
+msg: 14:57:07.284{Z2 4.0,2,0}
+hdg: 328, bias:  98
+posAV: [-641.00, 2256.72]
+wpt: 30 raw hdg:  328.0
+raw speed:  0.63
+Kalman pos vec: [ -16.02,   20.85]
+filtered E-N pos: : [-640.87, 2256.26]
+Filtered hdg:  326.0
+Filtered speed:   1.56
+progress vec: [ -15.87,   20.97]
+xtrack vec: [   0.16,    0.12]
+aiming vector: [  -1.83,    2.75]
+Kalman az set to 326
+{d  6.6} 
+{c326} 
+{lx 0.20} 
+{la 0.05} 
+Odo:    17.8, speed:   40
+new hdg steering
+{v  30}
+{s  -1}
+hdg: 329, bias:  98
+hdg: 328, bias:  98
+hdg: 327, bias:  98
+msg: 14:57:08.175{LT22.2858}
+msg: 14:57:08.185{LN7.6644}
+msg: 14:57:08.192{LA14}
+{la 0.05}
+posAV: [-642.05, 2258.29]
+wpt: 30 raw hdg:  327.0
+raw speed:  0.47
+Kalman pos vec: [ -17.08,   22.45]
+filtered E-N pos: : [-641.93, 2257.86]
+Filtered hdg:  325.0
+Filtered speed:   1.37
+progress vec: [ -17.02,   22.49]
+xtrack vec: [   0.06,    0.05]
+aiming vector: [  -1.35,    1.92]
+Kalman az set to 324
+{d  4.7} 
+{c325} 
+{lx 0.08} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+hdg: 326, bias:  98
+hdg: 325, bias:  98
+msg: 14:57:09.195{LT22.2988}
+msg: 14:57:09.205{LN7.6741}
+msg: 14:57:09.212{LA16}
+{la 0.05}
+hdg: 324, bias:  98
+msg: 14:57:09.420{Z3 |                                          |}
+msg: 14:57:09.432{Z2 5.0,4,0}
+hdg: 323, bias:  98
+posAV: [-642.87, 2259.61]
+wpt: 30 raw hdg:  323.0
+raw speed:  0.47
+Kalman pos vec: [ -18.00,   23.78]
+filtered E-N pos: : [-642.85, 2259.19]
+Filtered hdg:  321.0
+Filtered speed:   1.18
+progress vec: [ -17.99,   23.79]
+xtrack vec: [   0.01,    0.01]
+aiming vector: [  -0.92,    1.24]
+Kalman az set to 323
+{d  3.1} 
+{c323} 
+{lx 0.02} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 322, bias:  98
+hdg: 323, bias:  98
+msg: 14:57:10.221{LT22.3110}
+msg: 14:57:10.232{LN7.6846}
+msg: 14:57:10.239{LA14}
+{la 0.05}
+hdg: 322, bias:  98
+posAV: [-643.75, 2260.84]
+wpt: 30 raw hdg:  322.0
+raw speed:  0.47
+Kalman pos vec: [ -18.93,   25.00]
+filtered E-N pos: : [-643.78, 2260.41]
+Filtered hdg:  321.0
+Filtered speed:   1.13
+progress vec: [ -18.92,   25.01]
+xtrack vec: [   0.01,    0.01]
+aiming vector: [  -0.46,    0.62]
+Kalman az set to 323
+{d  1.5} 
+{c324} 
+{lx 0.01} 
+{la 0.05} 
+close to waypoint
+Odo:    19.2, speed:   30
+resuming to   40
+track start======================================: [-644.70, 2261.65]
+wpt: 29 -684.91, 2276.04
+track: [ -40.21,   14.39]
+new wpt az set to 289
+new hdg steering
+{v  40}
+{s -32}
+hdg: 321, bias:  98
+hdg: 320, bias:  98
+hdg: 319, bias:  98
+hdg: 317, bias:  98
+hdg: 316, bias:  98
+hdg: 315, bias:  98
+hdg: 314, bias:  98
+hdg: 312, bias:  98
+hdg: 311, bias:  98
+hdg: 309, bias:  98
+hdg: 307, bias:  98
+hdg: 305, bias:  98
+hdg: 303, bias:  98
+msg: 14:57:11.239{LT22.3229}
+msg: 14:57:11.250{LN7.6964}
+msg: 14:57:11.256{LA17}
+{la 0.06}
+hdg: 301, bias:  98
+hdg: 299, bias:  98
+hdg: 297, bias:  98
+hdg: 294, bias:  98
+hdg: 292, bias:  98
+hdg: 288, bias:  98
+posAV: [-644.73, 2262.05]
+wpt: 29 raw hdg:  288.0
+raw speed:  0.63
+Kalman pos vec: [   0.56,   -0.30]
+filtered E-N pos: : [-644.14, 2261.35]
+Filtered hdg:  288.0
+Filtered speed:   0.63
+aiming vector: [ -40.21,   14.39]
+Kalman az set to 289
+{d 43.3} 
+{c290} 
+{lx 0.00} 
+{la 0.06} 
+new hdg steering
+{s   1}
+msg: 14:57:11.565{Z3 |                                          |}
+msg: 14:57:11.578{Z2 2.0,0,0}
+hdg: 286, bias:  98
+hdg: 284, bias:  98
+hdg: 282, bias:  98
+hdg: 280, bias:  98
+hdg: 277, bias:  98
+hdg: 275, bias:  98
+hdg: 273, bias:  98
+hdg: 271, bias:  98
+hdg: 269, bias:  98
+hdg: 268, bias:  98
+hdg: 267, bias:  98
+hdg: 266, bias:  98
+hdg: 265, bias:  98
+hdg: 264, bias:  98
+msg: 14:57:12.266{LT22.3319}
+msg: 14:57:12.277{LN7.7134}
+msg: 14:57:12.283{LA15}
+{la 0.05}
+hdg: 263, bias:  98
+hdg: 264, bias:  98
+posAV: [-646.16, 2262.96]
+wpt: 29 raw hdg:  264.0
+raw speed:  0.63
+Kalman pos vec: [  -0.68,   -0.15]
+filtered E-N pos: : [-645.38, 2261.50]
+Filtered hdg:  264.0
+Filtered speed:   1.25
+progress vec: [  -0.55,    0.20]
+xtrack vec: [   0.12,    0.34]
+aiming vector: [ -19.71,    7.44]
+Kalman az set to 290
+{d 42.1} 
+{c291} 
+{lx 0.36} 
+{la 0.05} 
+new hdg steering
+{s  26}
+hdg: 265, bias:  98
+hdg: 267, bias:  98
+hdg: 268, bias:  98
+hdg: 269, bias:  98
+hdg: 271, bias:  98
+hdg: 272, bias:  98
+hdg: 274, bias:  98
+hdg: 275, bias:  98
+hdg: 277, bias:  98
+hdg: 279, bias:  98
+hdg: 281, bias:  98
+hdg: 283, bias:  98
+msg: 14:57:13.285{LT22.3326}
+msg: 14:57:13.296{LN7.7350}
+msg: 14:57:13.302{LA16}
+{la 0.05}
+hdg: 285, bias:  98
+hdg: 287, bias:  98
+hdg: 289, bias:  98
+hdg: 292, bias:  98
+hdg: 294, bias:  98
+posAV: [-647.97, 2263.03]
+wpt: 29 raw hdg:  294.0
+raw speed:  0.63
+Kalman pos vec: [  -2.93,    0.28]
+filtered E-N pos: : [-647.63, 2261.93]
+Filtered hdg:  294.0
+Filtered speed:   1.88
+progress vec: [  -2.69,    0.96]
+xtrack vec: [   0.24,    0.68]
+aiming vector: [ -18.52,    7.40]
+Kalman az set to 291
+{d 39.9} 
+{c292} 
+{lx 0.72} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+hdg: 296, bias:  98
+hdg: 298, bias:  98
+hdg: 299, bias:  98
+msg: 14:57:13.718{Z3 |                                          |}
+msg: 14:57:13.730{Z2 2.0,2,0}
+hdg: 301, bias:  98
+hdg: 303, bias:  98
+hdg: 304, bias:  98
+hdg: 305, bias:  98
+hdg: 306, bias:  98
+hdg: 307, bias:  98
+hdg: 308, bias:  98
+hdg: 309, bias:  98
+hdg: 310, bias:  98
+hdg: 311, bias:  98
+hdg: 312, bias:  98
+hdg: 311, bias:  98
+msg: 14:57:14.312{LT22.3376}
+msg: 14:57:14.321{LN7.7530}
+msg: 14:57:14.329{LA14}
+{la 0.05}
+hdg: 310, bias:  98
+posAV: [-649.48, 2263.54]
+wpt: 29 raw hdg:  310.0
+raw speed:  0.63
+Kalman pos vec: [  -4.63,    1.31]
+filtered E-N pos: : [-649.33, 2262.96]
+Filtered hdg:  310.0
+Filtered speed:   1.54
+progress vec: [  -4.52,    1.62]
+xtrack vec: [   0.11,    0.30]
+aiming vector: [ -17.74,    6.69]
+Kalman az set to 290
+{d 37.9} 
+{c291} 
+{lx 0.32} 
+{la 0.05} 
+new hdg steering
+{s -19}
+hdg: 309, bias:  98
+hdg: 308, bias:  98
+hdg: 306, bias:  98
+hdg: 305, bias:  98
+hdg: 304, bias:  98
+hdg: 303, bias:  98
+hdg: 302, bias:  98
+hdg: 300, bias:  98
+hdg: 299, bias:  98
+hdg: 297, bias:  98
+hdg: 296, bias:  98
+hdg: 294, bias:  98
+hdg: 292, bias:  98
+hdg: 289, bias:  98
+hdg: 288, bias:  98
+msg: 14:57:15.330{LT22.3484}
+msg: 14:57:15.342{LN7.7728}
+msg: 14:57:15.347{LA14}
+{la 0.05}
+hdg: 286, bias:  98
+hdg: 284, bias:  98
+hdg: 282, bias:  98
+hdg: 281, bias:  98
+posAV: [-651.13, 2264.63]
+wpt: 29 raw hdg:  281.0
+raw speed:  0.63
+Kalman pos vec: [  -6.27,    2.25]
+filtered E-N pos: : [-650.97, 2263.90]
+Filtered hdg:  281.0
+Filtered speed:   1.40
+progress vec: [  -6.28,    2.25]
+xtrack vec: [  -0.00,   -0.00]
+aiming vector: [ -16.97,    6.07]
+Kalman az set to 289
+{d 36.0} 
+{c290} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s   8}
+hdg: 279, bias:  98
+hdg: 277, bias:  98
+hdg: 276, bias:  98
+msg: 14:57:15.866{Z3 |                                          |}
+msg: 14:57:15.879{Z2 0.0,4,0}
+hdg: 274, bias:  98
+hdg: 273, bias:  98
+hdg: 272, bias:  98
+hdg: 273, bias:  98
+hdg: 274, bias:  98
+hdg: 275, bias:  98
+hdg: 276, bias:  98
+msg: 14:57:16.358{LT22.3553}
+msg: 14:57:16.368{LN7.7915}
+msg: 14:57:16.375{LA14}
+{la 0.05}
+hdg: 277, bias:  98
+hdg: 278, bias:  98
+posAV: [-652.70, 2265.33]
+wpt: 29 raw hdg:  278.0
+raw speed:  0.63
+Kalman pos vec: [  -7.88,    2.72]
+filtered E-N pos: : [-652.58, 2264.37]
+Filtered hdg:  278.0
+Filtered speed:   1.22
+progress vec: [  -7.85,    2.81]
+xtrack vec: [   0.03,    0.09]
+aiming vector: [ -16.15,    5.88]
+Kalman az set to 290
+{d 34.4} 
+{c290} 
+{lx 0.10} 
+{la 0.05} 
+new hdg steering
+{s  12}
+hdg: 279, bias:  98
+hdg: 281, bias:  98
+hdg: 282, bias:  98
+hdg: 283, bias:  98
+hdg: 284, bias:  98
+hdg: 285, bias:  98
+hdg: 286, bias:  98
+hdg: 287, bias:  98
+hdg: 288, bias:  98
+hdg: 289, bias:  98
+hdg: 292, bias:  98
+hdg: 294, bias:  98
+hdg: 295, bias:  98
+hdg: 296, bias:  98
+hdg: 297, bias:  98
+hdg: 299, bias:  98
+msg: 14:57:17.374{LT22.3585}
+msg: 14:57:17.385{LN7.8127}
+msg: 14:57:17.390{LA14}
+{la 0.05}
+hdg: 300, bias:  98
+hdg: 301, bias:  98
+hdg: 302, bias:  98
+posAV: [-654.48, 2265.66]
+wpt: 29 raw hdg:  302.0
+raw speed:  0.63
+Kalman pos vec: [  -9.62,    3.40]
+filtered E-N pos: : [-654.32, 2265.05]
+Filtered hdg:  302.0
+Filtered speed:   1.46
+progress vec: [  -9.61,    3.44]
+xtrack vec: [   0.02,    0.04]
+aiming vector: [ -15.29,    5.52]
+Kalman az set to 289
+{d 32.5} 
+{c290} 
+{lx 0.05} 
+{la 0.05} 
+new hdg steering
+{s -12}
+hdg: 303, bias:  98
+hdg: 304, bias:  98
+hdg: 303, bias:  98
+hdg: 302, bias:  98
+hdg: 301, bias:  98
+msg: 14:57:18.014{Z3 |                                          |}
+msg: 14:57:18.027{Z2 2.0,0,0}
+hdg: 300, bias:  98
+hdg: 299, bias:  98
+hdg: 298, bias:  98
+hdg: 296, bias:  98
+hdg: 294, bias:  98
+msg: 14:57:18.393{LT22.3657}
+msg: 14:57:18.404{LN7.8314}
+msg: 14:57:18.409{LA14}
+{la 0.05}
+hdg: 293, bias:  98
+hdg: 292, bias:  98
+hdg: 289, bias:  98
+posAV: [-656.04, 2266.39]
+wpt: 29 raw hdg:  289.0
+raw speed:  0.63
+Kalman pos vec: [ -11.18,    4.22]
+filtered E-N pos: : [-655.88, 2265.87]
+Filtered hdg:  289.0
+Filtered speed:   1.34
+progress vec: [ -11.25,    4.03]
+xtrack vec: [  -0.07,   -0.19]
+aiming vector: [ -14.55,    4.99]
+Kalman az set to 288
+{d 30.8} 
+{c289} 
+{lx 0.20} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+hdg: 286, bias:  98
+hdg: 285, bias:  98
+hdg: 284, bias:  98
+hdg: 283, bias:  98
+hdg: 282, bias:  98
+msg: 14:57:19.416{LT22.3740}
+msg: 14:57:19.426{LN7.8527}
+msg: 14:57:19.433{LA14}
+{la 0.05}
+hdg: 283, bias:  98
+posAV: [-657.83, 2267.23]
+wpt: 29 raw hdg:  283.0
+raw speed:  0.63
+Kalman pos vec: [ -12.95,    4.87]
+filtered E-N pos: : [-657.65, 2266.52]
+Filtered hdg:  283.0
+Filtered speed:   1.38
+progress vec: [ -13.02,    4.66]
+xtrack vec: [  -0.08,   -0.21]
+aiming vector: [ -13.67,    4.65]
+Kalman az set to 288
+{d 28.9} 
+{c289} 
+{lx 0.22} 
+{la 0.05} 
+new hdg steering
+{s   5}
+hdg: 282, bias:  98
+hdg: 283, bias:  98
+hdg: 284, bias:  98
+hdg: 285, bias:  98
+hdg: 286, bias:  98
+hdg: 288, bias:  98
+hdg: 289, bias:  98
+msg: 14:57:20.160{Z3 |                                          |}
+msg: 14:57:20.173{Z2 3.0,2,0}
+hdg: 291, bias:  98
+hdg: 292, bias:  98
+msg: 14:57:20.434{LT22.3801}
+msg: 14:57:20.444{LN7.8757}
+msg: 14:57:20.450{LA14}
+{la 0.05}
+hdg: 293, bias:  98
+hdg: 294, bias:  98
+posAV: [-659.75, 2267.85]
+wpt: 29 raw hdg:  294.0
+raw speed:  0.63
+Kalman pos vec: [ -14.84,    5.59]
+filtered E-N pos: : [-659.54, 2267.24]
+Filtered hdg:  294.0
+Filtered speed:   1.52
+progress vec: [ -14.93,    5.34]
+xtrack vec: [  -0.09,   -0.25]
+aiming vector: [ -12.73,    4.27]
+Kalman az set to 288
+{d 26.9} 
+{c289} 
+{lx 0.27} 
+{la 0.05} 
+new hdg steering
+{s  -5}
+hdg: 293, bias:  98
+hdg: 292, bias:  98
+hdg: 291, bias:  98
+hdg: 292, bias:  98
+hdg: 291, bias:  98
+hdg: 289, bias:  98
+msg: 14:57:21.463{LT22.3866}
+msg: 14:57:21.473{LN7.8959}
+msg: 14:57:21.480{LA14}
+{la 0.05}
+hdg: 288, bias:  98
+posAV: [-661.45, 2268.51]
+wpt: 29 raw hdg:  288.0
+raw speed:  0.63
+Kalman pos vec: [ -16.54,    6.34]
+filtered E-N pos: : [-661.24, 2267.99]
+Filtered hdg:  288.0
+Filtered speed:   1.40
+progress vec: [ -16.68,    5.97]
+xtrack vec: [  -0.13,   -0.37]
+aiming vector: [ -11.90,    3.84]
+Kalman az set to 287
+{d 25.0} 
+{c288} 
+{lx 0.39} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 287, bias:  98
+hdg: 286, bias:  98
+hdg: 287, bias:  98
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+hdg: 286, bias:  98
+hdg: 287, bias:  98
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+msg: 14:57:22.308{Z3 |                                          |}
+msg: 14:57:22.320{Z2 3.0,4,0}
+msg: 14:57:22.481{LT22.3927}
+msg: 14:57:22.491{LN7.9182}
+msg: 14:57:22.498{LA14}
+{la 0.05}
+posAV: [-663.31, 2269.12]
+wpt: 29 raw hdg:  287.0
+raw speed:  0.63
+Kalman pos vec: [ -18.36,    7.01]
+filtered E-N pos: : [-663.06, 2268.66]
+Filtered hdg:  288.0
+Filtered speed:   1.44
+progress vec: [ -18.50,    6.62]
+xtrack vec: [  -0.14,   -0.39]
+aiming vector: [ -11.00,    3.50]
+Kalman az set to 287
+{d 23.1} 
+{c288} 
+{lx 0.41} 
+{la 0.05} 
+new hdg steering
+hdg: 286, bias:  98
+hdg: 285, bias:  98
+hdg: 284, bias:  98
+estAV: [-663.16, 2268.51]
+gps tardy
+Dead Reconning =========================
+wpt: 29 raw hdg:  284.0
+raw speed:  0.63
+Kalman pos vec: [ -18.54,    7.06]
+filtered E-N pos: : [-663.24, 2268.71]
+Filtered hdg:  285.0
+Filtered speed:   0.36
+progress vec: [ -18.68,    6.68]
+xtrack vec: [  -0.13,   -0.37]
+aiming vector: [ -10.90,    3.48]
+Kalman az set to 287
+{d 22.9} 
+{c288} 
+{lx 0.40} 
+{la 0.05} 
+new hdg steering
+{s   3}
+msg: 14:57:23.530{LT22.3992}
+msg: 14:57:23.531{LN7.9459}
+msg: 14:57:23.532{LA14}
+{la 0.05}
+hdg: 283, bias:  98
+hdg: 284, bias:  98
+hdg: 285, bias:  98
+hdg: 286, bias:  98
+hdg: 287, bias:  98
+hdg: 288, bias:  98
+msg: 14:57:24.459{Z3 |                                          |}
+msg: 14:57:24.472{Z2 0.0,0,0}
+hdg: 289, bias:  98
+posAV: [-665.64, 2269.78]
+wpt: 29 raw hdg:  289.0
+raw speed:  0.63
+Kalman pos vec: [ -20.58,    7.74]
+filtered E-N pos: : [-665.28, 2269.39]
+Filtered hdg:  290.0
+Filtered speed:   1.58
+progress vec: [ -20.70,    7.41]
+xtrack vec: [  -0.12,   -0.33]
+aiming vector: [  -9.87,    3.16]
+Kalman az set to 287
+{d 20.7} 
+{c288} 
+{lx 0.35} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+msg: 14:57:24.529{LT22.4050}
+msg: 14:57:24.537{LN7.9697}
+msg: 14:57:24.544{LA14}
+{la 0.05}
+hdg: 291, bias:  98
+hdg: 289, bias:  98
+hdg: 288, bias:  98
+hdg: 289, bias:  98
+hdg: 288, bias:  98
+hdg: 289, bias:  98
+hdg: 291, bias:  98
+hdg: 289, bias:  98
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+posAV: [-667.63, 2270.37]
+wpt: 29 raw hdg:  287.0
+raw speed:  0.63
+Kalman pos vec: [ -22.56,    8.44]
+filtered E-N pos: : [-667.26, 2270.09]
+Filtered hdg:  288.0
+Filtered speed:   1.54
+progress vec: [ -22.68,    8.12]
+xtrack vec: [  -0.12,   -0.33]
+aiming vector: [  -8.88,    2.81]
+Kalman az set to 287
+{d 18.6} 
+{c288} 
+{lx 0.35} 
+{la 0.05} 
+new hdg steering
+{s   0}
+msg: 14:57:25.551{LT22.4132}
+msg: 14:57:25.562{LN7.9913}
+msg: 14:57:25.570{LA14}
+{la 0.05}
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+posAV: [-669.44, 2271.20]
+wpt: 29 raw hdg:  287.0
+raw speed:  0.63
+Kalman pos vec: [ -24.45,    9.12]
+filtered E-N pos: : [-669.15, 2270.77]
+Filtered hdg:  288.0
+Filtered speed:   1.49
+progress vec: [ -24.57,    8.79]
+xtrack vec: [  -0.12,   -0.33]
+aiming vector: [  -7.94,    2.47]
+Kalman az set to 287
+{d 16.6} 
+{c287} 
+{lx 0.35} 
+{la 0.05} 
+new hdg steering
+msg: 14:57:26.612{Z3 |                                          |}
+msg: 14:57:26.625{Z2 0.0,2,0}
+msg: 14:57:26.636{LT22.4215}
+msg: 14:57:26.646{LN8.0147}
+msg: 14:57:26.652{LA14}
+{la 0.05}
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+hdg: 288, bias:  98
+hdg: 287, bias:  98
+posAV: [-671.40, 2272.04]
+wpt: 29 raw hdg:  287.0
+raw speed:  0.63
+Kalman pos vec: [ -26.41,    9.85]
+filtered E-N pos: : [-671.11, 2271.50]
+Filtered hdg:  288.0
+Filtered speed:   1.54
+progress vec: [ -26.54,    9.50]
+xtrack vec: [  -0.13,   -0.36]
+aiming vector: [  -6.96,    2.09]
+Kalman az set to 286
+{d 14.5} 
+{c287} 
+{lx 0.38} 
+{la 0.05} 
+new hdg steering
+msg: 14:57:27.614{LT22.4291}
+msg: 14:57:27.624{LN8.0388}
+msg: 14:57:27.631{LA14}
+{la 0.05}
+hdg: 286, bias:  98
+hdg: 287, bias:  98
+hdg: 286, bias:  98
+hdg: 287, bias:  98
+posAV: [-673.42, 2272.81]
+wpt: 29 raw hdg:  287.0
+raw speed:  0.63
+Kalman pos vec: [ -28.42,   10.61]
+filtered E-N pos: : [-673.12, 2272.26]
+Filtered hdg:  289.0
+Filtered speed:   1.58
+progress vec: [ -28.56,   10.22]
+xtrack vec: [  -0.14,   -0.39]
+aiming vector: [  -5.96,    1.69]
+Kalman az set to 285
+{d 12.4} 
+{c286} 
+{lx 0.41} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+msg: 14:57:28.633{LT22.4359}
+msg: 14:57:28.644{LN8.0636}
+msg: 14:57:28.649{LA14}
+{la 0.05}
+msg: 14:57:28.758{Z3 |                                          |}
+msg: 14:57:28.771{Z2 0.0,4,0}
+hdg: 286, bias:  98
+hdg: 285, bias:  98
+hdg: 284, bias:  98
+posAV: [-675.50, 2273.50]
+wpt: 29 raw hdg:  284.0
+raw speed:  0.63
+Kalman pos vec: [ -30.47,   11.34]
+filtered E-N pos: : [-675.17, 2272.99]
+Filtered hdg:  286.0
+Filtered speed:   1.59
+progress vec: [ -30.61,   10.95]
+xtrack vec: [  -0.14,   -0.38]
+aiming vector: [  -4.94,    1.33]
+Kalman az set to 285
+{d 10.2} 
+{c285} 
+{lx 0.41} 
+{la 0.05} 
+new hdg steering
+{s   1}
+msg: 14:57:29.658{LT22.4431}
+msg: 14:57:29.669{LN8.0870}
+msg: 14:57:29.674{LA14}
+{la 0.05}
+hdg: 285, bias:  98
+hdg: 286, bias:  98
+posAV: [-677.46, 2274.23]
+wpt: 29 raw hdg:  286.0
+raw speed:  0.63
+Kalman pos vec: [ -32.46,   12.04]
+filtered E-N pos: : [-677.16, 2273.69]
+Filtered hdg:  288.0
+Filtered speed:   1.55
+progress vec: [ -32.60,   11.67]
+xtrack vec: [  -0.13,   -0.38]
+aiming vector: [  -3.94,    0.99]
+Kalman az set to 284
+{d  8.1} 
+{c284} 
+{lx 0.40} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+msg: 14:57:30.677{LT22.4496}
+msg: 14:57:30.689{LN8.1104}
+msg: 14:57:30.694{LA14}
+{la 0.05}
+hdg: 287, bias:  98
+msg: 14:57:30.907{Z3 |                                          |}
+msg: 14:57:30.920{Z2 2.0,0,0}
+hdg: 286, bias:  98
+hdg: 285, bias:  98
+posAV: [-679.42, 2274.89]
+wpt: 29 raw hdg:  285.0
+raw speed:  0.63
+Kalman pos vec: [ -34.42,   12.76]
+filtered E-N pos: : [-679.12, 2274.41]
+Filtered hdg:  288.0
+Filtered speed:   1.53
+progress vec: [ -34.56,   12.37]
+xtrack vec: [  -0.14,   -0.39]
+aiming vector: [  -2.97,    0.62]
+Kalman az set to 281
+{d  6.0} 
+{c282} 
+{lx 0.41} 
+{la 0.05} 
+Odo:    32.4, speed:   40
+new hdg steering
+{v  30}
+{s  -3}
+hdg: 284, bias:  98
+hdg: 283, bias:  98
+msg: 14:57:31.706{LT22.4568}
+msg: 14:57:31.718{LN8.1353}
+msg: 14:57:31.723{LA14}
+{la 0.05}
+hdg: 282, bias:  98
+hdg: 281, bias:  98
+hdg: 280, bias:  98
+hdg: 279, bias:  98
+hdg: 278, bias:  98
+posAV: [-681.50, 2275.62]
+wpt: 29 raw hdg:  278.0
+raw speed:  0.47
+Kalman pos vec: [ -36.44,   13.37]
+filtered E-N pos: : [-681.14, 2275.02]
+Filtered hdg:  281.0
+Filtered speed:   1.48
+progress vec: [ -36.54,   13.08]
+xtrack vec: [  -0.11,   -0.30]
+aiming vector: [  -1.94,    0.36]
+Kalman az set to 280
+{d  3.9} 
+{c281} 
+{lx 0.31} 
+{la 0.05} 
+new hdg steering
+{s   2}
+hdg: 279, bias:  98
+msg: 14:57:32.722{LT22.4618}
+msg: 14:57:32.733{LN8.1572}
+msg: 14:57:32.739{LA14}
+{la 0.05}
+hdg: 278, bias:  98
+msg: 14:57:33.055{Z3 |                                          |}
+msg: 14:57:33.067{Z2 0.0,2,0}
+hdg: 279, bias:  98
+hdg: 280, bias:  98
+posAV: [-683.34, 2276.13]
+wpt: 29 raw hdg:  280.0
+raw speed:  0.47
+Kalman pos vec: [ -38.32,   13.89]
+filtered E-N pos: : [-683.02, 2275.54]
+Filtered hdg:  284.0
+Filtered speed:   1.39
+progress vec: [ -38.38,   13.73]
+xtrack vec: [  -0.06,   -0.16]
+aiming vector: [  -0.97,    0.17]
+Kalman az set to 279
+{d  2.0} 
+{c280} 
+{lx 0.17} 
+{la 0.05} 
+close to waypoint
+Odo:    33.4, speed:   30
+resuming to   40
+track start======================================: [-684.91, 2276.04]
+wpt: 31 -653.41, 2229.63
+track: [  31.50,  -46.41]
+new wpt az set to 145
+new hdg steering
+{v  40}
+{s-134}
+hdg: 281, bias:  98
+hdg: 279, bias:  98
+hdg: 277, bias:  98
+hdg: 275, bias:  98
+msg: 14:57:33.752{LT22.4651}
+msg: 14:57:33.761{LN8.1756}
+msg: 14:57:33.768{LA14}
+{la 0.05}
+hdg: 274, bias:  98
+hdg: 273, bias:  98
+hdg: 272, bias:  98
+hdg: 270, bias:  98
+hdg: 268, bias:  98
+hdg: 267, bias:  98
+hdg: 265, bias:  98
+hdg: 263, bias:  98
+hdg: 262, bias:  98
+hdg: 260, bias:  98
+hdg: 258, bias:  98
+hdg: 256, bias:  98
+hdg: 254, bias:  98
+hdg: 251, bias:  98
+posAV: [-684.88, 2276.46]
+wpt: 31 raw hdg:  251.0
+raw speed:  0.63
+Kalman pos vec: [   0.95,    0.20]
+filtered E-N pos: : [-683.96, 2276.24]
+Filtered hdg:  251.0
+Filtered speed:   0.63
+progress vec: [   0.21,   -0.30]
+xtrack vec: [  -0.74,   -0.50]
+aiming vector: [  14.91,  -23.55]
+Kalman az set to 147
+{d 55.7} 
+{c148} 
+{lx 0.89} 
+{la 0.05} 
+new hdg steering
+{s-103}
+hdg: 249, bias:  98
+hdg: 246, bias:  98
+hdg: 244, bias:  98
+hdg: 241, bias:  98
+hdg: 238, bias:  98
+msg: 14:57:34.769{LT22.4680}
+msg: 14:57:34.778{LN8.1940}
+msg: 14:57:34.784{LA14}
+{la 0.05}
+hdg: 236, bias:  98
+hdg: 233, bias:  98
+hdg: 231, bias:  98
+hdg: 228, bias:  98
+hdg: 226, bias:  98
+hdg: 223, bias:  98
+hdg: 221, bias:  98
+hdg: 219, bias:  98
+msg: 14:57:35.203{Z3 |                                          |}
+msg: 14:57:35.216{Z2-4.0,4,0}
+hdg: 216, bias:  98
+hdg: 213, bias:  98
+hdg: 211, bias:  98
+hdg: 208, bias:  98
+hdg: 205, bias:  98
+hdg: 202, bias:  98
+hdg: 200, bias:  98
+posAV: [-686.42, 2276.75]
+wpt: 31 raw hdg:  200.0
+raw speed:  0.63
+Kalman pos vec: [   0.32,    0.03]
+filtered E-N pos: : [-684.59, 2276.07]
+Filtered hdg:  200.0
+Filtered speed:   0.61
+progress vec: [   0.09,   -0.13]
+xtrack vec: [  -0.23,   -0.16]
+aiming vector: [  15.47,  -23.30]
+Kalman az set to 146
+{d 55.9} 
+{c146} 
+{lx 0.28} 
+{la 0.05} 
+new hdg steering
+{s -53}
+hdg: 198, bias:  98
+hdg: 195, bias:  98
+hdg: 193, bias:  98
+hdg: 191, bias:  98
+hdg: 188, bias:  98
+hdg: 185, bias:  98
+msg: 14:57:35.796{LT22.4665}
+msg: 14:57:35.807{LN8.2127}
+msg: 14:57:35.812{LA14}
+{la 0.05}
+hdg: 183, bias:  98
+hdg: 180, bias:  98
+hdg: 178, bias:  98
+hdg: 176, bias:  98
+hdg: 174, bias:  98
+hdg: 171, bias:  98
+hdg: 168, bias:  98
+hdg: 165, bias:  98
+hdg: 162, bias:  98
+hdg: 160, bias:  98
+hdg: 158, bias:  98
+hdg: 155, bias:  98
+hdg: 153, bias:  98
+hdg: 150, bias:  98
+posAV: [-687.99, 2276.60]
+wpt: 31 raw hdg:  150.0
+raw speed:  0.63
+Kalman pos vec: [  -0.57,    0.66]
+filtered E-N pos: : [-685.48, 2276.70]
+Filtered hdg:  150.0
+Filtered speed:  -0.66
+aiming vector: [  15.47,  -23.30]
+Kalman az set to 145
+{d 57.0} 
+{c146} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s  -4}
+hdg: 148, bias:  98
+hdg: 145, bias:  98
+hdg: 144, bias:  98
+hdg: 142, bias:  98
+hdg: 141, bias:  98
+hdg: 140, bias:  98
+msg: 14:57:36.814{LT22.4539}
+msg: 14:57:36.825{LN8.2256}
+msg: 14:57:36.830{LA14}
+{la 0.05}
+hdg: 138, bias:  98
+hdg: 136, bias:  98
+hdg: 134, bias:  98
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+hdg: 131, bias:  98
+hdg: 130, bias:  98
+hdg: 129, bias:  98
+hdg: 128, bias:  98
+hdg: 127, bias:  98
+msg: 14:57:37.354{Z3 |                                          |}
+msg: 14:57:37.367{Z2 8.0,0,0}
+hdg: 126, bias:  98
+posAV: [-689.07, 2275.32]
+wpt: 31 raw hdg:  126.0
+raw speed:  0.63
+Kalman pos vec: [  -1.82,    0.75]
+filtered E-N pos: : [-686.73, 2276.79]
+Filtered hdg:  126.0
+Filtered speed:  -0.77
+aiming vector: [  15.47,  -23.30]
+Kalman az set to 145
+{d 57.7} 
+{c146} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s  19}
+hdg: 125, bias:  98
+hdg: 126, bias:  98
+hdg: 127, bias:  98
+hdg: 128, bias:  98
+msg: 14:57:37.832{LT22.4388}
+msg: 14:57:37.843{LN8.2231}
+msg: 14:57:37.848{LA14}
+{la 0.05}
+hdg: 129, bias:  98
+hdg: 130, bias:  98
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+hdg: 135, bias:  98
+hdg: 137, bias:  98
+hdg: 139, bias:  98
+hdg: 141, bias:  98
+hdg: 142, bias:  98
+hdg: 144, bias:  98
+hdg: 146, bias:  98
+posAV: [-688.86, 2273.79]
+wpt: 31 raw hdg:  146.0
+raw speed:  0.63
+Kalman pos vec: [  -1.63,   -0.25]
+filtered E-N pos: : [-686.54, 2275.79]
+Filtered hdg:  146.0
+Filtered speed:   0.78
+aiming vector: [  15.47,  -23.30]
+Kalman az set to 145
+{d 56.8} 
+{c146} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 148, bias:  98
+hdg: 150, bias:  98
+hdg: 151, bias:  98
+hdg: 152, bias:  98
+hdg: 153, bias:  98
+hdg: 155, bias:  98
+hdg: 157, bias:  98
+msg: 14:57:38.858{LT22.4251}
+msg: 14:57:38.868{LN8.2087}
+msg: 14:57:38.874{LA14}
+{la 0.05}
+hdg: 158, bias:  98
+hdg: 159, bias:  98
+hdg: 161, bias:  98
+hdg: 162, bias:  98
+hdg: 163, bias:  98
+hdg: 162, bias:  98
+hdg: 161, bias:  98
+hdg: 160, bias:  98
+hdg: 161, bias:  98
+msg: 14:57:39.501{Z3 |                                          |}
+msg: 14:57:39.514{Z2 0.0,2,0}
+posAV: [-687.65, 2272.41]
+wpt: 31 raw hdg:  161.0
+raw speed:  0.63
+Kalman pos vec: [  -1.04,   -2.31]
+filtered E-N pos: : [-685.95, 2273.73]
+Filtered hdg:  161.0
+Filtered speed:   1.73
+progress vec: [   0.74,   -1.10]
+xtrack vec: [   1.79,    1.21]
+aiming vector: [  12.04,  -13.89]
+Kalman az set to 139
+{d 54.8} 
+{c139} 
+{lx 2.16} 
+{la 0.05} 
+new hdg steering
+{s -21}
+hdg: 162, bias:  98
+hdg: 161, bias:  98
+hdg: 160, bias:  98
+hdg: 158, bias:  98
+msg: 14:57:39.874{LT22.4111}
+msg: 14:57:39.884{LN8.1979}
+msg: 14:57:39.891{LA14}
+{la 0.05}
+hdg: 157, bias:  98
+hdg: 155, bias:  98
+hdg: 153, bias:  98
+hdg: 152, bias:  98
+hdg: 150, bias:  98
+hdg: 148, bias:  98
+hdg: 147, bias:  98
+hdg: 145, bias:  98
+hdg: 144, bias:  98
+hdg: 142, bias:  98
+hdg: 140, bias:  98
+hdg: 138, bias:  98
+posAV: [-686.75, 2270.99]
+wpt: 31 raw hdg:  138.0
+raw speed:  0.63
+Kalman pos vec: [  -0.59,   -3.85]
+filtered E-N pos: : [-685.50, 2272.19]
+Filtered hdg:  139.0
+Filtered speed:   1.14
+progress vec: [   1.60,   -2.36]
+xtrack vec: [   2.19,    1.49]
+aiming vector: [  12.16,  -13.20]
+Kalman az set to 137
+{d 53.3} 
+{c137} 
+{lx 2.65} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 136, bias:  98
+hdg: 134, bias:  98
+hdg: 133, bias:  98
+hdg: 131, bias:  98
+hdg: 130, bias:  98
+hdg: 128, bias:  98
+hdg: 127, bias:  98
+msg: 14:57:40.901{LT22.3916}
+msg: 14:57:40.912{LN8.1907}
+msg: 14:57:40.917{LA14}
+{la 0.05}
+hdg: 126, bias:  98
+hdg: 125, bias:  98
+hdg: 124, bias:  98
+hdg: 123, bias:  98
+posAV: [-686.14, 2269.01]
+wpt: 31 raw hdg:  123.0
+raw speed:  0.63
+Kalman pos vec: [   0.07,   -5.17]
+filtered E-N pos: : [-684.84, 2270.87]
+Filtered hdg:  124.0
+Filtered speed:   0.88
+progress vec: [   2.42,   -3.57]
+xtrack vec: [   2.36,    1.60]
+aiming vector: [  12.05,  -12.68]
+Kalman az set to 136
+{d 51.9} 
+{c136} 
+{lx 2.85} 
+{la 0.05} 
+new hdg steering
+{s  13}
+hdg: 124, bias:  98
+msg: 14:57:41.648{Z3 |                                          |}
+msg: 14:57:41.661{Z2 8.0,4,0}
+hdg: 126, bias:  98
+hdg: 127, bias:  98
+hdg: 128, bias:  98
+hdg: 129, bias:  98
+msg: 14:57:41.918{LT22.3769}
+msg: 14:57:41.929{LN8.1817}
+msg: 14:57:41.935{LA14}
+{la 0.05}
+hdg: 130, bias:  98
+hdg: 131, bias:  98
+hdg: 133, bias:  98
+hdg: 134, bias:  98
+hdg: 135, bias:  98
+hdg: 136, bias:  98
+hdg: 138, bias:  98
+hdg: 139, bias:  98
+hdg: 141, bias:  98
+hdg: 143, bias:  98
+hdg: 144, bias:  98
+posAV: [-685.39, 2267.52]
+wpt: 31 raw hdg:  144.0
+raw speed:  0.63
+Kalman pos vec: [   1.03,   -6.72]
+filtered E-N pos: : [-683.88, 2269.32]
+Filtered hdg:  146.0
+Filtered speed:   1.46
+progress vec: [   3.45,   -5.08]
+xtrack vec: [   2.41,    1.64]
+aiming vector: [  11.76,  -12.14]
+Kalman az set to 135
+{d 50.0} 
+{c136} 
+{lx 2.92} 
+{la 0.05} 
+new hdg steering
+{s  -8}
+hdg: 145, bias:  98
+hdg: 146, bias:  98
+hdg: 147, bias:  98
+hdg: 148, bias:  98
+msg: 14:57:42.943{LT22.3639}
+msg: 14:57:42.953{LN8.1641}
+msg: 14:57:42.960{LA14}
+{la 0.05}
+hdg: 147, bias:  98
+hdg: 146, bias:  98
+hdg: 145, bias:  98
+hdg: 144, bias:  98
+hdg: 143, bias:  98
+hdg: 142, bias:  98
+hdg: 141, bias:  98
+hdg: 140, bias:  98
+posAV: [-683.91, 2266.20]
+wpt: 31 raw hdg:  140.0
+raw speed:  0.63
+Kalman pos vec: [   2.01,   -8.50]
+filtered E-N pos: : [-682.90, 2267.54]
+Filtered hdg:  142.0
+Filtered speed:   1.53
+progress vec: [   4.59,   -6.76]
+xtrack vec: [   2.57,    1.74]
+aiming vector: [  11.54,  -11.47]
+Kalman az set to 134
+{d 48.0} 
+{c135} 
+{lx 3.11} 
+{la 0.05} 
+new hdg steering
+{s  -5}
+hdg: 138, bias:  98
+hdg: 137, bias:  98
+hdg: 136, bias:  98
+hdg: 135, bias:  98
+msg: 14:57:43.798{Z3 |                                          |}
+msg: 14:57:43.810{Z2 1.0,0,0}
+hdg: 134, bias:  98
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+msg: 14:57:43.962{LT22.3513}
+msg: 14:57:43.973{LN8.1529}
+msg: 14:57:43.978{LA14}
+{la 0.05}
+hdg: 131, bias:  98
+hdg: 130, bias:  98
+hdg: 129, bias:  98
+hdg: 128, bias:  98
+hdg: 127, bias:  98
+posAV: [-682.98, 2264.93]
+wpt: 31 raw hdg:  127.0
+raw speed:  0.63
+Kalman pos vec: [   2.83,   -9.81]
+filtered E-N pos: : [-682.08, 2266.23]
+Filtered hdg:  130.0
+Filtered speed:   1.11
+progress vec: [   5.45,   -8.03]
+xtrack vec: [   2.62,    1.78]
+aiming vector: [  11.30,  -11.02]
+Kalman az set to 134
+{d 46.5} 
+{c134} 
+{lx 3.16} 
+{la 0.05} 
+new hdg steering
+{s   7}
+hdg: 126, bias:  98
+hdg: 127, bias:  98
+hdg: 128, bias:  98
+hdg: 129, bias:  98
+msg: 14:57:44.981{LT22.3337}
+msg: 14:57:44.992{LN8.1389}
+msg: 14:57:44.998{LA14}
+{la 0.05}
+hdg: 130, bias:  98
+hdg: 131, bias:  98
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+hdg: 134, bias:  98
+hdg: 135, bias:  98
+hdg: 136, bias:  98
+hdg: 137, bias:  98
+hdg: 138, bias:  98
+posAV: [-681.80, 2263.14]
+wpt: 31 raw hdg:  138.0
+raw speed:  0.63
+Kalman pos vec: [   4.06,  -11.47]
+filtered E-N pos: : [-680.85, 2264.57]
+Filtered hdg:  142.0
+Filtered speed:   1.55
+progress vec: [   6.61,   -9.74]
+xtrack vec: [   2.55,    1.73]
+aiming vector: [  10.85,  -10.50]
+Kalman az set to 134
+{d 44.4} 
+{c134} 
+{lx 3.08} 
+{la 0.05} 
+new hdg steering
+{s  -3}
+hdg: 139, bias:  98
+hdg: 140, bias:  98
+msg: 14:57:45.945{Z3 |                                          |}
+msg: 14:57:45.958{Z2 4.0,2,0}
+msg: 14:57:46.005{LT22.3196}
+msg: 14:57:46.016{LN8.1230}
+msg: 14:57:46.022{LA14}
+{la 0.05}
+hdg: 139, bias:  98
+hdg: 138, bias:  98
+hdg: 137, bias:  98
+hdg: 136, bias:  98
+posAV: [-680.47, 2261.72]
+wpt: 31 raw hdg:  136.0
+raw speed:  0.63
+Kalman pos vec: [   5.18,  -13.15]
+filtered E-N pos: : [-679.73, 2262.89]
+Filtered hdg:  140.0
+Filtered speed:   1.51
+progress vec: [   7.75,  -11.41]
+xtrack vec: [   2.57,    1.74]
+aiming vector: [  10.49,   -9.92]
+Kalman az set to 133
+{d 42.4} 
+{c133} 
+{lx 3.10} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+hdg: 133, bias:  98
+hdg: 134, bias:  98
+hdg: 133, bias:  98
+msg: 14:57:47.045{LT22.2894}
+msg: 14:57:47.056{LN8.0932}
+msg: 14:57:47.061{LA14}
+{la 0.05}
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+hdg: 131, bias:  98
+posAV: [-677.97, 2258.66]
+wpt: 31 raw hdg:  131.0
+raw speed:  0.63
+Kalman pos vec: [   7.34,  -15.86]
+filtered E-N pos: : [-677.57, 2260.18]
+Filtered hdg:  136.0
+Filtered speed:   2.37
+progress vec: [   9.68,  -14.27]
+xtrack vec: [   2.35,    1.59]
+aiming vector: [   9.62,   -9.12]
+Kalman az set to 133
+{d 38.9} 
+{c133} 
+{lx 2.84} 
+{la 0.05} 
+new hdg steering
+{s   2}
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+msg: 14:57:48.104{Z3 |                                          |}
+msg: 14:57:48.116{Z2 3.0,4,0}
+msg: 14:57:48.127{LT22.2736}
+msg: 14:57:48.137{LN8.0770}
+msg: 14:57:48.144{LA14}
+{la 0.05}
+hdg: 134, bias:  98
+hdg: 135, bias:  98
+hdg: 136, bias:  98
+ heartbeat tardy
+posAV: [-676.62, 2257.05]
+wpt: 31 raw hdg:  136.0
+raw speed:  0.63
+Kalman pos vec: [   8.81,  -17.83]
+filtered E-N pos: : [-676.10, 2258.21]
+Filtered hdg:  142.0
+Filtered speed:   1.78
+progress vec: [  11.06,  -16.30]
+xtrack vec: [   2.26,    1.53]
+aiming vector: [   9.07,   -8.51]
+Kalman az set to 133
+{d 36.5} 
+{c133} 
+{lx 2.73} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+hdg: 137, bias:  98
+hdg: 136, bias:  98
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+msg: 14:57:49.104{LT22.2584}
+msg: 14:57:49.116{LN8.0615}
+msg: 14:57:49.121{LA14}
+{la 0.05}
+hdg: 133, bias:  98
+hdg: 134, bias:  98
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+posAV: [-675.32, 2255.51]
+wpt: 31 raw hdg:  132.0
+raw speed:  0.63
+Kalman pos vec: [  10.04,  -19.55]
+filtered E-N pos: : [-674.87, 2256.49]
+Filtered hdg:  138.0
+Filtered speed:   1.55
+progress vec: [  12.25,  -18.05]
+xtrack vec: [   2.21,    1.50]
+aiming vector: [   8.62,   -7.96]
+Kalman az set to 132
+{d 34.4} 
+{c133} 
+{lx 2.67} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 131, bias:  98
+hdg: 132, bias:  98
+msg: 14:57:50.124{LT22.2430}
+msg: 14:57:50.133{LN8.0456}
+msg: 14:57:50.140{LA14}
+{la 0.05}
+msg: 14:57:50.265{Z3 |                                          |}
+msg: 14:57:50.278{Z2 3.0,0,0}
+posAV: [-673.99, 2253.95]
+wpt: 31 raw hdg:  132.0
+raw speed:  0.63
+Kalman pos vec: [  11.29,  -21.19]
+filtered E-N pos: : [-673.62, 2254.85]
+Filtered hdg:  139.0
+Filtered speed:   1.52
+progress vec: [  13.41,  -19.76]
+xtrack vec: [   2.12,    1.44]
+aiming vector: [   8.15,   -7.45]
+Kalman az set to 132
+{d 32.3} 
+{c132} 
+{lx 2.56} 
+{la 0.05} 
+new hdg steering
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+msg: 14:57:51.151{LT22.2275}
+msg: 14:57:51.162{LN8.0284}
+msg: 14:57:51.167{LA14}
+{la 0.05}
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+posAV: [-672.55, 2252.38]
+wpt: 31 raw hdg:  132.0
+raw speed:  0.63
+Kalman pos vec: [  12.59,  -22.87]
+filtered E-N pos: : [-672.32, 2253.17]
+Filtered hdg:  140.0
+Filtered speed:   1.56
+progress vec: [  14.60,  -21.51]
+xtrack vec: [   2.01,    1.36]
+aiming vector: [   7.64,   -6.94]
+Kalman az set to 132
+{d 30.2} 
+{c132} 
+{lx 2.43} 
+{la 0.05} 
+new hdg steering
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+msg: 14:57:52.169{LT22.2116}
+msg: 14:57:52.180{LN8.0114}
+msg: 14:57:52.186{LA14}
+{la 0.05}
+hdg: 134, bias:  98
+msg: 14:57:52.415{Z3 |                                          |}
+msg: 14:57:52.428{Z2 4.0,2,0}
+posAV: [-671.12, 2250.77]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.63
+Kalman pos vec: [  13.89,  -24.60]
+filtered E-N pos: : [-671.02, 2251.44]
+Filtered hdg:  142.0
+Filtered speed:   1.59
+progress vec: [  15.81,  -23.29]
+xtrack vec: [   1.92,    1.30]
+aiming vector: [   7.15,   -6.40]
+Kalman az set to 131
+{d 28.0} 
+{c132} 
+{lx 2.32} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+hdg: 133, bias:  98
+hdg: 132, bias:  98
+hdg: 131, bias:  98
+msg: 14:57:53.194{LT22.1965}
+msg: 14:57:53.204{LN7.9949}
+msg: 14:57:53.211{LA14}
+{la 0.05}
+hdg: 130, bias:  98
+hdg: 129, bias:  98
+posAV: [-669.74, 2249.24]
+wpt: 31 raw hdg:  129.0
+raw speed:  0.63
+Kalman pos vec: [  15.17,  -26.23]
+filtered E-N pos: : [-669.74, 2249.81]
+Filtered hdg:  137.0
+Filtered speed:   1.52
+progress vec: [  16.97,  -25.00]
+xtrack vec: [   1.80,    1.22]
+aiming vector: [   6.64,   -5.91]
+Kalman az set to 131
+{d 26.0} 
+{c132} 
+{lx 2.18} 
+{la 0.05} 
+new hdg steering
+{s   2}
+hdg: 130, bias:  98
+hdg: 131, bias:  98
+msg: 14:57:54.216{LT22.1818}
+msg: 14:57:54.226{LN7.9780}
+msg: 14:57:54.233{LA14}
+{la 0.05}
+hdg: 132, bias:  98
+hdg: 131, bias:  98
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+posAV: [-668.32, 2247.75]
+wpt: 31 raw hdg:  133.0
+raw speed:  0.63
+Kalman pos vec: [  16.47,  -27.82]
+filtered E-N pos: : [-668.44, 2248.22]
+Filtered hdg:  141.0
+Filtered speed:   1.53
+progress vec: [  18.12,  -26.70]
+xtrack vec: [   1.65,    1.12]
+aiming vector: [   8.34,   -8.73]
+Kalman az set to 136
+{d 23.9} 
+{c136} 
+{lx 1.99} 
+{la 0.05} 
+new hdg steering
+{s   3}
+msg: 14:57:54.572{Z3 |                                          |}
+msg: 14:57:54.584{Z2 2.0,4,0}
+hdg: 134, bias:  98
+hdg: 135, bias:  98
+hdg: 136, bias:  98
+hdg: 137, bias:  98
+hdg: 138, bias:  98
+msg: 14:57:55.240{LT22.1674}
+msg: 14:57:55.251{LN7.9610}
+msg: 14:57:55.257{LA14}
+{la 0.05}
+hdg: 139, bias:  98
+hdg: 140, bias:  98
+posAV: [-666.90, 2246.29]
+wpt: 31 raw hdg:  140.0
+raw speed:  0.63
+Kalman pos vec: [  17.66,  -29.47]
+filtered E-N pos: : [-667.25, 2246.57]
+Filtered hdg:  148.0
+Filtered speed:   1.50
+progress vec: [  19.27,  -28.38]
+xtrack vec: [   1.60,    1.09]
+aiming vector: [   7.72,   -7.93]
+Kalman az set to 135
+{d 21.9} 
+{c136} 
+{lx 1.94} 
+{la 0.05} 
+new hdg steering
+{s  -4}
+hdg: 141, bias:  98
+hdg: 140, bias:  98
+hdg: 139, bias:  98
+hdg: 138, bias:  98
+hdg: 137, bias:  98
+hdg: 136, bias:  98
+msg: 14:57:56.261{LT22.1515}
+msg: 14:57:56.271{LN7.9470}
+msg: 14:57:56.277{LA14}
+{la 0.05}
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+posAV: [-665.73, 2244.68]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.63
+Kalman pos vec: [  18.81,  -31.12]
+filtered E-N pos: : [-666.10, 2244.92]
+Filtered hdg:  142.0
+Filtered speed:   1.49
+progress vec: [  20.39,  -30.04]
+xtrack vec: [   1.58,    1.07]
+aiming vector: [   7.13,   -7.11]
+Kalman az set to 134
+{d 19.9} 
+{c135} 
+{lx 1.91} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 133, bias:  98
+msg: 14:57:56.720{Z3 |                                          |}
+msg: 14:57:56.732{Z2 3.0,0,0}
+hdg: 132, bias:  98
+hdg: 133, bias:  98
+hdg: 134, bias:  98
+msg: 14:57:57.287{LT22.1357}
+msg: 14:57:57.297{LN7.9308}
+msg: 14:57:57.304{LA14}
+{la 0.05}
+posAV: [-664.37, 2243.08]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.63
+Kalman pos vec: [  20.09,  -32.75]
+filtered E-N pos: : [-664.82, 2243.29]
+Filtered hdg:  142.0
+Filtered speed:   1.53
+progress vec: [  21.56,  -31.76]
+xtrack vec: [   1.46,    0.99]
+aiming vector: [   6.43,   -6.33]
+Kalman az set to 134
+{d 17.8} 
+{c135} 
+{lx 1.77} 
+{la 0.05} 
+new hdg steering
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+msg: 14:57:58.304{LT22.1202}
+msg: 14:57:58.315{LN7.9128}
+msg: 14:57:58.321{LA14}
+{la 0.05}
+hdg: 135, bias:  98
+posAV: [-662.86, 2241.51]
+wpt: 31 raw hdg:  135.0
+raw speed:  0.63
+Kalman pos vec: [  21.45,  -34.41]
+filtered E-N pos: : [-663.46, 2241.63]
+Filtered hdg:  142.0
+Filtered speed:   1.57
+progress vec: [  22.76,  -33.53]
+xtrack vec: [   1.31,    0.89]
+aiming vector: [   5.68,   -5.55]
+Kalman az set to 134
+{d 15.7} 
+{c134} 
+{lx 1.58} 
+{la 0.05} 
+new hdg steering
+hdg: 134, bias:  98
+msg: 14:57:58.863{Z3 |                                          |}
+msg: 14:57:58.876{Z2 4.0,2,0}
+msg: 14:57:59.323{LT22.1051}
+msg: 14:57:59.334{LN7.8955}
+msg: 14:57:59.340{LA14}
+{la 0.05}
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+posAV: [-661.41, 2239.98]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.63
+Kalman pos vec: [  22.81,  -36.03]
+filtered E-N pos: : [-662.10, 2240.01]
+Filtered hdg:  141.0
+Filtered speed:   1.56
+progress vec: [  23.94,  -35.27]
+xtrack vec: [   1.13,    0.76]
+aiming vector: [   4.91,   -4.81]
+Kalman az set to 134
+{d 13.5} 
+{c134} 
+{lx 1.36} 
+{la 0.05} 
+new hdg steering
+hdg: 135, bias:  98
+hdg: 134, bias:  98
+hdg: 135, bias:  98
+msg: 14:58:00.348{LT22.0889}
+msg: 14:58:00.358{LN7.8793}
+msg: 14:58:00.365{LA15}
+{la 0.05}
+posAV: [-660.06, 2238.34]
+wpt: 31 raw hdg:  135.0
+raw speed:  0.63
+Kalman pos vec: [  24.19,  -37.65]
+filtered E-N pos: : [-660.72, 2238.39]
+Filtered hdg:  141.0
+Filtered speed:   1.56
+progress vec: [  25.12,  -37.02]
+xtrack vec: [   0.93,    0.63]
+aiming vector: [   4.12,   -4.06]
+Kalman az set to 134
+{d 11.4} 
+{c135} 
+{lx 1.13} 
+{la 0.05} 
+new hdg steering
+hdg: 136, bias:  98
+msg: 14:58:01.009{Z3 |                                          |}
+msg: 14:58:01.022{Z2 3.0,4,0}
+msg: 14:58:01.367{LT22.0730}
+msg: 14:58:01.378{LN7.8631}
+msg: 14:58:01.384{LA17}
+{la 0.06}
+hdg: 137, bias:  98
+posAV: [-658.70, 2236.73]
+wpt: 31 raw hdg:  137.0
+raw speed:  0.63
+Kalman pos vec: [  25.54,  -39.27]
+filtered E-N pos: : [-659.37, 2236.77]
+Filtered hdg:  143.0
+Filtered speed:   1.54
+progress vec: [  26.30,  -38.75]
+xtrack vec: [   0.76,    0.52]
+aiming vector: [   3.36,   -3.31]
+Kalman az set to 134
+{d  9.3} 
+{c135} 
+{lx 0.92} 
+{la 0.06} 
+new hdg steering
+{s  -2}
+hdg: 136, bias:  98
+hdg: 137, bias:  98
+hdg: 136, bias:  98
+hdg: 135, bias:  98
+msg: 14:58:02.393{LT22.0554}
+msg: 14:58:02.403{LN7.8480}
+msg: 14:58:02.409{LA22}
+{la 0.07}
+hdg: 134, bias:  98
+posAV: [-657.43, 2234.94]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.63
+Kalman pos vec: [  26.93,  -40.94]
+filtered E-N pos: : [-657.98, 2235.10]
+Filtered hdg:  139.0
+Filtered speed:   1.60
+progress vec: [  27.52,  -40.54]
+xtrack vec: [   0.59,    0.40]
+aiming vector: [   2.58,   -2.53]
+Kalman az set to 134
+{d  7.1} 
+{c134} 
+{lx 0.71} 
+{la 0.07} 
+Odo:    51.6, speed:   40
+new hdg steering
+{v  30}
+{s   0}
+msg: 14:58:03.159{Z3 |                                          |}
+msg: 14:58:03.172{Z2 2.0,0,0}
+hdg: 133, bias:  98
+msg: 14:58:03.411{LT22.0414}
+msg: 14:58:03.421{LN7.8340}
+msg: 14:58:03.428{LA20}
+{la 0.07}
+hdg: 134, bias:  98
+posAV: [-656.26, 2233.52]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.47
+Kalman pos vec: [  28.17,  -42.36]
+filtered E-N pos: : [-656.74, 2233.68]
+Filtered hdg:  139.0
+Filtered speed:   1.36
+progress vec: [  28.57,  -42.09]
+xtrack vec: [   0.40,    0.27]
+aiming vector: [   1.86,   -1.89]
+Kalman az set to 135
+{d  5.2} 
+{c135} 
+{lx 0.48} 
+{la 0.07} 
+new hdg steering
+{s   1}
+hdg: 135, bias:  98
+hdg: 136, bias:  98
+hdg: 137, bias:  98
+msg: 14:58:04.438{LT22.0298}
+msg: 14:58:04.448{LN7.8206}
+msg: 14:58:04.454{LA19}
+{la 0.06}
+posAV: [-655.14, 2232.35]
+wpt: 31 raw hdg:  137.0
+raw speed:  0.47
+Kalman pos vec: [  29.27,  -43.62]
+filtered E-N pos: : [-655.64, 2232.42]
+Filtered hdg:  142.0
+Filtered speed:   1.22
+progress vec: [  29.50,  -43.47]
+xtrack vec: [   0.23,    0.16]
+aiming vector: [   1.23,   -1.32]
+Kalman az set to 136
+{d  3.6} 
+{c137} 
+{lx 0.28} 
+{la 0.06} 
+new hdg steering
+{s   0}
+hdg: 138, bias:  98
+hdg: 137, bias:  98
+hdg: 138, bias:  98
+msg: 14:58:05.308{Z3 |                                          |}
+msg: 14:58:05.320{Z2 3.0,2,0}
+msg: 14:58:05.455{LT22.0172}
+msg: 14:58:05.465{LN7.8095}
+msg: 14:58:05.472{LA21}
+{la 0.07}
+posAV: [-654.21, 2231.07]
+wpt: 31 raw hdg:  138.0
+raw speed:  0.47
+Kalman pos vec: [  30.28,  -44.86]
+filtered E-N pos: : [-654.63, 2231.18]
+Filtered hdg:  143.0
+Filtered speed:   1.17
+progress vec: [  30.40,  -44.78]
+xtrack vec: [   0.12,    0.08]
+aiming vector: [   0.67,   -0.73]
+Kalman az set to 137
+{d  2.0} 
+{c138} 
+{lx 0.14} 
+{la 0.07} 
+close to waypoint
+Odo:    53.0, speed:   30
+resuming to   40
+track start======================================: [-653.41, 2229.63]
+wpt: 27 -640.51, 2179.75
+track: [  12.90,  -49.88]
+new wpt az set to 165
+new hdg steering
+{v  40}
+{s  27}
+hdg: 139, bias:  98
+hdg: 140, bias:  98
+hdg: 141, bias:  98
+hdg: 142, bias:  98
+hdg: 143, bias:  98
+hdg: 145, bias:  98
+hdg: 146, bias:  98
+hdg: 148, bias:  98
+hdg: 149, bias:  98
+hdg: 150, bias:  98
+hdg: 152, bias:  98
+hdg: 153, bias:  98
+hdg: 155, bias:  98
+hdg: 157, bias:  98
+hdg: 159, bias:  98
+hdg: 161, bias:  98
+hdg: 164, bias:  98
+msg: 14:58:06.482{LT22.0061}
+msg: 14:58:06.492{LN7.7972}
+msg: 14:58:06.499{LA19}
+{la 0.06}
+hdg: 166, bias:  98
+posAV: [-653.18, 2229.95]
+wpt: 27 raw hdg:  166.0
+raw speed:  0.63
+Kalman pos vec: [  -0.37,    0.97]
+filtered E-N pos: : [-653.78, 2230.60]
+Filtered hdg:  166.0
+Filtered speed:   0.63
+aiming vector: [  12.90,  -49.88]
+Kalman az set to 165
+{d 52.6} 
+{c165} 
+{lx 0.00} 
+{la 0.06} 
+new hdg steering
+{s   0}
+hdg: 169, bias:  98
+hdg: 171, bias:  98
+hdg: 173, bias:  98
+hdg: 174, bias:  98
+hdg: 176, bias:  98
+hdg: 179, bias:  98
+hdg: 181, bias:  98
+hdg: 182, bias:  98
+hdg: 183, bias:  98
+hdg: 184, bias:  98
+hdg: 185, bias:  98
+hdg: 186, bias:  98
+hdg: 187, bias:  98
+hdg: 188, bias:  98
+msg: 14:58:07.457{Z3 |                                          |}
+msg: 14:58:07.470{Z2-2.0,4,0}
+hdg: 189, bias:  98
+msg: 14:58:07.500{LT21.9913}
+msg: 14:58:07.510{LN7.7908}
+msg: 14:58:07.517{LA14}
+{la 0.05}
+posAV: [-652.64, 2228.45]
+wpt: 27 raw hdg:  189.0
+raw speed:  0.63
+Kalman pos vec: [  -0.30,   -0.33]
+filtered E-N pos: : [-653.71, 2229.30]
+Filtered hdg:  188.0
+Filtered speed:   1.31
+progress vec: [   0.06,   -0.23]
+xtrack vec: [   0.36,    0.09]
+aiming vector: [   6.78,  -24.73]
+Kalman az set to 164
+{d 51.3} 
+{c165} 
+{lx 0.38} 
+{la 0.05} 
+new hdg steering
+{s -24}
+hdg: 188, bias:  98
+hdg: 187, bias:  98
+hdg: 186, bias:  98
+hdg: 185, bias:  98
+hdg: 184, bias:  98
+hdg: 182, bias:  98
+hdg: 181, bias:  98
+hdg: 180, bias:  98
+hdg: 178, bias:  98
+hdg: 176, bias:  98
+hdg: 175, bias:  98
+hdg: 173, bias:  98
+hdg: 172, bias:  98
+hdg: 170, bias:  98
+hdg: 168, bias:  98
+hdg: 166, bias:  98
+hdg: 164, bias:  98
+msg: 14:58:08.529{LT21.9730}
+estAV: [-653.25, 2226.77]
+gps tardy
+Dead Reconning =========================
+wpt: 27 raw hdg:  164.0
+raw speed:  0.63
+Kalman pos vec: [  -0.18,   -2.40]
+filtered E-N pos: : [-653.59, 2227.23]
+Filtered hdg:  163.0
+Filtered speed:   1.65
+progress vec: [   0.57,   -2.20]
+xtrack vec: [   0.75,    0.20]
+aiming vector: [   6.92,  -23.64]
+Kalman az set to 163
+{d 49.3} 
+{c164} 
+{lx 0.78} 
+{la 0.05} 
+new hdg steering
+{s   0}
+msg: 14:58:08.568{LN7.7933}
+msg: 14:58:08.569{LA14}
+{la 0.05}
+hdg: 162, bias:  98
+hdg: 160, bias:  98
+hdg: 159, bias:  98
+hdg: 157, bias:  98
+hdg: 156, bias:  98
+hdg: 155, bias:  98
+hdg: 153, bias:  98
+hdg: 152, bias:  98
+hdg: 150, bias:  98
+hdg: 149, bias:  98
+hdg: 148, bias:  98
+hdg: 147, bias:  98
+hdg: 146, bias:  98
+hdg: 147, bias:  98
+posAV: [-652.85, 2226.59]
+wpt: 27 raw hdg:  147.0
+raw speed:  0.63
+Kalman pos vec: [   0.13,   -3.16]
+filtered E-N pos: : [-653.28, 2226.47]
+Filtered hdg:  146.0
+Filtered speed:   0.81
+progress vec: [   0.78,   -3.00]
+xtrack vec: [   0.65,    0.17]
+aiming vector: [   6.71,  -23.27]
+Kalman az set to 163
+{d 48.4} 
+{c164} 
+{lx 0.67} 
+{la 0.05} 
+new hdg steering
+{s  16}
+msg: 14:58:09.568{LT21.9560}
+msg: 14:58:09.569{LN7.7915}
+msg: 14:58:09.570{LA14}
+{la 0.05}
+msg: 14:58:09.615{Z3 |                                          |}
+msg: 14:58:09.628{Z2 1.0,0,0}
+hdg: 148, bias:  98
+hdg: 149, bias:  98
+hdg: 150, bias:  98
+hdg: 151, bias:  98
+hdg: 152, bias:  98
+hdg: 153, bias:  98
+hdg: 155, bias:  98
+hdg: 156, bias:  98
+hdg: 158, bias:  98
+hdg: 159, bias:  98
+hdg: 160, bias:  98
+hdg: 161, bias:  98
+hdg: 163, bias:  98
+hdg: 165, bias:  98
+hdg: 166, bias:  98
+hdg: 168, bias:  98
+posAV: [-652.70, 2224.87]
+wpt: 27 raw hdg:  168.0
+raw speed:  0.63
+Kalman pos vec: [   0.73,   -4.48]
+filtered E-N pos: : [-652.68, 2225.15]
+Filtered hdg:  167.0
+Filtered speed:   1.15
+progress vec: [   1.13,   -4.38]
+xtrack vec: [   0.41,    0.11]
+aiming vector: [   6.29,  -22.65]
+Kalman az set to 164
+{d 47.0} 
+{c164} 
+{lx 0.42} 
+{la 0.05} 
+new hdg steering
+{s  -3}
+hdg: 169, bias:  98
+msg: 14:58:10.576{LT21.9373}
+msg: 14:58:10.587{LN7.7803}
+msg: 14:58:10.592{LA14}
+{la 0.05}
+hdg: 171, bias:  98
+hdg: 172, bias:  98
+hdg: 173, bias:  98
+hdg: 174, bias:  98
+hdg: 175, bias:  98
+hdg: 176, bias:  98
+hdg: 177, bias:  98
+hdg: 178, bias:  98
+hdg: 177, bias:  98
+hdg: 176, bias:  98
+posAV: [-651.76, 2222.98]
+wpt: 27 raw hdg:  176.0
+raw speed:  0.63
+Kalman pos vec: [   1.12,   -6.34]
+filtered E-N pos: : [-652.29, 2223.29]
+Filtered hdg:  175.0
+Filtered speed:   1.40
+progress vec: [   1.61,   -6.22]
+xtrack vec: [   0.49,    0.13]
+aiming vector: [   6.14,  -21.71]
+Kalman az set to 164
+{d 45.1} 
+{c164} 
+{lx 0.50} 
+{la 0.05} 
+new hdg steering
+{s -11}
+hdg: 175, bias:  98
+msg: 14:58:11.593{LT21.9208}
+msg: 14:58:11.603{LN7.7753}
+msg: 14:58:11.610{LA14}
+{la 0.05}
+hdg: 174, bias:  98
+hdg: 173, bias:  98
+msg: 14:58:11.761{Z3 |                                          |}
+msg: 14:58:11.774{Z2 0.0,2,0}
+hdg: 172, bias:  98
+hdg: 171, bias:  98
+hdg: 170, bias:  98
+hdg: 169, bias:  98
+hdg: 168, bias:  98
+hdg: 167, bias:  98
+hdg: 166, bias:  98
+hdg: 165, bias:  98
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+hdg: 162, bias:  98
+hdg: 161, bias:  98
+hdg: 160, bias:  98
+hdg: 159, bias:  98
+hdg: 158, bias:  98
+hdg: 157, bias:  98
+posAV: [-651.34, 2221.30]
+wpt: 27 raw hdg:  157.0
+raw speed:  0.63
+Kalman pos vec: [   1.57,   -8.10]
+filtered E-N pos: : [-651.84, 2221.53]
+Filtered hdg:  156.0
+Filtered speed:   1.40
+progress vec: [   2.06,   -7.97]
+xtrack vec: [   0.49,    0.13]
+aiming vector: [   5.91,  -20.83]
+Kalman az set to 164
+{d 43.3} 
+{c164} 
+{lx 0.51} 
+{la 0.05} 
+new hdg steering
+{s   7}
+hdg: 156, bias:  98
+msg: 14:58:12.613{LT21.9013}
+msg: 14:58:12.623{LN7.7753}
+msg: 14:58:12.631{LA14}
+{la 0.05}
+hdg: 155, bias:  98
+hdg: 154, bias:  98
+hdg: 155, bias:  98
+hdg: 154, bias:  98
+hdg: 153, bias:  98
+hdg: 154, bias:  98
+hdg: 155, bias:  98
+hdg: 156, bias:  98
+hdg: 157, bias:  98
+hdg: 158, bias:  98
+hdg: 159, bias:  98
+hdg: 160, bias:  98
+hdg: 161, bias:  98
+posAV: [-651.34, 2219.33]
+wpt: 27 raw hdg:  161.0
+raw speed:  0.63
+Kalman pos vec: [   2.19,   -9.86]
+filtered E-N pos: : [-651.22, 2219.77]
+Filtered hdg:  160.0
+Filtered speed:   1.40
+progress vec: [   2.53,   -9.78]
+xtrack vec: [   0.34,    0.09]
+aiming vector: [   5.53,  -19.96]
+Kalman az set to 164
+{d 41.4} 
+{c165} 
+{lx 0.35} 
+{la 0.05} 
+new hdg steering
+{s   3}
+hdg: 162, bias:  98
+hdg: 163, bias:  98
+msg: 14:58:13.638{LT21.8840}
+msg: 14:58:13.648{LN7.7702}
+msg: 14:58:13.655{LA14}
+{la 0.05}
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+hdg: 164, bias:  98
+msg: 14:58:13.904{Z3 |                                          |}
+msg: 14:58:13.916{Z2 0.0,4,0}
+hdg: 165, bias:  98
+hdg: 166, bias:  98
+hdg: 167, bias:  98
+hdg: 168, bias:  98
+posAV: [-650.92, 2217.58]
+wpt: 27 raw hdg:  168.0
+raw speed:  0.63
+Kalman pos vec: [   2.67,  -11.63]
+filtered E-N pos: : [-650.74, 2218.00]
+Filtered hdg:  167.0
+Filtered speed:   1.39
+progress vec: [   2.99,  -11.55]
+xtrack vec: [   0.32,    0.08]
+aiming vector: [   5.28,  -19.08]
+Kalman az set to 164
+{d 39.6} 
+{c165} 
+{lx 0.33} 
+{la 0.05} 
+new hdg steering
+{s  -3}
+hdg: 169, bias:  98
+hdg: 170, bias:  98
+msg: 14:58:14.656{LT21.8657}
+msg: 14:58:14.667{LN7.7616}
+msg: 14:58:14.673{LA14}
+{la 0.05}
+hdg: 171, bias:  98
+hdg: 170, bias:  98
+hdg: 169, bias:  98
+hdg: 168, bias:  98
+hdg: 167, bias:  98
+hdg: 166, bias:  98
+hdg: 165, bias:  98
+posAV: [-650.20, 2215.72]
+wpt: 27 raw hdg:  165.0
+raw speed:  0.63
+Kalman pos vec: [   3.13,  -13.52]
+filtered E-N pos: : [-650.28, 2216.11]
+Filtered hdg:  164.0
+Filtered speed:   1.45
+progress vec: [   3.47,  -13.43]
+xtrack vec: [   0.35,    0.09]
+aiming vector: [   5.06,  -18.13]
+Kalman az set to 164
+{d 37.6} 
+{c164} 
+{lx 0.36} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+hdg: 164, bias:  98
+msg: 14:58:15.682{LT21.8462}
+msg: 14:58:15.692{LN7.7584}
+msg: 14:58:15.699{LA14}
+{la 0.05}
+hdg: 163, bias:  98
+hdg: 164, bias:  98
+msg: 14:58:16.059{Z3 |                                          |}
+msg: 14:58:16.072{Z2 1.0,0,0}
+hdg: 163, bias:  98
+hdg: 164, bias:  98
+hdg: 165, bias:  98
+hdg: 166, bias:  98
+hdg: 167, bias:  98
+hdg: 165, bias:  98
+posAV: [-649.93, 2213.74]
+wpt: 27 raw hdg:  165.0
+raw speed:  0.63
+Kalman pos vec: [   3.60,  -15.44]
+filtered E-N pos: : [-649.81, 2214.19]
+Filtered hdg:  165.0
+Filtered speed:   1.47
+progress vec: [   3.97,  -15.34]
+xtrack vec: [   0.36,    0.09]
+aiming vector: [   4.83,  -17.17]
+Kalman az set to 164
+{d 35.7} 
+{c164} 
+{lx 0.38} 
+{la 0.05} 
+new hdg steering
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+hdg: 164, bias:  98
+msg: 14:58:16.700{LT21.8257}
+msg: 14:58:16.709{LN7.7540}
+msg: 14:58:16.716{LA14}
+{la 0.05}
+hdg: 165, bias:  98
+hdg: 164, bias:  98
+hdg: 165, bias:  98
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+hdg: 162, bias:  98
+hdg: 163, bias:  98
+posAV: [-649.56, 2211.67]
+wpt: 27 raw hdg:  163.0
+raw speed:  0.63
+Kalman pos vec: [   4.11,  -17.44]
+filtered E-N pos: : [-649.30, 2212.19]
+Filtered hdg:  163.0
+Filtered speed:   1.52
+progress vec: [   4.49,  -17.34]
+xtrack vec: [   0.37,    0.10]
+aiming vector: [   4.58,  -16.17]
+Kalman az set to 164
+{d 33.6} 
+{c164} 
+{lx 0.39} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg: 164, bias:  98
+hdg: 165, bias:  98
+hdg: 164, bias:  98
+msg: 14:58:17.726{LT21.8048}
+msg: 14:58:17.737{LN7.7494}
+msg: 14:58:17.743{LA14}
+{la 0.05}
+hdg: 165, bias:  98
+hdg: 166, bias:  98
+hdg: 167, bias:  98
+hdg: 168, bias:  98
+hdg: 167, bias:  98
+msg: 14:58:18.201{Z3 |                                          |}
+msg: 14:58:18.214{Z2 0.0,2,0}
+hdg: 168, bias:  98
+hdg: 169, bias:  98
+hdg: 168, bias:  98
+posAV: [-649.17, 2209.55]
+wpt: 27 raw hdg:  168.0
+raw speed:  0.63
+Kalman pos vec: [   4.58,  -19.53]
+filtered E-N pos: : [-648.83, 2210.10]
+Filtered hdg:  168.0
+Filtered speed:   1.58
+progress vec: [   5.02,  -19.42]
+xtrack vec: [   0.44,    0.11]
+aiming vector: [   4.38,  -15.12]
+Kalman az set to 163
+{d 31.5} 
+{c164} 
+{lx 0.46} 
+{la 0.05} 
+new hdg steering
+{s  -4}
+hdg: 167, bias:  98
+msg: 14:58:18.744{LT21.7840}
+msg: 14:58:18.754{LN7.7454}
+msg: 14:58:18.760{LA14}
+{la 0.05}
+hdg: 166, bias:  98
+hdg: 165, bias:  98
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+hdg: 162, bias:  98
+hdg: 161, bias:  98
+hdg: 160, bias:  98
+posAV: [-648.84, 2207.44]
+wpt: 27 raw hdg:  160.0
+raw speed:  0.63
+Kalman pos vec: [   5.05,  -21.58]
+filtered E-N pos: : [-648.36, 2208.05]
+Filtered hdg:  160.0
+Filtered speed:   1.53
+progress vec: [   5.55,  -21.45]
+xtrack vec: [   0.50,    0.13]
+aiming vector: [   4.18,  -14.08]
+Kalman az set to 163
+{d 29.4} 
+{c163} 
+{lx 0.52} 
+{la 0.05} 
+new hdg steering
+{s   3}
+hdg: 159, bias:  98
+hdg: 160, bias:  98
+hdg: 161, bias:  98
+msg: 14:58:19.769{LT21.7638}
+msg: 14:58:19.779{LN7.7418}
+msg: 14:58:19.786{LA14}
+{la 0.05}
+hdg: 162, bias:  98
+hdg: 163, bias:  98
+msg: 14:58:20.348{Z3 |                                          |}
+msg: 14:58:20.360{Z2 0.0,4,0}
+hdg: 164, bias:  98
+hdg: 165, bias:  98
+posAV: [-648.54, 2205.39]
+wpt: 27 raw hdg:  165.0
+raw speed:  0.63
+Kalman pos vec: [   5.52,  -23.61]
+filtered E-N pos: : [-647.89, 2206.02]
+Filtered hdg:  166.0
+Filtered speed:   1.54
+progress vec: [   6.07,  -23.46]
+xtrack vec: [   0.55,    0.14]
+aiming vector: [   3.96,  -13.07]
+Kalman az set to 163
+{d 27.3} 
+{c163} 
+{lx 0.57} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+hdg: 166, bias:  98
+hdg: 165, bias:  98
+msg: 14:58:20.790{LT21.7447}
+msg: 14:58:20.800{LN7.7371}
+msg: 14:58:20.806{LA14}
+{la 0.05}
+hdg: 164, bias:  98
+hdg: 165, bias:  98
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+posAV: [-648.14, 2203.46]
+wpt: 27 raw hdg:  163.0
+raw speed:  0.63
+Kalman pos vec: [   5.91,  -25.57]
+filtered E-N pos: : [-647.50, 2204.06]
+Filtered hdg:  165.0
+Filtered speed:   1.48
+progress vec: [   6.57,  -25.40]
+xtrack vec: [   0.66,    0.17]
+aiming vector: [   3.82,  -12.07]
+Kalman az set to 162
+{d 25.3} 
+{c162} 
+{lx 0.68} 
+{la 0.05} 
+new hdg steering
+{s   0}
+msg: 14:58:21.809{LT21.7253}
+msg: 14:58:21.819{LN7.7303}
+msg: 14:58:21.824{LA14}
+{la 0.05}
+hdg: 162, bias:  98
+hdg: 161, bias:  98
+msg: 14:58:22.498{Z3 |                                          |}
+msg: 14:58:22.510{Z2 0.0,0,0}
+hdg: 162, bias:  98
+posAV: [-647.57, 2201.49]
+wpt: 27 raw hdg:  162.0
+raw speed:  0.63
+Kalman pos vec: [   6.35,  -27.55]
+filtered E-N pos: : [-647.06, 2202.08]
+Filtered hdg:  164.0
+Filtered speed:   1.50
+progress vec: [   7.08,  -27.37]
+xtrack vec: [   0.72,    0.19]
+aiming vector: [   3.63,  -11.07]
+Kalman az set to 161
+{d 23.3} 
+{c162} 
+{lx 0.75} 
+{la 0.05} 
+new hdg steering
+hdg: 163, bias:  98
+msg: 14:58:22.834{LT21.7051}
+msg: 14:58:22.844{LN7.7245}
+msg: 14:58:22.851{LA14}
+{la 0.05}
+hdg: 164, bias:  98
+posAV: [-647.09, 2199.45]
+wpt: 27 raw hdg:  164.0
+raw speed:  0.63
+Kalman pos vec: [   6.79,  -29.61]
+filtered E-N pos: : [-646.62, 2200.02]
+Filtered hdg:  167.0
+Filtered speed:   1.55
+progress vec: [   7.60,  -29.40]
+xtrack vec: [   0.81,    0.21]
+aiming vector: [   3.46,  -10.03]
+Kalman az set to 160
+{d 21.2} 
+{c161} 
+{lx 0.84} 
+{la 0.05} 
+new hdg steering
+{s  -3}
+hdg: 163, bias:  98
+hdg: 162, bias:  98
+msg: 14:58:23.854{LT21.6839}
+msg: 14:58:23.864{LN7.7177}
+msg: 14:58:23.871{LA14}
+{la 0.05}
+hdg: 161, bias:  98
+hdg: 160, bias:  98
+hdg: 159, bias:  98
+hdg: 158, bias:  98
+hdg: 157, bias:  98
+hdg: 156, bias:  98
+posAV: [-646.52, 2197.30]
+wpt: 27 raw hdg:  156.0
+raw speed:  0.63
+Kalman pos vec: [   7.32,  -31.70]
+filtered E-N pos: : [-646.09, 2197.93]
+Filtered hdg:  159.0
+Filtered speed:   1.57
+progress vec: [   8.14,  -31.49]
+xtrack vec: [   0.83,    0.21]
+aiming vector: [   3.20,   -8.98]
+Kalman az set to 160
+{d 19.0} 
+{c160} 
+{lx 0.85} 
+{la 0.05} 
+new hdg steering
+{s   4}
+hdg: 155, bias:  98
+msg: 14:58:24.649{Z3 |                                          |}
+msg: 14:58:24.661{Z2-3.0,2,0}
+hdg: 156, bias:  98
+msg: 14:58:24.879{LT21.6634}
+msg: 14:58:24.889{LN7.7108}
+msg: 14:58:24.896{LA14}
+{la 0.05}
+hdg: 157, bias:  98
+hdg: 158, bias:  98
+hdg: 159, bias:  98
+hdg: 160, bias:  98
+hdg: 161, bias:  98
+hdg: 162, bias:  98
+hdg: 163, bias:  98
+posAV: [-645.94, 2195.22]
+wpt: 27 raw hdg:  163.0
+raw speed:  0.63
+Kalman pos vec: [   7.86,  -33.82]
+filtered E-N pos: : [-645.55, 2195.81]
+Filtered hdg:  167.0
+Filtered speed:   1.61
+progress vec: [   8.69,  -33.60]
+xtrack vec: [   0.83,    0.21]
+aiming vector: [   2.93,   -7.93]
+Kalman az set to 159
+{d 16.8} 
+{c160} 
+{lx 0.85} 
+{la 0.05} 
+new hdg steering
+{s  -3}
+hdg: 164, bias:  98
+hdg: 163, bias:  98
+msg: 14:58:25.899{LT21.6450}
+msg: 14:58:25.910{LN7.7036}
+msg: 14:58:25.919{LA14}
+{la 0.05}
+hdg: 162, bias:  98
+hdg: 161, bias:  98
+hdg: 160, bias:  98
+hdg: 159, bias:  98
+hdg: 158, bias:  98
+hdg: 157, bias:  98
+posAV: [-645.34, 2193.36]
+wpt: 27 raw hdg:  157.0
+raw speed:  0.63
+Kalman pos vec: [   8.35,  -35.76]
+filtered E-N pos: : [-645.06, 2193.87]
+Filtered hdg:  161.0
+Filtered speed:   1.48
+progress vec: [   9.19,  -35.54]
+xtrack vec: [   0.84,    0.22]
+aiming vector: [   2.70,   -6.95]
+Kalman az set to 158
+{d 14.8} 
+{c159} 
+{lx 0.87} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg: 156, bias:  98
+hdg: 157, bias:  98
+msg: 14:58:26.806{Z3 |                                          |}
+msg: 14:58:26.819{Z2 2.0,4,0}
+msg: 14:58:26.924{LT21.6263}
+msg: 14:58:26.935{LN7.6968}
+msg: 14:58:26.940{LA14}
+{la 0.05}
+hdg: 158, bias:  98
+hdg: 159, bias:  98
+posAV: [-644.77, 2191.46]
+wpt: 27 raw hdg:  159.0
+raw speed:  0.63
+Kalman pos vec: [   8.88,  -37.67]
+filtered E-N pos: : [-644.53, 2191.96]
+Filtered hdg:  163.0
+Filtered speed:   1.48
+progress vec: [   9.69,  -37.46]
+xtrack vec: [   0.81,    0.21]
+aiming vector: [   2.41,   -6.00]
+Kalman az set to 158
+{d 12.9} 
+{c158} 
+{lx 0.83} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg: 160, bias:  98
+hdg: 159, bias:  98
+hdg: 160, bias:  98
+msg: 14:58:27.944{LT21.6072}
+msg: 14:58:27.955{LN7.6903}
+msg: 14:58:27.961{LA14}
+{la 0.05}
+hdg: 159, bias:  98
+hdg: 160, bias:  98
+hdg: 159, bias:  98
+posAV: [-644.22, 2189.53]
+wpt: 27 raw hdg:  159.0
+raw speed:  0.63
+Kalman pos vec: [   9.39,  -39.61]
+filtered E-N pos: : [-644.02, 2190.02]
+Filtered hdg:  164.0
+Filtered speed:   1.49
+progress vec: [  10.19,  -39.41]
+xtrack vec: [   0.80,    0.21]
+aiming vector: [   2.16,   -5.03]
+Kalman az set to 156
+{d 10.8} 
+{c157} 
+{lx 0.83} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+hdg: 158, bias:  98
+msg: 14:58:28.952{Z3 |                                          |}
+msg: 14:58:28.965{Z2-1.0,0,0}
+msg: 14:58:28.976{LT21.5867}
+msg: 14:58:28.985{LN7.6835}
+msg: 14:58:28.992{LA14}
+{la 0.05}
+hdg: 157, bias:  98
+hdg: 156, bias:  98
+hdg: 155, bias:  98
+hdg: 153, bias:  98
+posAV: [-643.65, 2187.45]
+wpt: 27 raw hdg:  153.0
+raw speed:  0.63
+Kalman pos vec: [   9.99,  -41.63]
+filtered E-N pos: : [-643.42, 2188.00]
+Filtered hdg:  158.0
+Filtered speed:   1.54
+progress vec: [  10.72,  -41.44]
+xtrack vec: [   0.73,    0.19]
+aiming vector: [   1.82,   -4.03]
+Kalman az set to 155
+{d  8.8} 
+{c156} 
+{lx 0.75} 
+{la 0.05} 
+new hdg steering
+{s   2}
+hdg: 152, bias:  98
+hdg: 153, bias:  98
+hdg: 154, bias:  98
+msg: 14:58:29.988{LT21.5662}
+msg: 14:58:29.999{LN7.6745}
+msg: 14:58:30.005{LA14}
+{la 0.05}
+hdg: 155, bias:  98
+hdg: 156, bias:  98
+hdg: 157, bias:  98
+hdg: 158, bias:  98
+posAV: [-642.90, 2185.37]
+wpt: 27 raw hdg:  158.0
+raw speed:  0.63
+Kalman pos vec: [  10.65,  -43.72]
+filtered E-N pos: : [-642.76, 2185.91]
+Filtered hdg:  163.0
+Filtered speed:   1.61
+progress vec: [  11.27,  -43.56]
+xtrack vec: [   0.61,    0.16]
+aiming vector: [   1.43,   -3.00]
+Kalman az set to 154
+{d  6.6} 
+{c154} 
+{lx 0.63} 
+{la 0.05} 
+Odo:    68.7, speed:   40
+new hdg steering
+{v  30}
+{s  -3}
+hdg: 159, bias:  98
+hdg: 160, bias:  98
+hdg: 159, bias:  98
+msg: 14:58:31.014{LT21.5464}
+msg: 14:58:31.024{LN7.6651}
+msg: 14:58:31.031{LA14}
+{la 0.05}
+hdg: 158, bias:  98
+msg: 14:58:31.104{Z3 |                                          |}
+msg: 14:58:31.117{Z2-3.0,2,0}
+hdg: 157, bias:  98
+posAV: [-642.11, 2183.36]
+wpt: 27 raw hdg:  157.0
+raw speed:  0.47
+Kalman pos vec: [  11.26,  -45.76]
+filtered E-N pos: : [-642.15, 2183.87]
+Filtered hdg:  162.0
+Filtered speed:   1.50
+progress vec: [  11.80,  -45.62]
+xtrack vec: [   0.54,    0.14]
+aiming vector: [   1.09,   -1.99]
+Kalman az set to 151
+{d  4.4} 
+{c151} 
+{lx 0.56} 
+{la 0.05} 
+new hdg steering
+{s  -5}
+hdg: 156, bias:  98
+hdg: 155, bias:  98
+hdg: 154, bias:  98
+hdg: 153, bias:  98
+msg: 14:58:32.046{LT21.5154}
+msg: 14:58:32.056{LN7.6525}
+msg: 14:58:32.063{LA14}
+{la 0.05}
+hdg: 152, bias:  98
+hdg: 151, bias:  98
+hdg: 150, bias:  98
+hdg: 149, bias:  98
+hdg: 148, bias:  98
+hdg: 147, bias:  98
+posAV: [-641.06, 2180.22]
+wpt: 27 raw hdg:  147.0
+raw speed:  0.47
+Kalman pos vec: [  12.35,  -48.57]
+filtered E-N pos: : [-641.06, 2181.06]
+Filtered hdg:  153.0
+Filtered speed:   2.05
+progress vec: [  12.55,  -48.52]
+xtrack vec: [   0.19,    0.05]
+aiming vector: [   0.37,   -0.63]
+Kalman az set to 149
+{d  1.4} 
+{c150} 
+{lx 0.20} 
+{la 0.05} 
+close to waypoint
+Odo:    69.7, speed:   30
+resuming to   40
+track start======================================: [-640.51, 2179.75]
+wpt: 28 -624.85, 2235.41
+track: [  15.66,   55.66]
+new wpt az set to 15
+new hdg steering
+{v  40}
+{s-131}
+hdg: 146, bias:  98
+hdg: 145, bias:  98
+hdg: 143, bias:  98
+hdg: 141, bias:  98
+hdg: 139, bias:  98
+hdg: 138, bias:  98
+hdg: 137, bias:  98
+hdg: 135, bias:  98
+hdg: 133, bias:  98
+hdg: 131, bias:  98
+msg: 14:58:33.073{LT21.5028}
+msg: 14:58:33.083{LN7.6435}
+msg: 14:58:33.088{LA14}
+{la 0.05}
+hdg: 129, bias:  98
+hdg: 127, bias:  98
+hdg: 125, bias:  98
+msg: 14:58:33.265{Z3 |  .   -                                   |}
+msg: 14:58:33.277{Z2 3.0,4,0}
+hdg: 122, bias:  98
+hdg: 120, bias:  98
+hdg: 118, bias:  98
+hdg: 116, bias:  98
+hdg: 113, bias:  98
+hdg: 111, bias:  98
+hdg: 109, bias:  98
+posAV: [-640.30, 2178.95]
+wpt: 28 raw hdg:  109.0
+raw speed:  0.63
+Kalman pos vec: [  -0.20,   -0.06]
+filtered E-N pos: : [-640.71, 2179.69]
+Filtered hdg:  109.0
+Filtered speed:   0.63
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 57.9} 
+{c 16} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s -93}
+hdg: 107, bias:  98
+hdg: 104, bias:  98
+hdg: 102, bias:  98
+hdg:  99, bias:  98
+hdg:  97, bias:  98
+hdg:  95, bias:  98
+hdg:  92, bias:  98
+hdg:  89, bias:  98
+hdg:  87, bias:  98
+hdg:  85, bias:  98
+msg: 14:58:34.089{LT21.4934}
+msg: 14:58:34.100{LN7.6298}
+msg: 14:58:34.105{LA14}
+{la 0.05}
+hdg:  82, bias:  98
+hdg:  79, bias:  98
+hdg:  77, bias:  98
+hdg:  74, bias:  98
+hdg:  72, bias:  98
+hdg:  70, bias:  98
+hdg:  67, bias:  98
+hdg:  65, bias:  98
+hdg:  62, bias:  98
+hdg:  59, bias:  98
+posAV: [-639.16, 2177.99]
+wpt: 28 raw hdg:   59.0
+raw speed:  0.63
+Kalman pos vec: [   0.44,   -0.28]
+filtered E-N pos: : [-640.07, 2179.47]
+Filtered hdg:   59.0
+Filtered speed:   0.66
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 58.0} 
+{c 16} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s -43}
+hdg:  57, bias:  98
+hdg:  54, bias:  98
+hdg:  51, bias:  98
+hdg:  49, bias:  98
+hdg:  47, bias:  98
+hdg:  45, bias:  98
+hdg:  42, bias:  98
+hdg:  39, bias:  98
+hdg:  37, bias:  98
+hdg:  34, bias:  98
+hdg:  32, bias:  98
+msg: 14:58:35.116{LT21.4960}
+msg: 14:58:35.127{LN7.6129}
+msg: 14:58:35.133{LA14}
+{la 0.05}
+hdg:  30, bias:  98
+hdg:  27, bias:  98
+hdg:  25, bias:  98
+hdg:  23, bias:  98
+hdg:  20, bias:  98
+msg: 14:58:35.413{Z3 |---....x.-.   .+                          |}
+msg: 14:58:35.425{Z2 4.0,0,0}
+msg: 14:58:35.442{S1P 5.2,-17,3}
+hdg:  18, bias:  98
+hdg:  15, bias:  98
+hdg:  13, bias:  98
+hdg:  10, bias:  98
+posAV: [-637.74, 2178.26]
+wpt: 28 raw hdg:   10.0
+raw speed:  0.63
+Kalman pos vec: [   1.04,   -0.48]
+filtered E-N pos: : [-639.47, 2179.27]
+Filtered hdg:   10.0
+Filtered speed:   0.06
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 58.0} 
+{c 16} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering
+{s   5}
+hdg:   8, bias:  98
+hdg:   5, bias:  98
+hdg:   4, bias:  98
+hdg:   3, bias:  98
+hdg:   2, bias:  98
+hdg:   0, bias:  98
+hdg: 358, bias:  98
+hdg: 356, bias:  98
+hdg: 354, bias:  98
+hdg: 352, bias:  98
+hdg: 351, bias:  98
+msg: 14:58:36.135{LT21.5078}
+msg: 14:58:36.144{LN7.6054}
+msg: 14:58:36.151{LA14}
+{la 0.05}
+hdg: 349, bias:  98
+hdg: 348, bias:  98
+hdg: 347, bias:  98
+hdg: 346, bias:  98
+hdg: 345, bias:  98
+hdg: 344, bias:  98
+hdg: 345, bias:  98
+posAV: [-637.11, 2179.45]
+wpt: 28 raw hdg:  345.0
+raw speed:  0.63
+Kalman pos vec: [   1.64,   -0.26]
+filtered E-N pos: : [-638.87, 2179.49]
+Filtered hdg:  345.0
+Filtered speed:   0.09
+progress vec: [   0.05,    0.19]
+xtrack vec: [  -1.59,    0.45]
+aiming vector: [   6.22,   28.18]
+Kalman az set to 12
+{d 57.6} 
+{c 12} 
+{lx 1.65} 
+{la 0.05} 
+new hdg steering
+{s  28}
+hdg: 346, bias:  98
+hdg: 348, bias:  98
+hdg: 349, bias:  98
+hdg: 351, bias:  98
+hdg: 352, bias:  98
+hdg: 353, bias:  98
+hdg: 354, bias:  98
+hdg: 355, bias:  98
+hdg: 357, bias:  98
+msg: 14:58:37.162{LT21.5222}
+msg: 14:58:37.173{LN7.6086}
+msg: 14:58:37.179{LA14}
+{la 0.05}
+hdg: 359, bias:  98
+hdg:   1, bias:  98
+hdg:   3, bias:  98
+hdg:   5, bias:  98
+hdg:   7, bias:  98
+hdg:   8, bias:  98
+hdg:  11, bias:  98
+posAV: [-637.38, 2180.91]
+wpt: 28 raw hdg:   11.0
+raw speed:  0.63
+Kalman pos vec: [   1.80,    1.03]
+filtered E-N pos: : [-638.71, 2180.78]
+Filtered hdg:   11.0
+Filtered speed:   1.08
+progress vec: [   0.40,    1.43]
+xtrack vec: [  -1.40,    0.39]
+aiming vector: [   6.23,   27.51]
+Kalman az set to 12
+{d 56.4} 
+{c 13} 
+{lx 1.45} 
+{la 0.05} 
+new hdg steering
+{s   1}
+msg: 14:58:37.594{Z3 |                                          |}
+msg: 14:58:37.599{Z212.0,2,0}
+hdg:  13, bias:  98
+hdg:  15, bias:  98
+hdg:  17, bias:  98
+hdg:  18, bias:  98
+hdg:  20, bias:  98
+hdg:  21, bias:  98
+hdg:  23, bias:  98
+hdg:  24, bias:  98
+hdg:  25, bias:  98
+hdg:  27, bias:  98
+hdg:  28, bias:  98
+hdg:  30, bias:  98
+msg: 14:58:38.179{LT21.5381}
+msg: 14:58:38.189{LN7.6079}
+msg: 14:58:38.196{LA14}
+{la 0.05}
+hdg:  31, bias:  98
+hdg:  32, bias:  98
+hdg:  33, bias:  98
+posAV: [-637.32, 2182.52]
+wpt: 28 raw hdg:   33.0
+raw speed:  0.63
+Kalman pos vec: [   2.52,    2.66]
+filtered E-N pos: : [-637.99, 2182.41]
+Filtered hdg:   33.0
+Filtered speed:   1.44
+progress vec: [   0.88,    3.12]
+xtrack vec: [  -1.64,    0.46]
+aiming vector: [   5.75,   26.73]
+Kalman az set to 12
+{d 54.6} 
+{c 12} 
+{lx 1.71} 
+{la 0.05} 
+new hdg steering
+{s -20}
+hdg:  32, bias:  98
+hdg:  30, bias:  98
+hdg:  29, bias:  98
+hdg:  28, bias:  98
+hdg:  27, bias:  98
+hdg:  26, bias:  98
+hdg:  24, bias:  98
+hdg:  23, bias:  98
+hdg:  21, bias:  98
+msg: 14:58:39.199{LT21.5554}
+msg: 14:58:39.209{LN7.5967}
+hdg:  20, bias:  98
+msg: 14:58:39.221{LA14}
+{la 0.05}
+hdg:  18, bias:  98
+hdg:  17, bias:  98
+hdg:  15, bias:  98
+hdg:  13, bias:  98
+hdg:  11, bias:  98
+hdg:   9, bias:  98
+hdg:   8, bias:  98
+posAV: [-636.38, 2184.28]
+wpt: 28 raw hdg:    8.0
+raw speed:  0.63
+Kalman pos vec: [   3.33,    4.35]
+filtered E-N pos: : [-637.18, 2184.10]
+Filtered hdg:    8.0
+Filtered speed:   1.39
+progress vec: [   1.38,    4.90]
+xtrack vec: [  -1.96,    0.55]
+aiming vector: [   2.80,   17.47]
+Kalman az set to 9
+{d 52.8} 
+{c  9} 
+{lx 2.03} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg:   6, bias:  98
+hdg:   4, bias:  98
+msg: 14:58:39.733{Z3 |                                          |}
+msg: 14:58:39.745{Z2 0.0,4,0}
+hdg:   3, bias:  98
+hdg:   2, bias:  98
+hdg:   1, bias:  98
+hdg:   0, bias:  98
+hdg: 359, bias:  98
+hdg: 358, bias:  98
+hdg: 357, bias:  98
+hdg: 356, bias:  98
+hdg: 355, bias:  98
+msg: 14:58:40.224{LT21.5726}
+msg: 14:58:40.234{LN7.5895}
+msg: 14:58:40.241{LA14}
+{la 0.05}
+hdg: 354, bias:  98
+hdg: 355, bias:  98
+posAV: [-635.78, 2186.02]
+wpt: 28 raw hdg:  355.0
+raw speed:  0.63
+Kalman pos vec: [   3.68,    5.99]
+filtered E-N pos: : [-636.83, 2185.74]
+Filtered hdg:  355.0
+Filtered speed:   1.19
+progress vec: [   1.83,    6.51]
+xtrack vec: [  -1.85,    0.52]
+aiming vector: [   5.06,   25.10]
+Kalman az set to 11
+{d 51.1} 
+{c 11} 
+{lx 1.92} 
+{la 0.05} 
+new hdg steering
+{s  17}
+hdg: 356, bias:  98
+hdg: 357, bias:  98
+hdg: 358, bias:  98
+hdg: 359, bias:  98
+hdg:   0, bias:  98
+hdg:   1, bias:  98
+hdg:   2, bias:  98
+hdg:   4, bias:  98
+hdg:   5, bias:  98
+hdg:   6, bias:  98
+hdg:   8, bias:  98
+msg: 14:58:41.243{LT21.5914}
+msg: 14:58:41.254{LN7.5910}
+msg: 14:58:41.260{LA14}
+{la 0.05}
+hdg:   9, bias:  98
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+hdg:  14, bias:  98
+hdg:  16, bias:  98
+hdg:  18, bias:  98
+hdg:  19, bias:  98
+posAV: [-635.90, 2187.92]
+wpt: 28 raw hdg:   19.0
+raw speed:  0.63
+Kalman pos vec: [   4.02,    7.89]
+filtered E-N pos: : [-636.49, 2187.64]
+Filtered hdg:   19.0
+Filtered speed:   1.49
+progress vec: [   2.35,    8.35]
+xtrack vec: [  -1.67,    0.47]
+aiming vector: [   4.99,   24.12]
+Kalman az set to 11
+{d 49.2} 
+{c 12} 
+{lx 1.73} 
+{la 0.05} 
+new hdg steering
+{s  -7}
+hdg:  21, bias:  98
+hdg:  22, bias:  98
+hdg:  23, bias:  98
+msg: 14:58:41.881{Z3 |                                          |}
+msg: 14:58:41.893{Z2 3.0,0,0}
+hdg:  24, bias:  98
+hdg:  25, bias:  98
+hdg:  24, bias:  98
+hdg:  25, bias:  98
+msg: 14:58:42.269{LT21.6079}
+msg: 14:58:42.278{LN7.5874}
+msg: 14:58:42.285{LA14}
+{la 0.05}
+hdg:  24, bias:  98
+hdg:  23, bias:  98
+hdg:  22, bias:  98
+hdg:  21, bias:  98
+hdg:  20, bias:  98
+hdg:  19, bias:  98
+posAV: [-635.60, 2189.60]
+wpt: 28 raw hdg:   19.0
+raw speed:  0.63
+Kalman pos vec: [   4.62,    9.57]
+filtered E-N pos: : [-635.89, 2189.32]
+Filtered hdg:   19.0
+Filtered speed:   1.36
+progress vec: [   2.83,   10.08]
+xtrack vec: [  -1.79,    0.50]
+aiming vector: [   4.62,   23.30]
+Kalman az set to 11
+{d 47.4} 
+{c 11} 
+{lx 1.86} 
+{la 0.05} 
+new hdg steering
+hdg:  18, bias:  98
+hdg:  17, bias:  98
+hdg:  16, bias:  98
+hdg:  15, bias:  98
+hdg:  14, bias:  98
+hdg:  13, bias:  98
+hdg:  12, bias:  98
+hdg:  11, bias:  98
+hdg:  10, bias:  98
+hdg:   9, bias:  98
+hdg:   8, bias:  98
+msg: 14:58:43.288{LT21.6252}
+msg: 14:58:43.299{LN7.5791}
+msg: 14:58:43.305{LA14}
+{la 0.05}
+hdg:   6, bias:  98
+hdg:   4, bias:  98
+hdg:   3, bias:  98
+posAV: [-634.91, 2191.35]
+wpt: 28 raw hdg:    3.0
+raw speed:  0.63
+Kalman pos vec: [   5.11,   11.32]
+filtered E-N pos: : [-635.40, 2191.07]
+Filtered hdg:    4.0
+Filtered speed:   1.35
+progress vec: [   3.33,   11.82]
+xtrack vec: [  -1.78,    0.50]
+aiming vector: [   4.38,   22.42]
+Kalman az set to 11
+{d 45.6} 
+{c 11} 
+{lx 1.85} 
+{la 0.05} 
+new hdg steering
+{s   8}
+hdg:   2, bias:  98
+hdg:   1, bias:  98
+hdg:   2, bias:  98
+hdg:   1, bias:  98
+hdg:   2, bias:  98
+msg: 14:58:44.031{Z3 |                                          |}
+msg: 14:58:44.043{Z2 5.0,2,0}
+hdg:   3, bias:  98
+hdg:   4, bias:  98
+hdg:   5, bias:  98
+hdg:   6, bias:  98
+hdg:   7, bias:  98
+msg: 14:58:44.317{LT21.6432}
+msg: 14:58:44.328{LN7.5755}
+msg: 14:58:44.339{LA14}
+{la 0.05}
+hdg:   8, bias:  98
+hdg:   9, bias:  98
+hdg:  10, bias:  98
+hdg:  11, bias:  98
+posAV: [-634.61, 2193.17]
+wpt: 28 raw hdg:   11.0
+raw speed:  0.63
+Kalman pos vec: [   5.44,   13.14]
+filtered E-N pos: : [-635.07, 2192.89]
+Filtered hdg:   12.0
+Filtered speed:   1.39
+progress vec: [   3.82,   13.59]
+xtrack vec: [  -1.62,    0.46]
+aiming vector: [   4.30,   21.49]
+Kalman az set to 11
+{d 43.7} 
+{c 11} 
+{lx 1.68} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg:  12, bias:  98
+hdg:  13, bias:  98
+hdg:  14, bias:  98
+msg: 14:58:45.333{LT21.6616}
+msg: 14:58:45.344{LN7.5719}
+msg: 14:58:45.350{LA14}
+{la 0.05}
+hdg:  15, bias:  98
+posAV: [-634.30, 2195.04]
+wpt: 28 raw hdg:   15.0
+raw speed:  0.63
+Kalman pos vec: [   5.92,   14.97]
+filtered E-N pos: : [-634.59, 2194.72]
+Filtered hdg:   16.0
+Filtered speed:   1.42
+progress vec: [   4.34,   15.41]
+xtrack vec: [  -1.58,    0.45]
+aiming vector: [   4.08,   20.57]
+Kalman az set to 11
+{d 41.8} 
+{c 11} 
+{lx 1.64} 
+{la 0.05} 
+new hdg steering
+{s  -3}
+hdg:  14, bias:  98
+hdg:  13, bias:  98
+hdg:  12, bias:  98
+hdg:  11, bias:  98
+msg: 14:58:46.181{Z3 |                                          |}
+msg: 14:58:46.193{Z2 7.0,4,0}
+hdg:  10, bias:  98
+hdg:   9, bias:  98
+msg: 14:58:46.362{LT21.6814}
+msg: 14:58:46.372{LN7.5658}
+msg: 14:58:46.379{LA14}
+{la 0.05}
+hdg:   8, bias:  98
+hdg:   7, bias:  98
+posAV: [-633.79, 2197.04]
+wpt: 28 raw hdg:    7.0
+raw speed:  0.63
+Kalman pos vec: [   6.40,   16.93]
+filtered E-N pos: : [-634.11, 2196.68]
+Filtered hdg:    8.0
+Filtered speed:   1.49
+progress vec: [   4.88,   17.36]
+xtrack vec: [  -1.51,    0.43]
+aiming vector: [   3.88,   19.58]
+Kalman az set to 11
+{d 39.8} 
+{c 11} 
+{lx 1.57} 
+{la 0.05} 
+new hdg steering
+{s   4}
+hdg:   6, bias:  98
+hdg:   7, bias:  98
+hdg:   6, bias:  98
+hdg:   7, bias:  98
+hdg:   8, bias:  98
+hdg:   9, bias:  98
+hdg:  10, bias:  98
+msg: 14:58:47.378{LT21.7008}
+msg: 14:58:47.389{LN7.5618}
+msg: 14:58:47.395{LA14}
+{la 0.05}
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+posAV: [-633.46, 2199.01]
+wpt: 28 raw hdg:   12.0
+raw speed:  0.63
+Kalman pos vec: [   6.81,   18.89]
+filtered E-N pos: : [-633.70, 2198.64]
+Filtered hdg:   13.0
+Filtered speed:   1.49
+progress vec: [   5.42,   19.28]
+xtrack vec: [  -1.38,    0.39]
+aiming vector: [   3.74,   18.58]
+Kalman az set to 11
+{d 37.8} 
+{c 11} 
+{lx 1.43} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg:  13, bias:  98
+hdg:  14, bias:  98
+msg: 14:58:48.328{Z3 |                                          |}
+msg: 14:58:48.340{Z2 2.0,0,0}
+msg: 14:58:48.403{LT21.7206}
+msg: 14:58:48.414{LN7.5571}
+msg: 14:58:48.419{LA14}
+{la 0.05}
+hdg:  13, bias:  98
+posAV: [-633.07, 2201.02]
+wpt: 28 raw hdg:   13.0
+raw speed:  0.63
+Kalman pos vec: [   7.30,   20.87]
+filtered E-N pos: : [-633.21, 2200.62]
+Filtered hdg:   14.0
+Filtered speed:   1.51
+progress vec: [   5.98,   21.24]
+xtrack vec: [  -1.32,    0.37]
+aiming vector: [   3.52,   17.58]
+Kalman az set to 11
+{d 35.8} 
+{c 11} 
+{lx 1.37} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+hdg:  12, bias:  98
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+hdg:  11, bias:  98
+hdg:  10, bias:  98
+msg: 14:58:49.421{LT21.7411}
+msg: 14:58:49.431{LN7.5506}
+msg: 14:58:49.436{LA14}
+{la 0.05}
+posAV: [-632.52, 2203.09]
+wpt: 28 raw hdg:   10.0
+raw speed:  0.63
+Kalman pos vec: [   7.80,   22.93]
+filtered E-N pos: : [-632.71, 2202.68]
+Filtered hdg:   11.0
+Filtered speed:   1.56
+progress vec: [   6.55,   23.28]
+xtrack vec: [  -1.25,    0.35]
+aiming vector: [   3.31,   16.54]
+Kalman az set to 11
+{d 33.7} 
+{c 11} 
+{lx 1.29} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+msg: 14:58:50.439{LT21.7598}
+msg: 14:58:50.450{LN7.5470}
+msg: 14:58:50.501{Z3 |                                          |}
+msg: 14:58:50.514{Z2 8.0,2,0}
+msg: 14:58:50.520{LA14}
+{la 0.05}
+posAV: [-632.22, 2204.99]
+wpt: 28 raw hdg:   12.0
+raw speed:  0.63
+Kalman pos vec: [   8.22,   24.85]
+filtered E-N pos: : [-632.29, 2204.60]
+Filtered hdg:   13.0
+Filtered speed:   1.46
+progress vec: [   7.08,   25.17]
+xtrack vec: [  -1.14,    0.32]
+aiming vector: [   3.15,   15.57]
+Kalman az set to 11
+{d 31.7} 
+{c 11} 
+{lx 1.19} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg:  11, bias:  98
+msg: 14:58:51.482{LT21.7800}
+msg: 14:58:51.493{LN7.5416}
+msg: 14:58:51.498{LA14}
+{la 0.05}
+hdg:  12, bias:  98
+posAV: [-631.77, 2207.04]
+wpt: 28 raw hdg:   12.0
+raw speed:  0.63
+Kalman pos vec: [   8.70,   26.86]
+filtered E-N pos: : [-631.81, 2206.61]
+Filtered hdg:   13.0
+Filtered speed:   1.52
+progress vec: [   7.64,   27.15]
+xtrack vec: [  -1.06,    0.30]
+aiming vector: [   2.95,   14.55]
+Kalman az set to 11
+{d 29.6} 
+{c 11} 
+{lx 1.10} 
+{la 0.05} 
+new hdg steering
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+hdg:  13, bias:  98
+hdg:  12, bias:  98
+msg: 14:58:52.507{LT21.8009}
+msg: 14:58:52.518{LN7.5362}
+msg: 14:58:52.523{LA14}
+{la 0.05}
+posAV: [-631.31, 2209.15]
+wpt: 28 raw hdg:   12.0
+raw speed:  0.63
+Kalman pos vec: [   9.19,   28.94]
+filtered E-N pos: : [-631.32, 2208.69]
+Filtered hdg:   13.0
+Filtered speed:   1.57
+progress vec: [   8.22,   29.21]
+xtrack vec: [  -0.97,    0.27]
+aiming vector: [   2.75,   13.50]
+Kalman az set to 11
+{d 27.5} 
+{c 12} 
+{lx 1.00} 
+{la 0.05} 
+new hdg steering
+msg: 14:58:52.648{Z3 |                                          |}
+msg: 14:58:52.661{Z2 4.0,4,0}
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+msg: 14:58:53.525{LT21.8210}
+msg: 14:58:53.536{LN7.5305}
+msg: 14:58:53.542{LA14}
+{la 0.05}
+posAV: [-630.84, 2211.19]
+wpt: 28 raw hdg:   12.0
+raw speed:  0.63
+Kalman pos vec: [   9.66,   30.99]
+filtered E-N pos: : [-630.85, 2210.74]
+Filtered hdg:   13.0
+Filtered speed:   1.55
+progress vec: [   8.79,   31.24]
+xtrack vec: [  -0.87,    0.25]
+aiming vector: [   2.56,   12.46]
+Kalman az set to 11
+{d 25.4} 
+{c 12} 
+{lx 0.91} 
+{la 0.05} 
+new hdg steering
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+msg: 14:58:54.551{LT21.8426}
+msg: 14:58:54.561{LN7.5251}
+estAV: [-629.77, 2213.51]
+gps repeat position
+Dead Reconning =========================
+wpt: 28 raw hdg:   12.0
+raw speed:  0.63
+Kalman pos vec: [  10.28,   33.32]
+filtered E-N pos: : [-630.23, 2213.07]
+Filtered hdg:   13.0
+Filtered speed:   1.74
+progress vec: [   9.44,   33.56]
+xtrack vec: [  -0.84,    0.24]
+aiming vector: [   2.27,   11.29]
+Kalman az set to 11
+{d 23.0} 
+{c 11} 
+{lx 0.87} 
+{la 0.05} 
+new hdg steering
+msg: 14:58:54.593{LA14}
+{la 0.05}
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+msg: 14:58:54.797{Z3 |                                          |}
+msg: 14:58:54.808{Z2 3.0,0,0}
+hdg:  13, bias:  98
+hdg:  12, bias:  98
+hdg:  13, bias:  98
+estAV: [-629.16, 2213.65]
+gps tardy
+Dead Reconning =========================
+wpt: 28 raw hdg:   13.0
+raw speed:  0.63
+Kalman pos vec: [  10.60,   34.05]
+filtered E-N pos: : [-629.91, 2213.80]
+Filtered hdg:   15.0
+Filtered speed:   0.73
+progress vec: [   9.65,   34.31]
+xtrack vec: [  -0.95,    0.27]
+aiming vector: [   2.05,   10.94]
+Kalman az set to 10
+{d 22.2} 
+{c 11} 
+{lx 0.99} 
+{la 0.05} 
+new hdg steering
+{s  -2}
+msg: 14:58:55.593{LT21.8624}
+msg: 14:58:55.594{LN7.5182}
+msg: 14:58:55.595{LA14}
+{la 0.05}
+hdg:  12, bias:  98
+hdg:  11, bias:  98
+hdg:  10, bias:  98
+hdg:   9, bias:  98
+hdg:  10, bias:  98
+hdg:   9, bias:  98
+hdg:   8, bias:  98
+hdg:   7, bias:  98
+posAV: [-629.81, 2215.39]
+wpt: 28 raw hdg:    7.0
+raw speed:  0.63
+Kalman pos vec: [  10.88,   35.38]
+filtered E-N pos: : [-629.63, 2215.13]
+Filtered hdg:    9.0
+Filtered speed:   1.09
+progress vec: [  10.02,   35.62]
+xtrack vec: [  -0.85,    0.24]
+aiming vector: [   1.97,   10.26]
+Kalman az set to 10
+{d 20.8} 
+{c 11} 
+{lx 0.89} 
+{la 0.05} 
+new hdg steering
+{s   3}
+msg: 14:58:56.603{LT21.8815}
+msg: 14:58:56.604{LN7.5136}
+msg: 14:58:56.605{LA14}
+{la 0.05}
+hdg:   6, bias:  98
+hdg:   7, bias:  98
+hdg:   6, bias:  98
+msg: 14:58:56.946{Z3 |                                          |}
+msg: 14:58:56.959{Z2 7.0,2,0}
+hdg:   7, bias:  98
+hdg:   8, bias:  98
+hdg:   9, bias:  98
+hdg:  10, bias:  98
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+posAV: [-629.42, 2217.32]
+wpt: 28 raw hdg:   12.0
+raw speed:  0.63
+Kalman pos vec: [  11.21,   37.18]
+filtered E-N pos: : [-629.30, 2216.93]
+Filtered hdg:   14.0
+Filtered speed:   1.37
+progress vec: [  10.51,   37.37]
+xtrack vec: [  -0.69,    0.20]
+aiming vector: [   1.88,    9.34]
+Kalman az set to 11
+{d 19.0} 
+{c 11} 
+{lx 0.72} 
+{la 0.05} 
+new hdg steering
+{s   0}
+msg: 14:58:57.611{LT21.9013}
+msg: 14:58:57.623{LN7.5089}
+msg: 14:58:57.628{LA14}
+{la 0.05}
+hdg:  13, bias:  98
+hdg:  12, bias:  98
+hdg:  11, bias:  98
+hdg:  12, bias:  98
+hdg:  13, bias:  98
+posAV: [-629.03, 2219.33]
+wpt: 28 raw hdg:   13.0
+raw speed:  0.63
+Kalman pos vec: [  11.65,   39.12]
+filtered E-N pos: : [-628.86, 2218.87]
+Filtered hdg:   14.0
+Filtered speed:   1.47
+progress vec: [  11.05,   39.28]
+xtrack vec: [  -0.60,    0.17]
+aiming vector: [   1.71,    8.36]
+Kalman az set to 11
+{d 17.0} 
+{c 12} 
+{lx 0.62} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+msg: 14:58:58.631{LT21.9186}
+msg: 14:58:58.641{LN7.5046}
+msg: 14:58:58.648{LA14}
+{la 0.05}
+hdg:  14, bias:  98
+hdg:  13, bias:  98
+hdg:  12, bias:  98
+msg: 14:58:59.097{Z3 |                                          |}
+msg: 14:58:59.109{Z2 7.0,4,0}
+hdg:  11, bias:  98
+hdg:  10, bias:  98
+posAV: [-628.67, 2221.08]
+wpt: 28 raw hdg:   10.0
+raw speed:  0.63
+Kalman pos vec: [  12.03,   40.92]
+filtered E-N pos: : [-628.48, 2220.67]
+Filtered hdg:   11.0
+Filtered speed:   1.39
+progress vec: [  11.55,   41.05]
+xtrack vec: [  -0.48,    0.13]
+aiming vector: [   1.58,    7.44]
+Kalman az set to 11
+{d 15.2} 
+{c 12} 
+{lx 0.50} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg:   9, bias:  98
+msg: 14:58:59.656{LT21.9391}
+msg: 14:58:59.666{LN7.4984}
+msg: 14:58:59.673{LA14}
+{la 0.05}
+hdg:  10, bias:  98
+posAV: [-628.15, 2223.16]
+wpt: 28 raw hdg:   10.0
+raw speed:  0.63
+Kalman pos vec: [  12.42,   42.95]
+filtered E-N pos: : [-628.09, 2222.70]
+Filtered hdg:   11.0
+Filtered speed:   1.53
+progress vec: [  12.11,   43.04]
+xtrack vec: [  -0.31,    0.09]
+aiming vector: [   1.46,    6.40]
+Kalman az set to 12
+{d 13.1} 
+{c 13} 
+{lx 0.32} 
+{la 0.05} 
+new hdg steering
+{s   2}
+hdg:  11, bias:  98
+msg: 14:59:00.677{LT21.9586}
+msg: 14:59:00.687{LN7.4959}
+msg: 14:59:00.694{LA14}
+{la 0.05}
+hdg:  12, bias:  98
+hdg:  13, bias:  98
+msg: 14:59:01.244{Z3 |                                          |}
+msg: 14:59:01.257{Z2 1.0,0,0}
+hdg:  14, bias:  98
+posAV: [-627.94, 2225.13]
+wpt: 28 raw hdg:   14.0
+raw speed:  0.63
+Kalman pos vec: [  12.81,   44.91]
+filtered E-N pos: : [-627.70, 2224.66]
+Filtered hdg:   14.0
+Filtered speed:   1.47
+progress vec: [  12.65,   44.95]
+xtrack vec: [  -0.16,    0.05]
+aiming vector: [   1.34,    5.40]
+Kalman az set to 13
+{d 11.1} 
+{c 14} 
+{lx 0.17} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg:  15, bias:  98
+msg: 14:59:01.707{LT21.9802}
+msg: 14:59:01.717{LN7.4912}
+msg: 14:59:01.724{LA14}
+{la 0.05}
+hdg:  14, bias:  98
+hdg:  13, bias:  98
+hdg:  14, bias:  98
+hdg:  13, bias:  98
+hdg:  14, bias:  98
+hdg:  13, bias:  98
+hdg:  14, bias:  98
+hdg:  15, bias:  98
+hdg:  14, bias:  98
+posAV: [-627.54, 2227.32]
+wpt: 28 raw hdg:   14.0
+raw speed:  0.63
+Kalman pos vec: [  13.28,   47.02]
+filtered E-N pos: : [-627.23, 2226.77]
+Filtered hdg:   14.0
+Filtered speed:   1.58
+progress vec: [  13.23,   47.03]
+xtrack vec: [  -0.05,    0.01]
+aiming vector: [   1.17,    4.33]
+Kalman az set to 15
+{d  9.0} 
+{c 15} 
+{lx 0.05} 
+{la 0.05} 
+new hdg steering
+{s   1}
+hdg:  13, bias:  98
+msg: 14:59:02.723{LT22.0010}
+msg: 14:59:02.734{LN7.4855}
+msg: 14:59:02.740{LA14}
+{la 0.05}
+hdg:  14, bias:  98
+hdg:  15, bias:  98
+hdg:  14, bias:  98
+msg: 14:59:03.392{Z3 |                                          |}
+msg: 14:59:03.404{Z2 0.0,2,0}
+hdg:  15, bias:  98
+hdg:  14, bias:  98
+posAV: [-627.07, 2229.43]
+wpt: 28 raw hdg:   14.0
+raw speed:  0.63
+Kalman pos vec: [  13.74,   49.13]
+filtered E-N pos: : [-626.77, 2228.88]
+Filtered hdg:   13.0
+Filtered speed:   1.58
+progress vec: [  13.82,   49.11]
+xtrack vec: [   0.07,   -0.02]
+aiming vector: [   1.00,    3.26]
+Kalman az set to 17
+{d  6.8} 
+{c 17} 
+{lx 0.08} 
+{la 0.05} 
+Odo:    89.2, speed:   40
+new hdg steering
+{v  30}
+{s   3}
+hdg:  15, bias:  98
+hdg:  16, bias:  98
+msg: 14:59:03.752{LT22.0216}
+msg: 14:59:03.763{LN7.4783}
+msg: 14:59:03.769{LA14}
+{la 0.05}
+hdg:  17, bias:  98
+hdg:  18, bias:  98
+hdg:  19, bias:  98
+hdg:  20, bias:  98
+posAV: [-626.46, 2231.52]
+wpt: 28 raw hdg:   20.0
+raw speed:  0.47
+Kalman pos vec: [  14.29,   51.17]
+filtered E-N pos: : [-626.22, 2230.92]
+Filtered hdg:   19.0
+Filtered speed:   1.49
+progress vec: [  14.39,   51.14]
+xtrack vec: [   0.10,   -0.03]
+aiming vector: [   0.73,    2.23]
+Kalman az set to 18
+{d  4.7} 
+{c 18} 
+{lx 0.10} 
+{la 0.05} 
+new hdg steering
+{s  -1}
+msg: 14:59:04.769{LT22.0392}
+msg: 14:59:04.780{LN7.4722}
+msg: 14:59:04.786{LA14}
+{la 0.05}
+hdg:  19, bias:  98
+hdg:  20, bias:  98
+hdg:  19, bias:  98
+msg: 14:59:05.541{Z3 |                                          |}
+msg: 14:59:05.553{Z2 5.0,4,0}
+posAV: [-625.95, 2233.30]
+wpt: 28 raw hdg:   19.0
+raw speed:  0.47
+Kalman pos vec: [  14.83,   53.00]
+filtered E-N pos: : [-625.68, 2232.75]
+Filtered hdg:   18.0
+Filtered speed:   1.36
+progress vec: [  14.91,   52.98]
+xtrack vec: [   0.07,   -0.02]
+aiming vector: [   0.45,    1.32]
+Kalman az set to 18
+{d  2.8} 
+{c 19} 
+{lx 0.08} 
+{la 0.05} 
+new hdg steering
+{s   0}
+hdg:  18, bias:  98
+msg: 14:59:05.795{LT22.0529}
+msg: 14:59:05.805{LN7.4657}
+msg: 14:59:05.812{LA14}
+{la 0.05}
+hdg:  19, bias:  98
+hdg:  18, bias:  98
+hdg:  19, bias:  98
+posAV: [-625.41, 2234.69]
+wpt: 28 raw hdg:   19.0
+raw speed:  0.47
+Kalman pos vec: [  15.28,   54.53]
+filtered E-N pos: : [-625.23, 2234.28]
+Filtered hdg:   17.0
+Filtered speed:   1.17
+progress vec: [  15.34,   54.51]
+xtrack vec: [   0.06,   -0.02]
+aiming vector: [   0.22,    0.56]
+Kalman az set to 21
+{d  1.2} 
+{c 21} 
+{lx 0.06} 
+{la 0.05} 
+close to waypoint===============================================================
+Standby
+Odo:    90.6, speed:   30
+new hdg steering
+{v   0}
+{s   2}
+hdg:  18, bias:  98
+hdg:  19, bias:  98
+hdg:  18, bias:  98
+msg: 14:59:06.814{LT22.0658}
+msg: 14:59:06.824{LN7.4599}
+{ln-624.9} 
+{lt2236.0} 
+msg: 14:59:06.831{LA14}
+{la 0.05}
+msg: 14:59:07.831{LT22.0763}
+msg: 14:59:07.842{LN7.4552}
+{ln-624.5} 
+{lt2237.1} 
+msg: 14:59:07.848{LA14}
+{la 0.05}
+msg: 14:59:08.854{LT22.0766}
+msg: 14:59:08.865{LN7.4549}
+{ln-624.5} 
+{lt2237.1} 
+msg: 14:59:08.871{LA14}
+{la 0.05}
+msg: 14:59:09.872{LT22.0766}
+msg: 14:59:09.883{LN7.4549}
+{ln-624.5} 
+{lt2237.1} 
+prevAV: [-624.50, 2237.09]
+posAV : [-624.50, 2237.09]
+GPS not updating ===============
+msg: 14:59:09.891{LA14}
+{la 0.05}
+msg: 14:59:10.897{LT22.0766}
+msg: 14:59:10.908{LN7.4549}
+{ln-624.5} 
+{lt2237.1} 
+prevAV: [-624.50, 2237.09]
+posAV : [-624.50, 2237.09]
+GPS not updating ===============
+msg: 14:59:10.915{LA14}
+{la 0.05}
+msg: 14:59:11.918{LT22.0766}
+msg: 14:59:11.927{LN7.4549}
+{ln-624.5} 
+{lt2237.1} 
+prevAV: [-624.50, 2237.09]
+posAV : [-624.50, 2237.09]
+GPS not updating ===============
+msg: 14:59:11.934{LA14}
+{la 0.05}
+msg: 14:59:12.941{LT22.0766}
+msg: 14:59:12.950{LN7.4552}
+{ln-624.5} 
+{lt2237.1} 
+msg: 14:59:12.957{LA14}
+{la 0.05}
+msg: 14:59:13.960{LT22.0766}
+msg: 14:59:13.970{LN7.4549}
+{ln-624.5} 
+{lt2237.1} 
+msg: 14:59:13.975{LA14}
+{la 0.05}
+msg: 14:59:14.004{D2}
+Odo:    90.6, speed:    0
+{v  10}=================================================================
+hdg:  19, bias:  98
+msg: 14:59:14.978{LT22.0766}
+msg: 14:59:14.989{LN7.4549}
+{ln-624.5} 
+{lt2237.1} 
+prevAV: [-624.50, 2237.09]
+posAV : [-624.50, 2237.09]
+GPS not updating ===============
+msg: 14:59:14.995{LA14}
+{la 0.05}
+hdg:  20, bias:  98
+msg: 14:59:16.003{LT22.0806}
+msg: 14:59:16.013{LN7.4534}
+{ln-624.4} 
+{lt2237.5} 
+msg: 14:59:16.020{LA14}
+{la 0.05}
+msg: 14:59:16.227{D3}
+{s   3}
+hdg:  21, bias:  98
+msg: 14:59:16.647{D6}
+{s   8}
+hdg:  22, bias:  98
+hdg:  23, bias:  98
+msg: 14:59:17.042{LT22.0896}
+msg: 14:59:17.052{LN7.4488}
+{ln-624.0} 
+{lt2238.4} 
+msg: 14:59:17.059{LA14}
+{la 0.05}
+msg: 14:59:17.084{D9}
+{s  36}
+hdg:  24, bias:  98
+hdg:  25, bias:  98
+hdg:  26, bias:  98
+hdg:  27, bias:  98
+hdg:  28, bias:  98
+hdg:  29, bias:  98
+hdg:  30, bias:  98
+msg: 14:59:18.502{LT22.0932}
+msg: 14:59:18.505{LN7.4470}
+{ln-623.8} 
+{lt2238.8} 
+msg: 14:59:18.508{LA14}
+{la 0.05}
+hdg:  31, bias:  98
+hdg:  32, bias:  98
+hdg:  33, bias:  98
+hdg:  34, bias:  98
+hdg:  35, bias:  98
+hdg:  36, bias:  98
+hdg:  37, bias:  98
+hdg:  38, bias:  98
+hdg:  39, bias:  98
+hdg:  40, bias:  98
+hdg:  41, bias:  98
+hdg:  42, bias:  98
+hdg:  43, bias:  98
+msg: 14:59:19.089{LT22.0961}
+msg: 14:59:19.099{LN7.4444}
+{ln-623.6} 
+{lt2239.1} 
+msg: 14:59:19.106{LA14}
+{la 0.05}
+msg: 14:59:19.159{D2}
+Odo:    91.4, speed:   10
+{v  20}
+hdg:  44, bias:  98
+hdg:  45, bias:  98
+hdg:  46, bias:  98
+hdg:  47, bias:  98
+hdg:  49, bias:  98
+hdg:  50, bias:  98
+hdg:  52, bias:  98
+hdg:  53, bias:  98
+hdg:  54, bias:  98
+hdg:  55, bias:  98
+hdg:  56, bias:  98
+hdg:  58, bias:  98
+hdg:  59, bias:  98
+hdg:  60, bias:  98
+hdg:  61, bias:  98
+hdg:  62, bias:  98
+hdg:  64, bias:  98
+hdg:  65, bias:  98
+hdg:  66, bias:  98
+msg: 14:59:20.105{LT22.1008}
+msg: 14:59:20.115{LN7.4394}
+{ln-623.2} 
+{lt2239.5} 
+msg: 14:59:20.121{LA14}
+{la 0.05}
+hdg:  68, bias:  98
+hdg:  69, bias:  98
+hdg:  70, bias:  98
+hdg:  71, bias:  98
+hdg:  72, bias:  98
+hdg:  74, bias:  98
+hdg:  75, bias:  98
+msg: 14:59:20.435{D5}
+{s   0}
+hdg:  76, bias:  98
+hdg:  78, bias:  98
+hdg:  79, bias:  98
+hdg:  80, bias:  98
+hdg:  81, bias:  98
+hdg:  82, bias:  98
+hdg:  83, bias:  98
+msg: 14:59:21.124{LT22.1029}
+msg: 14:59:21.133{LN7.4304}
+{ln-622.5} 
+{lt2239.8} 
+msg: 14:59:21.140{LA14}
+{la 0.05}
+hdg:  82, bias:  98
+ heartbeat tardy
+Odo:    92.2, speed:   20
+{v   0}
+hdg:  83, bias:  98
+msg: 14:59:21.949{D3}
+{s   1}
+hdg:  82, bias:  98
+hdg:  83, bias:  98
+hdg:  82, bias:  98
+
+msg: 15:00:43.856{LT21.9341}
+msg: 15:00:43.866{LN7.2745}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.39, 2222.65]
+posAV : [-609.39, 2222.65]
+GPS not updating ===============
+{la 0.05}
+Voltage:  16.6
+Odo:   101.2, speed:    0
+odometer:   101.2
+missing heartbeats:     2
+late gps readings:     3
+repeat gps readings:     1
+inaccurate gps:     1
+good gps:   141
