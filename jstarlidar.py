@@ -994,7 +994,7 @@ try:
                     cogBase = 0
                     
                 steer = int(azimuth - hdg)
-                logit("new hdg steering")
+                logit("new hdg steering %4d" % steer)
                 if (steer < -180):
                     steer = steer + 360
                 elif (steer > 180):
@@ -1018,16 +1018,20 @@ try:
         # things to do as often as possible outside of timer               
         # if on course, don't oversteer
         if auto is True:
-            if steer < 0:            # CCW
-                diff = azimuth - hdg
-            if steer > 0:            # CW
-                diff = hdg - azimuth
-            if diff > 180:
-                diff -= 360
-            if diff < -180:
-                diff += 360
-            if diff >= 0:
-                steer = 0
+            if steer != 0:
+                diff = -1
+                if steer < 0:            # CCW
+                    diff = azimuth - hdg
+                if steer > 0:            # CW
+                    diff = hdg - azimuth
+                if diff > 180:
+                    diff -= 360
+                if diff < -180:
+                    diff += 360
+                if diff >= 0:
+                    steer = 0
+                    robot.motor(speed, steer)
+                    logit("On course")
                 
         if (hdg != oldhdg):
             cstr = "{h%3d}" % hdg
