@@ -56,10 +56,10 @@ class motor_driver_ada:
         print(ver[0],ver[1])
 
     def diag(self):
-        print("servo rr ="+str(self.rr_motor.angle))
-        print("servo rf ="+str(self.rf_motor.angle))
-        print("servo lf ="+str(self.lf_motor.angle))
-        print("servo lr ="+str(self.lr_motor.angle))
+        self.log.write("servo rr = %4d" % (self.rr_motor.angle - Rrrbias))
+        self.log.write("servo rf = %4d" % (self.rf_motor.angle - Rrfbias))
+        self.log.write("servo lf = %4d" % (self.lf_motor.angle - Rlfbias))
+        self.log.write("servo lr = %4d" % (self.lr_motor.angle - Rlrbias))
 
     def set_motor(self, address, v, av, m12):
         vx = int(v * av)
@@ -155,8 +155,8 @@ class motor_driver_ada:
             vic = ric / rmo
             vim = rmi / rmo
 
-# SERVO MOTORS ARE COUNTER CLOCKWISE
-# left turn
+        # SERVO MOTORS ARE COUNTER CLOCKWISE
+        # left turn
         if steer < 0:
             self.rr_motor.angle = Rrrbias + phi
             self.rf_motor.angle = Rrfbias - phi
@@ -168,10 +168,10 @@ class motor_driver_ada:
             self.set_motor(0x80, vel,   1, 2)           #RC 1 - rf, rm
             self.set_motor(0x81, vel, vic, 2)           #RC 2 - lm, lf
             self.set_motor(0x82, vel, vic, 2)           #RC 3 - rr, lr
-#             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
-#             self.log.write(cstr)
+            #             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
+            #             self.log.write(cstr)
 
-#right turn
+        #right turn
         elif steer > 0:
             self.rr_motor.angle = Rrrbias + steer
             self.rf_motor.angle = Rrfbias - steer
@@ -184,12 +184,12 @@ class motor_driver_ada:
             self.set_motor(0x81, vel, voc, 2)
             self.set_motor(0x82, vel, voc, 2)
             #            print("80 vic, vim ",vic,vim)
-#            print("81 vic, voc ",vic,voc)
-#            print("82 vom, voc ", 1, voc)
-#             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
-#             self.log.write(cstr)
+            #            print("81 vic, voc ",vic,voc)
+            #            print("82 vom, voc ", 1, voc)
+            #             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
+            #             self.log.write(cstr)
 
-#straight ahead
+        #straight ahead
         else:
             self.rr_motor.angle = Rrrbias
             self.rf_motor.angle = Rrfbias
@@ -201,10 +201,11 @@ class motor_driver_ada:
             self.set_motor(0x80, vel, 1, 2)
             self.set_motor(0x81, vel, 1, 2)
             self.set_motor(0x82, vel, 1, 2)
-#       print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
-#       self.diag()
-#             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
-#             self.log.write(cstr)
+#            print("v, vout, vin "+str(vel)+", "+str(voc)+", "+str(vic))
+#            self.diag()
+        cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
+        self.log.write(cstr)
+        self.diag()
 
     def sensor_pan(self, angle):
         self.pan.angle = Rpanbias + angle
