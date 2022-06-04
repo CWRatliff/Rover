@@ -162,6 +162,17 @@ def vclosestwp(V):
                 lowdist = testdist
                 lowwp = i
     return lowwp, lowdist
+'''
+def compass_quadrant(angle):      # inverted & rotated for compass heading
+    if (angle >= 0 and angle < 90):
+        return 1
+    if (angle >= 90 and angle < 180):
+        return 2
+    if (angle >= 180 and angle < 270):
+        return 3
+    if (angle >= 270 and angle < 360):
+        return 4
+'''        
 # =================================================================
 # from present pos (AV) to destination (AV), return safest,shortest route
 def bestroute(pos, dest):
@@ -1005,12 +1016,19 @@ try:
             #endif epoch timer ===================
 
         # things to do as often as possible outside of timer               
-        if auto is True and hdg == azimuth:  # exactly on course, don't oversteer
-            steer = 0
-            robot.motor(speed, steer)
-            cstr = "{s%4d}" % steer
-            sendit(cstr)
-            logit(cstr)
+        # if on course, don't oversteer
+        if auto is True:
+            if steer < 0:            # CCW
+                diff = azimuth - hdg
+            if steer > 0:            # CW
+                diff = hdg - azimuth
+            if diff > 180:
+                diff -= 360
+            if diff < -180:
+                diff += 360
+            if diff >= 0:
+                steer = 0
+                
         if (hdg != oldhdg):
             cstr = "{h%3d}" % hdg
             sendit(cstr)
