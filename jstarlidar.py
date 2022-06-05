@@ -924,10 +924,10 @@ try:
                             aim = (1.0 - prog) / 3 + prog     # aim at a third of the remaining dist on trackV
                         workRV = vsmult(trackRV, aim)
                         aimRV = vsub(workRV, filterRV)    # vector from filteredV to aimV                     
-                        azimuth = vcourse(aimRV)
+                        azimuth = int(vcourse(aimRV))
                     else:
                         xtrk = 0
-                        azimuth = vcourse(trackRV)
+                        azimuth = int(vcourse(trackRV))
 
                     vprint("aiming vector", aimRV)
                     logit("Kalman az set to %d" % azimuth)
@@ -994,7 +994,7 @@ try:
                     cogBase = 0
                     
                 steer = int(azimuth - hdg)
-                logit("new hdg steering %4d" % steer)
+                logit("new hdg steering %d" % steer)
                 if (steer < -180):
                     steer = steer + 360
                 elif (steer > 180):
@@ -1019,6 +1019,24 @@ try:
         # if on course, don't oversteer
         if auto is True:
             if steer != 0:
+                diff = int(azimuth - hdg)
+                if diff > 180:
+                    diff -= 360
+                if diff < -180:
+                    diff += 360
+                if steer > 0:
+                    if diff > 0:
+                        steer = diff
+                    else:
+                        steer = 0
+                elif steer < 0:
+                    if diff < 0:
+                        steer = diff
+                    else:
+                        steer = 0
+                robot.motor(speed, steer)
+                logit("adjusting steer to meet az %d" % steer)
+                '''
                 diff = -1
                 if steer < 0:            # CCW
                     diff = azimuth - hdg
@@ -1032,7 +1050,7 @@ try:
                     steer = 0
                     robot.motor(speed, steer)
                     logit("On course")
-                
+                '''
         if (hdg != oldhdg):
             cstr = "{h%3d}" % hdg
             sendit(cstr)
