@@ -1024,6 +1024,15 @@ try:
                     diff -= 360
                 if diff < -180:
                     diff += 360
+                if steer > 0 and diff < 0:           # right turn
+                    diff = 0                         # overshot
+                if steer < 0 and diff > 0:           # left turn
+                    diff = 0                         # overshot
+                if diff != steer:
+                    steer = diff
+                    robot.motor(speed, steer)
+                    logit("adjusting steer to meet az %d" % steer)
+                '''
                 if steer > 0:
                     if diff > 0:
                         steer = diff
@@ -1036,7 +1045,7 @@ try:
                         steer = 0
                 robot.motor(speed, steer)
                 logit("adjusting steer to meet az %d" % steer)
-                '''
+
                 diff = -1
                 if steer < 0:            # CCW
                     diff = azimuth - hdg
