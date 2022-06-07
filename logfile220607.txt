@@ -1,0 +1,8616 @@
+ servo rr = 0 servo rf = 0 servo lf = 0 servo lr = 0
+====================================================================Rover 1.1 220531
+Voltage:  15.9
+Standby
+hdg: 104, bias: 104
+{v   0}
+{s   0}
+msg: 09:46:51.952{LT21.9341}
+msg: 09:46:51.962{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:46:51.969{LA14}
+{la 0.05}
+msg: 09:46:52.971{LT21.9341}
+msg: 09:46:52.983{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:46:52.988{LA14}
+{la 0.05}
+msg: 09:46:53.996{LT21.9341}
+msg: 09:46:54.005{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:46:54.012{LA14}
+{la 0.05}
+msg: 09:46:55.014{LT21.9341}
+msg: 09:46:55.024{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:46:55.031{LA14}
+{la 0.05}
+msg: 09:46:56.039{LT21.9341}
+msg: 09:46:56.048{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:46:56.055{LA14}
+{la 0.05}
+msg: 09:46:57.058{LT21.9341}
+msg: 09:46:57.068{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:46:57.075{LA14}
+{la 0.05}
+msg: 09:46:58.076{LT21.9341}
+msg: 09:46:58.086{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:46:58.093{LA14}
+{la 0.05}
+msg: 09:46:59.098{LT21.9341}
+msg: 09:46:59.110{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:46:59.115{LA14}
+{la 0.05}
+msg: 09:47:00.117{LT21.9341}
+msg: 09:47:00.128{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:47:00.134{LA14}
+{la 0.05}
+msg: 09:47:01.141{LT21.9341}
+msg: 09:47:01.152{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.37, 2222.65]
+posAV : [-609.37, 2222.65]
+GPS not updating ===============
+msg: 09:47:01.158{LA14}
+{la 0.05}
+hdg: 117, bias: 104
+hdg: 118, bias: 104
+hdg: 119, bias: 104
+hdg: 122, bias: 104
+hdg: 124, bias: 104
+hdg: 127, bias: 104
+hdg: 130, bias: 104
+hdg: 134, bias: 104
+hdg: 137, bias: 104
+hdg: 140, bias: 104
+hdg: 144, bias: 104
+hdg: 147, bias: 104
+hdg: 151, bias: 104
+hdg: 154, bias: 104
+hdg: 158, bias: 104
+hdg: 162, bias: 104
+hdg: 165, bias: 104
+hdg: 169, bias: 104
+msg: 09:47:02.162{LT21.9316}
+msg: 09:47:02.172{LN7.2684}
+{ln-608.9} 
+{lt2222.4} 
+msg: 09:47:02.179{LA14}
+{la 0.05}
+hdg: 173, bias: 104
+hdg: 176, bias: 104
+hdg: 180, bias: 104
+hdg: 183, bias: 104
+hdg: 186, bias: 104
+hdg: 189, bias: 104
+hdg: 192, bias: 104
+hdg: 194, bias: 104
+hdg: 196, bias: 104
+hdg: 198, bias: 104
+hdg: 200, bias: 104
+hdg: 202, bias: 104
+hdg: 204, bias: 104
+hdg: 205, bias: 104
+hdg: 207, bias: 104
+hdg: 208, bias: 104
+hdg: 210, bias: 104
+hdg: 211, bias: 104
+hdg: 212, bias: 104
+hdg: 213, bias: 104
+hdg: 214, bias: 104
+msg: 09:47:03.189{LT21.9366}
+msg: 09:47:03.200{LN7.2432}
+{ln-606.8} 
+{lt2222.9} 
+msg: 09:47:03.206{LA14}
+{la 0.05}
+hdg: 213, bias: 104
+hdg: 212, bias: 104
+hdg: 210, bias: 104
+hdg: 209, bias: 104
+hdg: 207, bias: 104
+hdg: 205, bias: 104
+hdg: 203, bias: 104
+hdg: 202, bias: 104
+hdg: 200, bias: 104
+hdg: 198, bias: 104
+hdg: 196, bias: 104
+hdg: 194, bias: 104
+hdg: 192, bias: 104
+hdg: 190, bias: 104
+hdg: 188, bias: 104
+hdg: 186, bias: 104
+msg: 09:47:04.205{LT21.9492}
+msg: 09:47:04.215{LN7.2288}
+{ln-605.6} 
+{lt2224.2} 
+msg: 09:47:04.222{LA14}
+{la 0.05}
+hdg: 183, bias: 104
+hdg: 180, bias: 104
+hdg: 177, bias: 104
+hdg: 174, bias: 104
+hdg: 171, bias: 104
+hdg: 167, bias: 104
+hdg: 163, bias: 104
+hdg: 158, bias: 104
+hdg: 153, bias: 104
+hdg: 147, bias: 104
+hdg: 141, bias: 104
+hdg: 135, bias: 104
+hdg: 129, bias: 104
+hdg: 123, bias: 104
+hdg: 118, bias: 104
+hdg: 114, bias: 104
+hdg: 110, bias: 104
+hdg: 106, bias: 104
+hdg: 102, bias: 104
+hdg:  97, bias: 104
+msg: 09:47:05.224{LT21.9715}
+msg: 09:47:05.234{LN7.2234}
+{ln-605.1} 
+{lt2226.4} 
+hdg:  93, bias: 104
+msg: 09:47:05.247{LA14}
+{la 0.05}
+hdg:  89, bias: 104
+hdg:  86, bias: 104
+hdg:  82, bias: 104
+hdg:  78, bias: 104
+hdg:  73, bias: 104
+hdg:  68, bias: 104
+hdg:  64, bias: 104
+hdg:  59, bias: 104
+hdg:  55, bias: 104
+hdg:  52, bias: 104
+hdg:  48, bias: 104
+hdg:  46, bias: 104
+hdg:  43, bias: 104
+hdg:  42, bias: 104
+hdg:  40, bias: 104
+hdg:  39, bias: 104
+hdg:  38, bias: 104
+hdg:  37, bias: 104
+msg: 09:47:06.249{LT21.9665}
+msg: 09:47:06.259{LN7.2295}
+{ln-605.6} 
+{lt2225.9} 
+msg: 09:47:06.266{LA14}
+{la 0.05}
+hdg:  38, bias: 104
+hdg:  39, bias: 104
+hdg:  40, bias: 104
+hdg:  39, bias: 104
+hdg:  38, bias: 104
+hdg:  37, bias: 104
+hdg:  36, bias: 104
+hdg:  35, bias: 104
+msg: 09:47:07.268{LT21.9614}
+msg: 09:47:07.278{LN7.2234}
+{ln-605.1} 
+{lt2225.4} 
+msg: 09:47:07.285{LA14}
+{la 0.05}
+hdg:  34, bias: 104
+hdg:  33, bias: 104
+hdg:  34, bias: 104
+hdg:  33, bias: 104
+hdg:  32, bias: 104
+hdg:  31, bias: 104
+hdg:  30, bias: 104
+hdg:  31, bias: 104
+msg: 09:47:08.292{LT21.9661}
+msg: 09:47:08.301{LN7.2223}
+{ln-605.0} 
+{lt2225.9} 
+msg: 09:47:08.308{LA14}
+{la 0.05}
+hdg:  30, bias: 104
+hdg:  31, bias: 104
+msg: 09:47:09.309{LT21.9654}
+msg: 09:47:09.320{LN7.2212}
+{ln-604.9} 
+{lt2225.8} 
+msg: 09:47:09.325{LA15}
+{la 0.05}
+hdg:  30, bias: 104
+msg: 09:47:10.334{LT21.9650}
+msg: 09:47:10.343{LN7.2216}
+{ln-605.0} 
+{lt2225.8} 
+msg: 09:47:10.350{LA15}
+{la 0.05}
+msg: 09:47:11.352{LT21.9640}
+msg: 09:47:11.363{LN7.2212}
+{ln-604.9} 
+{lt2225.7} 
+msg: 09:47:11.368{LA14}
+{la 0.05}
+msg: 09:47:12.377{LT21.9650}
+msg: 09:47:12.388{LN7.2216}
+{ln-605.0} 
+{lt2225.8} 
+msg: 09:47:12.394{LA14}
+{la 0.05}
+msg: 09:47:12.519{D2}
+Odo:     0.0, speed:    0
+{v  10}
+hdg:  31, bias: 104
+hdg:  30, bias: 104
+hdg:  31, bias: 104
+msg: 09:47:13.399{LT21.9650}
+msg: 09:47:13.409{LN7.2216}
+{ln-605.0} 
+{lt2225.8} 
+prevAV: [-604.96, 2225.78]
+posAV : [-604.96, 2225.78]
+GPS not updating ===============
+msg: 09:47:13.416{LA14}
+{la 0.05}
+hdg:  32, bias: 104
+msg: 09:47:14.436{LT21.9737}
+msg: 09:47:14.447{LN7.2173}
+{ln-604.6} 
+{lt2226.7} 
+msg: 09:47:14.453{LA14}
+{la 0.05}
+msg: 09:47:14.457{D2}
+Odo:     0.3, speed:   10
+{v  20}
+hdg:  31, bias: 104
+hdg:  32, bias: 104
+hdg:  31, bias: 104
+hdg:  32, bias: 104
+msg: 09:47:15.453{LT21.9820}
+msg: 09:47:15.465{LN7.2130}
+{ln-604.2} 
+{lt2227.5} 
+msg: 09:47:15.470{LA14}
+{la 0.05}
+hdg:  31, bias: 104
+hdg:  30, bias: 104
+hdg:  31, bias: 104
+msg: 09:47:16.479{LT21.9910}
+msg: 09:47:16.489{LN7.2083}
+{ln-603.8} 
+{lt2228.4} 
+msg: 09:47:16.496{LA14}
+{la 0.05}
+hdg:  30, bias: 104
+msg: 09:47:17.458{D1}
+{s  -1}
+msg: 09:47:17.497{LT22.0007}
+msg: 09:47:17.508{LN7.2029}
+{ln-603.4} 
+{lt2229.4} 
+msg: 09:47:17.514{LA14}
+{la 0.05}
+msg: 09:47:17.645{D4}
+{s  -6}
+hdg:  29, bias: 104
+hdg:  28, bias: 104
+hdg:  27, bias: 104
+hdg:  26, bias: 104
+hdg:  25, bias: 104
+msg: 09:47:18.516{LT22.0090}
+msg: 09:47:18.527{LN7.1978}
+{ln-603.0} 
+{lt2230.2} 
+msg: 09:47:18.533{LA14}
+{la 0.05}
+hdg:  24, bias: 104
+msg: 09:47:18.664{D1}
+{s  -7}
+hdg:  23, bias: 104
+msg: 09:47:18.845{D4}
+{s -12}
+hdg:  22, bias: 104
+hdg:  21, bias: 104
+hdg:  20, bias: 104
+hdg:  19, bias: 104
+hdg:  18, bias: 104
+hdg:  17, bias: 104
+hdg:  16, bias: 104
+hdg:  15, bias: 104
+msg: 09:47:19.542{LT22.0176}
+msg: 09:47:19.552{LN7.1942}
+{ln-602.7} 
+{lt2231.1} 
+msg: 09:47:19.558{LA14}
+{la 0.05}
+hdg:  14, bias: 104
+hdg:  13, bias: 104
+hdg:  12, bias: 104
+hdg:  11, bias: 104
+hdg:  10, bias: 104
+hdg:   9, bias: 104
+hdg:   8, bias: 104
+hdg:   7, bias: 104
+hdg:   6, bias: 104
+hdg:   5, bias: 104
+hdg:   4, bias: 104
+hdg:   3, bias: 104
+msg: 09:47:20.560{LT22.0262}
+msg: 09:47:20.570{LN7.1921}
+{ln-602.5} 
+{lt2232.0} 
+msg: 09:47:20.577{LA14}
+{la 0.05}
+hdg:   2, bias: 104
+hdg:   1, bias: 104
+hdg:   0, bias: 104
+hdg: 359, bias: 104
+hdg: 358, bias: 104
+hdg: 357, bias: 104
+hdg: 356, bias: 104
+hdg: 355, bias: 104
+hdg: 354, bias: 104
+hdg: 353, bias: 104
+hdg: 352, bias: 104
+hdg: 351, bias: 104
+hdg: 350, bias: 104
+msg: 09:47:21.589{LT22.0356}
+msg: 09:47:21.600{LN7.1932}
+{ln-602.6} 
+{lt2232.9} 
+msg: 09:47:21.605{LA14}
+{la 0.05}
+hdg: 349, bias: 104
+hdg: 348, bias: 104
+hdg: 347, bias: 104
+hdg: 346, bias: 104
+hdg: 345, bias: 104
+hdg: 344, bias: 104
+hdg: 343, bias: 104
+hdg: 342, bias: 104
+hdg: 341, bias: 104
+hdg: 340, bias: 104
+hdg: 339, bias: 104
+hdg: 338, bias: 104
+hdg: 337, bias: 104
+msg: 09:47:22.605{LT22.0450}
+msg: 09:47:22.614{LN7.1960}
+{ln-602.8} 
+{lt2233.9} 
+msg: 09:47:22.621{LA14}
+{la 0.05}
+hdg: 336, bias: 104
+hdg: 335, bias: 104
+hdg: 334, bias: 104
+hdg: 333, bias: 104
+hdg: 332, bias: 104
+hdg: 331, bias: 104
+hdg: 330, bias: 104
+hdg: 329, bias: 104
+hdg: 328, bias: 104
+hdg: 327, bias: 104
+hdg: 326, bias: 104
+hdg: 325, bias: 104
+hdg: 324, bias: 104
+msg: 09:47:23.633{LT22.0522}
+msg: 09:47:23.644{LN7.2018}
+{ln-603.3} 
+{lt2234.6} 
+msg: 09:47:23.649{LA14}
+{la 0.05}
+hdg: 323, bias: 104
+hdg: 322, bias: 104
+hdg: 321, bias: 104
+hdg: 320, bias: 104
+hdg: 319, bias: 104
+hdg: 318, bias: 104
+hdg: 317, bias: 104
+hdg: 316, bias: 104
+hdg: 315, bias: 104
+hdg: 314, bias: 104
+hdg: 313, bias: 104
+hdg: 312, bias: 104
+msg: 09:47:24.647{LT22.0583}
+msg: 09:47:24.658{LN7.2076}
+{ln-603.8} 
+{lt2235.2} 
+msg: 09:47:24.664{LA14}
+{la 0.05}
+hdg: 311, bias: 104
+hdg: 310, bias: 104
+hdg: 309, bias: 104
+hdg: 308, bias: 104
+hdg: 307, bias: 104
+hdg: 306, bias: 104
+hdg: 305, bias: 104
+hdg: 304, bias: 104
+hdg: 303, bias: 104
+hdg: 302, bias: 104
+hdg: 301, bias: 104
+hdg: 300, bias: 104
+hdg: 299, bias: 104
+msg: 09:47:25.677{LT22.0633}
+msg: 09:47:25.688{LN7.2148}
+{ln-604.4} 
+{lt2235.7} 
+msg: 09:47:25.693{LA14}
+{la 0.05}
+hdg: 298, bias: 104
+hdg: 297, bias: 104
+hdg: 295, bias: 104
+hdg: 294, bias: 104
+hdg: 293, bias: 104
+hdg: 292, bias: 104
+hdg: 291, bias: 104
+hdg: 290, bias: 104
+hdg: 289, bias: 104
+hdg: 288, bias: 104
+hdg: 287, bias: 104
+hdg: 286, bias: 104
+msg: 09:47:26.692{LT22.0680}
+msg: 09:47:26.702{LN7.2256}
+{ln-605.3} 
+{lt2236.2} 
+msg: 09:47:26.710{LA14}
+{la 0.05}
+hdg: 285, bias: 104
+hdg: 284, bias: 104
+msg: 09:47:26.861{F03}
+startwp, dist 76,  3.49 
+route: 76
+route: 28
+route: 30
+route: 29
+route: 31
+route: 27
+route: 28
+route: 0
+route: 0
+track start======================================: [-605.30, 2236.22]
+wpt: 76 -605.05, 2232.74
+track: [   0.25,   -3.48]
+new wpt az set to 175
+adjusting steer to meet az -108
+{s-108}
+adjusting steer to meet az -107
+hdg: 283, bias: 104
+{s-107}
+adjusting steer to meet az -105
+hdg: 281, bias: 104
+{s-105}
+adjusting steer to meet az -104
+hdg: 280, bias: 104
+{s-104}
+adjusting steer to meet az -103
+hdg: 279, bias: 104
+{s-103}
+adjusting steer to meet az -102
+hdg: 278, bias: 104
+{s-102}
+adjusting steer to meet az -101
+hdg: 277, bias: 104
+{s-101}
+adjusting steer to meet az -100
+hdg: 276, bias: 104
+{s-100}
+adjusting steer to meet az -99
+hdg: 275, bias: 104
+{s -99}
+adjusting steer to meet az -98
+hdg: 274, bias: 104
+{s -98}
+adjusting steer to meet az -97
+hdg: 273, bias: 104
+{s -97}
+adjusting steer to meet az -95
+hdg: 271, bias: 104
+{s -95}
+adjusting steer to meet az -94
+hdg: 270, bias: 104
+{s -94}
+adjusting steer to meet az -93
+hdg: 269, bias: 104
+{s -93}
+adjusting steer to meet az -92
+hdg: 268, bias: 104
+{s -92}
+msg: 09:47:27.712{LT22.0694}
+msg: 09:47:27.722{LN7.2360}
+adjusting steer to meet az -90
+hdg: 266, bias: 104
+{s -90}
+msg: 09:47:27.740{LA14}
+{la 0.05}
+adjusting steer to meet az -89
+hdg: 265, bias: 104
+{s -89}
+adjusting steer to meet az -88
+hdg: 264, bias: 104
+{s -88}
+adjusting steer to meet az -87
+hdg: 263, bias: 104
+{s -87}
+posAV: [-606.17, 2236.36]
+wpt: 76 raw hdg:  263.0
+raw speed:  0.31
+Kalman pos vec: [  -0.31,    0.08]
+filtered E-N pos: : [-605.61, 2236.30]
+Filtered hdg:  263.0
+Filtered speed:   0.31
+aiming vector: [   0.25,   -3.48]
+Kalman az set to 175
+{d  3.6} 
+{c175} 
+{lx 0.00} 
+{la 0.05} 
+Odo:     4.5, speed:   20
+new hdg steering -88
+{v  15}
+{s -88}
+adjusting steer to meet az -87
+hdg: 262, bias: 104
+{s -87}
+adjusting steer to meet az -86
+hdg: 261, bias: 104
+{s -86}
+adjusting steer to meet az -84
+hdg: 259, bias: 104
+{s -84}
+adjusting steer to meet az -83
+hdg: 258, bias: 104
+{s -83}
+adjusting steer to meet az -82
+hdg: 257, bias: 104
+{s -82}
+adjusting steer to meet az -81
+hdg: 256, bias: 104
+{s -81}
+adjusting steer to meet az -80
+hdg: 255, bias: 104
+{s -80}
+adjusting steer to meet az -79
+hdg: 254, bias: 104
+{s -79}
+adjusting steer to meet az -78
+hdg: 253, bias: 104
+{s -78}
+adjusting steer to meet az -77
+hdg: 252, bias: 104
+{s -77}
+adjusting steer to meet az -76
+hdg: 251, bias: 104
+{s -76}
+adjusting steer to meet az -74
+hdg: 249, bias: 104
+{s -74}
+adjusting steer to meet az -73
+hdg: 248, bias: 104
+{s -73}
+adjusting steer to meet az -71
+hdg: 246, bias: 104
+{s -71}
+msg: 09:47:28.736{LT22.0694}
+msg: 09:47:28.747{LN7.2454}
+msg: 09:47:28.752{LA14}
+{la 0.05}
+adjusting steer to meet az -70
+hdg: 245, bias: 104
+{s -70}
+adjusting steer to meet az -69
+hdg: 244, bias: 104
+{s -69}
+adjusting steer to meet az -68
+hdg: 243, bias: 104
+{s -68}
+posAV: [-606.95, 2236.36]
+wpt: 76 raw hdg:  243.0
+raw speed:  0.24
+Kalman pos vec: [  -0.98,   -0.16]
+filtered E-N pos: : [-606.27, 2236.06]
+Filtered hdg:  243.0
+Filtered speed:   0.71
+progress vec: [   0.01,   -0.09]
+xtrack vec: [   0.98,    0.07]
+aiming vector: [   1.10,   -1.63]
+Kalman az set to 145
+{d  3.5} 
+{c145} 
+{lx 0.99} 
+{la 0.05} 
+new hdg steering -98
+{s -98}
+adjusting steer to meet az -97
+hdg: 242, bias: 104
+{s -97}
+adjusting steer to meet az -96
+hdg: 241, bias: 104
+{s -96}
+adjusting steer to meet az -95
+hdg: 240, bias: 104
+{s -95}
+msg: 09:47:29.062{Z3 |                                          |}
+msg: 09:47:29.074{Z2 0.0,6,0}
+adjusting steer to meet az -94
+hdg: 239, bias: 104
+{s -94}
+adjusting steer to meet az -93
+hdg: 238, bias: 104
+{s -93}
+adjusting steer to meet az -92
+hdg: 237, bias: 104
+{s -92}
+adjusting steer to meet az -91
+hdg: 236, bias: 104
+{s -91}
+adjusting steer to meet az -90
+hdg: 235, bias: 104
+{s -90}
+adjusting steer to meet az -89
+hdg: 234, bias: 104
+{s -89}
+adjusting steer to meet az -88
+hdg: 233, bias: 104
+{s -88}
+adjusting steer to meet az -87
+hdg: 232, bias: 104
+{s -87}
+adjusting steer to meet az -86
+hdg: 231, bias: 104
+{s -86}
+adjusting steer to meet az -85
+hdg: 230, bias: 104
+{s -85}
+adjusting steer to meet az -84
+hdg: 229, bias: 104
+{s -84}
+adjusting steer to meet az -83
+hdg: 228, bias: 104
+{s -83}
+adjusting steer to meet az -82
+hdg: 227, bias: 104
+{s -82}
+adjusting steer to meet az -81
+hdg: 226, bias: 104
+{s -81}
+msg: 09:47:29.758{LT22.0676}
+msg: 09:47:29.768{LN7.2511}
+msg: 09:47:29.775{LA14}
+{la 0.05}
+adjusting steer to meet az -80
+hdg: 225, bias: 104
+{s -80}
+adjusting steer to meet az -79
+hdg: 224, bias: 104
+{s -79}
+posAV: [-607.43, 2236.18]
+wpt: 76 raw hdg:  224.0
+raw speed:  0.24
+Kalman pos vec: [  -1.54,   -0.52]
+filtered E-N pos: : [-606.84, 2235.70]
+Filtered hdg:  224.0
+Filtered speed:   0.49
+progress vec: [   0.03,   -0.41]
+xtrack vec: [   1.57,    0.11]
+aiming vector: [   1.68,   -1.43]
+Kalman az set to 130
+{d  3.5} 
+{c130} 
+{lx 1.58} 
+{la 0.05} 
+new hdg steering -94
+{s -94}
+adjusting steer to meet az -93
+hdg: 223, bias: 104
+{s -93}
+adjusting steer to meet az -92
+hdg: 222, bias: 104
+{s -92}
+adjusting steer to meet az -91
+hdg: 221, bias: 104
+{s -91}
+adjusting steer to meet az -90
+hdg: 220, bias: 104
+{s -90}
+adjusting steer to meet az -89
+hdg: 219, bias: 104
+{s -89}
+adjusting steer to meet az -88
+hdg: 218, bias: 104
+{s -88}
+adjusting steer to meet az -87
+hdg: 217, bias: 104
+{s -87}
+adjusting steer to meet az -86
+hdg: 216, bias: 104
+{s -86}
+adjusting steer to meet az -85
+hdg: 215, bias: 104
+{s -85}
+adjusting steer to meet az -84
+hdg: 214, bias: 104
+{s -84}
+adjusting steer to meet az -83
+hdg: 213, bias: 104
+{s -83}
+adjusting steer to meet az -82
+hdg: 212, bias: 104
+{s -82}
+adjusting steer to meet az -81
+hdg: 211, bias: 104
+{s -81}
+adjusting steer to meet az -80
+hdg: 210, bias: 104
+{s -80}
+adjusting steer to meet az -79
+hdg: 209, bias: 104
+{s -79}
+adjusting steer to meet az -78
+hdg: 208, bias: 104
+{s -78}
+adjusting steer to meet az -77
+hdg: 207, bias: 104
+{s -77}
+adjusting steer to meet az -76
+hdg: 206, bias: 104
+{s -76}
+msg: 09:47:30.786{LT22.0640}
+msg: 09:47:30.795{LN7.2562}
+msg: 09:47:30.802{LA14}
+{la 0.05}
+adjusting steer to meet az -75
+hdg: 205, bias: 104
+{s -75}
+posAV: [-607.86, 2235.81]
+wpt: 76 raw hdg:  205.0
+raw speed:  0.24
+Kalman pos vec: [  -1.88,   -0.79]
+filtered E-N pos: : [-607.18, 2235.43]
+Filtered hdg:  205.0
+Filtered speed:   0.25
+progress vec: [   0.05,   -0.65]
+xtrack vec: [   1.93,    0.14]
+aiming vector: [   2.03,   -1.28]
+Kalman az set to 122
+{d  3.4} 
+{c122} 
+{lx 1.93} 
+{la 0.05} 
+new hdg steering -83
+{s -83}
+adjusting steer to meet az -82
+hdg: 204, bias: 104
+{s -82}
+adjusting steer to meet az -81
+hdg: 203, bias: 104
+{s -81}
+adjusting steer to meet az -80
+hdg: 202, bias: 104
+{s -80}
+adjusting steer to meet az -79
+hdg: 201, bias: 104
+{s -79}
+adjusting steer to meet az -78
+hdg: 200, bias: 104
+{s -78}
+adjusting steer to meet az -77
+hdg: 199, bias: 104
+{s -77}
+msg: 09:47:31.215{Z3 |   -xxXXXX+.+X#XX+                        |}
+msg: 09:47:31.228{Z2 0.0,0,0}
+msg: 09:47:31.244{S1P 8.5,-3,14}
+adjusting steer to meet az -76
+hdg: 198, bias: 104
+{s -76}
+adjusting steer to meet az -75
+hdg: 197, bias: 104
+{s -75}
+adjusting steer to meet az -74
+hdg: 196, bias: 104
+{s -74}
+adjusting steer to meet az -73
+hdg: 195, bias: 104
+{s -73}
+adjusting steer to meet az -72
+hdg: 194, bias: 104
+{s -72}
+adjusting steer to meet az -71
+hdg: 193, bias: 104
+{s -71}
+adjusting steer to meet az -70
+hdg: 192, bias: 104
+{s -70}
+adjusting steer to meet az -69
+hdg: 191, bias: 104
+{s -69}
+adjusting steer to meet az -68
+hdg: 190, bias: 104
+{s -68}
+adjusting steer to meet az -67
+hdg: 189, bias: 104
+{s -67}
+adjusting steer to meet az -66
+hdg: 188, bias: 104
+{s -66}
+adjusting steer to meet az -65
+hdg: 187, bias: 104
+{s -65}
+msg: 09:47:31.802{LT22.0594}
+msg: 09:47:31.812{LN7.2594}
+msg: 09:47:31.818{LA14}
+{la 0.05}
+adjusting steer to meet az -64
+hdg: 186, bias: 104
+{s -64}
+adjusting steer to meet az -63
+hdg: 185, bias: 104
+{s -63}
+posAV: [-608.13, 2235.35]
+wpt: 76 raw hdg:  185.0
+raw speed:  0.24
+Kalman pos vec: [  -2.14,   -1.02]
+filtered E-N pos: : [-607.43, 2235.21]
+Filtered hdg:  185.0
+Filtered speed:   0.16
+progress vec: [   0.06,   -0.86]
+xtrack vec: [   2.20,    0.15]
+aiming vector: [   2.26,   -0.72]
+Kalman az set to 107
+{d  3.4} 
+{c107} 
+{lx 2.20} 
+{la 0.05} 
+new hdg steering -78
+{s -78}
+adjusting steer to meet az -77
+hdg: 184, bias: 104
+{s -77}
+adjusting steer to meet az -76
+hdg: 183, bias: 104
+{s -76}
+adjusting steer to meet az -75
+hdg: 182, bias: 104
+{s -75}
+adjusting steer to meet az -74
+hdg: 181, bias: 104
+{s -74}
+adjusting steer to meet az -73
+hdg: 180, bias: 104
+{s -73}
+adjusting steer to meet az -72
+hdg: 179, bias: 104
+{s -72}
+adjusting steer to meet az -71
+hdg: 178, bias: 104
+{s -71}
+adjusting steer to meet az -70
+hdg: 177, bias: 104
+{s -70}
+adjusting steer to meet az -69
+hdg: 176, bias: 104
+{s -69}
+adjusting steer to meet az -68
+hdg: 175, bias: 104
+{s -68}
+adjusting steer to meet az -67
+hdg: 174, bias: 104
+{s -67}
+adjusting steer to meet az -66
+hdg: 173, bias: 104
+{s -66}
+adjusting steer to meet az -65
+hdg: 172, bias: 104
+{s -65}
+adjusting steer to meet az -64
+hdg: 171, bias: 104
+{s -64}
+adjusting steer to meet az -63
+hdg: 170, bias: 104
+{s -63}
+adjusting steer to meet az -62
+hdg: 169, bias: 104
+{s -62}
+adjusting steer to meet az -61
+hdg: 168, bias: 104
+{s -61}
+msg: 09:47:32.832{LT22.0543}
+msg: 09:47:32.840{LN7.2608}
+msg: 09:47:32.846{LA14}
+{la 0.05}
+adjusting steer to meet az -60
+hdg: 167, bias: 104
+{s -60}
+posAV: [-608.24, 2234.83]
+wpt: 76 raw hdg:  167.0
+raw speed:  0.24
+Kalman pos vec: [  -2.32,   -1.30]
+filtered E-N pos: : [-607.61, 2234.92]
+Filtered hdg:  167.0
+Filtered speed:   0.18
+progress vec: [   0.08,   -1.14]
+xtrack vec: [   2.40,    0.17]
+aiming vector: [   2.45,   -0.61]
+Kalman az set to 104
+{d  3.4} 
+{c104} 
+{lx 2.40} 
+{la 0.05} 
+new hdg steering -63
+{s -63}
+adjusting steer to meet az -62
+hdg: 166, bias: 104
+{s -62}
+adjusting steer to meet az -61
+hdg: 165, bias: 104
+{s -61}
+adjusting steer to meet az -60
+hdg: 164, bias: 104
+{s -60}
+adjusting steer to meet az -59
+hdg: 163, bias: 104
+{s -59}
+adjusting steer to meet az -58
+hdg: 162, bias: 104
+{s -58}
+adjusting steer to meet az -57
+hdg: 161, bias: 104
+{s -57}
+adjusting steer to meet az -56
+hdg: 160, bias: 104
+{s -56}
+adjusting steer to meet az -55
+hdg: 159, bias: 104
+{s -55}
+msg: 09:47:33.386{Z3 |                                          |}
+msg: 09:47:33.399{Z2 1.0,2,0}
+adjusting steer to meet az -54
+hdg: 158, bias: 104
+{s -54}
+adjusting steer to meet az -53
+hdg: 157, bias: 104
+{s -53}
+adjusting steer to meet az -52
+hdg: 156, bias: 104
+{s -52}
+adjusting steer to meet az -51
+hdg: 155, bias: 104
+{s -51}
+adjusting steer to meet az -50
+hdg: 154, bias: 104
+{s -50}
+adjusting steer to meet az -49
+hdg: 153, bias: 104
+{s -49}
+adjusting steer to meet az -48
+hdg: 152, bias: 104
+{s -48}
+adjusting steer to meet az -47
+hdg: 151, bias: 104
+{s -47}
+adjusting steer to meet az -46
+hdg: 150, bias: 104
+{s -46}
+adjusting steer to meet az -45
+hdg: 149, bias: 104
+{s -45}
+msg: 09:47:33.848{LT22.0489}
+msg: 09:47:33.859{LN7.2601}
+msg: 09:47:33.865{LA14}
+{la 0.05}
+posAV: [-608.19, 2234.28]
+wpt: 76 raw hdg:  149.0
+raw speed:  0.24
+Kalman pos vec: [  -2.38,   -1.67]
+filtered E-N pos: : [-607.67, 2234.55]
+Filtered hdg:  149.0
+Filtered speed:   0.22
+progress vec: [   0.11,   -1.50]
+xtrack vec: [   2.48,    0.17]
+aiming vector: [   2.53,   -0.49]
+Kalman az set to 100
+{d  3.2} 
+{c100} 
+{lx 2.49} 
+{la 0.05} 
+new hdg steering -49
+{s -49}
+adjusting steer to meet az -48
+hdg: 148, bias: 104
+{s -48}
+adjusting steer to meet az -47
+hdg: 147, bias: 104
+{s -47}
+adjusting steer to meet az -46
+hdg: 146, bias: 104
+{s -46}
+adjusting steer to meet az -45
+hdg: 145, bias: 104
+{s -45}
+adjusting steer to meet az -44
+hdg: 144, bias: 104
+{s -44}
+adjusting steer to meet az -43
+hdg: 143, bias: 104
+{s -43}
+adjusting steer to meet az -42
+hdg: 142, bias: 104
+{s -42}
+adjusting steer to meet az -41
+hdg: 141, bias: 104
+{s -41}
+adjusting steer to meet az -40
+hdg: 140, bias: 104
+{s -40}
+adjusting steer to meet az -39
+hdg: 139, bias: 104
+{s -39}
+adjusting steer to meet az -38
+hdg: 138, bias: 104
+{s -38}
+adjusting steer to meet az -37
+hdg: 137, bias: 104
+{s -37}
+adjusting steer to meet az -36
+hdg: 136, bias: 104
+{s -36}
+adjusting steer to meet az -35
+hdg: 135, bias: 104
+{s -35}
+adjusting steer to meet az -34
+hdg: 134, bias: 104
+{s -34}
+adjusting steer to meet az -33
+hdg: 133, bias: 104
+{s -33}
+adjusting steer to meet az -32
+hdg: 132, bias: 104
+{s -32}
+adjusting steer to meet az -31
+hdg: 131, bias: 104
+{s -31}
+adjusting steer to meet az -30
+hdg: 130, bias: 104
+{s -30}
+adjusting steer to meet az -29
+hdg: 129, bias: 104
+{s -29}
+msg: 09:47:34.880{LT22.0439}
+msg: 09:47:34.886{LN7.2565}
+estAV: [-608.03, 2233.96]
+gps repeat position
+Dead Reconning =========================
+wpt: 76 raw hdg:  129.0
+raw speed:  0.24
+Kalman pos vec: [  -2.38,   -1.94]
+filtered E-N pos: : [-607.68, 2234.28]
+Filtered hdg:  129.0
+Filtered speed:   0.15
+progress vec: [   0.12,   -1.76]
+xtrack vec: [   2.51,    0.18]
+aiming vector: [   2.55,   -0.40]
+Kalman az set to 98
+{d  3.0} 
+{c 98} 
+{lx 2.52} 
+{la 0.05} 
+new hdg steering -31
+{s -31}
+msg: 09:47:34.919{LA14}
+{la 0.05}
+adjusting steer to meet az -30
+hdg: 128, bias: 104
+{s -30}
+adjusting steer to meet az -29
+hdg: 127, bias: 104
+{s -29}
+adjusting steer to meet az -28
+hdg: 126, bias: 104
+{s -28}
+adjusting steer to meet az -27
+hdg: 125, bias: 104
+{s -27}
+adjusting steer to meet az -26
+hdg: 124, bias: 104
+{s -26}
+adjusting steer to meet az -25
+hdg: 123, bias: 104
+{s -25}
+adjusting steer to meet az -24
+hdg: 122, bias: 104
+{s -24}
+adjusting steer to meet az -23
+hdg: 121, bias: 104
+{s -23}
+adjusting steer to meet az -22
+hdg: 120, bias: 104
+{s -22}
+adjusting steer to meet az -21
+hdg: 119, bias: 104
+{s -21}
+msg: 09:47:35.538{Z3 |                 .-++        -X+          |}
+msg: 09:47:35.551{Z2 0.0,4,0}
+msg: 09:47:35.565{S1P 9.0,0,3}
+adjusting steer to meet az -20
+hdg: 118, bias: 104
+{s -20}
+adjusting steer to meet az -19
+hdg: 117, bias: 104
+{s -19}
+adjusting steer to meet az -18
+hdg: 116, bias: 104
+{s -18}
+adjusting steer to meet az -17
+hdg: 115, bias: 104
+{s -17}
+estAV: [-608.13, 2234.17]
+gps tardy
+Dead Reconning =========================
+wpt: 76 raw hdg:  115.0
+raw speed:  0.24
+Kalman pos vec: [  -2.61,   -1.92]
+filtered E-N pos: : [-607.90, 2234.30]
+Filtered hdg:  115.0
+Filtered speed:  -0.06
+progress vec: [   0.12,   -1.73]
+xtrack vec: [   2.73,    0.19]
+aiming vector: [   2.77,   -0.39]
+Kalman az set to 98
+{d  3.3} 
+{c 98} 
+{lx 2.74} 
+{la 0.05} 
+new hdg steering -17
+msg: 09:47:35.919{LT22.0399}
+msg: 09:47:35.920{LN7.2508}
+msg: 09:47:35.921{LA14}
+{la 0.05}
+adjusting steer to meet az -16
+hdg: 114, bias: 104
+{s -16}
+adjusting steer to meet az -15
+hdg: 113, bias: 104
+{s -15}
+adjusting steer to meet az -14
+hdg: 112, bias: 104
+{s -14}
+adjusting steer to meet az -13
+hdg: 111, bias: 104
+{s -13}
+adjusting steer to meet az -12
+hdg: 110, bias: 104
+{s -12}
+adjusting steer to meet az -11
+hdg: 109, bias: 104
+{s -11}
+adjusting steer to meet az -10
+hdg: 108, bias: 104
+{s -10}
+adjusting steer to meet az -9
+hdg: 107, bias: 104
+{s  -9}
+adjusting steer to meet az -8
+hdg: 106, bias: 104
+{s  -8}
+adjusting steer to meet az -7
+hdg: 105, bias: 104
+{s  -7}
+posAV: [-607.41, 2233.37]
+wpt: 76 raw hdg:  105.0
+raw speed:  0.24
+Kalman pos vec: [  -2.05,   -2.29]
+filtered E-N pos: : [-607.35, 2233.93]
+Filtered hdg:  105.0
+Filtered speed:   0.45
+progress vec: [   0.15,   -2.13]
+xtrack vec: [   2.20,    0.16]
+aiming vector: [   2.23,   -0.29]
+Kalman az set to 97
+{d  2.6} 
+{c 97} 
+{lx 2.21} 
+{la 0.05} 
+new hdg steering -8
+{s  -8}
+msg: 09:47:36.920{LT22.0374}
+msg: 09:47:36.930{LN7.2428}
+msg: 09:47:36.937{LA14}
+{la 0.05}
+adjusting steer to meet az -7
+hdg: 104, bias: 104
+{s  -7}
+adjusting steer to meet az -6
+hdg: 103, bias: 104
+{s  -6}
+adjusting steer to meet az -5
+hdg: 102, bias: 104
+{s  -5}
+adjusting steer to meet az -4
+hdg: 101, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg: 100, bias: 104
+{s  -3}
+msg: 09:47:37.693{Z3 |                                          |}
+msg: 09:47:37.705{Z2-5.0,0,0}
+posAV: [-606.74, 2233.12]
+wpt: 76 raw hdg:  100.0
+raw speed:  0.24
+Kalman pos vec: [  -1.45,   -2.55]
+filtered E-N pos: : [-606.75, 2233.67]
+Filtered hdg:  100.0
+Filtered speed:   0.46
+progress vec: [   0.17,   -2.44]
+xtrack vec: [   1.62,    0.11]
+aiming vector: [   1.66,   -0.41]
+Kalman az set to 103
+{d  1.9} 
+{c103} 
+{lx 1.63} 
+{la 0.05} 
+close to waypoint
+Odo:     6.9, speed:   15
+resuming to   20
+track start======================================: [-605.05, 2232.74]
+wpt: 28 -624.85, 2235.41
+track: [ -19.80,    2.67]
+new wpt az set to 277
+new hdg steering 177
+{v  20}
+{s 177}
+msg: 09:47:37.939{LT22.0360}
+msg: 09:47:37.950{LN7.2335}
+msg: 09:47:37.956{LA14}
+{la 0.05}
+adjusting steer to meet az 178
+hdg:  99, bias: 104
+{s 178}
+adjusting steer to meet az 177
+hdg: 100, bias: 104
+{s 177}
+adjusting steer to meet az 176
+hdg: 101, bias: 104
+{s 176}
+adjusting steer to meet az 175
+hdg: 102, bias: 104
+{s 175}
+adjusting steer to meet az 174
+hdg: 103, bias: 104
+{s 174}
+adjusting steer to meet az 173
+hdg: 104, bias: 104
+{s 173}
+adjusting steer to meet az 172
+hdg: 105, bias: 104
+{s 172}
+adjusting steer to meet az 171
+hdg: 106, bias: 104
+{s 171}
+adjusting steer to meet az 170
+hdg: 107, bias: 104
+{s 170}
+adjusting steer to meet az 169
+hdg: 108, bias: 104
+{s 169}
+adjusting steer to meet az 168
+hdg: 109, bias: 104
+{s 168}
+adjusting steer to meet az 167
+hdg: 110, bias: 104
+{s 167}
+adjusting steer to meet az 166
+hdg: 111, bias: 104
+{s 166}
+adjusting steer to meet az 165
+hdg: 112, bias: 104
+{s 165}
+posAV: [-605.96, 2232.98]
+wpt: 28 raw hdg:  112.0
+raw speed:  0.31
+Kalman pos vec: [  -1.37,    0.32]
+filtered E-N pos: : [-606.42, 2233.06]
+Filtered hdg:  112.0
+Filtered speed:   0.31
+progress vec: [  -1.39,    0.19]
+xtrack vec: [  -0.02,   -0.14]
+aiming vector: [  -9.22,    1.10]
+Kalman az set to 276
+{d 18.6} 
+{c276} 
+{lx 0.14} 
+{la 0.05} 
+new hdg steering 164
+{s 164}
+adjusting steer to meet az 163
+hdg: 113, bias: 104
+{s 163}
+msg: 09:47:38.966{LT22.0352}
+msg: 09:47:38.975{LN7.2238}
+msg: 09:47:38.982{LA14}
+{la 0.05}
+adjusting steer to meet az 162
+hdg: 114, bias: 104
+{s 162}
+adjusting steer to meet az 161
+hdg: 115, bias: 104
+{s 161}
+adjusting steer to meet az 160
+hdg: 116, bias: 104
+{s 160}
+adjusting steer to meet az 159
+hdg: 117, bias: 104
+{s 159}
+adjusting steer to meet az 158
+hdg: 118, bias: 104
+{s 158}
+adjusting steer to meet az 157
+hdg: 119, bias: 104
+{s 157}
+adjusting steer to meet az 156
+hdg: 120, bias: 104
+{s 156}
+adjusting steer to meet az 155
+hdg: 121, bias: 104
+{s 155}
+adjusting steer to meet az 154
+hdg: 122, bias: 104
+{s 154}
+adjusting steer to meet az 152
+hdg: 124, bias: 104
+{s 152}
+adjusting steer to meet az 151
+hdg: 125, bias: 104
+{s 151}
+adjusting steer to meet az 150
+hdg: 126, bias: 104
+{s 150}
+adjusting steer to meet az 149
+hdg: 127, bias: 104
+{s 149}
+adjusting steer to meet az 148
+hdg: 128, bias: 104
+{s 148}
+adjusting steer to meet az 146
+hdg: 130, bias: 104
+{s 146}
+msg: 09:47:39.842{Z3 |                                          |}
+msg: 09:47:39.855{Z2-3.0,2,0}
+adjusting steer to meet az 145
+hdg: 131, bias: 104
+{s 145}
+adjusting steer to meet az 144
+hdg: 132, bias: 104
+{s 144}
+adjusting steer to meet az 142
+hdg: 134, bias: 104
+{s 142}
+posAV: [-605.14, 2232.90]
+wpt: 28 raw hdg:  134.0
+raw speed:  0.31
+Kalman pos vec: [  -0.80,   -0.05]
+filtered E-N pos: : [-605.85, 2232.69]
+Filtered hdg:  133.0
+Filtered speed:   0.68
+progress vec: [  -0.78,    0.11]
+xtrack vec: [   0.02,    0.15]
+aiming vector: [  -9.49,    1.43]
+Kalman az set to 278
+{d 19.2} 
+{c278} 
+{lx 0.15} 
+{la 0.05} 
+new hdg steering 144
+{s 144}
+adjusting steer to meet az 143
+hdg: 135, bias: 104
+{s 143}
+msg: 09:47:39.982{LT22.0349}
+msg: 09:47:39.993{LN7.2162}
+msg: 09:47:39.999{LA14}
+{la 0.05}
+adjusting steer to meet az 142
+hdg: 136, bias: 104
+{s 142}
+adjusting steer to meet az 141
+hdg: 137, bias: 104
+{s 141}
+adjusting steer to meet az 139
+hdg: 139, bias: 104
+{s 139}
+adjusting steer to meet az 138
+hdg: 140, bias: 104
+{s 138}
+adjusting steer to meet az 137
+hdg: 141, bias: 104
+{s 137}
+adjusting steer to meet az 135
+hdg: 143, bias: 104
+{s 135}
+adjusting steer to meet az 134
+hdg: 144, bias: 104
+{s 134}
+adjusting steer to meet az 133
+hdg: 145, bias: 104
+{s 133}
+adjusting steer to meet az 132
+hdg: 146, bias: 104
+{s 132}
+adjusting steer to meet az 131
+hdg: 147, bias: 104
+{s 131}
+adjusting steer to meet az 129
+hdg: 149, bias: 104
+{s 129}
+adjusting steer to meet az 128
+hdg: 150, bias: 104
+{s 128}
+adjusting steer to meet az 127
+hdg: 151, bias: 104
+{s 127}
+adjusting steer to meet az 126
+hdg: 152, bias: 104
+{s 126}
+adjusting steer to meet az 125
+hdg: 153, bias: 104
+{s 125}
+adjusting steer to meet az 124
+hdg: 154, bias: 104
+{s 124}
+adjusting steer to meet az 122
+hdg: 156, bias: 104
+{s 122}
+adjusting steer to meet az 121
+hdg: 157, bias: 104
+{s 121}
+adjusting steer to meet az 120
+hdg: 158, bias: 104
+{s 120}
+posAV: [-604.51, 2232.87]
+wpt: 28 raw hdg:  158.0
+raw speed:  0.31
+Kalman pos vec: [  -0.44,   -0.37]
+filtered E-N pos: : [-605.49, 2232.37]
+Filtered hdg:  157.0
+Filtered speed:   0.35
+progress vec: [  -0.38,    0.05]
+xtrack vec: [   0.06,    0.42]
+aiming vector: [  -9.65,    1.73]
+Kalman az set to 280
+{d 19.6} 
+{c280} 
+{lx 0.43} 
+{la 0.05} 
+new hdg steering 122
+{s 122}
+adjusting steer to meet az 120
+hdg: 160, bias: 104
+{s 120}
+msg: 09:47:41.002{LT22.0316}
+msg: 09:47:41.012{LN7.2086}
+msg: 09:47:41.019{LA14}
+{la 0.05}
+adjusting steer to meet az 119
+hdg: 161, bias: 104
+{s 119}
+adjusting steer to meet az 118
+hdg: 162, bias: 104
+{s 118}
+adjusting steer to meet az 117
+hdg: 163, bias: 104
+{s 117}
+adjusting steer to meet az 116
+hdg: 164, bias: 104
+{s 116}
+adjusting steer to meet az 115
+hdg: 165, bias: 104
+{s 115}
+adjusting steer to meet az 114
+hdg: 166, bias: 104
+{s 114}
+adjusting steer to meet az 112
+hdg: 168, bias: 104
+{s 112}
+adjusting steer to meet az 111
+hdg: 169, bias: 104
+{s 111}
+adjusting steer to meet az 110
+hdg: 170, bias: 104
+{s 110}
+adjusting steer to meet az 108
+hdg: 172, bias: 104
+{s 108}
+adjusting steer to meet az 107
+hdg: 173, bias: 104
+{s 107}
+adjusting steer to meet az 106
+hdg: 174, bias: 104
+{s 106}
+adjusting steer to meet az 105
+hdg: 175, bias: 104
+{s 105}
+adjusting steer to meet az 103
+hdg: 177, bias: 104
+{s 103}
+adjusting steer to meet az 102
+hdg: 178, bias: 104
+{s 102}
+adjusting steer to meet az 101
+hdg: 179, bias: 104
+{s 101}
+adjusting steer to meet az 100
+hdg: 180, bias: 104
+{s 100}
+adjusting steer to meet az 98
+hdg: 182, bias: 104
+{s  98}
+adjusting steer to meet az 97
+hdg: 183, bias: 104
+{s  97}
+posAV: [-603.87, 2232.53]
+wpt: 28 raw hdg:  183.0
+raw speed:  0.31
+Kalman pos vec: [  -0.13,   -0.45]
+filtered E-N pos: : [-605.18, 2232.29]
+Filtered hdg:  182.0
+Filtered speed:  -0.01
+progress vec: [  -0.07,    0.01]
+xtrack vec: [   0.06,    0.46]
+aiming vector: [  -9.80,    1.79]
+Kalman az set to 280
+{d 19.9} 
+{c280} 
+{lx 0.46} 
+{la 0.05} 
+new hdg steering 97
+msg: 09:47:41.989{Z3 |       X@@@@@@@@   . -XXX###@@       X    |}
+msg: 09:47:42.002{Z2-6.0,4,0}
+msg: 09:47:42.016{S1P 5.1,-7,6}
+adjusting steer to meet az 96
+hdg: 184, bias: 104
+{s  96}
+adjusting steer to meet az 95
+hdg: 185, bias: 104
+{s  95}
+msg: 09:47:42.046{LT22.0262}
+msg: 09:47:42.048{LN7.2036}
+msg: 09:47:42.055{LA14}
+{la 0.05}
+adjusting steer to meet az 94
+hdg: 186, bias: 104
+{s  94}
+adjusting steer to meet az 93
+hdg: 187, bias: 104
+{s  93}
+adjusting steer to meet az 92
+hdg: 188, bias: 104
+{s  92}
+adjusting steer to meet az 90
+hdg: 190, bias: 104
+{s  90}
+adjusting steer to meet az 89
+hdg: 191, bias: 104
+{s  89}
+adjusting steer to meet az 88
+hdg: 192, bias: 104
+{s  88}
+adjusting steer to meet az 87
+hdg: 193, bias: 104
+{s  87}
+adjusting steer to meet az 85
+hdg: 195, bias: 104
+{s  85}
+adjusting steer to meet az 84
+hdg: 196, bias: 104
+{s  84}
+adjusting steer to meet az 83
+hdg: 197, bias: 104
+{s  83}
+adjusting steer to meet az 82
+hdg: 198, bias: 104
+{s  82}
+adjusting steer to meet az 80
+hdg: 200, bias: 104
+{s  80}
+adjusting steer to meet az 79
+hdg: 201, bias: 104
+{s  79}
+adjusting steer to meet az 78
+hdg: 202, bias: 104
+{s  78}
+adjusting steer to meet az 76
+hdg: 204, bias: 104
+{s  76}
+adjusting steer to meet az 75
+hdg: 205, bias: 104
+{s  75}
+adjusting steer to meet az 74
+hdg: 206, bias: 104
+{s  74}
+adjusting steer to meet az 73
+hdg: 207, bias: 104
+{s  73}
+posAV: [-603.45, 2231.98]
+wpt: 28 raw hdg:  207.0
+raw speed:  0.31
+Kalman pos vec: [   0.32,   -0.49]
+filtered E-N pos: : [-604.73, 2232.25]
+Filtered hdg:  206.0
+Filtered speed:  -0.15
+aiming vector: [  -9.80,    1.79]
+Kalman az set to 277
+{d 20.4} 
+{c277} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 70
+{s  70}
+adjusting steer to meet az 68
+hdg: 209, bias: 104
+{s  68}
+adjusting steer to meet az 67
+hdg: 210, bias: 104
+{s  67}
+msg: 09:47:43.046{LT22.0194}
+msg: 09:47:43.056{LN7.2014}
+msg: 09:47:43.063{LA14}
+{la 0.05}
+adjusting steer to meet az 66
+hdg: 211, bias: 104
+{s  66}
+adjusting steer to meet az 65
+hdg: 212, bias: 104
+{s  65}
+adjusting steer to meet az 63
+hdg: 214, bias: 104
+{s  63}
+adjusting steer to meet az 62
+hdg: 215, bias: 104
+{s  62}
+adjusting steer to meet az 61
+hdg: 216, bias: 104
+{s  61}
+adjusting steer to meet az 59
+hdg: 218, bias: 104
+{s  59}
+adjusting steer to meet az 58
+hdg: 219, bias: 104
+{s  58}
+adjusting steer to meet az 57
+hdg: 220, bias: 104
+{s  57}
+adjusting steer to meet az 56
+hdg: 221, bias: 104
+{s  56}
+adjusting steer to meet az 55
+hdg: 222, bias: 104
+{s  55}
+adjusting steer to meet az 53
+hdg: 224, bias: 104
+{s  53}
+adjusting steer to meet az 52
+hdg: 225, bias: 104
+{s  52}
+adjusting steer to meet az 51
+hdg: 226, bias: 104
+{s  51}
+adjusting steer to meet az 49
+hdg: 228, bias: 104
+{s  49}
+adjusting steer to meet az 48
+hdg: 229, bias: 104
+{s  48}
+adjusting steer to meet az 47
+hdg: 230, bias: 104
+{s  47}
+adjusting steer to meet az 45
+hdg: 232, bias: 104
+{s  45}
+adjusting steer to meet az 44
+hdg: 233, bias: 104
+{s  44}
+posAV: [-603.27, 2231.30]
+wpt: 28 raw hdg:  233.0
+raw speed:  0.31
+Kalman pos vec: [   0.80,   -0.71]
+filtered E-N pos: : [-604.25, 2232.03]
+Filtered hdg:  232.0
+Filtered speed:  -0.16
+aiming vector: [  -9.80,    1.79]
+Kalman az set to 277
+{d 20.9} 
+{c277} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 44
+adjusting steer to meet az 43
+hdg: 234, bias: 104
+{s  43}
+adjusting steer to meet az 42
+hdg: 235, bias: 104
+{s  42}
+adjusting steer to meet az 40
+hdg: 237, bias: 104
+{s  40}
+msg: 09:47:44.075{LT22.0126}
+msg: 09:47:44.086{LN7.2025}
+msg: 09:47:44.092{LA14}
+{la 0.05}
+adjusting steer to meet az 39
+hdg: 238, bias: 104
+{s  39}
+msg: 09:47:44.164{Z3 |                                          |}
+msg: 09:47:44.176{Z2-3.0,0,0}
+adjusting steer to meet az 38
+hdg: 239, bias: 104
+{s  38}
+adjusting steer to meet az 37
+hdg: 240, bias: 104
+{s  37}
+adjusting steer to meet az 36
+hdg: 241, bias: 104
+{s  36}
+adjusting steer to meet az 35
+hdg: 242, bias: 104
+{s  35}
+adjusting steer to meet az 33
+hdg: 244, bias: 104
+{s  33}
+adjusting steer to meet az 32
+hdg: 245, bias: 104
+{s  32}
+adjusting steer to meet az 31
+hdg: 246, bias: 104
+{s  31}
+adjusting steer to meet az 30
+hdg: 247, bias: 104
+{s  30}
+adjusting steer to meet az 29
+hdg: 248, bias: 104
+{s  29}
+adjusting steer to meet az 28
+hdg: 249, bias: 104
+{s  28}
+adjusting steer to meet az 27
+hdg: 250, bias: 104
+{s  27}
+adjusting steer to meet az 25
+hdg: 252, bias: 104
+{s  25}
+adjusting steer to meet az 24
+hdg: 253, bias: 104
+{s  24}
+adjusting steer to meet az 23
+hdg: 254, bias: 104
+{s  23}
+adjusting steer to meet az 22
+hdg: 255, bias: 104
+{s  22}
+adjusting steer to meet az 21
+hdg: 256, bias: 104
+{s  21}
+posAV: [-603.36, 2230.61]
+wpt: 28 raw hdg:  256.0
+raw speed:  0.31
+Kalman pos vec: [   1.12,   -1.11]
+filtered E-N pos: : [-603.93, 2231.63]
+Filtered hdg:  255.0
+Filtered speed:  -0.11
+aiming vector: [  -9.80,    1.79]
+Kalman az set to 277
+{d 21.3} 
+{c277} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 21
+adjusting steer to meet az 20
+hdg: 257, bias: 104
+{s  20}
+adjusting steer to meet az 19
+hdg: 258, bias: 104
+{s  19}
+adjusting steer to meet az 18
+hdg: 259, bias: 104
+{s  18}
+msg: 09:47:45.093{LT22.0068}
+msg: 09:47:45.103{LN7.2068}
+msg: 09:47:45.110{LA14}
+{la 0.05}
+adjusting steer to meet az 17
+hdg: 260, bias: 104
+{s  17}
+adjusting steer to meet az 16
+hdg: 261, bias: 104
+{s  16}
+adjusting steer to meet az 15
+hdg: 262, bias: 104
+{s  15}
+adjusting steer to meet az 14
+hdg: 263, bias: 104
+{s  14}
+adjusting steer to meet az 13
+hdg: 264, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 265, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 266, bias: 104
+{s  11}
+adjusting steer to meet az 10
+hdg: 267, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 268, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 269, bias: 104
+{s   8}
+posAV: [-603.72, 2230.02]
+wpt: 28 raw hdg:  269.0
+raw speed:  0.31
+Kalman pos vec: [   1.11,   -1.53]
+filtered E-N pos: : [-603.94, 2231.21]
+Filtered hdg:  268.0
+Filtered speed:   0.04
+aiming vector: [  -9.80,    1.79]
+Kalman az set to 277
+{d 21.3} 
+{c277} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 8
+adjusting steer to meet az 7
+hdg: 270, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg: 271, bias: 104
+{s   6}
+msg: 09:47:46.122{LT22.0032}
+msg: 09:47:46.131{LN7.2144}
+msg: 09:47:46.138{LA14}
+{la 0.05}
+adjusting steer to meet az 5
+hdg: 272, bias: 104
+{s   5}
+msg: 09:47:46.313{Z3 |@#@@@@@@@###X xXX+--                      |}
+msg: 09:47:46.326{Z2 2.0,2,0}
+adjusting steer to meet az 6
+hdg: 271, bias: 104
+{s   6}
+adjusting steer to meet az 7
+hdg: 270, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg: 271, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg: 272, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 273, bias: 104
+{s   4}
+posAV: [-604.36, 2229.65]
+wpt: 28 raw hdg:  273.0
+raw speed:  0.31
+Kalman pos vec: [   0.73,   -1.85]
+filtered E-N pos: : [-604.32, 2230.89]
+Filtered hdg:  272.0
+Filtered speed:   0.29
+aiming vector: [  -9.80,    1.79]
+Kalman az set to 277
+{d 21.0} 
+{c277} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 4
+adjusting steer to meet az 3
+hdg: 274, bias: 104
+{s   3}
+msg: 09:47:47.137{LT22.0007}
+msg: 09:47:47.148{LN7.2248}
+msg: 09:47:47.154{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg: 275, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 276, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 277, bias: 104
+{s   0}
+hdg: 276, bias: 104
+hdg: 277, bias: 104
+posAV: [-605.23, 2229.40]
+wpt: 28 raw hdg:  277.0
+raw speed:  0.31
+Kalman pos vec: [   0.05,   -2.09]
+filtered E-N pos: : [-605.00, 2230.65]
+Filtered hdg:  276.0
+Filtered speed:   0.49
+aiming vector: [  -9.80,    1.79]
+Kalman az set to 277
+{d 20.4} 
+{c277} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 0
+msg: 09:47:48.165{LT22.0003}
+msg: 09:47:48.175{LN7.2328}
+msg: 09:47:48.182{LA14}
+{la 0.05}
+hdg: 276, bias: 104
+hdg: 277, bias: 104
+msg: 09:47:48.462{Z3 | -                                        |}
+msg: 09:47:48.476{Z2 8.0,4,0}
+hdg: 276, bias: 104
+posAV: [-605.90, 2229.36]
+wpt: 28 raw hdg:  276.0
+raw speed:  0.31
+Kalman pos vec: [  -0.63,   -2.24]
+filtered E-N pos: : [-605.68, 2230.50]
+Filtered hdg:  275.0
+Filtered speed:   0.52
+progress vec: [  -0.32,    0.04]
+xtrack vec: [   0.31,    2.28]
+aiming vector: [  -6.19,    3.16]
+Kalman az set to 297
+{d 19.8} 
+{c297} 
+{lx 2.30} 
+{la 0.05} 
+new hdg steering 21
+{s  21}
+adjusting steer to meet az 20
+hdg: 277, bias: 104
+{s  20}
+adjusting steer to meet az 19
+hdg: 278, bias: 104
+{s  19}
+msg: 09:47:49.184{LT22.0003}
+msg: 09:47:49.195{LN7.2450}
+msg: 09:47:49.201{LA14}
+{la 0.05}
+adjusting steer to meet az 18
+hdg: 279, bias: 104
+{s  18}
+adjusting steer to meet az 17
+hdg: 280, bias: 104
+{s  17}
+adjusting steer to meet az 16
+hdg: 281, bias: 104
+{s  16}
+adjusting steer to meet az 15
+hdg: 282, bias: 104
+{s  15}
+adjusting steer to meet az 14
+hdg: 283, bias: 104
+{s  14}
+adjusting steer to meet az 13
+hdg: 284, bias: 104
+{s  13}
+adjusting steer to meet az 14
+hdg: 283, bias: 104
+{s  14}
+adjusting steer to meet az 13
+hdg: 284, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 285, bias: 104
+{s  12}
+adjusting steer to meet az 13
+hdg: 284, bias: 104
+{s  13}
+posAV: [-606.92, 2229.36]
+wpt: 28 raw hdg:  284.0
+raw speed:  0.31
+Kalman pos vec: [  -1.50,   -2.31]
+filtered E-N pos: : [-606.55, 2230.43]
+Filtered hdg:  282.0
+Filtered speed:   0.61
+progress vec: [  -1.17,    0.16]
+xtrack vec: [   0.33,    2.46]
+aiming vector: [  -5.88,    3.30]
+Kalman az set to 299
+{d 19.0} 
+{c299} 
+{lx 2.49} 
+{la 0.05} 
+new hdg steering 15
+{s  15}
+adjusting steer to meet az 14
+hdg: 285, bias: 104
+{s  14}
+adjusting steer to meet az 13
+hdg: 286, bias: 104
+{s  13}
+msg: 09:47:50.214{LT21.9996}
+msg: 09:47:50.223{LN7.2580}
+msg: 09:47:50.230{LA14}
+{la 0.05}
+adjusting steer to meet az 12
+hdg: 287, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 288, bias: 104
+{s  11}
+adjusting steer to meet az 10
+hdg: 289, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 290, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 291, bias: 104
+{s   8}
+msg: 09:47:50.615{Z3 |..                                        |}
+msg: 09:47:50.626{Z218.0,0,0}
+adjusting steer to meet az 9
+hdg: 290, bias: 104
+{s   9}
+adjusting steer to meet az 10
+hdg: 289, bias: 104
+{s  10}
+adjusting steer to meet az 11
+hdg: 288, bias: 104
+{s  11}
+posAV: [-608.01, 2229.29]
+wpt: 28 raw hdg:  288.0
+raw speed:  0.31
+Kalman pos vec: [  -2.45,   -2.28]
+filtered E-N pos: : [-607.50, 2230.46]
+Filtered hdg:  286.0
+Filtered speed:   0.65
+progress vec: [  -2.10,    0.28]
+xtrack vec: [   0.35,    2.56]
+aiming vector: [  -5.55,    3.36]
+Kalman az set to 301
+{d 18.0} 
+{c301} 
+{lx 2.59} 
+{la 0.05} 
+new hdg steering 13
+{s  13}
+adjusting steer to meet az 14
+hdg: 287, bias: 104
+{s  14}
+adjusting steer to meet az 13
+hdg: 288, bias: 104
+{s  13}
+msg: 09:47:51.230{LT21.9992}
+msg: 09:47:51.239{LN7.2580}
+msg: 09:47:51.246{LA14}
+{la 0.05}
+adjusting steer to meet az 12
+hdg: 289, bias: 104
+{s  12}
+adjusting steer to meet az 13
+hdg: 288, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 289, bias: 104
+{s  12}
+adjusting steer to meet az 13
+hdg: 288, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 289, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 290, bias: 104
+{s  11}
+adjusting steer to meet az 10
+hdg: 291, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 292, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 293, bias: 104
+{s   8}
+adjusting steer to meet az 7
+hdg: 294, bias: 104
+{s   7}
+posAV: [-608.01, 2229.25]
+wpt: 28 raw hdg:  294.0
+raw speed:  0.31
+Kalman pos vec: [  -2.62,   -2.43]
+filtered E-N pos: : [-607.67, 2230.31]
+Filtered hdg:  292.0
+Filtered speed:   0.14
+progress vec: [  -2.26,    0.30]
+xtrack vec: [   0.37,    2.73]
+aiming vector: [  -5.48,    3.52]
+Kalman az set to 302
+{d 17.9} 
+{c302} 
+{lx 2.76} 
+{la 0.05} 
+new hdg steering 8
+{s   8}
+adjusting steer to meet az 7
+hdg: 295, bias: 104
+{s   7}
+adjusting steer to meet az 5
+hdg: 297, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 298, bias: 104
+{s   4}
+adjusting steer to meet az 5
+hdg: 297, bias: 104
+{s   5}
+msg: 09:47:52.248{LT22.0025}
+msg: 09:47:52.258{LN7.2637}
+adjusting steer to meet az 7
+hdg: 295, bias: 104
+{s   7}
+msg: 09:47:52.278{LA14}
+{la 0.05}
+adjusting steer to meet az 9
+hdg: 293, bias: 104
+{s   9}
+adjusting steer to meet az 10
+hdg: 292, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 293, bias: 104
+{s   9}
+adjusting steer to meet az 10
+hdg: 292, bias: 104
+{s  10}
+adjusting steer to meet az 11
+hdg: 291, bias: 104
+{s  11}
+msg: 09:47:52.763{Z3 |                                          |}
+msg: 09:47:52.776{Z238.0,2,0}
+adjusting steer to meet az 12
+hdg: 290, bias: 104
+{s  12}
+adjusting steer to meet az 13
+hdg: 289, bias: 104
+{s  13}
+posAV: [-608.49, 2229.58]
+wpt: 28 raw hdg:  289.0
+raw speed:  0.31
+Kalman pos vec: [  -3.11,   -2.38]
+filtered E-N pos: : [-608.16, 2230.36]
+Filtered hdg:  287.0
+Filtered speed:   0.42
+progress vec: [  -2.74,    0.37]
+xtrack vec: [   0.37,    2.75]
+aiming vector: [  -5.32,    3.51]
+Kalman az set to 303
+{d 17.4} 
+{c303} 
+{lx 2.77} 
+{la 0.05} 
+new hdg steering 14
+{s  14}
+adjusting steer to meet az 13
+hdg: 290, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 291, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 292, bias: 104
+{s  11}
+msg: 09:47:53.274{LT22.0032}
+msg: 09:47:53.285{LN7.2666}
+msg: 09:47:53.290{LA14}
+{la 0.05}
+adjusting steer to meet az 12
+hdg: 291, bias: 104
+{s  12}
+adjusting steer to meet az 13
+hdg: 290, bias: 104
+{s  13}
+adjusting steer to meet az 14
+hdg: 289, bias: 104
+{s  14}
+adjusting steer to meet az 13
+hdg: 290, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 291, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 292, bias: 104
+{s  11}
+posAV: [-608.73, 2229.65]
+wpt: 28 raw hdg:  292.0
+raw speed:  0.31
+Kalman pos vec: [  -3.44,   -2.39]
+filtered E-N pos: : [-608.49, 2230.35]
+Filtered hdg:  289.0
+Filtered speed:   0.30
+progress vec: [  -3.06,    0.41]
+xtrack vec: [   0.38,    2.80]
+aiming vector: [  -5.20,    3.56]
+Kalman az set to 304
+{d 17.1} 
+{c304} 
+{lx 2.83} 
+{la 0.05} 
+new hdg steering 12
+{s  12}
+adjusting steer to meet az 11
+hdg: 293, bias: 104
+{s  11}
+adjusting steer to meet az 10
+hdg: 294, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 295, bias: 104
+{s   9}
+msg: 09:47:54.293{LT22.0050}
+msg: 09:47:54.302{LN7.2724}
+msg: 09:47:54.309{LA14}
+{la 0.05}
+adjusting steer to meet az 10
+hdg: 294, bias: 104
+{s  10}
+adjusting steer to meet az 11
+hdg: 293, bias: 104
+{s  11}
+adjusting steer to meet az 12
+hdg: 292, bias: 104
+{s  12}
+adjusting steer to meet az 13
+hdg: 291, bias: 104
+{s  13}
+adjusting steer to meet az 14
+hdg: 290, bias: 104
+{s  14}
+msg: 09:47:54.913{Z3 |                                          |}
+posAV: [-609.22, 2229.84]
+wpt: 28 raw hdg:  290.0
+raw speed:  0.31
+Kalman pos vec: [  -3.92,   -2.32]
+filtered E-N pos: : [-608.97, 2230.42]
+Filtered hdg:  287.0
+Filtered speed:   0.42
+progress vec: [  -3.54,    0.48]
+xtrack vec: [   0.38,    2.79]
+aiming vector: [  -5.04,    3.52]
+Kalman az set to 304
+{d 16.6} 
+{c304} 
+{lx 2.82} 
+{la 0.05} 
+new hdg steering 14
+msg: 09:47:54.952{Z235.0,4,0}
+adjusting steer to meet az 13
+hdg: 291, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 292, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 293, bias: 104
+{s  11}
+adjusting steer to meet az 9
+hdg: 295, bias: 104
+{s   9}
+adjusting steer to meet az 7
+hdg: 297, bias: 104
+{s   7}
+adjusting steer to meet az 9
+hdg: 295, bias: 104
+{s   9}
+msg: 09:47:55.321{LT22.0039}
+msg: 09:47:55.332{LN7.2713}
+msg: 09:47:55.337{LA14}
+{la 0.05}
+adjusting steer to meet az 10
+hdg: 294, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 295, bias: 104
+{s   9}
+adjusting steer to meet az 7
+hdg: 297, bias: 104
+{s   7}
+posAV: [-609.12, 2229.72]
+wpt: 28 raw hdg:  297.0
+raw speed:  0.31
+Kalman pos vec: [  -3.94,   -2.43]
+filtered E-N pos: : [-608.99, 2230.31]
+Filtered hdg:  294.0
+Filtered speed:   0.09
+progress vec: [  -3.55,    0.48]
+xtrack vec: [   0.39,    2.90]
+aiming vector: [  -5.03,    3.63]
+Kalman az set to 305
+{d 16.7} 
+{c305} 
+{lx 2.93} 
+{la 0.05} 
+new hdg steering 8
+{s   8}
+adjusting steer to meet az 7
+hdg: 298, bias: 104
+{s   7}
+adjusting steer to meet az 10
+hdg: 295, bias: 104
+{s  10}
+adjusting steer to meet az 12
+hdg: 293, bias: 104
+{s  12}
+adjusting steer to meet az 13
+hdg: 292, bias: 104
+{s  13}
+msg: 09:47:56.334{LT22.0036}
+msg: 09:47:56.346{LN7.2724}
+msg: 09:47:56.351{LA14}
+{la 0.05}
+adjusting steer to meet az 14
+hdg: 291, bias: 104
+{s  14}
+adjusting steer to meet az 15
+hdg: 290, bias: 104
+{s  15}
+adjusting steer to meet az 16
+hdg: 289, bias: 104
+{s  16}
+adjusting steer to meet az 17
+hdg: 288, bias: 104
+{s  17}
+adjusting steer to meet az 18
+hdg: 287, bias: 104
+{s  18}
+adjusting steer to meet az 19
+hdg: 286, bias: 104
+{s  19}
+posAV: [-609.22, 2229.69]
+wpt: 28 raw hdg:  286.0
+raw speed:  0.31
+Kalman pos vec: [  -4.05,   -2.44]
+filtered E-N pos: : [-609.10, 2230.30]
+Filtered hdg:  283.0
+Filtered speed:   0.20
+progress vec: [  -3.65,    0.49]
+xtrack vec: [   0.40,    2.93]
+aiming vector: [  -4.99,    3.66]
+Kalman az set to 306
+{d 16.6} 
+{c306} 
+{lx 2.96} 
+{la 0.05} 
+new hdg steering 20
+{s  20}
+adjusting steer to meet az 21
+hdg: 285, bias: 104
+{s  21}
+adjusting steer to meet az 22
+hdg: 284, bias: 104
+{s  22}
+msg: 09:47:57.061{Z3 |                                          |}
+msg: 09:47:57.074{Z2 4.0,0,0}
+adjusting steer to meet az 24
+hdg: 282, bias: 104
+{s  24}
+adjusting steer to meet az 25
+hdg: 281, bias: 104
+{s  25}
+adjusting steer to meet az 26
+hdg: 280, bias: 104
+{s  26}
+adjusting steer to meet az 28
+hdg: 278, bias: 104
+{s  28}
+adjusting steer to meet az 29
+hdg: 277, bias: 104
+{s  29}
+adjusting steer to meet az 31
+hdg: 275, bias: 104
+{s  31}
+msg: 09:47:57.363{LT22.0054}
+msg: 09:47:57.372{LN7.2724}
+msg: 09:47:57.379{LA14}
+{la 0.05}
+adjusting steer to meet az 33
+hdg: 273, bias: 104
+{s  33}
+adjusting steer to meet az 34
+hdg: 272, bias: 104
+{s  34}
+adjusting steer to meet az 36
+hdg: 270, bias: 104
+{s  36}
+adjusting steer to meet az 38
+hdg: 268, bias: 104
+{s  38}
+adjusting steer to meet az 39
+hdg: 267, bias: 104
+{s  39}
+adjusting steer to meet az 40
+hdg: 266, bias: 104
+{s  40}
+adjusting steer to meet az 39
+hdg: 267, bias: 104
+{s  39}
+adjusting steer to meet az 38
+hdg: 268, bias: 104
+{s  38}
+posAV: [-609.22, 2229.88]
+wpt: 28 raw hdg:  268.0
+raw speed:  0.31
+Kalman pos vec: [  -4.20,   -2.45]
+filtered E-N pos: : [-609.25, 2230.29]
+Filtered hdg:  264.0
+Filtered speed:   0.26
+progress vec: [  -3.80,    0.51]
+xtrack vec: [   0.40,    2.96]
+aiming vector: [  -4.93,    3.68]
+Kalman az set to 306
+{d 16.4} 
+{c306} 
+{lx 2.99} 
+{la 0.05} 
+new hdg steering 38
+adjusting steer to meet az 37
+hdg: 269, bias: 104
+{s  37}
+adjusting steer to meet az 38
+hdg: 268, bias: 104
+{s  38}
+adjusting steer to meet az 39
+hdg: 267, bias: 104
+{s  39}
+adjusting steer to meet az 38
+hdg: 268, bias: 104
+{s  38}
+adjusting steer to meet az 37
+hdg: 269, bias: 104
+{s  37}
+msg: 09:47:58.378{LT22.0057}
+msg: 09:47:58.389{LN7.2810}
+msg: 09:47:58.395{LA14}
+{la 0.05}
+adjusting steer to meet az 36
+hdg: 270, bias: 104
+{s  36}
+adjusting steer to meet az 34
+hdg: 272, bias: 104
+{s  34}
+adjusting steer to meet az 32
+hdg: 274, bias: 104
+{s  32}
+adjusting steer to meet az 31
+hdg: 275, bias: 104
+{s  31}
+adjusting steer to meet az 30
+hdg: 276, bias: 104
+{s  30}
+adjusting steer to meet az 29
+hdg: 277, bias: 104
+{s  29}
+adjusting steer to meet az 28
+hdg: 278, bias: 104
+{s  28}
+adjusting steer to meet az 27
+hdg: 279, bias: 104
+{s  27}
+adjusting steer to meet az 26
+hdg: 280, bias: 104
+{s  26}
+posAV: [-609.94, 2229.91]
+wpt: 28 raw hdg:  280.0
+raw speed:  0.31
+Kalman pos vec: [  -4.78,   -2.51]
+filtered E-N pos: : [-609.83, 2230.23]
+Filtered hdg:  276.0
+Filtered speed:   0.49
+progress vec: [  -4.37,    0.59]
+xtrack vec: [   0.42,    3.10]
+aiming vector: [  -4.73,    3.80]
+Kalman az set to 308
+{d 15.9} 
+{c308} 
+{lx 3.13} 
+{la 0.05} 
+new hdg steering 28
+{s  28}
+adjusting steer to meet az 29
+hdg: 279, bias: 104
+{s  29}
+adjusting steer to meet az 30
+hdg: 278, bias: 104
+{s  30}
+adjusting steer to meet az 29
+hdg: 279, bias: 104
+{s  29}
+msg: 09:47:59.210{Z3 |                                          |}
+msg: 09:47:59.222{Z215.0,2,0}
+adjusting steer to meet az 28
+hdg: 280, bias: 104
+{s  28}
+msg: 09:47:59.407{LT22.0079}
+msg: 09:47:59.418{LN7.2828}
+msg: 09:47:59.425{LA14}
+{la 0.05}
+adjusting steer to meet az 27
+hdg: 281, bias: 104
+{s  27}
+adjusting steer to meet az 26
+hdg: 282, bias: 104
+{s  26}
+posAV: [-610.09, 2230.13]
+wpt: 28 raw hdg:  282.0
+raw speed:  0.31
+Kalman pos vec: [  -5.04,   -2.50]
+filtered E-N pos: : [-610.09, 2230.24]
+Filtered hdg:  278.0
+Filtered speed:   0.28
+progress vec: [  -4.62,    0.62]
+xtrack vec: [   0.42,    3.12]
+aiming vector: [  -4.64,    3.81]
+Kalman az set to 309
+{d 15.6} 
+{c309} 
+{lx 3.15} 
+{la 0.05} 
+new hdg steering 27
+{s  27}
+adjusting steer to meet az 26
+hdg: 283, bias: 104
+{s  26}
+adjusting steer to meet az 24
+hdg: 285, bias: 104
+{s  24}
+adjusting steer to meet az 23
+hdg: 286, bias: 104
+{s  23}
+adjusting steer to meet az 22
+hdg: 287, bias: 104
+{s  22}
+adjusting steer to meet az 21
+hdg: 288, bias: 104
+{s  21}
+adjusting steer to meet az 23
+hdg: 286, bias: 104
+{s  23}
+msg: 09:48:00.437{LT22.0082}
+msg: 09:48:00.448{LN7.3030}
+msg: 09:48:00.454{LA14}
+{la 0.05}
+adjusting steer to meet az 21
+hdg: 288, bias: 104
+{s  21}
+adjusting steer to meet az 19
+hdg: 290, bias: 104
+{s  19}
+adjusting steer to meet az 17
+hdg: 292, bias: 104
+{s  17}
+adjusting steer to meet az 15
+hdg: 294, bias: 104
+{s  15}
+adjusting steer to meet az 14
+hdg: 295, bias: 104
+{s  14}
+adjusting steer to meet az 12
+hdg: 297, bias: 104
+{s  12}
+adjusting steer to meet az 14
+hdg: 295, bias: 104
+{s  14}
+posAV: [-611.78, 2230.16]
+wpt: 28 raw hdg:  295.0
+raw speed:  0.31
+Kalman pos vec: [  -6.32,   -2.24]
+filtered E-N pos: : [-611.37, 2230.50]
+Filtered hdg:  291.0
+Filtered speed:   0.90
+progress vec: [  -5.91,    0.80]
+xtrack vec: [   0.41,    3.04]
+aiming vector: [  -4.22,    3.66]
+Kalman az set to 310
+{d 14.4} 
+{c310} 
+{lx 3.07} 
+{la 0.05} 
+new hdg steering 15
+{s  15}
+adjusting steer to meet az 13
+hdg: 297, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 298, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 299, bias: 104
+{s  11}
+adjusting steer to meet az 9
+hdg: 301, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 302, bias: 104
+{s   8}
+msg: 09:48:01.368{Z3 |             - XXXXX+                     |}
+msg: 09:48:01.382{Z2-26.0,4,0}
+adjusting steer to meet az 7
+hdg: 303, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg: 304, bias: 104
+{s   6}
+adjusting steer to meet az 4
+hdg: 306, bias: 104
+{s   4}
+msg: 09:48:01.466{LT22.0100}
+msg: 09:48:01.476{LN7.3123}
+msg: 09:48:01.483{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg: 307, bias: 104
+{s   3}
+adjusting steer to meet az 4
+hdg: 306, bias: 104
+{s   4}
+adjusting steer to meet az 5
+hdg: 305, bias: 104
+{s   5}
+adjusting steer to meet az 6
+hdg: 304, bias: 104
+{s   6}
+adjusting steer to meet az 9
+hdg: 301, bias: 104
+{s   9}
+posAV: [-612.56, 2230.34]
+wpt: 28 raw hdg:  301.0
+raw speed:  0.31
+Kalman pos vec: [  -7.14,   -1.99]
+filtered E-N pos: : [-612.19, 2230.75]
+Filtered hdg:  297.0
+Filtered speed:   0.62
+progress vec: [  -6.75,    0.91]
+xtrack vec: [   0.39,    2.90]
+aiming vector: [  -3.96,    3.48]
+Kalman az set to 311
+{d 13.5} 
+{c311} 
+{lx 2.92} 
+{la 0.05} 
+new hdg steering 10
+{s  10}
+adjusting steer to meet az 14
+hdg: 297, bias: 104
+{s  14}
+adjusting steer to meet az 19
+hdg: 292, bias: 104
+{s  19}
+adjusting steer to meet az 22
+hdg: 289, bias: 104
+{s  22}
+adjusting steer to meet az 24
+hdg: 287, bias: 104
+{s  24}
+adjusting steer to meet az 25
+hdg: 286, bias: 104
+{s  25}
+adjusting steer to meet az 24
+hdg: 287, bias: 104
+{s  24}
+adjusting steer to meet az 23
+hdg: 288, bias: 104
+{s  23}
+adjusting steer to meet az 21
+hdg: 290, bias: 104
+{s  21}
+msg: 09:48:02.481{LT22.0082}
+msg: 09:48:02.491{LN7.3123}
+msg: 09:48:02.496{LA14}
+{la 0.05}
+adjusting steer to meet az 20
+hdg: 291, bias: 104
+{s  20}
+adjusting steer to meet az 19
+hdg: 292, bias: 104
+{s  19}
+adjusting steer to meet az 18
+hdg: 293, bias: 104
+{s  18}
+adjusting steer to meet az 17
+hdg: 294, bias: 104
+{s  17}
+adjusting steer to meet az 16
+hdg: 295, bias: 104
+{s  16}
+adjusting steer to meet az 14
+hdg: 297, bias: 104
+{s  14}
+adjusting steer to meet az 13
+hdg: 298, bias: 104
+{s  13}
+posAV: [-612.56, 2230.16]
+wpt: 28 raw hdg:  298.0
+raw speed:  0.31
+Kalman pos vec: [  -7.30,   -2.01]
+filtered E-N pos: : [-612.35, 2230.73]
+Filtered hdg:  293.0
+Filtered speed:   0.19
+progress vec: [  -6.90,    0.93]
+xtrack vec: [   0.40,    2.94]
+aiming vector: [  -3.90,    3.52]
+Kalman az set to 312
+{d 13.3} 
+{c312} 
+{lx 2.97} 
+{la 0.05} 
+new hdg steering 14
+{s  14}
+adjusting steer to meet az 13
+hdg: 299, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 300, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 301, bias: 104
+{s  11}
+adjusting steer to meet az 10
+hdg: 302, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 303, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 304, bias: 104
+{s   8}
+msg: 09:48:03.518{Z3 |                                          |}
+msg: 09:48:03.530{Z2 0.0,0,0}
+msg: 09:48:03.543{LT22.0086}
+msg: 09:48:03.553{LN7.3224}
+msg: 09:48:03.558{LA14}
+{la 0.05}
+adjusting steer to meet az 7
+hdg: 305, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg: 306, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg: 307, bias: 104
+{s   5}
+posAV: [-613.40, 2230.20]
+wpt: 28 raw hdg:  307.0
+raw speed:  0.31
+Kalman pos vec: [  -7.87,   -1.87]
+filtered E-N pos: : [-612.92, 2230.87]
+Filtered hdg:  302.0
+Filtered speed:   0.44
+progress vec: [  -7.49,    1.01]
+xtrack vec: [   0.39,    2.88]
+aiming vector: [  -3.72,    3.43]
+Kalman az set to 312
+{d 12.8} 
+{c312} 
+{lx 2.91} 
+{la 0.05} 
+new hdg steering 5
+adjusting steer to meet az 4
+hdg: 308, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 309, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 310, bias: 104
+{s   2}
+msg: 09:48:04.524{LT22.0122}
+msg: 09:48:04.534{LN7.3332}
+msg: 09:48:04.541{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 311, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 310, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 311, bias: 104
+{s   1}
+posAV: [-614.31, 2230.57]
+wpt: 28 raw hdg:  311.0
+raw speed:  0.31
+Kalman pos vec: [  -8.63,   -1.54]
+filtered E-N pos: : [-613.68, 2231.20]
+Filtered hdg:  305.0
+Filtered speed:   0.60
+progress vec: [  -8.28,    1.12]
+xtrack vec: [   0.36,    2.65]
+aiming vector: [  -3.48,    3.17]
+Kalman az set to 312
+{d 11.9} 
+{c312} 
+{lx 2.68} 
+{la 0.05} 
+new hdg steering 1
+adjusting steer to meet az 0
+hdg: 312, bias: 104
+{s   0}
+msg: 09:48:05.544{LT22.0183}
+msg: 09:48:05.554{LN7.3433}
+msg: 09:48:05.561{LA14}
+{la 0.05}
+msg: 09:48:05.665{Z3 |                                          |}
+msg: 09:48:05.677{Z2-1.0,2,0}
+posAV: [-615.15, 2231.18]
+wpt: 28 raw hdg:  312.0
+raw speed:  0.31
+Kalman pos vec: [  -9.49,   -1.06]
+filtered E-N pos: : [-614.54, 2231.68]
+Filtered hdg:  305.0
+Filtered speed:   0.71
+progress vec: [  -9.18,    1.24]
+xtrack vec: [   0.31,    2.30]
+aiming vector: [  -3.23,    2.77]
+Kalman az set to 310
+{d 11.0} 
+{c310} 
+{lx 2.32} 
+{la 0.05} 
+new hdg steering -2
+{s  -2}
+adjusting steer to meet az -1
+hdg: 311, bias: 104
+{s  -1}
+msg: 09:48:06.568{LT22.0241}
+msg: 09:48:06.578{LN7.3530}
+msg: 09:48:06.585{LA14}
+{la 0.05}
+posAV: [-615.97, 2231.77]
+wpt: 28 raw hdg:  311.0
+raw speed:  0.31
+Kalman pos vec: [ -10.37,   -0.55]
+filtered E-N pos: : [-615.42, 2232.19]
+Filtered hdg:  304.0
+Filtered speed:   0.74
+progress vec: [ -10.11,    1.36]
+xtrack vec: [   0.26,    1.92]
+aiming vector: [  -4.59,    2.57]
+Kalman az set to 299
+{d 10.0} 
+{c299} 
+{lx 1.93} 
+{la 0.05} 
+new hdg steering -12
+{s -12}
+adjusting steer to meet az -11
+hdg: 310, bias: 104
+{s -11}
+adjusting steer to meet az -10
+hdg: 309, bias: 104
+{s -10}
+adjusting steer to meet az -9
+hdg: 308, bias: 104
+{s  -9}
+adjusting steer to meet az -8
+hdg: 307, bias: 104
+{s  -8}
+adjusting steer to meet az -7
+hdg: 306, bias: 104
+{s  -7}
+msg: 09:48:07.588{LT22.0295}
+msg: 09:48:07.598{LN7.3631}
+msg: 09:48:07.605{LA14}
+{la 0.05}
+adjusting steer to meet az -6
+hdg: 305, bias: 104
+{s  -6}
+adjusting steer to meet az -5
+hdg: 304, bias: 104
+{s  -5}
+msg: 09:48:07.813{Z3 |                                          |}
+msg: 09:48:07.825{Z2 0.0,4,0}
+adjusting steer to meet az -4
+hdg: 303, bias: 104
+{s  -4}
+posAV: [-616.81, 2232.32]
+wpt: 28 raw hdg:  303.0
+raw speed:  0.31
+Kalman pos vec: [ -11.31,   -0.08]
+filtered E-N pos: : [-616.36, 2232.66]
+Filtered hdg:  295.0
+Filtered speed:   0.80
+progress vec: [ -11.10,    1.50]
+xtrack vec: [   0.21,    1.58]
+aiming vector: [  -4.14,    2.16]
+Kalman az set to 297
+{d  8.9} 
+{c297} 
+{lx 1.59} 
+{la 0.05} 
+new hdg steering -6
+{s  -6}
+adjusting steer to meet az -5
+hdg: 302, bias: 104
+{s  -5}
+adjusting steer to meet az -4
+hdg: 301, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg: 300, bias: 104
+{s  -3}
+msg: 09:48:08.613{LT22.0345}
+msg: 09:48:08.623{LN7.3732}
+msg: 09:48:08.630{LA14}
+{la 0.05}
+adjusting steer to meet az -2
+hdg: 299, bias: 104
+{s  -2}
+posAV: [-617.66, 2232.83]
+wpt: 28 raw hdg:  299.0
+raw speed:  0.31
+Kalman pos vec: [ -12.28,    0.30]
+filtered E-N pos: : [-617.33, 2233.04]
+Filtered hdg:  291.0
+Filtered speed:   0.78
+progress vec: [ -12.10,    1.63]
+xtrack vec: [   0.18,    1.33]
+aiming vector: [  -3.67,    1.85]
+Kalman az set to 296
+{d  7.9} 
+{c296} 
+{lx 1.34} 
+{la 0.05} 
+Odo:    16.6, speed:   20
+new hdg steering -3
+{v  15}
+{s  -3}
+adjusting steer to meet az -2
+hdg: 298, bias: 104
+{s  -2}
+adjusting steer to meet az -1
+hdg: 297, bias: 104
+{s  -1}
+msg: 09:48:09.634{LT22.0381}
+msg: 09:48:09.643{LN7.3832}
+msg: 09:48:09.649{LA14}
+{la 0.05}
+posAV: [-618.50, 2233.19]
+wpt: 28 raw hdg:  297.0
+raw speed:  0.24
+Kalman pos vec: [ -13.17,    0.60]
+filtered E-N pos: : [-618.22, 2233.34]
+Filtered hdg:  289.0
+Filtered speed:   0.68
+progress vec: [ -13.01,    1.75]
+xtrack vec: [   0.16,    1.15]
+aiming vector: [  -3.24,    1.61]
+Kalman az set to 296
+{d  6.9} 
+{c296} 
+{lx 1.16} 
+{la 0.05} 
+new hdg steering -1
+msg: 09:48:09.962{Z3 |                                          |}
+msg: 09:48:09.974{Z2 0.0,0,0}
+msg: 09:48:10.657{LT22.0410}
+msg: 09:48:10.666{LN7.3919}
+msg: 09:48:10.673{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 295, bias: 104
+{s   0}
+posAV: [-619.23, 2233.48]
+wpt: 28 raw hdg:  295.0
+raw speed:  0.24
+Kalman pos vec: [ -13.96,    0.84]
+filtered E-N pos: : [-619.01, 2233.58]
+Filtered hdg:  287.0
+Filtered speed:   0.61
+progress vec: [ -13.82,    1.86]
+xtrack vec: [   0.14,    1.02]
+aiming vector: [  -2.85,    1.43]
+Kalman az set to 296
+{d  6.1} 
+{c296} 
+{lx 1.03} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 0
+hdg: 297, bias: 104
+{s   0}
+msg: 09:48:11.675{LT22.0432}
+msg: 09:48:11.686{LN7.4009}
+msg: 09:48:11.692{LA14}
+{la 0.05}
+posAV: [-619.98, 2233.71]
+wpt: 28 raw hdg:  297.0
+raw speed:  0.24
+Kalman pos vec: [ -14.72,    1.07]
+filtered E-N pos: : [-619.77, 2233.81]
+Filtered hdg:  289.0
+Filtered speed:   0.58
+progress vec: [ -14.60,    1.97]
+xtrack vec: [   0.12,    0.90]
+aiming vector: [  -2.48,    1.25]
+Kalman az set to 296
+{d  5.3} 
+{c296} 
+{lx 0.91} 
+{la 0.05} 
+new hdg steering -1
+{s  -1}
+msg: 09:48:12.110{Z3 |                                          |}
+msg: 09:48:12.122{Z2 1.0,2,0}
+adjusting steer to meet az 0
+hdg: 295, bias: 104
+{s   0}
+msg: 09:48:12.699{LT22.0457}
+msg: 09:48:12.709{LN7.4099}
+msg: 09:48:12.716{LA14}
+{la 0.05}
+posAV: [-620.73, 2233.96]
+wpt: 28 raw hdg:  295.0
+raw speed:  0.24
+Kalman pos vec: [ -15.48,    1.30]
+filtered E-N pos: : [-620.53, 2234.04]
+Filtered hdg:  287.0
+Filtered speed:   0.59
+progress vec: [ -15.38,    2.07]
+xtrack vec: [   0.10,    0.78]
+aiming vector: [  -2.11,    1.08]
+Kalman az set to 297
+{d  4.5} 
+{c297} 
+{lx 0.78} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 0
+hdg: 297, bias: 104
+{s   0}
+msg: 09:48:13.717{LT22.0478}
+msg: 09:48:13.728{LN7.4185}
+msg: 09:48:13.735{LA14}
+{la 0.05}
+posAV: [-621.45, 2234.17]
+wpt: 28 raw hdg:  297.0
+raw speed:  0.24
+Kalman pos vec: [ -16.21,    1.51]
+filtered E-N pos: : [-621.26, 2234.25]
+Filtered hdg:  289.0
+Filtered speed:   0.56
+progress vec: [ -16.12,    2.17]
+xtrack vec: [   0.09,    0.66]
+aiming vector: [  -1.75,    0.91]
+Kalman az set to 297
+{d  3.8} 
+{c297} 
+{lx 0.67} 
+{la 0.05} 
+new hdg steering 0
+msg: 09:48:14.258{Z3 |                                          |}
+msg: 09:48:14.272{Z2 2.0,4,0}
+hdg: 295, bias: 104
+hdg: 297, bias: 104
+msg: 09:48:14.737{LT22.0504}
+msg: 09:48:14.746{LN7.4275}
+msg: 09:48:14.753{LA14}
+{la 0.05}
+posAV: [-622.21, 2234.44]
+wpt: 28 raw hdg:  297.0
+raw speed:  0.24
+Kalman pos vec: [ -16.96,    1.76]
+filtered E-N pos: : [-622.01, 2234.50]
+Filtered hdg:  288.0
+Filtered speed:   0.58
+progress vec: [ -16.89,    2.28]
+xtrack vec: [   0.07,    0.52]
+aiming vector: [  -1.38,    0.72]
+Kalman az set to 297
+{d  3.0} 
+{c297} 
+{lx 0.53} 
+{la 0.05} 
+new hdg steering 0
+msg: 09:48:15.761{LT22.0532}
+msg: 09:48:15.771{LN7.4362}
+msg: 09:48:15.778{LA14}
+{la 0.05}
+posAV: [-622.94, 2234.72]
+wpt: 28 raw hdg:  297.0
+raw speed:  0.24
+Kalman pos vec: [ -17.71,    2.00]
+filtered E-N pos: : [-622.76, 2234.74]
+Filtered hdg:  288.0
+Filtered speed:   0.58
+progress vec: [ -17.66,    2.38]
+xtrack vec: [   0.05,    0.38]
+aiming vector: [  -1.02,    0.53]
+Kalman az set to 297
+{d  2.2} 
+{c297} 
+{lx 0.38} 
+{la 0.05} 
+new hdg steering 0
+msg: 09:48:16.409{Z3 |                                          |}
+msg: 09:48:16.422{Z2 3.0,0,0}
+msg: 09:48:16.779{LT22.0554}
+msg: 09:48:16.791{LN7.4455}
+msg: 09:48:16.796{LA14}
+{la 0.05}
+posAV: [-623.72, 2234.94]
+wpt: 28 raw hdg:  297.0
+raw speed:  0.24
+Kalman pos vec: [ -18.47,    2.25]
+filtered E-N pos: : [-623.52, 2234.99]
+Filtered hdg:  288.0
+Filtered speed:   0.59
+progress vec: [ -18.44,    2.49]
+xtrack vec: [   0.03,    0.24]
+aiming vector: [  -0.65,    0.33]
+Kalman az set to 297
+{d  1.4} 
+{c297} 
+{lx 0.24} 
+{la 0.05} 
+close to waypoint
+Odo:    18.5, speed:   15
+resuming to   20
+track start======================================: [-624.85, 2235.41]
+wpt: 30 -644.70, 2261.65
+track: [ -19.85,   26.24]
+new wpt az set to 322
+new hdg steering 25
+{v  20}
+{s  25}
+adjusting steer to meet az 24
+hdg: 298, bias: 104
+{s  24}
+adjusting steer to meet az 23
+hdg: 299, bias: 104
+{s  23}
+adjusting steer to meet az 22
+hdg: 300, bias: 104
+{s  22}
+adjusting steer to meet az 21
+hdg: 301, bias: 104
+{s  21}
+adjusting steer to meet az 20
+hdg: 302, bias: 104
+{s  20}
+adjusting steer to meet az 19
+hdg: 303, bias: 104
+{s  19}
+adjusting steer to meet az 18
+hdg: 304, bias: 104
+{s  18}
+adjusting steer to meet az 17
+hdg: 305, bias: 104
+{s  17}
+adjusting steer to meet az 16
+hdg: 306, bias: 104
+{s  16}
+adjusting steer to meet az 15
+hdg: 307, bias: 104
+{s  15}
+msg: 09:48:17.804{LT22.0576}
+msg: 09:48:17.816{LN7.4545}
+msg: 09:48:17.821{LA14}
+{la 0.05}
+adjusting steer to meet az 14
+hdg: 308, bias: 104
+{s  14}
+posAV: [-624.47, 2235.17]
+wpt: 30 raw hdg:  308.0
+raw speed:  0.31
+Kalman pos vec: [   0.85,   -0.32]
+filtered E-N pos: : [-624.00, 2235.09]
+Filtered hdg:  308.0
+Filtered speed:   0.31
+aiming vector: [ -19.85,   26.24]
+Kalman az set to 322
+{d 33.7} 
+{c322} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 14
+adjusting steer to meet az 13
+hdg: 309, bias: 104
+{s  13}
+adjusting steer to meet az 12
+hdg: 310, bias: 104
+{s  12}
+adjusting steer to meet az 11
+hdg: 311, bias: 104
+{s  11}
+adjusting steer to meet az 10
+hdg: 312, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 313, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 314, bias: 104
+{s   8}
+msg: 09:48:18.348{D2}
+Odo:    19.0, speed:   20
+{v  30}
+adjusting steer to meet az 7
+hdg: 315, bias: 104
+{s   7}
+msg: 09:48:18.573{Z3 |                                          |}
+msg: 09:48:18.586{Z2 4.0,2,0}
+adjusting steer to meet az 6
+hdg: 316, bias: 104
+{s   6}
+msg: 09:48:18.616{D2}
+Odo:    19.1, speed:   30
+{v  40}
+adjusting steer to meet az 5
+hdg: 317, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 318, bias: 104
+{s   4}
+msg: 09:48:18.824{LT22.0608}
+msg: 09:48:18.834{LN7.4635}
+msg: 09:48:18.841{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg: 319, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 320, bias: 104
+{s   2}
+msg: 09:48:18.899{D2}
+Odo:    19.3, speed:   40
+{v  50}
+posAV: [-625.22, 2235.49]
+wpt: 30 raw hdg:  320.0
+raw speed:  0.79
+Kalman pos vec: [   0.12,    0.28]
+filtered E-N pos: : [-624.73, 2235.69]
+Filtered hdg:  319.0
+Filtered speed:   0.95
+progress vec: [  -0.09,    0.12]
+xtrack vec: [  -0.21,   -0.16]
+aiming vector: [ -10.09,   12.90]
+Kalman az set to 321
+{d 32.7} 
+{c321} 
+{lx 0.26} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 0
+hdg: 321, bias: 104
+{s   0}
+msg: 09:48:19.848{LT22.0720}
+msg: 09:48:19.857{LN7.4794}
+msg: 09:48:19.864{LA14}
+{la 0.05}
+posAV: [-626.56, 2236.63]
+wpt: 30 raw hdg:  321.0
+raw speed:  0.79
+Kalman pos vec: [  -0.93,    1.50]
+filtered E-N pos: : [-625.78, 2236.91]
+Filtered hdg:  320.0
+Filtered speed:   1.33
+progress vec: [  -1.06,    1.40]
+xtrack vec: [  -0.13,   -0.10]
+aiming vector: [  -9.53,   12.32]
+Kalman az set to 322
+{d 31.1} 
+{c322} 
+{lx 0.17} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 320, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 321, bias: 104
+{s   1}
+msg: 09:48:20.723{Z3 |                                          |}
+msg: 09:48:20.736{Z2 6.0,4,0}
+msg: 09:48:20.868{LT22.0878}
+msg: 09:48:20.878{LN7.4988}
+msg: 09:48:20.885{LA14}
+{la 0.05}
+posAV: [-628.18, 2238.23]
+wpt: 30 raw hdg:  321.0
+raw speed:  0.79
+Kalman pos vec: [  -2.30,    3.13]
+filtered E-N pos: : [-627.15, 2238.54]
+Filtered hdg:  320.0
+Filtered speed:   1.61
+progress vec: [  -2.34,    3.09]
+xtrack vec: [  -0.04,   -0.03]
+aiming vector: [  -8.80,   11.54]
+Kalman az set to 322
+{d 29.0} 
+{c322} 
+{lx 0.05} 
+{la 0.05} 
+new hdg steering 1
+adjusting steer to meet az 0
+hdg: 322, bias: 104
+{s   0}
+hdg: 321, bias: 104
+hdg: 322, bias: 104
+hdg: 321, bias: 104
+hdg: 320, bias: 104
+hdg: 321, bias: 104
+msg: 09:48:21.886{LT22.1044}
+msg: 09:48:21.897{LN7.5197}
+msg: 09:48:21.902{LA14}
+{la 0.05}
+posAV: [-629.93, 2239.91]
+wpt: 30 raw hdg:  321.0
+raw speed:  0.79
+Kalman pos vec: [  -3.83,    4.91]
+filtered E-N pos: : [-628.68, 2240.32]
+Filtered hdg:  320.0
+Filtered speed:   1.75
+progress vec: [  -3.75,    4.96]
+xtrack vec: [   0.07,    0.06]
+aiming vector: [  -7.97,   10.70]
+Kalman az set to 323
+{d 26.7} 
+{c323} 
+{lx 0.09} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 3
+hdg: 320, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 321, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 322, bias: 104
+{s   1}
+msg: 09:48:22.870{Z3 |                                          |}
+msg: 09:48:22.882{Z2 0.0,0,0}
+msg: 09:48:22.910{LT22.1220}
+msg: 09:48:22.921{LN7.5416}
+msg: 09:48:22.926{LA14}
+{la 0.05}
+posAV: [-631.77, 2241.69]
+wpt: 30 raw hdg:  322.0
+raw speed:  0.79
+Kalman pos vec: [  -5.46,    6.79]
+filtered E-N pos: : [-630.31, 2242.20]
+Filtered hdg:  321.0
+Filtered speed:   1.84
+progress vec: [  -5.25,    6.94]
+xtrack vec: [   0.21,    0.16]
+aiming vector: [  -7.09,    9.80]
+Kalman az set to 324
+{d 24.2} 
+{c324} 
+{lx 0.26} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg: 323, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 324, bias: 104
+{s   0}
+msg: 09:48:23.928{LT22.1386}
+estAV: [-631.13, 2242.91]
+gps tardy
+Dead Reconning =========================
+wpt: 30 raw hdg:  324.0
+raw speed:  0.79
+Kalman pos vec: [  -6.09,    7.57]
+filtered E-N pos: : [-630.94, 2242.98]
+Filtered hdg:  323.0
+Filtered speed:   0.92
+progress vec: [  -5.86,    7.74]
+xtrack vec: [   0.24,    0.18]
+aiming vector: [  -6.76,    9.43]
+Kalman az set to 324
+{d 23.2} 
+{c324} 
+{lx 0.29} 
+{la 0.05} 
+new hdg steering 0
+msg: 09:48:23.964{LN7.5618}
+msg: 09:48:23.966{LA14}
+{la 0.05}
+hdg: 323, bias: 104
+hdg: 322, bias: 104
+posAV: [-633.46, 2243.37]
+wpt: 30 raw hdg:  322.0
+raw speed:  0.79
+Kalman pos vec: [  -7.18,    8.76]
+filtered E-N pos: : [-632.03, 2244.17]
+Filtered hdg:  320.0
+Filtered speed:   1.31
+progress vec: [  -6.83,    9.03]
+xtrack vec: [   0.35,    0.27]
+aiming vector: [  -6.16,    8.87]
+Kalman az set to 325
+{d 21.6} 
+{c325} 
+{lx 0.44} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+msg: 09:48:24.965{LT22.1562}
+msg: 09:48:24.966{LN7.5816}
+msg: 09:48:24.969{LA14}
+{la 0.05}
+msg: 09:48:25.021{Z3 |                                          |}
+msg: 09:48:25.033{Z2-2.0,2,0}
+adjusting steer to meet az 2
+hdg: 323, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 324, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 323, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 324, bias: 104
+{s   1}
+posAV: [-635.12, 2245.16]
+wpt: 30 raw hdg:  324.0
+raw speed:  0.79
+Kalman pos vec: [  -8.69,   10.41]
+filtered E-N pos: : [-633.54, 2245.82]
+Filtered hdg:  322.0
+Filtered speed:   1.68
+progress vec: [  -8.17,   10.80]
+xtrack vec: [   0.52,    0.39]
+aiming vector: [  -5.32,    8.11]
+Kalman az set to 326
+{d 19.4} 
+{c326} 
+{lx 0.65} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+msg: 09:48:25.972{LT22.1738}
+msg: 09:48:25.983{LN7.6021}
+msg: 09:48:25.989{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 325, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 324, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 325, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 326, bias: 104
+{s   0}
+hdg: 325, bias: 104
+posAV: [-636.83, 2246.94]
+wpt: 30 raw hdg:  325.0
+raw speed:  0.79
+Kalman pos vec: [ -10.30,   12.20]
+filtered E-N pos: : [-635.15, 2247.61]
+Filtered hdg:  322.0
+Filtered speed:   1.78
+progress vec: [  -9.62,   12.71]
+xtrack vec: [   0.68,    0.52]
+aiming vector: [  -4.43,    7.28]
+Kalman az set to 328
+{d 17.0} 
+{c328} 
+{lx 0.86} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+msg: 09:48:26.999{LT22.1904}
+msg: 09:48:27.010{LN7.6219}
+msg: 09:48:27.016{LA14}
+{la 0.05}
+msg: 09:48:27.166{Z3 | Xx      +   -.++-    .-#XXX+-+xX-X-      |}
+msg: 09:48:27.178{Z2 0.0,4,0}
+adjusting steer to meet az 2
+hdg: 326, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 327, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 328, bias: 104
+{s   0}
+posAV: [-638.49, 2248.62]
+wpt: 30 raw hdg:  328.0
+raw speed:  0.79
+Kalman pos vec: [ -11.86,   13.92]
+filtered E-N pos: : [-636.71, 2249.33]
+Filtered hdg:  324.0
+Filtered speed:   1.71
+progress vec: [ -11.02,   14.56]
+xtrack vec: [   0.85,    0.64]
+aiming vector: [  -3.57,    6.48]
+Kalman az set to 331
+{d 14.7} 
+{c331} 
+{lx 1.06} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+msg: 09:48:28.020{LT22.2066}
+msg: 09:48:28.030{LN7.6396}
+msg: 09:48:28.038{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg: 329, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 330, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 331, bias: 104
+{s   0}
+hdg: 330, bias: 104
+hdg: 331, bias: 104
+posAV: [-639.98, 2250.27]
+wpt: 30 raw hdg:  331.0
+raw speed:  0.79
+Kalman pos vec: [ -13.31,   15.56]
+filtered E-N pos: : [-638.16, 2250.97]
+Filtered hdg:  325.0
+Filtered speed:   1.62
+progress vec: [ -12.33,   16.30]
+xtrack vec: [   0.98,    0.74]
+aiming vector: [  -2.78,    5.71]
+Kalman az set to 334
+{d 12.5} 
+{c334} 
+{lx 1.22} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 332, bias: 104
+{s   2}
+msg: 09:48:29.048{LT22.2232}
+msg: 09:48:29.058{LN7.6550}
+msg: 09:48:29.064{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg: 331, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 332, bias: 104
+{s   2}
+msg: 09:48:29.314{Z3 |           -                              |}
+msg: 09:48:29.327{Z2 5.0,0,0}
+adjusting steer to meet az 3
+hdg: 331, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 332, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 333, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 332, bias: 104
+{s   2}
+posAV: [-641.27, 2251.95]
+wpt: 30 raw hdg:  332.0
+raw speed:  0.79
+Kalman pos vec: [ -14.69,   17.18]
+filtered E-N pos: : [-639.54, 2252.59]
+Filtered hdg:  325.0
+Filtered speed:   1.60
+progress vec: [ -13.62,   18.00]
+xtrack vec: [   1.08,    0.82]
+aiming vector: [  -2.04,    4.94]
+Kalman az set to 337
+{d 10.4} 
+{c337} 
+{lx 1.35} 
+{la 0.05} 
+new hdg steering 5
+{s   5}
+msg: 09:48:30.065{LT22.2422}
+msg: 09:48:30.076{LN7.6748}
+msg: 09:48:30.082{LA17}
+{la 0.06}
+adjusting steer to meet az 4
+hdg: 333, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 334, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 335, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 336, bias: 104
+{s   1}
+posAV: [-642.92, 2253.87]
+wpt: 30 raw hdg:  336.0
+raw speed:  0.79
+Kalman pos vec: [ -16.22,   19.03]
+filtered E-N pos: : [-641.07, 2254.44]
+Filtered hdg:  328.0
+Filtered speed:   1.75
+progress vec: [ -15.06,   19.91]
+xtrack vec: [   1.16,    0.88]
+aiming vector: [  -1.24,    4.04]
+Kalman az set to 342
+{d  8.1} 
+{c342} 
+{lx 1.45} 
+{la 0.06} 
+new hdg steering 6
+{s   6}
+msg: 09:48:31.089{LT22.2610}
+msg: 09:48:31.100{LN7.6889}
+msg: 09:48:31.106{LA19}
+{la 0.06}
+adjusting steer to meet az 5
+hdg: 337, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 338, bias: 104
+{s   4}
+msg: 09:48:31.464{Z3 |                                          |}
+msg: 09:48:31.476{Z2 3.0,2,0}
+adjusting steer to meet az 3
+hdg: 339, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 340, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 341, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 340, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 341, bias: 104
+{s   1}
+posAV: [-644.11, 2255.78]
+wpt: 30 raw hdg:  341.0
+raw speed:  0.79
+Kalman pos vec: [ -17.55,   20.80]
+filtered E-N pos: : [-642.40, 2256.21]
+Filtered hdg:  331.0
+Filtered speed:   1.62
+progress vec: [ -16.40,   21.67]
+xtrack vec: [   1.15,    0.87]
+aiming vector: [  -0.57,    3.16]
+Kalman az set to 349
+{d  5.9} 
+{c349} 
+{lx 1.45} 
+{la 0.06} 
+Odo:    29.5, speed:   50
+new hdg steering 8
+{v  37}
+{s   8}
+adjusting steer to meet az 7
+hdg: 342, bias: 104
+{s   7}
+msg: 09:48:32.108{LT22.2790}
+msg: 09:48:32.119{LN7.7029}
+msg: 09:48:32.126{LA127}
+{la 0.42}
+adjusting steer to meet az 6
+hdg: 343, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg: 344, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 345, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 346, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 347, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 348, bias: 104
+{s   1}
+posAV: [-645.28, 2257.60]
+wpt: 30 raw hdg:  348.0
+raw speed:  0.58
+Kalman pos vec: [ -18.66,   22.49]
+filtered E-N pos: : [-643.51, 2257.90]
+Filtered hdg:  337.0
+Filtered speed:   1.40
+progress vec: [ -17.62,   23.29]
+xtrack vec: [   1.05,    0.79]
+aiming vector: [  -0.07,    2.27]
+Kalman az set to 358
+{d  3.9} 
+{c358} 
+{lx 1.32} 
+{la 0.42} 
+new hdg steering 10
+{s  10}
+msg: 09:48:33.129{LT22.2995}
+msg: 09:48:33.138{LN7.7173}
+msg: 09:48:33.146{LA78}
+{la 0.26}
+adjusting steer to meet az 9
+hdg: 349, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 350, bias: 104
+{s   8}
+adjusting steer to meet az 7
+hdg: 351, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg: 352, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg: 353, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 354, bias: 104
+{s   4}
+msg: 09:48:33.614{Z3 |                                          |}
+msg: 09:48:33.627{Z2 2.0,4,0}
+adjusting steer to meet az 3
+hdg: 355, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 356, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 357, bias: 104
+{s   1}
+posAV: [-646.49, 2259.68]
+wpt: 30 raw hdg:  357.0
+raw speed:  0.58
+Kalman pos vec: [ -19.66,   24.38]
+filtered E-N pos: : [-644.51, 2259.79]
+Filtered hdg:  344.0
+Filtered speed:   1.43
+progress vec: [ -18.88,   24.96]
+xtrack vec: [   0.77,    0.59]
+aiming vector: [   0.29,    1.22]
+Kalman az set to 13
+{d  1.9} 
+{c 13} 
+{lx 0.97} 
+{la 0.26} 
+close to waypoint
+Odo:    30.7, speed:   37
+resuming to   50
+track start======================================: [-644.70, 2261.65]
+wpt: 29 -684.91, 2276.04
+track: [ -40.21,   14.39]
+new wpt az set to 289
+new hdg steering -67
+{v  50}
+{s -67}
+adjusting steer to meet az -66
+hdg: 356, bias: 104
+{s -66}
+adjusting steer to meet az -65
+hdg: 355, bias: 104
+{s -65}
+msg: 09:48:34.156{LT22.3150}
+msg: 09:48:34.166{LN7.7270}
+msg: 09:48:34.172{LA48}
+{la 0.16}
+adjusting steer to meet az -63
+hdg: 353, bias: 104
+{s -63}
+adjusting steer to meet az -62
+hdg: 352, bias: 104
+{s -62}
+adjusting steer to meet az -61
+hdg: 351, bias: 104
+{s -61}
+adjusting steer to meet az -60
+hdg: 350, bias: 104
+{s -60}
+adjusting steer to meet az -59
+hdg: 349, bias: 104
+{s -59}
+adjusting steer to meet az -57
+hdg: 347, bias: 104
+{s -57}
+adjusting steer to meet az -55
+hdg: 345, bias: 104
+{s -55}
+adjusting steer to meet az -53
+hdg: 343, bias: 104
+{s -53}
+adjusting steer to meet az -52
+hdg: 342, bias: 104
+{s -52}
+adjusting steer to meet az -50
+hdg: 340, bias: 104
+{s -50}
+adjusting steer to meet az -47
+hdg: 337, bias: 104
+{s -47}
+adjusting steer to meet az -45
+hdg: 335, bias: 104
+{s -45}
+adjusting steer to meet az -43
+hdg: 333, bias: 104
+{s -43}
+adjusting steer to meet az -41
+hdg: 331, bias: 104
+{s -41}
+adjusting steer to meet az -38
+hdg: 328, bias: 104
+{s -38}
+adjusting steer to meet az -36
+hdg: 326, bias: 104
+{s -36}
+posAV: [-647.30, 2261.25]
+wpt: 29 raw hdg:  326.0
+raw speed:  0.79
+Kalman pos vec: [  -1.83,   -1.18]
+filtered E-N pos: : [-646.53, 2260.47]
+Filtered hdg:  326.0
+Filtered speed:   0.79
+progress vec: [  -1.25,    0.45]
+xtrack vec: [   0.58,    1.63]
+aiming vector: [ -18.90,    8.60]
+Kalman az set to 294
+{d 41.4} 
+{c294} 
+{lx 1.73} 
+{la 0.16} 
+new hdg steering -32
+{s -32}
+adjusting steer to meet az -29
+hdg: 323, bias: 104
+{s -29}
+adjusting steer to meet az -26
+hdg: 320, bias: 104
+{s -26}
+adjusting steer to meet az -23
+hdg: 317, bias: 104
+{s -23}
+adjusting steer to meet az -21
+hdg: 315, bias: 104
+{s -21}
+msg: 09:48:35.170{LT22.3312}
+msg: 09:48:35.181{LN7.7310}
+msg: 09:48:35.186{LA51}
+{la 0.17}
+adjusting steer to meet az -19
+hdg: 313, bias: 104
+{s -19}
+adjusting steer to meet az -17
+hdg: 311, bias: 104
+{s -17}
+adjusting steer to meet az -14
+hdg: 308, bias: 104
+{s -14}
+adjusting steer to meet az -12
+hdg: 306, bias: 104
+{s -12}
+adjusting steer to meet az -10
+hdg: 304, bias: 104
+{s -10}
+adjusting steer to meet az -9
+hdg: 303, bias: 104
+{s  -9}
+adjusting steer to meet az -8
+hdg: 302, bias: 104
+{s  -8}
+adjusting steer to meet az -7
+hdg: 301, bias: 104
+{s  -7}
+adjusting steer to meet az -6
+hdg: 300, bias: 104
+{s  -6}
+adjusting steer to meet az -4
+hdg: 298, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg: 297, bias: 104
+{s  -3}
+msg: 09:48:35.765{Z3 |                                          |}
+msg: 09:48:35.777{Z2 1.0,0,0}
+adjusting steer to meet az -1
+hdg: 295, bias: 104
+{s  -1}
+posAV: [-647.63, 2262.89]
+wpt: 29 raw hdg:  295.0
+raw speed:  0.79
+Kalman pos vec: [  -2.88,   -0.22]
+filtered E-N pos: : [-647.58, 2261.43]
+Filtered hdg:  295.0
+Filtered speed:   1.45
+progress vec: [  -2.48,    0.89]
+xtrack vec: [   0.40,    1.11]
+aiming vector: [ -18.47,    7.86]
+Kalman az set to 293
+{d 40.1} 
+{c293} 
+{lx 1.17} 
+{la 0.17} 
+new hdg steering -2
+{s  -2}
+adjusting steer to meet az -1
+hdg: 294, bias: 104
+{s  -1}
+msg: 09:48:36.193{LT22.3484}
+msg: 09:48:36.204{LN7.7393}
+msg: 09:48:36.210{LA43}
+{la 0.14}
+adjusting steer to meet az 0
+hdg: 293, bias: 104
+{s   0}
+hdg: 294, bias: 104
+hdg: 293, bias: 104
+hdg: 292, bias: 104
+hdg: 293, bias: 104
+hdg: 292, bias: 104
+posAV: [-648.33, 2264.63]
+wpt: 29 raw hdg:  292.0
+raw speed:  0.79
+Kalman pos vec: [  -4.36,    0.53]
+filtered E-N pos: : [-649.06, 2262.18]
+Filtered hdg:  292.0
+Filtered speed:   1.34
+progress vec: [  -4.03,    1.44]
+xtrack vec: [   0.33,    0.92]
+aiming vector: [ -17.76,    7.39]
+Kalman az set to 292
+{d 38.4} 
+{c292} 
+{lx 0.97} 
+{la 0.14} 
+new hdg steering 0
+hdg: 293, bias: 104
+msg: 09:48:37.213{LT22.3582}
+msg: 09:48:37.223{LN7.7652}
+msg: 09:48:37.229{LA41}
+{la 0.13}
+hdg: 292, bias: 104
+hdg: 293, bias: 104
+hdg: 292, bias: 104
+hdg: 291, bias: 104
+hdg: 292, bias: 104
+msg: 09:48:37.910{Z3 |                                          |}
+msg: 09:48:37.922{Z2-1.0,2,0}
+hdg: 291, bias: 104
+posAV: [-650.50, 2265.63]
+wpt: 29 raw hdg:  291.0
+raw speed:  0.79
+Kalman pos vec: [  -6.35,    1.44]
+filtered E-N pos: : [-651.05, 2263.09]
+Filtered hdg:  291.0
+Filtered speed:   1.62
+progress vec: [  -6.08,    2.18]
+xtrack vec: [   0.26,    0.74]
+aiming vector: [ -16.80,    6.84]
+Kalman az set to 292
+{d 36.3} 
+{c292} 
+{lx 0.78} 
+{la 0.13} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 290, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 291, bias: 104
+{s   1}
+msg: 09:48:38.237{LT22.3646}
+msg: 09:48:38.247{LN7.7929}
+msg: 09:48:38.254{LA37}
+{la 0.12}
+adjusting steer to meet az 0
+hdg: 292, bias: 104
+{s   0}
+hdg: 291, bias: 104
+posAV: [-652.82, 2266.28]
+wpt: 29 raw hdg:  291.0
+raw speed:  0.79
+Kalman pos vec: [  -8.48,    2.40]
+filtered E-N pos: : [-653.18, 2264.05]
+Filtered hdg:  291.0
+Filtered speed:   1.73
+progress vec: [  -8.28,    2.96]
+xtrack vec: [   0.20,    0.57]
+aiming vector: [ -15.76,    6.28]
+Kalman az set to 291
+{d 33.9} 
+{c291} 
+{lx 0.60} 
+{la 0.12} 
+new hdg steering 0
+msg: 09:48:39.257{LT22.3708}
+msg: 09:48:39.267{LN7.8203}
+msg: 09:48:39.274{LA33}
+{la 0.11}
+hdg: 290, bias: 104
+hdg: 291, bias: 104
+hdg: 290, bias: 104
+hdg: 291, bias: 104
+hdg: 290, bias: 104
+posAV: [-655.11, 2266.90]
+wpt: 29 raw hdg:  290.0
+raw speed:  0.79
+Kalman pos vec: [ -10.63,    3.35]
+filtered E-N pos: : [-655.33, 2265.00]
+Filtered hdg:  290.0
+Filtered speed:   1.75
+progress vec: [ -10.49,    3.75]
+xtrack vec: [   0.14,    0.40]
+aiming vector: [ -14.72,    5.72]
+Kalman az set to 291
+{d 31.6} 
+{c291} 
+{lx 0.42} 
+{la 0.11} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 289, bias: 104
+{s   2}
+msg: 09:48:40.059{Z3 |                                          |}
+msg: 09:48:40.072{Z2-3.0,4,0}
+adjusting steer to meet az 1
+hdg: 290, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 291, bias: 104
+{s   0}
+msg: 09:48:40.276{LT22.3769}
+msg: 09:48:40.286{LN7.8498}
+msg: 09:48:40.293{LA14}
+{la 0.05}
+hdg: 292, bias: 104
+hdg: 291, bias: 104
+hdg: 290, bias: 104
+hdg: 291, bias: 104
+hdg: 290, bias: 104
+hdg: 291, bias: 104
+posAV: [-657.58, 2267.52]
+wpt: 29 raw hdg:  291.0
+raw speed:  0.79
+Kalman pos vec: [ -12.92,    4.37]
+filtered E-N pos: : [-657.62, 2266.02]
+Filtered hdg:  292.0
+Filtered speed:   1.86
+progress vec: [ -12.84,    4.60]
+xtrack vec: [   0.08,    0.23]
+aiming vector: [ -13.60,    5.13]
+Kalman az set to 290
+{d 29.1} 
+{c290} 
+{lx 0.24} 
+{la 0.05} 
+new hdg steering -1
+{s  -1}
+adjusting steer to meet az 0
+hdg: 290, bias: 104
+{s   0}
+hdg: 291, bias: 104
+msg: 09:48:41.299{LT22.3830}
+msg: 09:48:41.310{LN7.8775}
+msg: 09:48:41.316{LA14}
+{la 0.05}
+hdg: 292, bias: 104
+hdg: 291, bias: 104
+posAV: [-659.91, 2268.14]
+wpt: 29 raw hdg:  291.0
+raw speed:  0.79
+Kalman pos vec: [ -15.13,    5.36]
+filtered E-N pos: : [-659.83, 2267.01]
+Filtered hdg:  292.0
+Filtered speed:   1.81
+progress vec: [ -15.12,    5.41]
+xtrack vec: [   0.02,    0.05]
+aiming vector: [ -12.53,    4.54]
+Kalman az set to 289
+{d 26.7} 
+{c289} 
+{lx 0.05} 
+{la 0.05} 
+new hdg steering -2
+{s  -2}
+adjusting steer to meet az -1
+hdg: 290, bias: 104
+{s  -1}
+msg: 09:48:42.205{Z3 |                                          |}
+msg: 09:48:42.217{Z2 1.0,0,0}
+msg: 09:48:42.319{LT22.3877}
+msg: 09:48:42.328{LN7.9045}
+msg: 09:48:42.335{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 289, bias: 104
+{s   0}
+hdg: 288, bias: 104
+hdg: 287, bias: 104
+hdg: 286, bias: 104
+hdg: 285, bias: 104
+posAV: [-662.17, 2268.62]
+wpt: 29 raw hdg:  285.0
+raw speed:  0.79
+Kalman pos vec: [ -17.25,    6.21]
+filtered E-N pos: : [-661.95, 2267.86]
+Filtered hdg:  286.0
+Filtered speed:   1.70
+progress vec: [ -17.26,    6.18]
+xtrack vec: [  -0.01,   -0.03]
+aiming vector: [ -11.49,    4.07]
+Kalman az set to 289
+{d 24.4} 
+{c289} 
+{lx 0.04} 
+{la 0.05} 
+new hdg steering 4
+{s   4}
+adjusting steer to meet az 5
+hdg: 284, bias: 104
+{s   5}
+adjusting steer to meet az 6
+hdg: 283, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg: 284, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 285, bias: 104
+{s   4}
+msg: 09:48:43.343{LT22.3920}
+msg: 09:48:43.354{LN7.9351}
+msg: 09:48:43.360{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg: 286, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 287, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 288, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 289, bias: 104
+{s   0}
+posAV: [-664.73, 2269.05]
+wpt: 29 raw hdg:  289.0
+raw speed:  0.79
+Kalman pos vec: [ -19.61,    7.04]
+filtered E-N pos: : [-664.31, 2268.69]
+Filtered hdg:  291.0
+Filtered speed:   1.86
+progress vec: [ -19.62,    7.02]
+xtrack vec: [  -0.01,   -0.02]
+aiming vector: [ -10.30,    3.66]
+Kalman az set to 289
+{d 21.9} 
+{c289} 
+{lx 0.02} 
+{la 0.05} 
+new hdg steering 0
+hdg: 288, bias: 104
+msg: 09:48:44.355{Z3 |                                          |}
+msg: 09:48:44.367{Z2 0.0,2,0}
+msg: 09:48:44.378{LT22.3963}
+msg: 09:48:44.389{LN7.9650}
+msg: 09:48:44.395{LA14}
+{la 0.05}
+hdg: 289, bias: 104
+hdg: 288, bias: 104
+hdg: 287, bias: 104
+posAV: [-667.24, 2269.49]
+wpt: 29 raw hdg:  287.0
+raw speed:  0.79
+Kalman pos vec: [ -21.98,    7.87]
+filtered E-N pos: : [-666.68, 2269.52]
+Filtered hdg:  288.0
+Filtered speed:   1.86
+progress vec: [ -21.98,    7.87]
+xtrack vec: [  -0.00,   -0.01]
+aiming vector: [  -9.12,    3.26]
+Kalman az set to 289
+{d 19.4} 
+{c289} 
+{lx 0.01} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg: 288, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 287, bias: 104
+{s   2}
+msg: 09:48:45.387{LT22.4006}
+msg: 09:48:45.397{LN7.9920}
+msg: 09:48:45.404{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg: 286, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 287, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 288, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 289, bias: 104
+{s   0}
+hdg: 288, bias: 104
+posAV: [-669.50, 2269.92]
+wpt: 29 raw hdg:  288.0
+raw speed:  0.79
+Kalman pos vec: [ -24.20,    8.58]
+filtered E-N pos: : [-668.90, 2270.23]
+Filtered hdg:  289.0
+Filtered speed:   1.75
+progress vec: [ -24.17,    8.65]
+xtrack vec: [   0.02,    0.07]
+aiming vector: [  -7.99,    2.94]
+Kalman az set to 290
+{d 17.0} 
+{c290} 
+{lx 0.07} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 3
+hdg: 287, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 288, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 289, bias: 104
+{s   1}
+msg: 09:48:46.405{LT22.4053}
+msg: 09:48:46.415{LN8.0201}
+msg: 09:48:46.422{LA14}
+{la 0.05}
+msg: 09:48:46.501{Z3 |                                          |}
+msg: 09:48:46.514{Z2-2.0,4,0}
+adjusting steer to meet az 2
+hdg: 288, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 289, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 290, bias: 104
+{s   0}
+posAV: [-671.85, 2270.40]
+wpt: 29 raw hdg:  290.0
+raw speed:  0.79
+Kalman pos vec: [ -26.44,    9.30]
+filtered E-N pos: : [-671.14, 2270.95]
+Filtered hdg:  291.0
+Filtered speed:   1.75
+progress vec: [ -26.39,    9.44]
+xtrack vec: [   0.05,    0.14]
+aiming vector: [  -6.86,    2.62]
+Kalman az set to 290
+{d 14.7} 
+{c290} 
+{lx 0.15} 
+{la 0.05} 
+new hdg steering 0
+hdg: 289, bias: 104
+hdg: 290, bias: 104
+hdg: 289, bias: 104
+hdg: 288, bias: 104
+hdg: 289, bias: 104
+msg: 09:48:47.445{LT22.4165}
+msg: 09:48:47.456{LN8.0773}
+msg: 09:48:47.461{LA14}
+{la 0.05}
+hdg: 288, bias: 104
+hdg: 289, bias: 104
+hdg: 288, bias: 104
+posAV: [-676.64, 2271.53]
+wpt: 29 raw hdg:  288.0
+raw speed:  0.79
+Kalman pos vec: [ -30.56,   10.61]
+filtered E-N pos: : [-675.26, 2272.26]
+Filtered hdg:  288.0
+Filtered speed:   2.99
+progress vec: [ -30.45,   10.90]
+xtrack vec: [   0.10,    0.29]
+aiming vector: [  -4.77,    2.03]
+Kalman az set to 293
+{d 10.4} 
+{c293} 
+{lx 0.31} 
+{la 0.05} 
+new hdg steering 5
+{s   5}
+adjusting steer to meet az 4
+hdg: 289, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 290, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 291, bias: 104
+{s   2}
+adjusting steer to meet az 3
+hdg: 290, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 291, bias: 104
+{s   2}
+msg: 09:48:48.462{LT22.4212}
+msg: 09:48:48.472{LN8.1058}
+msg: 09:48:48.478{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg: 290, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 291, bias: 104
+{s   2}
+msg: 09:48:48.656{Z3 |                                          |}
+msg: 09:48:48.669{Z2-1.0,0,0}
+adjusting steer to meet az 1
+hdg: 292, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 291, bias: 104
+{s   2}
+posAV: [-679.03, 2272.01]
+wpt: 29 raw hdg:  291.0
+raw speed:  0.79
+Kalman pos vec: [ -33.30,   11.37]
+filtered E-N pos: : [-678.00, 2273.02]
+Filtered hdg:  290.0
+Filtered speed:   2.06
+progress vec: [ -33.12,   11.85]
+xtrack vec: [   0.17,    0.48]
+aiming vector: [  -3.37,    1.75]
+Kalman az set to 297
+{d  7.5} 
+{c297} 
+{lx 0.51} 
+{la 0.05} 
+Odo:    42.5, speed:   50
+new hdg steering 6
+{v  37}
+{s   6}
+adjusting steer to meet az 5
+hdg: 292, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 293, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 294, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 295, bias: 104
+{s   2}
+msg: 09:48:49.485{LT22.4262}
+msg: 09:48:49.496{LN8.1306}
+msg: 09:48:49.502{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 297, bias: 104
+{s   0}
+hdg: 298, bias: 104
+posAV: [-681.11, 2272.52]
+wpt: 29 raw hdg:  298.0
+raw speed:  0.58
+Kalman pos vec: [ -35.37,   12.00]
+filtered E-N pos: : [-680.07, 2273.65]
+Filtered hdg:  295.0
+Filtered speed:   1.52
+progress vec: [ -35.16,   12.58]
+xtrack vec: [   0.21,    0.58]
+aiming vector: [  -2.32,    1.49]
+Kalman az set to 302
+{d  5.4} 
+{c302} 
+{lx 0.62} 
+{la 0.05} 
+new hdg steering 4
+{s   4}
+adjusting steer to meet az 5
+hdg: 297, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 298, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 299, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 300, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 301, bias: 104
+{s   1}
+msg: 09:48:50.505{LT22.4323}
+msg: 09:48:50.516{LN8.1533}
+msg: 09:48:50.522{LA14}
+{la 0.05}
+msg: 09:48:50.805{Z3 |                                          |}
+msg: 09:48:50.817{Z2-3.0,2,0}
+posAV: [-683.01, 2273.14]
+wpt: 29 raw hdg:  301.0
+raw speed:  0.58
+Kalman pos vec: [ -37.23,   12.66]
+filtered E-N pos: : [-681.93, 2274.31]
+Filtered hdg:  297.0
+Filtered speed:   1.40
+progress vec: [ -37.01,   13.25]
+xtrack vec: [   0.21,    0.59]
+aiming vector: [  -1.39,    1.16]
+Kalman az set to 309
+{d  3.5} 
+{c309} 
+{lx 0.63} 
+{la 0.05} 
+new hdg steering 8
+{s   8}
+adjusting steer to meet az 7
+hdg: 302, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg: 303, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg: 304, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 305, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 306, bias: 104
+{s   3}
+msg: 09:48:51.523{LT22.4406}
+msg: 09:48:51.535{LN8.1745}
+adjusting steer to meet az 2
+hdg: 307, bias: 104
+{s   2}
+msg: 09:48:51.554{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 308, bias: 104
+{s   1}
+posAV: [-684.79, 2273.98]
+wpt: 29 raw hdg:  308.0
+raw speed:  0.58
+Kalman pos vec: [ -38.95,   13.38]
+filtered E-N pos: : [-683.65, 2275.03]
+Filtered hdg:  303.0
+Filtered speed:   1.32
+progress vec: [ -38.78,   13.88]
+xtrack vec: [   0.18,    0.49]
+aiming vector: [  -0.54,    0.75]
+Kalman az set to 324
+{d  1.6} 
+{c324} 
+{lx 0.52} 
+{la 0.05} 
+close to waypoint
+Odo:    44.2, speed:   37
+resuming to   50
+track start======================================: [-684.91, 2276.04]
+wpt: 31 -653.41, 2229.63
+track: [  31.50,  -46.41]
+new wpt az set to 145
+new hdg steering -162
+{v  50}
+{s-162}
+adjusting steer to meet az -161
+hdg: 307, bias: 104
+{s-161}
+adjusting steer to meet az -159
+hdg: 305, bias: 104
+{s-159}
+adjusting steer to meet az -157
+hdg: 303, bias: 104
+{s-157}
+adjusting steer to meet az -155
+hdg: 301, bias: 104
+{s-155}
+adjusting steer to meet az -154
+hdg: 300, bias: 104
+{s-154}
+adjusting steer to meet az -152
+hdg: 298, bias: 104
+{s-152}
+adjusting steer to meet az -151
+hdg: 297, bias: 104
+{s-151}
+adjusting steer to meet az -149
+hdg: 295, bias: 104
+{s-149}
+adjusting steer to meet az -147
+hdg: 293, bias: 104
+{s-147}
+msg: 09:48:52.549{LT22.4485}
+msg: 09:48:52.558{LN8.1936}
+msg: 09:48:52.565{LA14}
+{la 0.05}
+adjusting steer to meet az -145
+hdg: 291, bias: 104
+{s-145}
+adjusting steer to meet az -143
+hdg: 289, bias: 104
+{s-143}
+adjusting steer to meet az -141
+hdg: 287, bias: 104
+{s-141}
+adjusting steer to meet az -139
+hdg: 285, bias: 104
+{s-139}
+adjusting steer to meet az -136
+hdg: 282, bias: 104
+{s-136}
+adjusting steer to meet az -134
+hdg: 280, bias: 104
+{s-134}
+adjusting steer to meet az -131
+hdg: 277, bias: 104
+{s-131}
+msg: 09:48:52.955{Z3 |                                          |}
+msg: 09:48:52.968{Z2-3.0,4,0}
+adjusting steer to meet az -129
+hdg: 275, bias: 104
+{s-129}
+posAV: [-686.39, 2274.78]
+wpt: 31 raw hdg:  272.0
+raw speed:  0.79
+Kalman pos vec: [  -0.51,   -1.57]
+filtered E-N pos: : [-685.42, 2274.47]
+Filtered hdg:  272.0
+Filtered speed:   0.79
+progress vec: [   0.57,   -0.84]
+xtrack vec: [   1.08,    0.73]
+aiming vector: [  16.54,  -22.05]
+Kalman az set to 143
+{d 55.1} 
+{c143} 
+{lx 1.30} 
+{la 0.05} 
+new hdg steering -129
+hdg: 272, bias: 104
+adjusting steer to meet az -126
+hdg: 269, bias: 104
+{s-126}
+adjusting steer to meet az -122
+hdg: 265, bias: 104
+{s-122}
+adjusting steer to meet az -119
+hdg: 262, bias: 104
+{s-119}
+adjusting steer to meet az -116
+hdg: 259, bias: 104
+{s-116}
+adjusting steer to meet az -114
+hdg: 257, bias: 104
+{s-114}
+adjusting steer to meet az -111
+hdg: 254, bias: 104
+{s-111}
+adjusting steer to meet az -108
+hdg: 251, bias: 104
+{s-108}
+adjusting steer to meet az -105
+hdg: 248, bias: 104
+{s-105}
+adjusting steer to meet az -102
+hdg: 245, bias: 104
+{s-102}
+adjusting steer to meet az -99
+hdg: 242, bias: 104
+{s -99}
+adjusting steer to meet az -95
+hdg: 238, bias: 104
+{s -95}
+msg: 09:48:53.568{LT22.4507}
+msg: 09:48:53.579{LN8.2174}
+msg: 09:48:53.585{LA14}
+{la 0.05}
+adjusting steer to meet az -92
+hdg: 235, bias: 104
+{s -92}
+adjusting steer to meet az -89
+hdg: 232, bias: 104
+{s -89}
+adjusting steer to meet az -86
+hdg: 229, bias: 104
+{s -86}
+adjusting steer to meet az -83
+hdg: 226, bias: 104
+{s -83}
+adjusting steer to meet az -80
+hdg: 223, bias: 104
+{s -80}
+adjusting steer to meet az -78
+hdg: 221, bias: 104
+{s -78}
+adjusting steer to meet az -75
+hdg: 218, bias: 104
+{s -75}
+adjusting steer to meet az -72
+hdg: 215, bias: 104
+{s -72}
+adjusting steer to meet az -69
+hdg: 212, bias: 104
+{s -69}
+posAV: [-688.38, 2275.00]
+wpt: 31 raw hdg:  212.0
+raw speed:  0.79
+Kalman pos vec: [  -1.52,   -1.83]
+filtered E-N pos: : [-686.43, 2274.21]
+Filtered hdg:  212.0
+Filtered speed:   1.14
+progress vec: [   0.37,   -0.55]
+xtrack vec: [   1.89,    1.29]
+aiming vector: [  12.27,  -14.00]
+Kalman az set to 138
+{d 55.5} 
+{c138} 
+{lx 2.29} 
+{la 0.05} 
+new hdg steering -74
+{s -74}
+adjusting steer to meet az -71
+hdg: 209, bias: 104
+{s -71}
+adjusting steer to meet az -68
+hdg: 206, bias: 104
+{s -68}
+adjusting steer to meet az -65
+hdg: 203, bias: 104
+{s -65}
+adjusting steer to meet az -62
+hdg: 200, bias: 104
+{s -62}
+adjusting steer to meet az -60
+hdg: 198, bias: 104
+{s -60}
+adjusting steer to meet az -57
+hdg: 195, bias: 104
+{s -57}
+adjusting steer to meet az -54
+hdg: 192, bias: 104
+{s -54}
+adjusting steer to meet az -51
+hdg: 189, bias: 104
+{s -51}
+adjusting steer to meet az -48
+hdg: 186, bias: 104
+{s -48}
+adjusting steer to meet az -45
+hdg: 183, bias: 104
+{s -45}
+adjusting steer to meet az -42
+hdg: 180, bias: 104
+{s -42}
+adjusting steer to meet az -40
+hdg: 178, bias: 104
+{s -40}
+msg: 09:48:54.595{LT22.4384}
+msg: 09:48:54.605{LN8.2325}
+msg: 09:48:54.612{LA14}
+{la 0.05}
+adjusting steer to meet az -37
+hdg: 175, bias: 104
+{s -37}
+adjusting steer to meet az -34
+hdg: 172, bias: 104
+{s -34}
+adjusting steer to meet az -31
+hdg: 169, bias: 104
+{s -31}
+adjusting steer to meet az -29
+hdg: 167, bias: 104
+{s -29}
+adjusting steer to meet az -26
+hdg: 164, bias: 104
+{s -26}
+adjusting steer to meet az -24
+hdg: 162, bias: 104
+{s -24}
+adjusting steer to meet az -22
+hdg: 160, bias: 104
+{s -22}
+adjusting steer to meet az -19
+hdg: 157, bias: 104
+{s -19}
+posAV: [-689.64, 2273.75]
+wpt: 31 raw hdg:  157.0
+raw speed:  0.79
+Kalman pos vec: [  -2.36,   -2.18]
+filtered E-N pos: : [-687.27, 2273.86]
+Filtered hdg:  157.0
+Filtered speed:   0.21
+progress vec: [   0.27,   -0.39]
+xtrack vec: [   2.63,    1.79]
+aiming vector: [  13.04,  -13.55]
+Kalman az set to 136
+{d 55.7} 
+{c136} 
+{lx 3.18} 
+{la 0.05} 
+new hdg steering -21
+{s -21}
+adjusting steer to meet az -20
+hdg: 156, bias: 104
+{s -20}
+msg: 09:48:55.102{Z3 |                     .    X   x.          |}
+msg: 09:48:55.114{Z2 1.0,0,0}
+adjusting steer to meet az -18
+hdg: 154, bias: 104
+{s -18}
+adjusting steer to meet az -17
+hdg: 153, bias: 104
+{s -17}
+adjusting steer to meet az -15
+hdg: 151, bias: 104
+{s -15}
+adjusting steer to meet az -13
+hdg: 149, bias: 104
+{s -13}
+adjusting steer to meet az -11
+hdg: 147, bias: 104
+{s -11}
+adjusting steer to meet az -10
+hdg: 146, bias: 104
+{s -10}
+adjusting steer to meet az -9
+hdg: 145, bias: 104
+{s  -9}
+adjusting steer to meet az -8
+hdg: 144, bias: 104
+{s  -8}
+adjusting steer to meet az -6
+hdg: 142, bias: 104
+{s  -6}
+adjusting steer to meet az -5
+hdg: 141, bias: 104
+{s  -5}
+adjusting steer to meet az -4
+hdg: 140, bias: 104
+{s  -4}
+msg: 09:48:55.613{LT22.4212}
+msg: 09:48:55.623{LN8.2285}
+msg: 09:48:55.630{LA14}
+{la 0.05}
+adjusting steer to meet az -3
+hdg: 139, bias: 104
+{s  -3}
+adjusting steer to meet az -2
+hdg: 138, bias: 104
+{s  -2}
+adjusting steer to meet az -1
+hdg: 137, bias: 104
+{s  -1}
+posAV: [-689.31, 2272.01]
+wpt: 31 raw hdg:  137.0
+raw speed:  0.79
+Kalman pos vec: [  -2.64,   -2.99]
+filtered E-N pos: : [-687.55, 2273.05]
+Filtered hdg:  137.0
+Filtered speed:   0.36
+progress vec: [   0.56,   -0.82]
+xtrack vec: [   3.20,    2.17]
+aiming vector: [  13.51,  -13.02]
+Kalman az set to 133
+{d 55.2} 
+{c133} 
+{lx 3.87} 
+{la 0.05} 
+new hdg steering -4
+{s  -4}
+adjusting steer to meet az -5
+hdg: 138, bias: 104
+{s  -5}
+adjusting steer to meet az -4
+hdg: 137, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg: 136, bias: 104
+{s  -3}
+adjusting steer to meet az -4
+hdg: 137, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg: 136, bias: 104
+{s  -3}
+adjusting steer to meet az -2
+hdg: 135, bias: 104
+{s  -2}
+adjusting steer to meet az -1
+hdg: 134, bias: 104
+{s  -1}
+msg: 09:48:56.639{LT22.4050}
+msg: 09:48:56.649{LN8.2102}
+msg: 09:48:56.656{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 133, bias: 104
+{s   0}
+hdg: 134, bias: 104
+posAV: [-687.78, 2270.37]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.79
+Kalman pos vec: [  -1.86,   -4.40]
+filtered E-N pos: : [-686.77, 2271.64]
+Filtered hdg:  134.0
+Filtered speed:   1.14
+progress vec: [   1.46,   -2.15]
+xtrack vec: [   3.32,    2.25]
+aiming vector: [  13.33,  -12.50]
+Kalman az set to 133
+{d 53.6} 
+{c133} 
+{lx 4.01} 
+{la 0.05} 
+new hdg steering -1
+{s  -1}
+adjusting steer to meet az -2
+hdg: 135, bias: 104
+{s  -2}
+msg: 09:48:57.251{Z3 |                                          |}
+msg: 09:48:57.263{Z2 3.0,2,0}
+adjusting steer to meet az -1
+hdg: 134, bias: 104
+{s  -1}
+adjusting steer to meet az 0
+hdg: 133, bias: 104
+{s   0}
+msg: 09:48:57.659{LT22.3891}
+msg: 09:48:57.669{LN8.1886}
+msg: 09:48:57.675{LA14}
+{la 0.05}
+posAV: [-685.97, 2268.76]
+wpt: 31 raw hdg:  133.0
+raw speed:  0.79
+Kalman pos vec: [  -0.49,   -6.08]
+filtered E-N pos: : [-685.40, 2269.96]
+Filtered hdg:  133.0
+Filtered speed:   1.59
+progress vec: [   2.67,   -3.93]
+xtrack vec: [   3.16,    2.15]
+aiming vector: [  12.77,  -12.01]
+Kalman az set to 133
+{d 51.5} 
+{c133} 
+{lx 3.82} 
+{la 0.05} 
+new hdg steering 0
+hdg: 132, bias: 104
+msg: 09:48:58.685{LT22.3747}
+msg: 09:48:58.695{LN8.1680}
+msg: 09:48:58.701{LA14}
+{la 0.05}
+hdg: 133, bias: 104
+posAV: [-684.24, 2267.30]
+wpt: 31 raw hdg:  133.0
+raw speed:  0.79
+Kalman pos vec: [   1.01,   -7.74]
+filtered E-N pos: : [-683.90, 2268.30]
+Filtered hdg:  133.0
+Filtered speed:   1.68
+progress vec: [   3.91,   -5.77]
+xtrack vec: [   2.91,    1.97]
+aiming vector: [  12.10,  -11.57]
+Kalman az set to 133
+{d 49.2} 
+{c133} 
+{lx 3.51} 
+{la 0.05} 
+new hdg steering 0
+hdg: 134, bias: 104
+hdg: 135, bias: 104
+msg: 09:48:59.401{Z3 |                                          |}
+msg: 09:48:59.413{Z2 6.0,4,0}
+hdg: 134, bias: 104
+msg: 09:48:59.704{LT22.3607}
+msg: 09:48:59.715{LN8.1468}
+msg: 09:48:59.722{LA14}
+{la 0.05}
+hdg: 133, bias: 104
+posAV: [-682.46, 2265.88]
+wpt: 31 raw hdg:  133.0
+raw speed:  0.79
+Kalman pos vec: [   2.57,   -9.38]
+filtered E-N pos: : [-682.34, 2266.66]
+Filtered hdg:  134.0
+Filtered speed:   1.71
+progress vec: [   5.17,   -7.62]
+xtrack vec: [   2.60,    1.77]
+aiming vector: [  11.38,  -11.16]
+Kalman az set to 134
+{d 47.0} 
+{c134} 
+{lx 3.14} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 132, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 133, bias: 104
+{s   1}
+msg: 09:49:00.731{LT22.3474}
+msg: 09:49:00.741{LN8.1223}
+msg: 09:49:00.748{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg: 132, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 133, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 134, bias: 104
+{s   0}
+posAV: [-680.41, 2264.53]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.79
+Kalman pos vec: [   4.26,  -11.07]
+filtered E-N pos: : [-680.65, 2264.97]
+Filtered hdg:  135.0
+Filtered speed:   1.78
+progress vec: [   6.49,   -9.56]
+xtrack vec: [   2.23,    1.51]
+aiming vector: [  10.57,  -10.77]
+Kalman az set to 135
+{d 44.6} 
+{c135} 
+{lx 2.69} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 133, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 134, bias: 104
+{s   1}
+msg: 09:49:01.551{Z3 |                                          |}
+msg: 09:49:01.564{Z2 2.0,0,0}
+msg: 09:49:01.750{LT22.3340}
+msg: 09:49:01.761{LN8.0996}
+msg: 09:49:01.767{LA14}
+{la 0.05}
+posAV: [-678.51, 2263.17]
+wpt: 31 raw hdg:  134.0
+raw speed:  0.79
+Kalman pos vec: [   5.93,  -12.69]
+filtered E-N pos: : [-678.98, 2263.35]
+Filtered hdg:  134.0
+Filtered speed:   1.74
+progress vec: [   7.76,  -11.44]
+xtrack vec: [   1.84,    1.25]
+aiming vector: [   9.75,  -10.41]
+Kalman az set to 136
+{d 42.3} 
+{c136} 
+{lx 2.22} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg: 135, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 134, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 135, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 134, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 135, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 136, bias: 104
+{s   0}
+msg: 09:49:02.769{LT22.3200}
+msg: 09:49:02.779{LN8.0777}
+msg: 09:49:02.785{LA14}
+{la 0.05}
+hdg: 135, bias: 104
+hdg: 136, bias: 104
+posAV: [-676.68, 2261.76]
+wpt: 31 raw hdg:  136.0
+raw speed:  0.79
+Kalman pos vec: [   7.58,  -14.28]
+filtered E-N pos: : [-677.33, 2261.76]
+Filtered hdg:  136.0
+Filtered speed:   1.72
+progress vec: [   9.03,  -13.30]
+xtrack vec: [   1.45,    0.98]
+aiming vector: [  12.68,  -15.57]
+Kalman az set to 140
+{d 40.1} 
+{c140} 
+{lx 1.75} 
+{la 0.05} 
+new hdg steering 4
+{s   4}
+adjusting steer to meet az 3
+hdg: 137, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 138, bias: 104
+{s   2}
+msg: 09:49:03.702{Z3 |                                          |}
+msg: 09:49:03.715{Z2 2.0,2,0}
+msg: 09:49:03.794{LT22.3049}
+msg: 09:49:03.804{LN8.0550}
+msg: 09:49:03.811{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 139, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 138, bias: 104
+{s   2}
+posAV: [-674.77, 2260.23]
+wpt: 31 raw hdg:  138.0
+raw speed:  0.79
+Kalman pos vec: [   9.27,  -15.96]
+filtered E-N pos: : [-675.64, 2260.08]
+Filtered hdg:  138.0
+Filtered speed:   1.76
+progress vec: [  10.34,  -15.23]
+xtrack vec: [   1.07,    0.73]
+aiming vector: [  11.65,  -14.86]
+Kalman az set to 141
+{d 37.7} 
+{c141} 
+{lx 1.29} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 139, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 140, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 141, bias: 104
+{s   0}
+hdg: 140, bias: 104
+msg: 09:49:04.812{LT22.2898}
+msg: 09:49:04.822{LN8.0338}
+msg: 09:49:04.829{LA14}
+{la 0.05}
+hdg: 139, bias: 104
+hdg: 140, bias: 104
+posAV: [-673.00, 2258.70]
+wpt: 31 raw hdg:  140.0
+raw speed:  0.79
+Kalman pos vec: [  10.90,  -17.61]
+filtered E-N pos: : [-674.01, 2258.43]
+Filtered hdg:  139.0
+Filtered speed:   1.72
+progress vec: [  11.62,  -17.12]
+xtrack vec: [   0.72,    0.49]
+aiming vector: [  10.66,  -14.16]
+Kalman az set to 143
+{d 35.4} 
+{c143} 
+{lx 0.87} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 4
+hdg: 139, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 140, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 141, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 142, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 143, bias: 104
+{s   0}
+hdg: 142, bias: 104
+hdg: 141, bias: 104
+hdg: 142, bias: 104
+hdg: 141, bias: 104
+msg: 09:49:05.849{Z3 |                                          |}
+msg: 09:49:05.862{Z2 1.0,4,0}
+hdg: 142, bias: 104
+msg: 09:49:05.879{LT22.2739}
+msg: 09:49:05.888{LN8.0129}
+msg: 09:49:05.895{LA14}
+{la 0.05}
+posAV: [-671.25, 2257.08]
+wpt: 31 raw hdg:  142.0
+raw speed:  0.79
+Kalman pos vec: [  12.51,  -19.29]
+filtered E-N pos: : [-672.40, 2256.75]
+Filtered hdg:  140.0
+Filtered speed:   1.73
+progress vec: [  12.91,  -19.02]
+xtrack vec: [   0.40,    0.27]
+aiming vector: [   9.69,  -13.43]
+Kalman az set to 144
+{d 33.1} 
+{c144} 
+{lx 0.48} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 3
+hdg: 141, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 142, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 143, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 144, bias: 104
+{s   0}
+hdg: 143, bias: 104
+hdg: 144, bias: 104
+msg: 09:49:06.854{LT22.2559}
+msg: 09:49:06.865{LN7.9927}
+msg: 09:49:06.871{LA14}
+{la 0.05}
+hdg: 143, bias: 104
+posAV: [-669.56, 2255.26]
+wpt: 31 raw hdg:  143.0
+raw speed:  0.79
+Kalman pos vec: [  14.18,  -21.08]
+filtered E-N pos: : [-670.73, 2254.96]
+Filtered hdg:  141.0
+Filtered speed:   1.81
+progress vec: [  14.26,  -21.02]
+xtrack vec: [   0.09,    0.06]
+aiming vector: [   8.71,  -12.64]
+Kalman az set to 145
+{d 30.7} 
+{c145} 
+{lx 0.11} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg: 144, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 143, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 144, bias: 104
+{s   1}
+msg: 09:49:07.880{LT22.2383}
+msg: 09:49:07.889{LN7.9729}
+msg: 09:49:07.896{LA14}
+{la 0.05}
+posAV: [-667.90, 2253.48]
+wpt: 31 raw hdg:  144.0
+raw speed:  0.79
+Kalman pos vec: [  15.83,  -22.86]
+filtered E-N pos: : [-669.08, 2253.18]
+Filtered hdg:  141.0
+Filtered speed:   1.80
+progress vec: [  15.62,  -23.01]
+xtrack vec: [  -0.22,   -0.15]
+aiming vector: [   7.72,  -11.85]
+Kalman az set to 146
+{d 28.3} 
+{c146} 
+{lx 0.26} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+msg: 09:49:08.015{Z3 |                                          |}
+msg: 09:49:08.016{Z2 0.0,0,0}
+adjusting steer to meet az 1
+hdg: 145, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 146, bias: 104
+{s   0}
+hdg: 145, bias: 104
+hdg: 146, bias: 104
+hdg: 145, bias: 104
+hdg: 144, bias: 104
+hdg: 145, bias: 104
+msg: 09:49:08.899{LT22.2210}
+msg: 09:49:08.908{LN7.9538}
+msg: 09:49:08.914{LA14}
+{la 0.05}
+posAV: [-666.30, 2251.72]
+wpt: 31 raw hdg:  145.0
+raw speed:  0.79
+Kalman pos vec: [  17.46,  -24.61]
+filtered E-N pos: : [-667.45, 2251.43]
+Filtered hdg:  141.0
+Filtered speed:   1.78
+progress vec: [  16.94,  -24.96]
+xtrack vec: [  -0.52,   -0.35]
+aiming vector: [   6.76,  -11.08]
+Kalman az set to 148
+{d 25.9} 
+{c148} 
+{lx 0.63} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 146, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 147, bias: 104
+{s   1}
+msg: 09:49:09.918{LT22.2030}
+msg: 09:49:09.928{LN7.9344}
+msg: 09:49:09.935{LA14}
+{la 0.05}
+posAV: [-664.67, 2249.90]
+wpt: 31 raw hdg:  147.0
+raw speed:  0.79
+Kalman pos vec: [  19.10,  -26.39]
+filtered E-N pos: : [-665.81, 2249.65]
+Filtered hdg:  142.0
+Filtered speed:   1.80
+progress vec: [  18.29,  -26.94]
+xtrack vec: [  -0.81,   -0.55]
+aiming vector: [   5.80,  -10.28]
+Kalman az set to 150
+{d 23.5} 
+{c150} 
+{lx 0.98} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 148, bias: 104
+{s   2}
+msg: 09:49:10.142{Z3 |                                          |}
+msg: 09:49:10.156{Z2 0.0,2,0}
+adjusting steer to meet az 1
+hdg: 149, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg: 148, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 149, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 150, bias: 104
+{s   0}
+hdg: 149, bias: 104
+msg: 09:49:10.945{LT22.1846}
+msg: 09:49:10.954{LN7.9160}
+msg: 09:49:10.961{LA14}
+{la 0.05}
+posAV: [-663.13, 2248.04]
+wpt: 31 raw hdg:  149.0
+raw speed:  0.79
+Kalman pos vec: [  20.69,  -28.20]
+filtered E-N pos: : [-664.22, 2247.84]
+Filtered hdg:  143.0
+Filtered speed:   1.79
+progress vec: [  19.63,  -28.92]
+xtrack vec: [  -1.06,   -0.72]
+aiming vector: [   4.88,   -9.46]
+Kalman az set to 152
+{d 21.2} 
+{c152} 
+{lx 1.28} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 150, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 151, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 152, bias: 104
+{s   0}
+msg: 09:49:11.965{LT22.1648}
+msg: 09:49:11.974{LN7.8980}
+msg: 09:49:11.981{LA14}
+{la 0.05}
+posAV: [-661.62, 2246.03]
+wpt: 31 raw hdg:  152.0
+raw speed:  0.79
+Kalman pos vec: [  22.26,  -30.11]
+filtered E-N pos: : [-662.65, 2245.93]
+Filtered hdg:  145.0
+Filtered speed:   1.82
+progress vec: [  21.01,  -30.96]
+xtrack vec: [  -1.24,   -0.84]
+aiming vector: [   4.00,   -8.57]
+Kalman az set to 154
+{d 18.7} 
+{c154} 
+{lx 1.50} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+msg: 09:49:12.289{Z3 |               .  -                       |}
+msg: 09:49:12.302{Z2 0.0,4,0}
+adjusting steer to meet az 1
+hdg: 153, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 154, bias: 104
+{s   0}
+estAV: [-662.33, 2246.37]
+gps tardy
+Dead Reconning =========================
+wpt: 31 raw hdg:  154.0
+raw speed:  0.79
+Kalman pos vec: [  22.36,  -30.08]
+filtered E-N pos: : [-662.55, 2245.96]
+Filtered hdg:  146.0
+Filtered speed:   0.31
+progress vec: [  21.03,  -30.98]
+xtrack vec: [  -1.33,   -0.90]
+aiming vector: [   3.91,   -8.62]
+Kalman az set to 155
+{d 18.7} 
+{c155} 
+{lx 1.61} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+msg: 09:49:13.015{LT22.1450}
+msg: 09:49:13.016{LN7.8826}
+msg: 09:49:13.017{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 155, bias: 104
+{s   0}
+hdg: 154, bias: 104
+hdg: 155, bias: 104
+hdg: 156, bias: 104
+posAV: [-660.33, 2244.02]
+wpt: 31 raw hdg:  156.0
+raw speed:  0.79
+Kalman pos vec: [  23.73,  -31.99]
+filtered E-N pos: : [-661.18, 2244.05]
+Filtered hdg:  148.0
+Filtered speed:   1.75
+progress vec: [  22.35,  -32.93]
+xtrack vec: [  -1.38,   -0.94]
+aiming vector: [   3.19,   -7.68]
+Kalman az set to 157
+{d 16.4} 
+{c157} 
+{lx 1.67} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+msg: 09:49:14.027{LT22.1245}
+msg: 09:49:14.029{LN7.8682}
+msg: 09:49:14.030{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 157, bias: 104
+{s   0}
+msg: 09:49:14.438{Z3 |                                          |}
+msg: 09:49:14.451{Z2 0.0,0,0}
+hdg: 158, bias: 104
+hdg: 159, bias: 104
+hdg: 158, bias: 104
+posAV: [-659.13, 2241.95]
+wpt: 31 raw hdg:  158.0
+raw speed:  0.79
+Kalman pos vec: [  25.05,  -33.97]
+filtered E-N pos: : [-659.86, 2242.07]
+Filtered hdg:  149.0
+Filtered speed:   1.77
+progress vec: [  23.69,  -34.90]
+xtrack vec: [  -1.37,   -0.93]
+aiming vector: [   2.54,   -6.68]
+Kalman az set to 159
+{d 14.0} 
+{c159} 
+{lx 1.65} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+msg: 09:49:15.033{LT22.1040}
+msg: 09:49:15.044{LN7.8545}
+msg: 09:49:15.050{LA15}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 159, bias: 104
+{s   0}
+hdg: 158, bias: 104
+hdg: 159, bias: 104
+hdg: 160, bias: 104
+hdg: 159, bias: 104
+posAV: [-657.98, 2239.87]
+wpt: 31 raw hdg:  159.0
+raw speed:  0.79
+Kalman pos vec: [  26.31,  -35.98]
+filtered E-N pos: : [-658.60, 2240.06]
+Filtered hdg:  149.0
+Filtered speed:   1.77
+progress vec: [  25.02,  -36.86]
+xtrack vec: [  -1.30,   -0.88]
+aiming vector: [   1.94,   -5.66]
+Kalman az set to 161
+{d 11.6} 
+{c161} 
+{lx 1.57} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+msg: 09:49:16.053{LT22.0831}
+msg: 09:49:16.063{LN7.8419}
+msg: 09:49:16.070{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 160, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 161, bias: 104
+{s   0}
+msg: 09:49:16.585{Z3 |      .+-X- +        .                    |}
+msg: 09:49:16.598{Z2-5.0,2,0}
+hdg: 160, bias: 104
+hdg: 159, bias: 104
+hdg: 160, bias: 104
+posAV: [-656.92, 2237.75]
+wpt: 31 raw hdg:  160.0
+raw speed:  0.79
+Kalman pos vec: [  27.52,  -38.01]
+filtered E-N pos: : [-657.39, 2238.03]
+Filtered hdg:  150.0
+Filtered speed:   1.77
+progress vec: [  26.34,  -38.81]
+xtrack vec: [  -1.18,   -0.80]
+aiming vector: [   1.40,   -4.60]
+Kalman az set to 163
+{d  9.3} 
+{c163} 
+{lx 1.43} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 161, bias: 104
+{s   2}
+msg: 09:49:17.079{LT22.0597}
+msg: 09:49:17.090{LN7.8296}
+msg: 09:49:17.096{LA19}
+{la 0.06}
+adjusting steer to meet az 3
+hdg: 160, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 161, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 162, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 163, bias: 104
+{s   0}
+hdg: 162, bias: 104
+hdg: 163, bias: 104
+hdg: 162, bias: 104
+posAV: [-655.89, 2235.38]
+wpt: 31 raw hdg:  162.0
+raw speed:  0.79
+Kalman pos vec: [  28.73,  -40.22]
+filtered E-N pos: : [-656.18, 2235.82]
+Filtered hdg:  152.0
+Filtered speed:   1.87
+progress vec: [  27.75,  -40.89]
+xtrack vec: [  -0.98,   -0.66]
+aiming vector: [   0.90,   -3.42]
+Kalman az set to 165
+{d  6.8} 
+{c165} 
+{lx 1.18} 
+{la 0.06} 
+Odo:    64.7, speed:   50
+new hdg steering 3
+{v  37}
+{s   3}
+msg: 09:49:18.097{LT22.0374}
+msg: 09:49:18.107{LN7.8174}
+msg: 09:49:18.114{LA25}
+{la 0.08}
+adjusting steer to meet az 2
+hdg: 163, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 164, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 165, bias: 104
+{s   0}
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+msg: 09:49:18.738{Z3 |                                          |}
+msg: 09:49:18.751{Z2 0.0,4,0}
+posAV: [-654.87, 2233.12]
+wpt: 31 raw hdg:  165.0
+raw speed:  0.58
+Kalman pos vec: [  29.80,  -42.42]
+filtered E-N pos: : [-655.11, 2233.62]
+Filtered hdg:  155.0
+Filtered speed:   1.74
+progress vec: [  29.11,  -42.89]
+xtrack vec: [  -0.69,   -0.47]
+aiming vector: [   0.51,   -2.23]
+Kalman az set to 167
+{d  4.3} 
+{c167} 
+{lx 0.83} 
+{la 0.08} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg: 166, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 167, bias: 104
+{s   0}
+msg: 09:49:19.123{LT22.0165}
+msg: 09:49:19.133{LN7.8041}
+msg: 09:49:19.140{LA24}
+{la 0.08}
+hdg: 166, bias: 104
+hdg: 165, bias: 104
+hdg: 166, bias: 104
+posAV: [-653.76, 2231.00]
+wpt: 31 raw hdg:  166.0
+raw speed:  0.58
+Kalman pos vec: [  30.80,  -44.60]
+filtered E-N pos: : [-654.11, 2231.44]
+Filtered hdg:  156.0
+Filtered speed:   1.71
+progress vec: [  30.44,  -44.85]
+xtrack vec: [  -0.36,   -0.25]
+aiming vector: [   0.17,   -1.03]
+Kalman az set to 170
+{d  1.9} 
+{c170} 
+{lx 0.44} 
+{la 0.08} 
+close to waypoint
+Odo:    65.8, speed:   37
+resuming to   50
+track start======================================: [-653.41, 2229.63]
+wpt: 27 -640.51, 2179.75
+track: [  12.90,  -49.88]
+new wpt az set to 165
+new hdg steering 0
+{v  50}
+hdg: 167, bias: 104
+msg: 09:49:20.140{LT21.9992}
+msg: 09:49:20.150{LN7.7951}
+msg: 09:49:20.157{LA15}
+{la 0.05}
+hdg: 166, bias: 104
+hdg: 167, bias: 104
+hdg: 166, bias: 104
+hdg: 165, bias: 104
+hdg: 166, bias: 104
+msg: 09:49:20.884{Z3 |                                          |}
+msg: 09:49:20.897{Z2 0.0,0,0}
+posAV: [-653.00, 2229.25]
+wpt: 27 raw hdg:  166.0
+raw speed:  0.79
+Kalman pos vec: [  -0.15,    0.60]
+filtered E-N pos: : [-653.56, 2230.23]
+Filtered hdg:  166.0
+Filtered speed:   0.79
+aiming vector: [  12.90,  -49.88]
+Kalman az set to 165
+{d 52.1} 
+{c165} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering -1
+{s  -1}
+msg: 09:49:21.162{LT21.9805}
+msg: 09:49:21.172{LN7.7861}
+msg: 09:49:21.179{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 165, bias: 104
+{s   0}
+hdg: 164, bias: 104
+posAV: [-652.25, 2227.35]
+wpt: 27 raw hdg:  164.0
+raw speed:  0.79
+Kalman pos vec: [   0.37,   -1.30]
+filtered E-N pos: : [-653.04, 2228.33]
+Filtered hdg:  163.0
+Filtered speed:   1.94
+progress vec: [   0.34,   -1.31]
+xtrack vec: [  -0.04,   -0.01]
+aiming vector: [   6.24,  -24.30]
+Kalman az set to 165
+{d 50.2} 
+{c165} 
+{lx 0.04} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+msg: 09:49:22.186{LT21.9589}
+msg: 09:49:22.196{LN7.7764}
+msg: 09:49:22.202{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 165, bias: 104
+{s   0}
+hdg: 166, bias: 104
+hdg: 165, bias: 104
+hdg: 164, bias: 104
+posAV: [-651.44, 2225.16]
+wpt: 27 raw hdg:  164.0
+raw speed:  0.79
+Kalman pos vec: [   1.17,   -4.00]
+filtered E-N pos: : [-652.24, 2225.63]
+Filtered hdg:  163.0
+Filtered speed:   2.13
+progress vec: [   1.04,   -4.03]
+xtrack vec: [  -0.13,   -0.03]
+aiming vector: [   5.80,  -22.96]
+Kalman az set to 165
+{d 47.4} 
+{c165} 
+{lx 0.13} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+msg: 09:49:23.035{Z3 |                                          |}
+msg: 09:49:23.046{Z2 0.0,2,0}
+adjusting steer to meet az 0
+hdg: 165, bias: 104
+{s   0}
+hdg: 166, bias: 104
+hdg: 164, bias: 104
+msg: 09:49:23.206{LT21.9359}
+msg: 09:49:23.216{LN7.7652}
+msg: 09:49:23.223{LA14}
+{la 0.05}
+hdg: 163, bias: 104
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+posAV: [-650.50, 2222.83]
+wpt: 27 raw hdg:  165.0
+raw speed:  0.79
+Kalman pos vec: [   1.90,   -6.50]
+filtered E-N pos: : [-651.51, 2223.13]
+Filtered hdg:  164.0
+Filtered speed:   1.90
+progress vec: [   1.69,   -6.55]
+xtrack vec: [  -0.21,   -0.05]
+aiming vector: [   5.39,  -21.72]
+Kalman az set to 166
+{d 44.8} 
+{c166} 
+{lx 0.22} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 164, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 165, bias: 104
+{s   1}
+msg: 09:49:24.231{LT21.9139}
+msg: 09:49:24.241{LN7.7544}
+msg: 09:49:24.248{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 166, bias: 104
+{s   0}
+hdg: 165, bias: 104
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+posAV: [-649.59, 2220.60]
+wpt: 27 raw hdg:  165.0
+raw speed:  0.79
+Kalman pos vec: [   2.60,   -8.83]
+filtered E-N pos: : [-650.81, 2220.80]
+Filtered hdg:  164.0
+Filtered speed:   1.81
+progress vec: [   2.30,   -8.91]
+xtrack vec: [  -0.29,   -0.08]
+aiming vector: [   5.00,  -20.56]
+Kalman az set to 166
+{d 42.3} 
+{c166} 
+{lx 0.30} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 164, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 165, bias: 104
+{s   1}
+msg: 09:49:25.183{Z3 |                                          |}
+msg: 09:49:25.195{Z2 0.0,4,0}
+adjusting steer to meet az 0
+hdg: 166, bias: 104
+{s   0}
+msg: 09:49:25.250{LT21.8920}
+msg: 09:49:25.262{LN7.7429}
+msg: 09:49:25.267{LA14}
+{la 0.05}
+hdg: 165, bias: 104
+hdg: 164, bias: 104
+hdg: 163, bias: 104
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+posAV: [-648.63, 2218.39]
+wpt: 27 raw hdg:  165.0
+raw speed:  0.79
+Kalman pos vec: [   3.32,  -11.14]
+filtered E-N pos: : [-650.09, 2218.49]
+Filtered hdg:  164.0
+Filtered speed:   1.80
+progress vec: [   2.91,  -11.24]
+xtrack vec: [  -0.41,   -0.11]
+aiming vector: [   4.59,  -19.43]
+Kalman az set to 166
+{d 39.9} 
+{c166} 
+{lx 0.42} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 2
+hdg: 164, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 165, bias: 104
+{s   1}
+msg: 09:49:26.275{LT21.8696}
+msg: 09:49:26.286{LN7.7324}
+msg: 09:49:26.292{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 166, bias: 104
+{s   0}
+hdg: 165, bias: 104
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+posAV: [-647.75, 2216.12]
+wpt: 27 raw hdg:  165.0
+raw speed:  0.79
+Kalman pos vec: [   4.07,  -13.44]
+filtered E-N pos: : [-649.34, 2216.19]
+Filtered hdg:  164.0
+Filtered speed:   1.81
+progress vec: [   3.51,  -13.59]
+xtrack vec: [  -0.56,   -0.14]
+aiming vector: [   4.13,  -18.29]
+Kalman az set to 167
+{d 37.5} 
+{c167} 
+{lx 0.58} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+msg: 09:49:27.333{Z3 |                                          |}
+msg: 09:49:27.346{Z2 1.0,0,0}
+msg: 09:49:27.358{LT21.8477}
+msg: 09:49:27.368{LN7.7209}
+adjusting steer to meet az 1
+hdg: 166, bias: 104
+{s   1}
+msg: 09:49:27.384{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 167, bias: 104
+{s   0}
+hdg: 168, bias: 104
+posAV: [-646.79, 2213.90]
+wpt: 27 raw hdg:  168.0
+raw speed:  0.79
+Kalman pos vec: [   4.82,  -15.69]
+filtered E-N pos: : [-648.59, 2213.94]
+Filtered hdg:  166.0
+Filtered speed:   1.75
+progress vec: [   4.11,  -15.88]
+xtrack vec: [  -0.71,   -0.18]
+aiming vector: [   3.69,  -17.19]
+Kalman az set to 167
+{d 35.1} 
+{c167} 
+{lx 0.73} 
+{la 0.05} 
+new hdg steering -1
+{s  -1}
+adjusting steer to meet az -2
+hdg: 169, bias: 104
+{s  -2}
+adjusting steer to meet az -1
+hdg: 168, bias: 104
+{s  -1}
+msg: 09:49:28.341{LT21.8261}
+msg: 09:49:28.350{LN7.7119}
+msg: 09:49:28.357{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 167, bias: 104
+{s   0}
+hdg: 165, bias: 104
+hdg: 164, bias: 104
+hdg: 163, bias: 104
+posAV: [-646.03, 2211.71]
+wpt: 27 raw hdg:  163.0
+raw speed:  0.79
+Kalman pos vec: [   5.63,  -17.94]
+filtered E-N pos: : [-647.78, 2211.69]
+Filtered hdg:  160.0
+Filtered speed:   1.82
+progress vec: [   4.70,  -18.18]
+xtrack vec: [  -0.92,   -0.24]
+aiming vector: [   3.17,  -16.09]
+Kalman az set to 168
+{d 32.8} 
+{c168} 
+{lx 0.95} 
+{la 0.05} 
+new hdg steering 5
+{s   5}
+adjusting steer to meet az 4
+hdg: 164, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 165, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 166, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 167, bias: 104
+{s   1}
+msg: 09:49:29.368{LT21.8020}
+msg: 09:49:29.380{LN7.7026}
+msg: 09:49:29.385{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg: 168, bias: 104
+{s   0}
+msg: 09:49:29.480{Z3 |                                          |}
+msg: 09:49:29.492{Z2-6.0,2,0}
+hdg: 169, bias: 104
+hdg: 170, bias: 104
+hdg: 171, bias: 104
+posAV: [-645.25, 2209.27]
+wpt: 27 raw hdg:  171.0
+raw speed:  0.79
+Kalman pos vec: [   6.46,  -20.26]
+filtered E-N pos: : [-646.95, 2209.37]
+Filtered hdg:  167.0
+Filtered speed:   1.79
+progress vec: [   5.32,  -20.55]
+xtrack vec: [  -1.14,   -0.30]
+aiming vector: [   2.65,  -14.96]
+Kalman az set to 169
+{d 30.3} 
+{c169} 
+{lx 1.18} 
+{la 0.05} 
+new hdg steering -2
+{s  -2}
+adjusting steer to meet az -1
+hdg: 170, bias: 104
+{s  -1}
+adjusting steer to meet az 0
+hdg: 169, bias: 104
+{s   0}
+hdg: 168, bias: 104
+msg: 09:49:30.385{LT21.7789}
+msg: 09:49:30.394{LN7.6914}
+msg: 09:49:30.401{LA14}
+{la 0.05}
+hdg: 167, bias: 104
+hdg: 168, bias: 104
+posAV: [-644.32, 2206.92]
+wpt: 27 raw hdg:  168.0
+raw speed:  0.79
+Kalman pos vec: [   7.26,  -22.64]
+filtered E-N pos: : [-646.15, 2206.99]
+Filtered hdg:  163.0
+Filtered speed:   1.86
+progress vec: [   5.94,  -22.98]
+xtrack vec: [  -1.32,   -0.34]
+aiming vector: [   2.16,  -13.79]
+Kalman az set to 171
+{d 27.8} 
+{c171} 
+{lx 1.36} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 169, bias: 104
+{s   2}
+adjusting steer to meet az 3
+hdg: 168, bias: 104
+{s   3}
+msg: 09:49:31.406{LT21.7566}
+msg: 09:49:31.416{LN7.6810}
+msg: 09:49:31.422{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg: 169, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 170, bias: 104
+{s   1}
+msg: 09:49:31.630{Z3 |                                          |}
+msg: 09:49:31.643{Z2-1.0,4,0}
+adjusting steer to meet az 0
+hdg: 171, bias: 104
+{s   0}
+hdg: 170, bias: 104
+posAV: [-643.44, 2204.67]
+wpt: 27 raw hdg:  170.0
+raw speed:  0.79
+Kalman pos vec: [   8.12,  -24.92]
+filtered E-N pos: : [-645.29, 2204.71]
+Filtered hdg:  164.0
+Filtered speed:   1.81
+progress vec: [   6.55,  -25.33]
+xtrack vec: [  -1.57,   -0.41]
+aiming vector: [   1.61,  -12.68]
+Kalman az set to 172
+{d 25.4} 
+{c172} 
+{lx 1.62} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg: 171, bias: 104
+{s   1}
+msg: 09:49:32.443{LT21.7112}
+msg: 09:49:32.454{LN7.6644}
+msg: 09:49:32.460{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg: 170, bias: 104
+{s   2}
+adjusting steer to meet az 0
+hdg: 172, bias: 104
+{s   0}
+hdg: 173, bias: 104
+hdg: 172, bias: 104
+posAV: [-642.05, 2200.06]
+wpt: 27 raw hdg:  172.0
+raw speed:  0.79
+Kalman pos vec: [   9.39,  -28.98]
+filtered E-N pos: : [-644.02, 2200.65]
+Filtered hdg:  165.0
+Filtered speed:   2.93
+progress vec: [   7.61,  -29.44]
+xtrack vec: [  -1.78,   -0.46]
+aiming vector: [   0.87,  -10.68]
+Kalman az set to 175
+{d 21.2} 
+{c175} 
+{lx 1.83} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 4
+hdg: 171, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 172, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 173, bias: 104
+{s   2}
+msg: 09:49:33.471{LT21.6882}
+msg: 09:49:33.482{LN7.6561}
+msg: 09:49:33.488{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 174, bias: 104
+{s   1}
+msg: 09:49:33.788{Z3 |                                          |}
+msg: 09:49:33.801{Z2-5.0,0,0}
+adjusting steer to meet az 0
+hdg: 175, bias: 104
+{s   0}
+hdg: 176, bias: 104
+hdg: 177, bias: 104
+posAV: [-641.36, 2197.73]
+wpt: 27 raw hdg:  177.0
+raw speed:  0.79
+Kalman pos vec: [  10.23,  -31.64]
+filtered E-N pos: : [-643.18, 2197.99]
+Filtered hdg:  169.0
+Filtered speed:   1.99
+progress vec: [   8.31,  -32.13]
+xtrack vec: [  -1.92,   -0.50]
+aiming vector: [   0.37,   -9.37]
+Kalman az set to 177
+{d 18.4} 
+{c177} 
+{lx 1.99} 
+{la 0.05} 
+new hdg steering 0
+hdg: 178, bias: 104
+hdg: 177, bias: 104
+hdg: 176, bias: 104
+hdg: 175, bias: 104
+msg: 09:49:34.489{LT21.6641}
+msg: 09:49:34.498{LN7.6496}
+msg: 09:49:34.504{LA14}
+{la 0.05}
+hdg: 174, bias: 104
+hdg: 173, bias: 104
+posAV: [-640.81, 2195.29]
+wpt: 27 raw hdg:  173.0
+raw speed:  0.79
+Kalman pos vec: [  11.04,  -34.14]
+filtered E-N pos: : [-642.37, 2195.49]
+Filtered hdg:  163.0
+Filtered speed:   1.95
+progress vec: [   8.97,  -34.67]
+xtrack vec: [  -2.07,   -0.54]
+aiming vector: [  -0.76,   -5.60]
+Kalman az set to 187
+{d 15.9} 
+{c187} 
+{lx 2.14} 
+{la 0.05} 
+new hdg steering 14
+{s  14}
+adjusting steer to meet az 13
+hdg: 174, bias: 104
+{s  13}
+adjusting steer to meet az 11
+hdg: 176, bias: 104
+{s  11}
+adjusting steer to meet az 10
+hdg: 177, bias: 104
+{s  10}
+adjusting steer to meet az 9
+hdg: 178, bias: 104
+{s   9}
+adjusting steer to meet az 8
+hdg: 179, bias: 104
+{s   8}
+msg: 09:49:35.507{LT21.6418}
+msg: 09:49:35.517{LN7.6439}
+msg: 09:49:35.524{LA14}
+{la 0.05}
+adjusting steer to meet az 7
+hdg: 180, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg: 181, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg: 182, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 183, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 184, bias: 104
+{s   3}
+adjusting steer to meet az 4
+hdg: 183, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 184, bias: 104
+{s   3}
+msg: 09:49:35.938{Z3 |                                          |}
+msg: 09:49:35.950{Z2 0.0,2,0}
+adjusting steer to meet az 2
+hdg: 185, bias: 104
+{s   2}
+posAV: [-640.34, 2193.03]
+wpt: 27 raw hdg:  185.0
+raw speed:  0.79
+Kalman pos vec: [  11.69,  -36.33]
+filtered E-N pos: : [-641.72, 2193.30]
+Filtered hdg:  174.0
+Filtered speed:   1.66
+progress vec: [   9.54,  -36.88]
+xtrack vec: [  -2.15,   -0.56]
+aiming vector: [  -1.03,   -4.89]
+Kalman az set to 191
+{d 13.6} 
+{c191} 
+{lx 2.22} 
+{la 0.05} 
+new hdg steering 6
+{s   6}
+adjusting steer to meet az 5
+hdg: 186, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg: 187, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 188, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 189, bias: 104
+{s   2}
+adjusting steer to meet az 3
+hdg: 188, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 189, bias: 104
+{s   2}
+msg: 09:49:36.534{LT21.6194}
+msg: 09:49:36.543{LN7.6417}
+msg: 09:49:36.550{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 190, bias: 104
+{s   1}
+posAV: [-640.15, 2190.76]
+wpt: 27 raw hdg:  190.0
+raw speed:  0.79
+Kalman pos vec: [  12.04,  -38.49]
+filtered E-N pos: : [-641.37, 2191.14]
+Filtered hdg:  178.0
+Filtered speed:   1.61
+progress vec: [  10.09,  -39.00]
+xtrack vec: [  -1.95,   -0.51]
+aiming vector: [  -1.02,   -4.13]
+Kalman az set to 193
+{d 11.4} 
+{c193} 
+{lx 2.02} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg: 191, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg: 192, bias: 104
+{s   1}
+msg: 09:49:37.553{LT21.5953}
+msg: 09:49:37.563{LN7.6421}
+msg: 09:49:37.570{LA14}
+{la 0.05}
+posAV: [-640.19, 2188.32]
+wpt: 27 raw hdg:  192.0
+raw speed:  0.79
+Kalman pos vec: [  12.24,  -40.84]
+filtered E-N pos: : [-641.17, 2188.79]
+Filtered hdg:  179.0
+Filtered speed:   1.73
+progress vec: [  10.67,  -41.25]
+xtrack vec: [  -1.57,   -0.41]
+aiming vector: [  -0.46,   -4.72]
+Kalman az set to 185
+{d  9.1} 
+{c185} 
+{lx 1.63} 
+{la 0.05} 
+new hdg steering -7
+{s  -7}
+msg: 09:49:38.088{Z3 |                                          |}
+msg: 09:49:38.100{Z2-2.0,4,0}
+adjusting steer to meet az -6
+hdg: 191, bias: 104
+{s  -6}
+adjusting steer to meet az -5
+hdg: 190, bias: 104
+{s  -5}
+adjusting steer to meet az -4
+hdg: 189, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg: 188, bias: 104
+{s  -3}
+adjusting steer to meet az -2
+hdg: 187, bias: 104
+{s  -2}
+msg: 09:49:38.578{LT21.5712}
+msg: 09:49:38.588{LN7.6442}
+msg: 09:49:38.595{LA14}
+{la 0.05}
+adjusting steer to meet az -1
+hdg: 186, bias: 104
+{s  -1}
+adjusting steer to meet az 0
+hdg: 185, bias: 104
+{s   0}
+hdg: 184, bias: 104
+hdg: 185, bias: 104
+hdg: 186, bias: 104
+posAV: [-640.36, 2185.88]
+wpt: 27 raw hdg:  186.0
+raw speed:  0.79
+Kalman pos vec: [  12.46,  -43.29]
+filtered E-N pos: : [-640.95, 2186.34]
+Filtered hdg:  173.0
+Filtered speed:   1.84
+progress vec: [  11.27,  -43.59]
+xtrack vec: [  -1.19,   -0.31]
+aiming vector: [  -0.37,   -3.45]
+Kalman az set to 186
+{d  6.6} 
+{c186} 
+{lx 1.23} 
+{la 0.05} 
+Odo:    80.8, speed:   50
+new hdg steering 0
+{v  37}
+hdg: 187, bias: 104
+msg: 09:49:39.597{LT21.5478}
+msg: 09:49:39.607{LN7.6468}
+msg: 09:49:39.614{LA14}
+{la 0.05}
+hdg: 188, bias: 104
+posAV: [-640.58, 2183.51]
+wpt: 27 raw hdg:  188.0
+raw speed:  0.58
+Kalman pos vec: [  12.69,  -45.61]
+filtered E-N pos: : [-640.72, 2184.02]
+Filtered hdg:  175.0
+Filtered speed:   1.68
+progress vec: [  11.85,  -45.83]
+xtrack vec: [  -0.84,   -0.22]
+aiming vector: [  -0.32,   -2.24]
+Kalman az set to 188
+{d  4.3} 
+{c188} 
+{lx 0.87} 
+{la 0.05} 
+new hdg steering 0
+hdg: 187, bias: 104
+hdg: 188, bias: 104
+hdg: 187, bias: 104
+msg: 09:49:40.236{Z3 |                                          |}
+msg: 09:49:40.249{Z2-9.0,0,0}
+hdg: 188, bias: 104
+msg: 09:49:40.622{LT21.5269}
+msg: 09:49:40.632{LN7.6471}
+msg: 09:49:40.639{LA14}
+{la 0.05}
+posAV: [-640.60, 2181.39]
+wpt: 27 raw hdg:  188.0
+raw speed:  0.58
+Kalman pos vec: [  12.86,  -47.76]
+filtered E-N pos: : [-640.55, 2181.87]
+Filtered hdg:  175.0
+Filtered speed:   1.56
+progress vec: [  12.38,  -47.89]
+xtrack vec: [  -0.48,   -0.12]
+aiming vector: [  -0.22,   -1.12]
+Kalman az set to 191
+{d  2.1} 
+{c191} 
+{lx 0.49} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 4
+hdg: 187, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg: 188, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg: 189, bias: 104
+{s   2}
+msg: 09:49:41.641{LT21.5096}
+msg: 09:49:41.650{LN7.6464}
+msg: 09:49:41.657{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg: 190, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg: 191, bias: 104
+{s   0}
+hdg: 190, bias: 104
+posAV: [-640.55, 2179.64]
+wpt: 27 raw hdg:  190.0
+raw speed:  0.58
+Kalman pos vec: [  12.97,  -49.61]
+filtered E-N pos: : [-640.44, 2180.02]
+Filtered hdg:  177.0
+Filtered speed:   1.37
+progress vec: [  12.84,  -49.64]
+xtrack vec: [  -0.13,   -0.03]
+aiming vector: [  -0.10,   -0.15]
+Kalman az set to 212
+{d  0.3} 
+{c212} 
+{lx 0.13} 
+{la 0.05} 
+close to waypoint
+Odo:    82.5, speed:   37
+resuming to   50
+track start======================================: [-640.51, 2179.75]
+wpt: 28 -624.85, 2235.41
+track: [  15.66,   55.66]
+new wpt az set to 15
+new hdg steering -174
+{v  50}
+{s-174}
+adjusting steer to meet az -175
+hdg: 191, bias: 104
+{s-175}
+adjusting steer to meet az -174
+hdg: 190, bias: 104
+{s-174}
+adjusting steer to meet az -172
+hdg: 188, bias: 104
+{s-172}
+adjusting steer to meet az -171
+hdg: 187, bias: 104
+{s-171}
+adjusting steer to meet az -170
+hdg: 186, bias: 104
+{s-170}
+adjusting steer to meet az -169
+hdg: 185, bias: 104
+{s-169}
+msg: 09:49:42.384{Z3 |                                          |}
+msg: 09:49:42.397{Z2-1.0,2,0}
+adjusting steer to meet az -167
+hdg: 183, bias: 104
+{s-167}
+adjusting steer to meet az -166
+hdg: 182, bias: 104
+{s-166}
+adjusting steer to meet az -165
+hdg: 181, bias: 104
+{s-165}
+adjusting steer to meet az -163
+hdg: 179, bias: 104
+{s-163}
+adjusting steer to meet az -161
+hdg: 177, bias: 104
+{s-161}
+adjusting steer to meet az -160
+hdg: 176, bias: 104
+{s-160}
+adjusting steer to meet az -158
+hdg: 174, bias: 104
+{s-158}
+msg: 09:49:42.667{LT21.4902}
+msg: 09:49:42.676{LN7.6471}
+msg: 09:49:42.682{LA14}
+{la 0.05}
+adjusting steer to meet az -156
+hdg: 172, bias: 104
+{s-156}
+adjusting steer to meet az -154
+hdg: 170, bias: 104
+{s-154}
+adjusting steer to meet az -152
+hdg: 168, bias: 104
+{s-152}
+adjusting steer to meet az -149
+hdg: 165, bias: 104
+{s-149}
+adjusting steer to meet az -147
+hdg: 163, bias: 104
+{s-147}
+adjusting steer to meet az -145
+hdg: 161, bias: 104
+{s-145}
+adjusting steer to meet az -142
+hdg: 158, bias: 104
+{s-142}
+posAV: [-640.60, 2177.67]
+wpt: 28 raw hdg:  158.0
+raw speed:  0.79
+Kalman pos vec: [  -0.17,   -0.90]
+filtered E-N pos: : [-640.68, 2178.85]
+Filtered hdg:  158.0
+Filtered speed:   0.79
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 58.7} 
+{c 15} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering -143
+{s-143}
+adjusting steer to meet az -141
+hdg: 156, bias: 104
+{s-141}
+adjusting steer to meet az -138
+hdg: 153, bias: 104
+{s-138}
+adjusting steer to meet az -136
+hdg: 151, bias: 104
+{s-136}
+adjusting steer to meet az -133
+hdg: 148, bias: 104
+{s-133}
+adjusting steer to meet az -131
+hdg: 146, bias: 104
+{s-131}
+adjusting steer to meet az -128
+hdg: 143, bias: 104
+{s-128}
+adjusting steer to meet az -125
+hdg: 140, bias: 104
+{s-125}
+adjusting steer to meet az -122
+hdg: 137, bias: 104
+{s-122}
+adjusting steer to meet az -120
+hdg: 135, bias: 104
+{s-120}
+adjusting steer to meet az -117
+hdg: 132, bias: 104
+{s-117}
+adjusting steer to meet az -115
+hdg: 130, bias: 104
+{s-115}
+adjusting steer to meet az -112
+hdg: 127, bias: 104
+{s-112}
+adjusting steer to meet az -110
+hdg: 125, bias: 104
+{s-110}
+msg: 09:49:43.684{LT21.4722}
+msg: 09:49:43.693{LN7.6435}
+msg: 09:49:43.700{LA14}
+{la 0.05}
+adjusting steer to meet az -107
+hdg: 122, bias: 104
+{s-107}
+adjusting steer to meet az -105
+hdg: 120, bias: 104
+{s-105}
+adjusting steer to meet az -102
+hdg: 117, bias: 104
+{s-102}
+adjusting steer to meet az -101
+hdg: 116, bias: 104
+{s-101}
+adjusting steer to meet az -98
+hdg: 113, bias: 104
+{s -98}
+adjusting steer to meet az -96
+hdg: 111, bias: 104
+{s -96}
+adjusting steer to meet az -93
+hdg: 108, bias: 104
+{s -93}
+posAV: [-640.30, 2175.85]
+wpt: 28 raw hdg:  108.0
+raw speed:  0.79
+Kalman pos vec: [   0.49,   -1.79]
+filtered E-N pos: : [-640.02, 2177.96]
+Filtered hdg:  108.0
+Filtered speed:   1.17
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 59.4} 
+{c 15} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering -93
+adjusting steer to meet az -90
+hdg: 105, bias: 104
+{s -90}
+adjusting steer to meet az -88
+hdg: 103, bias: 104
+{s -88}
+adjusting steer to meet az -85
+hdg: 100, bias: 104
+{s -85}
+adjusting steer to meet az -83
+hdg:  98, bias: 104
+{s -83}
+adjusting steer to meet az -80
+hdg:  95, bias: 104
+{s -80}
+adjusting steer to meet az -78
+hdg:  93, bias: 104
+{s -78}
+adjusting steer to meet az -75
+hdg:  90, bias: 104
+{s -75}
+adjusting steer to meet az -73
+hdg:  88, bias: 104
+{s -73}
+adjusting steer to meet az -70
+hdg:  85, bias: 104
+{s -70}
+msg: 09:49:44.534{Z3 |           .x  -  .                       |}
+msg: 09:49:44.546{Z2 3.0,4,0}
+adjusting steer to meet az -68
+hdg:  83, bias: 104
+{s -68}
+adjusting steer to meet az -65
+hdg:  80, bias: 104
+{s -65}
+adjusting steer to meet az -62
+hdg:  77, bias: 104
+{s -62}
+adjusting steer to meet az -60
+hdg:  75, bias: 104
+{s -60}
+msg: 09:49:44.701{LT21.4636}
+msg: 09:49:44.712{LN7.6273}
+adjusting steer to meet az -58
+hdg:  73, bias: 104
+{s -58}
+msg: 09:49:44.730{LA14}
+{la 0.05}
+adjusting steer to meet az -55
+hdg:  70, bias: 104
+{s -55}
+adjusting steer to meet az -53
+hdg:  68, bias: 104
+{s -53}
+adjusting steer to meet az -50
+hdg:  65, bias: 104
+{s -50}
+adjusting steer to meet az -47
+hdg:  62, bias: 104
+{s -47}
+adjusting steer to meet az -44
+hdg:  59, bias: 104
+{s -44}
+adjusting steer to meet az -42
+hdg:  57, bias: 104
+{s -42}
+posAV: [-638.95, 2174.97]
+wpt: 28 raw hdg:   57.0
+raw speed:  0.79
+Kalman pos vec: [   1.00,   -2.47]
+filtered E-N pos: : [-639.51, 2177.28]
+Filtered hdg:   57.0
+Filtered speed:   0.23
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 60.0} 
+{c 15} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering -42
+adjusting steer to meet az -39
+hdg:  54, bias: 104
+{s -39}
+adjusting steer to meet az -37
+hdg:  52, bias: 104
+{s -37}
+adjusting steer to meet az -35
+hdg:  50, bias: 104
+{s -35}
+adjusting steer to meet az -32
+hdg:  47, bias: 104
+{s -32}
+adjusting steer to meet az -30
+hdg:  45, bias: 104
+{s -30}
+adjusting steer to meet az -27
+hdg:  42, bias: 104
+{s -27}
+adjusting steer to meet az -24
+hdg:  39, bias: 104
+{s -24}
+adjusting steer to meet az -21
+hdg:  36, bias: 104
+{s -21}
+adjusting steer to meet az -19
+hdg:  34, bias: 104
+{s -19}
+adjusting steer to meet az -16
+hdg:  31, bias: 104
+{s -16}
+adjusting steer to meet az -14
+hdg:  29, bias: 104
+{s -14}
+adjusting steer to meet az -12
+hdg:  27, bias: 104
+{s -12}
+adjusting steer to meet az -10
+hdg:  25, bias: 104
+{s -10}
+adjusting steer to meet az -9
+hdg:  24, bias: 104
+{s  -9}
+msg: 09:49:45.727{LT21.4690}
+msg: 09:49:45.737{LN7.6100}
+msg: 09:49:45.744{LA14}
+{la 0.05}
+adjusting steer to meet az -8
+hdg:  23, bias: 104
+{s  -8}
+adjusting steer to meet az -7
+hdg:  22, bias: 104
+{s  -7}
+adjusting steer to meet az -5
+hdg:  20, bias: 104
+{s  -5}
+adjusting steer to meet az -4
+hdg:  19, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg:  18, bias: 104
+{s  -3}
+adjusting steer to meet az -2
+hdg:  17, bias: 104
+{s  -2}
+posAV: [-637.50, 2175.52]
+wpt: 28 raw hdg:   17.0
+raw speed:  0.79
+Kalman pos vec: [   1.73,   -3.05]
+filtered E-N pos: : [-638.78, 2176.70]
+Filtered hdg:   17.0
+Filtered speed:  -0.05
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 60.3} 
+{c 15} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering -2
+adjusting steer to meet az -1
+hdg:  16, bias: 104
+{s  -1}
+adjusting steer to meet az -2
+hdg:  17, bias: 104
+{s  -2}
+adjusting steer to meet az -1
+hdg:  16, bias: 104
+{s  -1}
+adjusting steer to meet az 0
+hdg:  15, bias: 104
+{s   0}
+msg: 09:49:46.683{Z3 |                                          |}
+msg: 09:49:46.696{Z2 4.0,0,0}
+msg: 09:49:46.745{LT21.4898}
+msg: 09:49:46.755{LN7.6018}
+msg: 09:49:46.762{LA14}
+{la 0.05}
+posAV: [-636.81, 2177.63]
+wpt: 28 raw hdg:   15.0
+raw speed:  0.79
+Kalman pos vec: [   2.50,   -1.89]
+filtered E-N pos: : [-638.01, 2177.86]
+Filtered hdg:   15.0
+Filtered speed:   1.03
+aiming vector: [  15.66,   55.66]
+Kalman az set to 15
+{d 59.0} 
+{c 15} 
+{lx 0.00} 
+{la 0.05} 
+new hdg steering 0
+hdg:  14, bias: 104
+hdg:  15, bias: 104
+hdg:  14, bias: 104
+hdg:  15, bias: 104
+hdg:  14, bias: 104
+msg: 09:49:47.770{LT21.5118}
+msg: 09:49:47.781{LN7.5985}
+msg: 09:49:47.787{LA14}
+{la 0.05}
+hdg:  15, bias: 104
+hdg:  14, bias: 104
+posAV: [-636.53, 2179.86]
+wpt: 28 raw hdg:   14.0
+raw speed:  0.79
+Kalman pos vec: [   3.18,   -0.05]
+filtered E-N pos: : [-637.33, 2179.70]
+Filtered hdg:   14.0
+Filtered speed:   1.48
+progress vec: [   0.22,    0.78]
+xtrack vec: [  -2.96,    0.83]
+aiming vector: [   2.19,   19.13]
+Kalman az set to 6
+{d 57.1} 
+{c  6} 
+{lx 3.07} 
+{la 0.05} 
+new hdg steering -8
+{s  -8}
+adjusting steer to meet az -9
+hdg:  15, bias: 104
+{s  -9}
+adjusting steer to meet az -8
+hdg:  14, bias: 104
+{s  -8}
+adjusting steer to meet az -7
+hdg:  13, bias: 104
+{s  -7}
+adjusting steer to meet az -6
+hdg:  12, bias: 104
+{s  -6}
+adjusting steer to meet az -5
+hdg:  11, bias: 104
+{s  -5}
+adjusting steer to meet az -3
+hdg:   9, bias: 104
+{s  -3}
+adjusting steer to meet az -2
+hdg:   8, bias: 104
+{s  -2}
+msg: 09:49:48.829{Z3 |                                          |}
+msg: 09:49:48.842{Z2 7.0,2,0}
+msg: 09:49:48.854{LT21.5338}
+msg: 09:49:48.864{LN7.5967}
+adjusting steer to meet az -1
+hdg:   7, bias: 104
+{s  -1}
+msg: 09:49:48.883{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg:   6, bias: 104
+{s   0}
+hdg:   5, bias: 104
+hdg:   6, bias: 104
+posAV: [-636.38, 2182.09]
+wpt: 28 raw hdg:    6.0
+raw speed:  0.79
+Kalman pos vec: [   3.66,    2.00]
+filtered E-N pos: : [-636.85, 2181.75]
+Filtered hdg:    6.0
+Filtered speed:   1.59
+progress vec: [   0.79,    2.81]
+xtrack vec: [  -2.87,    0.81]
+aiming vector: [   2.09,   18.42]
+Kalman az set to 6
+{d 55.0} 
+{c  6} 
+{lx 2.98} 
+{la 0.05} 
+new hdg steering 0
+hdg:   5, bias: 104
+msg: 09:49:49.838{LT21.5590}
+msg: 09:49:49.848{LN7.5978}
+msg: 09:49:49.855{LA14}
+{la 0.05}
+hdg:   4, bias: 104
+posAV: [-636.47, 2184.64]
+wpt: 28 raw hdg:    4.0
+raw speed:  0.79
+Kalman pos vec: [   3.92,    4.41]
+filtered E-N pos: : [-636.59, 2184.16]
+Filtered hdg:    4.0
+Filtered speed:   1.80
+progress vec: [   1.44,    5.11]
+xtrack vec: [  -2.48,    0.70]
+aiming vector: [   2.26,   17.55]
+Kalman az set to 7
+{d 52.6} 
+{c  7} 
+{lx 2.58} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg:   5, bias: 104
+{s   2}
+adjusting steer to meet az 3
+hdg:   4, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:   5, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:   6, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:   7, bias: 104
+{s   0}
+hdg:   6, bias: 104
+hdg:   7, bias: 104
+hdg:   6, bias: 104
+msg: 09:49:50.867{LT21.5827}
+msg: 09:49:50.876{LN7.5989}
+msg: 09:49:50.882{LA14}
+{la 0.05}
+msg: 09:49:50.975{Z3 |                                          |}
+msg: 09:49:50.987{Z2 3.0,4,0}
+hdg:   5, bias: 104
+posAV: [-636.57, 2187.04]
+wpt: 28 raw hdg:    5.0
+raw speed:  0.79
+Kalman pos vec: [   4.09,    6.80]
+filtered E-N pos: : [-636.42, 2186.55]
+Filtered hdg:    5.0
+Filtered speed:   1.79
+progress vec: [   2.07,    7.36]
+xtrack vec: [  -2.02,    0.57]
+aiming vector: [   2.51,   16.67]
+Kalman az set to 8
+{d 50.2} 
+{c  8} 
+{lx 2.09} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg:   6, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:   7, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:   6, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:   7, bias: 104
+{s   1}
+msg: 09:49:51.882{LT21.6061}
+msg: 09:49:51.893{LN7.6010}
+msg: 09:49:51.898{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg:   8, bias: 104
+{s   0}
+posAV: [-636.74, 2189.41]
+wpt: 28 raw hdg:    8.0
+raw speed:  0.79
+Kalman pos vec: [   4.26,    9.13]
+filtered E-N pos: : [-636.25, 2188.88]
+Filtered hdg:    8.0
+Filtered speed:   1.75
+progress vec: [   2.69,    9.57]
+xtrack vec: [  -1.57,    0.44]
+aiming vector: [   4.91,   23.48]
+Kalman az set to 11
+{d 47.9} 
+{c 11} 
+{lx 1.63} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg:   9, bias: 104
+{s   2}
+adjusting steer to meet az 3
+hdg:   8, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:   9, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  10, bias: 104
+{s   1}
+msg: 09:49:52.906{LT21.6295}
+msg: 09:49:52.917{LN7.6025}
+msg: 09:49:52.923{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg:  11, bias: 104
+{s   0}
+posAV: [-636.87, 2191.79]
+wpt: 28 raw hdg:   11.0
+raw speed:  0.79
+Kalman pos vec: [   4.48,   11.43]
+filtered E-N pos: : [-636.03, 2191.18]
+Filtered hdg:   10.0
+Filtered speed:   1.71
+progress vec: [   3.31,   11.76]
+xtrack vec: [  -1.18,    0.33]
+aiming vector: [   5.00,   22.28]
+Kalman az set to 12
+{d 45.6} 
+{c 12} 
+{lx 1.22} 
+{la 0.05} 
+new hdg steering 1
+{s   1}
+adjusting steer to meet az 0
+hdg:  12, bias: 104
+{s   0}
+msg: 09:49:53.123{Z3 |                                          |}
+msg: 09:49:53.135{Z2 5.0,0,0}
+hdg:  11, bias: 104
+hdg:  10, bias: 104
+hdg:   9, bias: 104
+msg: 09:49:53.926{LT21.6526}
+msg: 09:49:53.936{LN7.6021}
+msg: 09:49:53.943{LA14}
+{la 0.05}
+hdg:  10, bias: 104
+posAV: [-636.83, 2194.13]
+wpt: 28 raw hdg:   10.0
+raw speed:  0.79
+Kalman pos vec: [   4.71,   13.73]
+filtered E-N pos: : [-635.80, 2193.48]
+Filtered hdg:    9.0
+Filtered speed:   1.73
+progress vec: [   3.92,   13.95]
+xtrack vec: [  -0.79,    0.22]
+aiming vector: [   5.08,   21.08]
+Kalman az set to 13
+{d 43.3} 
+{c 13} 
+{lx 0.82} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 4
+hdg:   9, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  10, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  11, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  12, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:  11, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  12, bias: 104
+{s   1}
+msg: 09:49:54.944{LT21.6752}
+msg: 09:49:54.955{LN7.6021}
+msg: 09:49:54.961{LA14}
+{la 0.05}
+posAV: [-636.83, 2196.42]
+wpt: 28 raw hdg:   12.0
+raw speed:  0.79
+Kalman pos vec: [   4.90,   15.98]
+filtered E-N pos: : [-635.61, 2195.73]
+Filtered hdg:   10.0
+Filtered speed:   1.69
+progress vec: [   4.53,   16.09]
+xtrack vec: [  -0.37,    0.10]
+aiming vector: [   5.20,   19.89]
+Kalman az set to 14
+{d 41.1} 
+{c 14} 
+{lx 0.39} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+msg: 09:49:55.272{Z3 |                                          |}
+msg: 09:49:55.285{Z2 3.0,2,0}
+adjusting steer to meet az 1
+hdg:  13, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  14, bias: 104
+{s   0}
+msg: 09:49:55.970{LT21.6990}
+msg: 09:49:55.981{LN7.6014}
+msg: 09:49:55.987{LA14}
+{la 0.05}
+hdg:  13, bias: 104
+posAV: [-636.78, 2198.83]
+wpt: 28 raw hdg:   13.0
+raw speed:  0.79
+Kalman pos vec: [   5.10,   18.33]
+filtered E-N pos: : [-635.41, 2198.08]
+Filtered hdg:   10.0
+Filtered speed:   1.75
+progress vec: [   5.15,   18.31]
+xtrack vec: [   0.06,   -0.02]
+aiming vector: [   5.31,   18.66]
+Kalman az set to 15
+{d 38.8} 
+{c 15} 
+{lx 0.06} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg:  14, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:  13, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  14, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  15, bias: 104
+{s   0}
+msg: 09:49:56.991{LT21.7228}
+msg: 09:49:57.000{LN7.6000}
+msg: 09:49:57.007{LA14}
+{la 0.05}
+posAV: [-636.66, 2201.24]
+wpt: 28 raw hdg:   15.0
+raw speed:  0.79
+Kalman pos vec: [   5.30,   20.70]
+filtered E-N pos: : [-635.21, 2200.45]
+Filtered hdg:   11.0
+Filtered speed:   1.76
+progress vec: [   5.79,   20.56]
+xtrack vec: [   0.49,   -0.14]
+aiming vector: [   5.43,   17.41]
+Kalman az set to 17
+{d 36.5} 
+{c 17} 
+{lx 0.51} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+adjusting steer to meet az 1
+hdg:  16, bias: 104
+{s   1}
+msg: 09:49:57.421{Z3 |                                          |}
+msg: 09:49:57.434{Z2 1.0,4,0}
+adjusting steer to meet az 2
+hdg:  15, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  16, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  17, bias: 104
+{s   0}
+hdg:  18, bias: 104
+hdg:  17, bias: 104
+hdg:  16, bias: 104
+msg: 09:49:58.017{LT21.7462}
+estAV: [-635.90, 2203.83]
+gps tardy
+Dead Reconning =========================
+wpt: 28 raw hdg:   16.0
+raw speed:  0.79
+Kalman pos vec: [   5.63,   23.30]
+filtered E-N pos: : [-634.88, 2203.05]
+Filtered hdg:   11.0
+Filtered speed:   1.92
+progress vec: [   6.49,   23.06]
+xtrack vec: [   0.85,   -0.24]
+aiming vector: [   5.44,   16.06]
+Kalman az set to 18
+{d 33.9} 
+{c 18} 
+{lx 0.89} 
+{la 0.05} 
+new hdg steering 2
+{s   2}
+msg: 09:49:58.056{LN7.5971}
+msg: 09:49:58.057{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg:  15, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  16, bias: 104
+{s   2}
+adjusting steer to meet az 3
+hdg:  15, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  16, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  17, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  18, bias: 104
+{s   0}
+hdg:  19, bias: 104
+posAV: [-636.42, 2203.61]
+wpt: 28 raw hdg:   19.0
+raw speed:  0.79
+Kalman pos vec: [   5.44,   23.68]
+filtered E-N pos: : [-635.07, 2203.43]
+Filtered hdg:   13.0
+Filtered speed:   0.49
+progress vec: [   6.57,   23.36]
+xtrack vec: [   1.14,   -0.32]
+aiming vector: [   5.68,   15.83]
+Kalman az set to 19
+{d 33.6} 
+{c 19} 
+{lx 1.18} 
+{la 0.05} 
+new hdg steering 0
+msg: 09:49:59.054{LT21.7674}
+msg: 09:49:59.056{LN7.5956}
+msg: 09:49:59.057{LA14}
+{la 0.05}
+hdg:  18, bias: 104
+hdg:  17, bias: 104
+hdg:  18, bias: 104
+msg: 09:49:59.570{Z3 |                                          |}
+msg: 09:49:59.582{Z2 7.0,0,0}
+hdg:  17, bias: 104
+hdg:  18, bias: 104
+hdg:  17, bias: 104
+posAV: [-636.29, 2205.76]
+wpt: 28 raw hdg:   17.0
+raw speed:  0.79
+Kalman pos vec: [   5.55,   25.43]
+filtered E-N pos: : [-634.96, 2205.18]
+Filtered hdg:    9.0
+Filtered speed:   1.39
+progress vec: [   7.04,   25.02]
+xtrack vec: [   1.49,   -0.42]
+aiming vector: [   5.80,   14.90]
+Kalman az set to 21
+{d 31.9} 
+{c 21} 
+{lx 1.55} 
+{la 0.05} 
+new hdg steering 4
+{s   4}
+msg: 09:50:00.062{LT21.7879}
+msg: 09:50:00.072{LN7.5906}
+msg: 09:50:00.078{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg:  18, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  19, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  20, bias: 104
+{s   1}
+posAV: [-635.87, 2207.84]
+wpt: 28 raw hdg:   20.0
+raw speed:  0.79
+Kalman pos vec: [   5.72,   27.47]
+filtered E-N pos: : [-634.79, 2207.22]
+Filtered hdg:   11.0
+Filtered speed:   1.56
+progress vec: [   7.58,   26.95]
+xtrack vec: [   1.86,   -0.52]
+aiming vector: [   5.90,   13.83]
+Kalman az set to 23
+{d 29.9} 
+{c 23} 
+{lx 1.93} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+msg: 09:50:01.081{LT21.8120}
+msg: 09:50:01.091{LN7.5870}
+msg: 09:50:01.098{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg:  21, bias: 104
+{s   2}
+msg: 09:50:01.720{Z3 |                                          |}
+msg: 09:50:01.733{Z2 0.0,2,0}
+adjusting steer to meet az 1
+hdg:  22, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:  21, bias: 104
+{s   2}
+posAV: [-635.57, 2210.28]
+wpt: 28 raw hdg:   21.0
+raw speed:  0.79
+Kalman pos vec: [   5.99,   29.82]
+filtered E-N pos: : [-634.52, 2209.57]
+Filtered hdg:   11.0
+Filtered speed:   1.76
+progress vec: [   8.21,   29.19]
+xtrack vec: [   2.22,   -0.63]
+aiming vector: [   4.70,    8.20]
+Kalman az set to 29
+{d 27.6} 
+{c 29} 
+{lx 2.31} 
+{la 0.05} 
+new hdg steering 8
+{s   8}
+msg: 09:50:02.108{LT21.8354}
+msg: 09:50:02.118{LN7.5823}
+msg: 09:50:02.125{LA14}
+{la 0.05}
+adjusting steer to meet az 7
+hdg:  22, bias: 104
+{s   7}
+adjusting steer to meet az 6
+hdg:  23, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg:  24, bias: 104
+{s   5}
+adjusting steer to meet az 6
+hdg:  23, bias: 104
+{s   6}
+adjusting steer to meet az 5
+hdg:  24, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg:  25, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  26, bias: 104
+{s   3}
+adjusting steer to meet az 1
+hdg:  28, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  29, bias: 104
+{s   0}
+hdg:  28, bias: 104
+hdg:  27, bias: 104
+posAV: [-635.18, 2212.65]
+wpt: 28 raw hdg:   27.0
+raw speed:  0.79
+Kalman pos vec: [   6.34,   32.14]
+filtered E-N pos: : [-634.17, 2211.89]
+Filtered hdg:   16.0
+Filtered speed:   1.73
+progress vec: [   8.84,   31.43]
+xtrack vec: [   2.51,   -0.71]
+aiming vector: [   4.78,    7.37]
+Kalman az set to 32
+{d 25.3} 
+{c 32} 
+{lx 2.61} 
+{la 0.05} 
+new hdg steering 5
+{s   5}
+adjusting steer to meet az 6
+hdg:  26, bias: 104
+{s   6}
+msg: 09:50:03.125{LT21.8578}
+msg: 09:50:03.136{LN7.5762}
+msg: 09:50:03.142{LA14}
+{la 0.05}
+adjusting steer to meet az 5
+hdg:  27, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg:  28, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  29, bias: 104
+{s   3}
+adjusting steer to meet az 4
+hdg:  28, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  29, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  30, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  31, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:  30, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  31, bias: 104
+{s   1}
+msg: 09:50:03.871{Z3 |                                          |}
+msg: 09:50:03.884{Z2 5.0,4,0}
+posAV: [-634.67, 2214.92]
+wpt: 28 raw hdg:   31.0
+raw speed:  0.79
+Kalman pos vec: [   6.81,   34.37]
+filtered E-N pos: : [-633.70, 2214.12]
+Filtered hdg:   18.0
+Filtered speed:   1.68
+progress vec: [   9.46,   33.63]
+xtrack vec: [   2.65,   -0.75]
+aiming vector: [   4.72,    6.60]
+Kalman az set to 35
+{d 23.1} 
+{c 35} 
+{lx 2.76} 
+{la 0.05} 
+new hdg steering 4
+{s   4}
+msg: 09:50:04.143{LT21.8783}
+msg: 09:50:04.154{LN7.5683}
+msg: 09:50:04.159{LA14}
+{la 0.05}
+adjusting steer to meet az 5
+hdg:  30, bias: 104
+{s   5}
+adjusting steer to meet az 4
+hdg:  31, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  32, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  33, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  34, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:  33, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  34, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:  33, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  34, bias: 104
+{s   1}
+posAV: [-634.00, 2217.00]
+wpt: 28 raw hdg:   34.0
+raw speed:  0.79
+Kalman pos vec: [   7.35,   36.48]
+filtered E-N pos: : [-633.16, 2216.23]
+Filtered hdg:   20.0
+Filtered speed:   1.62
+progress vec: [  10.05,   35.72]
+xtrack vec: [   2.70,   -0.76]
+aiming vector: [   4.57,    5.89]
+Kalman az set to 37
+{d 20.9} 
+{c 37} 
+{lx 2.80} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+msg: 09:50:05.167{LT21.8981}
+msg: 09:50:05.178{LN7.5582}
+msg: 09:50:05.184{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg:  35, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  36, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  37, bias: 104
+{s   0}
+hdg:  36, bias: 104
+hdg:  34, bias: 104
+hdg:  35, bias: 104
+hdg:  34, bias: 104
+msg: 09:50:06.021{Z3 |                                          |}
+posAV: [-633.16, 2219.00]
+wpt: 28 raw hdg:   34.0
+raw speed:  0.79
+Kalman pos vec: [   7.97,   38.57]
+filtered E-N pos: : [-632.54, 2218.32]
+Filtered hdg:   19.0
+Filtered speed:   1.65
+progress vec: [  10.64,   37.82]
+xtrack vec: [   2.67,   -0.75]
+aiming vector: [   4.35,    5.20]
+Kalman az set to 39
+{d 18.7} 
+{c 39} 
+{lx 2.78} 
+{la 0.05} 
+new hdg steering 5
+{s   5}
+msg: 09:50:06.055{Z2 8.0,0,0}
+adjusting steer to meet az 4
+hdg:  35, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  36, bias: 104
+{s   3}
+adjusting steer to meet az 4
+hdg:  35, bias: 104
+{s   4}
+msg: 09:50:06.188{LT21.9182}
+msg: 09:50:06.198{LN7.5467}
+msg: 09:50:06.205{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg:  36, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  37, bias: 104
+{s   2}
+adjusting steer to meet az 3
+hdg:  36, bias: 104
+{s   3}
+adjusting steer to meet az 4
+hdg:  35, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  36, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  37, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  38, bias: 104
+{s   1}
+posAV: [-632.19, 2221.04]
+wpt: 28 raw hdg:   38.0
+raw speed:  0.79
+Kalman pos vec: [   8.68,   40.67]
+filtered E-N pos: : [-631.83, 2220.42]
+Filtered hdg:   23.0
+Filtered speed:   1.67
+progress vec: [  11.24,   39.95]
+xtrack vec: [   2.56,   -0.72]
+aiming vector: [   4.03,    4.52]
+Kalman az set to 41
+{d 16.5} 
+{c 41} 
+{lx 2.66} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 4
+hdg:  37, bias: 104
+{s   4}
+msg: 09:50:07.213{LT21.9362}
+msg: 09:50:07.223{LN7.5359}
+msg: 09:50:07.230{LA14}
+{la 0.05}
+adjusting steer to meet az 3
+hdg:  38, bias: 104
+{s   3}
+adjusting steer to meet az 1
+hdg:  40, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  41, bias: 104
+{s   0}
+hdg:  42, bias: 104
+hdg:  43, bias: 104
+hdg:  44, bias: 104
+hdg:  43, bias: 104
+hdg:  42, bias: 104
+hdg:  43, bias: 104
+posAV: [-631.29, 2222.86]
+wpt: 28 raw hdg:   43.0
+raw speed:  0.79
+Kalman pos vec: [   9.46,   42.57]
+filtered E-N pos: : [-631.05, 2222.32]
+Filtered hdg:   27.0
+Filtered speed:   1.56
+progress vec: [  11.79,   41.91]
+xtrack vec: [   2.33,   -0.66]
+aiming vector: [   3.62,    3.93]
+Kalman az set to 42
+{d 14.5} 
+{c 42} 
+{lx 2.42} 
+{la 0.05} 
+new hdg steering -1
+{s  -1}
+msg: 09:50:08.169{Z3 |                                          |}
+msg: 09:50:08.181{Z2 3.0,2,0}
+msg: 09:50:08.233{LT21.9578}
+msg: 09:50:08.243{LN7.5229}
+msg: 09:50:08.250{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg:  42, bias: 104
+{s   0}
+hdg:  41, bias: 104
+hdg:  42, bias: 104
+hdg:  41, bias: 104
+hdg:  40, bias: 104
+posAV: [-630.20, 2225.05]
+wpt: 28 raw hdg:   40.0
+raw speed:  0.79
+Kalman pos vec: [  10.44,   44.72]
+filtered E-N pos: : [-630.07, 2224.47]
+Filtered hdg:   24.0
+Filtered speed:   1.77
+progress vec: [  12.42,   44.16]
+xtrack vec: [   1.99,   -0.56]
+aiming vector: [   3.06,    3.27]
+Kalman az set to 43
+{d 12.1} 
+{c 43} 
+{lx 2.06} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 4
+hdg:  39, bias: 104
+{s   4}
+msg: 09:50:09.258{LT21.9766}
+msg: 09:50:09.269{LN7.5085}
+msg: 09:50:09.275{LA14}
+{la 0.05}
+adjusting steer to meet az 2
+hdg:  41, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  42, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  43, bias: 104
+{s   0}
+hdg:  42, bias: 104
+hdg:  41, bias: 104
+hdg:  42, bias: 104
+posAV: [-628.99, 2226.96]
+wpt: 28 raw hdg:   42.0
+raw speed:  0.79
+Kalman pos vec: [  11.39,   46.77]
+filtered E-N pos: : [-629.12, 2226.52]
+Filtered hdg:   26.0
+Filtered speed:   1.71
+progress vec: [  13.03,   46.31]
+xtrack vec: [   1.64,   -0.46]
+aiming vector: [   2.95,    4.21]
+Kalman az set to 35
+{d  9.9} 
+{c 35} 
+{lx 1.70} 
+{la 0.05} 
+new hdg steering -7
+{s  -7}
+adjusting steer to meet az -6
+hdg:  41, bias: 104
+{s  -6}
+adjusting steer to meet az -5
+hdg:  40, bias: 104
+{s  -5}
+msg: 09:50:10.316{Z3 |                                          |}
+msg: 09:50:10.328{Z2-4.0,4,0}
+msg: 09:50:10.341{LT21.9982}
+msg: 09:50:10.350{LN7.4948}
+msg: 09:50:10.356{LA14}
+{la 0.05}
+adjusting steer to meet az -4
+hdg:  39, bias: 104
+{s  -4}
+adjusting steer to meet az -3
+hdg:  38, bias: 104
+{s  -3}
+adjusting steer to meet az -2
+hdg:  37, bias: 104
+{s  -2}
+adjusting steer to meet az -1
+hdg:  36, bias: 104
+{s  -1}
+adjusting steer to meet az 0
+hdg:  35, bias: 104
+{s   0}
+posAV: [-627.85, 2229.15]
+wpt: 28 raw hdg:   35.0
+raw speed:  0.79
+Kalman pos vec: [  12.36,   48.99]
+filtered E-N pos: : [-628.15, 2228.74]
+Filtered hdg:   19.0
+Filtered speed:   1.80
+progress vec: [  13.68,   48.62]
+xtrack vec: [   1.31,   -0.37]
+aiming vector: [   2.31,    3.15]
+Kalman az set to 36
+{d  7.4} 
+{c 36} 
+{lx 1.37} 
+{la 0.05} 
+Odo:   105.3, speed:   50
+new hdg steering 1
+{v  37}
+{s   1}
+msg: 09:50:11.318{LT22.0194}
+msg: 09:50:11.329{LN7.4790}
+msg: 09:50:11.335{LA14}
+{la 0.05}
+adjusting steer to meet az 0
+hdg:  36, bias: 104
+{s   0}
+posAV: [-626.52, 2231.30]
+wpt: 28 raw hdg:   36.0
+raw speed:  0.58
+Kalman pos vec: [  13.29,   51.22]
+filtered E-N pos: : [-627.22, 2230.97]
+Filtered hdg:   20.0
+Filtered speed:   1.72
+progress vec: [  14.33,   50.93]
+xtrack vec: [   1.03,   -0.29]
+aiming vector: [   1.70,    2.08]
+Kalman az set to 39
+{d  5.0} 
+{c 39} 
+{lx 1.07} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 2
+hdg:  37, bias: 104
+{s   2}
+msg: 09:50:12.338{LT22.0374}
+msg: 09:50:12.349{LN7.4657}
+msg: 09:50:12.356{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg:  38, bias: 104
+{s   1}
+msg: 09:50:12.465{Z3 |                                          |}
+msg: 09:50:12.478{Z2 2.0,0,0}
+adjusting steer to meet az 0
+hdg:  39, bias: 104
+{s   0}
+hdg:  38, bias: 104
+hdg:  39, bias: 104
+posAV: [-625.41, 2233.12]
+wpt: 28 raw hdg:   39.0
+raw speed:  0.58
+Kalman pos vec: [  14.25,   53.20]
+filtered E-N pos: : [-626.26, 2232.95]
+Filtered hdg:   24.0
+Filtered speed:   1.60
+progress vec: [  14.91,   53.01]
+xtrack vec: [   0.66,   -0.19]
+aiming vector: [   1.04,    1.14]
+Kalman az set to 42
+{d  2.8} 
+{c 42} 
+{lx 0.69} 
+{la 0.05} 
+new hdg steering 3
+{s   3}
+adjusting steer to meet az 4
+hdg:  38, bias: 104
+{s   4}
+adjusting steer to meet az 3
+hdg:  39, bias: 104
+{s   3}
+adjusting steer to meet az 2
+hdg:  40, bias: 104
+{s   2}
+adjusting steer to meet az 1
+hdg:  41, bias: 104
+{s   1}
+adjusting steer to meet az 2
+hdg:  40, bias: 104
+{s   2}
+msg: 09:50:13.362{LT22.0536}
+msg: 09:50:13.373{LN7.4552}
+msg: 09:50:13.379{LA14}
+{la 0.05}
+adjusting steer to meet az 1
+hdg:  41, bias: 104
+{s   1}
+adjusting steer to meet az 0
+hdg:  42, bias: 104
+{s   0}
+posAV: [-624.53, 2234.76]
+wpt: 28 raw hdg:   42.0
+raw speed:  0.58
+Kalman pos vec: [  15.22,   54.92]
+filtered E-N pos: : [-625.29, 2234.67]
+Filtered hdg:   28.0
+Filtered speed:   1.46
+progress vec: [  15.43,   54.86]
+xtrack vec: [   0.22,   -0.06]
+aiming vector: [   0.33,    0.34]
+Kalman az set to 44
+{d  0.9} 
+{c 44} 
+{lx 0.22} 
+{la 0.05} 
+close to waypoint
+Standby
+Odo:   107.0, speed:   37
+new hdg steering 2
+{v   0}
+{s   2}
+hdg:  41, bias: 104
+hdg:  42, bias: 104
+hdg:  41, bias: 104
+msg: 09:50:14.381{LT22.0691}
+msg: 09:50:14.391{LN7.4441}
+{ln-623.6} 
+{lt2236.3} 
+msg: 09:50:14.398{LA14}
+{la 0.05}
+msg: 09:50:15.405{LT22.0813}
+msg: 09:50:15.416{LN7.4340}
+{ln-622.8} 
+{lt2237.6} 
+msg: 09:50:15.422{LA14}
+{la 0.05}
+msg: 09:50:16.437{LT22.0824}
+msg: 09:50:16.448{LN7.4336}
+{ln-622.7} 
+{lt2237.7} 
+msg: 09:50:16.454{LA14}
+{la 0.05}
+msg: 09:50:17.462{LT22.0824}
+msg: 09:50:17.472{LN7.4336}
+{ln-622.7} 
+{lt2237.7} 
+prevAV: [-622.72, 2237.68]
+posAV : [-622.72, 2237.68]
+GPS not updating ===============
+msg: 09:50:17.478{LA14}
+{la 0.05}
+msg: 09:50:18.481{LT22.0824}
+msg: 09:50:18.491{LN7.4336}
+{ln-622.7} 
+{lt2237.7} 
+prevAV: [-622.72, 2237.68]
+posAV : [-622.72, 2237.68]
+GPS not updating ===============
+msg: 09:50:18.498{LA14}
+{la 0.05}
+msg: 09:50:19.506{LT22.0820}
+msg: 09:50:19.517{LN7.4333}
+{ln-622.7} 
+{lt2237.6} 
+msg: 09:50:19.523{LA14}
+{la 0.05}
+msg: 09:50:20.525{LT22.0824}
+msg: 09:50:20.535{LN7.4333}
+{ln-622.7} 
+{lt2237.7} 
+msg: 09:50:20.542{LA14}
+{la 0.05}
+msg: 09:50:21.550{LT22.0820}
+msg: 09:50:21.561{LN7.4333}
+{ln-622.7} 
+{lt2237.6} 
+msg: 09:50:21.566{LA14}
+{la 0.05}
+msg: 09:50:22.570{LT22.0824}
+msg: 09:50:22.581{LN7.4333}
+{ln-622.7} 
+{lt2237.7} 
+msg: 09:50:22.587{LA14}
+{la 0.05}
+msg: 09:50:23.595{LT22.0820}
+msg: 09:50:23.604{LN7.4336}
+{ln-622.7} 
+{lt2237.6} 
+msg: 09:50:23.611{LA14}
+{la 0.05}
+msg: 09:50:24.613{LT22.0820}
+msg: 09:50:24.624{LN7.4336}
+{ln-622.7} 
+{lt2237.6} 
+prevAV: [-622.72, 2237.64]
+posAV : [-622.72, 2237.64]
+GPS not updating ===============
+msg: 09:50:24.630{LA14}
+{la 0.05}
+msg: 09:50:24.684{D2}
+Odo:   107.0, speed:    0
+{v  10}
+hdg:  42, bias: 104
+msg: 09:50:25.018{D2}
+Odo:   107.1, speed:   10
+{v  20}
+hdg:  41, bias: 104
+hdg:  42, bias: 104
+msg: 09:50:25.433{D3}
+{s   3}
+msg: 09:50:25.631{LT22.0860}
+msg: 09:50:25.640{LN7.4304}
+{ln-622.5} 
+{lt2238.0} 
+msg: 09:50:25.647{LA14}
+{la 0.05}
+hdg:  43, bias: 104
+msg: 09:50:25.733{D6}
+{s   8}
+hdg:  44, bias: 104
+msg: 09:50:25.914{D9}
+ heartbeat tardy
+Odo:   107.8, speed:   20
+{v   0}
+{s  36}
+hdg:  45, bias: 104
+hdg:  46, bias: 104
+hdg:  47, bias: 104
+hdg:  48, bias: 104
+hdg:  49, bias: 104
+hdg:  50, bias: 104
+hdg:  51, bias: 104
+hdg:  52, bias: 104
+hdg:  53, bias: 104
+hdg:  54, bias: 104
+msg: 09:50:27.355{LT22.0936}
+msg: 09:50:27.357{LN7.4246}
+{ln-622.0} 
+{lt2238.8} 
+msg: 09:50:27.360{LA14}
+{la 0.05}
+hdg:  55, bias: 104
+hdg:  56, bias: 104
+hdg:  57, bias: 104
+hdg:  58, bias: 104
+hdg:  59, bias: 104
+hdg:  60, bias: 104
+hdg:  61, bias: 104
+hdg:  63, bias: 104
+hdg:  64, bias: 104
+hdg:  65, bias: 104
+hdg:  66, bias: 104
+hdg:  67, bias: 104
+hdg:  68, bias: 104
+hdg:  70, bias: 104
+hdg:  69, bias: 104
+hdg:  70, bias: 104
+msg: 09:50:27.673{LT22.0993}
+msg: 09:50:27.684{LN7.4174}
+{ln-621.4} 
+{lt2239.4} 
+msg: 09:50:27.690{LA14}
+{la 0.05}
+msg: 09:50:28.699{LT22.0997}
+msg: 09:50:28.710{LN7.4171}
+{ln-621.3} 
+{lt2239.4} 
+msg: 09:50:28.715{LA14}
+{la 0.05}
+msg: 09:50:29.718{LT22.0997}
+msg: 09:50:29.729{LN7.4171}
+{ln-621.3} 
+{lt2239.4} 
+prevAV: [-621.34, 2239.43]
+posAV : [-621.34, 2239.43]
+GPS not updating ===============
+msg: 09:50:29.735{LA14}
+{la 0.05}
+msg: 09:50:30.742{LT22.0997}
+msg: 09:50:30.752{LN7.4171}
+{ln-621.3} 
+{lt2239.4} 
+prevAV: [-621.34, 2239.43]
+posAV : [-621.34, 2239.43]
+GPS not updating ===============
+msg: 09:50:30.759{LA14}
+{la 0.05}
+msg: 09:50:31.609{D2}
+Odo:   107.8, speed:    0
+{v  10}
+msg: 09:50:31.761{LT22.0993}
+msg: 09:50:31.771{LN7.4171}
+{ln-621.3} 
+{lt2239.4} 
+msg: 09:50:31.778{LA14}
+{la 0.05}
+hdg:  71, bias: 104
+hdg:  72, bias: 104
+hdg:  73, bias: 104
+hdg:  74, bias: 104
+hdg:  75, bias: 104
+hdg:  76, bias: 104
+hdg:  77, bias: 104
+hdg:  78, bias: 104
+hdg:  79, bias: 104
+hdg:  80, bias: 104
+hdg:  81, bias: 104
+hdg:  82, bias: 104
+msg: 09:50:32.780{LT22.1008}
+msg: 09:50:32.791{LN7.4149}
+{ln-621.2} 
+{lt2239.5} 
+hdg:  83, bias: 104
+msg: 09:50:32.803{LA14}
+{la 0.05}
+hdg:  84, bias: 104
+hdg:  85, bias: 104
+hdg:  86, bias: 104
+hdg:  87, bias: 104
+hdg:  88, bias: 104
+hdg:  89, bias: 104
+hdg:  90, bias: 104
+hdg:  91, bias: 104
+msg: 09:50:33.454{D2}
+Odo:   108.1, speed:   10
+{v  20}
+hdg:  92, bias: 104
+hdg:  94, bias: 104
+hdg:  95, bias: 104
+hdg:  96, bias: 104
+hdg:  98, bias: 104
+hdg:  99, bias: 104
+msg: 09:50:33.805{LT22.1018}
+msg: 09:50:33.815{LN7.4117}
+{ln-620.9} 
+{lt2239.6} 
+msg: 09:50:33.822{LA14}
+{la 0.05}
+hdg: 100, bias: 104
+hdg: 101, bias: 104
+hdg: 103, bias: 104
+hdg: 104, bias: 104
+hdg: 105, bias: 104
+hdg: 107, bias: 104
+msg: 09:50:34.115{D5}
+{s   0}
+hdg: 108, bias: 104
+hdg: 109, bias: 104
+hdg: 110, bias: 104
+hdg: 111, bias: 104
+hdg: 112, bias: 104
+hdg: 113, bias: 104
+hdg: 114, bias: 104
+hdg: 115, bias: 104
+hdg: 116, bias: 104
+msg: 09:50:34.824{LT22.1026}
+msg: 09:50:34.834{LN7.4041}
+{ln-620.2} 
+{lt2239.7} 
+msg: 09:50:34.841{LA14}
+{la 0.05}
+hdg: 117, bias: 104
+hdg: 118, bias: 104
+msg: 09:50:35.847{LT22.0993}
+msg: 09:50:35.858{LN7.3926}
+{ln-619.3} 
+{lt2239.4} 
+msg: 09:50:35.864{LA14}
+{la 0.05}
+hdg: 117, bias: 104
+hdg: 118, bias: 104
+hdg: 117, bias: 104
+msg: 09:50:36.866{LT22.0964}
+msg: 09:50:36.875{LN7.3804}
+{ln-618.3} 
+{lt2239.1} 
+msg: 09:50:36.882{LA14}
+{la 0.05}
+hdg: 116, bias: 104
+hdg: 117, bias: 104
+hdg: 116, bias: 104
+msg: 09:50:37.889{LT22.0925}
+msg: 09:50:37.899{LN7.3678}
+{ln-617.2} 
+{lt2238.7} 
+msg: 09:50:37.905{LA14}
+{la 0.05}
+hdg: 117, bias: 104
+msg: 09:50:38.908{LT22.0885}
+msg: 09:50:38.919{LN7.3559}
+{ln-616.2} 
+{lt2238.3} 
+msg: 09:50:38.926{LA14}
+{la 0.05}
+hdg: 118, bias: 104
+hdg: 119, bias: 104
+msg: 09:50:39.817{D3}
+{s   1}
+msg: 09:50:39.928{LT22.0838}
+msg: 09:50:39.939{LN7.3444}
+{ln-615.2} 
+{lt2237.8} 
+msg: 09:50:39.945{LA14}
+{la 0.05}
+msg: 09:50:40.181{D6}
+{s   6}
+hdg: 120, bias: 104
+hdg: 121, bias: 104
+hdg: 122, bias: 104
+hdg: 123, bias: 104
+msg: 09:50:40.953{LT22.0795}
+msg: 09:50:40.964{LN7.3325}
+{ln-614.3} 
+{lt2237.4} 
+msg: 09:50:40.970{LA14}
+{la 0.05}
+hdg: 124, bias: 104
+hdg: 125, bias: 104
+hdg: 126, bias: 104
+hdg: 127, bias: 104
+hdg: 128, bias: 104
+hdg: 129, bias: 104
+hdg: 130, bias: 104
+msg: 09:50:41.972{LT22.0766}
+msg: 09:50:41.983{LN7.3228}
+{ln-613.4} 
+{lt2237.1} 
+msg: 09:50:41.989{LA14}
+{la 0.05}
+hdg: 131, bias: 104
+hdg: 132, bias: 104
+hdg: 133, bias: 104
+hdg: 134, bias: 104
+hdg: 135, bias: 104
+msg: 09:50:42.531{D5}
+{s   0}
+hdg: 136, bias: 104
+msg: 09:50:42.999{LT22.0716}
+msg: 09:50:43.011{LN7.3130}
+{ln-612.6} 
+{lt2236.6} 
+msg: 09:50:43.016{LA14}
+{la 0.05}
+hdg: 135, bias: 104
+hdg: 134, bias: 104
+hdg: 135, bias: 104
+hdg: 134, bias: 104
+hdg: 135, bias: 104
+hdg: 134, bias: 104
+msg: 09:50:44.016{LT22.0662}
+msg: 09:50:44.027{LN7.3037}
+{ln-611.8} 
+{lt2236.0} 
+msg: 09:50:44.032{LA14}
+{la 0.05}
+hdg: 135, bias: 104
+msg: 09:50:45.039{LT22.0601}
+msg: 09:50:45.050{LN7.2932}
+{ln-611.0} 
+{lt2235.4} 
+msg: 09:50:45.056{LA14}
+{la 0.05}
+msg: 09:50:46.058{LT22.0532}
+msg: 09:50:46.068{LN7.2835}
+{ln-610.1} 
+{lt2234.7} 
+msg: 09:50:46.075{LA14}
+{la 0.05}
+msg: 09:50:47.082{LT22.0468}
+msg: 09:50:47.092{LN7.2742}
+{ln-609.4} 
+{lt2234.1} 
+msg: 09:50:47.098{LA14}
+{la 0.05}
+msg: 09:50:47.454{D3}
+{s   1}
+msg: 09:50:47.635{D6}
+{s   6}
+hdg: 136, bias: 104
+hdg: 137, bias: 104
+hdg: 138, bias: 104
+msg: 09:50:48.101{LT22.0406}
+msg: 09:50:48.111{LN7.2641}
+{ln-608.5} 
+{lt2233.4} 
+msg: 09:50:48.117{LA14}
+{la 0.05}
+hdg: 139, bias: 104
+hdg: 140, bias: 104
+hdg: 141, bias: 104
+hdg: 142, bias: 104
+hdg: 143, bias: 104
+hdg: 144, bias: 104
+msg: 09:50:49.119{LT22.0342}
+msg: 09:50:49.130{LN7.2533}
+{ln-607.6} 
+{lt2232.8} 
+msg: 09:50:49.136{LA14}
+{la 0.05}
+hdg: 145, bias: 104
+hdg: 146, bias: 104
+hdg: 147, bias: 104
+msg: 09:50:49.622{D3}
+{s   7}
+hdg: 148, bias: 104
+hdg: 149, bias: 104
+hdg: 150, bias: 104
+hdg: 151, bias: 104
+msg: 09:50:50.146{LT22.0270}
+msg: 09:50:50.157{LN7.2439}
+{ln-606.8} 
+{lt2232.1} 
+msg: 09:50:50.163{LA14}
+{la 0.05}
+hdg: 152, bias: 104
+msg: 09:50:50.291{D3}
+{s   8}
+hdg: 153, bias: 104
+hdg: 154, bias: 104
+hdg: 155, bias: 104
+hdg: 156, bias: 104
+hdg: 157, bias: 104
+hdg: 158, bias: 104
+hdg: 159, bias: 104
+msg: 09:50:51.163{LT22.0194}
+msg: 09:50:51.174{LN7.2360}
+{ln-606.2} 
+{lt2231.3} 
+msg: 09:50:51.179{LA14}
+{la 0.05}
+hdg: 160, bias: 104
+hdg: 161, bias: 104
+hdg: 162, bias: 104
+hdg: 163, bias: 104
+hdg: 164, bias: 104
+hdg: 165, bias: 104
+hdg: 166, bias: 104
+hdg: 167, bias: 104
+hdg: 168, bias: 104
+msg: 09:50:52.188{LT22.0111}
+msg: 09:50:52.199{LN7.2299}
+{ln-605.7} 
+{lt2230.5} 
+msg: 09:50:52.205{LA14}
+{la 0.05}
+hdg: 169, bias: 104
+hdg: 170, bias: 104
+hdg: 171, bias: 104
+hdg: 172, bias: 104
+hdg: 173, bias: 104
+hdg: 174, bias: 104
+hdg: 175, bias: 104
+hdg: 176, bias: 104
+hdg: 177, bias: 104
+msg: 09:50:53.207{LT22.0028}
+msg: 09:50:53.218{LN7.2256}
+{ln-605.3} 
+{lt2229.6} 
+msg: 09:50:53.224{LA14}
+{la 0.05}
+hdg: 178, bias: 104
+hdg: 179, bias: 104
+hdg: 180, bias: 104
+hdg: 181, bias: 104
+hdg: 182, bias: 104
+hdg: 183, bias: 104
+hdg: 184, bias: 104
+hdg: 185, bias: 104
+hdg: 186, bias: 104
+hdg: 187, bias: 104
+hdg: 188, bias: 104
+msg: 09:50:54.171{D5}
+{s   0}
+hdg: 189, bias: 104
+msg: 09:50:54.261{LT21.9949}
+msg: 09:50:54.263{LN7.2238}
+{ln-605.1} 
+{lt2228.8} 
+msg: 09:50:54.264{LA14}
+{la 0.05}
+hdg: 190, bias: 104
+hdg: 189, bias: 104
+hdg: 188, bias: 104
+msg: 09:50:54.972{D3}
+{s   1}
+msg: 09:50:55.155{D6}
+{s   6}
+hdg: 189, bias: 104
+msg: 09:50:55.253{LT21.9877}
+msg: 09:50:55.262{LN7.2216}
+{ln-605.0} 
+{lt2228.1} 
+msg: 09:50:55.269{LA14}
+{la 0.05}
+hdg: 190, bias: 104
+hdg: 191, bias: 104
+hdg: 192, bias: 104
+hdg: 193, bias: 104
+hdg: 192, bias: 104
+hdg: 193, bias: 104
+hdg: 194, bias: 104
+msg: 09:50:56.271{LT21.9773}
+msg: 09:50:56.281{LN7.2227}
+{ln-605.1} 
+{lt2227.0} 
+msg: 09:50:56.288{LA14}
+{la 0.05}
+hdg: 195, bias: 104
+hdg: 196, bias: 104
+hdg: 197, bias: 104
+hdg: 198, bias: 104
+hdg: 199, bias: 104
+hdg: 200, bias: 104
+hdg: 201, bias: 104
+hdg: 202, bias: 104
+msg: 09:50:57.296{LT21.9672}
+msg: 09:50:57.306{LN7.2220}
+{ln-605.0} 
+{lt2226.0} 
+msg: 09:50:57.313{LA14}
+{la 0.05}
+hdg: 203, bias: 104
+hdg: 204, bias: 104
+hdg: 205, bias: 104
+hdg: 206, bias: 104
+msg: 09:50:57.995{D5}
+{s   0}
+hdg: 207, bias: 104
+msg: 09:50:58.313{LT21.9578}
+msg: 09:50:58.324{LN7.2241}
+{ln-605.2} 
+{lt2225.1} 
+msg: 09:50:58.330{LA14}
+{la 0.05}
+msg: 09:50:59.146{D5}
+msg: 09:50:59.337{LT21.9492}
+msg: 09:50:59.348{LN7.2284}
+{ln-605.5} 
+{lt2224.2} 
+msg: 09:50:59.357{LA14}
+{la 0.05}
+hdg: 206, bias: 104
+hdg: 207, bias: 104
+hdg: 206, bias: 104
+msg: 09:50:59.898{D0}
+Odo:   116.4, speed:   20
+{v   0}
+msg: 09:51:00.129{D0}
+Odo:   116.4, speed:    0
+msg: 09:51:00.355{LT21.9384}
+msg: 09:51:00.365{LN7.2328}
+{ln-605.9} 
+{lt2223.1} 
+msg: 09:51:00.372{LA14}
+{la 0.05}
+msg: 09:51:01.379{LT21.9316}
+msg: 09:51:01.389{LN7.2346}
+{ln-606.0} 
+{lt2222.4} 
+msg: 09:51:01.396{LA14}
+{la 0.05}
+msg: 09:51:02.398{LT21.9316}
+msg: 09:51:02.407{LN7.2346}
+{ln-606.0} 
+{lt2222.4} 
+prevAV: [-606.05, 2222.40]
+posAV : [-606.05, 2222.40]
+GPS not updating ===============
+msg: 09:51:02.414{LA14}
+{la 0.05}
+msg: 09:51:03.436{LT21.9316}
+msg: 09:51:03.446{LN7.2342}
+{ln-606.0} 
+{lt2222.4} 
+msg: 09:51:03.452{LA14}
+{la 0.05}
+msg: 09:51:04.453{LT21.9319}
+msg: 09:51:04.464{LN7.2349}
+{ln-606.1} 
+{lt2222.4} 
+msg: 09:51:04.470{LA14}
+{la 0.05}
+msg: 09:51:05.479{LT21.9316}
+msg: 09:51:05.488{LN7.2346}
+{ln-606.0} 
+{lt2222.4} 
+msg: 09:51:05.495{LA14}
+{la 0.05}
+msg: 09:51:06.498{LT21.9316}
+msg: 09:51:06.508{LN7.2342}
+{ln-606.0} 
+{lt2222.4} 
+msg: 09:51:06.515{LA15}
+{la 0.05}
+msg: 09:51:07.522{LT21.9319}
+msg: 09:51:07.533{LN7.2338}
+{ln-606.0} 
+{lt2222.4} 
+msg: 09:51:07.539{LA14}
+{la 0.05}
+msg: 09:51:08.543{LT21.9319}
+msg: 09:51:08.554{LN7.2338}
+{ln-606.0} 
+{lt2222.4} 
+prevAV: [-605.98, 2222.43]
+posAV : [-605.98, 2222.43]
+GPS not updating ===============
+msg: 09:51:08.560{LA14}
+{la 0.05}
+msg: 09:51:09.560{LT21.9319}
+msg: 09:51:09.571{LN7.2338}
+{ln-606.0} 
+{lt2222.4} 
+prevAV: [-605.98, 2222.43]
+posAV : [-605.98, 2222.43]
+GPS not updating ===============
+msg: 09:51:09.577{LA14}
+{la 0.05}
+hdg: 205, bias: 104
+msg: 09:51:10.584{LT21.9316}
+msg: 09:51:10.594{LN7.2328}
+{ln-605.9} 
+{lt2222.4} 
+msg: 09:51:10.601{LA14}
+{la 0.05}
+hdg: 204, bias: 104
+hdg: 203, bias: 104
+hdg: 202, bias: 104
+hdg: 201, bias: 104
+hdg: 200, bias: 104
+hdg: 198, bias: 104
+hdg: 196, bias: 104
+hdg: 194, bias: 104
+hdg: 192, bias: 104
+hdg: 189, bias: 104
+hdg: 186, bias: 104
+hdg: 183, bias: 104
+hdg: 180, bias: 104
+hdg: 176, bias: 104
+msg: 09:51:11.601{LT21.9344}
+msg: 09:51:11.612{LN7.2360}
+{ln-606.2} 
+{lt2222.7} 
+msg: 09:51:11.618{LA14}
+{la 0.05}
+hdg: 173, bias: 104
+hdg: 169, bias: 104
+hdg: 166, bias: 104
+hdg: 162, bias: 104
+hdg: 158, bias: 104
+hdg: 155, bias: 104
+hdg: 152, bias: 104
+hdg: 149, bias: 104
+hdg: 146, bias: 104
+hdg: 143, bias: 104
+hdg: 140, bias: 104
+hdg: 137, bias: 104
+hdg: 134, bias: 104
+hdg: 131, bias: 104
+hdg: 129, bias: 104
+hdg: 127, bias: 104
+hdg: 125, bias: 104
+hdg: 123, bias: 104
+hdg: 122, bias: 104
+hdg: 121, bias: 104
+msg: 09:51:12.626{LT21.9326}
+msg: 09:51:12.636{LN7.2601}
+{ln-608.2} 
+{lt2222.5} 
+msg: 09:51:12.643{LA14}
+{la 0.05}
+hdg: 120, bias: 104
+hdg: 119, bias: 104
+hdg: 118, bias: 104
+hdg: 117, bias: 104
+msg: 09:51:13.646{LT21.9330}
+msg: 09:51:13.656{LN7.2695}
+{ln-609.0} 
+{lt2222.5} 
+msg: 09:51:13.662{LA14}
+{la 0.05}
+hdg: 116, bias: 104
+hdg: 117, bias: 104
+msg: 09:51:14.669{LT21.9344}
+msg: 09:51:14.680{LN7.2742}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:14.685{LA14}
+{la 0.05}
+msg: 09:51:15.687{LT21.9348}
+msg: 09:51:15.698{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:15.704{LA14}
+{la 0.05}
+msg: 09:51:16.706{LT21.9348}
+msg: 09:51:16.716{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.72]
+posAV : [-609.42, 2222.72]
+GPS not updating ===============
+msg: 09:51:16.723{LA14}
+{la 0.05}
+msg: 09:51:17.731{LT21.9344}
+msg: 09:51:17.741{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:17.748{LA14}
+{la 0.05}
+msg: 09:51:18.751{LT21.9344}
+msg: 09:51:18.760{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:18.768{LA14}
+{la 0.05}
+msg: 09:51:19.775{LT21.9344}
+msg: 09:51:19.785{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:19.792{LA14}
+{la 0.05}
+msg: 09:51:20.793{LT21.9344}
+msg: 09:51:20.804{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:20.813{LA14}
+{la 0.05}
+msg: 09:51:21.818{LT21.9344}
+msg: 09:51:21.827{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:21.834{LA14}
+{la 0.05}
+msg: 09:51:22.836{LT21.9344}
+msg: 09:51:22.846{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:22.851{LA14}
+{la 0.05}
+msg: 09:51:23.853{LT21.9348}
+msg: 09:51:23.864{LN7.2752}
+{ln-609.5} 
+{lt2222.7} 
+msg: 09:51:23.870{LA14}
+{la 0.05}
+msg: 09:51:24.877{LT21.9344}
+msg: 09:51:24.887{LN7.2752}
+{ln-609.5} 
+{lt2222.7} 
+msg: 09:51:24.894{LA14}
+{la 0.05}
+msg: 09:51:25.895{LT21.9344}
+msg: 09:51:25.906{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:25.912{LA14}
+{la 0.05}
+msg: 09:51:26.920{LT21.9348}
+msg: 09:51:26.931{LN7.2752}
+{ln-609.5} 
+{lt2222.7} 
+msg: 09:51:26.936{LA14}
+{la 0.05}
+msg: 09:51:27.939{LT21.9348}
+msg: 09:51:27.950{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:27.956{LA14}
+{la 0.05}
+msg: 09:51:28.965{LT21.9344}
+msg: 09:51:28.974{LN7.2752}
+{ln-609.5} 
+{lt2222.7} 
+msg: 09:51:28.981{LA14}
+{la 0.05}
+msg: 09:51:29.984{LT21.9348}
+msg: 09:51:29.994{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:29.999{LA14}
+{la 0.05}
+msg: 09:51:31.003{LT21.9344}
+msg: 09:51:31.013{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:31.019{LA14}
+{la 0.05}
+msg: 09:51:32.025{LT21.9344}
+msg: 09:51:32.036{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:32.042{LA14}
+{la 0.05}
+msg: 09:51:33.043{LT21.9344}
+msg: 09:51:33.053{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:33.060{LA14}
+{la 0.05}
+msg: 09:51:34.066{LT21.9344}
+msg: 09:51:34.077{LN7.2752}
+{ln-609.5} 
+{lt2222.7} 
+msg: 09:51:34.083{LA14}
+{la 0.05}
+msg: 09:51:35.086{LT21.9348}
+msg: 09:51:35.095{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:35.103{LA14}
+{la 0.05}
+msg: 09:51:36.110{LT21.9344}
+msg: 09:51:36.121{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+msg: 09:51:36.127{LA14}
+{la 0.05}
+msg: 09:51:37.130{LT21.9344}
+msg: 09:51:37.140{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:37.147{LA14}
+{la 0.05}
+msg: 09:51:38.150{LT21.9344}
+msg: 09:51:38.159{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:38.166{LA14}
+{la 0.05}
+msg: 09:51:39.173{LT21.9344}
+msg: 09:51:39.182{LN7.2749}
+{ln-609.4} 
+{lt2222.7} 
+prevAV: [-609.42, 2222.68]
+posAV : [-609.42, 2222.68]
+GPS not updating ===============
+msg: 09:51:39.189{LA14}
+{la 0.05}
+Voltage:  15.6
+Odo:   116.4, speed:    0
+odometer:   116.4
+missing heartbeats:     1
+late gps readings:     4
+repeat gps readings:     1
+inaccurate gps:     1
+good gps:   162
