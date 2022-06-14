@@ -58,7 +58,7 @@ reducedflag = False
 countheartbeat = 0                      # count of tardy heartbeats events
 countgpstardy = 0                       # count of gps readings late events
 countgpsrepeat = 0                      # count of gps stuck events
-countgpsacc = 0                         # count of gps innacurate events
+countgpsacc = 0                         # count of gps inaccurate events
 countgpsfix = 0                         # count of good gps hits
 epoch = time.time()
 starttime = epoch
@@ -66,12 +66,13 @@ gpsEpoch = epoch
 oldEpoch = epoch
 heartbeat = epoch
 tensecepoch = epoch
-
+seconds = 0
 pan = 0
 
 oldsteer = 500                          # big values to trigger update
 oldspeed = 500
 oldhdg = 500
+oldsec = 0
 # compass_bias = 98                     # for canopy table (using gyro/quat, no-mag
 
 # all vectors in US Survey feet, AV - 34N14 by 119W04 based, RV - relative
@@ -725,7 +726,7 @@ try:
                                 logit(cstr)
                             gpsEpoch = time.time()
                             gpsokflag = True
-                            if prevAV == posAV:
+                            if prevAV == posAV and oldsec == seconds:
                                 gpsokflag = False
                                 vprint("prevAV", prevAV)
                                 vprint("posAV ", posAV)
@@ -743,6 +744,10 @@ try:
                             else:
                                 logit("Poor GPS accuracy")
                                 sendit("{la------}")
+                                
+                        elif xchr == 'S':
+                            oldsec = seconds
+                            seconds = x
 
                         else:
                             pass
@@ -886,6 +891,7 @@ try:
                             logit("gps repeat position")
                             countgpsrepeat += 1
                         logit("Dead Reconning =========================")
+                        gpsokflag = True
                     else:    
                         vprint("posAV", posAV)
                         countgpsfix += 1
@@ -1091,7 +1097,7 @@ finally:
     logit("missing heartbeats: %5d" % countheartbeat)
     logit("late gps readings: %5d" % countgpstardy)
     logit("repeat gps readings: %5d" % countgpsrepeat)
-    logit("inaccurate gps: %5d" % countgpsrepeat)
+    logit("inaccurate gps: %5d" % countgpsacc)
     logit("good gps: %5d" % countgpsfix)
 
     log.close()
