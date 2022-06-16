@@ -5,6 +5,7 @@
 #211210 - heartbeat
 #220511 - revised structure wrt heartbeat
 #220524 - DR when gps stuck, slipping, no current
+#220616 - compute average heading from gps
 
 '''
 Sent codes:
@@ -29,7 +30,7 @@ T - 'D' commands, diagnostics
 '''
 
 from whichrover import *
-Rsensor = False
+# Rsensor = False
 import serial
 import datetime
 import time
@@ -52,6 +53,9 @@ yaw = 0                                 # latest IMU yaw (True north)reading
 travel = 0                              # odometer
 cogBase = 0                             # course over ground distance
 gpsokflag = False                       # gps looks current
+gpsheading = 0                          # gps supplied heading of motion
+gpsavghdg = 0                           # gps heading average
+gpsavgcnt = 0                           # sample count for average heading
 approach_factor = .75                   # after waypoint slowdown
 resume_speed = speed
 reducedflag = False
@@ -124,7 +128,7 @@ ndx = 0
 log = open("logfile.txt", 'w')
 robot = motor_driver_ada.motor_driver_ada(log)
 log.write("====================================================================")
-version = "Rover 1.1 220531\n"
+version = "Rover 1.1 220616\n"
 log.write(version)
 tme = time.localtime(time.time())
 print(tme)
@@ -530,6 +534,10 @@ def diag_commands(schr):
     if (schr == '4'):
         logit("GPS non-op")
         exit()
+    if (schr == '5'):
+        if gpsokflag is True and gpsavgcnt > 3:
+            compass_bias = ((gpshdgavg / gpsavgcnt) - yaw) % 360
+            
     return
 
 #=================================================================
@@ -748,6 +756,15 @@ try:
                         elif xchr == 'S':
                             oldsec = seconds
                             seconds = x
+                        
+                        elif xchr == 'P':
+                            gpsheading = x
+                            if abs(steer) <= 2 and speed >= 50 and gpsokflag is True:
+                                gpsavghdg += gpsheading
+                                gpsavgcnt += 1
+                            else:
+                                gpsavghdg = 0
+                                gpsavgcnt = 0
 
                         else:
                             pass
@@ -872,7 +889,7 @@ try:
                     # if no recent GPS or (no GPS movement when speed > 0)
                     # then do dead reconning
                     if (gpsEpoch < oldEpoch) \
-                        or (gpsokflag is True and speed > 0) \
+                        or (gpsokflag is False and speed > 0) \
                         or accgps > 4.0:   # no recent GPS lat/lon
                         
                         delt = epoch - oldEpoch
@@ -891,7 +908,7 @@ try:
                             logit("gps repeat position")
                             countgpsrepeat += 1
                         logit("Dead Reconning =========================")
-                        gpsokflag = True
+#                        gpsokflag = True
                     else:    
                         vprint("posAV", posAV)
                         countgpsfix += 1

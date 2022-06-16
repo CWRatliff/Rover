@@ -172,7 +172,7 @@ import math
 import ctypes
 import time
 
-cdlib = ctypes.CDLL("/home/pi/projects/ctypes/libsapphire.so")
+cdlib = ctypes.CDLL("/home/pi/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
 cdlib.COpenIndex.restype = ctypes.c_void_p
 cdlib.CGetDouble.restype = ctypes.c_double
@@ -192,6 +192,7 @@ ser = serial.Serial(port='/dev/ttyS0',      #xbee to rover
     bytesize=serial.EIGHTBITS,
     timeout=1
     )
+
 rhdg = math.radians(450 - 98)       # x-y initial heading to compass
 # bwidth = 0
 # bhdg = 0
@@ -225,7 +226,7 @@ my = 0
 
 # ==============================================================================
 try:
-    pathfile = open("path.txt", 'r')
+    pathfile = open("path220614.txt", 'r')
     pathflag = True
     
 except IOError:
@@ -755,21 +756,21 @@ class App:
     def Misc(self, mstr):
         global miscer
         miscer = Frame(mstr)
-        miscer.place(x=200, y=450)
+        miscer.place(x=200, y=400)
         msb1=Button(miscer, text="Diag", command=lambda:self.txmit('0'))
-        msb1.config(width=4,height=2,font=(None,15),bg="white",fg="black")
+        msb1.config(width=6,height=2,font=(None,15),bg="white",fg="black")
         msb1.grid(row=0,column=0)
         
         msb2=Button(miscer, text="Mark", command=lambda:self.txmit('2'))
-        msb2.config(width=4,height=2,font=(None,15),bg="white",fg="black")
+        msb2.config(width=6,height=2,font=(None,15),bg="white",fg="black")
         msb2.grid(row=2,column=0)
         
         msb3=Button(miscer, text="Pic", command=lambda:self.txmit('3'))
-        msb3.config(width=4,height=2,font=(None,15),bg="white",fg="black")
+        msb3.config(width=6,height=2,font=(None,15),bg="white",fg="black")
         msb3.grid(row=3,column=0)
 
-        msbs=Button(miscer)
-        msbs.config(width=4,height=2,font=(None,15),bg="grey85",fg="grey85")
+        msbs=Button(miscer, text = "Compass", command=lambda:self.txmit('5'))
+        msbs.config(width=6,height=2,font=(None,15),bg="white",fg="black")
         msbs.grid(row=4,column=0)
 
         msb4=Button(miscer, text="Stop", command=lambda:self.txmit('1'))
@@ -991,7 +992,6 @@ class App:
 rc = cdlib.Cdblogin()
 treetable = cdlib.COpenTable("TreeTable".encode())
 locndx = cdlib.COpenIndex(treetable, "TreeNdx".encode())
-
 rc = cdlib.CFirst(treetable, locndx)
 
 alltrees = []
@@ -1027,7 +1027,7 @@ root = Tk()
 ffont = Font(family="URW Chancery L", size=20, weight = "bold")
 efont = Font(family="URW Chancery L", size=16)
 nfont = Font(family="Century Schoolbook L", size=14)
-root.wm_title('Rover Controller 211210')
+root.wm_title('Rover Controller 220616')
 chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
