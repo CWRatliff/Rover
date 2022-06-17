@@ -506,6 +506,8 @@ def star_commands(schr):
     return
 #================================================================
 def diag_commands(schr):
+    global compass_bias
+    
     if (schr == '0'):
         logit("diagnostic #1 ===============================")
         dvolts = robot.battery_voltage()
@@ -536,7 +538,11 @@ def diag_commands(schr):
         exit()
     if (schr == '5'):
         if gpsokflag is True and gpsavgcnt > 3:
-            compass_bias = ((gpshdgavg / gpsavgcnt) - yaw) % 360
+            avg = gpsavghdg / gpsavgcnt
+            compass_bias = (avg - yaw) % 360
+            logit("Average gps heading %d" % avg)
+            logit("Yaw %d", yaw)
+            logit("Compass bias set to: %d" % compass_bias)
             
     return
 
@@ -747,11 +753,12 @@ try:
                                 cstr = "{la%5.2f}" % accgps    #send to controller
                                 sendit(cstr)
                                 logit(cstr)
-                                if accgps < 3:
-                                    gpsokflag = False
                             else:
-                                logit("Poor GPS accuracy")
                                 sendit("{la------}")
+
+                            if accgps > 3:
+                                gpsokflag = False
+                                logit("Poor GPS accuracy")
                                 
                         elif xchr == 'S':
                             oldsec = seconds
