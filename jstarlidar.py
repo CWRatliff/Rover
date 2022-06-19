@@ -541,7 +541,9 @@ def diag_commands(schr):
             avg = gpsavghdg / gpsavgcnt
             compass_bias = (avg - yaw) % 360
             logit("Average gps heading %d" % avg)
-            logit("Yaw %d", yaw)
+            logit("Yaw %d" % yaw)
+            azimuth = avg
+            hdg = avg
             logit("Compass bias set to: %d" % compass_bias)
             
     return
