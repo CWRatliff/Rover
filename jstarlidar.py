@@ -507,12 +507,12 @@ def star_commands(schr):
 #================================================================
 def diag_commands(schr):
     global compass_bias
+    global hdg
+    global azimuth
     
     if (schr == '0'):
         logit("diagnostic #1 ===============================")
         dvolts = robot.battery_voltage()
-#         xchr = "{b%5.1f}" % volts
-#         sendit(xchr)
         print("Voltage = ",dvolts)
         log.write("Voltage: %5.1f\n" % dvolts)
         robot.motor_diag()
