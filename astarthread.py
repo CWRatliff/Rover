@@ -6,6 +6,7 @@
 #220511 - revised structure wrt heartbeat
 #220524 - DR when gps stuck, slipping, no current
 #220616 - compute average heading from gps
+#220720 - Tturnleft with thread
 
 '''
 Sent codes:
@@ -148,20 +149,25 @@ Kfilter = cEKF.Kalman_filter()
 def hturnleft(newhdg):
     global azgoalflag
     
-    thdg = (hdg + 90) % 360      # mid turn heading
-    motor(0, 0)
-    time.delay(.1)
+    logit("Tturnleft started, newhdg %d" % newhdg)
     azgoalflag = False
-    max_turn(-speed * .5, left_limit)
-    if thdg > 270:
+    thdg = (hdg + 90) % 360      # mid turn heading
+    logit("midturn hdg %d" % thdg)
+    time.sleep(.05)
+    max_turn(left_limit, -speed * .5)
+    logit("left backing turn")
+    if hdg >= 270:
         while hdg > 180:         # keep turning til past the 359->0 hazard
-            time.delay(0.05)
-    while hdg < thdg:
-        time.delay(0.05)
-    motor(0, 0)
-    max_turn(speed * .5, 0)
-    motor(speed, right_limit)
+            time.sleep(0.05)
+            logit("still pre-turning hdg now %d" % hdg)
+    while hdg <= thdg:
+        time.sleep(0.05)
+        logit("still turning hdg now %d" % hdg)
+    max_turn(right_limit, 0)
+    logit("End of backing, all ahead full")
+    robot.motor(speed, right_limit)
     azgoalflag = True
+    logit("thread ended")
     return
 # ============================================================================
 
@@ -507,7 +513,8 @@ def star_commands(schr):
     elif (auto and schr == '7'):      #hammer head left 180 deg
         left = True
         newhdg = (hdg + 180) % 360
-        bot_thread = threading.Thread(target = hturnleft,args=(newhdg))
+        robot.stop_all()
+        bot_thread = threading.Thread(target = hturnleft,args=[newhdg])
         bot_thread.start()
         '''
         robot.motor(0, 0)       #stop
@@ -1080,7 +1087,7 @@ try:
 
         # things to do as often as possible outside of timer               
         # if on course, don't oversteer
-        if auto is True:
+        if auto is True and azgoalflag is True:
             if steer != 0:
                 diff = int(azimuth - hdg)
                 if diff > 180:
