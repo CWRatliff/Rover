@@ -1,31 +1,27 @@
 #rover motor driver class - 4 servo motors for steering, 6 DC motors for locomotion
 #220510 using WhichRover for constants
+#220723 kit object made "self"
 
 from whichrover import *
 from adafruit_servokit import ServoKit
-import serial
+# import serial
 import math
 from roboclaw import Roboclaw
-
-kit = ServoKit(channels = 16)
 
 class motor_driver_ada:
 
     def __init__(self, log):
-        self.rrbias = Rrrbias
-        self.rfbias = Rrfbias
-        self.lfbias = Rlfbias        # experimentally determined for 'Spot 2'
-        self.lrbias = Rlrbias
-        self.pan_bias = Rpanbias
         self.left_limit = -36
         self.right_limit = 36
 
-        self.rr_motor = kit.servo[0]
-        self.rf_motor = kit.servo[1]
-        self.lf_motor = kit.servo[2]
-        self.lr_motor = kit.servo[3]
-        self.pan = kit.servo[15]
-        self.tilt = kit.servo[14]
+        self.kit = ServoKit(channels = 16)
+
+        self.rr_motor = self.kit.servo[0]
+        self.rf_motor = self.kit.servo[1]
+        self.lf_motor = self.kit.servo[2]
+        self.lr_motor = self.kit.servo[3]
+        self.pan = self.kit.servo[15]
+        self.tilt = self.kit.servo[14]
 
         self.rr_motor.actuation_range = 120
         self.rf_motor.actuation_range = 120
@@ -129,7 +125,7 @@ class motor_driver_ada:
 
 # based on speed & steer, command all motors
     def motor(self, speed, steer):
-#        self.log.write("Motor speed, steer "+str(speed)+", "+str(steer)+'\n')
+        self.log.write("Motor speed, steer "+str(speed)+", "+str(steer)+'\n')
         if (steer < self.left_limit):
             steer = self.left_limit
         if (steer > self.right_limit):

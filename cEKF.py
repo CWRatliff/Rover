@@ -6,7 +6,7 @@ with state vector {x, y, heading, speed}
 '''
 import math
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 class Kalman_filter:

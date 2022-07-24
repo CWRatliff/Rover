@@ -131,7 +131,7 @@ ndx = 0
 log = open("logfile.txt", 'w')
 robot = motor_driver_ada.motor_driver_ada(log)
 log.write("====================================================================")
-version = "Rover 1.1 220616\n"
+version = "Rover 1.1 220720\n"
 log.write(version)
 tme = time.localtime(time.time())
 print(tme)
@@ -148,6 +148,7 @@ Kfilter = cEKF.Kalman_filter()
 # =========================================================================
 def hturnleft(newhdg):
     global azgoalflag
+    global robot
     
     logit("Tturnleft started, newhdg %d" % newhdg)
     azgoalflag = False
@@ -252,6 +253,7 @@ def odometer(spd):
     segstart = now
 #==================================================================
 def max_turn(angle, spd):
+    global robot
     global steer
     
     dt = 1
@@ -574,7 +576,7 @@ def diag_commands(schr):
         exit()
     if (schr == '5'):
         if gpsokflag is True and gpsavgcnt > 3:
-            avg = gpsavghdg / gpsavgcnt
+            avg = int(gpsavghdg / gpsavgcnt)
             compass_bias = (avg - yaw) % 360
             logit("Average gps heading %d" % avg)
             logit("Yaw %d" % yaw)
@@ -804,7 +806,7 @@ try:
                             seconds = x
                         
                         elif xchr == 'P':
-                            gpsheading = x
+                            gpsheading = int(x)
                             if abs(steer) <= 2 and speed >= 50 and gpsokflag is True:
                                 gpsavghdg += gpsheading
                                 gpsavgcnt += 1
@@ -906,9 +908,10 @@ try:
 #========================================================================
         if (time.time() > (tensecepoch + 10)): # ten second timer
             tensecepoch = time.time()
-            volts = robot.battery_voltage()
-            xchr = "{b%5.1f}" % volts
-            sendit(xchr)
+            if azgoalflag is False:         # azimuth is controlling
+                volts = robot.battery_voltage()
+                xchr = "{b%5.1f}" % volts
+                sendit(xchr)
             
 #======================================================================
         if (time.time() > (epoch + 1)):     # once per sec
