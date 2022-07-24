@@ -154,8 +154,9 @@ def hturnleft(newhdg):
     azgoalflag = False
     thdg = (hdg + 90) % 360      # mid turn heading
     logit("midturn hdg %d" % thdg)
-    time.sleep(.05)
-    max_turn(left_limit, -speed * .5)
+#     time.sleep(.05)
+# #    max_turn(left_limit, -speed * .5)
+#     robot.motor(int(-speed * .5), left_limit)
     logit("left backing turn")
     if hdg >= 270:
         while hdg > 180:         # keep turning til past the 359->0 hazard
@@ -164,7 +165,8 @@ def hturnleft(newhdg):
     while hdg <= thdg:
         time.sleep(0.05)
         logit("still turning hdg now %d" % hdg)
-    max_turn(right_limit, 0)
+#    max_turn(right_limit, 0)
+    robot.motor(0, 0)
     logit("End of backing, all ahead full")
     robot.motor(speed, right_limit)
     azgoalflag = True
@@ -516,6 +518,11 @@ def star_commands(schr):
         left = True
         newhdg = (hdg + 180) % 360
         robot.stop_all()
+        # from thread
+        time.sleep(.05)
+#    max_turn(left_limit, -speed * .5)
+        robot.motor(int(-speed * .5), left_limit)
+        #from thread
         bot_thread = threading.Thread(target = hturnleft,args=[newhdg])
         bot_thread.start()
         '''

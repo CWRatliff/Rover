@@ -60,9 +60,9 @@ class motor_driver_ada:
     def set_motor(self, address, v, av, m12):
         vx = int(v * av)
         if (m12 == 1):
-            self.rc.SpeedM1(address, vx)
+            self.rc.SpeedM1(address, vx)     # cmd 35
         else:
-            self.rc.SpeedM2(address, vx)
+            self.rc.SpeedM2(address, vx)     # cmd 36
 
     def set_angle(self, corner, angle):         # calibration method
         if corner == 0:
