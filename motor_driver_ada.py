@@ -63,6 +63,7 @@ class motor_driver_ada:
             self.rc.SpeedM1(address, vx)     # cmd 35
         else:
             self.rc.SpeedM2(address, vx)     # cmd 36
+        self.log.write("Motor cmd addr:%d, spd:%d, dir:%d" % (address, vx, m12))
 
     def set_angle(self, corner, angle):         # calibration method
         if corner == 0:

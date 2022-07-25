@@ -151,22 +151,17 @@ def hturnleft(newhdg):
     global robot
     
     logit("Tturnleft started, newhdg %d" % newhdg)
-    azgoalflag = False
     thdg = (hdg + 90) % 360      # mid turn heading
     logit("midturn hdg %d" % thdg)
-#     time.sleep(.05)
-# #    max_turn(left_limit, -speed * .5)
-#     robot.motor(int(-speed * .5), left_limit)
-    logit("left backing turn")
     if hdg >= 270:
         while hdg > 180:         # keep turning til past the 359->0 hazard
             time.sleep(0.05)
-            logit("still pre-turning hdg now %d" % hdg)
+#            logit("still pre-turning hdg now %d" % hdg)
     while hdg <= thdg:
         time.sleep(0.05)
-        logit("still turning hdg now %d" % hdg)
+#         logit("still turning hdg now %d" % hdg)
 #    max_turn(right_limit, 0)
-    robot.motor(0, 0)
+    robot.stop_all()
     logit("End of backing, all ahead full")
     robot.motor(speed, right_limit)
     azgoalflag = True
@@ -471,6 +466,7 @@ def simple_commands(schr):
     return
 #===================end of D commands
 def star_commands(schr):
+    global azgoalflag
     global auto
     global azimuth
     global auto
@@ -481,10 +477,11 @@ def star_commands(schr):
     global compass_bias
     global left
     
-    if (schr == '0'):                   #standby
+    if (schr == '0'):                 #standby
         auto = False
         wptflag = False
         azimuth = hdg
+        azgoalflag = True
         sendit("{aStby}")
         logit("Standby")
     elif (auto and schr == '1'):      #left 90 deg
@@ -514,31 +511,32 @@ def star_commands(schr):
         logit("Compass bias %d" % compass_bias)
         xstr = "{h%3d}" % hdg
         sendit(xstr)
-    elif (auto and schr == '7'):      #hammer head left 180 deg
-        left = True
-        newhdg = (hdg + 180) % 360
-        robot.stop_all()
-        # from thread
-        time.sleep(.05)
-#    max_turn(left_limit, -speed * .5)
-        robot.motor(int(-speed * .5), left_limit)
-        #from thread
-        bot_thread = threading.Thread(target = hturnleft,args=[newhdg])
-        bot_thread.start()
-        '''
-        robot.motor(0, 0)       #stop
-        max_turn(left_limit, -50)
-        time.sleep(3.5)           #guess at time needed
-        str = left_limit
-        dt = 1
-        while str < right_limit:
-            str += dt
-            robot.motor(0, str)
-            time.sleep(0.04)
-        '''
-        azimuth += 180
-        azimuth %= 360
-        logit("az set to %d" % azimuth)
+    elif (auto and schr == '7'):      # hammer head left 180 deg
+        if azgoalflag is True         # turn cannot be in progress
+            left = True
+            newhdg = (hdg + 180) % 360
+            robot.stop_all()
+            time.sleep(.05)
+#           max_turn(left_limit, -speed * .5)
+            robot.motor(int(-speed * .5), left_limit)
+            logit("left backing turn")
+            azgoalflag = False
+            bot_thread = threading.Thread(target = hturnleft,args=[newhdg])
+            bot_thread.start()
+            '''
+            robot.motor(0, 0)       #stop
+            max_turn(left_limit, -50)
+            time.sleep(3.5)           #guess at time needed
+            str = left_limit
+            dt = 1
+            while str < right_limit:
+                str += dt
+                robot.motor(0, str)
+                time.sleep(0.04)
+            '''
+            azimuth += 180
+            azimuth %= 360
+            logit("az set to %d" % azimuth)
 
     elif (schr == '8'):
         pass
@@ -639,7 +637,7 @@ try:
                 continue
             xchr = cbuff[1]
             # if (xchr != 'O'):             # don'tshow compass input
-            if (xchr != 'O' and xchr != 'Q'): # don'tshow heartbeat input
+            if (xchr != 'x' and xchr != 'Q'): # don'tshow heartbeat input
                 tt = datetime.datetime.now()
                 ts = tt.strftime("%H:%M:%S.%f")[:-3]
                 logit("msg: " + ts + cbuff)
