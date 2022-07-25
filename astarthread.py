@@ -162,6 +162,7 @@ def hturnleft(newhdg):
 #         logit("still turning hdg now %d" % hdg)
 #    max_turn(right_limit, 0)
     robot.stop_all()
+    time.sleep(0.1)
     logit("End of backing, all ahead full")
     robot.motor(speed, right_limit)
     azgoalflag = True
@@ -512,7 +513,7 @@ def star_commands(schr):
         xstr = "{h%3d}" % hdg
         sendit(xstr)
     elif (auto and schr == '7'):      # hammer head left 180 deg
-        if azgoalflag is True         # turn cannot be in progress
+        if azgoalflag is True:         # turn cannot be in progress
             left = True
             newhdg = (hdg + 180) % 360
             robot.stop_all()
