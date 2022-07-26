@@ -169,8 +169,6 @@ def hturnleft(newhdg):
     logit("thread ended")
     return
 # ============================================================================
-
-#====================================================
 # cvt lat/lon seconds to U.S survey feet
 def vft2sec(feetE, feetN):
     return [feetN/latfeet, feetE/lonfeet]
