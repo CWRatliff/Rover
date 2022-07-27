@@ -1,6225 +1,1403 @@
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
 ====================================================================Rover 1.1 220720
 Voltage:  18.8
 Standby
 hdg:  98, bias:  98
 {v   0}
 {s   0}
-msg: 10:48:04.302{LS11}
-msg: 10:48:04.306{LP0}
-msg: 10:48:04.319{LT22.0072}
-msg: 10:48:04.328{LN7.1845}
-{ln-601.9} 
-{lt2230.1} 
-msg: 10:48:04.335{LA672}
-{la 2.20}
-msg: 10:48:05.312{LS12}
-msg: 10:48:05.318{LP0}
-msg: 10:48:05.329{LT22.0072}
-msg: 10:48:05.339{LN7.1845}
-{ln-601.9} 
-{lt2230.1} 
-msg: 10:48:05.347{LA669}
-{la 2.19}
-msg: 10:48:06.323{LS13}
-msg: 10:48:06.328{LP0}
-msg: 10:48:06.339{LT22.0072}
-msg: 10:48:06.351{LN7.1845}
-{ln-601.9} 
-{lt2230.1} 
-msg: 10:48:06.358{LA666}
-{la 2.19}
-msg: 10:48:07.332{LS14}
-msg: 10:48:07.337{LP0}
-msg: 10:48:07.349{LT22.0072}
-msg: 10:48:07.360{LN7.1842}
-{ln-601.8} 
-{lt2230.1} 
-msg: 10:48:07.367{LA664}
-{la 2.18}
+msg: 11:24:01.844{LS1}
+msg: 11:24:01.850{LP0}
+msg: 11:24:01.861{LT21.9373}
+msg: 11:24:01.871{LN7.2252}
+{ln-605.3} 
+{lt2223.0} 
+msg: 11:24:01.879{LA612}
+{la 2.01}
+msg: 11:24:02.855{LS2}
+msg: 11:24:02.860{LP0}
+msg: 11:24:02.871{LT21.9373}
+msg: 11:24:02.883{LN7.2252}
+{ln-605.3} 
+{lt2223.0} 
+msg: 11:24:02.889{LA611}
+{la 2.00}
+msg: 11:24:03.868{LS3}
+msg: 11:24:03.873{LP0}
+msg: 11:24:03.885{LT21.9373}
+msg: 11:24:03.895{LN7.2248}
+{ln-605.2} 
+{lt2223.0} 
+msg: 11:24:03.903{LA611}
+{la 2.00}
+msg: 11:24:04.878{LS4}
+msg: 11:24:04.883{LP0}
+msg: 11:24:04.894{LT21.9373}
+msg: 11:24:04.906{LN7.2252}
+{ln-605.3} 
+{lt2223.0} 
+msg: 11:24:04.912{LA610}
+{la 2.00}
+msg: 11:24:05.886{LS5}
+msg: 11:24:05.892{LP0}
+msg: 11:24:05.903{LT21.9377}
+msg: 11:24:05.914{LN7.2252}
+{ln-605.3} 
+{lt2223.0} 
+msg: 11:24:05.921{LA609}
+{la 2.00}
+msg: 11:24:06.895{LS6}
+msg: 11:24:06.900{LP0}
+msg: 11:24:06.912{LT21.9380}
+msg: 11:24:06.923{LN7.2252}
+{ln-605.3} 
+{lt2223.0} 
+msg: 11:24:06.931{LA609}
+{la 2.00}
+msg: 11:24:07.903{LS7}
+msg: 11:24:07.908{LP0}
+msg: 11:24:07.919{LT21.9384}
+msg: 11:24:07.931{LN7.2252}
+{ln-605.3} 
+{lt2223.1} 
+msg: 11:24:07.938{LA609}
+{la 2.00}
+msg: 11:24:08.914{LS8}
+msg: 11:24:08.920{LP0}
+msg: 11:24:08.931{LT21.9388}
+msg: 11:24:08.942{LN7.2256}
+{ln-605.3} 
+{lt2223.1} 
+msg: 11:24:08.949{LA609}
+{la 2.00}
+msg: 11:24:09.925{LS9}
+msg: 11:24:09.929{LP0}
+msg: 11:24:09.940{LT21.9391}
+msg: 11:24:09.951{LN7.2256}
+{ln-605.3} 
+{lt2223.2} 
+msg: 11:24:09.958{LA608}
+{la 1.99}
+msg: 11:24:10.933{LS10}
+msg: 11:24:10.939{LP0}
+msg: 11:24:10.950{LT21.9391}
+msg: 11:24:10.960{LN7.2256}
+{ln-605.3} 
+{lt2223.2} 
+msg: 11:24:10.968{LA608}
+{la 1.99}
+msg: 11:24:11.943{LS11}
+msg: 11:24:11.947{LP0}
+msg: 11:24:11.959{LT21.9391}
+msg: 11:24:11.969{LN7.2256}
+{ln-605.3} 
+{lt2223.2} 
+msg: 11:24:11.976{LA608}
+{la 1.99}
+msg: 11:24:12.951{LS12}
+msg: 11:24:12.956{LP0}
+msg: 11:24:12.967{LT21.9391}
+msg: 11:24:12.977{LN7.2256}
+{ln-605.3} 
+{lt2223.2} 
+msg: 11:24:12.985{LA608}
+{la 1.99}
+msg: 11:24:13.959{LS13}
+msg: 11:24:13.965{LP0}
+msg: 11:24:13.976{LT21.9391}
+msg: 11:24:13.987{LN7.2256}
+{ln-605.3} 
+{lt2223.2} 
+msg: 11:24:13.994{LA608}
+{la 1.99}
+msg: 11:24:14.971{LS14}
+msg: 11:24:14.977{LP0}
+msg: 11:24:14.988{LT21.9395}
+msg: 11:24:15.000{LN7.2245}
+{ln-605.2} 
+{lt2223.2} 
+msg: 11:24:15.006{LA607}
+{la 1.99}
+msg: 11:24:15.214{O12}
+hdg: 110, bias:  98
+msg: 11:24:15.564{O13}
+hdg: 111, bias:  98
+msg: 11:24:15.665{O14}
+hdg: 112, bias:  98
+msg: 11:24:15.814{O15}
+hdg: 113, bias:  98
+msg: 11:24:15.964{O16}
+hdg: 114, bias:  98
+msg: 11:24:15.983{LS15}
+msg: 11:24:15.985{LP0}
+msg: 11:24:15.998{LT21.9391}
+msg: 11:24:16.008{LN7.2241}
+{ln-605.2} 
+{lt2223.2} 
+msg: 11:24:16.015{LA605}
+{la 1.98}
+msg: 11:24:16.065{O17}
+hdg: 115, bias:  98
+msg: 11:24:16.264{O16}
+hdg: 114, bias:  98
+msg: 11:24:16.315{O15}
+hdg: 113, bias:  98
+msg: 11:24:16.364{O13}
+hdg: 111, bias:  98
+msg: 11:24:16.415{O12}
+hdg: 110, bias:  98
+msg: 11:24:16.464{O10}
 hdg: 108, bias:  98
-hdg: 107, bias:  98
-msg: 10:48:08.343{LS15}
-msg: 10:48:08.349{LP0}
-msg: 10:48:08.360{LT22.0075}
-msg: 10:48:08.370{LN7.1842}
-{ln-601.8} 
-{lt2230.1} 
-msg: 10:48:08.378{LA663}
-{la 2.18}
-hdg: 106, bias:  98
+msg: 11:24:16.513{O7}
 hdg: 105, bias:  98
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-msg: 10:48:09.356{LS16}
-msg: 10:48:09.362{LP0}
-msg: 10:48:09.373{LT22.0075}
-msg: 10:48:09.383{LN7.1827}
-{ln-601.7} 
-{lt2230.1} 
-msg: 10:48:09.391{LA662}
-{la 2.17}
-hdg: 105, bias:  98
-msg: 10:48:10.366{LS17}
-msg: 10:48:10.371{LP0}
-msg: 10:48:10.383{LT22.0072}
-msg: 10:48:10.392{LN7.1824}
-{ln-601.7} 
-{lt2230.1} 
-msg: 10:48:10.401{LA662}
-{la 2.17}
-hdg: 106, bias:  98
-msg: 10:48:11.377{LS18}
-msg: 10:48:11.382{LP0}
-msg: 10:48:11.393{LT22.0068}
-msg: 10:48:11.405{LN7.1824}
-{ln-601.7} 
-{lt2230.0} 
-msg: 10:48:11.411{LA661}
-{la 2.17}
-hdg: 107, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-msg: 10:48:12.389{LS19}
-msg: 10:48:12.393{LP0}
-msg: 10:48:12.404{LT22.0057}
-msg: 10:48:12.415{LN7.1827}
-{ln-601.7} 
-{lt2229.9} 
-msg: 10:48:12.422{LA660}
-{la 2.17}
-msg: 10:48:13.398{LS20}
-msg: 10:48:13.403{LP0}
-msg: 10:48:13.415{LT22.0050}
-msg: 10:48:13.426{LN7.1831}
-{ln-601.7} 
-{lt2229.8} 
-msg: 10:48:13.433{LA659}
-{la 2.16}
-msg: 10:48:14.411{LS21}
-msg: 10:48:14.416{LP0}
-msg: 10:48:14.428{LT22.0046}
-msg: 10:48:14.439{LN7.1834}
-{ln-601.8} 
-{lt2229.8} 
-msg: 10:48:14.446{LA656}
-{la 2.15}
-msg: 10:48:15.422{LS22}
-msg: 10:48:15.428{LP0}
-msg: 10:48:15.439{LT22.0043}
-msg: 10:48:15.449{LN7.1838}
-{ln-601.8} 
-{lt2229.8} 
-msg: 10:48:15.456{LA654}
-{la 2.15}
-msg: 10:48:16.431{LS23}
-msg: 10:48:16.437{LP0}
-msg: 10:48:16.448{LT22.0039}
-msg: 10:48:16.459{LN7.1842}
-{ln-601.8} 
-{lt2229.7} 
-msg: 10:48:16.466{LA651}
-{la 2.14}
-msg: 10:48:17.442{LS24}
-msg: 10:48:17.447{LP0}
-msg: 10:48:17.458{LT22.0032}
-msg: 10:48:17.469{LN7.1845}
-{ln-601.9} 
-{lt2229.7} 
-msg: 10:48:17.476{LA649}
-{la 2.13}
-msg: 10:48:18.453{LS25}
-msg: 10:48:18.457{LP0}
-msg: 10:48:18.470{LT22.0028}
-msg: 10:48:18.480{LN7.1849}
-{ln-601.9} 
-{lt2229.6} 
-msg: 10:48:18.487{LA647}
-{la 2.12}
-msg: 10:48:19.461{LS26}
-msg: 10:48:19.467{LP0}
-msg: 10:48:19.478{LT22.0025}
-msg: 10:48:19.489{LN7.1852}
-{ln-601.9} 
-{lt2229.6} 
-msg: 10:48:19.496{LA645}
-{la 2.12}
-msg: 10:48:20.474{LS27}
-msg: 10:48:20.480{LP0}
-msg: 10:48:20.491{LT22.0018}
-msg: 10:48:20.502{LN7.1856}
-{ln-601.9} 
-{lt2229.5} 
-msg: 10:48:20.509{LA643}
-{la 2.11}
-msg: 10:48:21.486{LS28}
-msg: 10:48:21.491{LP0}
-msg: 10:48:21.503{LT22.0014}
-msg: 10:48:21.514{LN7.1860}
-{ln-602.0} 
-{lt2229.5} 
-msg: 10:48:21.521{LA641}
-{la 2.10}
-msg: 10:48:22.496{LS29}
-msg: 10:48:22.500{LP0}
-msg: 10:48:22.513{LT22.0010}
-msg: 10:48:22.523{LN7.1863}
-{ln-602.0} 
-{lt2229.4} 
-msg: 10:48:22.531{LA640}
-{la 2.10}
-msg: 10:48:23.507{LS30}
-msg: 10:48:23.512{LP0}
-msg: 10:48:23.523{LT22.0007}
-msg: 10:48:23.534{LN7.1867}
-{ln-602.0} 
-{lt2229.4} 
-msg: 10:48:23.541{LA638}
-{la 2.09}
-msg: 10:48:24.532{LS31}
-msg: 10:48:24.533{LP0}
-msg: 10:48:24.534{LT22.0003}
-msg: 10:48:24.543{LN7.1870}
-{ln-602.1} 
-{lt2229.4} 
-msg: 10:48:24.550{LA635}
-{la 2.08}
-msg: 10:48:25.527{LS32}
-msg: 10:48:25.533{LP0}
-msg: 10:48:25.544{LT22.0000}
-msg: 10:48:25.554{LN7.1874}
-{ln-602.1} 
-{lt2229.3} 
-msg: 10:48:25.562{LA633}
-{la 2.08}
-msg: 10:48:26.538{LS33}
-msg: 10:48:26.543{LP0}
-msg: 10:48:26.555{LT21.9996}
-msg: 10:48:26.566{LN7.1878}
-{ln-602.1} 
-{lt2229.3} 
-msg: 10:48:26.573{LA631}
-{la 2.07}
-msg: 10:48:27.548{LS34}
-msg: 10:48:27.554{LP0}
-msg: 10:48:27.565{LT21.9992}
-msg: 10:48:27.574{LN7.1881}
-{ln-602.2} 
-{lt2229.2} 
-msg: 10:48:27.583{LA630}
-{la 2.07}
-msg: 10:48:28.560{LS35}
-msg: 10:48:28.564{LP0}
-msg: 10:48:28.575{LT21.9989}
-msg: 10:48:28.586{LN7.1881}
-{ln-602.2} 
-{lt2229.2} 
-msg: 10:48:28.593{LA628}
-{la 2.06}
-msg: 10:48:29.569{LS36}
-msg: 10:48:29.574{LP0}
-msg: 10:48:29.585{LT21.9989}
-msg: 10:48:29.596{LN7.1885}
-{ln-602.2} 
-{lt2229.2} 
-msg: 10:48:29.603{LA627}
-{la 2.06}
-msg: 10:48:30.579{LS37}
-msg: 10:48:30.584{LP0}
-msg: 10:48:30.596{LT21.9985}
-msg: 10:48:30.607{LN7.1888}
-{ln-602.2} 
-{lt2229.2} 
-msg: 10:48:30.614{LA626}
-{la 2.05}
-msg: 10:48:31.592{LS38}
-msg: 10:48:31.597{LP0}
-msg: 10:48:31.609{LT21.9985}
-msg: 10:48:31.620{LN7.1892}
-{ln-602.2} 
-{lt2229.2} 
-msg: 10:48:31.627{LA625}
-{la 2.05}
-msg: 10:48:32.604{LS39}
-msg: 10:48:32.608{LP0}
-msg: 10:48:32.619{LT21.9982}
-msg: 10:48:32.630{LN7.1896}
-{ln-602.3} 
-{lt2229.1} 
-msg: 10:48:32.637{LA623}
-{la 2.04}
-msg: 10:48:33.613{LS40}
-msg: 10:48:33.617{LP0}
-msg: 10:48:33.629{LT21.9978}
-msg: 10:48:33.639{LN7.1899}
-{ln-602.3} 
-{lt2229.1} 
-msg: 10:48:33.646{LA622}
-{la 2.04}
-msg: 10:48:34.622{LS41}
-msg: 10:48:34.627{LP0}
-msg: 10:48:34.639{LT21.9978}
-msg: 10:48:34.650{LN7.1903}
-{ln-602.3} 
-{lt2229.1} 
-msg: 10:48:34.657{LA621}
-{la 2.04}
-msg: 10:48:35.633{LS42}
-msg: 10:48:35.639{LP0}
-msg: 10:48:35.650{LT21.9978}
-msg: 10:48:35.660{LN7.1906}
-{ln-602.4} 
-{lt2229.1} 
-msg: 10:48:35.668{LA620}
-{la 2.03}
-msg: 10:48:36.645{LS43}
-msg: 10:48:36.650{LP0}
-msg: 10:48:36.662{LT21.9978}
-msg: 10:48:36.673{LN7.1910}
-{ln-602.4} 
-{lt2229.1} 
-msg: 10:48:36.680{LA619}
-{la 2.03}
-msg: 10:48:37.656{LS44}
-msg: 10:48:37.662{LP0}
-msg: 10:48:37.673{LT21.9978}
-msg: 10:48:37.683{LN7.1914}
-{ln-602.4} 
-{lt2229.1} 
-msg: 10:48:37.691{LA618}
-{la 2.03}
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-msg: 10:48:38.667{LS45}
-msg: 10:48:38.672{LP0}
-msg: 10:48:38.684{LT21.9974}
-msg: 10:48:38.694{LN7.1917}
-{ln-602.5} 
-{lt2229.1} 
-msg: 10:48:38.701{LA617}
-{la 2.02}
-msg: 10:48:39.676{LS46}
-msg: 10:48:39.682{LP0}
-msg: 10:48:39.693{LT21.9974}
-msg: 10:48:39.703{LN7.1921}
-{ln-602.5} 
-{lt2229.1} 
-msg: 10:48:39.711{LA616}
-{la 2.02}
-msg: 10:48:40.687{LS47}
-msg: 10:48:40.692{LP0}
-msg: 10:48:40.704{LT21.9974}
-msg: 10:48:40.715{LN7.1924}
-{ln-602.5} 
-{lt2229.1} 
-msg: 10:48:40.722{LA615}
-{la 2.02}
-msg: 10:48:41.701{LS48}
-msg: 10:48:41.707{LP0}
-msg: 10:48:41.718{LT21.9971}
-msg: 10:48:41.728{LN7.1928}
-{ln-602.5} 
-{lt2229.0} 
-msg: 10:48:41.735{LA615}
-{la 2.02}
-msg: 10:48:42.710{LS49}
-msg: 10:48:42.716{LP0}
-msg: 10:48:42.727{LT21.9971}
-msg: 10:48:42.737{LN7.1932}
-{ln-602.6} 
-{lt2229.0} 
-msg: 10:48:42.745{LA615}
-{la 2.02}
-msg: 10:48:43.721{LS50}
-msg: 10:48:43.725{LP0}
-msg: 10:48:43.737{LT21.9967}
-msg: 10:48:43.747{LN7.1935}
-{ln-602.6} 
-{lt2229.0} 
-msg: 10:48:43.754{LA614}
-{la 2.01}
-msg: 10:48:44.730{LS51}
-msg: 10:48:44.735{LP0}
-msg: 10:48:44.746{LT21.9967}
-msg: 10:48:44.756{LN7.1939}
-{ln-602.6} 
-{lt2229.0} 
-msg: 10:48:44.764{LA614}
-{la 2.01}
-msg: 10:48:45.739{LS52}
-msg: 10:48:45.744{LP0}
-msg: 10:48:45.755{LT21.9967}
-msg: 10:48:45.766{LN7.1939}
-{ln-602.6} 
-{lt2229.0} 
-msg: 10:48:45.773{LA613}
-{la 2.01}
-msg: 10:48:46.750{LS53}
-msg: 10:48:46.756{LP0}
-msg: 10:48:46.767{LT21.9967}
-msg: 10:48:46.777{LN7.1942}
-{ln-602.7} 
-{lt2229.0} 
-msg: 10:48:46.785{LA613}
-{la 2.01}
-msg: 10:48:47.762{LS54}
-msg: 10:48:47.767{LP0}
-msg: 10:48:47.779{LT21.9964}
-msg: 10:48:47.790{LN7.1946}
-{ln-602.7} 
-{lt2229.0} 
-msg: 10:48:47.797{LA612}
-{la 2.01}
-msg: 10:48:48.772{LS55}
-msg: 10:48:48.778{LP0}
-msg: 10:48:48.789{LT21.9964}
-msg: 10:48:48.800{LN7.1950}
-{ln-602.7} 
-{lt2229.0} 
-msg: 10:48:48.807{LA611}
-{la 2.00}
-msg: 10:48:49.784{LS56}
-msg: 10:48:49.788{LP0}
-msg: 10:48:49.799{LT21.9964}
-msg: 10:48:49.810{LN7.1953}
-{ln-602.8} 
-{lt2229.0} 
-msg: 10:48:49.817{LA611}
-{la 2.00}
-msg: 10:48:50.793{LS57}
-msg: 10:48:50.798{LP0}
-msg: 10:48:50.810{LT21.9964}
-msg: 10:48:50.819{LN7.1957}
-{ln-602.8} 
-{lt2229.0} 
-msg: 10:48:50.828{LA610}
-{la 2.00}
-msg: 10:48:51.802{LS58}
-msg: 10:48:51.808{LP0}
-msg: 10:48:51.819{LT21.9964}
-msg: 10:48:51.830{LN7.1960}
-{ln-602.8} 
-{lt2229.0} 
-msg: 10:48:51.837{LA610}
-{la 2.00}
-msg: 10:48:52.816{LS59}
-msg: 10:48:52.820{LP0}
-msg: 10:48:52.832{LT21.9964}
-msg: 10:48:52.842{LN7.1960}
-{ln-602.8} 
-{lt2229.0} 
-msg: 10:48:52.849{LA609}
-{la 2.00}
-msg: 10:48:53.823{LS0}
-msg: 10:48:53.829{LP0}
-msg: 10:48:53.840{LT21.9964}
-msg: 10:48:53.851{LN7.1964}
-{ln-602.8} 
-{lt2229.0} 
-msg: 10:48:53.858{LA609}
-{la 2.00}
-hdg: 105, bias:  98
-msg: 10:48:54.834{LS1}
-msg: 10:48:54.840{LP0}
-msg: 10:48:54.851{LT21.9964}
-msg: 10:48:54.861{LN7.1968}
-{ln-602.9} 
-{lt2229.0} 
-msg: 10:48:54.868{LA609}
-{la 2.00}
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-msg: 10:48:55.845{LS2}
-msg: 10:48:55.851{LP0}
-msg: 10:48:55.862{LT21.9964}
-msg: 10:48:55.873{LN7.1968}
-{ln-602.9} 
-{lt2229.0} 
-msg: 10:48:55.880{LA609}
-{la 2.00}
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-msg: 10:48:56.855{LS3}
-msg: 10:48:56.860{LP0}
-msg: 10:48:56.872{LT21.9964}
-msg: 10:48:56.883{LN7.1975}
-{ln-602.9} 
-{lt2229.0} 
-msg: 10:48:56.890{LA608}
-{la 1.99}
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-msg: 10:48:57.873{LS4}
-msg: 10:48:57.877{LP0}
-msg: 10:48:57.889{LT21.9964}
-msg: 10:48:57.899{LN7.1978}
-{ln-603.0} 
-{lt2229.0} 
-msg: 10:48:57.907{LA607}
-{la 1.99}
-hdg: 104, bias:  98
-hdg: 103, bias:  98
+msg: 11:24:16.564{O4}
 hdg: 102, bias:  98
-hdg: 101, bias:  98
-hdg: 100, bias:  98
+msg: 11:24:16.614{O1}
 hdg:  99, bias:  98
-hdg:  98, bias:  98
+msg: 11:24:16.665{O358}
 hdg:  96, bias:  98
-msg: 10:48:58.879{LS5}
-msg: 10:48:58.885{LP0}
-msg: 10:48:58.896{LT21.9974}
-msg: 10:48:58.907{LN7.1982}
-{ln-603.0} 
-{lt2229.1} 
-msg: 10:48:58.914{LA606}
-{la 1.99}
-hdg:  94, bias:  98
-hdg:  91, bias:  98
-hdg:  89, bias:  98
-hdg:  86, bias:  98
+msg: 11:24:16.716{O354}
+hdg:  92, bias:  98
+msg: 11:24:16.765{O350}
+hdg:  88, bias:  98
+msg: 11:24:16.816{O345}
 hdg:  83, bias:  98
+msg: 11:24:16.865{O341}
 hdg:  79, bias:  98
-hdg:  76, bias:  98
-hdg:  72, bias:  98
-hdg:  68, bias:  98
-hdg:  63, bias:  98
+msg: 11:24:16.916{O336}
+hdg:  74, bias:  98
+msg: 11:24:16.965{O331}
+hdg:  69, bias:  98
+msg: 11:24:16.989{LS16}
+msg: 11:24:16.997{LP318}
+msg: 11:24:17.007{LT21.9409}
+msg: 11:24:17.018{LN7.2266}
+{ln-605.4} 
+{lt2223.3} 
+msg: 11:24:17.025{LA604}
+{la 1.98}
+msg: 11:24:17.031{O326}
+hdg:  64, bias:  98
+msg: 11:24:17.065{O321}
 hdg:  59, bias:  98
+msg: 11:24:17.116{O317}
 hdg:  55, bias:  98
+msg: 11:24:17.165{O312}
 hdg:  50, bias:  98
+msg: 11:24:17.216{O308}
 hdg:  46, bias:  98
+msg: 11:24:17.265{O304}
 hdg:  42, bias:  98
-hdg:  39, bias:  98
+msg: 11:24:17.316{O300}
+hdg:  38, bias:  98
+msg: 11:24:17.365{O297}
 hdg:  35, bias:  98
-hdg:  33, bias:  98
+msg: 11:24:17.416{O294}
+hdg:  32, bias:  98
+msg: 11:24:17.467{O292}
 hdg:  30, bias:  98
+msg: 11:24:17.516{O290}
 hdg:  28, bias:  98
-msg: 10:48:59.889{LS6}
-msg: 10:48:59.896{LP316}
-msg: 10:48:59.909{LT22.0046}
-msg: 10:48:59.918{LN7.2058}
-{ln-603.6} 
-{lt2229.8} 
-msg: 10:48:59.925{LA603}
-{la 1.98}
-hdg:  27, bias:  98
+msg: 11:24:17.565{O288}
 hdg:  26, bias:  98
+msg: 11:24:17.616{O287}
 hdg:  25, bias:  98
+msg: 11:24:17.666{O286}
 hdg:  24, bias:  98
+msg: 11:24:17.715{O285}
 hdg:  23, bias:  98
+msg: 11:24:18.000{LS17}
+msg: 11:24:18.008{LP324}
+msg: 11:24:18.019{LT21.9503}
+msg: 11:24:18.029{LN7.2346}
+{ln-606.0} 
+{lt2224.3} 
+msg: 11:24:18.036{LA602}
+{la 1.98}
+msg: 11:24:18.216{O286}
+hdg:  24, bias:  98
+msg: 11:24:18.517{O285}
+hdg:  23, bias:  98
+msg: 11:24:18.616{O284}
 hdg:  22, bias:  98
+msg: 11:24:18.717{O283}
 hdg:  21, bias:  98
+msg: 11:24:18.866{O282}
 hdg:  20, bias:  98
+msg: 11:24:18.967{O281}
 hdg:  19, bias:  98
+msg: 11:24:19.010{LS18}
+msg: 11:24:19.014{LP9}
+msg: 11:24:19.026{LT21.9654}
+msg: 11:24:19.036{LN7.2349}
+{ln-606.1} 
+{lt2225.8} 
+msg: 11:24:19.043{LA600}
+{la 1.97}
+msg: 11:24:19.116{O280}
 hdg:  18, bias:  98
+msg: 11:24:19.267{O279}
 hdg:  17, bias:  98
+msg: 11:24:19.317{O278}
 hdg:  16, bias:  98
+msg: 11:24:19.417{O277}
 hdg:  15, bias:  98
-msg: 10:49:00.900{LS7}
-msg: 10:49:00.907{LP357}
-msg: 10:49:00.918{LT22.0201}
-msg: 10:49:00.929{LN7.2097}
-{ln-604.0} 
-{lt2231.4} 
-msg: 10:49:00.936{LA602}
-{la 1.98}
+msg: 11:24:19.467{O276}
 hdg:  14, bias:  98
+msg: 11:24:19.567{O275}
 hdg:  13, bias:  98
+msg: 11:24:19.818{O276}
+hdg:  14, bias:  98
+msg: 11:24:19.967{O277}
+hdg:  15, bias:  98
+msg: 11:24:20.021{O276}
+hdg:  14, bias:  98
+msg: 11:24:20.028{LS19}
+msg: 11:24:20.035{LP358}
+msg: 11:24:20.046{LT21.9744}
+msg: 11:24:20.057{LN7.2338}
+{ln-606.0} 
+{lt2226.7} 
+msg: 11:24:20.064{LA598}
+{la 1.96}
+msg: 11:24:20.167{O275}
+hdg:  13, bias:  98
+msg: 11:24:20.217{O274}
 hdg:  12, bias:  98
-msg: 10:49:01.910{LS8}
-msg: 10:49:01.916{LP15}
-msg: 10:49:01.927{LT22.0385}
-msg: 10:49:01.938{LN7.2058}
-{ln-603.6} 
-{lt2233.2} 
-msg: 10:49:01.945{LA603}
+msg: 11:24:20.317{O273}
+hdg:  11, bias:  98
+msg: 11:24:20.368{O272}
+hdg:  10, bias:  98
+msg: 11:24:20.417{O271}
+hdg:   9, bias:  98
+msg: 11:24:20.517{O272}
+hdg:  10, bias:  98
+msg: 11:24:20.567{O271}
+hdg:   9, bias:  98
+msg: 11:24:21.032{LS20}
+msg: 11:24:21.039{LP356}
+msg: 11:24:21.050{LT21.9769}
+msg: 11:24:21.061{LN7.2346}
+{ln-606.0} 
+{lt2227.0} 
+msg: 11:24:21.068{LA599}
+{la 1.97}
+msg: 11:24:22.039{LS21}
+msg: 11:24:22.046{LP356}
+msg: 11:24:22.059{LT21.9780}
+msg: 11:24:22.069{LN7.2349}
+{ln-606.1} 
+{lt2227.1} 
+msg: 11:24:22.077{LA601}
+{la 1.97}
+msg: 11:24:23.051{LS22}
+msg: 11:24:23.058{LP356}
+msg: 11:24:23.069{LT21.9776}
+msg: 11:24:23.079{LN7.2349}
+{ln-606.1} 
+{lt2227.1} 
+msg: 11:24:23.087{LA603}
 {la 1.98}
-hdg:  11, bias:  98
-hdg:  12, bias:  98
-hdg:  11, bias:  98
-hdg:  12, bias:  98
-hdg:  11, bias:  98
-hdg:  12, bias:  98
-hdg:  11, bias:  98
-msg: 10:49:02.919{LS9}
-msg: 10:49:02.927{LP195}
-msg: 10:49:02.938{LT22.0410}
-msg: 10:49:02.948{LN7.2047}
-{ln-603.5} 
-{lt2233.5} 
-msg: 10:49:02.956{LA608}
-{la 1.99}
-msg: 10:49:03.933{LS10}
-msg: 10:49:03.940{LP353}
-msg: 10:49:03.953{LT22.0399}
-msg: 10:49:03.963{LN7.2054}
-{ln-603.6} 
-{lt2233.4} 
-msg: 10:49:03.970{LA611}
-{la 2.00}
-msg: 10:49:04.943{LS11}
-msg: 10:49:04.950{LP353}
-msg: 10:49:04.961{LT22.0399}
-msg: 10:49:04.972{LN7.2054}
-{ln-603.6} 
-{lt2233.4} 
-msg: 10:49:04.979{LA615}
-{la 2.02}
-msg: 10:49:05.953{LS12}
-msg: 10:49:05.960{LP353}
-msg: 10:49:05.972{LT22.0403}
-msg: 10:49:05.982{LN7.2054}
-{ln-603.6} 
-{lt2233.4} 
-msg: 10:49:05.989{LA618}
-{la 2.03}
-msg: 10:49:06.877{D2}
+msg: 11:24:23.324{D2}
 Odo:     0.0, speed:    0
 Motor speed, steer 10, 0
+Motor cmd addr:128, spd:400, dir:1
+Motor cmd addr:129, spd:400, dir:1
+Motor cmd addr:130, spd:400, dir:1
+Motor cmd addr:128, spd:400, dir:2
+Motor cmd addr:129, spd:400, dir:2
+Motor cmd addr:130, spd:400, dir:2
 {v  10}
-msg: 10:49:06.969{LS14}
-msg: 10:49:06.976{LP353}
-msg: 10:49:06.987{LT22.0410}
-msg: 10:49:06.998{LN7.2054}
-{ln-603.6} 
-{lt2233.5} 
-msg: 10:49:07.005{LA626}
-{la 2.05}
-msg: 10:49:07.354{D2}
-Odo:     0.1, speed:   10
+msg: 11:24:23.530{D2}
+Odo:     0.0, speed:   10
 Motor speed, steer 20, 0
+Motor cmd addr:128, spd:800, dir:1
+Motor cmd addr:129, spd:800, dir:1
+Motor cmd addr:130, spd:800, dir:1
+Motor cmd addr:128, spd:800, dir:2
+Motor cmd addr:129, spd:800, dir:2
+Motor cmd addr:130, spd:800, dir:2
 {v  20}
-msg: 10:49:07.585{D2}
+msg: 11:24:23.860{D2}
 Odo:     0.1, speed:   20
 Motor speed, steer 30, 0
+Motor cmd addr:128, spd:1200, dir:1
+Motor cmd addr:129, spd:1200, dir:1
+Motor cmd addr:130, spd:1200, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1200, dir:2
+Motor cmd addr:130, spd:1200, dir:2
 {v  30}
-msg: 10:49:07.982{LS15}
-msg: 10:49:07.988{LP23}
-msg: 10:49:07.999{LT22.0446}
-msg: 10:49:08.010{LN7.2036}
-{ln-603.5} 
-{lt2233.8} 
-msg: 10:49:08.017{LA634}
-{la 2.08}
-hdg:  12, bias:  98
-msg: 10:49:08.992{LS16}
-msg: 10:49:08.998{LP24}
-msg: 10:49:09.010{LT22.0511}
-msg: 10:49:09.020{LN7.2004}
-{ln-603.2} 
-{lt2234.5} 
-msg: 10:49:09.029{LA638}
-{la 2.09}
-hdg:  13, bias:  98
-hdg:  14, bias:  98
-hdg:  13, bias:  98
-hdg:  14, bias:  98
-msg: 10:49:10.003{LS17}
-msg: 10:49:10.009{LP23}
-msg: 10:49:10.020{LT22.0565}
-msg: 10:49:10.031{LN7.1975}
-{ln-602.9} 
-{lt2235.1} 
-msg: 10:49:10.038{LA639}
-{la 2.10}
-msg: 10:49:10.043{D1}
-Motor speed, steer 30, -1
-{s  -1}
-msg: 10:49:10.228{D4}
-Motor speed, steer 30, -6
-{s  -6}
-hdg:  13, bias:  98
-hdg:  12, bias:  98
-msg: 10:49:11.015{LS18}
-msg: 10:49:11.021{LP19}
-msg: 10:49:11.032{LT22.0619}
-msg: 10:49:11.043{LN7.1950}
-{ln-602.7} 
-{lt2235.6} 
-msg: 10:49:11.050{LA637}
-{la 2.09}
-hdg:  11, bias:  98
+msg: 11:24:24.060{LS23}
+msg: 11:24:24.067{LP356}
+msg: 11:24:24.080{LT21.9766}
+msg: 11:24:24.090{LN7.2349}
+{ln-606.1} 
+{lt2227.0} 
+msg: 11:24:24.097{LA605}
+{la 1.98}
+msg: 11:24:24.971{O272}
 hdg:  10, bias:  98
-hdg:   9, bias:  98
-hdg:   8, bias:  98
-hdg:   7, bias:  98
-msg: 10:49:11.959{D5}
-Motor speed, steer 30, -5
-Motor speed, steer 30, -4
-Motor speed, steer 30, -3
-Motor speed, steer 30, -2
-Motor speed, steer 30, -1
-Motor speed, steer 30, 0
-Motor speed, steer 30, 0
-{s   0}
-msg: 10:49:12.029{LS19}
-msg: 10:49:12.030{LP18}
-msg: 10:49:12.043{LT22.0669}
-msg: 10:49:12.053{LN7.1924}
-{ln-602.5} 
-{lt2236.1} 
-msg: 10:49:12.060{LA633}
-{la 2.08}
-msg: 10:49:13.034{LS20}
-msg: 10:49:13.040{LP6}
-msg: 10:49:13.051{LT22.0720}
-msg: 10:49:13.062{LN7.1914}
-{ln-602.4} 
-{lt2236.6} 
-msg: 10:49:13.069{LA630}
-{la 2.07}
-hdg:   8, bias:  98
-hdg:   7, bias:  98
-hdg:   8, bias:  98
-msg: 10:49:14.048{LS21}
-msg: 10:49:14.055{LP15}
-msg: 10:49:14.066{LT22.0777}
-msg: 10:49:14.076{LN7.1899}
-{ln-602.3} 
-{lt2237.2} 
-msg: 10:49:14.084{LA628}
-{la 2.06}
-msg: 10:49:15.058{LS22}
-msg: 10:49:15.065{LP19}
-msg: 10:49:15.076{LT22.0835}
-msg: 10:49:15.087{LN7.1874}
-{ln-602.1} 
-{lt2237.8} 
-msg: 10:49:15.094{LA625}
-{la 2.05}
-hdg:   9, bias:  98
-msg: 10:49:16.069{LS23}
-msg: 10:49:16.076{LP15}
-msg: 10:49:16.087{LT22.0889}
-msg: 10:49:16.097{LN7.1856}
-{ln-601.9} 
-{lt2238.3} 
-msg: 10:49:16.105{LA621}
-{la 2.04}
-hdg:  10, bias:  98
-hdg:   9, bias:  98
-hdg:  10, bias:  98
-msg: 10:49:17.078{LS24}
-msg: 10:49:17.084{LP22}
-msg: 10:49:17.096{LT22.0946}
-msg: 10:49:17.106{LN7.1827}
-{ln-601.7} 
-{lt2238.9} 
-msg: 10:49:17.115{LA619}
-{la 2.03}
-hdg:  11, bias:  98
-msg: 10:49:18.087{LS25}
-msg: 10:49:18.094{LP22}
-msg: 10:49:18.105{LT22.1004}
-msg: 10:49:18.115{LN7.1798}
-{ln-601.5} 
-{lt2239.5} 
-msg: 10:49:18.124{LA616}
-{la 2.02}
-hdg:  12, bias:  98
-hdg:  11, bias:  98
-hdg:  12, bias:  98
-hdg:  11, bias:  98
-msg: 10:49:19.101{LS26}
-msg: 10:49:19.107{LP21}
-msg: 10:49:19.119{LT22.1062}
-msg: 10:49:19.129{LN7.1770}
-{ln-601.2} 
-{lt2240.1} 
-msg: 10:49:19.136{LA614}
-{la 2.01}
-hdg:  12, bias:  98
-hdg:  13, bias:  98
-msg: 10:49:20.111{LS27}
-msg: 10:49:20.116{LP30}
-msg: 10:49:20.127{LT22.1119}
-msg: 10:49:20.138{LN7.1734}
-{ln-600.9} 
-{lt2240.7} 
-msg: 10:49:20.145{LA611}
-{la 2.00}
-hdg:  14, bias:  98
-msg: 10:49:20.731{E2}
-Auto-pilot
-hdg:  14, bias:  98
-msg: 10:49:21.121{LS28}
-msg: 10:49:21.128{LP21}
-msg: 10:49:21.139{LT22.1177}
-msg: 10:49:21.149{LN7.1701}
-{ln-600.6} 
-{lt2241.3} 
-msg: 10:49:21.158{LA608}
+msg: 11:24:25.073{LS24}
+msg: 11:24:25.078{LP21}
+msg: 11:24:25.089{LT21.9802}
+msg: 11:24:25.100{LN7.2328}
+{ln-605.9} 
+{lt2227.3} 
+msg: 11:24:25.108{LA608}
 {la 1.99}
-new hdg steering 0
-Motor speed, steer 30, 0
-msg: 10:49:22.131{LS29}
-msg: 10:49:22.138{LP20}
-msg: 10:49:22.149{LT22.1234}
-msg: 10:49:22.159{LN7.1676}
-{ln-600.4} 
-{lt2241.8} 
-msg: 10:49:22.167{LA606}
-{la 1.99}
-new hdg steering 0
-Motor speed, steer 30, 0
-hdg:  15, bias:  98
-msg: 10:49:23.140{LS30}
-msg: 10:49:23.147{LP21}
-msg: 10:49:23.158{LT22.1292}
-msg: 10:49:23.168{LN7.1647}
-{ln-600.2} 
-{lt2242.4} 
-msg: 10:49:23.176{LA605}
-{la 1.98}
-new hdg steering -1
-Motor speed, steer 30, -1
-{s  -1}
-Motor speed, steer 30, 0
-adjusting steer to meet az 0
-hdg:  14, bias:  98
-{s   0}
-msg: 10:49:24.164{LS31}
-msg: 10:49:24.166{LP31}
-msg: 10:49:24.177{LT22.1342}
-msg: 10:49:24.188{LN7.1615}
-{ln-599.9} 
-{lt2242.9} 
-msg: 10:49:24.195{LA603}
-{la 1.98}
-new hdg steering 0
-Motor speed, steer 30, 0
-msg: 10:49:24.756{D2}
-Odo:     8.2, speed:   30
-Motor speed, steer 40, 0
-{v  40}
-hdg:  15, bias:  98
-msg: 10:49:25.063{D2}
-Odo:     8.4, speed:   40
-Motor speed, steer 50, 0
-{v  50}
-msg: 10:49:25.164{LS32}
-msg: 10:49:25.171{LP23}
-msg: 10:49:25.182{LT22.1396}
-msg: 10:49:25.193{LN7.1582}
-{ln-599.6} 
-{lt2243.5} 
-msg: 10:49:25.200{LA602}
-{la 1.98}
-new hdg steering -1
-Motor speed, steer 50, -1
-{s  -1}
-Motor speed, steer 50, 0
-adjusting steer to meet az 0
-hdg:  14, bias:  98
-{s   0}
-hdg:  15, bias:  98
-msg: 10:49:26.175{LS33}
-msg: 10:49:26.181{LP24}
-msg: 10:49:26.192{LT22.1483}
-msg: 10:49:26.203{LN7.1536}
-{ln-599.3} 
-{lt2244.4} 
-msg: 10:49:26.210{LA601}
-{la 1.97}
-hdg:  16, bias:  98
-new hdg steering -2
-Motor speed, steer 50, -2
-{s  -2}
-msg: 10:49:27.095{E7}
-Motor speed, steer -25, -36
-az set to 194
-Motor speed, steer 50, 0
-Tturnleft started, newhdg 196
-midturn hdg 106
-left backing turn
-adjusting steer to meet az 0
-{s   0}
-msg: 10:49:27.185{LS34}
-msg: 10:49:27.192{LP25}
-msg: 10:49:27.203{LT22.1580}
-msg: 10:49:27.214{LN7.1478}
-still turning hdg now 16
-{ln-598.8} 
-{lt2245.3} 
-msg: 10:49:27.221{LA600}
-{la 1.97}
-still turning hdg now 16
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-hdg:  18, bias:  98
-still turning hdg now 18
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-msg: 10:49:28.195{LS35}
-msg: 10:49:28.202{LP23}
-msg: 10:49:28.213{LT22.1677}
-msg: 10:49:28.224{LN7.1424}
-{ln-598.3} 
-{lt2246.3} 
-msg: 10:49:28.231{LA600}
-{la 1.97}
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-hdg:  18, bias:  98
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-msg: 10:49:29.205{LS36}
-msg: 10:49:29.211{LP23}
-still turning hdg now 18
-msg: 10:49:29.223{LT22.1774}
-msg: 10:49:29.233{LN7.1374}
-{ln-597.9} 
-{lt2247.3} 
-msg: 10:49:29.242{LA599}
-{la 1.97}
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-hdg:  19, bias:  98
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-msg: 10:49:30.218{LS37}
-msg: 10:49:30.225{LP24}
-msg: 10:49:30.236{LT22.1868}
-still turning hdg now 19
-msg: 10:49:30.246{LN7.1320}
-{ln-597.5} 
-{lt2248.3} 
-msg: 10:49:30.254{LA598}
-{la 1.96}
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-hdg:  20, bias:  98
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-hdg:  19, bias:  98
-still turning hdg now 19
-hdg:  20, bias:  98
-still turning hdg now 20
-msg: 10:49:31.230{LS38}
-msg: 10:49:31.235{LP29}
-msg: 10:49:31.248{LT22.1774}
-msg: 10:49:31.258{LN7.1125}
-{ln-595.8} 
-{lt2247.3} 
-msg: 10:49:31.266{LA1168}
-still turning hdg now 20
-{la 3.83}
-Poor GPS accuracy
-still turning hdg now 20
-hdg:  19, bias:  98
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-hdg:  20, bias:  98
-still turning hdg now 20
-hdg:  19, bias:  98
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-msg: 10:49:32.239{LS39}
-msg: 10:49:32.244{LP22}
-still turning hdg now 19
-msg: 10:49:32.256{LT22.1893}
-msg: 10:49:32.267{LN7.1107}
-{ln-595.7} 
-{lt2248.5} 
-msg: 10:49:32.274{LA892}
-{la 2.93}
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-hdg:  20, bias:  98
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-msg: 10:49:33.249{LS40}
-msg: 10:49:33.256{LP30}
-still turning hdg now 20
-msg: 10:49:33.267{LT22.2012}
-msg: 10:49:33.278{LN7.1060}
-{ln-595.3} 
-{lt2249.7} 
-msg: 10:49:33.285{LA757}
-{la 2.48}
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-hdg:  21, bias:  98
-still turning hdg now 21
-still turning hdg now 21
-msg: 10:49:33.662{E7}
-still turning hdg now 21
-Motor speed, steer -25, -36
-Tturnleft started, newhdg 201
-midturn hdg 111
-left backing turn
-az set to 14
-still turning hdg now 21
-still turning hdg now 21
-still turning hdg now 21
-still turning hdg now 21
-still turning hdg now 21
-hdg:  22, bias:  98
-still turning hdg now 22
-still turning hdg now 22
-hdg:  23, bias:  98
-still turning hdg now 23
-still turning hdg now 23
-still turning hdg now 23
-still turning hdg now 23
-hdg:  24, bias:  98
-still turning hdg now 24
-still turning hdg now 24
-hdg:  25, bias:  98
-still turning hdg now 25
-still turning hdg now 25
-msg: 10:49:34.260{LS41}
-msg: 10:49:34.267{LP32}
-msg: 10:49:34.278{LT22.2091}
-still turning hdg now 25
-still turning hdg now 25
-msg: 10:49:34.289{LN7.1032}
-{ln-595.0} 
-{lt2250.5} 
-msg: 10:49:34.296{LA670}
-{la 2.20}
-hdg:  26, bias:  98
-still turning hdg now 26
-still turning hdg now 26
-still turning hdg now 26
-still turning hdg now 26
-hdg:  27, bias:  98
-still turning hdg now 27
-still turning hdg now 27
-still turning hdg now 27
-still turning hdg now 27
-hdg:  28, bias:  98
-still turning hdg now 28
-still turning hdg now 28
-hdg:  29, bias:  98
-still turning hdg now 29
-still turning hdg now 29
-still turning hdg now 29
-still turning hdg now 29
-hdg:  30, bias:  98
-still turning hdg now 30
-still turning hdg now 30
-hdg:  31, bias:  98
-still turning hdg now 31
-still turning hdg now 31
-still turning hdg now 31
-still turning hdg now 31
-hdg:  32, bias:  98
-still turning hdg now 32
-still turning hdg now 32
-still turning hdg now 32
-still turning hdg now 32
-hdg:  33, bias:  98
-still turning hdg now 33
-still turning hdg now 33
-hdg:  34, bias:  98
-still turning hdg now 34
-still turning hdg now 34
-still turning hdg now 34
-still turning hdg now 34
-hdg:  35, bias:  98
-still turning hdg now 35
-still turning hdg now 35
-hdg:  36, bias:  98
-still turning hdg now 36
-still turning hdg now 36
-still turning hdg now 36
-hdg:  37, bias:  98
-msg: 10:49:35.273{LS42}
-still turning hdg now 37
-msg: 10:49:35.280{LP218}
-msg: 10:49:35.292{LT22.2088}
-msg: 10:49:35.302{LN7.1071}
-{ln-595.4} 
-{lt2250.5} 
-msg: 10:49:35.309{LA611}
+msg: 11:24:25.220{O273}
+hdg:  11, bias:  98
+msg: 11:24:25.371{O274}
+hdg:  12, bias:  98
+msg: 11:24:25.871{O275}
+hdg:  13, bias:  98
+msg: 11:24:26.082{LS25}
+msg: 11:24:26.089{LP12}
+msg: 11:24:26.101{LT21.9859}
+msg: 11:24:26.111{LN7.2310}
+{ln-605.7} 
+{lt2227.9} 
+msg: 11:24:26.118{LA611}
 {la 2.00}
-still turning hdg now 37
-still turning hdg now 37
-still turning hdg now 37
-hdg:  38, bias:  98
-still turning hdg now 38
-still turning hdg now 38
-still turning hdg now 38
-hdg:  39, bias:  98
-still turning hdg now 39
-still turning hdg now 39
-hdg:  40, bias:  98
-still turning hdg now 40
-still turning hdg now 40
-still turning hdg now 40
-hdg:  41, bias:  98
-still turning hdg now 41
-still turning hdg now 41
-still turning hdg now 41
-still turning hdg now 41
-hdg:  42, bias:  98
-still turning hdg now 42
-still turning hdg now 42
-hdg:  43, bias:  98
-still turning hdg now 43
-still turning hdg now 43
-still turning hdg now 43
-still turning hdg now 43
-hdg:  44, bias:  98
-still turning hdg now 44
-still turning hdg now 44
-still turning hdg now 44
-still turning hdg now 44
-hdg:  45, bias:  98
-still turning hdg now 45
-still turning hdg now 45
-hdg:  46, bias:  98
-still turning hdg now 46
-still turning hdg now 46
-still turning hdg now 46
-still turning hdg now 46
-hdg:  47, bias:  98
-still turning hdg now 47
-still turning hdg now 47
-still turning hdg now 47
-still turning hdg now 47
-hdg:  48, bias:  98
-still turning hdg now 48
-still turning hdg now 48
-hdg:  49, bias:  98
-msg: 10:49:36.285{LS43}
-msg: 10:49:36.291{LP233}
-msg: 10:49:36.303{LT22.2070}
-msg: 10:49:36.312{LN7.1125}
-{ln-595.8} 
-{lt2250.3} 
-still turning hdg now 49
-still turning hdg now 49
-msg: 10:49:36.321{LA567}
-{la 1.86}
-still turning hdg now 50
-hdg:  50, bias:  98
-still turning hdg now 50
-still turning hdg now 50
-still turning hdg now 50
-hdg:  51, bias:  98
-still turning hdg now 51
-still turning hdg now 51
-hdg:  52, bias:  98
-still turning hdg now 52
-still turning hdg now 52
-still turning hdg now 52
-still turning hdg now 52
-hdg:  53, bias:  98
-still turning hdg now 53
-still turning hdg now 53
-hdg:  54, bias:  98
-still turning hdg now 54
-still turning hdg now 54
-hdg:  55, bias:  98
-still turning hdg now 55
-still turning hdg now 55
-hdg:  56, bias:  98
-still turning hdg now 56
-still turning hdg now 56
-still turning hdg now 56
-still turning hdg now 56
-hdg:  57, bias:  98
-still turning hdg now 57
-still turning hdg now 57
-hdg:  58, bias:  98
-still turning hdg now 58
-still turning hdg now 58
-hdg:  59, bias:  98
-still turning hdg now 59
-still turning hdg now 59
-hdg:  60, bias:  98
-still turning hdg now 60
-still turning hdg now 60
-hdg:  61, bias:  98
-still turning hdg now 61
-still turning hdg now 61
-msg: 10:49:37.296{LS44}
-msg: 10:49:37.303{LP245}
-msg: 10:49:37.314{LT22.2059}
-still turning hdg now 61
-still turning hdg now 61
-msg: 10:49:37.325{LN7.1179}
-{ln-596.3} 
-{lt2250.2} 
-msg: 10:49:37.332{LA533}
-{la 1.75}
-hdg:  62, bias:  98
-still turning hdg now 62
-still turning hdg now 62
-hdg:  63, bias:  98
-still turning hdg now 63
-still turning hdg now 63
-still turning hdg now 63
-still turning hdg now 63
-hdg:  64, bias:  98
-still turning hdg now 64
-still turning hdg now 64
-hdg:  65, bias:  98
-still turning hdg now 65
-still turning hdg now 65
-hdg:  66, bias:  98
-still turning hdg now 66
-still turning hdg now 66
-still turning hdg now 66
-still turning hdg now 66
-hdg:  67, bias:  98
-still turning hdg now 67
-still turning hdg now 67
-hdg:  68, bias:  98
-still turning hdg now 68
-still turning hdg now 68
-still turning hdg now 68
-hdg:  69, bias:  98
-still turning hdg now 69
-still turning hdg now 69
-hdg:  70, bias:  98
-still turning hdg now 70
-still turning hdg now 70
-hdg:  71, bias:  98
-still turning hdg now 71
-still turning hdg now 71
-hdg:  72, bias:  98
-still turning hdg now 72
-still turning hdg now 72
-hdg:  73, bias:  98
-still turning hdg now 73
-still turning hdg now 73
-hdg:  74, bias:  98
-msg: 10:49:38.305{LS45}
-msg: 10:49:38.312{LP261}
-still turning hdg now 74
-still turning hdg now 74
-msg: 10:49:38.323{LT22.2055}
-msg: 10:49:38.334{LN7.1233}
-{ln-596.7} 
-{lt2250.2} 
-msg: 10:49:38.342{LA504}
-{la 1.65}
-still turning hdg now 74
-still turning hdg now 74
-hdg:  75, bias:  98
-still turning hdg now 75
-still turning hdg now 75
-hdg:  76, bias:  98
-still turning hdg now 76
-still turning hdg now 76
-hdg:  77, bias:  98
-still turning hdg now 77
-still turning hdg now 77
-hdg:  78, bias:  98
-still turning hdg now 78
-still turning hdg now 78
-hdg:  79, bias:  98
-still turning hdg now 79
-still turning hdg now 79
-still turning hdg now 79
-hdg:  80, bias:  98
-still turning hdg now 80
-still turning hdg now 80
-hdg:  81, bias:  98
-still turning hdg now 81
-still turning hdg now 81
-still turning hdg now 81
-still turning hdg now 81
-hdg:  82, bias:  98
-still turning hdg now 82
-hdg:  83, bias:  98
-still turning hdg now 83
-still turning hdg now 83
-still turning hdg now 83
-still turning hdg now 83
-hdg:  84, bias:  98
-still turning hdg now 84
-still turning hdg now 84
-hdg:  85, bias:  98
-still turning hdg now 85
-still turning hdg now 85
-hdg:  86, bias:  98
-still turning hdg now 86
-still turning hdg now 86
-msg: 10:49:39.314{LS46}
-still turning hdg now 86
-still turning hdg now 86
-msg: 10:49:39.322{LP271}
-msg: 10:49:39.333{LT22.2055}
-msg: 10:49:39.344{LN7.1284}
-{ln-597.2} 
-{lt2250.2} 
-msg: 10:49:39.351{LA480}
-{la 1.57}
-hdg:  87, bias:  98
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-hdg:  89, bias:  98
-still turning hdg now 89
-still turning hdg now 89
-hdg:  90, bias:  98
-still turning hdg now 90
-still turning hdg now 90
-still turning hdg now 90
-still turning hdg now 90
-hdg:  91, bias:  98
-still turning hdg now 91
-still turning hdg now 91
-still turning hdg now 91
-still turning hdg now 91
-hdg:  92, bias:  98
-still turning hdg now 92
-still turning hdg now 92
-hdg:  93, bias:  98
-still turning hdg now 93
-still turning hdg now 93
-still turning hdg now 93
-still turning hdg now 93
-hdg:  94, bias:  98
-still turning hdg now 94
-still turning hdg now 94
-hdg:  95, bias:  98
-still turning hdg now 95
-still turning hdg now 95
-hdg:  96, bias:  98
-still turning hdg now 96
-still turning hdg now 96
-still turning hdg now 96
-still turning hdg now 96
-hdg:  97, bias:  98
-still turning hdg now 97
-still turning hdg now 97
-hdg:  98, bias:  98
-still turning hdg now 98
-still turning hdg now 98
-still turning hdg now 98
-still turning hdg now 98
-hdg:  99, bias:  98
-still turning hdg now 99
-still turning hdg now 99
-msg: 10:49:40.327{LS47}
-still turning hdg now 99
-still turning hdg now 99
-msg: 10:49:40.335{LP288}
-msg: 10:49:40.346{LT22.2055}
-msg: 10:49:40.356{LN7.1334}
-{ln-597.6} 
-{lt2250.2} 
-msg: 10:49:40.364{LA463}
-{la 1.52}
-hdg: 100, bias:  98
-still turning hdg now 100
-still turning hdg now 100
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-still turning hdg now 102
-still turning hdg now 102
-still turning hdg now 102
-hdg: 103, bias:  98
-still turning hdg now 103
-still turning hdg now 103
-hdg: 104, bias:  98
-still turning hdg now 104
-still turning hdg now 104
-still turning hdg now 104
-still turning hdg now 104
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-hdg: 107, bias:  98
-still turning hdg now 107
-still turning hdg now 107
-Motor speed, steer 0, 0
-hdg: 108, bias:  98
-still turning hdg now 108
-still turning hdg now 108
-hdg: 109, bias:  98
-still turning hdg now 109
-still turning hdg now 109
-hdg: 108, bias:  98
-still turning hdg now 108
-still turning hdg now 108
-msg: 10:49:41.336{LS48}
-still turning hdg now 108
-msg: 10:49:41.344{LP294}
-msg: 10:49:41.355{LT22.2070}
-msg: 10:49:41.367{LN7.1370}
-{ln-597.9} 
-{lt2250.3} 
-msg: 10:49:41.373{LA446}
-{la 1.46}
-still turning hdg now 108
-still turning hdg now 108
-still turning hdg now 108
-still turning hdg now 108
-still turning hdg now 108
-still turning hdg now 108
-hdg: 109, bias:  98
-still turning hdg now 109
-hdg: 108, bias:  98
-still turning hdg now 108
-still turning hdg now 108
-still turning hdg now 108
-still turning hdg now 108
-hdg: 107, bias:  98
-still turning hdg now 107
-still turning hdg now 107
-still turning hdg now 107
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-msg: 10:49:42.348{LS49}
-still turning hdg now 106
-msg: 10:49:42.355{LP286}
-msg: 10:49:42.366{LT22.2080}
-msg: 10:49:42.377{LN7.1392}
-{ln-598.1} 
-{lt2250.4} 
-msg: 10:49:42.384{LA432}
-{la 1.42}
-still turning hdg now 106
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-msg: 10:49:43.357{LS50}
-msg: 10:49:43.365{LP286}
-still turning hdg now 105
-msg: 10:49:43.376{LT22.2084}
-msg: 10:49:43.386{LN7.1395}
-{ln-598.1} 
-{lt2250.4} 
-msg: 10:49:43.394{LA420}
-{la 1.38}
-hdg: 106, bias:  98
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-msg: 10:49:44.736{LS51}
-End of backing, all ahead full
-Motor speed, steer 50, 36
-msg: 10:49:44.738{LP286}
-msg: 10:49:44.740{LT22.2077}
-msg: 10:49:44.742{LN7.1395}
-{ln-598.1} 
-{lt2250.4} 
-msg: 10:49:44.746{LA413}
-{la 1.35}
-hdg: 106, bias:  98
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-hdg: 104, bias:  98
-still turning hdg now 104
-still turning hdg now 104
-still turning hdg now 104
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-msg: 10:49:45.379{LS52}
-msg: 10:49:45.386{LP286}
-still turning hdg now 105
-msg: 10:49:45.399{LT22.2070}
-msg: 10:49:45.409{LN7.1399}
-{ln-598.1} 
-{lt2250.3} 
-msg: 10:49:45.417{LA407}
-{la 1.34}
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 104, bias:  98
-still turning hdg now 104
-still turning hdg now 104
-hdg: 103, bias:  98
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-hdg: 102, bias:  98
-still turning hdg now 102
-still turning hdg now 102
-hdg: 103, bias:  98
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-hdg: 102, bias:  98
-msg: 10:49:46.389{LS53}
-msg: 10:49:46.397{LP286}
-still turning hdg now 102
-msg: 10:49:46.408{LT22.2070}
-msg: 10:49:46.419{LN7.1392}
-{ln-598.1} 
-{lt2250.3} 
-msg: 10:49:46.426{LA401}
-{la 1.32}
-still turning hdg now 102
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-hdg: 100, bias:  98
-msg: 10:49:47.401{LS54}
-msg: 10:49:47.407{LP286}
-still turning hdg now 100
-msg: 10:49:47.419{LT22.2077}
-msg: 10:49:47.430{LN7.1374}
-{ln-597.9} 
-{lt2250.4} 
-msg: 10:49:47.437{LA395}
-{la 1.30}
-still turning hdg now 100
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-still turning hdg now 102
-still turning hdg now 102
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-still turning hdg now 102
-still turning hdg now 102
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-hdg: 100, bias:  98
-still turning hdg now 100
-hdg: 101, bias:  98
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-still turning hdg now 102
-still turning hdg now 102
-msg: 10:49:48.411{LS55}
-msg: 10:49:48.417{LP56}
-still turning hdg now 102
-msg: 10:49:48.428{LT22.2095}
-msg: 10:49:48.439{LN7.1338}
-{ln-597.6} 
-{lt2250.6} 
-msg: 10:49:48.446{LA388}
-{la 1.27}
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-hdg: 103, bias:  98
-still turning hdg now 103
-hdg: 104, bias:  98
-still turning hdg now 104
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 105
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-msg: 10:49:49.421{LS56}
-msg: 10:49:49.426{LP69}
-still turning hdg now 105
-msg: 10:49:49.438{LT22.2120}
-msg: 10:49:49.449{LN7.1280}
-{ln-597.1} 
-{lt2250.8} 
-msg: 10:49:49.456{LA381}
-{la 1.25}
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-hdg: 107, bias:  98
-still turning hdg now 107
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-msg: 10:49:50.431{LS57}
-msg: 10:49:50.438{LP48}
-still turning hdg now 105
-msg: 10:49:50.449{LT22.2138}
-msg: 10:49:50.459{LN7.1240}
-{ln-596.8} 
-{lt2251.0} 
-msg: 10:49:50.467{LA376}
-{la 1.23}
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 104, bias:  98
-still turning hdg now 104
-still turning hdg now 104
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-hdg: 108, bias:  98
-still turning hdg now 108
-still turning hdg now 108
-hdg: 109, bias:  98
-still turning hdg now 109
-still turning hdg now 109
-still turning hdg now 109
-hdg: 110, bias:  98
-msg: 10:49:51.448{LS58}
-msg: 10:49:51.455{LP46}
-still turning hdg now 110
-msg: 10:49:51.466{LT22.2138}
-msg: 10:49:51.476{LN7.1230}
-{ln-596.7} 
-{lt2251.0} 
-msg: 10:49:51.483{LA372}
-{la 1.22}
-still turning hdg now 110
-still turning hdg now 110
-hdg: 111, bias:  98
-still turning hdg now 111
-hdg: 112, bias:  98
-still turning hdg now 112
-Motor speed, steer 0, 0
-End of backing, all ahead full
-Motor speed, steer 50, 36
-hdg: 113, bias:  98
-hdg: 114, bias:  98
-hdg: 115, bias:  98
-hdg: 116, bias:  98
-thread ended
-hdg: 117, bias:  98
-hdg: 119, bias:  98
-hdg: 120, bias:  98
-hdg: 121, bias:  98
-hdg: 122, bias:  98
-hdg: 124, bias:  98
-hdg: 126, bias:  98
-hdg: 127, bias:  98
-msg: 10:49:52.455{LS59}
-msg: 10:49:52.462{LP66}
-msg: 10:49:52.473{LT22.2142}
-msg: 10:49:52.483{LN7.1190}
-{ln-596.4} 
-{lt2251.0} 
-msg: 10:49:52.490{LA371}
-{la 1.22}
-hdg: 129, bias:  98
-hdg: 131, bias:  98
-hdg: 132, bias:  98
-hdg: 133, bias:  98
-hdg: 135, bias:  98
-new hdg steering -121
-Motor speed, steer 50, -121
-thread ended
-{s-121}
-Motor speed, steer 50, -122
-adjusting steer to meet az -122
-hdg: 136, bias:  98
-{s-122}
-Motor speed, steer 50, -124
-adjusting steer to meet az -124
-hdg: 138, bias:  98
-{s-124}
-Motor speed, steer 50, -125
-adjusting steer to meet az -125
-hdg: 139, bias:  98
-{s-125}
-Motor speed, steer 50, -126
-adjusting steer to meet az -126
-hdg: 140, bias:  98
-{s-126}
-Motor speed, steer 50, -127
-adjusting steer to meet az -127
-hdg: 141, bias:  98
-{s-127}
-Motor speed, steer 50, -128
-adjusting steer to meet az -128
-hdg: 142, bias:  98
-{s-128}
-Motor speed, steer 50, -129
-adjusting steer to meet az -129
-hdg: 143, bias:  98
-{s-129}
-Motor speed, steer 50, -128
-adjusting steer to meet az -128
-hdg: 142, bias:  98
-{s-128}
-msg: 10:49:53.464{LS0}
-msg: 10:49:53.471{LP124}
-msg: 10:49:53.483{LT22.2116}
-msg: 10:49:53.494{LN7.1125}
-{ln-595.8} 
-{lt2250.8} 
-msg: 10:49:53.500{LA366}
-{la 1.20}
-Motor speed, steer 50, -129
-adjusting steer to meet az -129
-hdg: 143, bias:  98
-{s-129}
-Motor speed, steer 50, -130
-adjusting steer to meet az -130
-hdg: 144, bias:  98
-{s-130}
-Motor speed, steer 50, -131
-adjusting steer to meet az -131
-hdg: 145, bias:  98
-{s-131}
-new hdg steering -131
-Motor speed, steer 50, -131
-Motor speed, steer 50, -130
-adjusting steer to meet az -130
-hdg: 144, bias:  98
-{s-130}
-Motor speed, steer 50, -129
-adjusting steer to meet az -129
-hdg: 143, bias:  98
-{s-129}
-Motor speed, steer 50, -128
-adjusting steer to meet az -128
-hdg: 142, bias:  98
-{s-128}
-Motor speed, steer 50, -127
-adjusting steer to meet az -127
-hdg: 141, bias:  98
-{s-127}
-Motor speed, steer 50, -126
-adjusting steer to meet az -126
-hdg: 140, bias:  98
-{s-126}
-Motor speed, steer 50, -125
-adjusting steer to meet az -125
-hdg: 139, bias:  98
-{s-125}
-Motor speed, steer 50, -124
-adjusting steer to meet az -124
-hdg: 138, bias:  98
-{s-124}
-Motor speed, steer 50, -122
-adjusting steer to meet az -122
-hdg: 136, bias:  98
-{s-122}
-Motor speed, steer 50, -121
-adjusting steer to meet az -121
-hdg: 135, bias:  98
-{s-121}
-Motor speed, steer 50, -120
-adjusting steer to meet az -120
-hdg: 134, bias:  98
-{s-120}
-Motor speed, steer 50, -118
-adjusting steer to meet az -118
-hdg: 132, bias:  98
-{s-118}
-Motor speed, steer 50, -117
-adjusting steer to meet az -117
-hdg: 131, bias:  98
-{s-117}
-msg: 10:49:54.474{LS1}
-msg: 10:49:54.482{LP126}
-msg: 10:49:54.493{LT22.2055}
-msg: 10:49:54.503{LN7.1035}
-{ln-595.1} 
-{lt2250.2} 
-msg: 10:49:54.511{LA363}
-{la 1.19}
-Motor speed, steer 50, -116
-adjusting steer to meet az -116
-hdg: 130, bias:  98
-{s-116}
-Motor speed, steer 50, -115
-adjusting steer to meet az -115
-hdg: 129, bias:  98
-{s-115}
-Motor speed, steer 50, -113
-adjusting steer to meet az -113
-hdg: 127, bias:  98
-{s-113}
-Motor speed, steer 50, -112
-adjusting steer to meet az -112
-hdg: 126, bias:  98
-{s-112}
-Motor speed, steer 50, -111
-adjusting steer to meet az -111
-hdg: 125, bias:  98
-{s-111}
-new hdg steering -111
-Motor speed, steer 50, -111
-Motor speed, steer 50, -110
-adjusting steer to meet az -110
-hdg: 124, bias:  98
-{s-110}
-Motor speed, steer 50, -109
-adjusting steer to meet az -109
-hdg: 123, bias:  98
-{s-109}
-Motor speed, steer 50, -107
-adjusting steer to meet az -107
-hdg: 121, bias:  98
-{s-107}
-Motor speed, steer 50, -106
-adjusting steer to meet az -106
-hdg: 120, bias:  98
-{s-106}
-Motor speed, steer 50, -105
-adjusting steer to meet az -105
-hdg: 119, bias:  98
-{s-105}
-Motor speed, steer 50, -104
-adjusting steer to meet az -104
-hdg: 118, bias:  98
-{s-104}
-Motor speed, steer 50, -103
-adjusting steer to meet az -103
-hdg: 117, bias:  98
-{s-103}
-Motor speed, steer 50, -102
-adjusting steer to meet az -102
-hdg: 116, bias:  98
-{s-102}
-Motor speed, steer 50, -101
-adjusting steer to meet az -101
-hdg: 115, bias:  98
-{s-101}
-Motor speed, steer 50, -99
-adjusting steer to meet az -99
-hdg: 113, bias:  98
-{s -99}
-Motor speed, steer 50, -98
-adjusting steer to meet az -98
-hdg: 112, bias:  98
-{s -98}
-Motor speed, steer 50, -97
-adjusting steer to meet az -97
-hdg: 111, bias:  98
-{s -97}
-Motor speed, steer 50, -96
-adjusting steer to meet az -96
-hdg: 110, bias:  98
-{s -96}
-Motor speed, steer 50, -95
-adjusting steer to meet az -95
-hdg: 109, bias:  98
-{s -95}
-Motor speed, steer 50, -94
-adjusting steer to meet az -94
-hdg: 108, bias:  98
-{s -94}
-msg: 10:49:55.483{LS2}
-msg: 10:49:55.492{LP138}
-msg: 10:49:55.503{LT22.1998}
-msg: 10:49:55.513{LN7.0970}
-{ln-594.5} 
-{lt2249.6} 
-msg: 10:49:55.521{LA360}
-{la 1.18}
-Motor speed, steer 50, -93
-adjusting steer to meet az -93
-hdg: 107, bias:  98
-{s -93}
-Motor speed, steer 50, -92
-adjusting steer to meet az -92
-hdg: 106, bias:  98
-{s -92}
-Motor speed, steer 50, -91
-adjusting steer to meet az -91
-hdg: 105, bias:  98
-{s -91}
-Motor speed, steer 50, -89
-adjusting steer to meet az -89
-hdg: 103, bias:  98
-{s -89}
-Motor speed, steer 50, -88
-adjusting steer to meet az -88
-hdg: 102, bias:  98
-{s -88}
-new hdg steering -88
-Motor speed, steer 50, -88
-Motor speed, steer 50, -87
-adjusting steer to meet az -87
-hdg: 101, bias:  98
-{s -87}
-Motor speed, steer 50, -85
-adjusting steer to meet az -85
-hdg:  99, bias:  98
-{s -85}
-Motor speed, steer 50, -84
-adjusting steer to meet az -84
-hdg:  98, bias:  98
-{s -84}
-Motor speed, steer 50, -83
-adjusting steer to meet az -83
-hdg:  97, bias:  98
-{s -83}
-Motor speed, steer 50, -82
-adjusting steer to meet az -82
-hdg:  96, bias:  98
-{s -82}
-Motor speed, steer 50, -81
-adjusting steer to meet az -81
-hdg:  95, bias:  98
-{s -81}
-Motor speed, steer 50, -79
-adjusting steer to meet az -79
-hdg:  93, bias:  98
-{s -79}
-Motor speed, steer 50, -78
-adjusting steer to meet az -78
-hdg:  92, bias:  98
-{s -78}
-Motor speed, steer 50, -76
-adjusting steer to meet az -76
-hdg:  90, bias:  98
-{s -76}
-Motor speed, steer 50, -75
-adjusting steer to meet az -75
-hdg:  89, bias:  98
-{s -75}
-Motor speed, steer 50, -74
-adjusting steer to meet az -74
-hdg:  88, bias:  98
-{s -74}
-Motor speed, steer 50, -73
-adjusting steer to meet az -73
-hdg:  87, bias:  98
-{s -73}
-Motor speed, steer 50, -72
-adjusting steer to meet az -72
-hdg:  86, bias:  98
-{s -72}
-Motor speed, steer 50, -71
-adjusting steer to meet az -71
-hdg:  85, bias:  98
-{s -71}
-Motor speed, steer 50, -70
-adjusting steer to meet az -70
-hdg:  84, bias:  98
-{s -70}
-Motor speed, steer 50, -69
-adjusting steer to meet az -69
-hdg:  83, bias:  98
-{s -69}
-msg: 10:49:56.509{LS3}
-msg: 10:49:56.510{LP118}
-msg: 10:49:56.521{LT22.1951}
-msg: 10:49:56.532{LN7.0906}
-{ln-594.0} 
-{lt2249.1} 
-msg: 10:49:56.539{LA357}
-{la 1.17}
-Motor speed, steer 50, -68
-adjusting steer to meet az -68
-hdg:  82, bias:  98
-{s -68}
-Motor speed, steer 50, -67
-adjusting steer to meet az -67
-hdg:  81, bias:  98
-{s -67}
-Motor speed, steer 50, -66
-adjusting steer to meet az -66
-hdg:  80, bias:  98
-{s -66}
-Motor speed, steer 50, -64
-adjusting steer to meet az -64
-hdg:  78, bias:  98
-{s -64}
-new hdg steering -64
-Motor speed, steer 50, -64
-Motor speed, steer 50, -63
-adjusting steer to meet az -63
-hdg:  77, bias:  98
-{s -63}
-Motor speed, steer 50, -62
-adjusting steer to meet az -62
-hdg:  76, bias:  98
-{s -62}
-Motor speed, steer 50, -61
-adjusting steer to meet az -61
-hdg:  75, bias:  98
-{s -61}
-Motor speed, steer 50, -59
-adjusting steer to meet az -59
-hdg:  73, bias:  98
-{s -59}
-Motor speed, steer 50, -58
-adjusting steer to meet az -58
-hdg:  72, bias:  98
-{s -58}
-Motor speed, steer 50, -57
-adjusting steer to meet az -57
-hdg:  71, bias:  98
-{s -57}
-Motor speed, steer 50, -56
-adjusting steer to meet az -56
-hdg:  70, bias:  98
-{s -56}
-Motor speed, steer 50, -55
-adjusting steer to meet az -55
-hdg:  69, bias:  98
-{s -55}
-Motor speed, steer 50, -53
-adjusting steer to meet az -53
-hdg:  67, bias:  98
-{s -53}
-Motor speed, steer 50, -52
-adjusting steer to meet az -52
-hdg:  66, bias:  98
-{s -52}
-Motor speed, steer 50, -51
-adjusting steer to meet az -51
-hdg:  65, bias:  98
-{s -51}
-Motor speed, steer 50, -50
-adjusting steer to meet az -50
-hdg:  64, bias:  98
-{s -50}
-Motor speed, steer 50, -49
-adjusting steer to meet az -49
-hdg:  63, bias:  98
-{s -49}
-Motor speed, steer 50, -47
-adjusting steer to meet az -47
-hdg:  61, bias:  98
-{s -47}
-Motor speed, steer 50, -46
-adjusting steer to meet az -46
-hdg:  60, bias:  98
-{s -46}
-Motor speed, steer 50, -45
-adjusting steer to meet az -45
-hdg:  59, bias:  98
-{s -45}
-msg: 10:49:57.512{LS4}
-msg: 10:49:57.517{LP97}
-msg: 10:49:57.528{LT22.1929}
-msg: 10:49:57.539{LN7.0830}
-{ln-593.3} 
-{lt2248.9} 
-msg: 10:49:57.546{LA354}
-{la 1.16}
-Motor speed, steer 50, -44
-adjusting steer to meet az -44
-hdg:  58, bias:  98
-{s -44}
-Motor speed, steer 50, -43
-adjusting steer to meet az -43
-hdg:  57, bias:  98
-{s -43}
-Motor speed, steer 50, -41
-adjusting steer to meet az -41
-hdg:  55, bias:  98
-{s -41}
-Motor speed, steer 50, -40
-adjusting steer to meet az -40
-hdg:  54, bias:  98
-{s -40}
-new hdg steering -40
-Motor speed, steer 50, -40
-Motor speed, steer 50, -39
-adjusting steer to meet az -39
-hdg:  53, bias:  98
-{s -39}
-Motor speed, steer 50, -38
-adjusting steer to meet az -38
-hdg:  52, bias:  98
-{s -38}
-Motor speed, steer 50, -37
-adjusting steer to meet az -37
-hdg:  51, bias:  98
-{s -37}
-Motor speed, steer 50, -36
-adjusting steer to meet az -36
-hdg:  50, bias:  98
-{s -36}
-Motor speed, steer 50, -35
-adjusting steer to meet az -35
-hdg:  49, bias:  98
-{s -35}
-Motor speed, steer 50, -34
-adjusting steer to meet az -34
-hdg:  48, bias:  98
-{s -34}
-Motor speed, steer 50, -33
-adjusting steer to meet az -33
-hdg:  47, bias:  98
-{s -33}
-Motor speed, steer 50, -31
-adjusting steer to meet az -31
-hdg:  45, bias:  98
-{s -31}
-Motor speed, steer 50, -30
-adjusting steer to meet az -30
-hdg:  44, bias:  98
-{s -30}
-Motor speed, steer 50, -29
-adjusting steer to meet az -29
-hdg:  43, bias:  98
-{s -29}
-Motor speed, steer 50, -28
-adjusting steer to meet az -28
-hdg:  42, bias:  98
-{s -28}
-Motor speed, steer 50, -27
-adjusting steer to meet az -27
-hdg:  41, bias:  98
-{s -27}
-Motor speed, steer 50, -25
-adjusting steer to meet az -25
-hdg:  39, bias:  98
-{s -25}
-Motor speed, steer 50, -24
-adjusting steer to meet az -24
-hdg:  38, bias:  98
-{s -24}
-Motor speed, steer 50, -23
-adjusting steer to meet az -23
-hdg:  37, bias:  98
-{s -23}
-Motor speed, steer 50, -22
-adjusting steer to meet az -22
-hdg:  36, bias:  98
-{s -22}
-msg: 10:49:58.518{LS5}
-msg: 10:49:58.525{LP75}
-msg: 10:49:58.536{LT22.1936}
-msg: 10:49:58.546{LN7.0754}
-{ln-592.7} 
-{lt2248.9} 
-msg: 10:49:58.554{LA350}
-{la 1.15}
-Motor speed, steer 50, -21
-adjusting steer to meet az -21
-hdg:  35, bias:  98
-{s -21}
-Motor speed, steer 50, -20
-adjusting steer to meet az -20
-hdg:  34, bias:  98
-{s -20}
-Motor speed, steer 50, -19
-adjusting steer to meet az -19
-hdg:  33, bias:  98
-{s -19}
-new hdg steering -19
-Motor speed, steer 50, -19
-Motor speed, steer 50, -18
-adjusting steer to meet az -18
-hdg:  32, bias:  98
-{s -18}
-Motor speed, steer 50, -17
-adjusting steer to meet az -17
-hdg:  31, bias:  98
-{s -17}
-Motor speed, steer 50, -16
-adjusting steer to meet az -16
-hdg:  30, bias:  98
-{s -16}
-Motor speed, steer 50, -15
-adjusting steer to meet az -15
-hdg:  29, bias:  98
-{s -15}
-Motor speed, steer 50, -14
-adjusting steer to meet az -14
-hdg:  28, bias:  98
-{s -14}
-Motor speed, steer 50, -13
-adjusting steer to meet az -13
-hdg:  27, bias:  98
-{s -13}
-Motor speed, steer 50, -12
-adjusting steer to meet az -12
-hdg:  26, bias:  98
-{s -12}
-Motor speed, steer 50, -11
-adjusting steer to meet az -11
-hdg:  25, bias:  98
-{s -11}
-Motor speed, steer 50, -10
-adjusting steer to meet az -10
-hdg:  24, bias:  98
-{s -10}
-Motor speed, steer 50, -9
-adjusting steer to meet az -9
-hdg:  23, bias:  98
-{s  -9}
-msg: 10:49:59.528{LS6}
-msg: 10:49:59.535{LP46}
-msg: 10:49:59.546{LT22.1976}
-msg: 10:49:59.557{LN7.0686}
-{ln-592.1} 
-{lt2249.4} 
-msg: 10:49:59.564{LA348}
-{la 1.14}
-Motor speed, steer 50, -8
-adjusting steer to meet az -8
-hdg:  22, bias:  98
-{s  -8}
-new hdg steering -8
-Motor speed, steer 50, -8
-Motor speed, steer 50, -7
-adjusting steer to meet az -7
-hdg:  21, bias:  98
-{s  -7}
-Motor speed, steer 50, -6
-adjusting steer to meet az -6
-hdg:  20, bias:  98
-{s  -6}
-Motor speed, steer 50, -5
-adjusting steer to meet az -5
-hdg:  19, bias:  98
-{s  -5}
-Motor speed, steer 50, -4
-adjusting steer to meet az -4
-hdg:  18, bias:  98
-{s  -4}
-Motor speed, steer 50, -3
-adjusting steer to meet az -3
-hdg:  17, bias:  98
-{s  -3}
-msg: 10:50:00.539{LS7}
-msg: 10:50:00.545{LP26}
-msg: 10:50:00.556{LT22.2044}
-msg: 10:50:00.567{LN7.0632}
-{ln-591.7} 
-{lt2250.0} 
-msg: 10:50:00.574{LA346}
-{la 1.14}
-Motor speed, steer 50, -2
-adjusting steer to meet az -2
-hdg:  16, bias:  98
-{s  -2}
-new hdg steering -2
-Motor speed, steer 50, -2
-Motor speed, steer 50, -1
-adjusting steer to meet az -1
-hdg:  15, bias:  98
-{s  -1}
-msg: 10:50:01.550{LS8}
-msg: 10:50:01.557{LP19}
-msg: 10:50:01.568{LT22.2138}
-msg: 10:50:01.579{LN7.0589}
-{ln-591.3} 
-{lt2251.0} 
-msg: 10:50:01.586{LA343}
-{la 1.13}
-new hdg steering -1
-Motor speed, steer 50, -1
-Motor speed, steer 50, 0
-adjusting steer to meet az 0
-hdg:  14, bias:  98
-{s   0}
-hdg:  15, bias:  98
-msg: 10:50:02.562{LS9}
-msg: 10:50:02.568{LP21}
-msg: 10:50:02.580{LT22.2232}
-msg: 10:50:02.590{LN7.0546}
-{ln-591.0} 
-{lt2251.9} 
-msg: 10:50:02.597{LA342}
-{la 1.12}
-new hdg steering -1
-Motor speed, steer 50, -1
-{s  -1}
-Motor speed, steer 50, -2
-adjusting steer to meet az -2
-hdg:  16, bias:  98
-{s  -2}
-Motor speed, steer 50, -1
-adjusting steer to meet az -1
-hdg:  15, bias:  98
-{s  -1}
-msg: 10:50:03.573{LS10}
-msg: 10:50:03.580{LP18}
-msg: 10:50:03.591{LT22.2329}
-msg: 10:50:03.602{LN7.0502}
-{ln-590.6} 
-{lt2252.9} 
-msg: 10:50:03.609{LA341}
-{la 1.12}
-new hdg steering -1
-Motor speed, steer 50, -1
-msg: 10:50:03.745{E7}
-Motor speed, steer -25, -36
-Tturnleft started, newhdg 195
-midturn hdg 105
-left backing turn
-az set to 194
-still turning hdg now 15
-still turning hdg now 15
-hdg:  16, bias:  98
-still turning hdg now 16
-still turning hdg now 16
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-hdg:  18, bias:  98
-still turning hdg now 18
-still turning hdg now 18
-still turning hdg now 18
-hdg:  19, bias:  98
-still turning hdg now 19
-still turning hdg now 19
-hdg:  20, bias:  98
-still turning hdg now 20
-still turning hdg now 20
-hdg:  21, bias:  98
-msg: 10:50:04.583{LS11}
-still turning hdg now 21
-msg: 10:50:04.589{LP19}
-msg: 10:50:04.601{LT22.2426}
-msg: 10:50:04.611{LN7.0463}
-{ln-590.3} 
-{lt2253.9} 
-msg: 10:50:04.618{LA338}
-{la 1.11}
-still turning hdg now 21
-hdg:  22, bias:  98
-still turning hdg now 22
-still turning hdg now 22
-hdg:  23, bias:  98
-still turning hdg now 23
-still turning hdg now 23
-hdg:  24, bias:  98
-still turning hdg now 24
-hdg:  25, bias:  98
-still turning hdg now 25
-still turning hdg now 25
-hdg:  26, bias:  98
-still turning hdg now 26
-still turning hdg now 26
-hdg:  27, bias:  98
-still turning hdg now 27
-hdg:  28, bias:  98
-still turning hdg now 28
-still turning hdg now 28
-hdg:  29, bias:  98
-hdg:  30, bias:  98
-still turning hdg now 30
-still turning hdg now 30
-hdg:  31, bias:  98
-still turning hdg now 31
-still turning hdg now 31
-hdg:  32, bias:  98
-still turning hdg now 32
-still turning hdg now 32
-msg: 10:50:05.594{LS12}
-msg: 10:50:05.601{LP218}
-msg: 10:50:05.613{LT22.2430}
-still turning hdg now 32
-msg: 10:50:05.623{LN7.0474}
-{ln-590.4} 
-{lt2254.0} 
-msg: 10:50:05.630{LA336}
-{la 1.10}
-hdg:  33, bias:  98
-hdg:  34, bias:  98
-still turning hdg now 34
-still turning hdg now 34
-hdg:  35, bias:  98
-still turning hdg now 35
-still turning hdg now 35
-hdg:  36, bias:  98
-still turning hdg now 36
-still turning hdg now 36
-hdg:  37, bias:  98
-still turning hdg now 37
-still turning hdg now 37
-hdg:  38, bias:  98
-still turning hdg now 38
-still turning hdg now 38
-hdg:  39, bias:  98
-still turning hdg now 39
-hdg:  40, bias:  98
-still turning hdg now 40
-still turning hdg now 40
-hdg:  41, bias:  98
-still turning hdg now 41
-still turning hdg now 41
-hdg:  42, bias:  98
-still turning hdg now 42
-hdg:  43, bias:  98
-still turning hdg now 43
-still turning hdg now 43
-hdg:  44, bias:  98
-still turning hdg now 44
-msg: 10:50:06.603{LS13}
-msg: 10:50:06.609{LP355}
-msg: 10:50:06.622{LT22.2401}
-msg: 10:50:06.632{LN7.0502}
-{ln-590.6} 
-{lt2253.7} 
-msg: 10:50:06.640{LA334}
-{la 1.10}
-still turning hdg now 44
-hdg:  45, bias:  98
-still turning hdg now 45
-hdg:  46, bias:  98
-still turning hdg now 46
-still turning hdg now 46
-hdg:  47, bias:  98
-still turning hdg now 47
-still turning hdg now 47
-hdg:  48, bias:  98
-still turning hdg now 48
-hdg:  49, bias:  98
-still turning hdg now 49
-hdg:  50, bias:  98
-still turning hdg now 50
-hdg:  51, bias:  98
-still turning hdg now 51
-still turning hdg now 51
-hdg:  52, bias:  98
-still turning hdg now 52
-still turning hdg now 52
-hdg:  53, bias:  98
-still turning hdg now 53
-still turning hdg now 53
-hdg:  54, bias:  98
-still turning hdg now 54
-hdg:  55, bias:  98
-still turning hdg now 55
-still turning hdg now 55
-hdg:  56, bias:  98
-still turning hdg now 56
-msg: 10:50:07.615{LS14}
-msg: 10:50:07.622{LP241}
-still turning hdg now 56
-msg: 10:50:07.633{LT22.2379}
-msg: 10:50:07.644{LN7.0535}
-{ln-590.9} 
-{lt2253.4} 
-msg: 10:50:07.651{LA334}
-{la 1.10}
-hdg:  57, bias:  98
-still turning hdg now 57
-hdg:  58, bias:  98
-still turning hdg now 58
-still turning hdg now 58
-hdg:  59, bias:  98
-still turning hdg now 59
-hdg:  60, bias:  98
-still turning hdg now 60
-still turning hdg now 60
-hdg:  61, bias:  98
-still turning hdg now 61
-hdg:  62, bias:  98
-still turning hdg now 62
-still turning hdg now 62
-hdg:  63, bias:  98
-still turning hdg now 63
-hdg:  64, bias:  98
-still turning hdg now 64
-still turning hdg now 64
-hdg:  65, bias:  98
-still turning hdg now 65
-still turning hdg now 65
-hdg:  66, bias:  98
-still turning hdg now 66
-hdg:  67, bias:  98
-still turning hdg now 67
-still turning hdg now 67
-hdg:  68, bias:  98
-still turning hdg now 68
-hdg:  69, bias:  98
-still turning hdg now 69
-msg: 10:50:08.626{LS15}
-msg: 10:50:08.633{LP250}
-msg: 10:50:08.644{LT22.2361}
-msg: 10:50:08.655{LN7.0578}
-{ln-591.2} 
-{lt2253.3} 
-still turning hdg now 69
-msg: 10:50:08.662{LA333}
-{la 1.09}
-hdg:  70, bias:  98
-still turning hdg now 70
-still turning hdg now 70
-hdg:  71, bias:  98
-still turning hdg now 72
-hdg:  72, bias:  98
-hdg:  73, bias:  98
-still turning hdg now 73
-still turning hdg now 73
-hdg:  74, bias:  98
-still turning hdg now 74
-still turning hdg now 74
-hdg:  75, bias:  98
-still turning hdg now 75
-hdg:  76, bias:  98
-still turning hdg now 76
-still turning hdg now 76
-hdg:  77, bias:  98
-still turning hdg now 77
-hdg:  78, bias:  98
-still turning hdg now 78
-still turning hdg now 78
-hdg:  79, bias:  98
-still turning hdg now 79
-hdg:  80, bias:  98
-still turning hdg now 80
-still turning hdg now 80
-hdg:  81, bias:  98
-still turning hdg now 81
-hdg:  82, bias:  98
-still turning hdg now 82
-still turning hdg now 82
-msg: 10:50:09.636{LS16}
-msg: 10:50:09.644{LP276}
-msg: 10:50:09.654{LT22.2350}
-msg: 10:50:09.665{LN7.0618}
-{ln-591.6} 
-{lt2253.1} 
-msg: 10:50:09.672{LA332}
-{la 1.09}
-still turning hdg now 82
-hdg:  83, bias:  98
-still turning hdg now 83
-hdg:  84, bias:  98
-still turning hdg now 84
-hdg:  85, bias:  98
-still turning hdg now 85
-still turning hdg now 85
-hdg:  86, bias:  98
-still turning hdg now 86
-still turning hdg now 86
-hdg:  87, bias:  98
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-hdg:  89, bias:  98
-still turning hdg now 89
-still turning hdg now 89
-hdg:  90, bias:  98
-still turning hdg now 90
-still turning hdg now 90
-hdg:  91, bias:  98
-still turning hdg now 91
-hdg:  92, bias:  98
-still turning hdg now 92
-still turning hdg now 92
-hdg:  93, bias:  98
-still turning hdg now 93
-still turning hdg now 93
-hdg:  94, bias:  98
-msg: 10:50:10.647{LS17}
-still turning hdg now 94
-msg: 10:50:10.654{LP278}
-msg: 10:50:10.665{LT22.2350}
-msg: 10:50:10.676{LN7.0664}
-{ln-592.0} 
-{lt2253.1} 
-msg: 10:50:10.683{LA331}
-{la 1.09}
-still turning hdg now 94
-hdg:  95, bias:  98
-still turning hdg now 95
-hdg:  96, bias:  98
-still turning hdg now 96
-still turning hdg now 96
-hdg:  97, bias:  98
-still turning hdg now 97
-still turning hdg now 97
-hdg:  98, bias:  98
-still turning hdg now 98
-still turning hdg now 98
-hdg:  99, bias:  98
-still turning hdg now 99
-hdg: 100, bias:  98
-still turning hdg now 100
-still turning hdg now 100
-hdg: 101, bias:  98
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-hdg: 103, bias:  98
-still turning hdg now 103
-still turning hdg now 103
-hdg: 104, bias:  98
-still turning hdg now 104
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-Motor speed, steer 0, 0
-msg: 10:50:11.656{LS18}
-msg: 10:50:11.663{LP277}
-msg: 10:50:11.674{LT22.2358}
-msg: 10:50:11.685{LN7.0700}
-{ln-592.3} 
-{lt2253.2} 
-End of backing, all ahead full
-Motor speed, steer 50, 36
-msg: 10:50:11.693{LA331}
-{la 1.09}
-hdg: 107, bias:  98
-thread ended
-Motor speed, steer 50, 0
-adjusting steer to meet az 0
-{s   0}
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 104, bias:  98
-hdg: 103, bias:  98
-hdg: 102, bias:  98
-msg: 10:50:12.667{LS19}
-msg: 10:50:12.674{LP277}
-msg: 10:50:12.685{LT22.2365}
-msg: 10:50:12.696{LN7.0715}
-{ln-592.4} 
-{lt2253.3} 
-msg: 10:50:12.703{LA331}
-{la 1.09}
-new hdg steering 92
-Motor speed, steer 50, 92
-{s  92}
-Motor speed, steer 50, 91
-adjusting steer to meet az 91
-hdg: 103, bias:  98
-{s  91}
-Motor speed, steer 50, 90
-adjusting steer to meet az 90
-hdg: 104, bias:  98
-{s  90}
-Motor speed, steer 50, 89
-adjusting steer to meet az 89
-hdg: 105, bias:  98
-{s  89}
-Motor speed, steer 50, 88
-adjusting steer to meet az 88
-hdg: 106, bias:  98
-{s  88}
-Motor speed, steer 50, 87
-adjusting steer to meet az 87
-hdg: 107, bias:  98
-{s  87}
-Motor speed, steer 50, 86
-adjusting steer to meet az 86
-hdg: 108, bias:  98
-{s  86}
-Motor speed, steer 50, 85
-adjusting steer to meet az 85
-hdg: 109, bias:  98
-{s  85}
-Motor speed, steer 50, 84
-adjusting steer to meet az 84
-hdg: 110, bias:  98
-{s  84}
-Motor speed, steer 50, 83
-adjusting steer to meet az 83
-hdg: 111, bias:  98
-{s  83}
-Motor speed, steer 50, 82
-adjusting steer to meet az 82
-hdg: 112, bias:  98
-{s  82}
-Motor speed, steer 50, 81
-adjusting steer to meet az 81
-hdg: 113, bias:  98
-{s  81}
-Motor speed, steer 50, 80
-adjusting steer to meet az 80
-hdg: 114, bias:  98
-{s  80}
-Motor speed, steer 50, 79
-adjusting steer to meet az 79
-hdg: 115, bias:  98
-{s  79}
-Motor speed, steer 50, 78
-adjusting steer to meet az 78
-hdg: 116, bias:  98
-{s  78}
-msg: 10:50:13.678{LS20}
-msg: 10:50:13.685{LP112}
-msg: 10:50:13.696{LT22.2340}
-msg: 10:50:13.707{LN7.0639}
-{ln-591.7} 
-{lt2253.0} 
-msg: 10:50:13.714{LA331}
-{la 1.09}
-Motor speed, steer 50, 77
-adjusting steer to meet az 77
-hdg: 117, bias:  98
-{s  77}
-new hdg steering 77
-Motor speed, steer 50, 77
-Motor speed, steer 50, 76
-adjusting steer to meet az 76
-hdg: 118, bias:  98
-{s  76}
-Motor speed, steer 50, 75
-adjusting steer to meet az 75
-hdg: 119, bias:  98
-{s  75}
-Motor speed, steer 50, 74
-adjusting steer to meet az 74
-hdg: 120, bias:  98
-{s  74}
-Motor speed, steer 50, 73
-adjusting steer to meet az 73
-hdg: 121, bias:  98
-{s  73}
-Motor speed, steer 50, 72
-adjusting steer to meet az 72
-hdg: 122, bias:  98
-{s  72}
-Motor speed, steer 50, 70
-adjusting steer to meet az 70
-hdg: 124, bias:  98
-{s  70}
-Motor speed, steer 50, 69
-adjusting steer to meet az 69
-hdg: 125, bias:  98
-{s  69}
-Motor speed, steer 50, 68
-adjusting steer to meet az 68
-hdg: 126, bias:  98
-{s  68}
-Motor speed, steer 50, 67
-adjusting steer to meet az 67
-hdg: 127, bias:  98
-{s  67}
-Motor speed, steer 50, 66
-adjusting steer to meet az 66
-hdg: 128, bias:  98
-{s  66}
-Motor speed, steer 50, 65
-adjusting steer to meet az 65
-hdg: 129, bias:  98
-{s  65}
-Motor speed, steer 50, 64
-adjusting steer to meet az 64
-hdg: 130, bias:  98
-{s  64}
-Motor speed, steer 50, 63
-adjusting steer to meet az 63
-hdg: 131, bias:  98
-{s  63}
-Motor speed, steer 50, 61
-adjusting steer to meet az 61
-hdg: 133, bias:  98
-{s  61}
-Motor speed, steer 50, 60
-adjusting steer to meet az 60
-hdg: 134, bias:  98
-{s  60}
-Motor speed, steer 50, 59
-adjusting steer to meet az 59
-hdg: 135, bias:  98
-{s  59}
-Motor speed, steer 50, 57
-adjusting steer to meet az 57
-hdg: 137, bias:  98
-{s  57}
-Motor speed, steer 50, 56
-adjusting steer to meet az 56
-hdg: 138, bias:  98
-{s  56}
-msg: 10:50:14.687{LS21}
-msg: 10:50:14.695{LP114}
-msg: 10:50:14.707{LT22.2300}
-msg: 10:50:14.716{LN7.0538}
-{ln-590.9} 
-{lt2252.6} 
-msg: 10:50:14.723{LA331}
-{la 1.09}
-Motor speed, steer 50, 55
-adjusting steer to meet az 55
-hdg: 139, bias:  98
-{s  55}
-new hdg steering 55
-Motor speed, steer 50, 55
-Motor speed, steer 50, 54
-adjusting steer to meet az 54
-hdg: 140, bias:  98
-{s  54}
-Motor speed, steer 50, 53
-adjusting steer to meet az 53
-hdg: 141, bias:  98
-{s  53}
-Motor speed, steer 50, 52
-adjusting steer to meet az 52
-hdg: 142, bias:  98
-{s  52}
-Motor speed, steer 50, 51
-adjusting steer to meet az 51
-hdg: 143, bias:  98
-{s  51}
-Motor speed, steer 50, 50
-adjusting steer to meet az 50
-hdg: 144, bias:  98
-{s  50}
-Motor speed, steer 50, 49
-adjusting steer to meet az 49
-hdg: 145, bias:  98
-{s  49}
-Motor speed, steer 50, 48
-adjusting steer to meet az 48
-hdg: 146, bias:  98
-{s  48}
-Motor speed, steer 50, 47
-adjusting steer to meet az 47
-hdg: 147, bias:  98
-{s  47}
-Motor speed, steer 50, 46
-adjusting steer to meet az 46
-hdg: 148, bias:  98
-{s  46}
-Motor speed, steer 50, 45
-adjusting steer to meet az 45
-hdg: 149, bias:  98
-{s  45}
-Motor speed, steer 50, 44
-adjusting steer to meet az 44
-hdg: 150, bias:  98
-{s  44}
-Motor speed, steer 50, 43
-adjusting steer to meet az 43
-hdg: 151, bias:  98
-{s  43}
-Motor speed, steer 50, 42
-adjusting steer to meet az 42
-hdg: 152, bias:  98
-{s  42}
-Motor speed, steer 50, 41
-adjusting steer to meet az 41
-hdg: 153, bias:  98
-{s  41}
-Motor speed, steer 50, 40
-adjusting steer to meet az 40
-hdg: 154, bias:  98
-{s  40}
-Motor speed, steer 50, 38
-adjusting steer to meet az 38
-hdg: 156, bias:  98
-{s  38}
-Motor speed, steer 50, 37
-adjusting steer to meet az 37
-hdg: 157, bias:  98
-{s  37}
-Motor speed, steer 50, 36
-adjusting steer to meet az 36
-hdg: 158, bias:  98
-{s  36}
-Motor speed, steer 50, 35
-adjusting steer to meet az 35
-hdg: 159, bias:  98
-{s  35}
-msg: 10:50:15.697{LS22}
-msg: 10:50:15.704{LP139}
-msg: 10:50:15.716{LT22.2239}
-msg: 10:50:15.726{LN7.0459}
-{ln-590.2} 
-{lt2252.0} 
-msg: 10:50:15.733{LA332}
-{la 1.09}
-Motor speed, steer 50, 34
-adjusting steer to meet az 34
-hdg: 160, bias:  98
-{s  34}
-new hdg steering 34
-Motor speed, steer 50, 34
-Motor speed, steer 50, 33
-adjusting steer to meet az 33
-hdg: 161, bias:  98
-{s  33}
-Motor speed, steer 50, 32
-adjusting steer to meet az 32
-hdg: 162, bias:  98
-{s  32}
-Motor speed, steer 50, 31
-adjusting steer to meet az 31
-hdg: 163, bias:  98
-{s  31}
-Motor speed, steer 50, 30
-adjusting steer to meet az 30
-hdg: 164, bias:  98
-{s  30}
-Motor speed, steer 50, 28
-adjusting steer to meet az 28
-hdg: 166, bias:  98
-{s  28}
-Motor speed, steer 50, 27
-adjusting steer to meet az 27
-hdg: 167, bias:  98
-{s  27}
-Motor speed, steer 50, 26
-adjusting steer to meet az 26
-hdg: 168, bias:  98
-{s  26}
-Motor speed, steer 50, 25
-adjusting steer to meet az 25
-hdg: 169, bias:  98
-{s  25}
-Motor speed, steer 50, 24
-adjusting steer to meet az 24
-hdg: 170, bias:  98
-{s  24}
-Motor speed, steer 50, 23
-adjusting steer to meet az 23
-hdg: 171, bias:  98
-{s  23}
-Motor speed, steer 50, 22
-adjusting steer to meet az 22
-hdg: 172, bias:  98
-{s  22}
-Motor speed, steer 50, 21
-adjusting steer to meet az 21
-hdg: 173, bias:  98
-{s  21}
-Motor speed, steer 50, 20
-adjusting steer to meet az 20
-hdg: 174, bias:  98
-{s  20}
-Motor speed, steer 50, 19
-adjusting steer to meet az 19
-hdg: 175, bias:  98
-{s  19}
-Motor speed, steer 50, 18
-adjusting steer to meet az 18
-hdg: 176, bias:  98
-{s  18}
-Motor speed, steer 50, 17
-adjusting steer to meet az 17
-hdg: 177, bias:  98
-{s  17}
-Motor speed, steer 50, 16
-adjusting steer to meet az 16
-hdg: 178, bias:  98
-{s  16}
-msg: 10:50:16.707{LS23}
-msg: 10:50:16.714{LP161}
-msg: 10:50:16.727{LT22.2156}
-msg: 10:50:16.737{LN7.0409}
-{ln-589.8} 
-{lt2251.2} 
-msg: 10:50:16.744{LA332}
-{la 1.09}
-Motor speed, steer 50, 15
-adjusting steer to meet az 15
-hdg: 179, bias:  98
-{s  15}
-new hdg steering 15
-Motor speed, steer 50, 15
-Motor speed, steer 50, 14
-adjusting steer to meet az 14
-hdg: 180, bias:  98
-{s  14}
-Motor speed, steer 50, 13
-adjusting steer to meet az 13
-hdg: 181, bias:  98
-{s  13}
-Motor speed, steer 50, 12
-adjusting steer to meet az 12
-hdg: 182, bias:  98
-{s  12}
-Motor speed, steer 50, 11
-adjusting steer to meet az 11
-hdg: 183, bias:  98
-{s  11}
-Motor speed, steer 50, 10
-adjusting steer to meet az 10
-hdg: 184, bias:  98
-{s  10}
-Motor speed, steer 50, 9
-adjusting steer to meet az 9
-hdg: 185, bias:  98
-{s   9}
-Motor speed, steer 50, 8
-adjusting steer to meet az 8
-hdg: 186, bias:  98
-{s   8}
-Motor speed, steer 50, 7
-adjusting steer to meet az 7
-hdg: 187, bias:  98
-{s   7}
-Motor speed, steer 50, 6
-adjusting steer to meet az 6
-hdg: 188, bias:  98
-{s   6}
-Motor speed, steer 50, 5
-adjusting steer to meet az 5
-hdg: 189, bias:  98
-{s   5}
-Motor speed, steer 50, 4
-adjusting steer to meet az 4
-hdg: 190, bias:  98
-{s   4}
-msg: 10:50:17.719{LS24}
-msg: 10:50:17.726{LP176}
-msg: 10:50:17.738{LT22.2066}
-msg: 10:50:17.748{LN7.0394}
-{ln-589.7} 
-{lt2250.3} 
-msg: 10:50:17.755{LA332}
-{la 1.09}
-new hdg steering 4
-Motor speed, steer 50, 4
-Motor speed, steer 50, 3
-adjusting steer to meet az 3
-hdg: 191, bias:  98
-{s   3}
-Motor speed, steer 50, 2
-adjusting steer to meet az 2
-hdg: 192, bias:  98
-{s   2}
-Motor speed, steer 50, 1
-adjusting steer to meet az 1
-hdg: 193, bias:  98
-{s   1}
-msg: 10:50:18.731{LS25}
-msg: 10:50:18.738{LP191}
-msg: 10:50:18.749{LT22.1969}
-new hdg steering 1
-Motor speed, steer 50, 1
-msg: 10:50:18.772{LN7.0409}
-{ln-589.8} 
-{lt2249.3} 
-msg: 10:50:18.774{LA331}
-{la 1.09}
-Motor speed, steer 50, 0
-adjusting steer to meet az 0
-hdg: 194, bias:  98
-{s   0}
-msg: 10:50:19.741{LS26}
-msg: 10:50:19.748{LP196}
-msg: 10:50:19.760{LT22.1864}
-new hdg steering 0
-Motor speed, steer 50, 0
-msg: 10:50:19.772{LN7.0445}
-{ln-590.1} 
-{lt2248.2} 
-msg: 10:50:19.778{LA330}
-{la 1.08}
-msg: 10:50:20.750{LS27}
-msg: 10:50:20.757{LP197}
-new hdg steering 0
-Motor speed, steer 50, 0
-msg: 10:50:20.772{LT22.1764}
-msg: 10:50:20.779{LN7.0484}
-{ln-590.5} 
-{lt2247.2} 
-msg: 10:50:20.786{LA329}
-{la 1.08}
-hdg: 195, bias:  98
-msg: 10:50:21.759{LS28}
-new hdg steering -1
-Motor speed, steer 50, -1
-{s  -1}
-msg: 10:50:21.772{LP196}
-msg: 10:50:21.778{LT22.1656}
-msg: 10:50:21.788{LN7.0528}
-{ln-590.8} 
-{lt2246.1} 
-msg: 10:50:21.795{LA328}
-{la 1.08}
-Motor speed, steer 50, 0
-adjusting steer to meet az 0
-hdg: 194, bias:  98
-{s   0}
-hdg: 195, bias:  98
-hdg: 194, bias:  98
-hdg: 195, bias:  98
-hdg: 194, bias:  98
-new hdg steering 0
-Motor speed, steer 50, 0
-msg: 10:50:22.771{LS29}
-msg: 10:50:22.777{LP199}
-msg: 10:50:22.788{LT22.1544}
-msg: 10:50:22.799{LN7.0574}
-{ln-591.2} 
-{lt2245.0} 
-msg: 10:50:22.806{LA328}
-{la 1.08}
-hdg: 195, bias:  98
-hdg: 194, bias:  98
-msg: 10:50:22.987{E7}
-Motor speed, steer -25, -36
-az set to 14
-Tturnleft started, newhdg 14
-midturn hdg 285
-left backing turn
-hdg: 195, bias:  98
-still turning hdg now 195
-hdg: 194, bias:  98
-still turning hdg now 194
-hdg: 195, bias:  98
-still turning hdg now 195
-hdg: 196, bias:  98
-still turning hdg now 196
-hdg: 197, bias:  98
-still turning hdg now 197
-still turning hdg now 197
-hdg: 198, bias:  98
-still turning hdg now 198
-still turning hdg now 198
-hdg: 199, bias:  98
-still turning hdg now 199
-still turning hdg now 199
-hdg: 200, bias:  98
-msg: 10:50:23.788{LS30}
-msg: 10:50:23.795{LP203}
-msg: 10:50:23.806{LT22.1436}
-msg: 10:50:23.818{LN7.0632}
-{ln-591.7} 
-{lt2243.9} 
-msg: 10:50:23.825{LA329}
-{la 1.08}
-still turning hdg now 200
-hdg: 201, bias:  98
-still turning hdg now 201
-still turning hdg now 201
-hdg: 202, bias:  98
-still turning hdg now 202
-hdg: 203, bias:  98
-still turning hdg now 203
-still turning hdg now 203
-hdg: 204, bias:  98
-still turning hdg now 204
-hdg: 205, bias:  98
-still turning hdg now 205
-still turning hdg now 205
-hdg: 206, bias:  98
-still turning hdg now 206
-hdg: 207, bias:  98
-still turning hdg now 207
-hdg: 208, bias:  98
-still turning hdg now 208
-hdg: 209, bias:  98
-still turning hdg now 209
-still turning hdg now 209
-hdg: 210, bias:  98
-still turning hdg now 210
-hdg: 211, bias:  98
-still turning hdg now 211
-msg: 10:50:24.793{LS31}
-still turning hdg now 211
-msg: 10:50:24.800{LP27}
-msg: 10:50:24.811{LT22.1429}
-msg: 10:50:24.821{LN7.0639}
-{ln-591.7} 
-{lt2243.8} 
-msg: 10:50:24.829{LA329}
-{la 1.08}
-hdg: 212, bias:  98
-still turning hdg now 212
-hdg: 213, bias:  98
-still turning hdg now 213
-still turning hdg now 213
-hdg: 214, bias:  98
-still turning hdg now 214
-hdg: 215, bias:  98
-still turning hdg now 215
-hdg: 216, bias:  98
-still turning hdg now 216
-hdg: 217, bias:  98
-still turning hdg now 217
-hdg: 218, bias:  98
-still turning hdg now 218
-still turning hdg now 218
-hdg: 219, bias:  98
-still turning hdg now 219
-hdg: 220, bias:  98
-still turning hdg now 220
-hdg: 221, bias:  98
-still turning hdg now 221
-hdg: 222, bias:  98
-still turning hdg now 222
-still turning hdg now 222
-hdg: 223, bias:  98
-still turning hdg now 223
-hdg: 224, bias:  98
-msg: 10:50:25.803{LS32}
-msg: 10:50:25.810{LP177}
-still turning hdg now 224
-msg: 10:50:25.821{LT22.1458}
-msg: 10:50:25.833{LN7.0621}
-{ln-591.6} 
-{lt2244.1} 
-msg: 10:50:25.840{LA330}
-{la 1.08}
-hdg: 225, bias:  98
-still turning hdg now 225
-still turning hdg now 225
-hdg: 226, bias:  98
-still turning hdg now 226
-still turning hdg now 226
-hdg: 227, bias:  98
-still turning hdg now 227
-hdg: 228, bias:  98
-still turning hdg now 228
-still turning hdg now 228
-hdg: 229, bias:  98
-still turning hdg now 229
-hdg: 230, bias:  98
-still turning hdg now 230
-still turning hdg now 230
-hdg: 231, bias:  98
-still turning hdg now 231
-hdg: 232, bias:  98
-still turning hdg now 232
-hdg: 233, bias:  98
-still turning hdg now 233
-still turning hdg now 233
-hdg: 234, bias:  98
-still turning hdg now 234
-still turning hdg now 234
-hdg: 235, bias:  98
-still turning hdg now 235
-still turning hdg now 235
-hdg: 236, bias:  98
-msg: 10:50:26.813{LS33}
-msg: 10:50:26.821{LP177}
-still turning hdg now 236
-msg: 10:50:26.833{LT22.1476}
-msg: 10:50:26.842{LN7.0592}
-{ln-591.4} 
-{lt2244.3} 
-msg: 10:50:26.852{LA331}
-{la 1.09}
-hdg: 237, bias:  98
-still turning hdg now 237
-hdg: 238, bias:  98
-still turning hdg now 238
-hdg: 239, bias:  98
-still turning hdg now 239
-still turning hdg now 239
-hdg: 240, bias:  98
-still turning hdg now 240
-hdg: 241, bias:  98
-still turning hdg now 241
-hdg: 242, bias:  98
-still turning hdg now 242
-hdg: 243, bias:  98
-still turning hdg now 243
-hdg: 244, bias:  98
-still turning hdg now 244
-hdg: 245, bias:  98
-still turning hdg now 245
-hdg: 246, bias:  98
-still turning hdg now 246
-hdg: 247, bias:  98
-still turning hdg now 247
-hdg: 248, bias:  98
-still turning hdg now 248
-msg: 10:50:27.825{LS34}
-msg: 10:50:27.832{LP177}
-msg: 10:50:27.843{LT22.1490}
-msg: 10:50:27.854{LN7.0564}
-{ln-591.1} 
-{lt2244.4} 
-msg: 10:50:27.861{LA332}
-{la 1.09}
-hdg: 249, bias:  98
-still turning hdg now 249
-hdg: 250, bias:  98
-still turning hdg now 250
-hdg: 251, bias:  98
-still turning hdg now 251
-still turning hdg now 251
-hdg: 252, bias:  98
-still turning hdg now 253
-hdg: 253, bias:  98
-still turning hdg now 253
-hdg: 254, bias:  98
-still turning hdg now 254
-hdg: 255, bias:  98
-still turning hdg now 255
-hdg: 256, bias:  98
-still turning hdg now 256
-hdg: 257, bias:  98
-still turning hdg now 257
-hdg: 258, bias:  98
-still turning hdg now 258
-hdg: 259, bias:  98
-still turning hdg now 259
-hdg: 260, bias:  98
-still turning hdg now 260
-hdg: 261, bias:  98
-still turning hdg now 261
-msg: 10:50:28.837{LS35}
-msg: 10:50:28.844{LP75}
-msg: 10:50:28.855{LT22.1497}
-still turning hdg now 261
-msg: 10:50:28.866{LN7.0524}
-{ln-590.8} 
-{lt2244.5} 
-msg: 10:50:28.873{LA331}
-{la 1.09}
-hdg: 262, bias:  98
-still turning hdg now 262
-hdg: 263, bias:  98
-still turning hdg now 263
-still turning hdg now 263
-hdg: 264, bias:  98
-still turning hdg now 264
-hdg: 265, bias:  98
-still turning hdg now 265
-hdg: 266, bias:  98
-still turning hdg now 266
-hdg: 267, bias:  98
-still turning hdg now 267
-hdg: 268, bias:  98
-still turning hdg now 268
-still turning hdg now 268
-hdg: 269, bias:  98
-still turning hdg now 269
-hdg: 270, bias:  98
-still turning hdg now 270
-still turning hdg now 270
-hdg: 271, bias:  98
-still turning hdg now 271
-hdg: 272, bias:  98
-still turning hdg now 272
-hdg: 273, bias:  98
-still turning hdg now 273
-still turning hdg now 273
-hdg: 274, bias:  98
-msg: 10:50:29.847{LS36}
-msg: 10:50:29.853{LP85}
-still turning hdg now 274
-msg: 10:50:29.865{LT22.1504}
-msg: 10:50:29.875{LN7.0481}
-{ln-590.4} 
-{lt2244.6} 
-msg: 10:50:29.882{LA329}
-{la 1.08}
-still turning hdg now 274
-hdg: 275, bias:  98
-still turning hdg now 275
-hdg: 276, bias:  98
-still turning hdg now 276
-still turning hdg now 276
-hdg: 277, bias:  98
-still turning hdg now 277
-hdg: 278, bias:  98
-still turning hdg now 278
-hdg: 279, bias:  98
-still turning hdg now 279
-still turning hdg now 279
-hdg: 280, bias:  98
-still turning hdg now 280
-still turning hdg now 280
-hdg: 281, bias:  98
-still turning hdg now 281
-hdg: 282, bias:  98
-still turning hdg now 282
-hdg: 283, bias:  98
-still turning hdg now 283
-hdg: 284, bias:  98
-still turning hdg now 284
-hdg: 285, bias:  98
-still turning hdg now 285
-msg: 10:50:30.858{LS37}
-msg: 10:50:30.865{LP108}
-msg: 10:50:30.876{LT22.1494}
-msg: 10:50:30.887{LN7.0441}
-{ln-590.1} 
-{lt2244.5} 
-msg: 10:50:30.894{LA329}
-{la 1.08}
-hdg: 286, bias:  98
-still turning hdg now 286
-Motor speed, steer 0, 0
-hdg: 287, bias:  98
-hdg: 288, bias:  98
-hdg: 289, bias:  98
-hdg: 291, bias:  98
-hdg: 292, bias:  98
-hdg: 293, bias:  98
-hdg: 294, bias:  98
-hdg: 295, bias:  98
-hdg: 296, bias:  98
-hdg: 297, bias:  98
-msg: 10:50:31.869{LS38}
-msg: 10:50:31.876{LP108}
-msg: 10:50:31.887{LT22.1476}
-msg: 10:50:31.898{LN7.0405}
-{ln-589.8} 
-{lt2244.3} 
-msg: 10:50:31.906{LA329}
-{la 1.08}
-hdg: 298, bias:  98
-hdg: 299, bias:  98
-hdg: 300, bias:  98
-hdg: 301, bias:  98
-hdg: 302, bias:  98
-hdg: 303, bias:  98
-hdg: 304, bias:  98
-msg: 10:50:32.880{LS39}
-msg: 10:50:32.887{LP129}
-msg: 10:50:32.899{LT22.1454}
-msg: 10:50:32.909{LN7.0373}
-{ln-589.5} 
-{lt2244.1} 
-msg: 10:50:32.916{LA327}
-{la 1.07}
-hdg: 305, bias:  98
-hdg: 306, bias:  98
-hdg: 305, bias:  98
-hdg: 304, bias:  98
-hdg: 303, bias:  98
-hdg: 302, bias:  98
-msg: 10:50:34.739{LS40}
-msg: 10:50:34.741{LP132}
-msg: 10:50:34.743{LT22.1425}
-msg: 10:50:34.746{LN7.0340}
-{ln-589.2} 
-{lt2243.8} 
-msg: 10:50:34.749{LA326}
-{la 1.07}
-hdg: 301, bias:  98
-hdg: 300, bias:  98
-hdg: 299, bias:  98
-msg: 10:50:34.904{LS41}
-msg: 10:50:34.911{LP126}
-msg: 10:50:34.922{LT22.1407}
-msg: 10:50:34.933{LN7.0322}
-{ln-589.1} 
-{lt2243.6} 
-msg: 10:50:34.940{LA325}
-{la 1.07}
-hdg: 298, bias:  98
-hdg: 297, bias:  98
-hdg: 296, bias:  98
-hdg: 295, bias:  98
-msg: 10:50:35.914{LS42}
-msg: 10:50:35.921{LP126}
-msg: 10:50:35.932{LT22.1389}
-msg: 10:50:35.941{LN7.0304}
-{ln-588.9} 
-{lt2243.4} 
-msg: 10:50:35.950{LA324}
-{la 1.06}
-hdg: 294, bias:  98
-hdg: 293, bias:  98
-hdg: 292, bias:  98
-hdg: 291, bias:  98
-msg: 10:50:36.923{LS43}
-msg: 10:50:36.930{LP126}
-msg: 10:50:36.943{LT22.1378}
-msg: 10:50:36.952{LN7.0290}
-{ln-588.8} 
-{lt2243.3} 
-msg: 10:50:36.960{LA324}
-{la 1.06}
-hdg: 289, bias:  98
-hdg: 288, bias:  98
-hdg: 287, bias:  98
-hdg: 286, bias:  98
-hdg: 285, bias:  98
-msg: 10:50:37.934{LS44}
-msg: 10:50:37.941{LP126}
-End of backing, all ahead full
-Motor speed, steer 50, 36
-msg: 10:50:37.952{LT22.1371}
-msg: 10:50:37.963{LN7.0279}
-{ln-588.7} 
-{lt2243.2} 
-msg: 10:50:37.970{LA324}
-{la 1.06}
-hdg: 286, bias:  98
-hdg: 287, bias:  98
-hdg: 288, bias:  98
-hdg: 289, bias:  98
-hdg: 291, bias:  98
-hdg: 292, bias:  98
-hdg: 293, bias:  98
-hdg: 294, bias:  98
-hdg: 295, bias:  98
-hdg: 296, bias:  98
-hdg: 297, bias:  98
-hdg: 298, bias:  98
-hdg: 299, bias:  98
-msg: 10:50:38.942{LS45}
-msg: 10:50:38.951{LP126}
-msg: 10:50:38.962{LT22.1368}
-msg: 10:50:38.971{LN7.0272}
-{ln-588.7} 
-{lt2243.2} 
-msg: 10:50:38.980{LA323}
-{la 1.06}
-hdg: 300, bias:  98
-hdg: 301, bias:  98
-hdg: 302, bias:  98
-hdg: 303, bias:  98
-hdg: 304, bias:  98
-hdg: 305, bias:  98
-hdg: 306, bias:  98
-hdg: 305, bias:  98
-hdg: 304, bias:  98
-hdg: 305, bias:  98
-hdg: 306, bias:  98
-hdg: 307, bias:  98
-msg: 10:50:39.962{LS46}
-msg: 10:50:39.969{LP298}
-msg: 10:50:39.980{LT22.1393}
-msg: 10:50:39.991{LN7.0330}
-{ln-589.2} 
-{lt2243.4} 
-msg: 10:50:39.998{LA323}
-{la 1.06}
-hdg: 308, bias:  98
-hdg: 309, bias:  98
-hdg: 310, bias:  98
-hdg: 311, bias:  98
-hdg: 312, bias:  98
-hdg: 314, bias:  98
-hdg: 315, bias:  98
-hdg: 316, bias:  98
-hdg: 317, bias:  98
-hdg: 318, bias:  98
-msg: 10:50:40.973{LS48}
-msg: 10:50:40.980{LP320}
-msg: 10:50:40.991{LT22.1443}
-msg: 10:50:41.002{LN7.0423}
-{ln-589.9} 
-{lt2244.0} 
-msg: 10:50:41.010{LA324}
-{la 1.06}
-hdg: 317, bias:  98
-hdg: 318, bias:  98
-hdg: 317, bias:  98
-hdg: 318, bias:  98
-hdg: 319, bias:  98
-hdg: 320, bias:  98
-hdg: 321, bias:  98
-hdg: 322, bias:  98
-hdg: 323, bias:  98
-hdg: 324, bias:  98
-hdg: 325, bias:  98
-msg: 10:50:41.983{LS49}
-msg: 10:50:41.990{LP303}
-msg: 10:50:42.002{LT22.1465}
-msg: 10:50:42.012{LN7.0466}
-{ln-590.3} 
-{lt2244.2} 
-msg: 10:50:42.020{LA324}
-{la 1.06}
-hdg: 326, bias:  98
-hdg: 328, bias:  98
-hdg: 329, bias:  98
-hdg: 330, bias:  98
-hdg: 331, bias:  98
-hdg: 332, bias:  98
-hdg: 333, bias:  98
-hdg: 334, bias:  98
-hdg: 335, bias:  98
-hdg: 336, bias:  98
-hdg: 337, bias:  98
-hdg: 338, bias:  98
-msg: 10:50:42.993{LS50}
-msg: 10:50:43.002{LP303}
-msg: 10:50:43.013{LT22.1479}
-msg: 10:50:43.023{LN7.0502}
-{ln-590.6} 
-{lt2244.3} 
-msg: 10:50:43.031{LA325}
-{la 1.07}
-hdg: 339, bias:  98
-hdg: 340, bias:  98
-hdg: 341, bias:  98
-hdg: 342, bias:  98
-hdg: 343, bias:  98
-hdg: 342, bias:  98
-hdg: 343, bias:  98
-hdg: 344, bias:  98
-hdg: 345, bias:  98
-hdg: 346, bias:  98
-hdg: 347, bias:  98
-thread ended
-new hdg steering -333
-Motor speed, steer 50, 27
-{s  27}
-Motor speed, steer 50, 26
-adjusting steer to meet az 26
-hdg: 348, bias:  98
-{s  26}
-Motor speed, steer 50, 25
-adjusting steer to meet az 25
-hdg: 349, bias:  98
-{s  25}
-Motor speed, steer 50, 24
-adjusting steer to meet az 24
-hdg: 350, bias:  98
-{s  24}
-Motor speed, steer 50, 23
-adjusting steer to meet az 23
-hdg: 351, bias:  98
-{s  23}
-Motor speed, steer 50, 22
-adjusting steer to meet az 22
-hdg: 352, bias:  98
-{s  22}
-msg: 10:50:44.823{LS51}
-msg: 10:50:44.824{LP351}
-msg: 10:50:44.825{LT22.1519}
-msg: 10:50:44.826{LN7.0520}
-{ln-590.8} 
-{lt2244.7} 
-msg: 10:50:44.828{LA326}
-{la 1.07}
-Motor speed, steer 50, 21
-adjusting steer to meet az 21
-hdg: 353, bias:  98
-{s  21}
-Motor speed, steer 50, 20
-adjusting steer to meet az 20
-hdg: 354, bias:  98
-{s  20}
-Motor speed, steer 50, 19
-adjusting steer to meet az 19
-hdg: 355, bias:  98
-{s  19}
-Motor speed, steer 50, 18
-adjusting steer to meet az 18
-hdg: 356, bias:  98
-{s  18}
-Motor speed, steer 50, 17
-adjusting steer to meet az 17
-hdg: 357, bias:  98
-{s  17}
-Motor speed, steer 50, 16
-adjusting steer to meet az 16
-hdg: 358, bias:  98
-{s  16}
-Motor speed, steer 50, 15
-adjusting steer to meet az 15
-hdg: 359, bias:  98
-{s  15}
-Motor speed, steer 50, 14
-adjusting steer to meet az 14
-hdg:   0, bias:  98
-{s  14}
-Motor speed, steer 50, 13
-adjusting steer to meet az 13
-hdg:   1, bias:  98
-{s  13}
-Motor speed, steer 50, 12
-adjusting steer to meet az 12
-hdg:   2, bias:  98
-{s  12}
-Motor speed, steer 50, 11
-adjusting steer to meet az 11
-hdg:   3, bias:  98
-{s  11}
-Motor speed, steer 50, 10
-adjusting steer to meet az 10
-hdg:   4, bias:  98
-{s  10}
-Motor speed, steer 50, 9
-adjusting steer to meet az 9
-hdg:   5, bias:  98
-{s   9}
-Motor speed, steer 50, 7
-adjusting steer to meet az 7
-hdg:   7, bias:  98
-{s   7}
-Motor speed, steer 50, 5
-adjusting steer to meet az 5
-hdg:   9, bias:  98
-{s   5}
-Motor speed, steer 50, 3
-adjusting steer to meet az 3
-hdg:  11, bias:  98
-{s   3}
-Motor speed, steer 50, 2
-adjusting steer to meet az 2
-hdg:  12, bias:  98
-{s   2}
-msg: 10:50:45.025{LS52}
-msg: 10:50:45.027{LP352}
-msg: 10:50:45.037{LT22.1584}
-msg: 10:50:45.046{LN7.0535}
-{ln-590.9} 
-{lt2245.4} 
-msg: 10:50:45.055{LA327}
-{la 1.07}
-Motor speed, steer 50, 1
-adjusting steer to meet az 1
-hdg:  13, bias:  98
-{s   1}
-Motor speed, steer 50, 0
-adjusting steer to meet az 0
-hdg:  14, bias:  98
-{s   0}
-hdg:  15, bias:  98
-hdg:  16, bias:  98
-hdg:  17, bias:  98
-new hdg steering -3
-Motor speed, steer 50, -3
-{s  -3}
-Motor speed, steer 50, -2
-adjusting steer to meet az -2
-hdg:  16, bias:  98
-{s  -2}
-msg: 10:50:46.028{LS53}
-msg: 10:50:46.034{LP22}
-msg: 10:50:46.045{LT22.1666}
-msg: 10:50:46.056{LN7.0506}
-{ln-590.6} 
-{lt2246.2} 
-msg: 10:50:46.063{LA327}
-{la 1.07}
-Motor speed, steer 50, -1
-adjusting steer to meet az -1
-hdg:  15, bias:  98
-{s  -1}
-new hdg steering -1
-Motor speed, steer 50, -1
-Motor speed, steer 50, -2
-adjusting steer to meet az -2
-hdg:  16, bias:  98
-{s  -2}
-msg: 10:50:47.038{LS54}
-msg: 10:50:47.043{LP18}
-msg: 10:50:47.055{LT22.1764}
-msg: 10:50:47.066{LN7.0466}
-{ln-590.3} 
-{lt2247.2} 
-msg: 10:50:47.073{LA327}
-{la 1.07}
-Motor speed, steer 50, -1
-adjusting steer to meet az -1
-hdg:  15, bias:  98
-{s  -1}
-Motor speed, steer 50, -2
-adjusting steer to meet az -2
-hdg:  16, bias:  98
-{s  -2}
-Motor speed, steer 50, -1
-adjusting steer to meet az -1
-hdg:  15, bias:  98
-{s  -1}
-new hdg steering -1
-Motor speed, steer 50, -1
-msg: 10:50:48.048{LS55}
-msg: 10:50:48.053{LP21}
-msg: 10:50:48.065{LT22.1868}
-msg: 10:50:48.076{LN7.0420}
-{ln-589.9} 
-{lt2248.3} 
-msg: 10:50:48.083{LA326}
-{la 1.07}
-new hdg steering -1
-Motor speed, steer 50, -1
-msg: 10:50:49.057{LS56}
-msg: 10:50:49.063{LP21}
-msg: 10:50:49.076{LT22.1965}
-msg: 10:50:49.085{LN7.0373}
-{ln-589.5} 
-{lt2249.2} 
-msg: 10:50:49.092{LA325}
-{la 1.07}
-new hdg steering -1
-Motor speed, steer 50, -1
-msg: 10:50:49.998{E7}
-Motor speed, steer -25, -36
-az set to 194
-Motor speed, steer 50, 0
-Tturnleft started, newhdg 195
-midturn hdg 105
-left backing turn
-adjusting steer to meet az 0
-{s   0}
-msg: 10:50:50.079{LS57}
-msg: 10:50:50.081{LP22}
-msg: 10:50:50.088{LT22.2066}
-msg: 10:50:50.098{LN7.0322}
-{ln-589.1} 
-{lt2250.3} 
-msg: 10:50:50.106{LA325}
-{la 1.07}
-still turning hdg now 15
-still turning hdg now 15
-hdg:  16, bias:  98
-still turning hdg now 16
-still turning hdg now 16
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-hdg:  16, bias:  98
-still turning hdg now 16
-still turning hdg now 16
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-msg: 10:50:51.080{LS58}
-msg: 10:50:51.085{LP21}
-still turning hdg now 17
-msg: 10:50:51.098{LT22.2167}
-msg: 10:50:51.108{LN7.0276}
-{ln-588.7} 
-{lt2251.3} 
-msg: 10:50:51.115{LA325}
-{la 1.07}
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-hdg:  16, bias:  98
-still turning hdg now 16
-still turning hdg now 16
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-hdg:  16, bias:  98
-still turning hdg now 16
-still turning hdg now 16
-still turning hdg now 16
-msg: 10:50:52.090{LS59}
-msg: 10:50:52.097{LP23}
-still turning hdg now 16
-msg: 10:50:52.108{LT22.2271}
-msg: 10:50:52.118{LN7.0225}
-{ln-588.3} 
-{lt2252.3} 
-msg: 10:50:52.125{LA319}
-{la 1.05}
-still turning hdg now 16
-still turning hdg now 16
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-hdg:  16, bias:  98
-still turning hdg now 16
-hdg:  17, bias:  98
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-msg: 10:50:52.959{E7}
-still turning hdg now 17
-Motor speed, steer -25, -36
-az set to 14
-Tturnleft started, newhdg 197
-midturn hdg 107
-left backing turn
-still turning hdg now 17
-still turning hdg now 17
-still turning hdg now 17
-msg: 10:50:53.098{LS0}
-msg: 10:50:53.104{LP26}
-msg: 10:50:53.116{LT22.2372}
-msg: 10:50:53.126{LN7.0164}
-{ln-587.8} 
-{lt2253.4} 
-still turning hdg now 17
-msg: 10:50:53.133{LA318}
-{la 1.04}
-still turning hdg now 17
-hdg:  18, bias:  98
-still turning hdg now 18
-still turning hdg now 18
-hdg:  19, bias:  98
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-still turning hdg now 19
-hdg:  20, bias:  98
-still turning hdg now 20
-still turning hdg now 20
-still turning hdg now 20
-hdg:  21, bias:  98
-still turning hdg now 21
-still turning hdg now 21
-still turning hdg now 21
-still turning hdg now 21
-hdg:  22, bias:  98
-still turning hdg now 22
-still turning hdg now 22
-still turning hdg now 22
-still turning hdg now 22
-hdg:  23, bias:  98
-still turning hdg now 23
-still turning hdg now 23
-hdg:  24, bias:  98
-still turning hdg now 24
-still turning hdg now 24
-still turning hdg now 24
-still turning hdg now 24
-hdg:  25, bias:  98
-still turning hdg now 25
-still turning hdg now 25
-hdg:  26, bias:  98
-msg: 10:50:54.109{LS1}
-msg: 10:50:54.116{LP211}
-still turning hdg now 26
-still turning hdg now 26
-msg: 10:50:54.127{LT22.2372}
-msg: 10:50:54.137{LN7.0168}
-{ln-587.8} 
-{lt2253.4} 
-msg: 10:50:54.145{LA318}
-{la 1.04}
-still turning hdg now 26
-still turning hdg now 27
-hdg:  27, bias:  98
-still turning hdg now 27
-still turning hdg now 27
-hdg:  28, bias:  98
-still turning hdg now 28
-still turning hdg now 28
-still turning hdg now 28
-still turning hdg now 28
-hdg:  29, bias:  98
-still turning hdg now 29
-still turning hdg now 29
-hdg:  30, bias:  98
-still turning hdg now 30
-still turning hdg now 30
-hdg:  31, bias:  98
-still turning hdg now 31
-still turning hdg now 31
-hdg:  32, bias:  98
-still turning hdg now 32
-still turning hdg now 32
-hdg:  33, bias:  98
-still turning hdg now 33
-still turning hdg now 33
-still turning hdg now 33
-still turning hdg now 33
-hdg:  34, bias:  98
-still turning hdg now 34
-still turning hdg now 34
-hdg:  35, bias:  98
-still turning hdg now 35
-still turning hdg now 35
-hdg:  36, bias:  98
-still turning hdg now 36
-still turning hdg now 36
-still turning hdg now 36
-still turning hdg now 36
-hdg:  37, bias:  98
-still turning hdg now 37
-still turning hdg now 37
-hdg:  38, bias:  98
-msg: 10:50:55.128{LS2}
-msg: 10:50:55.134{LP230}
-msg: 10:50:55.146{LT22.2340}
-msg: 10:50:55.157{LN7.0200}
-{ln-588.1} 
-{lt2253.0} 
-msg: 10:50:55.164{LA317}
-{la 1.04}
-still turning hdg now 38
-still turning hdg now 38
-hdg:  39, bias:  98
-still turning hdg now 39
-still turning hdg now 39
-hdg:  40, bias:  98
-still turning hdg now 40
-still turning hdg now 40
-hdg:  41, bias:  98
-still turning hdg now 41
-still turning hdg now 41
-still turning hdg now 41
-still turning hdg now 41
-hdg:  42, bias:  98
-still turning hdg now 42
-still turning hdg now 42
-hdg:  43, bias:  98
-still turning hdg now 43
-still turning hdg now 43
-hdg:  44, bias:  98
-still turning hdg now 44
-still turning hdg now 44
-still turning hdg now 44
-hdg:  45, bias:  98
-still turning hdg now 45
-still turning hdg now 45
-hdg:  46, bias:  98
-still turning hdg now 46
-still turning hdg now 46
-still turning hdg now 46
-still turning hdg now 46
-hdg:  47, bias:  98
-still turning hdg now 47
-still turning hdg now 47
-still turning hdg now 47
-still turning hdg now 47
-hdg:  48, bias:  98
-still turning hdg now 48
-still turning hdg now 48
-hdg:  49, bias:  98
-still turning hdg now 49
-still turning hdg now 49
-hdg:  50, bias:  98
-still turning hdg now 50
-still turning hdg now 50
-msg: 10:50:56.131{LS3}
-still turning hdg now 50
-still turning hdg now 50
-msg: 10:50:56.138{LP245}
-msg: 10:50:56.150{LT22.2318}
-msg: 10:50:56.161{LN7.0240}
-{ln-588.4} 
-{lt2252.8} 
-msg: 10:50:56.168{LA318}
-{la 1.04}
-hdg:  51, bias:  98
-still turning hdg now 51
-still turning hdg now 51
-still turning hdg now 51
-still turning hdg now 51
-hdg:  52, bias:  98
-still turning hdg now 52
-still turning hdg now 52
-hdg:  53, bias:  98
-still turning hdg now 53
-still turning hdg now 53
-still turning hdg now 53
-still turning hdg now 53
-hdg:  54, bias:  98
-still turning hdg now 54
-still turning hdg now 54
-hdg:  55, bias:  98
-still turning hdg now 55
-still turning hdg now 55
-still turning hdg now 55
-still turning hdg now 55
-hdg:  56, bias:  98
-still turning hdg now 56
-still turning hdg now 56
-hdg:  57, bias:  98
-still turning hdg now 57
-still turning hdg now 57
-still turning hdg now 57
-still turning hdg now 57
-hdg:  58, bias:  98
-still turning hdg now 58
-hdg:  59, bias:  98
-still turning hdg now 59
-still turning hdg now 59
-still turning hdg now 59
-still turning hdg now 59
-still turning hdg now 59
-still turning hdg now 59
-hdg:  60, bias:  98
-still turning hdg now 60
-still turning hdg now 61
-hdg:  61, bias:  98
-still turning hdg now 61
-still turning hdg now 61
-still turning hdg now 61
-hdg:  62, bias:  98
-still turning hdg now 62
-still turning hdg now 62
-hdg:  63, bias:  98
-still turning hdg now 63
-msg: 10:50:57.141{LS4}
-msg: 10:50:57.149{LP251}
-still turning hdg now 63
-msg: 10:50:57.160{LT22.2304}
-msg: 10:50:57.170{LN7.0276}
-{ln-588.7} 
-{lt2252.7} 
-msg: 10:50:57.177{LA317}
-{la 1.04}
-still turning hdg now 63
-still turning hdg now 63
-hdg:  64, bias:  98
-still turning hdg now 64
-still turning hdg now 64
-still turning hdg now 64
-still turning hdg now 64
-hdg:  65, bias:  98
-still turning hdg now 65
-still turning hdg now 65
-still turning hdg now 65
-hdg:  66, bias:  98
-still turning hdg now 66
-still turning hdg now 66
-still turning hdg now 66
-still turning hdg now 66
-hdg:  67, bias:  98
-still turning hdg now 67
-still turning hdg now 67
-hdg:  68, bias:  98
-still turning hdg now 68
-still turning hdg now 68
-still turning hdg now 68
-still turning hdg now 68
-hdg:  69, bias:  98
-still turning hdg now 69
-still turning hdg now 69
-still turning hdg now 69
-still turning hdg now 69
-hdg:  70, bias:  98
-still turning hdg now 70
-still turning hdg now 70
-hdg:  71, bias:  98
-still turning hdg now 71
-still turning hdg now 71
-still turning hdg now 71
-still turning hdg now 71
-hdg:  72, bias:  98
-still turning hdg now 72
-still turning hdg now 72
-still turning hdg now 72
-still turning hdg now 72
-hdg:  73, bias:  98
-still turning hdg now 73
-still turning hdg now 73
-hdg:  74, bias:  98
-still turning hdg now 74
-still turning hdg now 74
-msg: 10:50:58.153{LS5}
-msg: 10:50:58.160{LP267}
-msg: 10:50:58.171{LT22.2300}
-msg: 10:50:58.182{LN7.0315}
-{ln-589.0} 
-{lt2252.6} 
-msg: 10:50:58.189{LA315}
-{la 1.03}
-hdg:  75, bias:  98
-still turning hdg now 75
-still turning hdg now 75
-still turning hdg now 75
-still turning hdg now 75
-hdg:  76, bias:  98
-still turning hdg now 76
-still turning hdg now 76
-hdg:  77, bias:  98
-still turning hdg now 77
-still turning hdg now 77
-still turning hdg now 77
-still turning hdg now 77
-hdg:  78, bias:  98
-still turning hdg now 78
-still turning hdg now 78
-hdg:  79, bias:  98
-still turning hdg now 79
-still turning hdg now 79
-still turning hdg now 79
-still turning hdg now 79
-hdg:  80, bias:  98
-still turning hdg now 80
-still turning hdg now 80
-hdg:  81, bias:  98
-still turning hdg now 81
-still turning hdg now 81
-hdg:  82, bias:  98
-still turning hdg now 82
-still turning hdg now 82
-still turning hdg now 82
-still turning hdg now 82
-hdg:  83, bias:  98
-still turning hdg now 83
-still turning hdg now 83
-still turning hdg now 83
-still turning hdg now 83
-hdg:  84, bias:  98
-still turning hdg now 84
-still turning hdg now 84
-hdg:  85, bias:  98
-still turning hdg now 85
-still turning hdg now 85
-still turning hdg now 86
-still turning hdg now 86
-hdg:  86, bias:  98
-msg: 10:50:59.162{LS6}
-msg: 10:50:59.169{LP267}
-still turning hdg now 86
-still turning hdg now 86
-msg: 10:50:59.181{LT22.2307}
-msg: 10:50:59.192{LN7.0351}
-{ln-589.3} 
-{lt2252.7} 
-msg: 10:50:59.199{LA314}
-{la 1.03}
-hdg:  87, bias:  98
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-hdg:  89, bias:  98
-still turning hdg now 89
-still turning hdg now 89
-hdg:  90, bias:  98
-still turning hdg now 90
-still turning hdg now 90
-still turning hdg now 90
-still turning hdg now 90
-hdg:  91, bias:  98
-still turning hdg now 91
-still turning hdg now 91
-hdg:  92, bias:  98
-still turning hdg now 92
-still turning hdg now 92
-still turning hdg now 92
-still turning hdg now 92
-hdg:  93, bias:  98
-still turning hdg now 93
-still turning hdg now 93
-hdg:  94, bias:  98
-still turning hdg now 94
-still turning hdg now 94
-still turning hdg now 94
-hdg:  95, bias:  98
-still turning hdg now 95
-still turning hdg now 95
-still turning hdg now 95
-still turning hdg now 95
-hdg:  96, bias:  98
-still turning hdg now 96
-still turning hdg now 96
-hdg:  97, bias:  98
-still turning hdg now 97
-still turning hdg now 97
-still turning hdg now 98
-still turning hdg now 98
-hdg:  98, bias:  98
-hdg:  99, bias:  98
-still turning hdg now 99
-still turning hdg now 99
-msg: 10:51:00.173{LS7}
-msg: 10:51:00.180{LP286}
-msg: 10:51:00.191{LT22.2318}
-still turning hdg now 99
-still turning hdg now 99
-msg: 10:51:00.202{LN7.0387}
-{ln-589.6} 
-{lt2252.8} 
-msg: 10:51:00.209{LA314}
-{la 1.03}
-hdg: 100, bias:  98
-still turning hdg now 100
-still turning hdg now 100
-still turning hdg now 100
-still turning hdg now 100
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-still turning hdg now 102
-hdg: 103, bias:  98
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-hdg: 104, bias:  98
-still turning hdg now 104
-still turning hdg now 104
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-hdg: 106, bias:  98
-still turning hdg now 106
-Motor speed, steer 0, 0
-still turning hdg now 106
-still turning hdg now 106
-hdg: 107, bias:  98
-still turning hdg now 107
-still turning hdg now 107
-still turning hdg now 107
-still turning hdg now 107
-still turning hdg now 107
-still turning hdg now 107
-msg: 10:51:01.185{LS8}
-msg: 10:51:01.193{LP306}
-msg: 10:51:01.204{LT22.2343}
-still turning hdg now 107
-msg: 10:51:01.214{LN7.0420}
-{ln-589.9} 
-{lt2253.1} 
-msg: 10:51:01.221{LA314}
-{la 1.03}
-hdg: 106, bias:  98
-still turning hdg now 106
-still turning hdg now 106
-still turning hdg now 106
-hdg: 105, bias:  98
-still turning hdg now 105
-still turning hdg now 105
-still turning hdg now 105
-hdg: 104, bias:  98
-still turning hdg now 104
-hdg: 103, bias:  98
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-still turning hdg now 103
-hdg: 102, bias:  98
-still turning hdg now 102
-hdg: 101, bias:  98
-still turning hdg now 101
-still turning hdg now 101
-hdg: 100, bias:  98
-msg: 10:51:02.194{LS9}
-msg: 10:51:02.201{LP291}
-msg: 10:51:02.213{LT22.2354}
-msg: 10:51:02.223{LN7.0438}
-{ln-590.1} 
-{lt2253.2} 
-still turning hdg now 100
-msg: 10:51:02.231{LA314}
-{la 1.03}
-still turning hdg now 99
-hdg:  99, bias:  98
-still turning hdg now 99
-still turning hdg now 99
-hdg:  98, bias:  98
-still turning hdg now 98
-hdg:  97, bias:  98
-still turning hdg now 97
-still turning hdg now 97
-still turning hdg now 97
-hdg:  96, bias:  98
-still turning hdg now 96
-still turning hdg now 96
-still turning hdg now 96
-still turning hdg now 96
-hdg:  95, bias:  98
-still turning hdg now 95
-msg: 10:51:03.206{LS10}
-msg: 10:51:03.213{LP291}
-msg: 10:51:03.225{LT22.2361}
-still turning hdg now 95
-msg: 10:51:03.236{LN7.0448}
-{ln-590.1} 
-{lt2253.3} 
-msg: 10:51:03.243{LA314}
-{la 1.03}
-hdg:  94, bias:  98
-still turning hdg now 94
-hdg:  93, bias:  98
-still turning hdg now 93
-still turning hdg now 93
-still turning hdg now 93
-still turning hdg now 93
-hdg:  92, bias:  98
-still turning hdg now 92
-still turning hdg now 92
-still turning hdg now 92
-hdg:  91, bias:  98
-still turning hdg now 91
-still turning hdg now 91
-still turning hdg now 91
-still turning hdg now 91
-still turning hdg now 91
-hdg:  90, bias:  98
-still turning hdg now 90
-msg: 10:51:04.217{LS11}
-msg: 10:51:04.224{LP291}
-msg: 10:51:04.235{LT22.2361}
-msg: 10:51:04.246{LN7.0459}
-{ln-590.2} 
-{lt2253.3} 
-msg: 10:51:04.254{LA314}
-{la 1.03}
-still turning hdg now 90
-still turning hdg now 90
-hdg:  89, bias:  98
-still turning hdg now 89
-hdg:  88, bias:  98
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-msg: 10:51:05.227{LS12}
-msg: 10:51:05.234{LP291}
-msg: 10:51:05.247{LT22.2358}
-msg: 10:51:05.256{LN7.0459}
-{ln-590.2} 
-{lt2253.2} 
-msg: 10:51:05.263{LA314}
-{la 1.03}
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-msg: 10:51:06.239{LS13}
-msg: 10:51:06.248{LP291}
-msg: 10:51:06.259{LT22.2361}
-msg: 10:51:06.270{LN7.0456}
-{ln-590.2} 
-{lt2253.3} 
-msg: 10:51:06.277{LA314}
-{la 1.03}
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-msg: 10:51:07.251{LS14}
-msg: 10:51:07.258{LP291}
-msg: 10:51:07.269{LT22.2358}
-msg: 10:51:07.280{LN7.0448}
-{ln-590.1} 
-{lt2253.2} 
-still turning hdg now 87
-msg: 10:51:07.287{LA314}
-{la 1.03}
-hdg:  88, bias:  98
-still turning hdg now 87
-hdg:  87, bias:  98
-hdg:  88, bias:  98
-still turning hdg now 88
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-msg: 10:51:08.261{LS15}
-msg: 10:51:08.268{LP291}
-msg: 10:51:08.279{LT22.2361}
-msg: 10:51:08.290{LN7.0441}
-{ln-590.1} 
-{lt2253.3} 
-msg: 10:51:08.297{LA314}
-{la 1.03}
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-msg: 10:51:09.272{LS16}
-msg: 10:51:09.279{LP291}
-msg: 10:51:09.290{LT22.2361}
-msg: 10:51:09.300{LN7.0445}
-{ln-590.1} 
-{lt2253.3} 
-msg: 10:51:09.308{LA314}
-{la 1.03}
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-msg: 10:51:10.282{LS17}
-msg: 10:51:10.289{LP291}
-msg: 10:51:10.301{LT22.2361}
-msg: 10:51:10.311{LN7.0441}
-{ln-590.1} 
-{lt2253.3} 
-msg: 10:51:10.318{LA314}
-{la 1.03}
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-hdg:  87, bias:  98
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-still turning hdg now 87
-End of backing, all ahead full
-Motor speed, steer 50, 36
-msg: 10:51:11.294{LS18}
-msg: 10:51:11.302{LP291}
-still turning hdg now 87
-msg: 10:51:11.312{LT22.2365}
-msg: 10:51:11.322{LN7.0438}
-{ln-590.1} 
-{lt2253.3} 
-msg: 10:51:11.331{LA314}
-{la 1.03}
-still turning hdg now 87
-still turning hdg now 87
-hdg:  88, bias:  98
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-still turning hdg now 88
-hdg:  89, bias:  98
-still turning hdg now 89
-hdg:  90, bias:  98
-still turning hdg now 90
-still turning hdg now 90
-still turning hdg now 90
-still turning hdg now 90
-hdg:  91, bias:  98
-still turning hdg now 91
-hdg:  92, bias:  98
-still turning hdg now 92
-hdg:  93, bias:  98
-still turning hdg now 93
-hdg:  94, bias:  98
-msg: 10:51:12.304{LS19}
-msg: 10:51:12.309{LP94}
-still turning hdg now 94
-msg: 10:51:12.322{LT22.2365}
-msg: 10:51:12.331{LN7.0362}
-{ln-589.4} 
-{lt2253.3} 
-msg: 10:51:12.338{LA314}
-{la 1.03}
-hdg:  95, bias:  98
-still turning hdg now 95
-hdg:  96, bias:  98
-still turning hdg now 96
-hdg:  97, bias:  98
-hdg:  98, bias:  98
-still turning hdg now 98
-still turning hdg now 98
-hdg:  99, bias:  98
-still turning hdg now 99
-still turning hdg now 99
-hdg: 101, bias:  98
-still turning hdg now 101
-hdg: 102, bias:  98
-still turning hdg now 102
-still turning hdg now 102
-hdg: 103, bias:  98
-still turning hdg now 103
-hdg: 104, bias:  98
-still turning hdg now 104
-still turning hdg now 104
-still turning hdg now 104
-still turning hdg now 104
-hdg: 103, bias:  98
-still turning hdg now 103
-hdg: 101, bias:  98
-still turning hdg now 101
-hdg: 100, bias:  98
-msg: 10:51:13.315{LS20}
-msg: 10:51:13.321{LP115}
-msg: 10:51:13.332{LT22.2343}
-still turning hdg now 100
-msg: 10:51:13.344{LN7.0268}
-{ln-588.6} 
-{lt2253.1} 
-msg: 10:51:13.350{LA314}
-{la 1.03}
-still turning hdg now 100
-hdg: 101, bias:  98
-still turning hdg now 100
-still turning hdg now 101
-thread ended
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-still turning hdg now 101
-new hdg steering -87
-Motor speed, steer 50, -87
-still turning hdg now 101
-{s -87}
-Motor speed, steer 50, -89
-adjusting steer to meet az -89
-hdg: 103, bias:  98
-{s -89}
-Motor speed, steer 50, -90
-adjusting steer to meet az -90
-hdg: 104, bias:  98
-{s -90}
-Motor speed, steer 50, -91
-adjusting steer to meet az -91
-hdg: 105, bias:  98
-{s -91}
-Motor speed, steer 50, -92
-adjusting steer to meet az -92
-hdg: 106, bias:  98
-{s -92}
-Motor speed, steer 50, -93
-still turning hdg now 107
-adjusting steer to meet az -93
-hdg: 107, bias:  98
-{s -93}
-Motor speed, steer 50, -94
-adjusting steer to meet az -94
-hdg: 108, bias:  98
-{s -94}
-Motor speed, steer 50, -95
-adjusting steer to meet az -95
-hdg: 109, bias:  98
-{s -95}
-Motor speed, steer 50, -96
-adjusting steer to meet az -96
-hdg: 110, bias:  98
-{s -96}
-Motor speed, steer 50, -97
-still turning hdg now 111
-Motor speed, steer 0, 0
-adjusting steer to meet az -97
-hdg: 111, bias:  98
-{s -97}
-msg: 10:51:14.859{LS21}
-msg: 10:51:14.860{LP93}
-msg: 10:51:14.861{LT22.2332}
-msg: 10:51:14.863{LN7.0186}
-{ln-588.0} 
-{lt2253.0} 
-msg: 10:51:14.865{LA313}
-{la 1.03}
-Motor speed, steer 50, -98
-adjusting steer to meet az -98
-hdg: 112, bias:  98
-{s -98}
-Motor speed, steer 50, -99
-adjusting steer to meet az -99
-hdg: 113, bias:  98
-{s -99}
-Motor speed, steer 50, -100
-adjusting steer to meet az -100
-hdg: 114, bias:  98
-{s-100}
-Motor speed, steer 50, -101
-End of backing, all ahead full
-Motor speed, steer 50, 36
-adjusting steer to meet az -101
-hdg: 115, bias:  98
-{s-101}
-Motor speed, steer 50, -103
-adjusting steer to meet az -103
-hdg: 117, bias:  98
-{s-103}
-Motor speed, steer 50, -105
-adjusting steer to meet az -105
-hdg: 119, bias:  98
-{s-105}
-Motor speed, steer 50, -106
-thread ended
-adjusting steer to meet az -106
-hdg: 120, bias:  98
-{s-106}
-new hdg steering -107
-Motor speed, steer 50, -107
-hdg: 121, bias:  98
-{s-107}
-Motor speed, steer 50, -106
-adjusting steer to meet az -106
-hdg: 120, bias:  98
-{s-106}
-Motor speed, steer 50, -105
-adjusting steer to meet az -105
-hdg: 119, bias:  98
-{s-105}
-Motor speed, steer 50, -104
-adjusting steer to meet az -104
-hdg: 118, bias:  98
-{s-104}
-Motor speed, steer 50, -103
-adjusting steer to meet az -103
-hdg: 117, bias:  98
-{s-103}
-Motor speed, steer 50, -102
-adjusting steer to meet az -102
-hdg: 116, bias:  98
-{s-102}
-msg: 10:51:16.053{LS22}
-msg: 10:51:16.054{LP121}
-msg: 10:51:16.056{LT22.2304}
-msg: 10:51:16.058{LN7.0103}
-{ln-587.3} 
-{lt2252.7} 
-msg: 10:51:16.060{LA313}
-{la 1.03}
-Motor speed, steer 50, -101
-adjusting steer to meet az -101
-hdg: 115, bias:  98
-{s-101}
-Motor speed, steer 50, -100
-adjusting steer to meet az -100
-hdg: 114, bias:  98
-{s-100}
-Motor speed, steer 50, -99
-adjusting steer to meet az -99
-hdg: 113, bias:  98
-{s -99}
-Motor speed, steer 50, -98
-adjusting steer to meet az -98
-hdg: 112, bias:  98
-{s -98}
-Motor speed, steer 50, -97
-adjusting steer to meet az -97
-hdg: 111, bias:  98
-{s -97}
-Motor speed, steer 50, -96
-adjusting steer to meet az -96
-hdg: 110, bias:  98
-{s -96}
-Motor speed, steer 50, -95
-adjusting steer to meet az -95
-hdg: 109, bias:  98
-{s -95}
-Motor speed, steer 50, -94
-adjusting steer to meet az -94
-hdg: 108, bias:  98
-{s -94}
-Motor speed, steer 50, -93
-adjusting steer to meet az -93
-hdg: 107, bias:  98
-{s -93}
-Motor speed, steer 50, -92
-adjusting steer to meet az -92
-hdg: 106, bias:  98
-{s -92}
-Motor speed, steer 50, -91
-adjusting steer to meet az -91
-hdg: 105, bias:  98
-{s -91}
-Motor speed, steer 50, -90
-adjusting steer to meet az -90
-hdg: 104, bias:  98
-{s -90}
-Motor speed, steer 50, -89
-adjusting steer to meet az -89
-hdg: 103, bias:  98
-{s -89}
-Motor speed, steer 50, -88
-adjusting steer to meet az -88
-hdg: 102, bias:  98
-{s -88}
-Motor speed, steer 50, -87
-adjusting steer to meet az -87
-hdg: 101, bias:  98
-{s -87}
-Motor speed, steer 50, -86
-adjusting steer to meet az -86
-hdg: 100, bias:  98
-{s -86}
-msg: 10:51:16.344{LS23}
-msg: 10:51:16.350{LP117}
-msg: 10:51:16.363{LT22.2268}
-msg: 10:51:16.373{LN7.0020}
-{ln-586.6} 
-{lt2252.3} 
-msg: 10:51:16.380{LA313}
-{la 1.03}
-Motor speed, steer 50, -84
-adjusting steer to meet az -84
-hdg:  98, bias:  98
-{s -84}
-Motor speed, steer 50, -83
-adjusting steer to meet az -83
-hdg:  97, bias:  98
-{s -83}
-Motor speed, steer 50, -81
-adjusting steer to meet az -81
-hdg:  95, bias:  98
-{s -81}
-Motor speed, steer 50, -80
-adjusting steer to meet az -80
-hdg:  94, bias:  98
-{s -80}
-Motor speed, steer 50, -79
-adjusting steer to meet az -79
-hdg:  93, bias:  98
-{s -79}
-Motor speed, steer 50, -78
-adjusting steer to meet az -78
-hdg:  92, bias:  98
-{s -78}
-Motor speed, steer 50, -76
-adjusting steer to meet az -76
-hdg:  90, bias:  98
-{s -76}
-Motor speed, steer 50, -75
-adjusting steer to meet az -75
-hdg:  89, bias:  98
-{s -75}
-Motor speed, steer 50, -74
-adjusting steer to meet az -74
-hdg:  88, bias:  98
-{s -74}
-Motor speed, steer 50, -73
-adjusting steer to meet az -73
-hdg:  87, bias:  98
-{s -73}
-Motor speed, steer 50, -71
-adjusting steer to meet az -71
-hdg:  85, bias:  98
-{s -71}
-Motor speed, steer 50, -70
-adjusting steer to meet az -70
-hdg:  84, bias:  98
-{s -70}
-Motor speed, steer 50, -69
-adjusting steer to meet az -69
-hdg:  83, bias:  98
-{s -69}
-new hdg steering -69
-Motor speed, steer 50, -69
-Motor speed, steer 50, -68
-adjusting steer to meet az -68
-hdg:  82, bias:  98
-{s -68}
-Motor speed, steer 50, -67
-adjusting steer to meet az -67
-hdg:  81, bias:  98
-{s -67}
-Motor speed, steer 50, -66
-adjusting steer to meet az -66
-hdg:  80, bias:  98
-{s -66}
-Motor speed, steer 50, -65
-adjusting steer to meet az -65
-hdg:  79, bias:  98
-{s -65}
-Motor speed, steer 50, -64
-adjusting steer to meet az -64
-hdg:  78, bias:  98
-{s -64}
-Motor speed, steer 50, -63
-adjusting steer to meet az -63
-hdg:  77, bias:  98
-{s -63}
-Motor speed, steer 50, -62
-adjusting steer to meet az -62
-hdg:  76, bias:  98
-{s -62}
-Motor speed, steer 50, -61
-adjusting steer to meet az -61
-hdg:  75, bias:  98
-{s -61}
-msg: 10:51:17.367{LS24}
-msg: 10:51:17.368{LP105}
-msg: 10:51:17.381{LT22.2239}
-msg: 10:51:17.391{LN6.9941}
-{ln-585.9} 
-{lt2252.0} 
-msg: 10:51:17.399{LA314}
-{la 1.03}
-Motor speed, steer 50, -59
-adjusting steer to meet az -59
-hdg:  73, bias:  98
-{s -59}
-Motor speed, steer 50, -58
-adjusting steer to meet az -58
-hdg:  72, bias:  98
-{s -58}
-Motor speed, steer 50, -57
-adjusting steer to meet az -57
-hdg:  71, bias:  98
-{s -57}
-Motor speed, steer 50, -56
-adjusting steer to meet az -56
-hdg:  70, bias:  98
-{s -56}
-Motor speed, steer 50, -55
-adjusting steer to meet az -55
-hdg:  69, bias:  98
-{s -55}
-Motor speed, steer 50, -54
-adjusting steer to meet az -54
-hdg:  68, bias:  98
-{s -54}
-Motor speed, steer 50, -53
-adjusting steer to meet az -53
-hdg:  67, bias:  98
-{s -53}
-Motor speed, steer 50, -51
-adjusting steer to meet az -51
-hdg:  65, bias:  98
-{s -51}
-Motor speed, steer 50, -50
-adjusting steer to meet az -50
-hdg:  64, bias:  98
-{s -50}
-Motor speed, steer 50, -49
-adjusting steer to meet az -49
-hdg:  63, bias:  98
-{s -49}
-Motor speed, steer 50, -48
-adjusting steer to meet az -48
-hdg:  62, bias:  98
-{s -48}
-Motor speed, steer 50, -47
-adjusting steer to meet az -47
-hdg:  61, bias:  98
-{s -47}
-new hdg steering -47
-Motor speed, steer 50, -47
-Motor speed, steer 50, -46
-adjusting steer to meet az -46
-hdg:  60, bias:  98
-{s -46}
-Motor speed, steer 50, -44
-adjusting steer to meet az -44
-hdg:  58, bias:  98
-{s -44}
-Motor speed, steer 50, -43
-adjusting steer to meet az -43
-hdg:  57, bias:  98
-{s -43}
-Motor speed, steer 50, -42
-adjusting steer to meet az -42
-hdg:  56, bias:  98
-{s -42}
-Motor speed, steer 50, -40
-adjusting steer to meet az -40
-hdg:  54, bias:  98
-{s -40}
-Motor speed, steer 50, -39
-adjusting steer to meet az -39
-hdg:  53, bias:  98
-{s -39}
-Motor speed, steer 50, -38
-adjusting steer to meet az -38
-hdg:  52, bias:  98
-{s -38}
-Motor speed, steer 50, -37
-adjusting steer to meet az -37
-hdg:  51, bias:  98
-{s -37}
-msg: 10:51:18.368{LS25}
-msg: 10:51:18.374{LP83}
-msg: 10:51:18.385{LT22.2232}
-msg: 10:51:18.396{LN6.9854}
-{ln-585.2} 
-{lt2251.9} 
-msg: 10:51:18.404{LA315}
-{la 1.03}
-Motor speed, steer 50, -36
-adjusting steer to meet az -36
-hdg:  50, bias:  98
-{s -36}
-Motor speed, steer 50, -35
-adjusting steer to meet az -35
-hdg:  49, bias:  98
-{s -35}
-Motor speed, steer 50, -34
-adjusting steer to meet az -34
-hdg:  48, bias:  98
-{s -34}
-Motor speed, steer 50, -33
-adjusting steer to meet az -33
-hdg:  47, bias:  98
-{s -33}
-Motor speed, steer 50, -32
-adjusting steer to meet az -32
-hdg:  46, bias:  98
-{s -32}
-Motor speed, steer 50, -31
-adjusting steer to meet az -31
-hdg:  45, bias:  98
-{s -31}
-Motor speed, steer 50, -30
-adjusting steer to meet az -30
-hdg:  44, bias:  98
-{s -30}
-Motor speed, steer 50, -29
-adjusting steer to meet az -29
-hdg:  43, bias:  98
-{s -29}
-Motor speed, steer 50, -28
-adjusting steer to meet az -28
-hdg:  42, bias:  98
-{s -28}
-Motor speed, steer 50, -27
-adjusting steer to meet az -27
-hdg:  41, bias:  98
-{s -27}
-Motor speed, steer 50, -26
-adjusting steer to meet az -26
-hdg:  40, bias:  98
-{s -26}
-new hdg steering -26
-Motor speed, steer 50, -26
-Motor speed, steer 50, -24
-adjusting steer to meet az -24
-hdg:  38, bias:  98
-{s -24}
-Motor speed, steer 50, -23
-adjusting steer to meet az -23
-hdg:  37, bias:  98
-{s -23}
-Motor speed, steer 50, -22
-adjusting steer to meet az -22
-hdg:  36, bias:  98
-{s -22}
-Motor speed, steer 50, -21
-adjusting steer to meet az -21
-hdg:  35, bias:  98
-{s -21}
-Motor speed, steer 50, -20
-adjusting steer to meet az -20
-hdg:  34, bias:  98
-{s -20}
-Motor speed, steer 50, -19
-adjusting steer to meet az -19
-hdg:  33, bias:  98
-{s -19}
-Motor speed, steer 50, -18
-adjusting steer to meet az -18
-hdg:  32, bias:  98
-{s -18}
-msg: 10:51:19.377{LS26}
-msg: 10:51:19.384{LP57}
-msg: 10:51:19.395{LT22.2253}
-msg: 10:51:19.405{LN6.9779}
-{ln-584.5} 
-{lt2252.2} 
-msg: 10:51:19.413{LA314}
-{la 1.03}
-Motor speed, steer 50, -17
-adjusting steer to meet az -17
-hdg:  31, bias:  98
-{s -17}
-Motor speed, steer 50, -16
-adjusting steer to meet az -16
-hdg:  30, bias:  98
-{s -16}
-Motor speed, steer 50, -15
-adjusting steer to meet az -15
-hdg:  29, bias:  98
-{s -15}
-Motor speed, steer 50, -14
-adjusting steer to meet az -14
-hdg:  28, bias:  98
-{s -14}
-Motor speed, steer 50, -13
-adjusting steer to meet az -13
-hdg:  27, bias:  98
-{s -13}
-Motor speed, steer 50, -12
-adjusting steer to meet az -12
-hdg:  26, bias:  98
-{s -12}
-Motor speed, steer 50, -11
-adjusting steer to meet az -11
-hdg:  25, bias:  98
-{s -11}
-Motor speed, steer 50, -10
-adjusting steer to meet az -10
-hdg:  24, bias:  98
-{s -10}
-new hdg steering -10
-Motor speed, steer 50, -10
-Motor speed, steer 50, -9
-adjusting steer to meet az -9
-hdg:  23, bias:  98
-{s  -9}
-Motor speed, steer 50, -8
-adjusting steer to meet az -8
-hdg:  22, bias:  98
-{s  -8}
-Motor speed, steer 50, -7
-adjusting steer to meet az -7
-hdg:  21, bias:  98
-{s  -7}
-msg: 10:51:20.388{LS27}
-msg: 10:51:20.394{LP37}
-msg: 10:51:20.406{LT22.2304}
-msg: 10:51:20.416{LN6.9714}
-{ln-584.0} 
-{lt2252.7} 
-msg: 10:51:20.424{LA309}
-{la 1.01}
-Motor speed, steer 50, -6
-adjusting steer to meet az -6
-hdg:  20, bias:  98
-{s  -6}
-Motor speed, steer 50, -5
-adjusting steer to meet az -5
-hdg:  19, bias:  98
-{s  -5}
-Motor speed, steer 50, -4
-adjusting steer to meet az -4
-hdg:  18, bias:  98
-{s  -4}
-Motor speed, steer 50, -3
-adjusting steer to meet az -3
-hdg:  17, bias:  98
-{s  -3}
-new hdg steering -3
-Motor speed, steer 50, -3
-msg: 10:51:21.044{E0}
-Standby
-hdg:  16, bias:  98
-msg: 10:51:21.400{LS28}
-msg: 10:51:21.405{LP27}
-msg: 10:51:21.417{LT22.2383}
-msg: 10:51:21.428{LN6.9653}
-{ln-583.5} 
-{lt2253.5} 
-msg: 10:51:21.435{LA309}
-{la 1.01}
-hdg:  15, bias:  98
-hdg:  14, bias:  98
-msg: 10:51:22.412{LS29}
-msg: 10:51:22.418{LP29}
-msg: 10:51:22.430{LT22.2476}
-msg: 10:51:22.440{LN6.9595}
-{ln-583.0} 
-{lt2254.4} 
-msg: 10:51:22.447{LA305}
-{la 1.00}
-hdg:  13, bias:  98
-msg: 10:51:22.762{D1}
-Motor speed, steer 50, -4
-{s  -4}
-msg: 10:51:22.894{D4}
-Motor speed, steer 50, -9
-{s  -9}
-hdg:  12, bias:  98
-hdg:  11, bias:  98
-msg: 10:51:23.062{D7}
-Motor speed, steer 50, -10
-Motor speed, steer 50, -11
-Motor speed, steer 50, -12
-Motor speed, steer 50, -13
-Motor speed, steer 50, -14
-Motor speed, steer 50, -15
-Motor speed, steer 50, -16
-Motor speed, steer 50, -17
-Motor speed, steer 50, -18
-Motor speed, steer 50, -19
-Motor speed, steer 50, -20
-Motor speed, steer 50, -21
-Motor speed, steer 50, -22
-Motor speed, steer 50, -23
-Motor speed, steer 50, -24
-Motor speed, steer 50, -25
-Motor speed, steer 50, -26
-Motor speed, steer 50, -27
-Motor speed, steer 50, -28
-Motor speed, steer 50, -29
-Motor speed, steer 50, -30
-Motor speed, steer 50, -31
-Motor speed, steer 50, -32
-Motor speed, steer 50, -33
-Motor speed, steer 50, -34
-Motor speed, steer 50, -35
-Motor speed, steer 50, -36
-{s -36}
-hdg:  10, bias:  98
-hdg:   9, bias:  98
-hdg:   8, bias:  98
-msg: 10:51:24.423{LS30}
-msg: 10:51:24.424{LP22}
-msg: 10:51:24.426{LT22.2566}
-msg: 10:51:24.428{LN6.9548}
-{ln-582.6} 
-{lt2255.3} 
-msg: 10:51:24.431{LA303}
-{la 0.99}
-hdg:   7, bias:  98
-hdg:   6, bias:  98
-hdg:   5, bias:  98
-hdg:   4, bias:  98
-hdg:   3, bias:  98
-hdg:   2, bias:  98
-hdg:   1, bias:  98
-hdg:   0, bias:  98
-hdg: 359, bias:  98
-hdg: 358, bias:  98
-hdg: 357, bias:  98
-hdg: 356, bias:  98
-hdg: 355, bias:  98
-hdg: 354, bias:  98
-hdg: 352, bias:  98
-hdg: 351, bias:  98
-hdg: 350, bias:  98
-hdg: 349, bias:  98
-msg: 10:51:24.458{LS31}
-msg: 10:51:24.459{LP14}
-msg: 10:51:24.461{LT22.2649}
-msg: 10:51:24.463{LN6.9520}
-{ln-582.4} 
-{lt2256.2} 
-msg: 10:51:24.468{LA301}
-{la 0.99}
-hdg: 348, bias:  98
-hdg: 347, bias:  98
-hdg: 346, bias:  98
-hdg: 344, bias:  98
-hdg: 343, bias:  98
-hdg: 342, bias:  98
-hdg: 341, bias:  98
-hdg: 340, bias:  98
-hdg: 339, bias:  98
-hdg: 337, bias:  98
-hdg: 336, bias:  98
-hdg: 335, bias:  98
-hdg: 334, bias:  98
-hdg: 332, bias:  98
-hdg: 331, bias:  98
-hdg: 330, bias:  98
-hdg: 329, bias:  98
-hdg: 328, bias:  98
-hdg: 326, bias:  98
-hdg: 325, bias:  98
-msg: 10:51:25.443{LS32}
-msg: 10:51:25.450{LP358}
-msg: 10:51:25.461{LT22.2721}
-msg: 10:51:25.472{LN6.9520}
-{ln-582.4} 
-{lt2256.9} 
-msg: 10:51:25.479{LA302}
-{la 0.99}
-hdg: 324, bias:  98
-hdg: 323, bias:  98
-hdg: 321, bias:  98
-hdg: 320, bias:  98
-hdg: 319, bias:  98
-hdg: 318, bias:  98
-hdg: 317, bias:  98
-hdg: 316, bias:  98
-hdg: 314, bias:  98
-hdg: 313, bias:  98
-hdg: 312, bias:  98
-hdg: 311, bias:  98
-hdg: 310, bias:  98
-hdg: 308, bias:  98
-hdg: 307, bias:  98
-hdg: 306, bias:  98
-hdg: 305, bias:  98
-hdg: 303, bias:  98
-hdg: 302, bias:  98
-hdg: 301, bias:  98
-msg: 10:51:26.454{LS33}
-msg: 10:51:26.461{LP335}
-msg: 10:51:26.472{LT22.2790}
-msg: 10:51:26.483{LN6.9548}
-{ln-582.6} 
-{lt2257.6} 
-msg: 10:51:26.490{LA302}
-{la 0.99}
-hdg: 300, bias:  98
-hdg: 299, bias:  98
-hdg: 297, bias:  98
-hdg: 296, bias:  98
-hdg: 295, bias:  98
-hdg: 294, bias:  98
-hdg: 293, bias:  98
-hdg: 291, bias:  98
-hdg: 289, bias:  98
-hdg: 288, bias:  98
-hdg: 286, bias:  98
-hdg: 285, bias:  98
-hdg: 284, bias:  98
-hdg: 283, bias:  98
-hdg: 282, bias:  98
-hdg: 281, bias:  98
-hdg: 279, bias:  98
-hdg: 278, bias:  98
-hdg: 277, bias:  98
-hdg: 276, bias:  98
-hdg: 275, bias:  98
-msg: 10:51:27.471{LS34}
-msg: 10:51:27.478{LP308}
-msg: 10:51:27.491{LT22.2840}
-msg: 10:51:27.501{LN6.9610}
-{ln-583.1} 
-{lt2258.1} 
-msg: 10:51:27.509{LA304}
-{la 1.00}
-hdg: 273, bias:  98
-hdg: 272, bias:  98
-hdg: 271, bias:  98
-hdg: 269, bias:  98
-hdg: 268, bias:  98
-hdg: 267, bias:  98
-hdg: 266, bias:  98
-hdg: 264, bias:  98
-hdg: 263, bias:  98
-hdg: 262, bias:  98
-hdg: 261, bias:  98
-hdg: 260, bias:  98
-hdg: 258, bias:  98
-hdg: 257, bias:  98
-hdg: 256, bias:  98
-hdg: 255, bias:  98
-hdg: 254, bias:  98
-hdg: 252, bias:  98
-hdg: 251, bias:  98
-hdg: 250, bias:  98
-msg: 10:51:28.475{LS35}
-msg: 10:51:28.484{LP287}
-msg: 10:51:28.495{LT22.2865}
-msg: 10:51:28.506{LN6.9689}
-{ln-583.8} 
-{lt2258.4} 
-msg: 10:51:28.513{LA306}
-{la 1.00}
-hdg: 249, bias:  98
-hdg: 248, bias:  98
-hdg: 247, bias:  98
-hdg: 246, bias:  98
-hdg: 244, bias:  98
-hdg: 243, bias:  98
-hdg: 242, bias:  98
-hdg: 241, bias:  98
-hdg: 240, bias:  98
-hdg: 239, bias:  98
-hdg: 237, bias:  98
-hdg: 236, bias:  98
-hdg: 235, bias:  98
-hdg: 234, bias:  98
-hdg: 233, bias:  98
-hdg: 231, bias:  98
-hdg: 230, bias:  98
-hdg: 229, bias:  98
-hdg: 228, bias:  98
-hdg: 227, bias:  98
-msg: 10:51:29.487{LS36}
-msg: 10:51:29.494{LP266}
-msg: 10:51:29.507{LT22.2862}
-msg: 10:51:29.517{LN6.9772}
-{ln-584.5} 
-{lt2258.3} 
-msg: 10:51:29.524{LA308}
-{la 1.01}
-hdg: 225, bias:  98
-hdg: 224, bias:  98
-msg: 10:51:29.584{D5}
-Motor speed, steer 50, -35
-Motor speed, steer 50, -34
-Motor speed, steer 50, -33
-Motor speed, steer 50, -32
-Motor speed, steer 50, -31
-Motor speed, steer 50, -30
-Motor speed, steer 50, -29
-Motor speed, steer 50, -28
-Motor speed, steer 50, -27
-Motor speed, steer 50, -26
-Motor speed, steer 50, -25
-Motor speed, steer 50, -24
-Motor speed, steer 50, -23
-Motor speed, steer 50, -22
-Motor speed, steer 50, -21
-Motor speed, steer 50, -20
-Motor speed, steer 50, -19
-Motor speed, steer 50, -18
-Motor speed, steer 50, -17
-Motor speed, steer 50, -16
-Motor speed, steer 50, -15
-Motor speed, steer 50, -14
-Motor speed, steer 50, -13
-Motor speed, steer 50, -12
-Motor speed, steer 50, -11
-Motor speed, steer 50, -10
-Motor speed, steer 50, -9
-Motor speed, steer 50, -8
-Motor speed, steer 50, -7
-Motor speed, steer 50, -6
-Motor speed, steer 50, -5
-Motor speed, steer 50, -4
-Motor speed, steer 50, -3
-Motor speed, steer 50, -2
-Motor speed, steer 50, -1
-Motor speed, steer 50, 0
-Motor speed, steer 50, 0
-{s   0}
-hdg: 223, bias:  98
-hdg: 222, bias:  98
-hdg: 221, bias:  98
-hdg: 220, bias:  98
-hdg: 219, bias:  98
-hdg: 218, bias:  98
-hdg: 217, bias:  98
-hdg: 218, bias:  98
-hdg: 217, bias:  98
-hdg: 216, bias:  98
-msg: 10:51:30.498{LS37}
-msg: 10:51:30.505{LP238}
-msg: 10:51:30.516{LT22.2829}
-msg: 10:51:30.527{LN6.9854}
-{ln-585.2} 
-{lt2258.0} 
-msg: 10:51:30.534{LA307}
-{la 1.01}
-hdg: 217, bias:  98
-msg: 10:51:31.015{D2}
-Odo:   107.4, speed:   50
-Motor speed, steer 60, 0
-{v  60}
-msg: 10:51:31.221{D2}
-Odo:   107.5, speed:   60
-Motor speed, steer 70, 0
-{v  70}
-hdg: 218, bias:  98
-msg: 10:51:31.486{D2}
-Odo:   107.8, speed:   70
-Motor speed, steer 80, 0
-{v  80}
-msg: 10:51:31.508{LS38}
-msg: 10:51:31.515{LP227}
-msg: 10:51:31.526{LT22.2761}
-msg: 10:51:31.537{LN6.9952}
-{ln-586.0} 
-{lt2257.3} 
-msg: 10:51:31.544{LA306}
-{la 1.00}
-msg: 10:51:31.690{D2}
-Odo:   108.1, speed:   80
-Motor speed, steer 90, 0
-{v  90}
-msg: 10:51:31.920{D2}
-Odo:   108.4, speed:   90
-Motor speed, steer 100, 0
-{v 100}
-hdg: 219, bias:  98
-hdg: 218, bias:  98
-hdg: 219, bias:  98
-msg: 10:51:32.522{LS39}
-msg: 10:51:32.529{LP231}
-msg: 10:51:32.540{LT22.2660}
-msg: 10:51:32.551{LN7.0099}
-{ln-587.2} 
-{lt2256.3} 
-msg: 10:51:32.558{LA305}
-{la 1.00}
-hdg: 218, bias:  98
-hdg: 219, bias:  98
-hdg: 220, bias:  98
-hdg: 219, bias:  98
-hdg: 220, bias:  98
-hdg: 221, bias:  98
-hdg: 220, bias:  98
-msg: 10:51:33.533{LS40}
-msg: 10:51:33.540{LP228}
-msg: 10:51:33.551{LT22.2523}
-msg: 10:51:33.561{LN7.0290}
-{ln-588.8} 
-{lt2254.9} 
-msg: 10:51:33.569{LA307}
-{la 1.01}
-msg: 10:51:34.136{D1}
-Motor speed, steer 100, -1
-{s  -1}
-msg: 10:51:34.320{D4}
-Motor speed, steer 100, -6
-{s  -6}
-hdg: 219, bias:  98
-msg: 10:51:34.541{LS41}
-msg: 10:51:34.548{LP228}
-msg: 10:51:34.560{LT22.2376}
-msg: 10:51:34.571{LN7.0488}
-{ln-590.5} 
-{lt2253.4} 
-msg: 10:51:34.578{LA310}
-{la 1.02}
-hdg: 218, bias:  98
-hdg: 217, bias:  98
-hdg: 216, bias:  98
-hdg: 215, bias:  98
-hdg: 214, bias:  98
-hdg: 213, bias:  98
-hdg: 212, bias:  98
-hdg: 211, bias:  98
-hdg: 210, bias:  98
-hdg: 209, bias:  98
-msg: 10:51:35.551{LS42}
-msg: 10:51:35.560{LP231}
-msg: 10:51:35.570{LT22.2253}
-msg: 10:51:35.580{LN7.0664}
-{ln-592.0} 
-{lt2252.2} 
-msg: 10:51:35.588{LA310}
-{la 1.02}
-hdg: 208, bias:  98
-hdg: 207, bias:  98
-hdg: 206, bias:  98
-hdg: 205, bias:  98
-hdg: 204, bias:  98
-hdg: 203, bias:  98
-hdg: 202, bias:  98
-msg: 10:51:36.101{D5}
-Motor speed, steer 100, -5
-Motor speed, steer 100, -4
-Motor speed, steer 100, -3
-Motor speed, steer 100, -2
-Motor speed, steer 100, -1
-Motor speed, steer 100, 0
-Motor speed, steer 100, 0
-{s   0}
-hdg: 201, bias:  98
-msg: 10:51:36.562{LS43}
-msg: 10:51:36.569{LP213}
-msg: 10:51:36.580{LT22.2102}
-msg: 10:51:36.592{LN7.0808}
-{ln-593.2} 
-{lt2250.6} 
-msg: 10:51:36.599{LA311}
-{la 1.02}
-hdg: 202, bias:  98
-hdg: 201, bias:  98
-msg: 10:51:37.572{LS44}
-msg: 10:51:37.579{LP206}
-msg: 10:51:37.590{LT22.1922}
-msg: 10:51:37.600{LN7.0924}
-{ln-594.1} 
-{lt2248.8} 
-msg: 10:51:37.608{LA310}
-{la 1.02}
-hdg: 202, bias:  98
-hdg: 203, bias:  98
-hdg: 204, bias:  98
-msg: 10:51:38.585{LS45}
-msg: 10:51:38.592{LP208}
-msg: 10:51:38.603{LT22.1731}
-msg: 10:51:38.614{LN7.1046}
-{ln-595.2} 
-{lt2246.9} 
-msg: 10:51:38.621{LA311}
-{la 1.02}
-msg: 10:51:39.596{LS46}
-msg: 10:51:39.602{LP208}
-msg: 10:51:39.614{LT22.1551}
-msg: 10:51:39.625{LN7.1161}
-{ln-596.1} 
-{lt2245.0} 
-msg: 10:51:39.632{LA312}
-{la 1.02}
-hdg: 205, bias:  98
-msg: 10:51:40.606{LS47}
-msg: 10:51:40.613{LP208}
-msg: 10:51:40.624{LT22.1360}
-msg: 10:51:40.635{LN7.1284}
-{ln-597.2} 
-{lt2243.1} 
-msg: 10:51:40.642{LA314}
-{la 1.03}
-msg: 10:51:41.615{LS48}
-msg: 10:51:41.624{LP211}
-msg: 10:51:41.635{LT22.1170}
-msg: 10:51:41.645{LN7.1417}
-{ln-598.3} 
-{lt2241.2} 
-msg: 10:51:41.651{LA316}
-{la 1.04}
-hdg: 204, bias:  98
-hdg: 205, bias:  98
-hdg: 206, bias:  98
-hdg: 205, bias:  98
-hdg: 206, bias:  98
-hdg: 207, bias:  98
-msg: 10:51:42.261{D8}
-Odo:   124.7, speed:  100
-Motor speed, steer 90, 0
-{v  90}
-hdg: 208, bias:  98
-hdg: 207, bias:  98
-msg: 10:51:42.489{D8}
-Odo:   125.0, speed:   90
-Motor speed, steer 80, 0
-{v  80}
-msg: 10:51:42.625{LS49}
-msg: 10:51:42.632{LP213}
-msg: 10:51:42.643{LT22.0972}
-msg: 10:51:42.654{LN7.1564}
-{ln-599.5} 
-{lt2239.2} 
-msg: 10:51:42.661{LA317}
-{la 1.04}
-msg: 10:51:42.749{D8}
-Odo:   125.3, speed:   80
-Motor speed, steer 70, 0
-{v  70}
-hdg: 208, bias:  98
-hdg: 209, bias:  98
-hdg: 208, bias:  98
-hdg: 207, bias:  98
-msg: 10:51:43.638{LS50}
-msg: 10:51:43.645{LP211}
-msg: 10:51:43.656{LT22.0810}
-msg: 10:51:43.667{LN7.1687}
-{ln-600.5} 
-{lt2237.5} 
-msg: 10:51:43.674{LA315}
-{la 1.03}
-hdg: 208, bias:  98
-msg: 10:51:43.842{D1}
-Motor speed, steer 70, -1
-{s  -1}
-msg: 10:51:44.023{D4}
-Motor speed, steer 70, -6
-{s  -6}
-hdg: 207, bias:  98
-hdg: 206, bias:  98
-hdg: 205, bias:  98
-hdg: 204, bias:  98
-hdg: 203, bias:  98
-hdg: 202, bias:  98
-msg: 10:51:44.650{LS51}
-msg: 10:51:44.657{LP217}
-msg: 10:51:44.668{LT22.0687}
-msg: 10:51:44.679{LN7.1802}
-{ln-601.5} 
-{lt2236.3} 
-msg: 10:51:44.686{LA314}
-{la 1.03}
-hdg: 201, bias:  98
-hdg: 200, bias:  98
-hdg: 199, bias:  98
-hdg: 198, bias:  98
-hdg: 197, bias:  98
-hdg: 196, bias:  98
-msg: 10:51:45.659{LS52}
-msg: 10:51:45.666{LP217}
-msg: 10:51:45.679{LT22.0583}
-msg: 10:51:45.689{LN7.1910}
-{ln-602.4} 
-{lt2235.2} 
-msg: 10:51:45.696{LA314}
-{la 1.03}
-hdg: 195, bias:  98
-msg: 10:51:45.713{D5}
-Motor speed, steer 70, -5
-Motor speed, steer 70, -4
-Motor speed, steer 70, -3
-Motor speed, steer 70, -2
-Motor speed, steer 70, -1
-Motor speed, steer 70, 0
-Motor speed, steer 70, 0
-{s   0}
-hdg: 194, bias:  98
-hdg: 195, bias:  98
-hdg: 194, bias:  98
-hdg: 195, bias:  98
-msg: 10:51:46.544{D1}
-Motor speed, steer 70, -1
-{s  -1}
-msg: 10:51:46.669{LS53}
-msg: 10:51:46.678{LP206}
-msg: 10:51:46.689{LT22.0468}
-msg: 10:51:46.699{LN7.2007}
-{ln-603.2} 
-{lt2234.1} 
-msg: 10:51:46.707{LA314}
-{la 1.03}
-msg: 10:51:46.726{D4}
-Motor speed, steer 70, -6
-{s  -6}
-hdg: 194, bias:  98
-hdg: 193, bias:  98
-hdg: 192, bias:  98
-hdg: 191, bias:  98
-hdg: 192, bias:  98
-hdg: 190, bias:  98
-hdg: 189, bias:  98
-hdg: 188, bias:  98
-msg: 10:51:47.680{LS54}
-msg: 10:51:47.687{LP199}
-msg: 10:51:47.700{LT22.0342}
-msg: 10:51:47.710{LN7.2094}
-{ln-603.9} 
-{lt2232.8} 
-msg: 10:51:47.717{LA313}
-{la 1.03}
-hdg: 187, bias:  98
-hdg: 186, bias:  98
-hdg: 185, bias:  98
-hdg: 184, bias:  98
-hdg: 183, bias:  98
-hdg: 182, bias:  98
-msg: 10:51:48.295{D5}
-Motor speed, steer 70, -5
-Motor speed, steer 70, -4
-Motor speed, steer 70, -3
-Motor speed, steer 70, -2
-Motor speed, steer 70, -1
-Motor speed, steer 70, 0
-Motor speed, steer 70, 0
-{s   0}
-hdg: 181, bias:  98
-hdg: 180, bias:  98
-hdg: 178, bias:  98
-hdg: 177, bias:  98
-msg: 10:51:48.595{D0}
-Odo:   131.7, speed:   70
-Motor speed, steer 0, 0
-{v   0}
-hdg: 175, bias:  98
-msg: 10:51:48.692{LS55}
-msg: 10:51:48.699{LP203}
-msg: 10:51:48.710{LT22.0212}
-msg: 10:51:48.721{LN7.2155}
-{ln-604.4} 
-{lt2231.5} 
-msg: 10:51:48.728{LA317}
-{la 1.04}
-msg: 10:51:49.703{LS56}
-msg: 10:51:49.710{LP204}
-msg: 10:51:49.721{LT22.0172}
-msg: 10:51:49.732{LN7.2198}
-{ln-604.8} 
-{lt2231.1} 
-msg: 10:51:49.739{LA321}
-{la 1.05}
-msg: 10:51:50.713{LS57}
-msg: 10:51:50.720{LP204}
-msg: 10:51:50.731{LT22.0169}
-msg: 10:51:50.742{LN7.2220}
-{ln-605.0} 
-{lt2231.0} 
-msg: 10:51:50.749{LA328}
-{la 1.08}
-msg: 10:51:51.721{LS58}
-msg: 10:51:51.728{LP204}
-msg: 10:51:51.741{LT22.0165}
-msg: 10:51:51.751{LN7.2223}
-{ln-605.0} 
-{lt2231.0} 
-msg: 10:51:51.759{LA335}
-{la 1.10}
-msg: 10:51:52.732{LS59}
-msg: 10:51:52.739{LP204}
-msg: 10:51:52.752{LT22.0162}
-msg: 10:51:52.762{LN7.2234}
-{ln-605.1} 
-{lt2231.0} 
-msg: 10:51:52.769{LA342}
-{la 1.12}
-msg: 10:51:53.742{LS0}
-msg: 10:51:53.749{LP204}
-msg: 10:51:53.760{LT22.0154}
-msg: 10:51:53.770{LN7.2245}
-{ln-605.2} 
-{lt2230.9} 
-msg: 10:51:53.778{LA349}
-{la 1.15}
-msg: 10:51:54.753{LS1}
-msg: 10:51:54.760{LP204}
-msg: 10:51:54.771{LT22.0154}
-msg: 10:51:54.782{LN7.2259}
-{ln-605.3} 
-{lt2230.9} 
-msg: 10:51:54.789{LA358}
-{la 1.17}
-hdg: 176, bias:  98
-hdg: 175, bias:  98
-msg: 10:51:55.764{LS2}
-msg: 10:51:55.771{LP204}
-msg: 10:51:55.782{LT22.0154}
-msg: 10:51:55.793{LN7.2263}
-{ln-605.4} 
-{lt2230.9} 
-msg: 10:51:55.800{LA372}
-{la 1.22}
-hdg: 174, bias:  98
-hdg: 173, bias:  98
-hdg: 172, bias:  98
-hdg: 173, bias:  98
-hdg: 174, bias:  98
-hdg: 175, bias:  98
-hdg: 176, bias:  98
-hdg: 178, bias:  98
-hdg: 179, bias:  98
-hdg: 181, bias:  98
-hdg: 182, bias:  98
-hdg: 184, bias:  98
-hdg: 185, bias:  98
-msg: 10:51:56.775{LS3}
-msg: 10:51:56.782{LP204}
-msg: 10:51:56.793{LT22.0151}
-msg: 10:51:56.804{LN7.2259}
-{ln-605.3} 
-{lt2230.9} 
-msg: 10:51:56.811{LA394}
-{la 1.29}
-hdg: 187, bias:  98
-hdg: 189, bias:  98
-hdg: 190, bias:  98
-hdg: 192, bias:  98
-hdg: 193, bias:  98
-hdg: 194, bias:  98
-hdg: 193, bias:  98
-hdg: 192, bias:  98
-hdg: 191, bias:  98
-hdg: 189, bias:  98
-hdg: 187, bias:  98
-hdg: 185, bias:  98
-hdg: 182, bias:  98
-hdg: 180, bias:  98
-hdg: 177, bias:  98
-hdg: 174, bias:  98
-hdg: 171, bias:  98
-hdg: 168, bias:  98
-hdg: 165, bias:  98
-msg: 10:51:57.785{LS4}
-msg: 10:51:57.792{LP204}
-msg: 10:51:57.803{LT22.0129}
-msg: 10:51:57.813{LN7.2281}
+msg: 11:24:27.094{LS26}
+msg: 11:24:27.100{LP22}
+msg: 11:24:27.111{LT21.9910}
+msg: 11:24:27.122{LN7.2284}
 {ln-605.5} 
-{lt2230.6} 
-msg: 10:51:57.820{LA418}
-{la 1.37}
-hdg: 161, bias:  98
-hdg: 158, bias:  98
-hdg: 155, bias:  98
-hdg: 152, bias:  98
-hdg: 149, bias:  98
-hdg: 146, bias:  98
-hdg: 142, bias:  98
-hdg: 138, bias:  98
-hdg: 134, bias:  98
-hdg: 130, bias:  98
-hdg: 126, bias:  98
-hdg: 123, bias:  98
-hdg: 119, bias:  98
-hdg: 116, bias:  98
-hdg: 113, bias:  98
-hdg: 111, bias:  98
-hdg: 109, bias:  98
-hdg: 107, bias:  98
-hdg: 106, bias:  98
-msg: 10:51:58.795{LS5}
-msg: 10:51:58.802{LP135}
-msg: 10:51:58.814{LT22.0046}
-msg: 10:51:58.825{LN7.2216}
-{ln-605.0} 
-{lt2229.8} 
-msg: 10:51:58.832{LA413}
-{la 1.35}
-hdg: 107, bias:  98
-hdg: 106, bias:  98
-hdg: 105, bias:  98
-hdg: 104, bias:  98
-msg: 10:51:59.807{LS6}
-msg: 10:51:59.815{LP125}
-msg: 10:51:59.826{LT21.9920}
-msg: 10:51:59.838{LN7.2054}
-{ln-603.6} 
-{lt2228.5} 
-msg: 10:51:59.845{LA400}
-{la 1.31}
-hdg: 103, bias:  98
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-msg: 10:52:00.817{LS7}
-msg: 10:52:00.824{LP136}
-msg: 10:52:00.836{LT21.9856}
-msg: 10:52:00.846{LN7.2014}
-{ln-603.3} 
-{lt2227.9} 
-msg: 10:52:00.853{LA395}
-{la 1.30}
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-msg: 10:52:01.827{LS8}
-msg: 10:52:01.834{LP136}
-msg: 10:52:01.847{LT21.9852}
-msg: 10:52:01.857{LN7.2018}
-{ln-603.3} 
-{lt2227.8} 
-msg: 10:52:01.864{LA394}
-{la 1.29}
-msg: 10:52:02.837{LS9}
-msg: 10:52:02.844{LP136}
-msg: 10:52:02.855{LT21.9852}
-msg: 10:52:02.866{LN7.2029}
-{ln-603.4} 
-{lt2227.8} 
-msg: 10:52:02.873{LA391}
-{la 1.28}
-msg: 10:52:03.848{LS10}
-msg: 10:52:03.856{LP136}
-msg: 10:52:03.867{LT21.9848}
-msg: 10:52:03.877{LN7.2029}
-{ln-603.4} 
-{lt2227.8} 
-msg: 10:52:03.885{LA385}
-{la 1.26}
-msg: 10:52:04.860{LS11}
-msg: 10:52:04.867{LP136}
-msg: 10:52:04.878{LT21.9848}
-msg: 10:52:04.889{LN7.2032}
-{ln-603.4} 
-{lt2227.8} 
-msg: 10:52:04.896{LA383}
-{la 1.26}
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-msg: 10:52:05.871{LS12}
-msg: 10:52:05.879{LP136}
-msg: 10:52:05.891{LT21.9852}
-msg: 10:52:05.901{LN7.2029}
-{ln-603.4} 
-{lt2227.8} 
-msg: 10:52:05.907{LA380}
-{la 1.25}
-hdg: 104, bias:  98
-hdg: 105, bias:  98
-msg: 10:52:06.883{LS13}
-msg: 10:52:06.891{LP136}
-msg: 10:52:06.903{LT21.9856}
-msg: 10:52:06.912{LN7.2032}
-{ln-603.4} 
-{lt2227.9} 
-msg: 10:52:06.919{LA379}
-{la 1.24}
-msg: 10:52:07.894{LS14}
-msg: 10:52:07.901{LP136}
-msg: 10:52:07.912{LT21.9856}
-msg: 10:52:07.922{LN7.2040}
+{lt2228.4} 
+msg: 11:24:27.129{LA612}
+{la 2.01}
+msg: 11:24:27.172{O274}
+hdg:  12, bias:  98
+msg: 11:24:28.101{LS27}
+msg: 11:24:28.107{LP6}
+msg: 11:24:28.118{LT21.9974}
+msg: 11:24:28.129{LN7.2266}
+{ln-605.4} 
+{lt2229.1} 
+msg: 11:24:28.136{LA612}
+{la 2.01}
+msg: 11:24:28.275{E2}
+Auto-pilot
+hdg:  12, bias:  98
+new hdg steering 0
+Motor speed, steer 30, 0
+Motor cmd addr:128, spd:1200, dir:1
+Motor cmd addr:129, spd:1200, dir:1
+Motor cmd addr:130, spd:1200, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1200, dir:2
+Motor cmd addr:130, spd:1200, dir:2
+msg: 11:24:29.074{O275}
+hdg:  13, bias:  98
+msg: 11:24:29.112{LS28}
+msg: 11:24:29.119{LP11}
+msg: 11:24:29.130{LT22.0028}
+msg: 11:24:29.141{LN7.2252}
+{ln-605.3} 
+{lt2229.6} 
+msg: 11:24:29.148{LA608}
+{la 1.99}
+msg: 11:24:29.523{O274}
+hdg:  12, bias:  98
+new hdg steering 0
+Motor speed, steer 30, 0
+Motor cmd addr:128, spd:1200, dir:1
+Motor cmd addr:129, spd:1200, dir:1
+Motor cmd addr:130, spd:1200, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1200, dir:2
+Motor cmd addr:130, spd:1200, dir:2
+msg: 11:24:29.724{O275}
+hdg:  13, bias:  98
+msg: 11:24:30.125{LS29}
+msg: 11:24:30.132{LP12}
+msg: 11:24:30.143{LT22.0082}
+msg: 11:24:30.154{LN7.2230}
+{ln-605.1} 
+{lt2230.2} 
+msg: 11:24:30.161{LA604}
+{la 1.98}
+msg: 11:24:30.524{O276}
+hdg:  14, bias:  98
+new hdg steering -2
+Motor speed, steer 30, -2
+Motor cmd addr:128, spd:1190, dir:1
+Motor cmd addr:129, spd:1190, dir:1
+Motor cmd addr:130, spd:1123, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1135, dir:2
+Motor cmd addr:130, spd:1135, dir:2
+{s  -2}
+msg: 11:24:30.674{O275}
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+adjusting steer to meet az -1
+hdg:  13, bias:  98
+{s  -1}
+msg: 11:24:30.739{E2}
+Auto-pilot
+Motor speed, steer 30, 0
+Motor cmd addr:128, spd:1200, dir:1
+Motor cmd addr:129, spd:1200, dir:1
+Motor cmd addr:130, spd:1200, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1200, dir:2
+Motor cmd addr:130, spd:1200, dir:2
+adjusting steer to meet az 0
+hdg:  13, bias:  98
+{s   0}
+msg: 11:24:30.975{O276}
+hdg:  14, bias:  98
+msg: 11:24:31.135{LS30}
+msg: 11:24:31.141{LP21}
+msg: 11:24:31.152{LT22.0136}
+msg: 11:24:31.163{LN7.2205}
+{ln-604.9} 
+{lt2230.7} 
+msg: 11:24:31.170{LA600}
+{la 1.97}
+new hdg steering -1
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+{s  -1}
+msg: 11:24:32.151{LS32}
+msg: 11:24:32.156{LP22}
+msg: 11:24:32.167{LT22.0248}
+msg: 11:24:32.178{LN7.2144}
+{ln-604.4} 
+{lt2231.8} 
+msg: 11:24:32.185{LA592}
+{la 1.94}
+msg: 11:24:32.276{O277}
+Motor speed, steer 30, -2
+Motor cmd addr:128, spd:1190, dir:1
+Motor cmd addr:129, spd:1190, dir:1
+Motor cmd addr:130, spd:1123, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1135, dir:2
+Motor cmd addr:130, spd:1135, dir:2
+adjusting steer to meet az -2
+hdg:  15, bias:  98
+{s  -2}
+new hdg steering -2
+Motor speed, steer 30, -2
+Motor cmd addr:128, spd:1190, dir:1
+Motor cmd addr:129, spd:1190, dir:1
+Motor cmd addr:130, spd:1123, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1135, dir:2
+Motor cmd addr:130, spd:1135, dir:2
+msg: 11:24:33.160{LS33}
+msg: 11:24:33.166{LP18}
+msg: 11:24:33.178{LT22.0309}
+msg: 11:24:33.188{LN7.2119}
+{ln-604.1} 
+{lt2232.5} 
+msg: 11:24:33.197{LA589}
+{la 1.93}
+msg: 11:24:33.202{O276}
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+adjusting steer to meet az -1
+hdg:  14, bias:  98
+{s  -1}
+msg: 11:24:33.227{O277}
+Motor speed, steer 30, -2
+Motor cmd addr:128, spd:1190, dir:1
+Motor cmd addr:129, spd:1190, dir:1
+Motor cmd addr:130, spd:1123, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1135, dir:2
+Motor cmd addr:130, spd:1135, dir:2
+adjusting steer to meet az -2
+hdg:  15, bias:  98
+{s  -2}
+msg: 11:24:33.327{O276}
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+adjusting steer to meet az -1
+hdg:  14, bias:  98
+{s  -1}
+new hdg steering -1
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+msg: 11:24:34.170{LS34}
+msg: 11:24:34.176{LP18}
+msg: 11:24:34.188{LT22.0370}
+msg: 11:24:34.198{LN7.2090}
+{ln-603.9} 
+{lt2233.1} 
+msg: 11:24:34.205{LA584}
+{la 1.92}
+new hdg steering -1
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+msg: 11:24:35.028{O277}
+Motor speed, steer 30, -2
+Motor cmd addr:128, spd:1190, dir:1
+Motor cmd addr:129, spd:1190, dir:1
+Motor cmd addr:130, spd:1123, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1135, dir:2
+Motor cmd addr:130, spd:1135, dir:2
+adjusting steer to meet az -2
+hdg:  15, bias:  98
+{s  -2}
+msg: 11:24:35.183{O276}
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+adjusting steer to meet az -1
+hdg:  14, bias:  98
+{s  -1}
+msg: 11:24:35.195{LS35}
+msg: 11:24:35.196{LP13}
+msg: 11:24:35.207{LT22.0435}
+msg: 11:24:35.216{LN7.2068}
+{ln-603.7} 
+{lt2233.7} 
+msg: 11:24:35.225{LA581}
+{la 1.91}
+new hdg steering -1
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+msg: 11:24:35.879{O277}
+Motor speed, steer 30, -2
+Motor cmd addr:128, spd:1190, dir:1
+Motor cmd addr:129, spd:1190, dir:1
+Motor cmd addr:130, spd:1123, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1135, dir:2
+Motor cmd addr:130, spd:1135, dir:2
+adjusting steer to meet az -2
+hdg:  15, bias:  98
+{s  -2}
+msg: 11:24:35.930{O276}
+Motor speed, steer 30, -1
+Motor cmd addr:128, spd:1194, dir:1
+Motor cmd addr:129, spd:1194, dir:1
+Motor cmd addr:130, spd:1160, dir:1
+Motor cmd addr:128, spd:1200, dir:2
+Motor cmd addr:129, spd:1166, dir:2
+Motor cmd addr:130, spd:1166, dir:2
+adjusting steer to meet az -1
+hdg:  14, bias:  98
+{s  -1}
+msg: 11:24:36.193{LS36}
+msg: 11:24:36.200{LP12}
+msg: 11:24:36.211{LT22.0500}
+msg: 11:24:36.221{LN7.2047}
 {ln-603.5} 
-{lt2227.9} 
-msg: 10:52:07.930{LA379}
-{la 1.24}
-msg: 10:52:08.904{LS15}
-msg: 10:52:08.911{LP136}
-msg: 10:52:08.922{LT21.9856}
-msg: 10:52:08.933{LN7.2043}
-{ln-603.5} 
-{lt2227.9} 
-msg: 10:52:08.940{LA379}
-{la 1.24}
-msg: 10:52:09.913{LS16}
-msg: 10:52:09.922{LP136}
-msg: 10:52:09.933{LT21.9848}
-msg: 10:52:09.943{LN7.2043}
-{ln-603.5} 
-{lt2227.8} 
-msg: 10:52:09.951{LA378}
-{la 1.24}
-msg: 10:52:10.927{LS17}
-msg: 10:52:10.934{LP136}
-msg: 10:52:10.945{LT21.9838}
-msg: 10:52:10.956{LN7.2029}
-{ln-603.4} 
-{lt2227.7} 
-msg: 10:52:10.963{LA373}
-{la 1.22}
-msg: 10:52:11.937{LS18}
-msg: 10:52:11.944{LP136}
-msg: 10:52:11.955{LT21.9823}
-msg: 10:52:11.966{LN7.2018}
+{lt2234.4} 
+msg: 11:24:36.229{LA578}
+{la 1.90}
+msg: 11:24:36.312{D2}
+Odo:     6.0, speed:   30
+Motor speed, steer 40, -1
+Motor cmd addr:128, spd:1592, dir:1
+Motor cmd addr:129, spd:1592, dir:1
+Motor cmd addr:130, spd:1547, dir:1
+Motor cmd addr:128, spd:1600, dir:2
+Motor cmd addr:129, spd:1555, dir:2
+Motor cmd addr:130, spd:1555, dir:2
+{v  40}
+msg: 11:24:36.430{O277}
+Motor speed, steer 40, -2
+Motor cmd addr:128, spd:1586, dir:1
+Motor cmd addr:129, spd:1586, dir:1
+Motor cmd addr:130, spd:1498, dir:1
+Motor cmd addr:128, spd:1600, dir:2
+Motor cmd addr:129, spd:1513, dir:2
+Motor cmd addr:130, spd:1513, dir:2
+adjusting steer to meet az -2
+hdg:  15, bias:  98
+{s  -2}
+msg: 11:24:36.530{O276}
+Motor speed, steer 40, -1
+Motor cmd addr:128, spd:1592, dir:1
+Motor cmd addr:129, spd:1592, dir:1
+Motor cmd addr:130, spd:1547, dir:1
+Motor cmd addr:128, spd:1600, dir:2
+Motor cmd addr:129, spd:1555, dir:2
+Motor cmd addr:130, spd:1555, dir:2
+adjusting steer to meet az -1
+hdg:  14, bias:  98
+{s  -1}
+msg: 11:24:36.558{D2}
+Odo:     6.2, speed:   40
+Motor speed, steer 50, -1
+Motor cmd addr:128, spd:1991, dir:1
+Motor cmd addr:129, spd:1991, dir:1
+Motor cmd addr:130, spd:1934, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:1944, dir:2
+Motor cmd addr:130, spd:1944, dir:2
+{v  50}
+new hdg steering -1
+Motor speed, steer 50, -1
+Motor cmd addr:128, spd:1991, dir:1
+Motor cmd addr:129, spd:1991, dir:1
+Motor cmd addr:130, spd:1934, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:1944, dir:2
+Motor cmd addr:130, spd:1944, dir:2
+msg: 11:24:37.204{LS37}
+msg: 11:24:37.209{LP15}
+msg: 11:24:37.220{LT22.0594}
+msg: 11:24:37.232{LN7.2014}
 {ln-603.3} 
-{lt2227.5} 
-msg: 10:52:11.973{LA368}
-{la 1.21}
-msg: 10:52:12.947{LS19}
-msg: 10:52:12.954{LP136}
-msg: 10:52:12.966{LT21.9812}
-msg: 10:52:12.977{LN7.2007}
+{lt2235.3} 
+msg: 11:24:37.239{LA575}
+{la 1.89}
+msg: 11:24:37.331{O277}
+Motor speed, steer 50, -2
+Motor cmd addr:128, spd:1983, dir:1
+Motor cmd addr:129, spd:1983, dir:1
+Motor cmd addr:130, spd:1873, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:1892, dir:2
+Motor cmd addr:130, spd:1892, dir:2
+adjusting steer to meet az -2
+hdg:  15, bias:  98
+{s  -2}
+msg: 11:24:37.381{O276}
+Motor speed, steer 50, -1
+Motor cmd addr:128, spd:1991, dir:1
+Motor cmd addr:129, spd:1991, dir:1
+Motor cmd addr:130, spd:1934, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:1944, dir:2
+Motor cmd addr:130, spd:1944, dir:2
+adjusting steer to meet az -1
+hdg:  14, bias:  98
+{s  -1}
+new hdg steering -1
+Motor speed, steer 50, -1
+Motor cmd addr:128, spd:1991, dir:1
+Motor cmd addr:129, spd:1991, dir:1
+Motor cmd addr:130, spd:1934, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:1944, dir:2
+Motor cmd addr:130, spd:1944, dir:2
+msg: 11:24:38.031{O275}
+Motor speed, steer 50, 0
+Motor cmd addr:128, spd:2000, dir:1
+Motor cmd addr:129, spd:2000, dir:1
+Motor cmd addr:130, spd:2000, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:2000, dir:2
+Motor cmd addr:130, spd:2000, dir:2
+adjusting steer to meet az 0
+hdg:  13, bias:  98
+{s   0}
+msg: 11:24:38.081{O276}
+hdg:  14, bias:  98
+msg: 11:24:38.213{LS38}
+msg: 11:24:38.219{LP16}
+msg: 11:24:38.230{LT22.0698}
+msg: 11:24:38.241{LN7.1978}
+{ln-603.0} 
+{lt2236.4} 
+msg: 11:24:38.248{LA573}
+{la 1.88}
+new hdg steering -1
+Motor speed, steer 50, -1
+Motor cmd addr:128, spd:1991, dir:1
+Motor cmd addr:129, spd:1991, dir:1
+Motor cmd addr:130, spd:1934, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:1944, dir:2
+Motor cmd addr:130, spd:1944, dir:2
+{s  -1}
+msg: 11:24:39.224{LS39}
+msg: 11:24:39.229{LP17}
+msg: 11:24:39.240{LT22.0795}
+msg: 11:24:39.252{LN7.1942}
+{ln-602.7} 
+{lt2237.4} 
+msg: 11:24:39.259{LA571}
+{la 1.87}
+new hdg steering -1
+Motor speed, steer 50, -1
+Motor cmd addr:128, spd:1991, dir:1
+Motor cmd addr:129, spd:1991, dir:1
+Motor cmd addr:130, spd:1934, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:1944, dir:2
+Motor cmd addr:130, spd:1944, dir:2
+msg: 11:24:39.620{E7}
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+Motor speed, steer -25, -36
+Motor cmd addr:128, spd:-969, dir:1
+Motor cmd addr:129, spd:-969, dir:1
+Motor cmd addr:130, spd:-366, dir:1
+Motor cmd addr:128, spd:-1000, dir:2
+Motor cmd addr:129, spd:-562, dir:2
+Motor cmd addr:130, spd:-562, dir:2
+left backing turn
+Tturnleft started, newhdg 194
+midturn hdg 104
+az set to 193
+msg: 11:24:39.689{O275}
+hdg:  13, bias:  98
+msg: 11:24:39.833{O276}
+hdg:  14, bias:  98
+msg: 11:24:39.934{O277}
+hdg:  15, bias:  98
+msg: 11:24:40.033{O278}
+hdg:  16, bias:  98
+msg: 11:24:40.134{O279}
+hdg:  17, bias:  98
+msg: 11:24:40.236{LS40}
+msg: 11:24:40.241{LP16}
+msg: 11:24:40.254{LT22.0813}
+msg: 11:24:40.263{LN7.1935}
+{ln-602.6} 
+{lt2237.6} 
+msg: 11:24:40.272{LA569}
+{la 1.87}
+msg: 11:24:40.284{O280}
+hdg:  18, bias:  98
+msg: 11:24:40.383{O281}
+hdg:  19, bias:  98
+msg: 11:24:40.484{O282}
+hdg:  20, bias:  98
+msg: 11:24:40.585{O283}
+hdg:  21, bias:  98
+msg: 11:24:40.684{O284}
+hdg:  22, bias:  98
+msg: 11:24:40.785{O285}
+hdg:  23, bias:  98
+msg: 11:24:40.884{O286}
+hdg:  24, bias:  98
+msg: 11:24:40.935{O287}
+hdg:  25, bias:  98
+msg: 11:24:41.034{O288}
+hdg:  26, bias:  98
+msg: 11:24:41.085{O289}
+hdg:  27, bias:  98
+msg: 11:24:41.184{O290}
+hdg:  28, bias:  98
+msg: 11:24:41.246{LS41}
+msg: 11:24:41.253{LP16}
+msg: 11:24:41.264{LT22.0788}
+msg: 11:24:41.275{LN7.1950}
+{ln-602.7} 
+{lt2237.3} 
+msg: 11:24:41.282{LA567}
+{la 1.86}
+msg: 11:24:41.288{O291}
+hdg:  29, bias:  98
+msg: 11:24:41.385{O292}
+hdg:  30, bias:  98
+msg: 11:24:41.485{O293}
+hdg:  31, bias:  98
+msg: 11:24:41.536{O294}
+hdg:  32, bias:  98
+msg: 11:24:41.635{O295}
+hdg:  33, bias:  98
+msg: 11:24:41.735{O296}
+hdg:  34, bias:  98
+msg: 11:24:41.834{O297}
+hdg:  35, bias:  98
+msg: 11:24:41.885{O298}
+hdg:  36, bias:  98
+msg: 11:24:41.986{O299}
+hdg:  37, bias:  98
+msg: 11:24:42.085{O300}
+hdg:  38, bias:  98
+msg: 11:24:42.186{O301}
+hdg:  39, bias:  98
+msg: 11:24:42.236{O302}
+hdg:  40, bias:  98
+msg: 11:24:42.257{LS42}
+msg: 11:24:42.264{LP16}
+msg: 11:24:42.275{LT22.0763}
+msg: 11:24:42.286{LN7.1975}
+{ln-602.9} 
+{lt2237.1} 
+msg: 11:24:42.293{LA566}
+{la 1.86}
+msg: 11:24:42.336{O303}
+hdg:  41, bias:  98
+msg: 11:24:42.436{O304}
+hdg:  42, bias:  98
+msg: 11:24:42.536{O305}
+hdg:  43, bias:  98
+msg: 11:24:42.586{O306}
+hdg:  44, bias:  98
+msg: 11:24:42.687{O307}
+hdg:  45, bias:  98
+msg: 11:24:42.736{O308}
+hdg:  46, bias:  98
+msg: 11:24:42.837{O309}
+hdg:  47, bias:  98
+msg: 11:24:42.936{O310}
+hdg:  48, bias:  98
+msg: 11:24:43.037{O311}
+hdg:  49, bias:  98
+msg: 11:24:43.086{O312}
+hdg:  50, bias:  98
+msg: 11:24:43.187{O313}
+hdg:  51, bias:  98
+msg: 11:24:43.236{O314}
+hdg:  52, bias:  98
+msg: 11:24:43.267{LS43}
+msg: 11:24:43.274{LP234}
+msg: 11:24:43.285{LT22.0741}
+msg: 11:24:43.296{LN7.2004}
 {ln-603.2} 
-{lt2227.4} 
-msg: 10:52:12.984{LA364}
-{la 1.19}
-msg: 10:52:13.182{T1}
+{lt2236.8} 
+msg: 11:24:43.303{LA565}
+{la 1.85}
+msg: 11:24:43.337{O315}
+hdg:  53, bias:  98
+msg: 11:24:43.437{O316}
+hdg:  54, bias:  98
+msg: 11:24:43.487{O317}
+hdg:  55, bias:  98
+msg: 11:24:43.587{O318}
+hdg:  56, bias:  98
+msg: 11:24:43.687{O319}
+hdg:  57, bias:  98
+msg: 11:24:43.737{O320}
+hdg:  58, bias:  98
+msg: 11:24:43.838{O321}
+hdg:  59, bias:  98
+msg: 11:24:43.937{O322}
+hdg:  60, bias:  98
+msg: 11:24:43.988{O323}
+hdg:  61, bias:  98
+msg: 11:24:44.088{O324}
+hdg:  62, bias:  98
+msg: 11:24:44.188{O325}
+hdg:  63, bias:  98
+msg: 11:24:44.238{O326}
+hdg:  64, bias:  98
+msg: 11:24:44.277{LS44}
+msg: 11:24:44.282{LP4}
+msg: 11:24:44.294{LT22.0727}
+msg: 11:24:44.305{LN7.2036}
+{ln-603.5} 
+{lt2236.7} 
+msg: 11:24:44.312{LA563}
+{la 1.85}
+msg: 11:24:44.339{O327}
+hdg:  65, bias:  98
+msg: 11:24:44.438{O328}
+hdg:  66, bias:  98
+msg: 11:24:44.487{O329}
+hdg:  67, bias:  98
+msg: 11:24:44.538{O330}
+hdg:  68, bias:  98
+msg: 11:24:44.637{O331}
+hdg:  69, bias:  98
+msg: 11:24:44.738{O332}
+hdg:  70, bias:  98
+msg: 11:24:44.839{O333}
+hdg:  71, bias:  98
+msg: 11:24:44.938{O334}
+hdg:  72, bias:  98
+msg: 11:24:44.989{O335}
+hdg:  73, bias:  98
+msg: 11:24:45.088{O336}
+hdg:  74, bias:  98
+msg: 11:24:45.189{O337}
+hdg:  75, bias:  98
+msg: 11:24:45.239{O338}
+hdg:  76, bias:  98
+msg: 11:24:45.291{LS45}
+msg: 11:24:45.296{LP4}
+msg: 11:24:45.307{LT22.0716}
+msg: 11:24:45.317{LN7.2068}
+{ln-603.7} 
+{lt2236.6} 
+msg: 11:24:45.325{LA562}
+{la 1.84}
+msg: 11:24:45.339{O339}
+hdg:  77, bias:  98
+msg: 11:24:45.389{O340}
+hdg:  78, bias:  98
+msg: 11:24:45.489{O341}
+hdg:  79, bias:  98
+msg: 11:24:45.589{O342}
+hdg:  80, bias:  98
+msg: 11:24:45.640{O343}
+hdg:  81, bias:  98
+msg: 11:24:45.740{O344}
+hdg:  82, bias:  98
+msg: 11:24:45.839{O345}
+hdg:  83, bias:  98
+msg: 11:24:45.890{O346}
+hdg:  84, bias:  98
+msg: 11:24:45.989{O347}
+hdg:  85, bias:  98
+msg: 11:24:46.040{O348}
+hdg:  86, bias:  98
+msg: 11:24:46.140{O349}
+hdg:  87, bias:  98
+msg: 11:24:46.240{O350}
+hdg:  88, bias:  98
+msg: 11:24:46.291{O351}
+hdg:  89, bias:  98
+msg: 11:24:46.300{LS46}
+msg: 11:24:46.305{LP4}
+msg: 11:24:46.317{LT22.0712}
+msg: 11:24:46.326{LN7.2104}
+{ln-604.0} 
+{lt2236.5} 
+msg: 11:24:46.335{LA561}
+{la 1.84}
+msg: 11:24:46.390{O352}
+hdg:  90, bias:  98
+msg: 11:24:46.490{O353}
+hdg:  91, bias:  98
+msg: 11:24:46.540{O354}
+hdg:  92, bias:  98
+msg: 11:24:46.641{O355}
+hdg:  93, bias:  98
+msg: 11:24:46.741{O356}
+hdg:  94, bias:  98
+msg: 11:24:46.790{O357}
+hdg:  95, bias:  98
+msg: 11:24:46.891{O358}
+hdg:  96, bias:  98
+msg: 11:24:46.991{O359}
+hdg:  97, bias:  98
+msg: 11:24:47.039{O0}
+hdg:  98, bias:  98
+msg: 11:24:47.138{O1}
+hdg:  99, bias:  98
+msg: 11:24:47.239{O2}
+hdg: 100, bias:  98
+msg: 11:24:47.311{LS47}
+msg: 11:24:47.318{LP283}
+msg: 11:24:47.329{LT22.0716}
+msg: 11:24:47.340{LN7.2144}
+{ln-604.4} 
+{lt2236.6} 
+msg: 11:24:47.347{LA559}
+{la 1.83}
+msg: 11:24:47.351{O3}
+hdg: 101, bias:  98
+msg: 11:24:47.389{O4}
+hdg: 102, bias:  98
+msg: 11:24:47.489{O5}
+hdg: 103, bias:  98
+msg: 11:24:47.589{O6}
+hdg: 104, bias:  98
+msg: 11:24:47.639{O7}
+hdg: 105, bias:  98
+msg: 11:24:47.740{O8}
+hdg: 106, bias:  98
+msg: 11:24:47.840{O9}
+hdg: 107, bias:  98
+msg: 11:24:47.891{O10}
+hdg: 108, bias:  98
+msg: 11:24:47.990{O11}
+hdg: 109, bias:  98
+msg: 11:24:48.091{O12}
+hdg: 110, bias:  98
+msg: 11:24:48.241{O13}
+hdg: 111, bias:  98
+msg: 11:24:48.320{LS48}
+msg: 11:24:48.328{LP318}
+msg: 11:24:48.339{LT22.0723}
+msg: 11:24:48.350{LN7.2176}
+{ln-604.6} 
+{lt2236.7} 
+msg: 11:24:48.357{LA558}
+{la 1.83}
+msg: 11:24:48.363{O14}
+hdg: 112, bias:  98
+msg: 11:24:48.441{O15}
+hdg: 113, bias:  98
+msg: 11:24:48.491{O16}
+hdg: 114, bias:  98
+msg: 11:24:48.592{O17}
+hdg: 115, bias:  98
+msg: 11:24:48.692{O18}
+hdg: 116, bias:  98
+Motor cmd addr:128, spd:0, dir:1
+msg: 11:24:48.793{O19}
+hdg: 117, bias:  98
+msg: 11:24:48.842{O20}
+hdg: 118, bias:  98
+msg: 11:24:49.192{O19}
+hdg: 117, bias:  98
+msg: 11:24:49.330{LS49}
+msg: 11:24:49.337{LP318}
+msg: 11:24:49.348{LT22.0738}
+msg: 11:24:49.358{LN7.2191}
+{ln-604.8} 
+{lt2236.8} 
+msg: 11:24:49.366{LA557}
+{la 1.83}
+msg: 11:24:49.642{O18}
+hdg: 116, bias:  98
+msg: 11:24:49.943{O19}
+hdg: 117, bias:  98
+msg: 11:24:50.043{O20}
+hdg: 118, bias:  98
+msg: 11:24:50.143{O19}
+hdg: 117, bias:  98
+msg: 11:24:50.341{LS50}
+msg: 11:24:50.347{LP318}
+msg: 11:24:50.359{LT22.0748}
+msg: 11:24:50.370{LN7.2205}
+{ln-604.9} 
+{lt2236.9} 
+msg: 11:24:50.377{LA557}
+{la 1.83}
+msg: 11:24:50.493{O20}
+hdg: 118, bias:  98
+msg: 11:24:50.544{O19}
+hdg: 117, bias:  98
+msg: 11:24:50.593{O20}
+hdg: 118, bias:  98
+msg: 11:24:50.694{O19}
+hdg: 117, bias:  98
+msg: 11:24:51.194{O18}
+hdg: 116, bias:  98
+msg: 11:24:51.353{LS51}
+msg: 11:24:51.360{LP318}
+msg: 11:24:51.371{LT22.0752}
+msg: 11:24:51.382{LN7.2212}
+{ln-604.9} 
+{lt2236.9} 
+msg: 11:24:51.389{LA557}
+{la 1.83}
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+msg: 11:24:52.590{O17}
+hdg: 115, bias:  98
+msg: 11:24:52.592{O18}
+hdg: 116, bias:  98
+msg: 11:24:52.595{O17}
+hdg: 115, bias:  98
+msg: 11:24:52.597{LS52}
+msg: 11:24:52.599{LP318}
+msg: 11:24:52.602{LT22.0748}
+msg: 11:24:52.604{LN7.2212}
+{ln-604.9} 
+{lt2236.9} 
+msg: 11:24:52.608{LA557}
+{la 1.83}
+msg: 11:24:52.610{O18}
+hdg: 116, bias:  98
+msg: 11:24:52.746{O19}
+hdg: 117, bias:  98
+msg: 11:24:52.947{O20}
+hdg: 118, bias:  98
+msg: 11:24:52.996{O21}
+hdg: 119, bias:  98
+msg: 11:24:53.046{O22}
+hdg: 120, bias:  98
+msg: 11:24:53.147{O23}
+hdg: 121, bias:  98
+msg: 11:24:53.246{O24}
+hdg: 122, bias:  98
+msg: 11:24:53.372{LS53}
+msg: 11:24:53.379{LP318}
+msg: 11:24:53.390{LT22.0759}
+msg: 11:24:53.401{LN7.2216}
+{ln-605.0} 
+{lt2237.0} 
+msg: 11:24:53.408{LA557}
+{la 1.83}
+msg: 11:24:53.646{O25}
+hdg: 123, bias:  98
+msg: 11:24:53.747{O24}
+hdg: 122, bias:  98
+msg: 11:24:53.948{O25}
+hdg: 123, bias:  98
+msg: 11:24:53.997{O24}
+hdg: 122, bias:  98
+msg: 11:24:54.380{LS54}
+msg: 11:24:54.388{LP318}
+msg: 11:24:54.400{LT22.0766}
+msg: 11:24:54.411{LN7.2220}
+{ln-605.0} 
+{lt2237.1} 
+msg: 11:24:54.418{LA556}
+{la 1.82}
+msg: 11:24:54.448{O25}
+hdg: 123, bias:  98
+msg: 11:24:54.549{O24}
+hdg: 122, bias:  98
+msg: 11:24:54.598{O25}
+hdg: 123, bias:  98
+msg: 11:24:55.199{O26}
+hdg: 124, bias:  98
+msg: 11:24:55.391{LS55}
+msg: 11:24:55.398{LP318}
+msg: 11:24:55.409{LT22.0770}
+msg: 11:24:55.420{LN7.2223}
+{ln-605.0} 
+{lt2237.1} 
+msg: 11:24:55.427{LA555}
+{la 1.82}
+msg: 11:24:55.449{O27}
+hdg: 125, bias:  98
+msg: 11:24:55.499{O26}
+hdg: 124, bias:  98
+msg: 11:24:55.699{O27}
+hdg: 125, bias:  98
+Motor cmd addr:128, spd:0, dir:2
+msg: 11:24:56.200{O26}
+hdg: 124, bias:  98
+msg: 11:24:56.404{LS56}
+msg: 11:24:56.412{LP318}
+msg: 11:24:56.423{LT22.0777}
+msg: 11:24:56.433{LN7.2220}
+{ln-605.0} 
+{lt2237.2} 
+msg: 11:24:56.440{LA554}
+{la 1.82}
+msg: 11:24:57.201{O27}
+hdg: 125, bias:  98
+msg: 11:24:57.351{O26}
+hdg: 124, bias:  98
+msg: 11:24:57.413{LS57}
+msg: 11:24:57.420{LP318}
+msg: 11:24:57.432{LT22.0781}
+msg: 11:24:57.443{LN7.2216}
+{ln-605.0} 
+{lt2237.2} 
+msg: 11:24:57.450{LA553}
+{la 1.81}
+msg: 11:24:57.455{O27}
+hdg: 125, bias:  98
+msg: 11:24:58.423{LS58}
+msg: 11:24:58.430{LP318}
+msg: 11:24:58.442{LT22.0784}
+msg: 11:24:58.453{LN7.2212}
+{ln-604.9} 
+{lt2237.3} 
+msg: 11:24:58.461{LA552}
+{la 1.81}
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+msg: 11:24:59.433{LS59}
+msg: 11:24:59.440{LP318}
+msg: 11:24:59.453{LT22.0781}
+msg: 11:24:59.462{LN7.2209}
+{ln-604.9} 
+{lt2237.2} 
+msg: 11:24:59.471{LA551}
+{la 1.81}
+End of backing, all ahead full
+Motor speed, steer 50, 36
+msg: 11:25:00.305{O26}
+hdg: 124, bias:  98
+msg: 11:25:00.387{D5}
+Motor speed, steer 50, 0
+Motor cmd addr:128, spd:2000, dir:1
+Motor cmd addr:128, spd:1124, dir:1
+Motor cmd addr:129, spd:1124, dir:1
+Motor cmd addr:130, spd:2000, dir:1
+Motor cmd addr:128, spd:732, dir:2
+Motor cmd addr:129, spd:1938, dir:2
+Motor cmd addr:130, spd:1938, dir:2
+thread ended
+Motor cmd addr:129, spd:2000, dir:1
+Motor cmd addr:130, spd:2000, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:2000, dir:2
+Motor cmd addr:130, spd:2000, dir:2
+Motor speed, steer 50, 0
+Motor cmd addr:128, spd:2000, dir:1
+Motor cmd addr:129, spd:2000, dir:1
+Motor cmd addr:130, spd:2000, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:2000, dir:2
+Motor cmd addr:130, spd:2000, dir:2
+az set to 124
+new hdg steering 0
+Motor speed, steer 50, 0
+Motor cmd addr:128, spd:2000, dir:1
+Motor cmd addr:129, spd:2000, dir:1
+Motor cmd addr:130, spd:2000, dir:1
+Motor cmd addr:128, spd:2000, dir:2
+Motor cmd addr:129, spd:2000, dir:2
+Motor cmd addr:130, spd:2000, dir:2
+{s   0}
+msg: 11:25:01.431{LS0}
+msg: 11:25:01.433{LP318}
+msg: 11:25:01.435{LT22.0777}
+msg: 11:25:01.437{LN7.2209}
+{ln-604.9} 
+{lt2237.2} 
+msg: 11:25:01.440{LA550}
+{la 1.80}
+msg: 11:25:01.443{O27}
+hdg: 125, bias:  98
+msg: 11:25:01.444{D0}
+Odo:    25.7, speed:   50
 Motor speed, steer 0, 0
-Voltage:  18.6
-Odo:   131.7, speed:    0
-odometer:   131.7
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+{v   0}
+msg: 11:25:01.459{O28}
+hdg: 126, bias:  98
+msg: 11:25:01.461{O29}
+hdg: 127, bias:  98
+msg: 11:25:01.463{O30}
+hdg: 128, bias:  98
+msg: 11:25:01.465{LS1}
+msg: 11:25:01.467{LP124}
+msg: 11:25:01.470{LT22.0745}
+msg: 11:25:01.481{LN7.2148}
+{ln-604.4} 
+{lt2236.9} 
+msg: 11:25:01.488{LA549}
+{la 1.80}
+new hdg steering -4
+Motor speed, steer 0, -4
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+{s  -4}
+msg: 11:25:02.465{LS2}
+msg: 11:25:02.472{LP107}
+msg: 11:25:02.483{LT22.0730}
+msg: 11:25:02.494{LN7.2119}
+{ln-604.1} 
+{lt2236.7} 
+msg: 11:25:02.501{LA548}
+{la 1.80}
+new hdg steering -4
+Motor speed, steer 0, -4
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+msg: 11:25:03.476{LS3}
+msg: 11:25:03.483{LP107}
+msg: 11:25:03.494{LT22.0730}
+msg: 11:25:03.504{LN7.2119}
+{ln-604.1} 
+{lt2236.7} 
+msg: 11:25:03.514{LA548}
+{la 1.80}
+new hdg steering -4
+Motor speed, steer 0, -4
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+msg: 11:25:04.486{LS4}
+msg: 11:25:04.493{LP107}
+msg: 11:25:04.504{LT22.0723}
+msg: 11:25:04.514{LN7.2119}
+{ln-604.1} 
+{lt2236.7} 
+msg: 11:25:04.522{LA547}
+{la 1.79}
+new hdg steering -4
+Motor speed, steer 0, -4
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+msg: 11:25:05.497{LS5}
+msg: 11:25:05.504{LP107}
+msg: 11:25:05.515{LT22.0720}
+msg: 11:25:05.525{LN7.2122}
+{ln-604.2} 
+{lt2236.6} 
+msg: 11:25:05.533{LA547}
+{la 1.79}
+new hdg steering -4
+Motor speed, steer 0, -4
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+msg: 11:25:06.505{LS6}
+msg: 11:25:06.512{LP107}
+msg: 11:25:06.524{LT22.0716}
+msg: 11:25:06.534{LN7.2122}
+{ln-604.2} 
+{lt2236.6} 
+msg: 11:25:06.541{LA546}
+{la 1.79}
+msg: 11:25:06.938{T1}
+Motor speed, steer 0, 0
+Motor cmd addr:128, spd:0, dir:1
+Motor cmd addr:129, spd:0, dir:1
+Motor cmd addr:130, spd:0, dir:1
+Motor cmd addr:128, spd:0, dir:2
+Motor cmd addr:129, spd:0, dir:2
+Motor cmd addr:130, spd:0, dir:2
+Voltage:  18.7
+Odo:    25.7, speed:    0
+odometer:    25.7
 missing heartbeats:     0
 late gps readings:     0
 repeat gps readings:     0
