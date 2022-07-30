@@ -146,13 +146,13 @@ tty.flushInput()
 Kfilter = cEKF.Kalman_filter()
 # Threads
 # =========================================================================
-def hturnleft(newhdg):
+def hturnleft(thdg):
     global azgoalflag
     global robot
     
-    logit("Tturnleft started, newhdg %d" % newhdg)
-    thdg = (hdg + 90) % 360      # mid turn heading
-    logit("midturn hdg %d" % thdg)
+#     logit("Tturnleft started, newhdg %d" % newhdg)
+#     thdg = (hdg + 90) % 360      # mid turn heading
+#     logit("midturn hdg %d" % thdg)
     if hdg >= 270:
         while hdg > 180:         # keep turning til past the 359->0 hazard
             time.sleep(0.05)
@@ -161,10 +161,10 @@ def hturnleft(newhdg):
         time.sleep(0.05)
 #         logit("still turning hdg now %d" % hdg)
 #    max_turn(right_limit, 0)
-    robot.stop_all()
-    time.sleep(0.1)
-    logit("End of backing, all ahead full")
-    robot.motor(speed, right_limit)
+#     robot.stop_all()
+#     time.sleep(0.1)
+#     logit("End of backing, all ahead full")
+#     robot.motor(speed, right_limit)
     azgoalflag = True
     logit("thread ended")
     return
@@ -513,14 +513,17 @@ def star_commands(schr):
     elif (auto and schr == '7'):      # hammer head left 180 deg
         if azgoalflag is True:         # turn cannot be in progress
             left = True
-            newhdg = (hdg + 180) % 360
             robot.stop_all()
             time.sleep(.05)
 #           max_turn(left_limit, -speed * .5)
             robot.motor(int(-speed * .5), left_limit)
             logit("left backing turn")
             azgoalflag = False
-            bot_thread = threading.Thread(target = hturnleft,args=[newhdg])
+            azimuth = (azimuth + 180) % 360
+            logit("az set to %d" % azimuth)
+            thdg = (hdg + 90) % 360      # mid turn heading
+            logit("midturn hdg %d" % thdg)
+            bot_thread = threading.Thread(target = hturnleft,args=[thdg])
             bot_thread.start()
             '''
             robot.motor(0, 0)       #stop
@@ -533,9 +536,6 @@ def star_commands(schr):
                 robot.motor(0, str)
                 time.sleep(0.04)
             '''
-            azimuth += 180
-            azimuth %= 360
-            logit("az set to %d" % azimuth)
 
     elif (schr == '8'):
         pass
@@ -907,6 +907,8 @@ try:
                     pass
             flag = False
             cbuff = ""
+            if azgoalflag is False:
+                time.sleep(0.05)          # give a thread a time slice
             # endif flag
             
 #========================================================================
