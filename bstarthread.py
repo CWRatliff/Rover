@@ -88,7 +88,7 @@ destAV = [0.0, 0.0]                     # waypoint destination
 estAV = [0.0, 0.0]                      # est pos either posAV or posAV+DR
 filterRV = [0.0, 0.0]                   # Kalman filtered loc
 pathRV = [0.0, 0.0]                     # from present pos to wpt end
-posAV = [0.0, 0.0]                      # gps position
+posAV = [-604.0, 2221.0]                      # gps position
 prevAV = [0.0, 0.0]                     # gps position previous sampling
 startAV = [0.0, 0.0]                    # waypoint track start
 trackRV = [0.0, 0.0]                    # waypoint path from initial position to destination
@@ -144,6 +144,10 @@ tty = serial.Serial(port, 9600)
 tty.flushInput()
 
 Kfilter = cEKF.Kalman_filter()
+Kfilter.Kalman_start(time.time(), posAV[0], posAV[1], \
+    math.radians((450-hdg) % 360), \
+    speed * spdfactor)
+epoch = time.time()
 # Threads
 # =========================================================================
 def hturnleft(thdg):
@@ -914,7 +918,7 @@ try:
 #========================================================================
         if (time.time() > (tensecepoch + 10)): # ten second timer
             tensecepoch = time.time()
-            if azgoalflag is False:         # azimuth is controlling
+            if azgoalflag is True:         # azimuth is controlling
                 volts = robot.battery_voltage()
                 xchr = "{b%5.1f}" % volts
                 sendit(xchr)
@@ -935,53 +939,53 @@ try:
                     speed = 0
                     robot.motor(speed, steer)
 
-                v = speed * spdfactor
-                phi = math.radians((450-hdg) % 360)
-                estAV = posAV
-                # if no recent GPS or (no GPS movement when speed > 0)
-                # then do dead reconing
-                if (gpsEpoch < oldEpoch) \
-                    or (gpsokflag is False and speed > 0) \
-                    or accgps > 4.0:   # no recent GPS lat/lon
-                    
-                    delt = epoch - oldEpoch
-                    dist = delt * v
-                    estAV[0] = estAV[0] + dist * math.sin(phi)
-                    estAV[1] = estAV[1] + dist * math.cos(phi)
-                    vprint("estAV", estAV)
-                    cogbase = 0
-                    if gpsEpoch < oldEpoch:
-                        logit("gps tardy")
-                        countgpstardy += 1
-                    elif accgps > 4.0:
-                        logit("gps inaccurate")
-                        countgpsacc += 1
-                    else:
-                        logit("gps repeat position")
-                        countgpsrepeat += 1
-                    logit("Dead Reconing =========================")
-#                        gpsokflag = True
-                else:    
-                    vprint("posAV", posAV)
-                    countgpsfix += 1
-                    
+            v = speed * spdfactor
+            phi = math.radians((450-hdg) % 360)
+            estAV = posAV
+            # if no recent GPS or (no GPS movement when speed > 0)
+            # then do dead reconing
+            if (gpsEpoch < oldEpoch) \
+                or (gpsokflag is False and speed > 0) \
+                or accgps > 4.0:   # no recent GPS lat/lon
+                
+                delt = epoch - oldEpoch
+                dist = delt * v
+                estAV[0] = estAV[0] + dist * math.sin(phi)
+                estAV[1] = estAV[1] + dist * math.cos(phi)
+                vprint("estAV", estAV)
+                cogbase = 0
+                if gpsEpoch < oldEpoch:
+                    logit("gps tardy")
+                    countgpstardy += 1
+                elif accgps > 4.0:
+                    logit("gps inaccurate")
+                    countgpsacc += 1
+                else:
+                    logit("gps repeat position")
+                    countgpsrepeat += 1
+                logit("Dead Reconing =========================")
+#               gpsokflag = True
+            else:    
+                vprint("posAV", posAV)
+                countgpsfix += 1
+                
 #                    logit("time: " + str(epoch))
-                logit("wpt: %2d raw hdg: %6.1f" % (wpt, hdg))
-                logit("raw speed: %5.2f" % v)
+            logit("wpt: %2d raw hdg: %6.1f" % (wpt, hdg))
+            logit("raw speed: %5.2f" % v)
 
-                xEst = Kfilter.Kalman_step(epoch, estAV[0], estAV[1], phi, v)
-                fhdg = int((450 - math.degrees(xEst[2, 0])) % 360)
-                ekfAV = [xEst[0, 0], xEst[1, 0]]   # see BOT 3:41 for diagram
-                filterRV = vsub(ekfAV, startAV)
-                vprint("Kalman pos vec", filterRV)
-                vprint("filtered E-N pos: ", ekfAV)
-                logit("Filtered hdg: %6.1f" % fhdg)
-                logit("Filtered speed: %6.2f" % xEst[3, 0])
+            xEst = Kfilter.Kalman_step(epoch, estAV[0], estAV[1], phi, v)
+            fhdg = int((450 - math.degrees(xEst[2, 0])) % 360)
+            ekfAV = [xEst[0, 0], xEst[1, 0]]   # see BOT 3:41 for diagram
+            filterRV = vsub(ekfAV, startAV)
+            vprint("Kalman pos vec", filterRV)
+            vprint("filtered E-N pos: ", ekfAV)
+            logit("Filtered hdg: %6.1f" % fhdg)
+            logit("Filtered speed: %6.2f" % xEst[3, 0])
 
-                cstr = "{ln%5.1f} " % ekfAV[0]
-                sendit(cstr)
-                cstr = "{lt%5.1f} " % ekfAV[1]
-                sendit(cstr)
+            cstr = "{ln%5.1f} " % ekfAV[0]
+            sendit(cstr)
+            cstr = "{lt%5.1f} " % ekfAV[1]
+            sendit(cstr)
                 
             if (auto):
                      
