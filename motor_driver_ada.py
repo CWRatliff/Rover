@@ -57,7 +57,9 @@ class motor_driver_ada:
         print("servo lf ="+str(self.lf_motor.angle))
         print("servo lr ="+str(self.lr_motor.angle))
 
+    '''
     def set_motor(self, address, v, av, m12):
+
         vx = int(v * av)
         if (m12 == 1):
             self.rc.SpeedM1(address, vx)     # cmd 35
@@ -65,9 +67,9 @@ class motor_driver_ada:
             self.rc.SpeedM2(address, vx)     # cmd 36
         self.log.write("Motor cmd addr:%d, spd:%d, dir:%d/n" % (address, vx, m12))
     '''
-    new
+
     def set_motor(self, address, v, av, m12):
-        vx = int(v * av * 126)
+        vx = int(v * av * 1.26)
         if (m12 == 1):
             if vx >= 0:
                 self.rc.ForwardM1(address, vx)
@@ -78,7 +80,7 @@ class motor_driver_ada:
                 self.rc.ForwardM2(address, vx)
             else:
                 self.rc.BackwardM2(address, abs(vx))
-    '''
+
     def set_angle(self, corner, angle):         # calibration method
         if corner == 0:
             self.rr_motor.angle = angle
@@ -146,11 +148,10 @@ class motor_driver_ada:
         if (steer > self.right_limit):
             steer = self.right_limit
 #        vel = speed(in pcts) * motor speed 
-'''
-new
+
         vel = speed
-'''
-        vel = Rspeedfactor * speed
+
+#        vel = Rspeedfactor * speed
         voc = 0.0
         vic = 0.0
         #roboclaw speed limit 0 to 127
