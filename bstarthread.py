@@ -177,8 +177,8 @@ def watchdogCW(goal):
                 return
     while hdg <= goal:
         time.sleep(0.05)
-            if azgoalflag is True # abort?
-                return
+        if azgoalflag is True # abort?
+            return
 
 #     robot.stop_all()
 #     time.sleep(0.1)
@@ -266,7 +266,6 @@ def odometer(spd):
     segstart = now
 #==================================================================
 def max_turn(angle, spd):
-    global robot
     global steer
     
     dt = 1
@@ -474,7 +473,7 @@ def simple_commands(schr):
             robot.pivot2(1)
             time.sleep(3.0)
             robot.stop_all()
-            max_turn(right_limit, speed)            
+            robot.motor(speed, 0)            
 #============================ pan/tilt camera
     elif schr == 'L':
         pan += 5
