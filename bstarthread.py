@@ -150,27 +150,40 @@ Kfilter.Kalman_start(time.time(), posAV[0], posAV[1], \
 epoch = time.time()
 # Threads
 # =========================================================================
-def hturnleft(thdg):
+# def hturnleft(thdg):
+#     global azgoalflag
+#     global robot
+#     
+#     if hdg >= 270:
+#         while hdg > 180:         # keep turning til past the 359->0 hazard
+#             time.sleep(0.05)
+#     while hdg <= thdg:
+#         time.sleep(0.05)
+# 
+# #     robot.stop_all()
+# #     time.sleep(0.1)
+#     azgoalflag = True
+#     logit("thread ended")
+#     return
+# =========================================================================
+# thread to monitor CW rotation, ending at goal 
+def watchdogCW(goal):
     global azgoalflag
-    global robot
-    
-#     logit("Tturnleft started, newhdg %d" % newhdg)
-#     thdg = (hdg + 90) % 360      # mid turn heading
-#     logit("midturn hdg %d" % thdg)
-    if hdg >= 270:
+
+    if hdg > 180 and goal < 180:
         while hdg > 180:         # keep turning til past the 359->0 hazard
             time.sleep(0.05)
-#            logit("still pre-turning hdg now %d" % hdg)
-    while hdg <= thdg:
+            if azgoalflag is True # abort?
+                return
+    while hdg <= goal:
         time.sleep(0.05)
-#         logit("still turning hdg now %d" % hdg)
-#    max_turn(right_limit, 0)
+            if azgoalflag is True # abort?
+                return
+
 #     robot.stop_all()
 #     time.sleep(0.1)
-#     logit("End of backing, all ahead full")
-#     robot.motor(speed, right_limit)
     azgoalflag = True
-    logit("thread ended")
+    logit("watchdog thread ended")
     return
 # ============================================================================
 # cvt lat/lon seconds to U.S survey feet
@@ -450,7 +463,18 @@ def simple_commands(schr):
                 azimuth += right_limit
                 logit("az set to %d" % azimuth)
         else:
+'''
+********************************************************
             max_turn(right_limit, speed)
+********************************************************
+'''
+            robot.stop_all()
+            robot.pivot1(1)
+            time.sleep(0.5)
+            robot.pivot2(1)
+            time.sleep(3.0)
+            robot.stop_all()
+            max_turn(right_limit, speed)            
 #============================ pan/tilt camera
     elif schr == 'L':
         pan += 5
@@ -527,7 +551,7 @@ def star_commands(schr):
             logit("az set to %d" % azimuth)
             thdg = (hdg + 90) % 360      # mid turn heading
             logit("midturn hdg %d" % thdg)
-            bot_thread = threading.Thread(target = hturnleft,args=[thdg])
+            bot_thread = threading.Thread(target = watchdogCW,args=[thdg])
             bot_thread.start()
             '''
             robot.motor(0, 0)       #stop

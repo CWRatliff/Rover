@@ -222,6 +222,40 @@ class motor_driver_ada:
 #             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
 #             self.log.write(cstr)
 
+# rotate about vertical axis
+    def pivot1(self, direction):
+        vel = 20                   # guess at good pivot speed
+        if direction < 0:                          # left CCW
+            self.rr_motor.angle = self.right_limit
+            self.rf_motor.angle = self.left_limit
+            self.lf_motor.angle = self.right_limit
+            self.lr_motor.angle = self.left_limit
+            
+        else:                                      # right CW
+            self.rr_motor.angle = self.left_limit
+            self.rf_motor.angle = self.right_limit
+            self.lf_motor.angle = self.left_limit
+            self.lr_motor.angle = self.right_limit
+
+    def pivot2(self, direction):
+        vel = 20                   # guess at good pivot speed
+        if direction < 0:                          # left CCW
+            self.set_motor(0x80, vel, 1, 1)
+            self.set_motor(0x81, vel, -0.8, 1)
+            self.set_motor(0x82, vel, 1, 1)
+            self.set_motor(0x80, vel, 0.8, 2)
+            self.set_motor(0x81, vel, -1, 2)
+            self.set_motor(0x82, vel, -1, 2)
+            
+        else:                                      # right CW
+            self.set_motor(0x80, vel, -1, 1)
+            self.set_motor(0x81, vel, 0.8, 1)
+            self.set_motor(0x82, vel, -1, 1)
+            self.set_motor(0x80, vel, -0.8, 2)
+            self.set_motor(0x81, vel, 1, 2)
+            self.set_motor(0x82, vel, 1, 2)
+
+
     def sensor_pan(self, angle):
         self.pan.angle = Rpanbias + angle
         
