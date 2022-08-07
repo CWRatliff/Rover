@@ -173,11 +173,11 @@ def watchdogCW(goal):
     if hdg > 180 and goal < 180:
         while hdg > 180:         # keep turning til past the 359->0 hazard
             time.sleep(0.05)
-            if azgoalflag is True # abort?
+            if azgoalflag is True: # abort?
                 return
     while hdg <= goal:
         time.sleep(0.05)
-        if azgoalflag is True # abort?
+        if azgoalflag is True: # abort?
             return
 
 #     robot.stop_all()
@@ -462,11 +462,11 @@ def simple_commands(schr):
                 azimuth += right_limit
                 logit("az set to %d" % azimuth)
         else:
-'''
+            '''
 ********************************************************
             max_turn(right_limit, speed)
 ********************************************************
-'''
+            '''
             robot.stop_all()
             robot.pivot1(1)
             time.sleep(0.5)
