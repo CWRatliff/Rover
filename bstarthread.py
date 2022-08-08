@@ -351,6 +351,7 @@ def advance_waypoint():
     return
 #===================================================================
 def simple_commands(schr):
+    global azgoalflag
     global azimuth
     global pan
     global speed
@@ -467,6 +468,7 @@ def simple_commands(schr):
             max_turn(right_limit, speed)
 ********************************************************
             '''
+            '''
             robot.stop_all()
             robot.pivot1()
             time.sleep(0.5)
@@ -485,11 +487,10 @@ def simple_commands(schr):
                 azgoalflag = False
                 azimuth = (azimuth + 90) % 360
                 logit("az set to %d" % azimuth)
-                thdg = (hdg + 180) % 360      # 180 pivot
+                thdg = (hdg + 90) % 360      # 180 pivot
                 logit("pivot turn hdg %d" % thdg)
                 bot_thread = threading.Thread(target = watchdogCW,args=[thdg])
                 bot_thread.start()
-            '''
            
 #============================ pan/tilt camera
     elif schr == 'L':

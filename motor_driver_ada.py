@@ -192,8 +192,8 @@ class motor_driver_ada:
         elif steer > 0:
             self.rr_motor.angle = Rrrbias + steer
             self.rf_motor.angle = Rrfbias - steer
-            self.lf_motor.angle = Rlfbias + phi
-            self.lr_motor.angle = Rlrbias - phi
+            self.lf_motor.angle = Rlfbias - phi
+            self.lr_motor.angle = Rlrbias + phi
             self.set_motor(0x80, vel, vic, 1) #rf
             self.set_motor(0x81, vel, vic, 1) #rr
             self.set_motor(0x82, vel,   1, 1) #lm
