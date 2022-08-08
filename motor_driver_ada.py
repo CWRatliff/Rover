@@ -1,7 +1,7 @@
 #rover motor driver class - 4 servo motors for steering, 6 DC motors for locomotion
 #220510 using WhichRover for constants
 #220723 kit object made "self"
-#220807 pivot added, motor assignments corrected
+#220807 pivot added, motor assignments corrected, servos are CW oriented, neg steer is CCW from above
 
 from whichrover import *
 from adafruit_servokit import ServoKit
@@ -158,33 +158,33 @@ class motor_driver_ada:
         #roboclaw speed limit 0 to 127
         # see BOT-2/18 (181201)
         # math rechecked 200329
-        if steer != 0:                                  #if steering angle not zero, compute angles, wheel speed
+        if steer != 0:                              #if steering angle not zero, compute angles, wheel speed
             angle = math.radians(abs(steer))
             ric = Rd3 / math.sin(angle)             #turn radius - inner corner
             rm = ric * math.cos(angle) + Rd1        #body central radius
-            roc = math.sqrt((rm+Rd1)**2 + Rd3**2) #outer corner
+            roc = math.sqrt((rm+Rd1)**2 + Rd3**2)   #outer corner
             rmo = rm + Rd4                          #middle outer
             rmi = rm - Rd4                          #middle inner
             phi = math.degrees(math.asin(Rd3 / roc))
-            if steer < 0:
-                phi = -phi
-            voc = roc / rmo                             #velocity corners & middle inner
+#             if steer < 0:
+#                 phi = -phi
+            voc = roc / rmo                         #velocity corners & middle inner
             vic = ric / rmo
             vim = rmi / rmo
 
-# SERVO MOTORS ARE COUNTER CLOCKWISE
+# SERVO MOTORS ARE COUNTER CLOCKWISE, 'steer' is CCW
 # left turn
         if steer < 0:
-            self.rr_motor.angle = Rrrbias + phi
-            self.rf_motor.angle = Rrfbias - phi
+            self.rr_motor.angle = Rrrbias - phi
+            self.rf_motor.angle = Rrfbias + phi
             self.lf_motor.angle = Rlfbias - steer
             self.lr_motor.angle = Rlrbias + steer
-            self.set_motor(0x80, vel, voc, 1)           #RC 1 - rf, rm
-            self.set_motor(0x81, vel, voc, 1)           #RC 2 - lm, lf
-            self.set_motor(0x82, vel, vim, 1)           #RC 3 - rr, lr
-            self.set_motor(0x80, vel,   1, 2)           #RC 1 - rf, rm
-            self.set_motor(0x81, vel, vic, 2)           #RC 2 - lm, lf
-            self.set_motor(0x82, vel, vic, 2)           #RC 3 - rr, lr
+            self.set_motor(0x80, vel, voc, 1)           #RC 1 - rf
+            self.set_motor(0x81, vel, voc, 1)           #RC 2 - rr
+            self.set_motor(0x82, vel, vim, 1)           #RC 3 - lm
+            self.set_motor(0x80, vel,   1, 2)           #RC 1 - rm
+            self.set_motor(0x81, vel, vic, 2)           #RC 2 - lr
+            self.set_motor(0x82, vel, vic, 2)           #RC 3 - lf
 #             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
 #             self.log.write(cstr)
 
@@ -192,14 +192,14 @@ class motor_driver_ada:
         elif steer > 0:
             self.rr_motor.angle = Rrrbias + steer
             self.rf_motor.angle = Rrfbias - steer
-            self.lf_motor.angle = Rlfbias - phi
-            self.lr_motor.angle = Rlrbias + phi
-            self.set_motor(0x80, vel, vic, 1)
-            self.set_motor(0x81, vel, vic, 1)
-            self.set_motor(0x82, vel,   1, 1)
-            self.set_motor(0x80, vel, vim, 2)
-            self.set_motor(0x81, vel, voc, 2)
-            self.set_motor(0x82, vel, voc, 2)
+            self.lf_motor.angle = Rlfbias + phi
+            self.lr_motor.angle = Rlrbias - phi
+            self.set_motor(0x80, vel, vic, 1) #rf
+            self.set_motor(0x81, vel, vic, 1) #rr
+            self.set_motor(0x82, vel,   1, 1) #lm
+            self.set_motor(0x80, vel, vim, 2) #rm
+            self.set_motor(0x81, vel, voc, 2) #lr
+            self.set_motor(0x82, vel, voc, 2) #lf
             #            print("80 vic, vim ",vic,vim)
 #            print("81 vic, voc ",vic,voc)
 #            print("82 vom, voc ", 1, voc)
@@ -223,38 +223,31 @@ class motor_driver_ada:
 #             cstr = "v, vout, vin %f %f %f\n" % (vel, voc, vic)
 #             self.log.write(cstr)
 
+# SERVO MOTORS ARE COUNTER CLOCKWISE
 # rotate about vertical axis
-    def pivot1(self, direction):
-        vel = 20                   # guess at good pivot speed
-        if direction < 0:                          # left CCW
-            self.rr_motor.angle = Rrrbias + self.right_limit
-            self.rf_motor.angle = Rrfbias + self.left_limit
-            self.lf_motor.angle = Rlfbias + self.right_limit
-            self.lr_motor.angle = Rlrbias + self.left_limit
-            
-        else:                                      # right CW
-            self.rr_motor.angle = Rrrbias + self.left_limit
-            self.rf_motor.angle = Rrfbias + self.right_limit
-            self.lf_motor.angle = Rlfbias + self.left_limit
-            self.lr_motor.angle = Rlrbias + self.right_limit
+    def pivot1(self):
+        self.rr_motor.angle = Rrrbias + self.left_limit    # actually rotates CCW
+        self.rf_motor.angle = Rrfbias + self.right_limit
+        self.lf_motor.angle = Rlfbias + self.left_limit
+        self.lr_motor.angle = Rlrbias + self.right_limit
 
     def pivot2(self, direction):
         vel = 20                   # guess at good pivot speed
         if direction < 0:                          # left CCW
-            self.set_motor(0x80, vel, 1, 1)
-            self.set_motor(0x81, vel, 1, 1)
-            self.set_motor(0x82, vel, -0.8, 1)
-            self.set_motor(0x80, vel, 0.8, 2)
-            self.set_motor(0x81, vel, -1, 2)
-            self.set_motor(0x82, vel, -1, 2)
+            self.set_motor(0x80, vel, 1, 1)    #rf
+            self.set_motor(0x81, vel, 1, 1)    #rr
+            self.set_motor(0x82, vel, -0.8, 1) #lm
+            self.set_motor(0x80, vel, 0.8, 2)  #rm
+            self.set_motor(0x81, vel, -1, 2)   #lr
+            self.set_motor(0x82, vel, -1, 2)   #lf
             
         else:                                      # right CW
-            self.set_motor(0x80, vel, -1, 1) #rf
-            self.set_motor(0x81, vel, -1, 1) #rr
-            self.set_motor(0x82, vel, 0.8, 1) #lm
+            self.set_motor(0x80, vel, -1, 1)   #rf
+            self.set_motor(0x81, vel, -1, 1)   #rr
+            self.set_motor(0x82, vel, 0.8, 1)  #lm
             self.set_motor(0x80, vel, -0.8, 2) #rm
-            self.set_motor(0x81, vel, 1, 2) #lr
-            self.set_motor(0x82, vel, 1, 2) #lf
+            self.set_motor(0x81, vel, 1, 2)    #lr
+            self.set_motor(0x82, vel, 1, 2)    #lf
 
 
     def sensor_pan(self, angle):
