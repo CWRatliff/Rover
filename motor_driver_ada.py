@@ -2,7 +2,30 @@
 #220510 using WhichRover for constants
 #220723 kit object made "self"
 #220807 pivot added, motor assignments corrected, servos are CW oriented, neg steer is CCW from above
+'''
+    +--+                   +--+
+    |  | RC 0x82-1         |  | RC 0x80-1
+    |  | servo 2 lf        |  | servo 1 rf
+    |  |                   |  |
+    +--+                   +--+
 
+
++--+                           +--+
+|  | RC 0x82-1    ^            |  | RC 0x80-2
+|  |              |            |  |
+|  |              |            |  |
++--+                           +--+
+
+
+    +--+                   +--+
+    |  | RC 0x81-2         |  | RC 0x81-1
+    |  | servo 3 lr        |  | servo 0 rr
+    |  |                   |  |
+    +--+                   +--+
+
+steering is CW
+servos are CCW
+'''
 from whichrover import *
 from adafruit_servokit import ServoKit
 # import serial

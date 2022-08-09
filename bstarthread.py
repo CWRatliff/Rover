@@ -180,8 +180,9 @@ def watchdogCW(goal):
         if azgoalflag is True: # abort?
             return
 
-#     robot.stop_all()
-#     time.sleep(0.1)
+    robot.stop_all()
+    robot.motor(0, 0)
+    time.sleep(0.1)
     azgoalflag = True
     logit("watchdog thread ended")
     return
