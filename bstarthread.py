@@ -148,23 +148,8 @@ Kfilter.Kalman_start(time.time(), posAV[0], posAV[1], \
     math.radians((450-hdg) % 360), \
     speed * spdfactor)
 epoch = time.time()
+
 # Threads
-# =========================================================================
-# def hturnleft(thdg):
-#     global azgoalflag
-#     global robot
-#     
-#     if hdg >= 270:
-#         while hdg > 180:         # keep turning til past the 359->0 hazard
-#             time.sleep(0.05)
-#     while hdg <= thdg:
-#         time.sleep(0.05)
-# 
-# #     robot.stop_all()
-# #     time.sleep(0.1)
-#     azgoalflag = True
-#     logit("thread ended")
-#     return
 # =========================================================================
 # thread to monitor CW rotation, ending at goal 
 def watchdogCW(goal):
@@ -176,6 +161,27 @@ def watchdogCW(goal):
             if azgoalflag is True: # abort?
                 return
     while hdg <= goal:
+        time.sleep(0.05)
+        if azgoalflag is True: # abort?
+            return
+
+    robot.stop_all()
+    robot.motor(0, 0)
+    time.sleep(0.1)
+    azgoalflag = True
+    logit("watchdog thread ended")
+    return
+# =========================================================================
+# thread to monitor CCW rotation, ending at goal 
+def watchdogCCW(goal):
+    global azgoalflag
+
+    if hdg < 180 and goal > 180:
+        while hdg < 180:         # keep turning til past the 359->0 hazard
+            time.sleep(0.05)
+            if azgoalflag is True: # abort?
+                return
+    while hdg >= goal:
         time.sleep(0.05)
         if azgoalflag is True: # abort?
             return
@@ -469,22 +475,13 @@ def simple_commands(schr):
             max_turn(right_limit, speed)
 ********************************************************
             '''
-            '''
-            robot.stop_all()
-            robot.pivot1()
-            time.sleep(0.5)
-            robot.pivot2(1)
-            time.sleep(3.0)
-            robot.stop_all()
-            robot.motor(speed, 0)            
-            '''
             if azgoalflag is True:         # turn cannot be in progress
                 left = False
                 robot.stop_all()
                 time.sleep(.05)
                 robot.pivot1()             # turn corner wheels
                 time.sleep(0.5)
-                robot.pivot2(1)            # drive/back CCW
+                robot.pivot2(1)            # rotate CW
                 azgoalflag = False
                 azimuth = (azimuth + 90) % 360
                 logit("az set to %d" % azimuth)
@@ -516,11 +513,8 @@ def star_commands(schr):
     global azimuth
     global auto
     global hdg
-    global oldhdg
     global yaw
     global wptflag
-    global compass_bias
-    global left
     
     if (schr == '0'):                 #standby
         auto = False
@@ -535,7 +529,6 @@ def star_commands(schr):
         logit("az set to %d" % azimuth)
     elif (schr == '2'):               #autopilot on
         auto = True
-        oldhdg = 159
         wptflag = False
         azimuth = hdg
         sendit("{aAuto}")
@@ -544,18 +537,12 @@ def star_commands(schr):
         azimuth += 90
         azimuth %= 360
         logit("az set to %d" % azimuth)
-    elif (schr == '4'):               #adj compass
-        compass_bias -= 1
-        logit("Compass bias %d" % compass_bias)
-        xstr = "{h%3d}" % hdg
-        sendit(xstr)
+    elif (schr == '4'):
+        pass
     elif (schr == '5'):               # adjust to true north
         pass
-    elif (schr == '6'):               #adj compass
-        compass_bias += 1
-        logit("Compass bias %d" % compass_bias)
-        xstr = "{h%3d}" % hdg
-        sendit(xstr)
+    elif (schr == '6'):
+        pass
     elif (auto and schr == '7'):      # hammer head left 180 deg
         if azgoalflag is True:         # turn cannot be in progress
             left = True
@@ -571,17 +558,6 @@ def star_commands(schr):
             logit("midturn hdg %d" % thdg)
             bot_thread = threading.Thread(target = watchdogCW,args=[thdg])
             bot_thread.start()
-            '''
-            robot.motor(0, 0)       #stop
-            max_turn(left_limit, -50)
-            time.sleep(3.5)           #guess at time needed
-            str = left_limit
-            dt = 1
-            while str < right_limit:
-                str += dt
-                robot.motor(0, str)
-                time.sleep(0.04)
-            '''
 
     elif (schr == '8'):
         pass
@@ -635,6 +611,80 @@ def diag_commands(schr):
             logit("Compass bias set to: %d" % compass_bias)
             
     return
+
+#=================================================================
+def route_waypoint(cbuff):
+    global auto
+    global reducedflag
+    global route
+    global rtseg
+    global speed
+    global startAV
+    global wpt
+    global wptflag
+    
+    try:
+        wpt = int(cbuff[2:msglen-1])
+        print("wpt= ", wpt)
+        if wpt == 0:                # end of waypoint / route
+            wptflag = False
+            auto = False
+            route = [0]
+            rtseg = 0
+            sendit("{aStby}")
+            logit("Standby")
+            sendit("{d----}")
+            sendit("{c---}")
+            odometer(speed)
+            speed = 0
+            reducedflag = False
+            robot.motor(speed, steer)
+        else:
+            startwp, startdist = vclosestwp(posAV)
+            cstr = "startwp, dist %d, %5.2f " % (startwp, startdist)
+            logit(cstr)
+            
+            if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>
+                route = bestroute(posAV, waypts[75])
+                
+            elif (wpt > 1 and wpt < 5):   # start of route
+                rtewp = routes[wpt][0]    # 0th wpt in route
+                dist, route = astar2.astar(startwp, rtewp) # goto start of route
+                routewpt = routes[wpt]
+                routewpt.pop(0)              # delete common wpt
+                route += routewpt
+                
+            elif (wpt >= 10 and wpt <= 76): #start of waypoint
+                route = bestroute(posAV, waypts[wpt])
+                
+            if len(route) > 0:
+                if startdist < 3.0:  # if too close to starting waypoint
+                    route.pop(0)
+                    logit("start is close, advancing route")
+                if len(route) > 1:            # if start between wpts
+                    rwp0 = route[0]
+                    rwp1 = route[1]
+                    rwpts0 = waypts[rwp0]
+                    rwpts1 = waypts[rwp1]
+                    dot = vdot(vsub(posAV, rwpts0), vsub(rwpts1, rwpts0))
+                    if dot > 0:
+                        dist = pldistance(posAV, rwpts0, rwpts1)
+                        if dist < 3.0:
+                            route.pop(0)
+                            logit("track is near, advancing route")
+
+                route.append(0)
+                for rt in route:
+                    cstr = "route: %d" % rt
+                    logit(cstr)
+                wpt = route[0]
+                rtseg = 0
+                startAV = posAV
+                new_waypoint(wpt)
+#                               obstructions()
+        
+    except ValueError:
+        print("bad data" + cbuff)
 
 #=================================================================
 def logit(xcstr):
@@ -703,72 +753,11 @@ try:
                     cogBase = 0              #invalidate COG baseline
 #======================================================================
 #Keypad commands preceeded by a #
-                elif xchr == 'F':                   #goto waypoint
-                    try:
-                        wpt = int(cbuff[2:msglen-1])
-                        print("wpt= ")
-                        print(wpt)
-                        if wpt == 0:                # end of waypoint / route
-                            wptflag = False
-                            auto = False
-                            route = [0]
-                            rtseg = 0
-                            sendit("{aStby}")
-                            logit("Standby")
-                            sendit("{d----}")
-                            sendit("{c---}")
-                            odometer(speed)
-                            speed = 0
-                            reducedflag = False
-                            robot.motor(speed, steer)
-                        else:
-                            startwp, startdist = vclosestwp(posAV)
-                            cstr = "startwp, dist %d, %5.2f " % (startwp, startdist)
-                            logit(cstr)
-                            
-                            if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>
-                                route = bestroute(posAV, waypts[75])
-                                
-                            elif (wpt > 1 and wpt < 5):   # start of route
-                                rtewp = routes[wpt][0]    # 0th wpt in route
-                                dist, route = astar2.astar(startwp, rtewp) # goto start of route
-                                routewpt = routes[wpt]
-                                routewpt.pop(0)              # delete common wpt
-                                route += routewpt
-                                
-                            elif (wpt >= 10 and wpt <= 76): #start of waypoint
-                                route = bestroute(posAV, waypts[wpt])
-                                
-                            if len(route) > 0:
-                                if startdist < 3.0:  # if too close to starting waypoint
-                                    route.pop(0)
-                                    logit("start is close, advancing route")
-                                if len(route) > 1:            # if start between wpts
-                                    rwp0 = route[0]
-                                    rwp1 = route[1]
-                                    rwpts0 = waypts[rwp0]
-                                    rwpts1 = waypts[rwp1]
-                                    dot = vdot(vsub(posAV, rwpts0), vsub(rwpts1, rwpts0))
-                                    if dot > 0:
-                                        dist = pldistance(posAV, rwpts0, rwpts1)
-                                        if dist < 3.0:
-                                            route.pop(0)
-                                            logit("track is near, advancing route")
-
-                                route.append(0)
-                                for rt in route:
-                                    cstr = "route: %d" % rt
-                                    logit(cstr)
-                                wpt = route[0]
-                                rtseg = 0
-                                startAV = posAV
-                                new_waypoint(wpt)
-#                               obstructions()
-                        
-                    except ValueError:
-                        print("bad data" + cbuff)
+                elif xchr == 'F':            #goto waypoint/route
+                    route_waypoint(cbuff)
 #======================================================================
                 elif xchr == "G":          # goto lat/lon command
+                    #goto_lat_lon(cbuff)
                     xchr = cbuff[2]
                     try:
                         x = float(cbuff[3:msglen-1])
