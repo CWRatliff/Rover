@@ -685,7 +685,126 @@ def route_waypoint(cbuff):
         
     except ValueError:
         print("bad data" + cbuff)
+#=====================================================================
+# Goto command
+def goto_command(cbuff):
+    global gotolat
+    global gotolon
+    global route
+    global rtseg
+    global startAV
+    global wpt
+    
+    xchr = cbuff[2]
+    try:
+        x = float(cbuff[3:msglen-1])
+        if (xchr == 'N'):
+            gotolon = x
 
+        elif xchr == 'T':
+            if (gotolon != 0):   # GN should be first
+                gotolat = x
+                gotoAV = [gotolon, gotolat]
+                ##endwp, enddist = vclosestwp(dest)
+                
+                route = bestroute(posAV, gotoAV)
+                if (len(route) > 0):
+                    startwp = route[0]
+                endwp = route[-1]
+                if endwp != startwp:         # are we here yet?
+                    u = vsub(waypts[endwp], waypts[startwp]) #start to finish
+                    v = vsub(gotoAV, waypts[endwp]) # diff between last waypt & actual endpoint
+                    enddist = vmag(v)  # enddist = dist between last waypt & actual end
+                    if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
+                        waypts[9] = gotoAV
+                        route.append(9)
+                route.append(0)
+                for rt in route:
+                    cstr = "route: %d" % rt
+                    logit(cstr)
+                rtseg = 0
+                wpt = route[rtseg]
+                startAV = posAV
+                new_waypoint(wpt)
+#                                obstructions()
+
+            gotolat = 0.0      # reset
+            gotolon = 0.0
+
+    except ValueError:
+        gotolat = 0.0     # resetS
+        gotolon = 0.0
+
+#=================================================================
+def GPS_data(cbuff):        # input from Arduino
+    global accgps
+    global ilatsec
+    global ilonsec
+    global gpsavgcnt
+    global gpsavghdg
+    global gpsheading
+    global posAV
+    global prevAV
+    
+    xchr = cbuff[2]
+    try:
+        x = float(cbuff[3:msglen-1])
+        if (xchr == 'T'):
+            ilatsec = x
+            posAV = vsec2ft(ilatsec, ilonsec)
+            
+        elif xchr == 'N':
+            ilonsec = x
+            posAV = vsec2ft(ilatsec, ilonsec)
+            if (not wptflag):
+                cstr = "{ln%5.1f} " % posAV[0]
+                sendit(cstr)
+                logit(cstr)
+                cstr = "{lt%5.1f} " % posAV[1]
+                sendit(cstr)
+                logit(cstr)
+            gpsEpoch = time.time()
+            gpsokflag = True
+            if prevAV == posAV and oldsec == seconds:
+                gpsokflag = False
+                vprint("prevAV", prevAV)
+                vprint("posAV ", posAV)
+                logit("GPS not updating ===============")
+            prevAV = posAV
+            
+        elif xchr == 'A':
+            accgps = x * .00328084   #cvt mm to feet
+            if (accgps < 50):
+                cstr = "{la%5.2f}" % accgps    #send to controller
+                sendit(cstr)
+                logit(cstr)
+            else:
+                sendit("{la------}")
+
+            if accgps > 3:
+                gpsokflag = False
+                logit("Poor GPS accuracy")
+                
+        elif xchr == 'S':
+            oldsec = seconds
+            seconds = x
+        
+        elif xchr == 'P':
+            gpsheading = int(x)
+            if abs(steer) <= 2 and speed >= 50 and gpsokflag is True:
+                gpsavghdg += gpsheading
+                gpsavgcnt += 1
+            else:
+                gpsavghdg = 0
+                gpsavgcnt = 0
+
+        else:
+            pass
+
+    except ValueError:
+        print("bad data" + cbuff)
+    finally:
+                        pass
 #=================================================================
 def logit(xcstr):
     print(xcstr)
@@ -757,109 +876,111 @@ try:
                     route_waypoint(cbuff)
 #======================================================================
                 elif xchr == "G":          # goto lat/lon command
-                    #goto_lat_lon(cbuff)
-                    xchr = cbuff[2]
-                    try:
-                        x = float(cbuff[3:msglen-1])
-                        if (xchr == 'N'):
-                            gotolon = x
+                    goto_command(cbuff)
 
-                        elif xchr == 'T':
-                            if (gotolon != 0):   # GN should be first
-                                gotolat = x
-                                gotoAV = [gotolon, gotolat]
-                                ##endwp, enddist = vclosestwp(dest)
-                                
-                                route = bestroute(posAV, gotoAV)
-                                if (len(route) > 0):
-                                    startwp = route[0]
-                                    endwp = route[-1]
-                                    if endwp != startwp:         # are we here yet?
-                                        u = vsub(waypts[endwp], waypts[startwp]) #start to finish
-                                        v = vsub(gotoAV, waypts[endwp]) # diff between last waypt & actual endpoint
-                                        enddist = vmag(v)  # enddist = dist between last waypt & actual end
-                                        if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
-                                            waypts[9] = gotoAV
-                                            route.append(9)
-                                    route.append(0)
-                                    for rt in route:
-                                        cstr = "route: %d" % rt
-                                        logit(cstr)
-                                    rtseg = 0
-                                    wpt = route[rtseg]
-                                    startAV = posAV
-                                    new_waypoint(wpt)
-    #                                obstructions()
-
-                            gotolat = 0.0      # reset
-                            gotolon = 0.0
-      
-                    except ValueError:
-                        gotolat = 0.0     # resetS
-                        gotolon = 0.0
-
+#                     xchr = cbuff[2]
+#                     try:
+#                         x = float(cbuff[3:msglen-1])
+#                         if (xchr == 'N'):
+#                             gotolon = x
+# 
+#                         elif xchr == 'T':
+#                             if (gotolon != 0):   # GN should be first
+#                                 gotolat = x
+#                                 gotoAV = [gotolon, gotolat]
+#                                 ##endwp, enddist = vclosestwp(dest)
+#                                 
+#                                 route = bestroute(posAV, gotoAV)
+#                                 if (len(route) > 0):
+#                                     startwp = route[0]
+#                                     endwp = route[-1]
+#                                     if endwp != startwp:         # are we here yet?
+#                                         u = vsub(waypts[endwp], waypts[startwp]) #start to finish
+#                                         v = vsub(gotoAV, waypts[endwp]) # diff between last waypt & actual endpoint
+#                                         enddist = vmag(v)  # enddist = dist between last waypt & actual end
+#                                         if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
+#                                             waypts[9] = gotoAV
+#                                             route.append(9)
+#                                     route.append(0)
+#                                     for rt in route:
+#                                         cstr = "route: %d" % rt
+#                                         logit(cstr)
+#                                     rtseg = 0
+#                                     wpt = route[rtseg]
+#                                     startAV = posAV
+#                                     new_waypoint(wpt)
+#     #                                obstructions()
+# 
+#                             gotolat = 0.0      # reset
+#                             gotolon = 0.0
+#       
+#                     except ValueError:
+#                         gotolat = 0.0     # resetS
+#                         gotolon = 0.0
+# 
                     
 #======================================================================
                 elif xchr == 'L':                   #lat/long input from GPS h/w
-                    xchr = cbuff[2]
-                    try:
-                        x = float(cbuff[3:msglen-1])
-                        if (xchr == 'T'):
-                            ilatsec = x
-                            posAV = vsec2ft(ilatsec, ilonsec)
-                            
-                        elif xchr == 'N':
-                            ilonsec = x
-                            posAV = vsec2ft(ilatsec, ilonsec)
-                            if (not wptflag):
-                                cstr = "{ln%5.1f} " % posAV[0]
-                                sendit(cstr)
-                                logit(cstr)
-                                cstr = "{lt%5.1f} " % posAV[1]
-                                sendit(cstr)
-                                logit(cstr)
-                            gpsEpoch = time.time()
-                            gpsokflag = True
-                            if prevAV == posAV and oldsec == seconds:
-                                gpsokflag = False
-                                vprint("prevAV", prevAV)
-                                vprint("posAV ", posAV)
-                                logit("GPS not updating ===============")
-                            prevAV = posAV
-                            
-                        elif xchr == 'A':
-                            accgps = x * .00328084   #cvt mm to feet
-                            if (accgps < 50):
-                                cstr = "{la%5.2f}" % accgps    #send to controller
-                                sendit(cstr)
-                                logit(cstr)
-                            else:
-                                sendit("{la------}")
-
-                            if accgps > 3:
-                                gpsokflag = False
-                                logit("Poor GPS accuracy")
-                                
-                        elif xchr == 'S':
-                            oldsec = seconds
-                            seconds = x
-                        
-                        elif xchr == 'P':
-                            gpsheading = int(x)
-                            if abs(steer) <= 2 and speed >= 50 and gpsokflag is True:
-                                gpsavghdg += gpsheading
-                                gpsavgcnt += 1
-                            else:
-                                gpsavghdg = 0
-                                gpsavgcnt = 0
-
-                        else:
-                            pass
-
-                    except ValueError:
-                        print("bad data" + cbuff)
-                    finally:
-                        pass
+                    GPD_data(cbuff)
+#                     xchr = cbuff[2]
+#                     try:
+#                         x = float(cbuff[3:msglen-1])
+#                         if (xchr == 'T'):
+#                             ilatsec = x
+#                             posAV = vsec2ft(ilatsec, ilonsec)
+#                             
+#                         elif xchr == 'N':
+#                             ilonsec = x
+#                             posAV = vsec2ft(ilatsec, ilonsec)
+#                             if (not wptflag):
+#                                 cstr = "{ln%5.1f} " % posAV[0]
+#                                 sendit(cstr)
+#                                 logit(cstr)
+#                                 cstr = "{lt%5.1f} " % posAV[1]
+#                                 sendit(cstr)
+#                                 logit(cstr)
+#                             gpsEpoch = time.time()
+#                             gpsokflag = True
+#                             if prevAV == posAV and oldsec == seconds:
+#                                 gpsokflag = False
+#                                 vprint("prevAV", prevAV)
+#                                 vprint("posAV ", posAV)
+#                                 logit("GPS not updating ===============")
+#                             prevAV = posAV
+#                             
+#                         elif xchr == 'A':
+#                             accgps = x * .00328084   #cvt mm to feet
+#                             if (accgps < 50):
+#                                 cstr = "{la%5.2f}" % accgps    #send to controller
+#                                 sendit(cstr)
+#                                 logit(cstr)
+#                             else:
+#                                 sendit("{la------}")
+# 
+#                             if accgps > 3:
+#                                 gpsokflag = False
+#                                 logit("Poor GPS accuracy")
+#                                 
+#                         elif xchr == 'S':
+#                             oldsec = seconds
+#                             seconds = x
+#                         
+#                         elif xchr == 'P':
+#                             gpsheading = int(x)
+#                             if abs(steer) <= 2 and speed >= 50 and gpsokflag is True:
+#                                 gpsavghdg += gpsheading
+#                                 gpsavgcnt += 1
+#                             else:
+#                                 gpsavghdg = 0
+#                                 gpsavgcnt = 0
+# 
+#                         else:
+#                             pass
+# 
+#                     except ValueError:
+#                         print("bad data" + cbuff)
+#                     finally:
+#                         pass
 
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
