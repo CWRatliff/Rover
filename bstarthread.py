@@ -513,6 +513,7 @@ def star_commands(schr):
     global azimuth
     global auto
     global hdg
+    global left
     global yaw
     global wptflag
     
@@ -613,7 +614,7 @@ def diag_commands(schr):
     return
 
 #=================================================================
-def route_waypoint(cbuff):
+def route_waypoint(schr):
     global auto
     global reducedflag
     global route
@@ -624,7 +625,7 @@ def route_waypoint(cbuff):
     global wptflag
     
     try:
-        wpt = int(cbuff[2:msglen-1])
+        wpt = int(schr[2:msglen-1])
         print("wpt= ", wpt)
         if wpt == 0:                # end of waypoint / route
             wptflag = False
@@ -687,7 +688,7 @@ def route_waypoint(cbuff):
         print("bad data" + cbuff)
 #=====================================================================
 # Goto command
-def goto_command(cbuff):
+def goto_command(schr):
     global gotolat
     global gotolon
     global route
@@ -695,9 +696,9 @@ def goto_command(cbuff):
     global startAV
     global wpt
     
-    xchr = cbuff[2]
+    xchr = schr[2]
     try:
-        x = float(cbuff[3:msglen-1])
+        x = float(schr[3:msglen-1])
         if (xchr == 'N'):
             gotolon = x
 
@@ -736,19 +737,23 @@ def goto_command(cbuff):
         gotolon = 0.0
 
 #=================================================================
-def GPS_data(cbuff):        # input from Arduino
+def GPS_data(schr):        # input from Arduino
     global accgps
     global ilatsec
     global ilonsec
     global gpsavgcnt
     global gpsavghdg
+    global gpsEpoch
     global gpsheading
+    global gpsokflag
     global posAV
+    global oldsec
     global prevAV
+    global seconds
     
-    xchr = cbuff[2]
+    xchr = schr[2]
     try:
-        x = float(cbuff[3:msglen-1])
+        x = float(schr[3:msglen-1])
         if (xchr == 'T'):
             ilatsec = x
             posAV = vsec2ft(ilatsec, ilonsec)
@@ -804,7 +809,71 @@ def GPS_data(cbuff):        # input from Arduino
     except ValueError:
         print("bad data" + cbuff)
     finally:
-                        pass
+        pass
+#========================================================================
+def sensor_data(schr):
+    global speed
+    global startAV
+    global wpt
+    global waypts
+    
+    if (auto and wptflag and Rsensor):
+        xchr = schr[3]           # Port / Starboard
+        args = schr[4:msglen-1]
+        sdist, sang, cswath = args.split(',')
+        dist = float(sdist)
+        ang = int(sang)
+        swath = int(cswath)
+        dtg = vmag(pathRV)
+        obsUV = vcompass(hdg + ang)
+        obsRV = vsmult(obsUV, dist)
+        vprint("obstacleV", obsRV)
+        # if dist > dtg:
+        #   advance_waypoint()
+        # or get next wpt aiming vector and see if it dodges
+        #if dist < (dtg + 3.0):  # if obs closer than wpt & 3ft margin
+        if (dtg < 3.0 and dist > dtg):
+            logit("advancing wpt")
+            advance_waypoint()
+            
+        aimUV = vunit(aimRV)
+        proj = vdot(obsRV, aimUV)
+        print("proj", proj)
+        if proj >= 0:       #obs on same side as aimRV
+            projRV = vsmult(aimUV, proj) #u.v/v.v * v
+            vprint("projRV", projRV)
+            dodgeRV = vsub(projRV, obsRV)   # from obs to aim
+            vprint("dodgeRV", dodgeRV)
+            wdist = vmag(dodgeRV)
+            print("wdist", wdist)
+            dodgeUV = vunit(dodgeRV)
+            dodgeRV = vsmult(dodgeUV, DODGE)
+            if abs(wdist) < 3.0:      # obs within minimum
+                rot = vcross2(obsRV, aimRV)    # obsV to aimV rotation
+                print("rot", rot)
+                
+                if xchr == 'S':      # if obs is mainly right of aimRV
+                    if not rot:
+                        dodgeRV = vsmult(dodgeUV, wdist + DODGE)# + intrusion
+                if (xchr == 'P'):
+                    swath = -swath
+                    if rot:
+                        dodgeRV = vsmult(dodgeUV, wdist + DODGE)# + intrusion
+                 
+                vprint("dodgeV", dodgeRV)
+                dodgeRV = vadd(dodgeRV, projRV)
+                dodgeAV = vadd(dodgeRV, posAV)
+                waypts[1] = dodgeAV
+                startAV = posAV
+                new_waypoint(1)
+                if wpt != 1:
+                    route.insert(rtseg, 1)
+                wpt = 1
+                odometer(speed)
+                speed = 0
+                robot.motor(speed, steer)
+                cstr = "{r%d,%d,%d} " % (dist, hdg+ang, swath)
+                sendit(cstr)
 #=================================================================
 def logit(xcstr):
     print(xcstr)
@@ -877,183 +946,23 @@ try:
 #======================================================================
                 elif xchr == "G":          # goto lat/lon command
                     goto_command(cbuff)
-
-#                     xchr = cbuff[2]
-#                     try:
-#                         x = float(cbuff[3:msglen-1])
-#                         if (xchr == 'N'):
-#                             gotolon = x
-# 
-#                         elif xchr == 'T':
-#                             if (gotolon != 0):   # GN should be first
-#                                 gotolat = x
-#                                 gotoAV = [gotolon, gotolat]
-#                                 ##endwp, enddist = vclosestwp(dest)
-#                                 
-#                                 route = bestroute(posAV, gotoAV)
-#                                 if (len(route) > 0):
-#                                     startwp = route[0]
-#                                     endwp = route[-1]
-#                                     if endwp != startwp:         # are we here yet?
-#                                         u = vsub(waypts[endwp], waypts[startwp]) #start to finish
-#                                         v = vsub(gotoAV, waypts[endwp]) # diff between last waypt & actual endpoint
-#                                         enddist = vmag(v)  # enddist = dist between last waypt & actual end
-#                                         if enddist > 3 and vdot(u,v) > 0: #if goto beyond last wp
-#                                             waypts[9] = gotoAV
-#                                             route.append(9)
-#                                     route.append(0)
-#                                     for rt in route:
-#                                         cstr = "route: %d" % rt
-#                                         logit(cstr)
-#                                     rtseg = 0
-#                                     wpt = route[rtseg]
-#                                     startAV = posAV
-#                                     new_waypoint(wpt)
-#     #                                obstructions()
-# 
-#                             gotolat = 0.0      # reset
-#                             gotolon = 0.0
-#       
-#                     except ValueError:
-#                         gotolat = 0.0     # resetS
-#                         gotolon = 0.0
-# 
-                    
 #======================================================================
                 elif xchr == 'L':                   #lat/long input from GPS h/w
-                    GPD_data(cbuff)
-#                     xchr = cbuff[2]
-#                     try:
-#                         x = float(cbuff[3:msglen-1])
-#                         if (xchr == 'T'):
-#                             ilatsec = x
-#                             posAV = vsec2ft(ilatsec, ilonsec)
-#                             
-#                         elif xchr == 'N':
-#                             ilonsec = x
-#                             posAV = vsec2ft(ilatsec, ilonsec)
-#                             if (not wptflag):
-#                                 cstr = "{ln%5.1f} " % posAV[0]
-#                                 sendit(cstr)
-#                                 logit(cstr)
-#                                 cstr = "{lt%5.1f} " % posAV[1]
-#                                 sendit(cstr)
-#                                 logit(cstr)
-#                             gpsEpoch = time.time()
-#                             gpsokflag = True
-#                             if prevAV == posAV and oldsec == seconds:
-#                                 gpsokflag = False
-#                                 vprint("prevAV", prevAV)
-#                                 vprint("posAV ", posAV)
-#                                 logit("GPS not updating ===============")
-#                             prevAV = posAV
-#                             
-#                         elif xchr == 'A':
-#                             accgps = x * .00328084   #cvt mm to feet
-#                             if (accgps < 50):
-#                                 cstr = "{la%5.2f}" % accgps    #send to controller
-#                                 sendit(cstr)
-#                                 logit(cstr)
-#                             else:
-#                                 sendit("{la------}")
-# 
-#                             if accgps > 3:
-#                                 gpsokflag = False
-#                                 logit("Poor GPS accuracy")
-#                                 
-#                         elif xchr == 'S':
-#                             oldsec = seconds
-#                             seconds = x
-#                         
-#                         elif xchr == 'P':
-#                             gpsheading = int(x)
-#                             if abs(steer) <= 2 and speed >= 50 and gpsokflag is True:
-#                                 gpsavghdg += gpsheading
-#                                 gpsavgcnt += 1
-#                             else:
-#                                 gpsavghdg = 0
-#                                 gpsavgcnt = 0
-# 
-#                         else:
-#                             pass
-# 
-#                     except ValueError:
-#                         print("bad data" + cbuff)
-#                     finally:
-#                         pass
-
+                    GPS_data(cbuff)
 #============================================================================= 
                 elif xchr == 'O':                   #O - orientation esp hdg from arduino
                     yaw = int(cbuff[2:msglen-1])
                     hdg = (yaw + compass_bias)%360
-
 #===========================================================================
                 elif xchr == 'Q':                   # Q - heartbeat
 #                     print("heartbeat")
                     heartbeat = time.time()
-
 #===========================================================================
 #               {S1 P/S <dist> , <CW angle>} BOT 4:16
 #               sensor #1 - TFmini giving obstacle main side and avoidence angle
 #               'P'/'S' - port/starboard - side of obstruction
                 elif xchr == 'S':             # sensor data
-                    if (auto and wptflag and Rsensor):
-                        xchr = cbuff[3]           # Port / Starboard
-                        args = cbuff[4:msglen-1]
-                        sdist, sang, cswath = args.split(',')
-                        dist = float(sdist)
-                        ang = int(sang)
-                        swath = int(cswath)
-                        dtg = vmag(pathRV)
-                        obsUV = vcompass(hdg + ang)
-                        obsRV = vsmult(obsUV, dist)
-                        vprint("obstacleV", obsRV)
-                        # if dist > dtg:
-                        #   advance_waypoint()
-                        # or get next wpt aiming vector and see if it dodges
-                        #if dist < (dtg + 3.0):  # if obs closer than wpt & 3ft margin
-                        if (dtg < 3.0 and dist > dtg):
-                            logit("advancing wpt")
-                            advance_waypoint()
-                            
-                        aimUV = vunit(aimRV)
-                        proj = vdot(obsRV, aimUV)
-                        print("proj", proj)
-                        if proj >= 0:       #obs on same side as aimRV
-                            projRV = vsmult(aimUV, proj) #u.v/v.v * v
-                            vprint("projRV", projRV)
-                            dodgeRV = vsub(projRV, obsRV)   # from obs to aim
-                            vprint("dodgeRV", dodgeRV)
-                            wdist = vmag(dodgeRV)
-                            print("wdist", wdist)
-                            dodgeUV = vunit(dodgeRV)
-                            dodgeRV = vsmult(dodgeUV, DODGE)
-                            if abs(wdist) < 3.0:      # obs within minimum
-                                rot = vcross2(obsRV, aimRV)    # obsV to aimV rotation
-                                print("rot", rot)
-                                
-                                if xchr == 'S':      # if obs is mainly right of aimRV
-                                    if not rot:
-                                        dodgeRV = vsmult(dodgeUV, wdist + DODGE)# + intrusion
-                                if (xchr == 'P'):
-                                    swath = -swath
-                                    if rot:
-                                        dodgeRV = vsmult(dodgeUV, wdist + DODGE)# + intrusion
-                                 
-                                vprint("dodgeV", dodgeRV)
-                                dodgeRV = vadd(dodgeRV, projRV)
-                                dodgeAV = vadd(dodgeRV, posAV)
-                                waypts[1] = dodgeAV
-                                startAV = posAV
-                                new_waypoint(1)
-                                if wpt != 1:
-                                    route.insert(rtseg, 1)
-                                wpt = 1
-                                odometer(speed)
-                                speed = 0
-                                robot.motor(speed, steer)
-                                cstr = "{r%d,%d,%d} " % (dist, hdg+ang, swath)
-                                sendit(cstr)
+                    sensor_data(cbuff)
 #===========================================================================
                 elif xchr == 'T':                   #'D' key + number button Diagnostic
                     xchr = cbuff[2]
@@ -1070,10 +979,9 @@ try:
 #========================================================================
         if (time.time() > (tensecepoch + 10)): # ten second timer
             tensecepoch = time.time()
-            if azgoalflag is True:         # azimuth is controlling
-                volts = robot.battery_voltage()
-                xchr = "{b%5.1f}" % volts
-                sendit(xchr)
+            volts = robot.battery_voltage()
+            xchr = "{b%5.1f}" % volts
+            sendit(xchr)
             
 #======================================================================
         if (time.time() > (epoch + 1)):     # once per sec

@@ -2,29 +2,21 @@
 # assume points in CCW order
 # 220811
 from vectors import *
+MINLEG = 5.0
 
-corner0 = [-600.0, 2100.0]
-corner1 = [-650.0, 2150.0]
-corner2 = [-675.0, 2100.0]
-clist = [corner0, corner1, corner2]
-waypts = []
+waypts = [[0,0],[0,0], [-600.0, 2100.0], [-650.0, 2150.0], [-675.0, 2100.0], [0., 0.]]
+# corner0 = [-600.0, 2100.0]
+# corner1 = [-650.0, 2150.0]
+# corner2 = [-675.0, 2100.0]
+# clist = [corner0, corner1, corner2]
+clist = []
 
-def vcross_k(U):               # returns vector:k X U
-    return [-U[1], U[0]]
-
-def two_point_formula(p1, p2): #returns [a, b, c] to wit: ax+by=c
-    xa = p2[0] - p1[0]
-    ya = p2[1] - p1[1]
-    return([-ya, xa, xa*p1[1] - ya*p1[0]])
-
-def crammer_2d(l1, l2):        # returns point: intersection of two lines
-    denom = l1[0]*l2[1] - l2[0]*l1[1]
-    if denom == 0:
-        denom = 1
-    x = l1[2]*l2[1] - l1[1]*l2[2]
-    y = l1[0]*l2[2] - l1[2]*l2[0]
-    return [x/denom, y/denom]
-
+for i in range(3):
+    if waypts[i+2][0] == 0:
+        break
+    clist.append(waypts[i+2])
+print(clist)
+    
 clen = len(clist)
 
 for cndx in range(0, clen):
@@ -59,5 +51,6 @@ for cndx in range(0, clen):
     pivot = crammer_2d(line1, line2)
     print(pivot)
 
-    waypts.append(pivot)
+    waypts[cndx+2] = pivot
+#    waypts.append(pivot)
 print(waypts)
