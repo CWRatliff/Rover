@@ -75,3 +75,19 @@ def crammer_2d(l1, l2):        # returns point: intersection of two lines
     y = l1[0]*l2[2] - l1[2]*l2[0]
     return [x/denom, y/denom]
 
+# from wikipedia "line-line_intersection"
+def line_seg_intersection(pa1, pa2, pb1, pb2):
+    a = pa1[0] - pb1[0]
+    b = pb1[0] - pb2[0]
+    c = pa1[0] - pa2[0]
+    d = pa1[1] - pb1[1]
+    e = pb1[1] - pb2[1]
+    f = pa1[1] - pa2[1]
+    den = c * e - f * b
+    t = (a * e - d * b) / den
+    u = (a * f - d * c) / den
+    return([pb1[0] + t*(pb2[0]-pb1[0]), pb1[1] + u*(pb2[1]-pb1[1])], t, u)
+
+
+           
+    
