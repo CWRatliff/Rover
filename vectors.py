@@ -78,13 +78,15 @@ def crammer_2d(l1, l2):        # returns point: intersection of two lines
 # from wikipedia "line-line_intersection"
 # also https://observablehq.com/@toja/line-bos-intersection
 # t - scale of linea, u - scale of lineb, t & u >=0 && <= 1 : line seg intersection
+# 0 <= t <= 1 and 0 <= u <= 0 => line segment intersection
+# point == [0,0] => no intersection (parallel)
 def line_intersect(pa1, pa2, pb1, pb2):
-    a = pa1[0] - pb1[0]
-    b = pb1[0] - pb2[0]
-    c = pa1[0] - pa2[0]
-    d = pa1[1] - pb1[1]
-    e = pb1[1] - pb2[1]
-    f = pa1[1] - pa2[1]
+    a = pa1[0] - pb1[0] # x1-x3
+    b = pb1[0] - pb2[0] # x3-x4
+    c = pa1[0] - pa2[0] # x1-x2
+    d = pa1[1] - pb1[1] # y1-y3
+    e = pb1[1] - pb2[1] # y3-y4
+    f = pa1[1] - pa2[1] # y1-y2
     den = c * e - f * b
     if den == 0:
         return ([0, 0], 0, 0)
