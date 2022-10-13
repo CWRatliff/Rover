@@ -74,6 +74,7 @@ heartbeat = epoch
 tensecepoch = epoch
 seconds = 0
 pan = 0
+msglen = 0
 
 oldsteer = 500                          # big values to trigger update
 oldspeed = 500
@@ -886,14 +887,40 @@ def sendit(xcstr):
 #=================================================================
 #=================================================================
 
-sendit("{aStby}")
-logit("Standby")
-sendit("{d----}")
-sendit("{c----}")
-sendit("{ln----}")
-cbuff = ""
-
 def runloop():
+    global aimRV
+    global azimuth
+    global cbuff
+    global cmdflag
+    global cogAV
+    global cogBase
+    global compass_bias
+    global countgpsacc
+    global countgpsfix
+    global countgpsrepeat
+    global countgpstardy
+    global countheartbeat
+    global cstr
+    global ekfAV
+    global epoch
+    global estAV
+    global fhdg
+    global filterRV
+    global hdg
+    global heartbeat
+    global msglen
+    global oldEpoch
+    global oldhdg
+    global oldspeed
+    global oldsteer
+    global pathRV
+    global reducedflag
+    global resume_speed
+    global speed
+    global steer
+    global tensecepoch
+    global volts
+    global yaw
     try:
         while True:             #######  main loop    #######
             
@@ -936,7 +963,7 @@ def runloop():
                         cogBase = 0              #invalidate COG baseline
 #======================================================================
 # Keypad commands preceded by a star
-                    if xchr == 'E':
+                    elif xchr == 'E':
                         xchr = cbuff[2]
                         star_commands(xchr)
                         cogBase = 0              #invalidate COG baseline
@@ -1014,7 +1041,7 @@ def runloop():
                     estAV[0] = estAV[0] + dist * math.sin(phi)
                     estAV[1] = estAV[1] + dist * math.cos(phi)
                     vprint("estAV", estAV)
-                    cogbase = 0
+                    cogBase = 0
                     if gpsEpoch < oldEpoch:
                         logit("gps tardy")
                         countgpstardy += 1
@@ -1200,6 +1227,13 @@ def runloop():
     #endtry ======================
 
 #finally:
+sendit("{aStby}")
+logit("Standby")
+sendit("{d----}")
+sendit("{c----}")
+sendit("{ln----}")
+cbuff = ""
+
 runloop()
 robot.motor(0, 0)
 time.sleep(0.5)           #wait for roboclaws
