@@ -44,7 +44,7 @@ from waypts import *
 from vectors import *
 
 root = tk.Tk()
-root.title = (root, "Rover")
+root.title("Rover")
 
 compass_bias = Rcompass_bias
 azimuth = Rcompass_bias                 # desired course
@@ -593,7 +593,7 @@ def diag_commands(schr):
         logit("bias %d" % compass_bias)
         log.flush()
     if (schr == '1'):
-        exit()
+        root.quit()
     if (schr == '2'):
         dtt = datetime.datetime.now()
         dts = dtt.strftime("%H:%M:%S.%f")[:-3]
