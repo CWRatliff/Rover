@@ -255,7 +255,7 @@ class motor_driver_ada:
         self.lr_motor.angle = Rlrbias + self.right_limit
 
     def pivot2(self, direction):
-        vel = 20                   # guess at good pivot speed
+        vel = 10                   # guess at good pivot speed
         if direction < 0:                          # left CCW
             self.set_motor(0x80, vel, 1, 1)    #rf
             self.set_motor(0x81, vel, 1, 1)    #rr

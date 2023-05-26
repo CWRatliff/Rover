@@ -423,8 +423,25 @@ def simple_commands(schr):
             azimuth += 5
             logit("az set to %d" % azimuth)
         else:
-            steer += 5
-            robot.motor(speed, steer)
+            if speed != 0:
+                steer += 5
+                robot.motor(speed, steer)
+
+            else:
+                if azgoalflag is True:         # turn cannot be in progress
+                    left = False
+#                    robot.stop_all()
+#                    time.sleep(.05)
+                    robot.pivot1()             # turn corner wheels
+                    time.sleep(0.5)
+                    robot.pivot2(1)            # rotate CW
+#                     azgoalflag = False
+#                     azimuth = (azimuth + 90) % 360
+                    logit("az set to %d" % azimuth)
+                    thdg = (hdg + 15) % 360      # 90 pivot
+                    logit("pivot turn hdg %d" % thdg)
+                    bot_thread = threading.Thread(target = watchdogCW,args=[thdg])
+                    bot_thread.start()
             
     elif schr == '7':                   # 7 - HAW steer left limit
         if (auto):
@@ -470,25 +487,23 @@ def simple_commands(schr):
                 azimuth += right_limit
                 logit("az set to %d" % azimuth)
         else:
-            '''
-********************************************************
-            max_turn(right_limit, speed)
-********************************************************
-            '''
-            if azgoalflag is True:         # turn cannot be in progress
-                left = False
-                robot.stop_all()
-                time.sleep(.05)
-                robot.pivot1()             # turn corner wheels
-                time.sleep(0.5)
-                robot.pivot2(1)            # rotate CW
-                azgoalflag = False
-                azimuth = (azimuth + 90) % 360
-                logit("az set to %d" % azimuth)
-                thdg = (hdg + 90) % 360      # 180 pivot
-                logit("pivot turn hdg %d" % thdg)
-                bot_thread = threading.Thread(target = watchdogCW,args=[thdg])
-                bot_thread.start()
+            if speed != 0:
+                max_turn(right_limit, speed)
+            else:
+                if azgoalflag is True:         # turn cannot be in progress
+                    left = False
+#                    robot.stop_all()
+#                    time.sleep(.05)
+                    robot.pivot1()             # turn corner wheels
+                    time.sleep(0.5)
+                    robot.pivot2(1)            # rotate CW
+#                     azgoalflag = False
+#                     azimuth = (azimuth + 90) % 360
+                    logit("az set to %d" % azimuth)
+                    thdg = (hdg + 90) % 360      # 90 pivot
+                    logit("pivot turn hdg %d" % thdg)
+                    bot_thread = threading.Thread(target = watchdogCW,args=[thdg])
+                    bot_thread.start()
            
 #============================ pan/tilt camera
     elif schr == 'L':
@@ -507,6 +522,10 @@ def simple_commands(schr):
         pass
     return
 #===================end of D commands
+
+#================================================
+# Autopilot commands
+#================================================
 def star_commands(schr):
     global azgoalflag
     global auto
@@ -553,11 +572,11 @@ def star_commands(schr):
             robot.motor(int(-speed * .5), left_limit)
             logit("left backing turn")
             azgoalflag = False
-            azimuth = (azimuth + 180) % 360
+            azimuth = (azimuth -90) % 360
             logit("az set to %d" % azimuth)
-            thdg = (hdg + 90) % 360      # mid turn heading
+            thdg = (hdg - 90) % 360      # mid turn heading
             logit("midturn hdg %d" % thdg)
-            bot_thread = threading.Thread(target = watchdogCW,args=[thdg])
+            bot_thread = threading.Thread(target = watchdogCCW,args=[thdg])
             bot_thread.start()
 
     elif (schr == '8'):
