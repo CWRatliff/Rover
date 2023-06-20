@@ -253,7 +253,6 @@ def vclosestwp(V):
     lowdist = vmag(vsub(waypts[10], V))
     lowwp = 10
     for i in range(10, wlen):
-        print(i)
         w =  waypts[i]
         if w[0] < 0:         # real waypoint?, long. should be neg.
             testdist = vmag(vsub(w, V))
