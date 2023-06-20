@@ -47,11 +47,12 @@ import astar2
 from waypts import *
 from vectors import *
 
-DODGE = 2.0                     # obstruction dodge distance
+DODGE = 2.0                             # obstruction dodge distance
 LEFT = -1
 RIGHT = 1
 Left_Limit = -36
 Right_Limit = 36
+steeringdir = RIGHT                     # default start
 
 compass_bias = Rcompass_bias
 azimuth = Rcompass_bias                 # desired course
@@ -115,8 +116,6 @@ latfeet = 6079.99/60                    # Kyle's converter
 lonfeet = -latfeet * math.cos(latitude)
 accgps = 0.0                            # gps accuracy in ft
 segstart = time.time()                  # speed segment start (seconds)
-
-steeringdir = RIGHT                     # default start
 
 auto = False
 cmdflag = False
@@ -284,29 +283,31 @@ def turn_angle(hdg, goal):
 '''        
 # =================================================================
 # from present pos (AV) to destination (AV), return safest,shortest route
+# may reset startwp in case path is better than nearest wpt
 def bestroute(pos, dest):
-    global startwpt
+    global startwp
 
     rte = []
     endwpt, _ = vclosestwp(dest)
     # if near to a known path, use one of it's path's wpts although
     # closest actual waypt might be shorter. paths are safer
     wp1, wp2 = astar2.nearpath(pos)
+    logit("bestroute near path wp1,2 %d, %d", (wp1, wp2))
     if (wp1 != 0):  # path(s) close by, two waypt candidates each
         dist1, route1 = astar2.astar(wp1, endwpt)
         dist2, route2 = astar2.astar(wp2, endwpt)
         if (dist1 < dist2): # which of the two wpts is closer
-            bstartwpt = wp1
+            startwp = wp1
             rte = route1
         else:   # not near any path
-            startwpt = wp2
+            startwp = wp2
             rte = route2
-        startdistb = vmag(vsub(pos, waypts[bstartwpt]))
+#        startdistb = vmag(vsub(pos, waypts[bstartwpt]))
     else: # overland path
-        _, rte = astar2.astar(startwpt, endwpt)
+        _, rte = astar2.astar(startwp, endwpt)
         
-    if startdistb < 3.0:           # if very close to starting point
-        rte.pop(0)
+#    if startdistb < 3.0:           # if very close to starting point !?code also in route_waypoint
+#        rte.pop(0)
     return rte   
 #================tty = serial.Serial(port, 9600)==============
 def readusb():
@@ -740,6 +741,7 @@ def route_waypoint(schr):
             
             if wpt == 1:                    # <<<<<<< RTB >>>>>>>>>
                 route = bestroute(posAV, waypts[75])
+                startdist = vmag(vsub(posAV, waypts[startwp]))          
                 
             elif (wpt > 1 and wpt < 5):   # start of route
                 rtewp = routes[wpt][0]    # 0th wpt in route
@@ -750,6 +752,7 @@ def route_waypoint(schr):
                 
             elif (wpt >= 10 and wpt <= 76): #start of waypoint
                 route = bestroute(posAV, waypts[wpt])
+                startdist = vmag(vsub(posAV, waypts[startwp]))          
                 
             if len(route) > 0:
                 if startdist < 3.0:  # if too close to starting waypoint
@@ -1251,9 +1254,12 @@ try:
                 #endif auto ===========================
                 
             tt = datetime.datetime.now()
-            ts = tt.strftime("%H:%M:%S.%f")[:-3]
-            path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
-                (ts,epoch-starttime,posAV[0],posAV[1],ekfAV[0],ekfAV[1],speed,steer,hdg,accgps))
+#            ts = tt.strftime("%H:%M:%S.%f")[:-3]
+#            path.write("%12s,%9.2f,%8.2f,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
+#                (ts,epoch-starttime,posAV[0],posAV[1],ekfAV[0],ekfAV[1],speed,steer,hdg,accgps))
+            ts = tt.strftime("%H:%M:%S")
+            path.write("%8s,%8.2f,%8.2f,%8.2f,%4d,%4d,%4d,%5.2f\n" % \
+                (ts,epoch-starttime,posAV[0],posAV[1],speed,steer,hdg,accgps))
             path.flush()
 
             #endif epoch timer ===================
