@@ -282,8 +282,22 @@ def turn_angle(hdg, goal):
 '''        
 # =================================================================
 # from present pos (AV) to destination (AV), return safest,shortest route
-# may reset startwp in case path is better than nearest wpt
 def bestroute(pos, dest):
+
+    rte1 = []
+    rte2 = []
+    wp0, _ = vclosestwp(pos)
+    wpn, _ = vclosestwp(dest)
+
+    dist1, rte1 = astar2.astar(wp0, wpn)         # start at closest waypoint
+    dist1 += vmag(vsub(pos, waypts[rte1[0]]))
+    dist2, rte2 = astar2.astar(rte1[1], wpn)     # see if skipping closest waypoint any shorter
+    dist2 += vmag(vsub(pos, waypts[rte2[0]]))
+    if dist1 < dist2:
+        return rte1
+    else:
+        return rte2
+'''
     global startwp
 
     rte = []
@@ -308,6 +322,7 @@ def bestroute(pos, dest):
 #    if startdistb < 3.0:           # if very close to starting point !?code also in route_waypoint
 #        rte.pop(0)
     return rte   
+'''
 #================tty = serial.Serial(port, 9600)==============
 def readusb():
     try:
