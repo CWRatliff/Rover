@@ -121,9 +121,11 @@ auto = False
 cmdflag = False
 wptflag = False
 wpt = 0
+startwp = 0
 rtseg = 0
 route = [0]
 wptdist = 0.0
+gcodeflag = False
 
 routes = [[0,0],                    #0
     [28, 0],                        # <<<<<<<<< RTB >>>>>>>>>>
@@ -461,7 +463,7 @@ def advance_gcode_script():
                 new_waypoint(1)
  #               if wpt != 1:
  #                   route.insert(rtseg, 1)
-                logit("gcode to %7.2f / %f7.2f", glon, glat)
+                logit("gcode to %7.2f / %f7.2f", (glon, glat))
             elif parts[0] == "g0":
                 pass
 
@@ -1232,7 +1234,7 @@ try:
                         hdg = vcourse(cogBaseRV)
                         oldhdg = hdg
                         vprint("COG base course", cogBaseRV)
-                        logit("COG hdg %d", hdg)
+                        logit("COG hdg %d" % hdg)
                         oldbias = compass_bias
                         newbias = (hdg - yaw) % 360   #beware zero crossing
                         # consider splitting difference instead of 1 deg
