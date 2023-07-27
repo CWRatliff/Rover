@@ -126,7 +126,7 @@ rtseg = 0
 route = [0]
 wptdist = 0.0
 gcodeflag = False
-#gcodefile = None
+#gcodefile = open
 
 routes = [[0,0],                    #0
     [28, 0],                        # <<<<<<<<< RTB >>>>>>>>>>
@@ -136,6 +136,7 @@ routes = [[0,0],                    #0
     [0]]
           
 log = open("logfile.txt", 'w')
+gcodefile = log
 robot = motor_driver_ada.motor_driver_ada(log)
 log.write("====================================================================")
 version = "Rover 1.2 230528\n"
@@ -908,7 +909,7 @@ def GPS_data(schr):        # input from Arduino
                 
         elif gchr == 'S':
             oldsec = seconds
-            seconds = x
+            seconds = int(x)
         
         elif gchr == 'P':
             gpsheading = int(x)
