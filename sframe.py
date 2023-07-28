@@ -649,11 +649,11 @@ class App:
     def Paths(self, mstr):
         global lister
         lister = Frame(mstr)
-        lister.place(x=200, y=450)
+        lister.place(x=200, y=200)
         lab = Label(lister, text="Select NAV path")
         lab.grid(row=0, column=0)
         lscroll = Scrollbar(lister, orient=VERTICAL, width=25, bg = "black")
-        lbox =Listbox(lister, height=6, selectmode=SINGLE,font=(NONE,15), \
+        lbox =Listbox(lister, height=16, selectmode=SINGLE,font=(NONE,15), \
             yscrollcommand=lscroll.set)
         for rt in routes:
             lbox.insert(END, rt[0])
