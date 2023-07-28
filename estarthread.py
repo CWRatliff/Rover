@@ -603,14 +603,16 @@ def simple_commands(schr):
 #============================ pan/tilt camera
     elif schr == 'L':
         pan += 5
-        robot.sensor_pan(pan)
+#        robot.sensor_pan(pan)
+        robot.sensor_pan(0)
         print("pan left")
     elif schr == 'C':
         pan = 0
         robot.sensor_pan(0)
     elif schr == 'R':
         pan -= 5
-        robot.sensor_pan(pan)
+#        robot.sensor_pan(pan)
+        robot.sensor_pan(180)
     elif schr == 'U':
         pass
     elif schr == 'D':
