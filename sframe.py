@@ -693,11 +693,11 @@ class App:
         br90.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         br90.grid(row=1,column=1)
         
-        blt=Button(auto, text="T 90", command = lambda:self.exmit('4'))
+        blt=Button(auto, text="T <180", command = lambda:self.exmit('4'))
         blt.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
         blt.grid(row=2,column=0)
         
-        brt=Button(auto, text="90 T", command = lambda:self.exmit('6'))
+        brt=Button(auto, text="180> T", command = lambda:self.exmit('6'))
         brt.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
         brt.grid(row=2,column=1)
         
