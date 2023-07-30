@@ -601,7 +601,7 @@ def simple_commands(schr):
 
            
 #============================ pan/tilt camera
-    elif schr == 'L':
+    elif schr == 'Q':           #dont forget to change in tframe
         pan += 5
 #        robot.sensor_pan(pan)
         robot.sensor_pan(0)
@@ -617,6 +617,11 @@ def simple_commands(schr):
         pass
     elif schr == 'D':
         pass
+    elif schr == 'W':           # switch off: W, X, Y, Z
+        robot.switch(0, 0)
+    elif schr == 'I'            # switch on: I, J, K, L
+        robot.switch(0, 1)
+
     return
 #===================end of D commands
 
