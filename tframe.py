@@ -723,7 +723,7 @@ class App:
     def PanTilt(self, mstr):
         global pntlt
         pntlt = Frame(mstr)
-        pntlt.place(x=200, y=490)
+        pntlt.place(x=200, y=200)
         bup=Button(pntlt, text="tilt Up", command = lambda:self.dxmit('U'))
         bup.config(width=5,height=2,font=(None,15),bg="cyan",fg="black")
         bup.grid(row=0,column=0,columnspan=3)
@@ -744,9 +744,33 @@ class App:
         bdwn.config(width=5,height=2,font=(None,15),bg="sandy brown",fg="black")
         bdwn.grid(row=2,column=0,columnspan=3)
         
+        bdwn=Button(pntlt, text="sw 1 OFF", command = lambda:self.dxmit('I'))
+        bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
+        bdwn.grid(row=3,column=0,columnspan=2)
+        
+        bdwn=Button(pntlt, text="sw 1 ON", command = lambda:self.dxmit('X'))
+        bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
+        bdwn.grid(row=3,column=1,columnspan=2)
+        
+        bdwn=Button(pntlt, text="sw 2 OFF", command = lambda:self.dxmit('J'))
+        bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
+        bdwn.grid(row=4,column=0,columnspan=2)
+        
+        bdwn=Button(pntlt, text="sw 2 ON", command = lambda:self.dxmit('Y'))
+        bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
+        bdwn.grid(row=4,column=1,columnspan=2)
+        
+        bdwn=Button(pntlt, text="sw 3 OFF", command = lambda:self.dxmit('K'))
+        bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
+        bdwn.grid(row=5,column=0,columnspan=2)
+        
+        bdwn=Button(pntlt, text="sw 3 ON", command = lambda:self.dxmit('Z'))
+        bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
+        bdwn.grid(row=5,column=1,columnspan=2)
+        
         bcan=Button(pntlt, text="Cancel", command=self.ptquit)
         bcan.config(width=5,height=2,font=(None,15),bg="yellow",fg="black")
-        bcan.grid(row=4,column=0,columnspan=3)
+        bcan.grid(row=6,column=0,columnspan=3)
 
     def ptquit(self):
         pntlt.destroy()
@@ -1027,7 +1051,7 @@ root = Tk()
 ffont = Font(family="URW Chancery L", size=20, weight = "bold")
 efont = Font(family="URW Chancery L", size=16)
 nfont = Font(family="Century Schoolbook L", size=14)
-root.wm_title('Rover Controller 220616')
+root.wm_title('Rover Controller 230730')
 chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
