@@ -1,6 +1,7 @@
 # property taken from 2018 WM Survey DWG
 # 2 Dec 21 revised horse bldgs
 # 211208 - goto spot work
+# 230730 - switches added to pantilt
 
 proppts = [
     [-644, 2380],
@@ -89,6 +90,7 @@ housepts = [
     [-576, 2108],
     [-543, 2123]
     ]
+'''
 hut1 = [
     [-639.91,1955.08],
     [-642.17,1945.43],
@@ -101,6 +103,7 @@ hut2 = [
     [-613.88,1943.62],
     [-621.21,1944.38]
     ]
+'''
 hut3 = [
     [-604.58,1951.39],
     [-597.77,1952.87],
@@ -253,14 +256,14 @@ def Chart(mstr):
     
     house = Usf2Pix(housepts, scale, stlat, stlon)
     rez = canvas.create_polygon(house, outline='black', fill='red', width=1, tags="bldg")
-    h1 = Usf2Pix(hut1, scale, stlat, stlon)
-    canvas.create_polygon(h1, outline='black', fill='red', width=1, tags="bldg")
-    h2 = Usf2Pix(hut2, scale, stlat, stlon)
-    canvas.create_polygon(h2, outline='black', fill='red', width=1, tags="bldg")
+#    h1 = Usf2Pix(hut1, scale, stlat, stlon)
+#    canvas.create_polygon(h1, outline='black', fill='red', width=1, tags="bldg")
+#    h2 = Usf2Pix(hut2, scale, stlat, stlon)
+#    canvas.create_polygon(h2, outline='black', fill='red', width=1, tags="bldg")
     h3 = Usf2Pix(hut3, scale, stlat, stlon)
     canvas.create_polygon(h3, outline='black', fill='red', width=1, tags="bldg")
-    h4 = Usf2Pix(hut4, scale, stlat, stlon)
-    canvas.create_polygon(h4, outline='black', fill='red', width=1, tags="bldg")
+#    h4 = Usf2Pix(hut4, scale, stlat, stlon)
+#    canvas.create_polygon(h4, outline='black', fill='red', width=1, tags="bldg")
     casita = Usf2Pix(lhouse, scale, stlat, stlon)
     canvas.create_polygon(casita, outline='black', fill='red', width=1, tags="bldg")
     canopy = Usf2Pix(horsecanopy, scale, stlat, stlon)
@@ -748,7 +751,7 @@ class App:
         bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
         bdwn.grid(row=3,column=0,columnspan=2)
         
-        bdwn=Button(pntlt, text="sw 1 ON", command = lambda:self.dxmit('X'))
+        bdwn=Button(pntlt, text="sw 1 ON", command = lambda:self.dxmit('x'))
         bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
         bdwn.grid(row=3,column=1,columnspan=2)
         
