@@ -617,9 +617,9 @@ def simple_commands(schr):
         pass
     elif schr == 'D':
         pass
-    elif schr == 'W':           # switch off: W, X, Y, Z
+    elif schr == 'I':           # switch off: I, J, K
         robot.switch(0, 0)
-    elif schr == 'I'            # switch on: I, J, K, L
+    elif schr == 'X':            # switch on: X, Y, Z
         robot.switch(0, 1)
 
     return
