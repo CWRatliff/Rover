@@ -751,7 +751,7 @@ class App:
         bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
         bdwn.grid(row=3,column=0,columnspan=2)
         
-        bdwn=Button(pntlt, text="sw 1 ON", command = lambda:self.dxmit('x'))
+        bdwn=Button(pntlt, text="sw 1 ON", command = lambda:self.dxmit('X'))
         bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
         bdwn.grid(row=3,column=1,columnspan=2)
         
