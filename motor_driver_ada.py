@@ -40,12 +40,23 @@ class motor_driver_ada:
 
         self.kit = ServoKit(channels = 16)
 
+    # steering motors
         self.rr_motor = self.kit.servo[0]
         self.rf_motor = self.kit.servo[1]
         self.lf_motor = self.kit.servo[2]
         self.lr_motor = self.kit.servo[3]
-        self.pan = self.kit.servo[15]
-        self.tilt = self.kit.servo[14]
+
+    # switches
+        self.sw0 = self.kit.servo[4]
+        self.sw1 = self.kit.servo[5]
+        self.sw2 = self.kit.servo[6]
+        self.sw0.angle = 0              # default: off
+        self.sw1.angle = 0
+        self.sw2.angle = 0
+
+    # camera
+        self.tilt = self.kit.servo[15]
+        self.pan = self.kit.servo[14]
 
         self.rr_motor.actuation_range = 120
         self.rf_motor.actuation_range = 120
@@ -255,7 +266,7 @@ class motor_driver_ada:
         self.lr_motor.angle = Rlrbias + self.right_limit
 
     def pivot2(self, direction):
-        vel = 10                   # guess at good pivot speed
+        vel = 20                   # guess at good pivot speed
         if direction < 0:                          # left CCW
             self.set_motor(0x80, vel, 1, 1)    #rf
             self.set_motor(0x81, vel, 1, 1)    #rr
@@ -276,10 +287,25 @@ class motor_driver_ada:
     def sensor_pan(self, angle):
         self.pan.angle = Rpanbias + angle
         
+    def crane(self, angle):
+        self.tilt.angle = angle
+
+    def switch(self, whichsw, onoff):
+        onoffa = 0
+        if onoff > 0:
+            onoffa = 180
+        if (whichsw == 0):
+            self.sw0.angle = onoffa
+        elif (whichsw == 1):
+            self.sw1.angle = onoffa
+        elif (whichsw == 2):
+            self.sw2.angle = onoffa
+
+
     def depower(self):
         self.rr_motor.angle = None
         self.rf_motor.angle = None
         self.lf_motor.angle = None
         self.lr_motor.angle = None
         self.pan.angle = None
-        
+        self.sw0.angle = None

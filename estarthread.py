@@ -614,9 +614,9 @@ def simple_commands(schr):
 #        robot.sensor_pan(pan)
         robot.sensor_pan(180)
     elif schr == 'U':
-        pass
+        robot.crane(140)
     elif schr == 'D':
-        pass
+        robot.crane(0)
     elif schr == 'I':           # switch off: I, J, K
         robot.switch(0, 0)
     elif schr == 'X':            # switch on: X, Y, Z
