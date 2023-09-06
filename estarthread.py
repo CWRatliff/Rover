@@ -614,9 +614,13 @@ def simple_commands(schr):
 #        robot.sensor_pan(pan)
         robot.sensor_pan(180)
     elif schr == 'U':
-        robot.crane(140)
+        for ang in range(0, 140):
+            robot.crane(ang)
+            time.sleep(0.4)
     elif schr == 'D':
-        robot.crane(0)
+        for ang in range(140, 0):
+            robot.crane(ang)
+            time.sleep(0.4)
     elif schr == 'I':           # switch off: I, J, K
         robot.switch(0, 0)
     elif schr == 'X':            # switch on: X, Y, Z
