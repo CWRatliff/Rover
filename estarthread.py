@@ -616,11 +616,11 @@ def simple_commands(schr):
     elif schr == 'U':
         for ang in range(0, 140):
             robot.crane(ang)
-            time.sleep(0.4)
+            time.sleep(0.1)
     elif schr == 'D':
-        for ang in range(140, 0):
+        for ang in range(140, 0, -1):
             robot.crane(ang)
-            time.sleep(0.4)
+            time.sleep(0.1)
     elif schr == 'I':           # switch off: I, J, K
         robot.switch(0, 0)
     elif schr == 'X':            # switch on: X, Y, Z
