@@ -624,7 +624,7 @@ def simple_commands(schr):
     elif schr == 'R':
         pan -= 5
 #        robot.sensor_pan(pan)
-        robot.sensor_pan(180)
+        robot.sensor_pan(0)
     elif schr == 'U':
         pass
     elif schr == 'D':
