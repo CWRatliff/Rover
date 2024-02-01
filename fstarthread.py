@@ -140,7 +140,7 @@ log = open("logfile.txt", 'w')
 gcodefile = log
 robot = motor_driver_ada.motor_driver_ada(log)
 log.write("====================================================================")
-version = "Rover 1.2 231030\n"
+version = "Rover 1.2 240201\n"
 log.write(version)
 tme = time.localtime(time.time())
 print(tme)
@@ -626,12 +626,18 @@ def simple_commands(schr):
 #        robot.sensor_pan(pan)
         robot.sensor_pan(0)
     elif schr == 'U':
-        pass
+        for ang in range(0, 140):
+            robot.crane(ang)
+            time.sleep(0.1)
+#        pass
     elif schr == 'D':
-        pass
-    elif schr == 'X':           # switch off: X, Y, Z
+        for ang in range(140, 0, -1):
+            robot.crane(ang)
+            time.sleep(0.1)
+#        pass
+    elif schr == 'I':           # switch off: I, J, K
         robot.switch(0, 0)
-    elif schr == 'I':            # switch on: I, J, K
+    elif schr == 'X':            # switch on: X, Y, Z
         robot.switch(0, 1)
 
     return
