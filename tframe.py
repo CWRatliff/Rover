@@ -90,6 +90,50 @@ housepts = [
     [-576, 2108],
     [-543, 2123]
     ]
+trap0 = [
+    [-507.76, 2019.77],
+    [-501.14, 2017.04],
+    [-505.13, 2012.13],
+    ]
+trap1 = [
+    [-543.45,1811.73],
+    [-537.35,1811.92],
+    [-536.64,1806.59],
+    [-543.88,1803.79],
+    [-547.41,1808.73]
+    ]
+trap2 = [
+    [-596.02,1792.37],
+    [-591.59,1792.96],
+    [-590.29,1786.30],
+    [-600.58,1783.59],
+    [-599.53,1791.26]
+    ]
+trap3 = [
+    [-654.14,1797.45],
+    [-652.69,1795.02],
+    [-651.79,1789.06],
+    [-664.18,1790.24],
+    [-662.72,1794.05]
+    ]
+trap4 = [
+    [-711.57,1811.33],
+    [-708.93,1807.48],
+    [-713.77,1800.94],
+    [-722.04,1805.79],
+    [-714.63,1813.09]
+    ]
+trap5 = [
+    [-762.89,1872.44],
+    [-771.12,1871.33],
+    [-771.89,1862.30],
+    [-761.54,1862.65]
+    ]
+trap6 = [
+    [-685.57,2055.91],
+    [-687.94,2048.14],
+    [-692.70,2053.81]
+    ]
 '''
 hut1 = [
     [-639.91,1955.08],
@@ -110,12 +154,14 @@ hut3 = [
     [-596.32,1945.91],
     [-603.32,1944.72]
     ]
+'''
 hut4 = [
     [-587.80,1954.31],
     [-581.14,1955.12],
     [-580.05,1948.40],
     [-586.86,1947.46]
     ]
+'''
 lhouse = [
     [-583.55,2182.98],
     [-571.94,2189.43],
@@ -134,11 +180,60 @@ workshop = [
     [-607.15, 2204.32],
     [-599.91, 2222.88]
     ]
+'''
 backpts = [
     [-648, 2374],
     [-503, 2130],
     [-527, 2148],
     [-657, 2365]
+    ]
+'''
+backpts = [
+    [-619.2, 2024.6],
+    [-594.2, 2031.8],
+    [-591.0, 2022.6],
+    [-554.2, 2032.5],
+    [-548.1, 2050.8],
+    [-513.0, 2068.9],
+    [-511.7, 2078.1],
+    [-497.8, 2086.0],
+    [-507.3, 2110.2],
+    [-512.4, 2122.6],
+    [-538.2, 2167.9],
+    [-657, 2365],
+    [-648, 2374],
+    [-503, 2130],
+    [-527, 2148],
+    [-554.5, 2141.7],
+    [-589.9, 2123.4],
+    [-593.1, 2128.2],
+    [-598.4, 2125.8],
+    [-595.8, 2120.4],
+    [-624.0, 2106.4],
+    [-643.9, 2104.5],
+    [-662.8, 2122.2],
+    [-673.5, 2139.0],
+    [-682.3, 2133.7],
+    [-659.9, 2095.6],
+    [-645.4, 2067.2],
+    [-632.0, 2070.0],
+    [-605, 2077],
+    [-610, 2093],
+    [-592, 2098],
+    [-590, 2093],
+    [-573, 2098],
+    [-576, 2108],
+    [-543, 2123],
+    [-521, 2074],
+    [-551, 2059],
+    [-561, 2056],
+    [-578, 2051],
+    [-576, 2044],
+    [-594, 2039],
+    [-598, 2051],
+    [-624, 2043]
+#    [-619.2, 2024.6],
+#    [-594.2, 2031.8]
     ]
 
 frontpts = [
@@ -171,6 +266,7 @@ from tkinter import *
 from tkinter.font import Font
 import serial
 import RPi.GPIO as GPIO
+#import gpiozero as gz
 import math
 import ctypes
 import time
@@ -179,6 +275,7 @@ cdlib = ctypes.CDLL("/home/pi/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
 cdlib.COpenIndex.restype = ctypes.c_void_p
 cdlib.CGetDouble.restype = ctypes.c_double
+cdlib.CGetFloat.restype = ctypes.c_double
 cdlib.CGetCharPtr.restype = ctypes.c_char_p
 
 GPIO.setmode(GPIO.BCM)
@@ -187,8 +284,14 @@ GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP) # black
 GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP) # red
 GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # blue
 GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_UP) # yellow
+# btngreen = gz.Button(21)
+# btnblack = gz.Button(5)
+# btnred = gz.Button(13)
+# btnblue = gz.Button(7)
+# btnyellow = gz.Button(10)
 
 ser = serial.Serial(port='/dev/ttyS0',      #xbee to rover
+#ser = serial.Serial(port='/dev/ttyAMA0',      #xbee to rover
     baudrate=9600,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -204,7 +307,8 @@ bwidth = 6
 bhdg = 320
 bdist = 12.7
 strhdg = 0
-track = []
+#track = []
+track:list[int] = []
 lat = 0.0
 lon = 0.0
 pathflag = False
@@ -235,10 +339,10 @@ try:
 except IOError:
     pass
 
-def Chart(mstr):
+def Chart():
     global arena
     global bdrv
-    global charter
+#    global charter
     global canvas
     global fdrv
     global lunge
@@ -256,10 +360,20 @@ def Chart(mstr):
     
     house = Usf2Pix(housepts, scale, stlat, stlon)
     rez = canvas.create_polygon(house, outline='black', fill='red', width=1, tags="bldg")
-#    h1 = Usf2Pix(hut1, scale, stlat, stlon)
-#    canvas.create_polygon(h1, outline='black', fill='red', width=1, tags="bldg")
-#    h2 = Usf2Pix(hut2, scale, stlat, stlon)
-#    canvas.create_polygon(h2, outline='black', fill='red', width=1, tags="bldg")
+    t0 = Usf2Pix(trap0, scale, stlat, stlon)
+    canvas.create_polygon(t0, outline='black', fill='gray50', width=1, tags="traps")
+    t1 = Usf2Pix(trap1, scale, stlat, stlon)
+    canvas.create_polygon(t1, outline='black', fill='gray50', width=1, tags="traps")
+    t2 = Usf2Pix(trap2, scale, stlat, stlon)
+    canvas.create_polygon(t2, outline='black', fill='gray50', width=1, tags="bldg")
+    t3 = Usf2Pix(trap3, scale, stlat, stlon)
+    canvas.create_polygon(t3, outline='black', fill='gray50', width=1, tags="bldg")
+    t4 = Usf2Pix(trap4, scale, stlat, stlon)
+    canvas.create_polygon(t4, outline='black', fill='gray50', width=1, tags="bldg")
+    t5 = Usf2Pix(trap5, scale, stlat, stlon)
+    canvas.create_polygon(t5, outline='black', fill='gray50', width=1, tags="bldg")
+    t6 = Usf2Pix(trap6, scale, stlat, stlon)
+    canvas.create_polygon(t6, outline='black', fill='gray50', width=1, tags="bldg")
     h3 = Usf2Pix(hut3, scale, stlat, stlon)
     canvas.create_polygon(h3, outline='black', fill='red', width=1, tags="bldg")
 #    h4 = Usf2Pix(hut4, scale, stlat, stlon)
@@ -298,18 +412,21 @@ def Chart(mstr):
         rtpts.append([waypts[i-10][0], waypts[i-10][1]])
     rtlst = Usf2Pix(rtpts, scale, stlat, stlon)
     llen = len(rtlst)
-    rline = canvas.create_line(rtlst, fill = 'red', tags = "wpts")
+#    rline = canvas.create_line(rtlst, fill = 'red', tags = "wpts")
+    canvas.create_line(rtlst, fill = 'red', tags = "wpts")
     
     tracks = Usf2Pix(track, scale, stlat, stlon)
     llen = len(tracks)
     for i in range(0, llen, 2):
         canvas.create_text(tracks[i], tracks[i+1], text='x', fill='blue', tags = 'path')
 
-def Xspot(mstr, xlon, xlat):
+#def Xspot(mstr, xlon, xlat):
+def Xspot(xlon, xlat):
     spot = Usf2Pix([[xlon, xlat]], scale, stlat, stlon)
     canvas.create_text(spot[0], spot[1], text='*', fill='blue', tags = 'path')
           
-def Guage(mstr):
+#def Guage(mstr):
+def Guage():
     rose.delete('arrow')
     rose.delete('blip')
     xarrow = arrlen * math.cos(rhdg)
@@ -373,9 +490,9 @@ def Bupress(event):
     mx = 0
     my = 0
     if (mode == 3):
-        lat = stlat - event.y/scale # North: y coord East:x coord
-        lon = event.x/scale - stlon
-        gotolatlon = [lon, lat]
+        blat = stlat - event.y/scale # North: y coord East:x coord
+        blon = event.x/scale - stlon
+        gotolatlon = [blon, blat]
 #        print (str(lat)+"/"+str(lon))
         pnt = Usf2Pix([gotolatlon], scale, stlat, stlon)
         goto = canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
@@ -416,6 +533,7 @@ def Mouse(event):
     canvas.move(lunge, x, y)
 #    canvas.move(goto, x, y)
     canvas.move('bldg', x, y)
+    canvas.move('traps', x, y)
     canvas.move('forest', x, y)
     canvas.move('path', x, y)
     canvas.move('wpts', x, y)
@@ -436,12 +554,12 @@ def Zoomer(inout):
     global mode
 
     if inout == 1:
-        stlat = stlat - (300/scale)/3
-        stlon = stlon - (300/scale)/3
+        stlat = stlat - int((300/scale)/3)
+        stlon = stlon - int((300/scale)/3)
         scale *= 1.5
     if inout == 2:
-        stlat = stlat + (300/scale)/2
-        stlon = stlon + (300/scale)/2
+        stlat = stlat + int((300/scale)/2)
+        stlon = stlon + int((300/scale)/2)
         scale *= 2/3
         
 #    print("zoom")
@@ -452,13 +570,14 @@ def Zoomer(inout):
     canvas.delete(bdrv)
 #    canvas.delete(goto)
     canvas.delete('bldg')
+    canvas.delete('traps')
     canvas.delete('forest')
     canvas.delete('path')
     canvas.delete('wpts')
-    Chart(root)
+    Chart()
     if len(gotolatlon) > 0:
         pnt = Usf2Pix([gotolatlon], scale, stlat, stlon)
-        goto = canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
+        canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
             fill='blue',outline='blue', tags = "wpts")
     mode = 0
 
@@ -474,19 +593,19 @@ class App:
         # telemetry array ===========================================
         data = Frame(master)
         data.place(x=20,y=340)
-        sta=Label(data,text="STS:", font=(None,15))
+        sta=Label(data,text="STS:", font=('Arial',15))
         sta.grid(row=0,column=0)
-        spd=Label(data,text="SPD:", font=(None,15))
+        spd=Label(data,text="SPD:", font=('Arial',15))
         spd.grid(row=1,column=0)
-        hdg=Label(data,text="HDG:", font=(None,15))
+        hdg=Label(data,text="HDG:", font=('Arial',15))
         hdg.grid(row=2,column=0)
-        ste=Label(data,text="STR:", font=(None,15))
+        ste=Label(data,text="STR:", font=('Arial',15))
         ste.grid(row=3,column=0)
-        dtgl=Label(data,text="RNG:", font=(None,15))
+        dtgl=Label(data,text="RNG:", font=('Arial',15))
         dtgl.grid(row=4,column=0)
-        ctgl=Label(data,text="BRG:", font=(None,15))
+        ctgl=Label(data,text="BRG:", font=('Arial',15))
         ctgl.grid(row=5,column=0)
-        xtel=Label(data,text="XTE:", font=(None,15))
+        xtel=Label(data,text="XTE:", font=('Arial',15))
         xtel.grid(row=6,column=0)
         
 #         self.accr=Label(data,text="GPS:", font=(None,20))
@@ -495,31 +614,31 @@ class App:
 #         bat.grid(row=8,column=0)
 # 
         self.status = StringVar()
-        Label(data,text="MM",width=5,font=(None,20),bg="white",fg="blue", \
+        Label(data,text="MM",width=5,font=('Arial',20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.status).grid(row=0,column=1)
         self.speed = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+        Label(data,width=5,font=('Arial',20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.speed).grid(row=1,column=1)
         self.head = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+        Label(data,width=5,font=('Arial',20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.head).grid(row=2,column=1)
         self.steer = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+        Label(data,width=5,font=('Arial',20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.steer).grid(row=3,column=1)
         self.dtg = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+        Label(data,width=5,font=('Arial',20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.dtg).grid(row=4,column=1)
         self.ctg = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+        Label(data,width=5,font=('Arial',20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.ctg).grid(row=5,column=1)
         self.xte = StringVar()
-        Label(data,width=5,font=(None,20),bg="white",fg="blue", \
+        Label(data,width=5,font=('Arial',20),bg="white",fg="blue", \
               borderwidth=1,relief="solid",\
               textvariable=self.xte).grid(row=6,column=1)
         
@@ -634,7 +753,8 @@ class App:
         if (val == 0):
 #            Chart(mstr)
             Zoomer(0)
-            Guage(mstr)
+#            Guage(mstr)
+            Guage()
             
         if (val == 1):
             self.AutoTurns(mstr)
@@ -667,10 +787,10 @@ class App:
         lscroll.config(width=25, command=lbox.yview)
         lscroll.grid(row=1, column=1, sticky=N+S)
         ex = Button(lister, text="Execute", command=lambda:self.lrevert(lbox.get(ANCHOR)))
-        ex.config(width=5, height=3, font=(None,15), bg="green2")
+        ex.config(width=5, height=3, font=('Arial',15), bg="green2")
         ex.grid(row = 2, column = 0)
         quit = Button(lister, text="Cancel", command=lambda:self.lrevert('000'))
-        quit.config(width=5, height=3, font=(None,15), bg="red",fg="black")
+        quit.config(width=5, height=3, font=('Arial',15), bg="red",fg="black")
         quit.grid(row=4, column=0)
 
     #could call fxmit directly if no radiobutton action wanted
@@ -685,35 +805,35 @@ class App:
         auto = Frame(mstr)
         auto.place(x=250, y=470)
         bs=Button(auto, text="Start", command = lambda:self.exmit('2'))
-        bs.config(width=4,height=2,font=(None,15),bg="white",fg="black")
+        bs.config(width=4,height=2,font=('Arial',15),bg="white",fg="black")
         bs.grid(row=0,column=0,columnspan=2)
         
         bl90=Button(auto, text="< 90", command = lambda:self.exmit('1'))
-        bl90.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
+        bl90.config(width=3,height=2,font=('Arial',15),bg="pink",fg="black")
         bl90.grid(row=1,column=0)
         
         br90=Button(auto, text="90 >", command = lambda:self.exmit('3'))
-        br90.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
+        br90.config(width=3,height=2,font=('Arial',15),bg="green2",fg="black")
         br90.grid(row=1,column=1)
         
         blt=Button(auto, text="T <180", command = lambda:self.exmit('4'))
-        blt.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
+        blt.config(width=3,height=2,font=('Arial',15),bg="pink",fg="black")
         blt.grid(row=2,column=0)
         
         brt=Button(auto, text="180> T", command = lambda:self.exmit('6'))
-        brt.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
+        brt.config(width=3,height=2,font=('Arial',15),bg="green2",fg="black")
         brt.grid(row=2,column=1)
         
         bl180=Button(auto, text="< 180", command = lambda:self.exmit('7'))
-        bl180.config(width=3,height=2,font=(None,15),bg="pink",fg="black")
+        bl180.config(width=3,height=2,font=('Arial',15),bg="pink",fg="black")
         bl180.grid(row=3,column=0)
         
         br180=Button(auto, text="180 >", command = lambda:self.exmit('9'))
-        br180.config(width=3,height=2,font=(None,15),bg="green2",fg="black")
+        br180.config(width=3,height=2,font=('Arial',15),bg="green2",fg="black")
         br180.grid(row=3,column=1)
         
         bcan=Button(auto, text="Cancel", command=self.arevert)
-        bcan.config(width=4,height=2,font=(None,15),bg="yellow",fg="black")
+        bcan.config(width=4,height=2,font=('Arial',15),bg="yellow",fg="black")
         bcan.grid(row=4,column=0,columnspan=2)
 
     # cancel AUTO mode
@@ -728,51 +848,51 @@ class App:
         pntlt = Frame(mstr)
         pntlt.place(x=200, y=200)
         bup=Button(pntlt, text="tilt Up", command = lambda:self.dxmit('U'))
-        bup.config(width=5,height=2,font=(None,15),bg="cyan",fg="black")
+        bup.config(width=5,height=2,font=('Arial',15),bg="cyan",fg="black")
         bup.grid(row=0,column=0,columnspan=3)
         
         bleft=Button(pntlt, text="pan left", command = lambda:self.dxmit('L'))
-        bleft.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
+        bleft.config(width=5,height=2,font=('Arial',15),bg="pink",fg="black")
         bleft.grid(row=1,column=0)
         
         bctr=Button(pntlt, text="center", command = lambda:self.dxmit('C'))
-        bctr.config(width=5,height=2,font=(None,15),bg="white",fg="black")
+        bctr.config(width=5,height=2,font=('Arial',15),bg="white",fg="black")
         bctr.grid(row=1,column=1)
         
         brght=Button(pntlt, text="pan right", command = lambda:self.dxmit('R'))
-        brght.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
+        brght.config(width=5,height=2,font=('Arial',15),bg="green2",fg="black")
         brght.grid(row=1,column=2)
         
         bdwn=Button(pntlt, text="tilt down", command = lambda:self.dxmit('D'))
-        bdwn.config(width=5,height=2,font=(None,15),bg="sandy brown",fg="black")
+        bdwn.config(width=5,height=2,font=('Arial',15),bg="sandy brown",fg="black")
         bdwn.grid(row=2,column=0,columnspan=3)
         
         bdwn=Button(pntlt, text="sw 1 OFF", command = lambda:self.dxmit('I'))
-        bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
+        bdwn.config(width=5,height=2,font=('Arial',15),bg="pink",fg="black")
         bdwn.grid(row=3,column=0,columnspan=2)
         
-        bdwn=Button(pntlt, text="sw 1 ON", command = lambda:self.dxmit('X'))
-        bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
+        bdwn=Button(pntlt, text="sw 1 ON", command = lambda:self.dxmit('x'))
+        bdwn.config(width=5,height=2,font=('Arial',15),bg="green2",fg="black")
         bdwn.grid(row=3,column=1,columnspan=2)
         
         bdwn=Button(pntlt, text="sw 2 OFF", command = lambda:self.dxmit('J'))
-        bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
+        bdwn.config(width=5,height=2,font=('Arial',15),bg="pink",fg="black")
         bdwn.grid(row=4,column=0,columnspan=2)
         
         bdwn=Button(pntlt, text="sw 2 ON", command = lambda:self.dxmit('Y'))
-        bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
+        bdwn.config(width=5,height=2,font=('Arial',15),bg="green2",fg="black")
         bdwn.grid(row=4,column=1,columnspan=2)
         
         bdwn=Button(pntlt, text="sw 3 OFF", command = lambda:self.dxmit('K'))
-        bdwn.config(width=5,height=2,font=(None,15),bg="pink",fg="black")
+        bdwn.config(width=5,height=2,font=('Arial',15),bg="pink",fg="black")
         bdwn.grid(row=5,column=0,columnspan=2)
         
         bdwn=Button(pntlt, text="sw 3 ON", command = lambda:self.dxmit('Z'))
-        bdwn.config(width=5,height=2,font=(None,15),bg="green2",fg="black")
+        bdwn.config(width=5,height=2,font=('Arial',15),bg="green2",fg="black")
         bdwn.grid(row=5,column=1,columnspan=2)
         
         bcan=Button(pntlt, text="Cancel", command=self.ptquit)
-        bcan.config(width=5,height=2,font=(None,15),bg="yellow",fg="black")
+        bcan.config(width=5,height=2,font=('Arial',15),bg="yellow",fg="black")
         bcan.grid(row=6,column=0,columnspan=3)
 
     def ptquit(self):
@@ -785,23 +905,23 @@ class App:
         miscer = Frame(mstr)
         miscer.place(x=200, y=400)
         msb1=Button(miscer, text="Diag", command=lambda:self.txmit('0'))
-        msb1.config(width=6,height=2,font=(None,15),bg="white",fg="black")
+        msb1.config(width=6,height=2,font=('Arial',15),bg="white",fg="black")
         msb1.grid(row=0,column=0)
         
         msb2=Button(miscer, text="Mark", command=lambda:self.txmit('2'))
-        msb2.config(width=6,height=2,font=(None,15),bg="white",fg="black")
+        msb2.config(width=6,height=2,font=('Arial',15),bg="white",fg="black")
         msb2.grid(row=2,column=0)
         
         msb3=Button(miscer, text="Pic", command=lambda:self.txmit('3'))
-        msb3.config(width=6,height=2,font=(None,15),bg="white",fg="black")
+        msb3.config(width=6,height=2,font=('Arial',15),bg="white",fg="black")
         msb3.grid(row=3,column=0)
 
         msbs=Button(miscer, text = "Compass", command=lambda:self.txmit('5'))
-        msbs.config(width=6,height=2,font=(None,15),bg="white",fg="black")
+        msbs.config(width=6,height=2,font=('Arial',15),bg="white",fg="black")
         msbs.grid(row=4,column=0)
 
         msb4=Button(miscer, text="Stop", command=lambda:self.txmit('1'))
-        msb4.config(width=6,height=4,font=(None,15),bg="red",fg="black")
+        msb4.config(width=6,height=4,font=('Arial',15),bg="red",fg="black")
         msb4.grid(row=6,column=0)
 
     def dxmit(self, key):
@@ -886,7 +1006,8 @@ class App:
                 elif (xchar == 'h'):
                     self.head.set(lbuffer)
                     rhdg = math.radians(450 - float(lbuffer))
-                    Guage(root)
+#                    Guage(root)
+                    Guage()
                         
                 elif (xchar == 'l'):
                     xchar = lbuffer[0]
@@ -913,7 +1034,8 @@ class App:
                             pass
                         # TBD dont append if same lat/lon
                         # track.append([lon, lat])
-                        Xspot(root, lon, lat)
+#                        Xspot(root, lon, lat)
+                        Xspot(lon, lat)
                 
                 elif xchar == 'q':
                     print("heartbeat rcvd")
@@ -921,17 +1043,19 @@ class App:
                     ser.write(msg.encode('utf-8'))
 
                 elif xchar == 'r':
-                    bdist, bhdg, bwidth = lbuffer.split(',')
-                    print(bdist, bhdg, bwidth)
-                    bdist = int(bdist)
-                    bhdg = int(bhdg)
-                    bwidth = int(bwidth)
-                    Guage(root)
+                    cbdist, cbhdg, cbwidth = lbuffer.split(',')
+                    print(cbdist, cbhdg, cbwidth)
+                    bdist = int(cbdist)
+                    bhdg = int(cbhdg)
+                    bwidth = int(cbwidth)
+#                    Guage(root)
+                    Guage()
                     
                 elif (xchar == 's'):            # steering angle
                     self.steer.set(lbuffer)
                     strhdg = int(lbuffer)
-                    Guage(root)
+#                    Guage(root)
+                    Guage()
                         
                 elif (xchar == 'v'):            # speed
                     self.speed.set(lbuffer)
@@ -941,6 +1065,7 @@ class App:
 
         # check tactile buttons
         if (GPIO.input(21) == False):              # button grounds out GPIO
+#        if (btngreen.is_pressed):              # button grounds out GPIO
             if not butngreen:                      # if not stale tap
                 if ((time.time() - greenepoch) < .6): # if less than .6 sec
                     if butngreen2:                 # if double tap in progress
@@ -957,6 +1082,7 @@ class App:
             butngreen = False                      # button released
             
         if (GPIO.input(5) == False):
+#        if (btnblack.is_pressed):
             if not butnblack:
                 if ((time.time() - blackepoch) < .6): # if less than .6 sec
                     self.dxmit('0')                # all stop!
@@ -968,6 +1094,7 @@ class App:
             butnblack = False
             
         if (GPIO.input(13) == False):
+#        if (btnred.is_pressed):
             if not butnred:
                 if ((time.time() - redepoch) < .6): # if less than .6 sec
                     if butnred2:
@@ -983,6 +1110,7 @@ class App:
         else:
             butnred = False
         if (GPIO.input(7) == False):
+#        if (btnblue.is_pressed):
             if not butnblue:
                 self.dxmit('2')
                 butnblue = True
@@ -990,6 +1118,7 @@ class App:
             butnblue = False
             
         if (GPIO.input(10) == False):
+#        if (btnyellow.is_pressed):
             if not butnyellow:
                 self.dxmit('8')
                 butnyellow = True
@@ -1001,12 +1130,14 @@ class App:
                 cdfline = pathfile.readline()
                 if (cdfline != ''):
                     line = cdfline.split(',')
-                    Xspot(root, float(line[2]), float(line[3]))
+#                    Xspot(root, float(line[2]), float(line[3]))
+                    Xspot(float(line[2]), float(line[3]))
                     # track.append([float(line[2]), float(line[3])])
                     rhdg = math.radians(450 - float(line[8]))
                     strhdg = int(line[7])
 #                    Chart(root)
-                    Guage(root)
+#                    Guage(root)
+                    Guage()
 
             except IOError:
                 pass
@@ -1015,15 +1146,47 @@ class App:
 
 #======================================================================
 # Initialize from database
+#roboload changed late 2022, most double fields changed to float
+#  N.B. 4 byte float in database file, expanded to double for python
 
+#rc = cdlib.CDbLogin("robodatabase")
 rc = cdlib.Cdblogin()
 treetable = cdlib.COpenTable("TreeTable".encode())
 locndx = cdlib.COpenIndex(treetable, "TreeNdx".encode())
 rc = cdlib.CFirst(treetable, locndx)
-
+lon = cdlib.CGetFloat(treetable, "Lonft".encode())
+lat = cdlib.CGetFloat(treetable, "Latft".encode())
 alltrees = []
 while (rc >= 0):
+    lon = cdlib.CGetFloat(treetable, "Lonft".encode())
+    lat = cdlib.CGetFloat(treetable, "Latft".encode())
+    alltrees.append([lon, lat])
+    rc = cdlib.CNext(treetable, locndx)
+ 
+rtetable = cdlib.COpenTable("Routes".encode())
+rc = cdlib.CFirst(rtetable, 0)           # using primary index
+routes = []
+while (cdlib.CNext(rtetable, 0) >= 0):
+    pstr = cdlib.CGetCharPtr(rtetable, "Name".encode())
+    routes.append([pstr.decode()])
+    
+waytable = cdlib.COpenTable("WayPoint".encode())
+wayptnames = []
+waypts = []
+rc = cdlib.CFirst(waytable, 0)           # using primary index
+while (rc >= 0):
+    lon = cdlib.CGetFloat(waytable, "Efeet".encode())
+    lat = cdlib.CGetFloat(waytable, "Nfeet".encode())
+    pstr = cdlib.CGetCharPtr(waytable, "Name".encode())
+#    print("lon, lat, name",lon, lat, pstr.decode())
+    wayptnames.append(pstr.decode())
+    waypts.append([lon, lat])
+    rc = cdlib.CNext(waytable, 0)
+'''
+
+while (rc >= 0):
     lon = cdlib.CGetDouble(treetable, "Lonft".encode())
+    print("lon=", lon)
     lat = cdlib.CGetDouble(treetable, "Latft".encode())
     alltrees.append([lon, lat])
     rc = cdlib.CNext(treetable, locndx)
@@ -1047,25 +1210,38 @@ while (rc >= 0):
     wayptnames.append(pstr.decode())
     waypts.append([lon, lat])
     rc = cdlib.CNext(waytable, 0)
-    
+'''
 #print(waypts)   
 #print("trees = ", alltrees)
 root = Tk()
 ffont = Font(family="URW Chancery L", size=20, weight = "bold")
 efont = Font(family="URW Chancery L", size=16)
 nfont = Font(family="Century Schoolbook L", size=14)
-root.wm_title('Rover Controller 230730')
+root.wm_title('Rover Controller 231002')
 chartform = Frame(root)
+arena = Frame(root)
+bdrv = Frame(root)
+fdrv = Frame(root)
+lunge = Frame(root)
+rez = Frame(root)
+plot = Frame(root)
+goto = Frame(root)
+auto = Frame(root)
+pntlt = Frame(root)
+lister = Frame(root)
+auto = Frame(root)
+miscer = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
 canvas.pack()
-Chart(root)
+Chart()
 
 rosefrm = Frame(root)
 rosefrm.place(x = 800, y = 100)
 rose = Canvas(rosefrm, width=500, height=500, bg='gray85')
 rose.pack()
-Guage(root)
+#Guage(root)
+Guage()
 
 app = App(root)
 root.geometry("1280x800+0+0")
