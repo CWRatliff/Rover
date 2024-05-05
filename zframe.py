@@ -17,7 +17,7 @@ import serial
 import math
 import ctypes
 import time
-from chartdata import *
+from chartdatam import *
 
 cdlib = ctypes.CDLL("/home/pi/libsapphire.so")
 cdlib.COpenTable.restype = ctypes.c_void_p
@@ -71,10 +71,12 @@ blackepoch = time.time()
 butnblue = False
 butnyellow = False
 arrlen = 75
-scale = 1.0
+scale = 3.0
 gotolatlon = []
-stlat = 2400
-stlon = 950
+#stlat = 2400
+#stlon = 950
+stlat = 750
+stlon = 275
 chartmode = 0        # 0:move, 1:zoom in, 2:zoom out, 3:goto
 mx = 0
 my = 0
@@ -889,13 +891,14 @@ rc = cdlib.Cdblogin()
 treetable = cdlib.COpenTable("TreeTable".encode())
 locndx = cdlib.COpenIndex(treetable, "TreeNdx".encode())
 rc = cdlib.CFirst(treetable, locndx)
-lon = cdlib.CGetFloat(treetable, "Lonft".encode())
-lat = cdlib.CGetFloat(treetable, "Latft".encode())
+lon = cdlib.CGetFloat(treetable, "LonMet".encode())
+lat = cdlib.CGetFloat(treetable, "LatMet".encode())
 alltrees = []
 while (rc >= 0):
-    lon = cdlib.CGetFloat(treetable, "Lonft".encode())
-    lat = cdlib.CGetFloat(treetable, "Latft".encode())
-    alltrees.append([lon, lat])
+    lon = cdlib.CGetFloat(treetable, "LonMet".encode())
+    lat = cdlib.CGetFloat(treetable, "LatMet".encode())
+    print(lon, lat)
+    alltrees.append([lon*3, lat*3])
     rc = cdlib.CNext(treetable, locndx)
  
 rtetable = cdlib.COpenTable("Routes".encode())
@@ -910,8 +913,8 @@ wayptnames = []
 waypts = []
 rc = cdlib.CFirst(waytable, 0)           # using primary index
 while (rc >= 0):
-    lon = cdlib.CGetFloat(waytable, "Efeet".encode())
-    lat = cdlib.CGetFloat(waytable, "Nfeet".encode())
+    lon = cdlib.CGetFloat(waytable, "Emeter".encode())
+    lat = cdlib.CGetFloat(waytable, "Nmeter".encode())
     pstr = cdlib.CGetCharPtr(waytable, "Name".encode())
 #    print("lon, lat, name",lon, lat, pstr.decode())
     wayptnames.append(pstr.decode())
