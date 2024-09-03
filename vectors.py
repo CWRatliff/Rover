@@ -6,13 +6,25 @@ def cartesian(compass):
 def vadd(U, V):
     return [U[0]+V[0], U[1]+V[1]]
 
+def vang(U, V):		# +/- angle retween 2 vectors RH rule -pi:pi
+    return math.atan2(vcross(U, V), (vdot( U, V)))
+                     
+def vangc(U, V):		# +/- angle retween 2 vectors 0:pi
+    return math.acos(vdot(U, V) / (vmag(U) * vmag(V)))
+                     
+def vangs(U, V):		# +/- angle retween 2 vectors -pi/2:pi/2
+    return math.asin(vcross(U, V) / (vmag(U) * vmag(V)))
+                     
+def vcross(U, V):
+    return U[0] * V[1] - U[1] * V[0]
+
 def vcross2(U, V):
-    x = U[0] * V[1] - U[1] * V[0]
+    x = vcross(U, V)
     if x > 0:
         return True      # U x V right hand rotation
     return False
 
-def vcross_k(U):               # returns vector:k X U
+def vcross_k(U):               # returns vector:k X U (perp to U)
     return [-U[1], U[0]]
 
 def vdist(U, V):
@@ -31,6 +43,9 @@ def vprojunitv(U, UV):
 
 def vmag(V):
     return math.sqrt(V[0]*V[0] + V[1]*V[1])
+
+def vperp(V):
+    return [-V[1], V[0]]
 
 def vsmult(V, scalar):
     return [V[0]*scalar, V[1]*scalar]
@@ -61,6 +76,9 @@ def vcompass(angle):
     print("cart angle", cart)
     rcart = math.radians(cart)
     return [math.cos(rcart), math.sin(rcart)]
+
+def point_slope_formula(p, m):
+    return([1.0, -m, p[1]-m*p[0]-p[1]])
 
 def two_point_formula(p1, p2): #returns [a, b, c] to wit: ax+by=c
     xa = p2[0] - p1[0]
@@ -94,6 +112,27 @@ def line_intersect(pa1, pa2, pb1, pb2):
     u = (a * f - d * c) / den
 #    return([pb1[0] + u*(pb2[0]-pb1[0]), pb1[1] + u*(pb2[1]-pb1[1])], t, u)
     return([pa1[0] + t*(pa2[0]-pa1[0]), pa1[1] + t*(pa2[1]-pa1[1])], t, u)
+# from PythonRobotics
+# poly array of polygon (x, y) verticies
+# spot (x, y) point
+def inpolygon(poly, spot):
+    npoint = len(poly) - 1;
+    inside = False
+    for i in range(npoint):
+        j = (i + 1) % (npoint + 1)
+        x1 = poly[i][0]
+        x2 = poly[j][0]
+        if (spot[0] < x1):
+            if (spot[0] < x2):
+                continue
+        else:
+            if (spot[0] > x2):
+                continue
+        # beware x1 == x2
+        slope = (poly[j][1] - poly[i][1]) / (x2 - x1)
+        if (poly[i][1] + slope * (spot[0] - x1) - spot[1]) > 0.0:
+            inside = not inside
+    return inside
 
 
            
