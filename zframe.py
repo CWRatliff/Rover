@@ -39,8 +39,8 @@ btnred = gz.Button(13)
 btnblue = gz.Button(7)
 btnyellow = gz.Button(10)
 '''
-#ser = serial.Serial(port='/dev/ttyAMA0',      #xbee to rover
-ser = serial.Serial(port='/dev/ttyS0',      #xbee to rover
+ser = serial.Serial(port='/dev/ttyAMA0',      #xbee to rover
+#ser = serial.Serial(port='/dev/ttyS0',      #xbee to rover
     baudrate=9600,
     parity=serial.PARITY_NONE,
     stopbits=serial.STOPBITS_ONE,
@@ -75,8 +75,8 @@ scale = 3.0
 gotolatlon = []
 #stlat = 2400
 #stlon = 950
-stlat = 750
-stlon = 275
+stlat = 730
+stlon = 300
 chartmode = 0        # 0:move, 1:zoom in, 2:zoom out, 3:goto
 mx = 0
 my = 0
@@ -90,7 +90,6 @@ chartform = Frame(root)
 chartform.place(x=200, y=20)
 canvas= Canvas(chartform, width=600, height=600, bg='white')
 canvas.pack()
-#greeting = canvas.create_text(100, 100, text="Hello World")
 
 # dummy's to create objectID's
 arena = canvas.create_polygon(0,0,1,1)
@@ -100,6 +99,12 @@ goto = canvas.create_rectangle(0,0,1,1)
 lunge = canvas.create_oval(0,0,1,1)
 plot = canvas.create_polygon(0,0,1,1)		# property points
 rez = canvas.create_polygon(0,0,1,1)
+
+tname = Frame(root)
+tname.place(x=500, y=620)
+treename = StringVar()
+trname=Label(tname,text="Tree:", font=("bold",18),
+    textvariable=treename).grid(row=0,column=0)
 # ==============================================================================
 try:
     pathfile = open("path220614.txt", 'r')
@@ -160,7 +165,7 @@ def Chart():
     
     trees = Usf2Pix(alltrees, scale, stlat, stlon)
     llen = len(trees)
-    rad = scale * 3
+    rad = scale
     for i in range(0, llen, 2):
         canvas.create_oval(trees[i]-rad, trees[i+1]-rad, trees[i]+rad, trees[i+1]+rad, \
             fill='green2', outline='black', width=2, tags = 'forest')
@@ -258,12 +263,28 @@ def Bupress(event):
         pnt = Usf2Pix([gotolatlon], scale, stlat, stlon)
         goto = canvas.create_rectangle(pnt[0], pnt[1], pnt[0]+4, pnt[1]+4, \
             fill='blue',outline='blue', tags = "wpts")
-        msg = '{GN%7.2f}' % lon
+        msg = '{GN%7.2f}' % plon
         ser.write(msg.encode('utf-8'))
         print(msg)
-        msg = '{GT%7.2f}' % lat
+        msg = '{GT%7.2f}' % plat
         ser.write(msg.encode('utf-8'))
         print(msg)
+        
+        # look for a tree within 1 meter of x-spot and output tree name
+        lltree = alltrees[0]
+#         dellon = abs(lltree[0] - plon)
+#         dellat = abs(lltree[1] - plat)
+#        print(dellat, dellon)
+        i = 0
+        treename.set("")
+        for x in alltrees:
+            dellon = abs(x[0] - plon)
+            dellat = abs(x[1] - plat)
+            if (dellat < 1.0 and dellon < 1.0):
+                treename.set(tnames[i])
+                break
+            i = i + 1
+
         chartmode = 0
     
 def Mouse(event):
@@ -396,7 +417,12 @@ class App:
         self.accr.grid(row=0,column=0)
         self.bat=Label(alert,text="BAT:", font=("bold",18))
         self.bat.grid(row=1,column=0)
-
+        '''
+        tname = Frame(master)
+        tname.place(x=500, y=620)
+        self.trname=Label(tname,text="Tree:", font=("bold",18))
+        self.trname.grid(row=0,column=0)
+        '''        
         '''
         self.acc = StringVar()
         self.acclab = Label(data,width=5,font=(None,20),bg="white",fg="blue", \
@@ -891,14 +917,16 @@ rc = cdlib.Cdblogin()
 treetable = cdlib.COpenTable("TreeTable".encode())
 locndx = cdlib.COpenIndex(treetable, "TreeNdx".encode())
 rc = cdlib.CFirst(treetable, locndx)
-lon = cdlib.CGetFloat(treetable, "LonMet".encode())
-lat = cdlib.CGetFloat(treetable, "LatMet".encode())
+# lon = cdlib.CGetFloat(treetable, "LonMet".encode())
+# lat = cdlib.CGetFloat(treetable, "LatMet".encode())
 alltrees = []
+tnames = []
 while (rc >= 0):
     lon = cdlib.CGetFloat(treetable, "LonMet".encode())
     lat = cdlib.CGetFloat(treetable, "LatMet".encode())
-    print(lon, lat)
-    alltrees.append([lon*3, lat*3])
+    alltrees.append([lon, lat])
+    pstr = cdlib.CGetCharPtr(treetable, "Name".encode())
+    tnames.append(pstr.decode())
     rc = cdlib.CNext(treetable, locndx)
  
 rtetable = cdlib.COpenTable("Routes".encode())
