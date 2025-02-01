@@ -58,14 +58,14 @@ class motor_driver_ada:
         self.tilt = self.kit.servo[15]
         self.pan = self.kit.servo[14]
 
-        self.rr_motor.actuation_range = 120
-        self.rf_motor.actuation_range = 120
-        self.lf_motor.actuation_range = 120
-        self.lr_motor.actuation_range = 120
-        self.rr_motor.set_pulse_width_range(700, 2300)
-        self.rf_motor.set_pulse_width_range(700, 2300)
-        self.lf_motor.set_pulse_width_range(700, 2300)
-        self.lr_motor.set_pulse_width_range(700, 2300)
+        self.rr_motor.actuation_range = ServoRange
+        self.rf_motor.actuation_range = ServoRange
+        self.lf_motor.actuation_range = ServoRange
+        self.lr_motor.actuation_range = ServoRange
+        self.rr_motor.set_pulse_width_range(ServoPulseA, ServoPulseB)
+        self.rf_motor.set_pulse_width_range(ServoPulseA, ServoPulseB)
+        self.lf_motor.set_pulse_width_range(ServoPulseA, ServoPulseB)
+        self.lr_motor.set_pulse_width_range(ServoPulseA, ServoPulseB)
         self.log = log
         
         self.rc = Roboclaw("/dev/ttyS0",115200)
