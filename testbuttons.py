@@ -6,6 +6,17 @@ Run on controller box to test buttons
 import RPi.GPIO as GPIO
 import time
 
+butngreen = False
+butngreen2 = False
+greenepoch = time.time()
+butnred = False
+butnred2 = False
+redepoch = time.time()
+butnblack = False
+blackepoch = time.time()
+butnblue = False
+butnyellow = False
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP) # green
 GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP) # black
