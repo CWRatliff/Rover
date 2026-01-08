@@ -6,6 +6,12 @@ Run on controller box to test buttons
 import RPi.GPIO as GPIO
 import time
 
+GREEN = 21
+BLACK = 5
+RED = 13
+BLUE = 7
+YELLOW = 10
+
 butngreen = False
 butngreen2 = False
 greenepoch = time.time()
@@ -18,15 +24,15 @@ butnblue = False
 butnyellow = False
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP) # green
-GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_UP) # black
-GPIO.setup(13, GPIO.IN, pull_up_down=GPIO.PUD_UP) # red
-GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP) # blue
-GPIO.setup(10, GPIO.IN, pull_up_down=GPIO.PUD_UP) # yellow
+GPIO.setup(GREEN, GPIO.IN, pull_up_down=GPIO.PUD_UP) # green
+GPIO.setup(BLACK, GPIO.IN, pull_up_down=GPIO.PUD_UP) # black
+GPIO.setup(RED, GPIO.IN, pull_up_down=GPIO.PUD_UP) # red
+GPIO.setup(BLUE, GPIO.IN, pull_up_down=GPIO.PUD_UP) # blue
+GPIO.setup(YELLOW, GPIO.IN, pull_up_down=GPIO.PUD_UP) # yellow
 
 # check tactile buttons
 while True:
-    if (GPIO.input(21) == False):              # button grounds out GPIO
+    if (GPIO.input(GREEN) == False):              # button grounds out GPIO
         if not butngreen:                      # if not stale tap
             if ((time.time() - greenepoch) < .6): # if less than .6 sec
                 if butngreen2:                 # if double tap in progress
@@ -38,7 +44,7 @@ while True:
                 print("green - 1 deg right turn") 
         butngreen = False                      # button released
             
-    if (GPIO.input(5) == False):
+    if (GPIO.input(BLACK) == False):
         if not butnblack:
             if ((time.time() - blackepoch) < .6): # if less than .6 sec
                 print("black - all stop!")
@@ -49,7 +55,7 @@ while True:
     else:
         butnblack = False
             
-    if (GPIO.input(13) == False):
+    if (GPIO.input(RED) == False):
         if not butnred:
             if ((time.time() - redepoch) < .6): # if less than .6 sec
                 if butnred2:
@@ -65,14 +71,14 @@ while True:
     else:
         butnred = False
 
-    if (GPIO.input(7) == False):
+    if (GPIO.input(BLUE) == False):
         if not butnblue:
             print("blue - increase forward speen")
             butnblue = True
     else:
         butnblue = False
             
-    if (GPIO.input(10) == False):
+    if (GPIO.input(YELLOW) == False):
         if not butnyellow:
             print("yellow - decrease speed")
             butnyellow = True
