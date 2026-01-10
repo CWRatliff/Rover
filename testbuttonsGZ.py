@@ -12,9 +12,9 @@ RED = 13
 BLUE = 7
 YELLOW = 10
 
-butngreen2 = False
+btngreen2 = False
 greenepoch = time.time()
-butnred2 = False
+btnred2 = False
 redepoch = time.time()
 blackepoch = time.time()
 
@@ -26,61 +26,61 @@ btnyellow = gz.Button(YELLOW)
 
 while True:
     # check tactile buttons
-    if (btngreen.is_pressed):              # button grounds out GPIO
-        if not butngreen:                      # if not stale tap
+    if (btngreen.is_pressed):                   # button grounds out GPIO
+        if not btngreen:                      # if not stale tap
             if ((time.time() - greenepoch) < .6): # if less than .6 sec
-                if butngreen2:                 # if double tap in progress
+                if btngreen2:                 # if double tap in progress
                     print("green - 35 deg rightturn") # 35 deg turn
                 else:
                     print("green - 5 degree")  # 5 deg steering
-                    butngreen2 = True          # double tap started
+                    btngreen2 = True          # double tap started
             else:                              # else 1st tap
                 print("green - 1 degree")      # 1 deg steering
-                butngreen2 = False             # first tap
-            butngreen = True                   # register the pressed state
+                btngreen2 = False             # first tap
+            btngreen = True                   # register the pressed state
             greenepoch = time.time()           # start timer
     else:
-        butngreen = False                      # button released
+        btngreen = False                      # button released
             
     if (btnblack.is_pressed):
-        if not butnblack:
+        if not btnblack:
             if ((time.time() - blackepoch) < .6): # if less than .6 sec
                 print('black - all stop')      # all stop!
             else:
                 print('black - zero steering') # zero steering
-            butnblack = True
+            btnblack = True
             blackepoch = time.time()           # reset
     else:
         butnblack = False
             
     if (btnred.is_pressed):
-        if not butnred:
+        if not btnred:
             if ((time.time() - redepoch) < .6): # if less than .6 sec
-                if butnred2:
+                if btnred2:
                     print('red - 35 degree')    # 35 deg steering
                 else:
                     print('red - 5 deg')        # 5 deg steering
-                    butnred2 = True
+                    btnred2 = True
             else:
                 print('red - 1 deg')            # 1 deg steering
-                butnred2 = False
-            butnred = True
+                btnred2 = False
+            btnred = True
             redepoch = time.time()
     else:
-        butnred = False
+        btnred = False
             
     if (btnblue.is_pressed):
-        if not butnblue:
+        if not btnblue:
             print('blue')
-                butnblue = True
+            btnblue = True
         else:
-            butnblue = False
+            btnblue = False
             
         if (btnyellow.is_pressed):
-            if not butnyellow:
+            if not btnyellow:
                 print('yellow')
-                butnyellow = True
+                btnyellow = True
         else:
-            butnyellow = False
+            btnyellow = False
             
            
