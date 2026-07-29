@@ -913,7 +913,7 @@ def GPS_data(schr):        # input from Arduino
             posAV = vsec2met(ilatsec, ilonsec)
             
         elif gchr == 'N':
-            ilonsec = -x
+            ilonsec = x
 #            posAV = vsec2ft(ilatsec, ilonsec)
             posAV = vsec2met(ilatsec, ilonsec)
             if (not wptflag):
@@ -1177,9 +1177,8 @@ try:
                 
                 delt = epoch - oldEpoch
                 dist = delt * vel
-                latdel = posAV[0] + dist * math.sin(phi)
-                londel = posAV[1] + dist * math.cos(phi)
-                estAV = [latdel, londel]
+                estAV[0] = posAV[0] + dist * math.sin(phi)
+                estAV[1] = posAV[1] + dist * math.cos(phi)
                 vprint("estAV", estAV)
                 cogbase = 0
                 if gpsEpoch < oldEpoch:
